@@ -384,6 +384,15 @@ func AlterStatement(in cobol85.IAlterStatementContext) (out *pb.AlterStatement) 
 func CallStatement(in cobol85.ICallStatementContext) (out *pb.CallStatement) {
 	ctx := in.(*cobol85.CallStatementContext)
 	out = &pb.CallStatement{}
+	if ictx := ctx.Identifier(); ictx != nil {
+		out.Target = &pb.CallStatement_TargetIdentifier{
+			TargetIdentifier: Identifier(ictx),
+		}
+	} else if ictx := ctx.Literal(); ictx != nil {
+		out.Target = &pb.CallStatement_TargetLiteral{
+			TargetLiteral: Literal(ictx),
+		}
+	}
 	if ctx.OnExceptionClause() != nil {
 		out.OnExceptionClause = OnExceptionClause(ctx.OnExceptionClause())
 	}
@@ -474,7 +483,8 @@ func CallStatement(in cobol85.ICallStatementContext) (out *pb.CallStatement) {
 			}
 			out.UsingPhrase.Parameters = append(out.UsingPhrase.Parameters, usingParameter)
 		}
-	} else if ictx := ctx.CallGivingPhrase(); ictx != nil {
+	}
+		if ictx := ctx.CallGivingPhrase(); ictx != nil {
 		cctx := ictx.(*cobol85.CallGivingPhraseContext)
 		out.GivingPhrase = &pb.CallStatement_GivingPhrase{
 			Identifier: Identifier(cctx.Identifier()),

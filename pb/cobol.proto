@@ -3368,6 +3368,47 @@ message SpecialRegister {
     Identifier identifier = 2;
 }
 
+// call ----------------------------------
+
+enum CallType {
+    DATA_DESCRIPTION_ENTRY_CALL = 0;
+    PROCEDURE_CALL = 1;
+    SECTION_CALL = 2;
+    FILE_CONTROL_ENTRY_CALL = 3;
+    FUNCTION_CALL = 4;
+    TABLE_CALL = 5;
+    INDEX_CALL = 6;
+    MNEMONIC_CALL = 7;
+    SPECIAL_REGISTER_CALL = 8;
+    REPORT_CALL = 9;
+    REPORT_DESCRIPTION_ENTRY_CALL = 10;
+    SCREEN_DESCRIPTION_ENTRY_CALL = 11;
+    COMMUNICATION_DESCRIPTION_ENTRY_CALL = 12;
+    ENVIRONMENT_CALL = 13;
+    UNDEFINED_CALL = 14;
+}
+
+message Call {
+    CallType type = 1;
+    // The raw name text as it appeared in COBOL source, for diagnostics.
+    string name = 2;
+    oneof target {
+        DataName data_name = 3;
+        ConditionName condition_name = 4;
+        FileName file_name = 5;
+        ProcedureName procedure_name = 6;
+        SectionName section_name = 7;
+        ParagraphName paragraph_name = 8;
+        ProgramName program_name = 9;
+        IndexName index_name = 10;
+        MnemonicName mnemonic_name = 11;
+        ReportName report_name = 12;
+        CdName cd_name = 13;
+        ScreenName screen_name = 14;
+        SpecialRegister special_register = 15;
+    }
+}
+
 message NonNumericLiteral {
     string value = 1;
 }

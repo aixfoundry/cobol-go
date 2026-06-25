@@ -22,7 +22,7 @@ func Identifier(in cobol85.IIdentifierContext) (out *pb.Identifier) {
 		}
 	} else if ictx := ctx.SpecialRegister(); ictx != nil {
 		out.OneOf = &pb.Identifier_SpecialRegister{
-			SpecialRegister: &pb.SpecialRegister{},
+			SpecialRegister: SpecialRegister(ictx),
 		}
 	}
 	return

@@ -85,6 +85,91 @@ func (RelationalOperator) EnumDescriptor() ([]byte, []int) {
 	return file_cobol_proto_rawDescGZIP(), []int{0}
 }
 
+type CallType int32
+
+const (
+	CallType_DATA_DESCRIPTION_ENTRY_CALL          CallType = 0
+	CallType_PROCEDURE_CALL                       CallType = 1
+	CallType_SECTION_CALL                         CallType = 2
+	CallType_FILE_CONTROL_ENTRY_CALL              CallType = 3
+	CallType_FUNCTION_CALL                        CallType = 4
+	CallType_TABLE_CALL                           CallType = 5
+	CallType_INDEX_CALL                           CallType = 6
+	CallType_MNEMONIC_CALL                        CallType = 7
+	CallType_SPECIAL_REGISTER_CALL                CallType = 8
+	CallType_REPORT_CALL                          CallType = 9
+	CallType_REPORT_DESCRIPTION_ENTRY_CALL        CallType = 10
+	CallType_SCREEN_DESCRIPTION_ENTRY_CALL        CallType = 11
+	CallType_COMMUNICATION_DESCRIPTION_ENTRY_CALL CallType = 12
+	CallType_ENVIRONMENT_CALL                     CallType = 13
+	CallType_UNDEFINED_CALL                       CallType = 14
+)
+
+// Enum value maps for CallType.
+var (
+	CallType_name = map[int32]string{
+		0:  "DATA_DESCRIPTION_ENTRY_CALL",
+		1:  "PROCEDURE_CALL",
+		2:  "SECTION_CALL",
+		3:  "FILE_CONTROL_ENTRY_CALL",
+		4:  "FUNCTION_CALL",
+		5:  "TABLE_CALL",
+		6:  "INDEX_CALL",
+		7:  "MNEMONIC_CALL",
+		8:  "SPECIAL_REGISTER_CALL",
+		9:  "REPORT_CALL",
+		10: "REPORT_DESCRIPTION_ENTRY_CALL",
+		11: "SCREEN_DESCRIPTION_ENTRY_CALL",
+		12: "COMMUNICATION_DESCRIPTION_ENTRY_CALL",
+		13: "ENVIRONMENT_CALL",
+		14: "UNDEFINED_CALL",
+	}
+	CallType_value = map[string]int32{
+		"DATA_DESCRIPTION_ENTRY_CALL":          0,
+		"PROCEDURE_CALL":                       1,
+		"SECTION_CALL":                         2,
+		"FILE_CONTROL_ENTRY_CALL":              3,
+		"FUNCTION_CALL":                        4,
+		"TABLE_CALL":                           5,
+		"INDEX_CALL":                           6,
+		"MNEMONIC_CALL":                        7,
+		"SPECIAL_REGISTER_CALL":                8,
+		"REPORT_CALL":                          9,
+		"REPORT_DESCRIPTION_ENTRY_CALL":        10,
+		"SCREEN_DESCRIPTION_ENTRY_CALL":        11,
+		"COMMUNICATION_DESCRIPTION_ENTRY_CALL": 12,
+		"ENVIRONMENT_CALL":                     13,
+		"UNDEFINED_CALL":                       14,
+	}
+)
+
+func (x CallType) Enum() *CallType {
+	p := new(CallType)
+	*p = x
+	return p
+}
+
+func (x CallType) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (CallType) Descriptor() protoreflect.EnumDescriptor {
+	return file_cobol_proto_enumTypes[1].Descriptor()
+}
+
+func (CallType) Type() protoreflect.EnumType {
+	return &file_cobol_proto_enumTypes[1]
+}
+
+func (x CallType) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use CallType.Descriptor instead.
+func (CallType) EnumDescriptor() ([]byte, []int) {
+	return file_cobol_proto_rawDescGZIP(), []int{1}
+}
+
 type ProgramIdParagraph_Attribute int32
 
 const (
@@ -124,11 +209,11 @@ func (x ProgramIdParagraph_Attribute) String() string {
 }
 
 func (ProgramIdParagraph_Attribute) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[1].Descriptor()
+	return file_cobol_proto_enumTypes[2].Descriptor()
 }
 
 func (ProgramIdParagraph_Attribute) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[1]
+	return &file_cobol_proto_enumTypes[2]
 }
 
 func (x ProgramIdParagraph_Attribute) Number() protoreflect.EnumNumber {
@@ -173,11 +258,11 @@ func (x MemorySizeClause_Unit) String() string {
 }
 
 func (MemorySizeClause_Unit) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[2].Descriptor()
+	return file_cobol_proto_enumTypes[3].Descriptor()
 }
 
 func (MemorySizeClause_Unit) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[2]
+	return &file_cobol_proto_enumTypes[3]
 }
 
 func (x MemorySizeClause_Unit) Number() protoreflect.EnumNumber {
@@ -219,11 +304,11 @@ func (x DiskSizeClause_Unit) String() string {
 }
 
 func (DiskSizeClause_Unit) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[3].Descriptor()
+	return file_cobol_proto_enumTypes[4].Descriptor()
 }
 
 func (DiskSizeClause_Unit) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[3]
+	return &file_cobol_proto_enumTypes[4]
 }
 
 func (x DiskSizeClause_Unit) Number() protoreflect.EnumNumber {
@@ -274,11 +359,11 @@ func (x AlphabetClause_Alphanumeric_Type) String() string {
 }
 
 func (AlphabetClause_Alphanumeric_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[4].Descriptor()
+	return file_cobol_proto_enumTypes[5].Descriptor()
 }
 
 func (AlphabetClause_Alphanumeric_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[4]
+	return &file_cobol_proto_enumTypes[5]
 }
 
 func (x AlphabetClause_Alphanumeric_Type) Number() protoreflect.EnumNumber {
@@ -320,11 +405,11 @@ func (x AlphabetClause_National_Type) String() string {
 }
 
 func (AlphabetClause_National_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[5].Descriptor()
+	return file_cobol_proto_enumTypes[6].Descriptor()
 }
 
 func (AlphabetClause_National_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[5]
+	return &file_cobol_proto_enumTypes[6]
 }
 
 func (x AlphabetClause_National_Type) Number() protoreflect.EnumNumber {
@@ -366,11 +451,11 @@ func (x ClassClause_Type) String() string {
 }
 
 func (ClassClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[6].Descriptor()
+	return file_cobol_proto_enumTypes[7].Descriptor()
 }
 
 func (ClassClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[6]
+	return &file_cobol_proto_enumTypes[7]
 }
 
 func (x ClassClause_Type) Number() protoreflect.EnumNumber {
@@ -412,11 +497,11 @@ func (x DefaultDisplaySignClause_Type) String() string {
 }
 
 func (DefaultDisplaySignClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[7].Descriptor()
+	return file_cobol_proto_enumTypes[8].Descriptor()
 }
 
 func (DefaultDisplaySignClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[7]
+	return &file_cobol_proto_enumTypes[8]
 }
 
 func (x DefaultDisplaySignClause_Type) Number() protoreflect.EnumNumber {
@@ -458,11 +543,11 @@ func (x DefaultComputationalSignClause_Type) String() string {
 }
 
 func (DefaultComputationalSignClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[8].Descriptor()
+	return file_cobol_proto_enumTypes[9].Descriptor()
 }
 
 func (DefaultComputationalSignClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[8]
+	return &file_cobol_proto_enumTypes[9]
 }
 
 func (x DefaultComputationalSignClause_Type) Number() protoreflect.EnumNumber {
@@ -504,11 +589,11 @@ func (x SymbolicCharactersClause_Type) String() string {
 }
 
 func (SymbolicCharactersClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[9].Descriptor()
+	return file_cobol_proto_enumTypes[10].Descriptor()
 }
 
 func (SymbolicCharactersClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[9]
+	return &file_cobol_proto_enumTypes[10]
 }
 
 func (x SymbolicCharactersClause_Type) Number() protoreflect.EnumNumber {
@@ -571,11 +656,11 @@ func (x AssignClause_Type) String() string {
 }
 
 func (AssignClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[10].Descriptor()
+	return file_cobol_proto_enumTypes[11].Descriptor()
 }
 
 func (AssignClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[10]
+	return &file_cobol_proto_enumTypes[11]
 }
 
 func (x AssignClause_Type) Number() protoreflect.EnumNumber {
@@ -620,11 +705,11 @@ func (x OrganizationClause_Mode) String() string {
 }
 
 func (OrganizationClause_Mode) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[11].Descriptor()
+	return file_cobol_proto_enumTypes[12].Descriptor()
 }
 
 func (OrganizationClause_Mode) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[11]
+	return &file_cobol_proto_enumTypes[12]
 }
 
 func (x OrganizationClause_Mode) Number() protoreflect.EnumNumber {
@@ -672,11 +757,11 @@ func (x OrganizationClause_Type) String() string {
 }
 
 func (OrganizationClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[12].Descriptor()
+	return file_cobol_proto_enumTypes[13].Descriptor()
 }
 
 func (OrganizationClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[12]
+	return &file_cobol_proto_enumTypes[13]
 }
 
 func (x OrganizationClause_Type) Number() protoreflect.EnumNumber {
@@ -721,11 +806,11 @@ func (x RecordDelimiterClause_Type) String() string {
 }
 
 func (RecordDelimiterClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[13].Descriptor()
+	return file_cobol_proto_enumTypes[14].Descriptor()
 }
 
 func (RecordDelimiterClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[13]
+	return &file_cobol_proto_enumTypes[14]
 }
 
 func (x RecordDelimiterClause_Type) Number() protoreflect.EnumNumber {
@@ -773,11 +858,11 @@ func (x AccessModeClause_Mode) String() string {
 }
 
 func (AccessModeClause_Mode) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[14].Descriptor()
+	return file_cobol_proto_enumTypes[15].Descriptor()
 }
 
 func (AccessModeClause_Mode) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[14]
+	return &file_cobol_proto_enumTypes[15]
 }
 
 func (x AccessModeClause_Mode) Number() protoreflect.EnumNumber {
@@ -819,11 +904,11 @@ func (x RerunEveryOf_Type) String() string {
 }
 
 func (RerunEveryOf_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[15].Descriptor()
+	return file_cobol_proto_enumTypes[16].Descriptor()
 }
 
 func (RerunEveryOf_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[15]
+	return &file_cobol_proto_enumTypes[16]
 }
 
 func (x RerunEveryOf_Type) Number() protoreflect.EnumNumber {
@@ -868,11 +953,11 @@ func (x SameClause_Form) String() string {
 }
 
 func (SameClause_Form) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[16].Descriptor()
+	return file_cobol_proto_enumTypes[17].Descriptor()
 }
 
 func (SameClause_Form) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[16]
+	return &file_cobol_proto_enumTypes[17]
 }
 
 func (x SameClause_Form) Number() protoreflect.EnumNumber {
@@ -914,11 +999,11 @@ func (x BlockContainsClause_Unit) String() string {
 }
 
 func (BlockContainsClause_Unit) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[17].Descriptor()
+	return file_cobol_proto_enumTypes[18].Descriptor()
 }
 
 func (BlockContainsClause_Unit) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[17]
+	return &file_cobol_proto_enumTypes[18]
 }
 
 func (x BlockContainsClause_Unit) Number() protoreflect.EnumNumber {
@@ -960,11 +1045,11 @@ func (x LabelRecordsClause_Type) String() string {
 }
 
 func (LabelRecordsClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[18].Descriptor()
+	return file_cobol_proto_enumTypes[19].Descriptor()
 }
 
 func (LabelRecordsClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[18]
+	return &file_cobol_proto_enumTypes[19]
 }
 
 func (x LabelRecordsClause_Type) Number() protoreflect.EnumNumber {
@@ -1009,11 +1094,11 @@ func (x DataDescriptionEntry_Format1_LevelNumber) String() string {
 }
 
 func (DataDescriptionEntry_Format1_LevelNumber) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[19].Descriptor()
+	return file_cobol_proto_enumTypes[20].Descriptor()
 }
 
 func (DataDescriptionEntry_Format1_LevelNumber) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[19]
+	return &file_cobol_proto_enumTypes[20]
 }
 
 func (x DataDescriptionEntry_Format1_LevelNumber) Number() protoreflect.EnumNumber {
@@ -1094,11 +1179,11 @@ func (x PictureChars_Type) String() string {
 }
 
 func (PictureChars_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[20].Descriptor()
+	return file_cobol_proto_enumTypes[21].Descriptor()
 }
 
 func (PictureChars_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[20]
+	return &file_cobol_proto_enumTypes[21]
 }
 
 func (x PictureChars_Type) Number() protoreflect.EnumNumber {
@@ -1143,11 +1228,11 @@ func (x DataCommonOwnLocalClause_Type) String() string {
 }
 
 func (DataCommonOwnLocalClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[21].Descriptor()
+	return file_cobol_proto_enumTypes[22].Descriptor()
 }
 
 func (DataCommonOwnLocalClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[21]
+	return &file_cobol_proto_enumTypes[22]
 }
 
 func (x DataCommonOwnLocalClause_Type) Number() protoreflect.EnumNumber {
@@ -1198,11 +1283,11 @@ func (x DataTypeClause_Type) String() string {
 }
 
 func (DataTypeClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[22].Descriptor()
+	return file_cobol_proto_enumTypes[23].Descriptor()
 }
 
 func (DataTypeClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[22]
+	return &file_cobol_proto_enumTypes[23]
 }
 
 func (x DataTypeClause_Type) Number() protoreflect.EnumNumber {
@@ -1247,11 +1332,11 @@ func (x DataTypeClause_Mode) String() string {
 }
 
 func (DataTypeClause_Mode) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[23].Descriptor()
+	return file_cobol_proto_enumTypes[24].Descriptor()
 }
 
 func (DataTypeClause_Mode) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[23]
+	return &file_cobol_proto_enumTypes[24]
 }
 
 func (x DataTypeClause_Mode) Number() protoreflect.EnumNumber {
@@ -1293,11 +1378,11 @@ func (x DataUsingClause_Type) String() string {
 }
 
 func (DataUsingClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[24].Descriptor()
+	return file_cobol_proto_enumTypes[25].Descriptor()
 }
 
 func (DataUsingClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[24]
+	return &file_cobol_proto_enumTypes[25]
 }
 
 func (x DataUsingClause_Type) Number() protoreflect.EnumNumber {
@@ -1432,11 +1517,11 @@ func (x DataUsageClause_Type) String() string {
 }
 
 func (DataUsageClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[25].Descriptor()
+	return file_cobol_proto_enumTypes[26].Descriptor()
 }
 
 func (DataUsageClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[25]
+	return &file_cobol_proto_enumTypes[26]
 }
 
 func (x DataUsageClause_Type) Number() protoreflect.EnumNumber {
@@ -1481,11 +1566,11 @@ func (x DataReceivedByClause_Type) String() string {
 }
 
 func (DataReceivedByClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[26].Descriptor()
+	return file_cobol_proto_enumTypes[27].Descriptor()
 }
 
 func (DataReceivedByClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[26]
+	return &file_cobol_proto_enumTypes[27]
 }
 
 func (x DataReceivedByClause_Type) Number() protoreflect.EnumNumber {
@@ -1527,11 +1612,11 @@ func (x DataSignClause_Type) String() string {
 }
 
 func (DataSignClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[27].Descriptor()
+	return file_cobol_proto_enumTypes[28].Descriptor()
 }
 
 func (DataSignClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[27]
+	return &file_cobol_proto_enumTypes[28]
 }
 
 func (x DataSignClause_Type) Number() protoreflect.EnumNumber {
@@ -1573,11 +1658,11 @@ func (x DataSynchronizedClause_Type) String() string {
 }
 
 func (DataSynchronizedClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[28].Descriptor()
+	return file_cobol_proto_enumTypes[29].Descriptor()
 }
 
 func (DataSynchronizedClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[28]
+	return &file_cobol_proto_enumTypes[29]
 }
 
 func (x DataSynchronizedClause_Type) Number() protoreflect.EnumNumber {
@@ -1619,11 +1704,11 @@ func (x FullClause_Type) String() string {
 }
 
 func (FullClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[29].Descriptor()
+	return file_cobol_proto_enumTypes[30].Descriptor()
 }
 
 func (FullClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[29]
+	return &file_cobol_proto_enumTypes[30]
 }
 
 func (x FullClause_Type) Number() protoreflect.EnumNumber {
@@ -1665,11 +1750,11 @@ func (x RequiredClause_Type) String() string {
 }
 
 func (RequiredClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[30].Descriptor()
+	return file_cobol_proto_enumTypes[31].Descriptor()
 }
 
 func (RequiredClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[30]
+	return &file_cobol_proto_enumTypes[31]
 }
 
 func (x RequiredClause_Type) Number() protoreflect.EnumNumber {
@@ -1711,11 +1796,11 @@ func (x SecureClause_Type) String() string {
 }
 
 func (SecureClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[31].Descriptor()
+	return file_cobol_proto_enumTypes[32].Descriptor()
 }
 
 func (SecureClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[31]
+	return &file_cobol_proto_enumTypes[32]
 }
 
 func (x SecureClause_Type) Number() protoreflect.EnumNumber {
@@ -1757,11 +1842,11 @@ func (x AutoClause_Type) String() string {
 }
 
 func (AutoClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[32].Descriptor()
+	return file_cobol_proto_enumTypes[33].Descriptor()
 }
 
 func (AutoClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[32]
+	return &file_cobol_proto_enumTypes[33]
 }
 
 func (x AutoClause_Type) Number() protoreflect.EnumNumber {
@@ -1803,11 +1888,11 @@ func (x BlankClause_Type) String() string {
 }
 
 func (BlankClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[33].Descriptor()
+	return file_cobol_proto_enumTypes[34].Descriptor()
 }
 
 func (BlankClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[33]
+	return &file_cobol_proto_enumTypes[34]
 }
 
 func (x BlankClause_Type) Number() protoreflect.EnumNumber {
@@ -1849,11 +1934,11 @@ func (x BellClause_Type) String() string {
 }
 
 func (BellClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[34].Descriptor()
+	return file_cobol_proto_enumTypes[35].Descriptor()
 }
 
 func (BellClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[34]
+	return &file_cobol_proto_enumTypes[35]
 }
 
 func (x BellClause_Type) Number() protoreflect.EnumNumber {
@@ -1895,11 +1980,11 @@ func (x EraseClause_Type) String() string {
 }
 
 func (EraseClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[35].Descriptor()
+	return file_cobol_proto_enumTypes[36].Descriptor()
 }
 
 func (EraseClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[35]
+	return &file_cobol_proto_enumTypes[36]
 }
 
 func (x EraseClause_Type) Number() protoreflect.EnumNumber {
@@ -1941,11 +2026,11 @@ func (x LightClause_Type) String() string {
 }
 
 func (LightClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[36].Descriptor()
+	return file_cobol_proto_enumTypes[37].Descriptor()
 }
 
 func (LightClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[36]
+	return &file_cobol_proto_enumTypes[37]
 }
 
 func (x LightClause_Type) Number() protoreflect.EnumNumber {
@@ -1990,11 +2075,11 @@ func (x GridClause_Type) String() string {
 }
 
 func (GridClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[37].Descriptor()
+	return file_cobol_proto_enumTypes[38].Descriptor()
 }
 
 func (GridClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[37]
+	return &file_cobol_proto_enumTypes[38]
 }
 
 func (x GridClause_Type) Number() protoreflect.EnumNumber {
@@ -2036,11 +2121,11 @@ func (x LineClause_Type) String() string {
 }
 
 func (LineClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[38].Descriptor()
+	return file_cobol_proto_enumTypes[39].Descriptor()
 }
 
 func (LineClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[38]
+	return &file_cobol_proto_enumTypes[39]
 }
 
 func (x LineClause_Type) Number() protoreflect.EnumNumber {
@@ -2082,11 +2167,11 @@ func (x ColumnClause_Type) String() string {
 }
 
 func (ColumnClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[39].Descriptor()
+	return file_cobol_proto_enumTypes[40].Descriptor()
 }
 
 func (ColumnClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[39]
+	return &file_cobol_proto_enumTypes[40]
 }
 
 func (x ColumnClause_Type) Number() protoreflect.EnumNumber {
@@ -2128,11 +2213,11 @@ func (x SignClause_Type) String() string {
 }
 
 func (SignClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[40].Descriptor()
+	return file_cobol_proto_enumTypes[41].Descriptor()
 }
 
 func (SignClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[40]
+	return &file_cobol_proto_enumTypes[41]
 }
 
 func (x SignClause_Type) Number() protoreflect.EnumNumber {
@@ -2180,11 +2265,11 @@ func (x AttributeClause1_Sharing) String() string {
 }
 
 func (AttributeClause1_Sharing) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[41].Descriptor()
+	return file_cobol_proto_enumTypes[42].Descriptor()
 }
 
 func (AttributeClause1_Sharing) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[41]
+	return &file_cobol_proto_enumTypes[42]
 }
 
 func (x AttributeClause1_Sharing) Number() protoreflect.EnumNumber {
@@ -2226,11 +2311,11 @@ func (x AttributeClause2_LibAccess) String() string {
 }
 
 func (AttributeClause2_LibAccess) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[42].Descriptor()
+	return file_cobol_proto_enumTypes[43].Descriptor()
 }
 
 func (AttributeClause2_LibAccess) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[42]
+	return &file_cobol_proto_enumTypes[43]
 }
 
 func (x AttributeClause2_LibAccess) Number() protoreflect.EnumNumber {
@@ -2272,11 +2357,11 @@ func (x ProcedureDivision_GivingClause_Type) String() string {
 }
 
 func (ProcedureDivision_GivingClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[43].Descriptor()
+	return file_cobol_proto_enumTypes[44].Descriptor()
 }
 
 func (ProcedureDivision_GivingClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[43]
+	return &file_cobol_proto_enumTypes[44]
 }
 
 func (x ProcedureDivision_GivingClause_Type) Number() protoreflect.EnumNumber {
@@ -2318,11 +2403,11 @@ func (x ProcedureDivision_UsingClause_Type) String() string {
 }
 
 func (ProcedureDivision_UsingClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[44].Descriptor()
+	return file_cobol_proto_enumTypes[45].Descriptor()
 }
 
 func (ProcedureDivision_UsingClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[44]
+	return &file_cobol_proto_enumTypes[45]
 }
 
 func (x ProcedureDivision_UsingClause_Type) Number() protoreflect.EnumNumber {
@@ -2370,11 +2455,11 @@ func (x StartStatement_Type) String() string {
 }
 
 func (StartStatement_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[45].Descriptor()
+	return file_cobol_proto_enumTypes[46].Descriptor()
 }
 
 func (StartStatement_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[45]
+	return &file_cobol_proto_enumTypes[46]
 }
 
 func (x StartStatement_Type) Number() protoreflect.EnumNumber {
@@ -2428,11 +2513,11 @@ func (x SortStatement_Giving_Type) String() string {
 }
 
 func (SortStatement_Giving_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[46].Descriptor()
+	return file_cobol_proto_enumTypes[47].Descriptor()
 }
 
 func (SortStatement_Giving_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[46]
+	return &file_cobol_proto_enumTypes[47]
 }
 
 func (x SortStatement_Giving_Type) Number() protoreflect.EnumNumber {
@@ -2486,11 +2571,11 @@ func (x MergeStatement_Giving_Type) String() string {
 }
 
 func (MergeStatement_Giving_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[47].Descriptor()
+	return file_cobol_proto_enumTypes[48].Descriptor()
 }
 
 func (MergeStatement_Giving_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[47]
+	return &file_cobol_proto_enumTypes[48]
 }
 
 func (x MergeStatement_Giving_Type) Number() protoreflect.EnumNumber {
@@ -2553,11 +2638,11 @@ func (x InitializeStatement_ReplacingBy_Type) String() string {
 }
 
 func (InitializeStatement_ReplacingBy_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[48].Descriptor()
+	return file_cobol_proto_enumTypes[49].Descriptor()
 }
 
 func (InitializeStatement_ReplacingBy_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[48]
+	return &file_cobol_proto_enumTypes[49]
 }
 
 func (x InitializeStatement_ReplacingBy_Type) Number() protoreflect.EnumNumber {
@@ -2623,11 +2708,11 @@ func (x AcceptStatement_FromDate_Type) String() string {
 }
 
 func (AcceptStatement_FromDate_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[49].Descriptor()
+	return file_cobol_proto_enumTypes[50].Descriptor()
 }
 
 func (AcceptStatement_FromDate_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[49]
+	return &file_cobol_proto_enumTypes[50]
 }
 
 func (x AcceptStatement_FromDate_Type) Number() protoreflect.EnumNumber {
@@ -2675,11 +2760,11 @@ func (x UseAfterClause_Type) String() string {
 }
 
 func (UseAfterClause_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[50].Descriptor()
+	return file_cobol_proto_enumTypes[51].Descriptor()
 }
 
 func (UseAfterClause_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[50]
+	return &file_cobol_proto_enumTypes[51]
 }
 
 func (x UseAfterClause_Type) Number() protoreflect.EnumNumber {
@@ -2721,11 +2806,11 @@ func (x AndOrCondition_AndOr) String() string {
 }
 
 func (AndOrCondition_AndOr) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[51].Descriptor()
+	return file_cobol_proto_enumTypes[52].Descriptor()
 }
 
 func (AndOrCondition_AndOr) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[51]
+	return &file_cobol_proto_enumTypes[52]
 }
 
 func (x AndOrCondition_AndOr) Number() protoreflect.EnumNumber {
@@ -2779,11 +2864,11 @@ func (x ClassCondition_Type) String() string {
 }
 
 func (ClassCondition_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[52].Descriptor()
+	return file_cobol_proto_enumTypes[53].Descriptor()
 }
 
 func (ClassCondition_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[52]
+	return &file_cobol_proto_enumTypes[53]
 }
 
 func (x ClassCondition_Type) Number() protoreflect.EnumNumber {
@@ -2828,11 +2913,11 @@ func (x RelationSignCondition_Type) String() string {
 }
 
 func (RelationSignCondition_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[53].Descriptor()
+	return file_cobol_proto_enumTypes[54].Descriptor()
 }
 
 func (RelationSignCondition_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[53]
+	return &file_cobol_proto_enumTypes[54]
 }
 
 func (x RelationSignCondition_Type) Number() protoreflect.EnumNumber {
@@ -2874,11 +2959,11 @@ func (x RelationCombinedCondition_AndOr) String() string {
 }
 
 func (RelationCombinedCondition_AndOr) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[54].Descriptor()
+	return file_cobol_proto_enumTypes[55].Descriptor()
 }
 
 func (RelationCombinedCondition_AndOr) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[54]
+	return &file_cobol_proto_enumTypes[55]
 }
 
 func (x RelationCombinedCondition_AndOr) Number() protoreflect.EnumNumber {
@@ -2932,11 +3017,11 @@ func (x Literal_Type) String() string {
 }
 
 func (Literal_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[55].Descriptor()
+	return file_cobol_proto_enumTypes[56].Descriptor()
 }
 
 func (Literal_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[55]
+	return &file_cobol_proto_enumTypes[56]
 }
 
 func (x Literal_Type) Number() protoreflect.EnumNumber {
@@ -2978,11 +3063,11 @@ func (x NumericLiteral_Type) String() string {
 }
 
 func (NumericLiteral_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[56].Descriptor()
+	return file_cobol_proto_enumTypes[57].Descriptor()
 }
 
 func (NumericLiteral_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[56]
+	return &file_cobol_proto_enumTypes[57]
 }
 
 func (x NumericLiteral_Type) Number() protoreflect.EnumNumber {
@@ -3060,11 +3145,11 @@ func (x FigurativeConstant_Type) String() string {
 }
 
 func (FigurativeConstant_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[57].Descriptor()
+	return file_cobol_proto_enumTypes[58].Descriptor()
 }
 
 func (FigurativeConstant_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[57]
+	return &file_cobol_proto_enumTypes[58]
 }
 
 func (x FigurativeConstant_Type) Number() protoreflect.EnumNumber {
@@ -3181,11 +3266,11 @@ func (x SpecialRegister_Type) String() string {
 }
 
 func (SpecialRegister_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[58].Descriptor()
+	return file_cobol_proto_enumTypes[59].Descriptor()
 }
 
 func (SpecialRegister_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[58]
+	return &file_cobol_proto_enumTypes[59]
 }
 
 func (x SpecialRegister_Type) Number() protoreflect.EnumNumber {
@@ -24783,6 +24868,281 @@ func (x *SpecialRegister) GetIdentifier() *Identifier {
 	return nil
 }
 
+type Call struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	Type  CallType               `protobuf:"varint,1,opt,name=type,proto3,enum=pb.CallType" json:"type,omitempty"`
+	// The raw name text as it appeared in COBOL source, for diagnostics.
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	// Types that are valid to be assigned to Target:
+	//
+	//	*Call_DataName
+	//	*Call_ConditionName
+	//	*Call_FileName
+	//	*Call_ProcedureName
+	//	*Call_SectionName
+	//	*Call_ParagraphName
+	//	*Call_ProgramName
+	//	*Call_IndexName
+	//	*Call_MnemonicName
+	//	*Call_ReportName
+	//	*Call_CdName
+	//	*Call_ScreenName
+	//	*Call_SpecialRegister
+	Target        isCall_Target `protobuf_oneof:"target"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Call) Reset() {
+	*x = Call{}
+	mi := &file_cobol_proto_msgTypes[340]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Call) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Call) ProtoMessage() {}
+
+func (x *Call) ProtoReflect() protoreflect.Message {
+	mi := &file_cobol_proto_msgTypes[340]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Call.ProtoReflect.Descriptor instead.
+func (*Call) Descriptor() ([]byte, []int) {
+	return file_cobol_proto_rawDescGZIP(), []int{340}
+}
+
+func (x *Call) GetType() CallType {
+	if x != nil {
+		return x.Type
+	}
+	return CallType_DATA_DESCRIPTION_ENTRY_CALL
+}
+
+func (x *Call) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *Call) GetTarget() isCall_Target {
+	if x != nil {
+		return x.Target
+	}
+	return nil
+}
+
+func (x *Call) GetDataName() *DataName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_DataName); ok {
+			return x.DataName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetConditionName() *ConditionName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_ConditionName); ok {
+			return x.ConditionName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetFileName() *FileName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_FileName); ok {
+			return x.FileName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetProcedureName() *ProcedureName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_ProcedureName); ok {
+			return x.ProcedureName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetSectionName() *SectionName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_SectionName); ok {
+			return x.SectionName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetParagraphName() *ParagraphName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_ParagraphName); ok {
+			return x.ParagraphName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetProgramName() *ProgramName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_ProgramName); ok {
+			return x.ProgramName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetIndexName() *IndexName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_IndexName); ok {
+			return x.IndexName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetMnemonicName() *MnemonicName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_MnemonicName); ok {
+			return x.MnemonicName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetReportName() *ReportName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_ReportName); ok {
+			return x.ReportName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetCdName() *CdName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_CdName); ok {
+			return x.CdName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetScreenName() *ScreenName {
+	if x != nil {
+		if x, ok := x.Target.(*Call_ScreenName); ok {
+			return x.ScreenName
+		}
+	}
+	return nil
+}
+
+func (x *Call) GetSpecialRegister() *SpecialRegister {
+	if x != nil {
+		if x, ok := x.Target.(*Call_SpecialRegister); ok {
+			return x.SpecialRegister
+		}
+	}
+	return nil
+}
+
+type isCall_Target interface {
+	isCall_Target()
+}
+
+type Call_DataName struct {
+	DataName *DataName `protobuf:"bytes,3,opt,name=data_name,json=dataName,proto3,oneof"`
+}
+
+type Call_ConditionName struct {
+	ConditionName *ConditionName `protobuf:"bytes,4,opt,name=condition_name,json=conditionName,proto3,oneof"`
+}
+
+type Call_FileName struct {
+	FileName *FileName `protobuf:"bytes,5,opt,name=file_name,json=fileName,proto3,oneof"`
+}
+
+type Call_ProcedureName struct {
+	ProcedureName *ProcedureName `protobuf:"bytes,6,opt,name=procedure_name,json=procedureName,proto3,oneof"`
+}
+
+type Call_SectionName struct {
+	SectionName *SectionName `protobuf:"bytes,7,opt,name=section_name,json=sectionName,proto3,oneof"`
+}
+
+type Call_ParagraphName struct {
+	ParagraphName *ParagraphName `protobuf:"bytes,8,opt,name=paragraph_name,json=paragraphName,proto3,oneof"`
+}
+
+type Call_ProgramName struct {
+	ProgramName *ProgramName `protobuf:"bytes,9,opt,name=program_name,json=programName,proto3,oneof"`
+}
+
+type Call_IndexName struct {
+	IndexName *IndexName `protobuf:"bytes,10,opt,name=index_name,json=indexName,proto3,oneof"`
+}
+
+type Call_MnemonicName struct {
+	MnemonicName *MnemonicName `protobuf:"bytes,11,opt,name=mnemonic_name,json=mnemonicName,proto3,oneof"`
+}
+
+type Call_ReportName struct {
+	ReportName *ReportName `protobuf:"bytes,12,opt,name=report_name,json=reportName,proto3,oneof"`
+}
+
+type Call_CdName struct {
+	CdName *CdName `protobuf:"bytes,13,opt,name=cd_name,json=cdName,proto3,oneof"`
+}
+
+type Call_ScreenName struct {
+	ScreenName *ScreenName `protobuf:"bytes,14,opt,name=screen_name,json=screenName,proto3,oneof"`
+}
+
+type Call_SpecialRegister struct {
+	SpecialRegister *SpecialRegister `protobuf:"bytes,15,opt,name=special_register,json=specialRegister,proto3,oneof"`
+}
+
+func (*Call_DataName) isCall_Target() {}
+
+func (*Call_ConditionName) isCall_Target() {}
+
+func (*Call_FileName) isCall_Target() {}
+
+func (*Call_ProcedureName) isCall_Target() {}
+
+func (*Call_SectionName) isCall_Target() {}
+
+func (*Call_ParagraphName) isCall_Target() {}
+
+func (*Call_ProgramName) isCall_Target() {}
+
+func (*Call_IndexName) isCall_Target() {}
+
+func (*Call_MnemonicName) isCall_Target() {}
+
+func (*Call_ReportName) isCall_Target() {}
+
+func (*Call_CdName) isCall_Target() {}
+
+func (*Call_ScreenName) isCall_Target() {}
+
+func (*Call_SpecialRegister) isCall_Target() {}
+
 type NonNumericLiteral struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Value         string                 `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
@@ -24792,7 +25152,7 @@ type NonNumericLiteral struct {
 
 func (x *NonNumericLiteral) Reset() {
 	*x = NonNumericLiteral{}
-	mi := &file_cobol_proto_msgTypes[340]
+	mi := &file_cobol_proto_msgTypes[341]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -24804,7 +25164,7 @@ func (x *NonNumericLiteral) String() string {
 func (*NonNumericLiteral) ProtoMessage() {}
 
 func (x *NonNumericLiteral) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[340]
+	mi := &file_cobol_proto_msgTypes[341]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24817,7 +25177,7 @@ func (x *NonNumericLiteral) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NonNumericLiteral.ProtoReflect.Descriptor instead.
 func (*NonNumericLiteral) Descriptor() ([]byte, []int) {
-	return file_cobol_proto_rawDescGZIP(), []int{340}
+	return file_cobol_proto_rawDescGZIP(), []int{341}
 }
 
 func (x *NonNumericLiteral) GetValue() string {
@@ -24836,7 +25196,7 @@ type StringLiteral struct {
 
 func (x *StringLiteral) Reset() {
 	*x = StringLiteral{}
-	mi := &file_cobol_proto_msgTypes[341]
+	mi := &file_cobol_proto_msgTypes[342]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -24848,7 +25208,7 @@ func (x *StringLiteral) String() string {
 func (*StringLiteral) ProtoMessage() {}
 
 func (x *StringLiteral) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[341]
+	mi := &file_cobol_proto_msgTypes[342]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24861,7 +25221,7 @@ func (x *StringLiteral) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StringLiteral.ProtoReflect.Descriptor instead.
 func (*StringLiteral) Descriptor() ([]byte, []int) {
-	return file_cobol_proto_rawDescGZIP(), []int{341}
+	return file_cobol_proto_rawDescGZIP(), []int{342}
 }
 
 func (x *StringLiteral) GetValue() string {
@@ -24880,7 +25240,7 @@ type DbcsLiteral struct {
 
 func (x *DbcsLiteral) Reset() {
 	*x = DbcsLiteral{}
-	mi := &file_cobol_proto_msgTypes[342]
+	mi := &file_cobol_proto_msgTypes[343]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -24892,7 +25252,7 @@ func (x *DbcsLiteral) String() string {
 func (*DbcsLiteral) ProtoMessage() {}
 
 func (x *DbcsLiteral) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[342]
+	mi := &file_cobol_proto_msgTypes[343]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24905,7 +25265,7 @@ func (x *DbcsLiteral) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DbcsLiteral.ProtoReflect.Descriptor instead.
 func (*DbcsLiteral) Descriptor() ([]byte, []int) {
-	return file_cobol_proto_rawDescGZIP(), []int{342}
+	return file_cobol_proto_rawDescGZIP(), []int{343}
 }
 
 func (x *DbcsLiteral) GetValue() string {
@@ -24924,7 +25284,7 @@ type HexNumber struct {
 
 func (x *HexNumber) Reset() {
 	*x = HexNumber{}
-	mi := &file_cobol_proto_msgTypes[343]
+	mi := &file_cobol_proto_msgTypes[344]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -24936,7 +25296,7 @@ func (x *HexNumber) String() string {
 func (*HexNumber) ProtoMessage() {}
 
 func (x *HexNumber) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[343]
+	mi := &file_cobol_proto_msgTypes[344]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24949,7 +25309,7 @@ func (x *HexNumber) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HexNumber.ProtoReflect.Descriptor instead.
 func (*HexNumber) Descriptor() ([]byte, []int) {
-	return file_cobol_proto_rawDescGZIP(), []int{343}
+	return file_cobol_proto_rawDescGZIP(), []int{344}
 }
 
 func (x *HexNumber) GetValue() string {
@@ -24968,7 +25328,7 @@ type NullTerminated struct {
 
 func (x *NullTerminated) Reset() {
 	*x = NullTerminated{}
-	mi := &file_cobol_proto_msgTypes[344]
+	mi := &file_cobol_proto_msgTypes[345]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -24980,7 +25340,7 @@ func (x *NullTerminated) String() string {
 func (*NullTerminated) ProtoMessage() {}
 
 func (x *NullTerminated) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[344]
+	mi := &file_cobol_proto_msgTypes[345]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24993,7 +25353,7 @@ func (x *NullTerminated) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NullTerminated.ProtoReflect.Descriptor instead.
 func (*NullTerminated) Descriptor() ([]byte, []int) {
-	return file_cobol_proto_rawDescGZIP(), []int{344}
+	return file_cobol_proto_rawDescGZIP(), []int{345}
 }
 
 func (x *NullTerminated) GetValue() string {
@@ -25012,7 +25372,7 @@ type AlphabetClause_Also struct {
 
 func (x *AlphabetClause_Also) Reset() {
 	*x = AlphabetClause_Also{}
-	mi := &file_cobol_proto_msgTypes[345]
+	mi := &file_cobol_proto_msgTypes[346]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25024,7 +25384,7 @@ func (x *AlphabetClause_Also) String() string {
 func (*AlphabetClause_Also) ProtoMessage() {}
 
 func (x *AlphabetClause_Also) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[345]
+	mi := &file_cobol_proto_msgTypes[346]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25058,7 +25418,7 @@ type AlphabetClause_AlphabetLiteral struct {
 
 func (x *AlphabetClause_AlphabetLiteral) Reset() {
 	*x = AlphabetClause_AlphabetLiteral{}
-	mi := &file_cobol_proto_msgTypes[346]
+	mi := &file_cobol_proto_msgTypes[347]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25070,7 +25430,7 @@ func (x *AlphabetClause_AlphabetLiteral) String() string {
 func (*AlphabetClause_AlphabetLiteral) ProtoMessage() {}
 
 func (x *AlphabetClause_AlphabetLiteral) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[346]
+	mi := &file_cobol_proto_msgTypes[347]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25116,7 +25476,7 @@ type AlphabetClause_AlphabetLiterals struct {
 
 func (x *AlphabetClause_AlphabetLiterals) Reset() {
 	*x = AlphabetClause_AlphabetLiterals{}
-	mi := &file_cobol_proto_msgTypes[347]
+	mi := &file_cobol_proto_msgTypes[348]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25128,7 +25488,7 @@ func (x *AlphabetClause_AlphabetLiterals) String() string {
 func (*AlphabetClause_AlphabetLiterals) ProtoMessage() {}
 
 func (x *AlphabetClause_AlphabetLiterals) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[347]
+	mi := &file_cobol_proto_msgTypes[348]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25165,7 +25525,7 @@ type AlphabetClause_Alphanumeric struct {
 
 func (x *AlphabetClause_Alphanumeric) Reset() {
 	*x = AlphabetClause_Alphanumeric{}
-	mi := &file_cobol_proto_msgTypes[348]
+	mi := &file_cobol_proto_msgTypes[349]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25177,7 +25537,7 @@ func (x *AlphabetClause_Alphanumeric) String() string {
 func (*AlphabetClause_Alphanumeric) ProtoMessage() {}
 
 func (x *AlphabetClause_Alphanumeric) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[348]
+	mi := &file_cobol_proto_msgTypes[349]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25259,7 +25619,7 @@ type AlphabetClause_National struct {
 
 func (x *AlphabetClause_National) Reset() {
 	*x = AlphabetClause_National{}
-	mi := &file_cobol_proto_msgTypes[349]
+	mi := &file_cobol_proto_msgTypes[350]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25271,7 +25631,7 @@ func (x *AlphabetClause_National) String() string {
 func (*AlphabetClause_National) ProtoMessage() {}
 
 func (x *AlphabetClause_National) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[349]
+	mi := &file_cobol_proto_msgTypes[350]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25311,7 +25671,7 @@ type EnvironmentSwitchNameClause_StatusPhrase struct {
 
 func (x *EnvironmentSwitchNameClause_StatusPhrase) Reset() {
 	*x = EnvironmentSwitchNameClause_StatusPhrase{}
-	mi := &file_cobol_proto_msgTypes[350]
+	mi := &file_cobol_proto_msgTypes[351]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25323,7 +25683,7 @@ func (x *EnvironmentSwitchNameClause_StatusPhrase) String() string {
 func (*EnvironmentSwitchNameClause_StatusPhrase) ProtoMessage() {}
 
 func (x *EnvironmentSwitchNameClause_StatusPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[350]
+	mi := &file_cobol_proto_msgTypes[351]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25362,7 +25722,7 @@ type LabelRecordsClause_DataNames struct {
 
 func (x *LabelRecordsClause_DataNames) Reset() {
 	*x = LabelRecordsClause_DataNames{}
-	mi := &file_cobol_proto_msgTypes[351]
+	mi := &file_cobol_proto_msgTypes[352]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25374,7 +25734,7 @@ func (x *LabelRecordsClause_DataNames) String() string {
 func (*LabelRecordsClause_DataNames) ProtoMessage() {}
 
 func (x *LabelRecordsClause_DataNames) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[351]
+	mi := &file_cobol_proto_msgTypes[352]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25436,7 +25796,7 @@ type DataDescriptionEntry_Format1 struct {
 
 func (x *DataDescriptionEntry_Format1) Reset() {
 	*x = DataDescriptionEntry_Format1{}
-	mi := &file_cobol_proto_msgTypes[352]
+	mi := &file_cobol_proto_msgTypes[353]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25448,7 +25808,7 @@ func (x *DataDescriptionEntry_Format1) String() string {
 func (*DataDescriptionEntry_Format1) ProtoMessage() {}
 
 func (x *DataDescriptionEntry_Format1) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[352]
+	mi := &file_cobol_proto_msgTypes[353]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25703,7 +26063,7 @@ type DataDescriptionEntry_Format2 struct {
 
 func (x *DataDescriptionEntry_Format2) Reset() {
 	*x = DataDescriptionEntry_Format2{}
-	mi := &file_cobol_proto_msgTypes[353]
+	mi := &file_cobol_proto_msgTypes[354]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25715,7 +26075,7 @@ func (x *DataDescriptionEntry_Format2) String() string {
 func (*DataDescriptionEntry_Format2) ProtoMessage() {}
 
 func (x *DataDescriptionEntry_Format2) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[353]
+	mi := &file_cobol_proto_msgTypes[354]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25755,7 +26115,7 @@ type DataDescriptionEntry_Format3 struct {
 
 func (x *DataDescriptionEntry_Format3) Reset() {
 	*x = DataDescriptionEntry_Format3{}
-	mi := &file_cobol_proto_msgTypes[354]
+	mi := &file_cobol_proto_msgTypes[355]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25767,7 +26127,7 @@ func (x *DataDescriptionEntry_Format3) String() string {
 func (*DataDescriptionEntry_Format3) ProtoMessage() {}
 
 func (x *DataDescriptionEntry_Format3) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[354]
+	mi := &file_cobol_proto_msgTypes[355]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25805,7 +26165,7 @@ type DataDescriptionEntry_ExecSql struct {
 
 func (x *DataDescriptionEntry_ExecSql) Reset() {
 	*x = DataDescriptionEntry_ExecSql{}
-	mi := &file_cobol_proto_msgTypes[355]
+	mi := &file_cobol_proto_msgTypes[356]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25817,7 +26177,7 @@ func (x *DataDescriptionEntry_ExecSql) String() string {
 func (*DataDescriptionEntry_ExecSql) ProtoMessage() {}
 
 func (x *DataDescriptionEntry_ExecSql) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[355]
+	mi := &file_cobol_proto_msgTypes[356]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25843,7 +26203,7 @@ type DataTypeClause_Lob struct {
 
 func (x *DataTypeClause_Lob) Reset() {
 	*x = DataTypeClause_Lob{}
-	mi := &file_cobol_proto_msgTypes[356]
+	mi := &file_cobol_proto_msgTypes[357]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25855,7 +26215,7 @@ func (x *DataTypeClause_Lob) String() string {
 func (*DataTypeClause_Lob) ProtoMessage() {}
 
 func (x *DataTypeClause_Lob) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[356]
+	mi := &file_cobol_proto_msgTypes[357]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25894,7 +26254,7 @@ type DataOccursClause_Sort struct {
 
 func (x *DataOccursClause_Sort) Reset() {
 	*x = DataOccursClause_Sort{}
-	mi := &file_cobol_proto_msgTypes[357]
+	mi := &file_cobol_proto_msgTypes[358]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25906,7 +26266,7 @@ func (x *DataOccursClause_Sort) String() string {
 func (*DataOccursClause_Sort) ProtoMessage() {}
 
 func (x *DataOccursClause_Sort) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[357]
+	mi := &file_cobol_proto_msgTypes[358]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25938,7 +26298,7 @@ type DataOccursClause_Indexed struct {
 
 func (x *DataOccursClause_Indexed) Reset() {
 	*x = DataOccursClause_Indexed{}
-	mi := &file_cobol_proto_msgTypes[358]
+	mi := &file_cobol_proto_msgTypes[359]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25950,7 +26310,7 @@ func (x *DataOccursClause_Indexed) String() string {
 func (*DataOccursClause_Indexed) ProtoMessage() {}
 
 func (x *DataOccursClause_Indexed) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[358]
+	mi := &file_cobol_proto_msgTypes[359]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25985,7 +26345,7 @@ type ReportGroupDescriptionEntry_Vertical struct {
 
 func (x *ReportGroupDescriptionEntry_Vertical) Reset() {
 	*x = ReportGroupDescriptionEntry_Vertical{}
-	mi := &file_cobol_proto_msgTypes[359]
+	mi := &file_cobol_proto_msgTypes[360]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -25997,7 +26357,7 @@ func (x *ReportGroupDescriptionEntry_Vertical) String() string {
 func (*ReportGroupDescriptionEntry_Vertical) ProtoMessage() {}
 
 func (x *ReportGroupDescriptionEntry_Vertical) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[359]
+	mi := &file_cobol_proto_msgTypes[360]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26051,7 +26411,7 @@ type ReportGroupDescriptionEntry_Single struct {
 
 func (x *ReportGroupDescriptionEntry_Single) Reset() {
 	*x = ReportGroupDescriptionEntry_Single{}
-	mi := &file_cobol_proto_msgTypes[360]
+	mi := &file_cobol_proto_msgTypes[361]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26063,7 +26423,7 @@ func (x *ReportGroupDescriptionEntry_Single) String() string {
 func (*ReportGroupDescriptionEntry_Single) ProtoMessage() {}
 
 func (x *ReportGroupDescriptionEntry_Single) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[360]
+	mi := &file_cobol_proto_msgTypes[361]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26113,7 +26473,7 @@ type ReportGroupDescriptionEntry_Printable struct {
 
 func (x *ReportGroupDescriptionEntry_Printable) Reset() {
 	*x = ReportGroupDescriptionEntry_Printable{}
-	mi := &file_cobol_proto_msgTypes[361]
+	mi := &file_cobol_proto_msgTypes[362]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26125,7 +26485,7 @@ func (x *ReportGroupDescriptionEntry_Printable) String() string {
 func (*ReportGroupDescriptionEntry_Printable) ProtoMessage() {}
 
 func (x *ReportGroupDescriptionEntry_Printable) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[361]
+	mi := &file_cobol_proto_msgTypes[362]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26233,7 +26593,7 @@ type TypeClause_ReportHeading struct {
 
 func (x *TypeClause_ReportHeading) Reset() {
 	*x = TypeClause_ReportHeading{}
-	mi := &file_cobol_proto_msgTypes[362]
+	mi := &file_cobol_proto_msgTypes[363]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26245,7 +26605,7 @@ func (x *TypeClause_ReportHeading) String() string {
 func (*TypeClause_ReportHeading) ProtoMessage() {}
 
 func (x *TypeClause_ReportHeading) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[362]
+	mi := &file_cobol_proto_msgTypes[363]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26269,7 +26629,7 @@ type TypeClause_PageHeading struct {
 
 func (x *TypeClause_PageHeading) Reset() {
 	*x = TypeClause_PageHeading{}
-	mi := &file_cobol_proto_msgTypes[363]
+	mi := &file_cobol_proto_msgTypes[364]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26281,7 +26641,7 @@ func (x *TypeClause_PageHeading) String() string {
 func (*TypeClause_PageHeading) ProtoMessage() {}
 
 func (x *TypeClause_PageHeading) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[363]
+	mi := &file_cobol_proto_msgTypes[364]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26310,7 +26670,7 @@ type TypeClause_ControlHeading struct {
 
 func (x *TypeClause_ControlHeading) Reset() {
 	*x = TypeClause_ControlHeading{}
-	mi := &file_cobol_proto_msgTypes[364]
+	mi := &file_cobol_proto_msgTypes[365]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26322,7 +26682,7 @@ func (x *TypeClause_ControlHeading) String() string {
 func (*TypeClause_ControlHeading) ProtoMessage() {}
 
 func (x *TypeClause_ControlHeading) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[364]
+	mi := &file_cobol_proto_msgTypes[365]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26387,7 +26747,7 @@ type TypeClause_Detail struct {
 
 func (x *TypeClause_Detail) Reset() {
 	*x = TypeClause_Detail{}
-	mi := &file_cobol_proto_msgTypes[365]
+	mi := &file_cobol_proto_msgTypes[366]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26399,7 +26759,7 @@ func (x *TypeClause_Detail) String() string {
 func (*TypeClause_Detail) ProtoMessage() {}
 
 func (x *TypeClause_Detail) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[365]
+	mi := &file_cobol_proto_msgTypes[366]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26428,7 +26788,7 @@ type TypeClause_ControlFooting struct {
 
 func (x *TypeClause_ControlFooting) Reset() {
 	*x = TypeClause_ControlFooting{}
-	mi := &file_cobol_proto_msgTypes[366]
+	mi := &file_cobol_proto_msgTypes[367]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26440,7 +26800,7 @@ func (x *TypeClause_ControlFooting) String() string {
 func (*TypeClause_ControlFooting) ProtoMessage() {}
 
 func (x *TypeClause_ControlFooting) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[366]
+	mi := &file_cobol_proto_msgTypes[367]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26505,7 +26865,7 @@ type TypeClause_PageFooting struct {
 
 func (x *TypeClause_PageFooting) Reset() {
 	*x = TypeClause_PageFooting{}
-	mi := &file_cobol_proto_msgTypes[367]
+	mi := &file_cobol_proto_msgTypes[368]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26517,7 +26877,7 @@ func (x *TypeClause_PageFooting) String() string {
 func (*TypeClause_PageFooting) ProtoMessage() {}
 
 func (x *TypeClause_PageFooting) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[367]
+	mi := &file_cobol_proto_msgTypes[368]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26541,7 +26901,7 @@ type TypeClause_ReportFooting struct {
 
 func (x *TypeClause_ReportFooting) Reset() {
 	*x = TypeClause_ReportFooting{}
-	mi := &file_cobol_proto_msgTypes[368]
+	mi := &file_cobol_proto_msgTypes[369]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26553,7 +26913,7 @@ func (x *TypeClause_ReportFooting) String() string {
 func (*TypeClause_ReportFooting) ProtoMessage() {}
 
 func (x *TypeClause_ReportFooting) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[368]
+	mi := &file_cobol_proto_msgTypes[369]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26581,7 +26941,7 @@ type LibraryDescriptionEntry_Import struct {
 
 func (x *LibraryDescriptionEntry_Import) Reset() {
 	*x = LibraryDescriptionEntry_Import{}
-	mi := &file_cobol_proto_msgTypes[369]
+	mi := &file_cobol_proto_msgTypes[370]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26593,7 +26953,7 @@ func (x *LibraryDescriptionEntry_Import) String() string {
 func (*LibraryDescriptionEntry_Import) ProtoMessage() {}
 
 func (x *LibraryDescriptionEntry_Import) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[369]
+	mi := &file_cobol_proto_msgTypes[370]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26647,7 +27007,7 @@ type LibraryDescriptionEntry_Export struct {
 
 func (x *LibraryDescriptionEntry_Export) Reset() {
 	*x = LibraryDescriptionEntry_Export{}
-	mi := &file_cobol_proto_msgTypes[370]
+	mi := &file_cobol_proto_msgTypes[371]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26659,7 +27019,7 @@ func (x *LibraryDescriptionEntry_Export) String() string {
 func (*LibraryDescriptionEntry_Export) ProtoMessage() {}
 
 func (x *LibraryDescriptionEntry_Export) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[370]
+	mi := &file_cobol_proto_msgTypes[371]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26702,7 +27062,7 @@ type ProcedureClause2_WithName struct {
 
 func (x *ProcedureClause2_WithName) Reset() {
 	*x = ProcedureClause2_WithName{}
-	mi := &file_cobol_proto_msgTypes[371]
+	mi := &file_cobol_proto_msgTypes[372]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26714,7 +27074,7 @@ func (x *ProcedureClause2_WithName) String() string {
 func (*ProcedureClause2_WithName) ProtoMessage() {}
 
 func (x *ProcedureClause2_WithName) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[371]
+	mi := &file_cobol_proto_msgTypes[372]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26784,7 +27144,7 @@ type ProcedureClause2_UsingName struct {
 
 func (x *ProcedureClause2_UsingName) Reset() {
 	*x = ProcedureClause2_UsingName{}
-	mi := &file_cobol_proto_msgTypes[372]
+	mi := &file_cobol_proto_msgTypes[373]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26796,7 +27156,7 @@ func (x *ProcedureClause2_UsingName) String() string {
 func (*ProcedureClause2_UsingName) ProtoMessage() {}
 
 func (x *ProcedureClause2_UsingName) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[372]
+	mi := &file_cobol_proto_msgTypes[373]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26872,7 +27232,7 @@ type CommunicationDescriptionEntry_Input struct {
 
 func (x *CommunicationDescriptionEntry_Input) Reset() {
 	*x = CommunicationDescriptionEntry_Input{}
-	mi := &file_cobol_proto_msgTypes[373]
+	mi := &file_cobol_proto_msgTypes[374]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -26884,7 +27244,7 @@ func (x *CommunicationDescriptionEntry_Input) String() string {
 func (*CommunicationDescriptionEntry_Input) ProtoMessage() {}
 
 func (x *CommunicationDescriptionEntry_Input) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[373]
+	mi := &file_cobol_proto_msgTypes[374]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26991,7 +27351,7 @@ type CommunicationDescriptionEntry_Output struct {
 
 func (x *CommunicationDescriptionEntry_Output) Reset() {
 	*x = CommunicationDescriptionEntry_Output{}
-	mi := &file_cobol_proto_msgTypes[374]
+	mi := &file_cobol_proto_msgTypes[375]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27003,7 +27363,7 @@ func (x *CommunicationDescriptionEntry_Output) String() string {
 func (*CommunicationDescriptionEntry_Output) ProtoMessage() {}
 
 func (x *CommunicationDescriptionEntry_Output) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[374]
+	mi := &file_cobol_proto_msgTypes[375]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27076,7 +27436,7 @@ type CommunicationDescriptionEntry_Io struct {
 
 func (x *CommunicationDescriptionEntry_Io) Reset() {
 	*x = CommunicationDescriptionEntry_Io{}
-	mi := &file_cobol_proto_msgTypes[375]
+	mi := &file_cobol_proto_msgTypes[376]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27088,7 +27448,7 @@ func (x *CommunicationDescriptionEntry_Io) String() string {
 func (*CommunicationDescriptionEntry_Io) ProtoMessage() {}
 
 func (x *CommunicationDescriptionEntry_Io) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[375]
+	mi := &file_cobol_proto_msgTypes[376]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27167,7 +27527,7 @@ type ProcedureDivision_ByReference struct {
 
 func (x *ProcedureDivision_ByReference) Reset() {
 	*x = ProcedureDivision_ByReference{}
-	mi := &file_cobol_proto_msgTypes[376]
+	mi := &file_cobol_proto_msgTypes[377]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27179,7 +27539,7 @@ func (x *ProcedureDivision_ByReference) String() string {
 func (*ProcedureDivision_ByReference) ProtoMessage() {}
 
 func (x *ProcedureDivision_ByReference) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[376]
+	mi := &file_cobol_proto_msgTypes[377]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27260,7 +27620,7 @@ type ProcedureDivision_ByReferencePhrase struct {
 
 func (x *ProcedureDivision_ByReferencePhrase) Reset() {
 	*x = ProcedureDivision_ByReferencePhrase{}
-	mi := &file_cobol_proto_msgTypes[377]
+	mi := &file_cobol_proto_msgTypes[378]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27272,7 +27632,7 @@ func (x *ProcedureDivision_ByReferencePhrase) String() string {
 func (*ProcedureDivision_ByReferencePhrase) ProtoMessage() {}
 
 func (x *ProcedureDivision_ByReferencePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[377]
+	mi := &file_cobol_proto_msgTypes[378]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27309,7 +27669,7 @@ type ProcedureDivision_ByValue struct {
 
 func (x *ProcedureDivision_ByValue) Reset() {
 	*x = ProcedureDivision_ByValue{}
-	mi := &file_cobol_proto_msgTypes[378]
+	mi := &file_cobol_proto_msgTypes[379]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27321,7 +27681,7 @@ func (x *ProcedureDivision_ByValue) String() string {
 func (*ProcedureDivision_ByValue) ProtoMessage() {}
 
 func (x *ProcedureDivision_ByValue) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[378]
+	mi := &file_cobol_proto_msgTypes[379]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27402,7 +27762,7 @@ type ProcedureDivision_ByValuePhrase struct {
 
 func (x *ProcedureDivision_ByValuePhrase) Reset() {
 	*x = ProcedureDivision_ByValuePhrase{}
-	mi := &file_cobol_proto_msgTypes[379]
+	mi := &file_cobol_proto_msgTypes[380]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27414,7 +27774,7 @@ func (x *ProcedureDivision_ByValuePhrase) String() string {
 func (*ProcedureDivision_ByValuePhrase) ProtoMessage() {}
 
 func (x *ProcedureDivision_ByValuePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[379]
+	mi := &file_cobol_proto_msgTypes[380]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27450,7 +27810,7 @@ type ProcedureDivision_UsingParameter struct {
 
 func (x *ProcedureDivision_UsingParameter) Reset() {
 	*x = ProcedureDivision_UsingParameter{}
-	mi := &file_cobol_proto_msgTypes[380]
+	mi := &file_cobol_proto_msgTypes[381]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27462,7 +27822,7 @@ func (x *ProcedureDivision_UsingParameter) String() string {
 func (*ProcedureDivision_UsingParameter) ProtoMessage() {}
 
 func (x *ProcedureDivision_UsingParameter) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[380]
+	mi := &file_cobol_proto_msgTypes[381]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27530,7 +27890,7 @@ type ProcedureDivision_GivingClause struct {
 
 func (x *ProcedureDivision_GivingClause) Reset() {
 	*x = ProcedureDivision_GivingClause{}
-	mi := &file_cobol_proto_msgTypes[381]
+	mi := &file_cobol_proto_msgTypes[382]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27542,7 +27902,7 @@ func (x *ProcedureDivision_GivingClause) String() string {
 func (*ProcedureDivision_GivingClause) ProtoMessage() {}
 
 func (x *ProcedureDivision_GivingClause) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[381]
+	mi := &file_cobol_proto_msgTypes[382]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27582,7 +27942,7 @@ type ProcedureDivision_UsingClause struct {
 
 func (x *ProcedureDivision_UsingClause) Reset() {
 	*x = ProcedureDivision_UsingClause{}
-	mi := &file_cobol_proto_msgTypes[382]
+	mi := &file_cobol_proto_msgTypes[383]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27594,7 +27954,7 @@ func (x *ProcedureDivision_UsingClause) String() string {
 func (*ProcedureDivision_UsingClause) ProtoMessage() {}
 
 func (x *ProcedureDivision_UsingClause) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[382]
+	mi := &file_cobol_proto_msgTypes[383]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27637,7 +27997,7 @@ type WriteStatement_FromPhrase struct {
 
 func (x *WriteStatement_FromPhrase) Reset() {
 	*x = WriteStatement_FromPhrase{}
-	mi := &file_cobol_proto_msgTypes[383]
+	mi := &file_cobol_proto_msgTypes[384]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27649,7 +28009,7 @@ func (x *WriteStatement_FromPhrase) String() string {
 func (*WriteStatement_FromPhrase) ProtoMessage() {}
 
 func (x *WriteStatement_FromPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[383]
+	mi := &file_cobol_proto_msgTypes[384]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27714,7 +28074,7 @@ type WriteStatement_AdvancingPage struct {
 
 func (x *WriteStatement_AdvancingPage) Reset() {
 	*x = WriteStatement_AdvancingPage{}
-	mi := &file_cobol_proto_msgTypes[384]
+	mi := &file_cobol_proto_msgTypes[385]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27726,7 +28086,7 @@ func (x *WriteStatement_AdvancingPage) String() string {
 func (*WriteStatement_AdvancingPage) ProtoMessage() {}
 
 func (x *WriteStatement_AdvancingPage) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[384]
+	mi := &file_cobol_proto_msgTypes[385]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27755,7 +28115,7 @@ type WriteStatement_AdvancingLines struct {
 
 func (x *WriteStatement_AdvancingLines) Reset() {
 	*x = WriteStatement_AdvancingLines{}
-	mi := &file_cobol_proto_msgTypes[385]
+	mi := &file_cobol_proto_msgTypes[386]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27767,7 +28127,7 @@ func (x *WriteStatement_AdvancingLines) String() string {
 func (*WriteStatement_AdvancingLines) ProtoMessage() {}
 
 func (x *WriteStatement_AdvancingLines) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[385]
+	mi := &file_cobol_proto_msgTypes[386]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27833,7 +28193,7 @@ type WriteStatement_AdvancingMnemonic struct {
 
 func (x *WriteStatement_AdvancingMnemonic) Reset() {
 	*x = WriteStatement_AdvancingMnemonic{}
-	mi := &file_cobol_proto_msgTypes[386]
+	mi := &file_cobol_proto_msgTypes[387]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27845,7 +28205,7 @@ func (x *WriteStatement_AdvancingMnemonic) String() string {
 func (*WriteStatement_AdvancingMnemonic) ProtoMessage() {}
 
 func (x *WriteStatement_AdvancingMnemonic) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[386]
+	mi := &file_cobol_proto_msgTypes[387]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27882,7 +28242,7 @@ type WriteStatement_AdvancingPhrase struct {
 
 func (x *WriteStatement_AdvancingPhrase) Reset() {
 	*x = WriteStatement_AdvancingPhrase{}
-	mi := &file_cobol_proto_msgTypes[387]
+	mi := &file_cobol_proto_msgTypes[388]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27894,7 +28254,7 @@ func (x *WriteStatement_AdvancingPhrase) String() string {
 func (*WriteStatement_AdvancingPhrase) ProtoMessage() {}
 
 func (x *WriteStatement_AdvancingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[387]
+	mi := &file_cobol_proto_msgTypes[388]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27979,7 +28339,7 @@ type UnstringStatement_DelimitedByPhrase struct {
 
 func (x *UnstringStatement_DelimitedByPhrase) Reset() {
 	*x = UnstringStatement_DelimitedByPhrase{}
-	mi := &file_cobol_proto_msgTypes[388]
+	mi := &file_cobol_proto_msgTypes[389]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -27991,7 +28351,7 @@ func (x *UnstringStatement_DelimitedByPhrase) String() string {
 func (*UnstringStatement_DelimitedByPhrase) ProtoMessage() {}
 
 func (x *UnstringStatement_DelimitedByPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[388]
+	mi := &file_cobol_proto_msgTypes[389]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28062,7 +28422,7 @@ type UnstringStatement_OrAllPhrase struct {
 
 func (x *UnstringStatement_OrAllPhrase) Reset() {
 	*x = UnstringStatement_OrAllPhrase{}
-	mi := &file_cobol_proto_msgTypes[389]
+	mi := &file_cobol_proto_msgTypes[390]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28074,7 +28434,7 @@ func (x *UnstringStatement_OrAllPhrase) String() string {
 func (*UnstringStatement_OrAllPhrase) ProtoMessage() {}
 
 func (x *UnstringStatement_OrAllPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[389]
+	mi := &file_cobol_proto_msgTypes[390]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28141,7 +28501,7 @@ type UnstringStatement_DelimitedOr struct {
 
 func (x *UnstringStatement_DelimitedOr) Reset() {
 	*x = UnstringStatement_DelimitedOr{}
-	mi := &file_cobol_proto_msgTypes[390]
+	mi := &file_cobol_proto_msgTypes[391]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28153,7 +28513,7 @@ func (x *UnstringStatement_DelimitedOr) String() string {
 func (*UnstringStatement_DelimitedOr) ProtoMessage() {}
 
 func (x *UnstringStatement_DelimitedOr) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[390]
+	mi := &file_cobol_proto_msgTypes[391]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28194,7 +28554,7 @@ type UnstringStatement_Into struct {
 
 func (x *UnstringStatement_Into) Reset() {
 	*x = UnstringStatement_Into{}
-	mi := &file_cobol_proto_msgTypes[391]
+	mi := &file_cobol_proto_msgTypes[392]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28206,7 +28566,7 @@ func (x *UnstringStatement_Into) String() string {
 func (*UnstringStatement_Into) ProtoMessage() {}
 
 func (x *UnstringStatement_Into) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[391]
+	mi := &file_cobol_proto_msgTypes[392]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28252,7 +28612,7 @@ type UnstringStatement_DelimiterIn struct {
 
 func (x *UnstringStatement_DelimiterIn) Reset() {
 	*x = UnstringStatement_DelimiterIn{}
-	mi := &file_cobol_proto_msgTypes[392]
+	mi := &file_cobol_proto_msgTypes[393]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28264,7 +28624,7 @@ func (x *UnstringStatement_DelimiterIn) String() string {
 func (*UnstringStatement_DelimiterIn) ProtoMessage() {}
 
 func (x *UnstringStatement_DelimiterIn) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[392]
+	mi := &file_cobol_proto_msgTypes[393]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28296,7 +28656,7 @@ type UnstringStatement_CountIn struct {
 
 func (x *UnstringStatement_CountIn) Reset() {
 	*x = UnstringStatement_CountIn{}
-	mi := &file_cobol_proto_msgTypes[393]
+	mi := &file_cobol_proto_msgTypes[394]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28308,7 +28668,7 @@ func (x *UnstringStatement_CountIn) String() string {
 func (*UnstringStatement_CountIn) ProtoMessage() {}
 
 func (x *UnstringStatement_CountIn) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[393]
+	mi := &file_cobol_proto_msgTypes[394]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28341,7 +28701,7 @@ type UnstringStatement_SendingPhrase struct {
 
 func (x *UnstringStatement_SendingPhrase) Reset() {
 	*x = UnstringStatement_SendingPhrase{}
-	mi := &file_cobol_proto_msgTypes[394]
+	mi := &file_cobol_proto_msgTypes[395]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28353,7 +28713,7 @@ func (x *UnstringStatement_SendingPhrase) String() string {
 func (*UnstringStatement_SendingPhrase) ProtoMessage() {}
 
 func (x *UnstringStatement_SendingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[394]
+	mi := &file_cobol_proto_msgTypes[395]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28392,7 +28752,7 @@ type UnstringStatement_IntoPhrase struct {
 
 func (x *UnstringStatement_IntoPhrase) Reset() {
 	*x = UnstringStatement_IntoPhrase{}
-	mi := &file_cobol_proto_msgTypes[395]
+	mi := &file_cobol_proto_msgTypes[396]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28404,7 +28764,7 @@ func (x *UnstringStatement_IntoPhrase) String() string {
 func (*UnstringStatement_IntoPhrase) ProtoMessage() {}
 
 func (x *UnstringStatement_IntoPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[395]
+	mi := &file_cobol_proto_msgTypes[396]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28436,7 +28796,7 @@ type UnstringStatement_WithPointerPhrase struct {
 
 func (x *UnstringStatement_WithPointerPhrase) Reset() {
 	*x = UnstringStatement_WithPointerPhrase{}
-	mi := &file_cobol_proto_msgTypes[396]
+	mi := &file_cobol_proto_msgTypes[397]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28448,7 +28808,7 @@ func (x *UnstringStatement_WithPointerPhrase) String() string {
 func (*UnstringStatement_WithPointerPhrase) ProtoMessage() {}
 
 func (x *UnstringStatement_WithPointerPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[396]
+	mi := &file_cobol_proto_msgTypes[397]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28480,7 +28840,7 @@ type UnstringStatement_TallyingPhrase struct {
 
 func (x *UnstringStatement_TallyingPhrase) Reset() {
 	*x = UnstringStatement_TallyingPhrase{}
-	mi := &file_cobol_proto_msgTypes[397]
+	mi := &file_cobol_proto_msgTypes[398]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28492,7 +28852,7 @@ func (x *UnstringStatement_TallyingPhrase) String() string {
 func (*UnstringStatement_TallyingPhrase) ProtoMessage() {}
 
 func (x *UnstringStatement_TallyingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[397]
+	mi := &file_cobol_proto_msgTypes[398]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28528,7 +28888,7 @@ type SubtractStatement_Subtrahend struct {
 
 func (x *SubtractStatement_Subtrahend) Reset() {
 	*x = SubtractStatement_Subtrahend{}
-	mi := &file_cobol_proto_msgTypes[398]
+	mi := &file_cobol_proto_msgTypes[399]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28540,7 +28900,7 @@ func (x *SubtractStatement_Subtrahend) String() string {
 func (*SubtractStatement_Subtrahend) ProtoMessage() {}
 
 func (x *SubtractStatement_Subtrahend) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[398]
+	mi := &file_cobol_proto_msgTypes[399]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28606,7 +28966,7 @@ type SubtractStatement_Minuend struct {
 
 func (x *SubtractStatement_Minuend) Reset() {
 	*x = SubtractStatement_Minuend{}
-	mi := &file_cobol_proto_msgTypes[399]
+	mi := &file_cobol_proto_msgTypes[400]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28618,7 +28978,7 @@ func (x *SubtractStatement_Minuend) String() string {
 func (*SubtractStatement_Minuend) ProtoMessage() {}
 
 func (x *SubtractStatement_Minuend) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[399]
+	mi := &file_cobol_proto_msgTypes[400]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28654,7 +29014,7 @@ type SubtractStatement_MinuendGiving struct {
 
 func (x *SubtractStatement_MinuendGiving) Reset() {
 	*x = SubtractStatement_MinuendGiving{}
-	mi := &file_cobol_proto_msgTypes[400]
+	mi := &file_cobol_proto_msgTypes[401]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28666,7 +29026,7 @@ func (x *SubtractStatement_MinuendGiving) String() string {
 func (*SubtractStatement_MinuendGiving) ProtoMessage() {}
 
 func (x *SubtractStatement_MinuendGiving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[400]
+	mi := &file_cobol_proto_msgTypes[401]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28732,7 +29092,7 @@ type SubtractStatement_Giving struct {
 
 func (x *SubtractStatement_Giving) Reset() {
 	*x = SubtractStatement_Giving{}
-	mi := &file_cobol_proto_msgTypes[401]
+	mi := &file_cobol_proto_msgTypes[402]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28744,7 +29104,7 @@ func (x *SubtractStatement_Giving) String() string {
 func (*SubtractStatement_Giving) ProtoMessage() {}
 
 func (x *SubtractStatement_Giving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[401]
+	mi := &file_cobol_proto_msgTypes[402]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28776,7 +29136,7 @@ type SubtractStatement_MinuendCorresponding struct {
 
 func (x *SubtractStatement_MinuendCorresponding) Reset() {
 	*x = SubtractStatement_MinuendCorresponding{}
-	mi := &file_cobol_proto_msgTypes[402]
+	mi := &file_cobol_proto_msgTypes[403]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28788,7 +29148,7 @@ func (x *SubtractStatement_MinuendCorresponding) String() string {
 func (*SubtractStatement_MinuendCorresponding) ProtoMessage() {}
 
 func (x *SubtractStatement_MinuendCorresponding) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[402]
+	mi := &file_cobol_proto_msgTypes[403]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28821,7 +29181,7 @@ type SubtractStatement_FromStatement struct {
 
 func (x *SubtractStatement_FromStatement) Reset() {
 	*x = SubtractStatement_FromStatement{}
-	mi := &file_cobol_proto_msgTypes[403]
+	mi := &file_cobol_proto_msgTypes[404]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28833,7 +29193,7 @@ func (x *SubtractStatement_FromStatement) String() string {
 func (*SubtractStatement_FromStatement) ProtoMessage() {}
 
 func (x *SubtractStatement_FromStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[403]
+	mi := &file_cobol_proto_msgTypes[404]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28874,7 +29234,7 @@ type SubtractStatement_FromGivingStatement struct {
 
 func (x *SubtractStatement_FromGivingStatement) Reset() {
 	*x = SubtractStatement_FromGivingStatement{}
-	mi := &file_cobol_proto_msgTypes[404]
+	mi := &file_cobol_proto_msgTypes[405]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28886,7 +29246,7 @@ func (x *SubtractStatement_FromGivingStatement) String() string {
 func (*SubtractStatement_FromGivingStatement) ProtoMessage() {}
 
 func (x *SubtractStatement_FromGivingStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[404]
+	mi := &file_cobol_proto_msgTypes[405]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28933,7 +29293,7 @@ type SubtractStatement_CorrespondingStatement struct {
 
 func (x *SubtractStatement_CorrespondingStatement) Reset() {
 	*x = SubtractStatement_CorrespondingStatement{}
-	mi := &file_cobol_proto_msgTypes[405]
+	mi := &file_cobol_proto_msgTypes[406]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -28945,7 +29305,7 @@ func (x *SubtractStatement_CorrespondingStatement) String() string {
 func (*SubtractStatement_CorrespondingStatement) ProtoMessage() {}
 
 func (x *SubtractStatement_CorrespondingStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[405]
+	mi := &file_cobol_proto_msgTypes[406]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28988,7 +29348,7 @@ type StringStatement_Sending struct {
 
 func (x *StringStatement_Sending) Reset() {
 	*x = StringStatement_Sending{}
-	mi := &file_cobol_proto_msgTypes[406]
+	mi := &file_cobol_proto_msgTypes[407]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29000,7 +29360,7 @@ func (x *StringStatement_Sending) String() string {
 func (*StringStatement_Sending) ProtoMessage() {}
 
 func (x *StringStatement_Sending) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[406]
+	mi := &file_cobol_proto_msgTypes[407]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29070,7 +29430,7 @@ type StringStatement_DelimitedByPhrase struct {
 
 func (x *StringStatement_DelimitedByPhrase) Reset() {
 	*x = StringStatement_DelimitedByPhrase{}
-	mi := &file_cobol_proto_msgTypes[407]
+	mi := &file_cobol_proto_msgTypes[408]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29082,7 +29442,7 @@ func (x *StringStatement_DelimitedByPhrase) String() string {
 func (*StringStatement_DelimitedByPhrase) ProtoMessage() {}
 
 func (x *StringStatement_DelimitedByPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[407]
+	mi := &file_cobol_proto_msgTypes[408]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29152,7 +29512,7 @@ type StringStatement_ForPhrase struct {
 
 func (x *StringStatement_ForPhrase) Reset() {
 	*x = StringStatement_ForPhrase{}
-	mi := &file_cobol_proto_msgTypes[408]
+	mi := &file_cobol_proto_msgTypes[409]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29164,7 +29524,7 @@ func (x *StringStatement_ForPhrase) String() string {
 func (*StringStatement_ForPhrase) ProtoMessage() {}
 
 func (x *StringStatement_ForPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[408]
+	mi := &file_cobol_proto_msgTypes[409]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29232,7 +29592,7 @@ type StringStatement_SendingPhrase struct {
 
 func (x *StringStatement_SendingPhrase) Reset() {
 	*x = StringStatement_SendingPhrase{}
-	mi := &file_cobol_proto_msgTypes[409]
+	mi := &file_cobol_proto_msgTypes[410]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29244,7 +29604,7 @@ func (x *StringStatement_SendingPhrase) String() string {
 func (*StringStatement_SendingPhrase) ProtoMessage() {}
 
 func (x *StringStatement_SendingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[409]
+	mi := &file_cobol_proto_msgTypes[410]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29290,7 +29650,7 @@ type StringStatement_IntoPhrase struct {
 
 func (x *StringStatement_IntoPhrase) Reset() {
 	*x = StringStatement_IntoPhrase{}
-	mi := &file_cobol_proto_msgTypes[410]
+	mi := &file_cobol_proto_msgTypes[411]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29302,7 +29662,7 @@ func (x *StringStatement_IntoPhrase) String() string {
 func (*StringStatement_IntoPhrase) ProtoMessage() {}
 
 func (x *StringStatement_IntoPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[410]
+	mi := &file_cobol_proto_msgTypes[411]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29334,7 +29694,7 @@ type StringStatement_WithPointerPhrase struct {
 
 func (x *StringStatement_WithPointerPhrase) Reset() {
 	*x = StringStatement_WithPointerPhrase{}
-	mi := &file_cobol_proto_msgTypes[411]
+	mi := &file_cobol_proto_msgTypes[412]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29346,7 +29706,7 @@ func (x *StringStatement_WithPointerPhrase) String() string {
 func (*StringStatement_WithPointerPhrase) ProtoMessage() {}
 
 func (x *StringStatement_WithPointerPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[411]
+	mi := &file_cobol_proto_msgTypes[412]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29382,7 +29742,7 @@ type StopStatement_Giving struct {
 
 func (x *StopStatement_Giving) Reset() {
 	*x = StopStatement_Giving{}
-	mi := &file_cobol_proto_msgTypes[412]
+	mi := &file_cobol_proto_msgTypes[413]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29394,7 +29754,7 @@ func (x *StopStatement_Giving) String() string {
 func (*StopStatement_Giving) ProtoMessage() {}
 
 func (x *StopStatement_Giving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[412]
+	mi := &file_cobol_proto_msgTypes[413]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29461,7 +29821,7 @@ type StartStatement_Key struct {
 
 func (x *StartStatement_Key) Reset() {
 	*x = StartStatement_Key{}
-	mi := &file_cobol_proto_msgTypes[413]
+	mi := &file_cobol_proto_msgTypes[414]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29473,7 +29833,7 @@ func (x *StartStatement_Key) String() string {
 func (*StartStatement_Key) ProtoMessage() {}
 
 func (x *StartStatement_Key) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[413]
+	mi := &file_cobol_proto_msgTypes[414]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29512,7 +29872,7 @@ type SortStatement_OnKeyClause struct {
 
 func (x *SortStatement_OnKeyClause) Reset() {
 	*x = SortStatement_OnKeyClause{}
-	mi := &file_cobol_proto_msgTypes[414]
+	mi := &file_cobol_proto_msgTypes[415]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29524,7 +29884,7 @@ func (x *SortStatement_OnKeyClause) String() string {
 func (*SortStatement_OnKeyClause) ProtoMessage() {}
 
 func (x *SortStatement_OnKeyClause) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[414]
+	mi := &file_cobol_proto_msgTypes[415]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29555,7 +29915,7 @@ type SortStatement_DuplicatesPhrase struct {
 
 func (x *SortStatement_DuplicatesPhrase) Reset() {
 	*x = SortStatement_DuplicatesPhrase{}
-	mi := &file_cobol_proto_msgTypes[415]
+	mi := &file_cobol_proto_msgTypes[416]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29567,7 +29927,7 @@ func (x *SortStatement_DuplicatesPhrase) String() string {
 func (*SortStatement_DuplicatesPhrase) ProtoMessage() {}
 
 func (x *SortStatement_DuplicatesPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[415]
+	mi := &file_cobol_proto_msgTypes[416]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29592,7 +29952,7 @@ type SortStatement_CollatingAlphanumeric struct {
 
 func (x *SortStatement_CollatingAlphanumeric) Reset() {
 	*x = SortStatement_CollatingAlphanumeric{}
-	mi := &file_cobol_proto_msgTypes[416]
+	mi := &file_cobol_proto_msgTypes[417]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29604,7 +29964,7 @@ func (x *SortStatement_CollatingAlphanumeric) String() string {
 func (*SortStatement_CollatingAlphanumeric) ProtoMessage() {}
 
 func (x *SortStatement_CollatingAlphanumeric) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[416]
+	mi := &file_cobol_proto_msgTypes[417]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29636,7 +29996,7 @@ type SortStatement_CollatingNational struct {
 
 func (x *SortStatement_CollatingNational) Reset() {
 	*x = SortStatement_CollatingNational{}
-	mi := &file_cobol_proto_msgTypes[417]
+	mi := &file_cobol_proto_msgTypes[418]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29648,7 +30008,7 @@ func (x *SortStatement_CollatingNational) String() string {
 func (*SortStatement_CollatingNational) ProtoMessage() {}
 
 func (x *SortStatement_CollatingNational) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[417]
+	mi := &file_cobol_proto_msgTypes[418]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29682,7 +30042,7 @@ type SortStatement_CollatingSequencePhrase struct {
 
 func (x *SortStatement_CollatingSequencePhrase) Reset() {
 	*x = SortStatement_CollatingSequencePhrase{}
-	mi := &file_cobol_proto_msgTypes[418]
+	mi := &file_cobol_proto_msgTypes[419]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29694,7 +30054,7 @@ func (x *SortStatement_CollatingSequencePhrase) String() string {
 func (*SortStatement_CollatingSequencePhrase) ProtoMessage() {}
 
 func (x *SortStatement_CollatingSequencePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[418]
+	mi := &file_cobol_proto_msgTypes[419]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29740,7 +30100,7 @@ type SortStatement_InputThrough struct {
 
 func (x *SortStatement_InputThrough) Reset() {
 	*x = SortStatement_InputThrough{}
-	mi := &file_cobol_proto_msgTypes[419]
+	mi := &file_cobol_proto_msgTypes[420]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29752,7 +30112,7 @@ func (x *SortStatement_InputThrough) String() string {
 func (*SortStatement_InputThrough) ProtoMessage() {}
 
 func (x *SortStatement_InputThrough) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[419]
+	mi := &file_cobol_proto_msgTypes[420]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29785,7 +30145,7 @@ type SortStatement_InputProcedurePhrase struct {
 
 func (x *SortStatement_InputProcedurePhrase) Reset() {
 	*x = SortStatement_InputProcedurePhrase{}
-	mi := &file_cobol_proto_msgTypes[420]
+	mi := &file_cobol_proto_msgTypes[421]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29797,7 +30157,7 @@ func (x *SortStatement_InputProcedurePhrase) String() string {
 func (*SortStatement_InputProcedurePhrase) ProtoMessage() {}
 
 func (x *SortStatement_InputProcedurePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[420]
+	mi := &file_cobol_proto_msgTypes[421]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29836,7 +30196,7 @@ type SortStatement_Using struct {
 
 func (x *SortStatement_Using) Reset() {
 	*x = SortStatement_Using{}
-	mi := &file_cobol_proto_msgTypes[421]
+	mi := &file_cobol_proto_msgTypes[422]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29848,7 +30208,7 @@ func (x *SortStatement_Using) String() string {
 func (*SortStatement_Using) ProtoMessage() {}
 
 func (x *SortStatement_Using) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[421]
+	mi := &file_cobol_proto_msgTypes[422]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29880,7 +30240,7 @@ type SortStatement_OutputThrough struct {
 
 func (x *SortStatement_OutputThrough) Reset() {
 	*x = SortStatement_OutputThrough{}
-	mi := &file_cobol_proto_msgTypes[422]
+	mi := &file_cobol_proto_msgTypes[423]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29892,7 +30252,7 @@ func (x *SortStatement_OutputThrough) String() string {
 func (*SortStatement_OutputThrough) ProtoMessage() {}
 
 func (x *SortStatement_OutputThrough) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[422]
+	mi := &file_cobol_proto_msgTypes[423]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29925,7 +30285,7 @@ type SortStatement_OutputProcedurePhrase struct {
 
 func (x *SortStatement_OutputProcedurePhrase) Reset() {
 	*x = SortStatement_OutputProcedurePhrase{}
-	mi := &file_cobol_proto_msgTypes[423]
+	mi := &file_cobol_proto_msgTypes[424]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29937,7 +30297,7 @@ func (x *SortStatement_OutputProcedurePhrase) String() string {
 func (*SortStatement_OutputProcedurePhrase) ProtoMessage() {}
 
 func (x *SortStatement_OutputProcedurePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[423]
+	mi := &file_cobol_proto_msgTypes[424]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29977,7 +30337,7 @@ type SortStatement_Giving struct {
 
 func (x *SortStatement_Giving) Reset() {
 	*x = SortStatement_Giving{}
-	mi := &file_cobol_proto_msgTypes[424]
+	mi := &file_cobol_proto_msgTypes[425]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -29989,7 +30349,7 @@ func (x *SortStatement_Giving) String() string {
 func (*SortStatement_Giving) ProtoMessage() {}
 
 func (x *SortStatement_Giving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[424]
+	mi := &file_cobol_proto_msgTypes[425]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30028,7 +30388,7 @@ type SortStatement_GivingPhrase struct {
 
 func (x *SortStatement_GivingPhrase) Reset() {
 	*x = SortStatement_GivingPhrase{}
-	mi := &file_cobol_proto_msgTypes[425]
+	mi := &file_cobol_proto_msgTypes[426]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30040,7 +30400,7 @@ func (x *SortStatement_GivingPhrase) String() string {
 func (*SortStatement_GivingPhrase) ProtoMessage() {}
 
 func (x *SortStatement_GivingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[425]
+	mi := &file_cobol_proto_msgTypes[426]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30072,7 +30432,7 @@ type SetStatement_To struct {
 
 func (x *SetStatement_To) Reset() {
 	*x = SetStatement_To{}
-	mi := &file_cobol_proto_msgTypes[426]
+	mi := &file_cobol_proto_msgTypes[427]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30084,7 +30444,7 @@ func (x *SetStatement_To) String() string {
 func (*SetStatement_To) ProtoMessage() {}
 
 func (x *SetStatement_To) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[426]
+	mi := &file_cobol_proto_msgTypes[427]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30120,7 +30480,7 @@ type SetStatement_Entry struct {
 
 func (x *SetStatement_Entry) Reset() {
 	*x = SetStatement_Entry{}
-	mi := &file_cobol_proto_msgTypes[427]
+	mi := &file_cobol_proto_msgTypes[428]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30132,7 +30492,7 @@ func (x *SetStatement_Entry) String() string {
 func (*SetStatement_Entry) ProtoMessage() {}
 
 func (x *SetStatement_Entry) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[427]
+	mi := &file_cobol_proto_msgTypes[428]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30205,7 +30565,7 @@ type SetStatement_ToValue struct {
 
 func (x *SetStatement_ToValue) Reset() {
 	*x = SetStatement_ToValue{}
-	mi := &file_cobol_proto_msgTypes[428]
+	mi := &file_cobol_proto_msgTypes[429]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30217,7 +30577,7 @@ func (x *SetStatement_ToValue) String() string {
 func (*SetStatement_ToValue) ProtoMessage() {}
 
 func (x *SetStatement_ToValue) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[428]
+	mi := &file_cobol_proto_msgTypes[429]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30332,7 +30692,7 @@ type SetStatement_ByValue struct {
 
 func (x *SetStatement_ByValue) Reset() {
 	*x = SetStatement_ByValue{}
-	mi := &file_cobol_proto_msgTypes[429]
+	mi := &file_cobol_proto_msgTypes[430]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30344,7 +30704,7 @@ func (x *SetStatement_ByValue) String() string {
 func (*SetStatement_ByValue) ProtoMessage() {}
 
 func (x *SetStatement_ByValue) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[429]
+	mi := &file_cobol_proto_msgTypes[430]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30411,7 +30771,7 @@ type SetStatement_ToStatement struct {
 
 func (x *SetStatement_ToStatement) Reset() {
 	*x = SetStatement_ToStatement{}
-	mi := &file_cobol_proto_msgTypes[430]
+	mi := &file_cobol_proto_msgTypes[431]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30423,7 +30783,7 @@ func (x *SetStatement_ToStatement) String() string {
 func (*SetStatement_ToStatement) ProtoMessage() {}
 
 func (x *SetStatement_ToStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[430]
+	mi := &file_cobol_proto_msgTypes[431]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30463,7 +30823,7 @@ type SetStatement_UpDownByStatement struct {
 
 func (x *SetStatement_UpDownByStatement) Reset() {
 	*x = SetStatement_UpDownByStatement{}
-	mi := &file_cobol_proto_msgTypes[431]
+	mi := &file_cobol_proto_msgTypes[432]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30475,7 +30835,7 @@ func (x *SetStatement_UpDownByStatement) String() string {
 func (*SetStatement_UpDownByStatement) ProtoMessage() {}
 
 func (x *SetStatement_UpDownByStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[431]
+	mi := &file_cobol_proto_msgTypes[432]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30514,7 +30874,7 @@ type SendStatement_FromPhrase struct {
 
 func (x *SendStatement_FromPhrase) Reset() {
 	*x = SendStatement_FromPhrase{}
-	mi := &file_cobol_proto_msgTypes[432]
+	mi := &file_cobol_proto_msgTypes[433]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30526,7 +30886,7 @@ func (x *SendStatement_FromPhrase) String() string {
 func (*SendStatement_FromPhrase) ProtoMessage() {}
 
 func (x *SendStatement_FromPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[432]
+	mi := &file_cobol_proto_msgTypes[433]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30558,7 +30918,7 @@ type SendStatement_WithPhrase struct {
 
 func (x *SendStatement_WithPhrase) Reset() {
 	*x = SendStatement_WithPhrase{}
-	mi := &file_cobol_proto_msgTypes[433]
+	mi := &file_cobol_proto_msgTypes[434]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30570,7 +30930,7 @@ func (x *SendStatement_WithPhrase) String() string {
 func (*SendStatement_WithPhrase) ProtoMessage() {}
 
 func (x *SendStatement_WithPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[433]
+	mi := &file_cobol_proto_msgTypes[434]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30601,7 +30961,7 @@ type SendStatement_ReplacingPhrase struct {
 
 func (x *SendStatement_ReplacingPhrase) Reset() {
 	*x = SendStatement_ReplacingPhrase{}
-	mi := &file_cobol_proto_msgTypes[434]
+	mi := &file_cobol_proto_msgTypes[435]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30613,7 +30973,7 @@ func (x *SendStatement_ReplacingPhrase) String() string {
 func (*SendStatement_ReplacingPhrase) ProtoMessage() {}
 
 func (x *SendStatement_ReplacingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[434]
+	mi := &file_cobol_proto_msgTypes[435]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30637,7 +30997,7 @@ type SendStatement_AdvancingPage struct {
 
 func (x *SendStatement_AdvancingPage) Reset() {
 	*x = SendStatement_AdvancingPage{}
-	mi := &file_cobol_proto_msgTypes[435]
+	mi := &file_cobol_proto_msgTypes[436]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30649,7 +31009,7 @@ func (x *SendStatement_AdvancingPage) String() string {
 func (*SendStatement_AdvancingPage) ProtoMessage() {}
 
 func (x *SendStatement_AdvancingPage) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[435]
+	mi := &file_cobol_proto_msgTypes[436]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30678,7 +31038,7 @@ type SendStatement_AdvancingLines struct {
 
 func (x *SendStatement_AdvancingLines) Reset() {
 	*x = SendStatement_AdvancingLines{}
-	mi := &file_cobol_proto_msgTypes[436]
+	mi := &file_cobol_proto_msgTypes[437]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30690,7 +31050,7 @@ func (x *SendStatement_AdvancingLines) String() string {
 func (*SendStatement_AdvancingLines) ProtoMessage() {}
 
 func (x *SendStatement_AdvancingLines) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[436]
+	mi := &file_cobol_proto_msgTypes[437]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30756,7 +31116,7 @@ type SendStatement_AdvancingMnemonic struct {
 
 func (x *SendStatement_AdvancingMnemonic) Reset() {
 	*x = SendStatement_AdvancingMnemonic{}
-	mi := &file_cobol_proto_msgTypes[437]
+	mi := &file_cobol_proto_msgTypes[438]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30768,7 +31128,7 @@ func (x *SendStatement_AdvancingMnemonic) String() string {
 func (*SendStatement_AdvancingMnemonic) ProtoMessage() {}
 
 func (x *SendStatement_AdvancingMnemonic) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[437]
+	mi := &file_cobol_proto_msgTypes[438]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30805,7 +31165,7 @@ type SendStatement_AdvancingPhrase struct {
 
 func (x *SendStatement_AdvancingPhrase) Reset() {
 	*x = SendStatement_AdvancingPhrase{}
-	mi := &file_cobol_proto_msgTypes[438]
+	mi := &file_cobol_proto_msgTypes[439]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30817,7 +31177,7 @@ func (x *SendStatement_AdvancingPhrase) String() string {
 func (*SendStatement_AdvancingPhrase) ProtoMessage() {}
 
 func (x *SendStatement_AdvancingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[438]
+	mi := &file_cobol_proto_msgTypes[439]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -30906,7 +31266,7 @@ type SendStatement_SyncStatement struct {
 
 func (x *SendStatement_SyncStatement) Reset() {
 	*x = SendStatement_SyncStatement{}
-	mi := &file_cobol_proto_msgTypes[439]
+	mi := &file_cobol_proto_msgTypes[440]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -30918,7 +31278,7 @@ func (x *SendStatement_SyncStatement) String() string {
 func (*SendStatement_SyncStatement) ProtoMessage() {}
 
 func (x *SendStatement_SyncStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[439]
+	mi := &file_cobol_proto_msgTypes[440]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31012,7 +31372,7 @@ type SendStatement_AsyncStatement struct {
 
 func (x *SendStatement_AsyncStatement) Reset() {
 	*x = SendStatement_AsyncStatement{}
-	mi := &file_cobol_proto_msgTypes[440]
+	mi := &file_cobol_proto_msgTypes[441]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31024,7 +31384,7 @@ func (x *SendStatement_AsyncStatement) String() string {
 func (*SendStatement_AsyncStatement) ProtoMessage() {}
 
 func (x *SendStatement_AsyncStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[440]
+	mi := &file_cobol_proto_msgTypes[441]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31056,7 +31416,7 @@ type SearchStatement_Varying struct {
 
 func (x *SearchStatement_Varying) Reset() {
 	*x = SearchStatement_Varying{}
-	mi := &file_cobol_proto_msgTypes[441]
+	mi := &file_cobol_proto_msgTypes[442]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31068,7 +31428,7 @@ func (x *SearchStatement_Varying) String() string {
 func (*SearchStatement_Varying) ProtoMessage() {}
 
 func (x *SearchStatement_Varying) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[441]
+	mi := &file_cobol_proto_msgTypes[442]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31102,7 +31462,7 @@ type SearchStatement_When struct {
 
 func (x *SearchStatement_When) Reset() {
 	*x = SearchStatement_When{}
-	mi := &file_cobol_proto_msgTypes[442]
+	mi := &file_cobol_proto_msgTypes[443]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31114,7 +31474,7 @@ func (x *SearchStatement_When) String() string {
 func (*SearchStatement_When) ProtoMessage() {}
 
 func (x *SearchStatement_When) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[442]
+	mi := &file_cobol_proto_msgTypes[443]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31160,7 +31520,7 @@ type RewriteStatement_From struct {
 
 func (x *RewriteStatement_From) Reset() {
 	*x = RewriteStatement_From{}
-	mi := &file_cobol_proto_msgTypes[443]
+	mi := &file_cobol_proto_msgTypes[444]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31172,7 +31532,7 @@ func (x *RewriteStatement_From) String() string {
 func (*RewriteStatement_From) ProtoMessage() {}
 
 func (x *RewriteStatement_From) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[443]
+	mi := &file_cobol_proto_msgTypes[444]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31204,7 +31564,7 @@ type ReturnStatement_Into struct {
 
 func (x *ReturnStatement_Into) Reset() {
 	*x = ReturnStatement_Into{}
-	mi := &file_cobol_proto_msgTypes[444]
+	mi := &file_cobol_proto_msgTypes[445]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31216,7 +31576,7 @@ func (x *ReturnStatement_Into) String() string {
 func (*ReturnStatement_Into) ProtoMessage() {}
 
 func (x *ReturnStatement_Into) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[444]
+	mi := &file_cobol_proto_msgTypes[445]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31248,7 +31608,7 @@ type ReleaseStatement_From struct {
 
 func (x *ReleaseStatement_From) Reset() {
 	*x = ReleaseStatement_From{}
-	mi := &file_cobol_proto_msgTypes[445]
+	mi := &file_cobol_proto_msgTypes[446]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31260,7 +31620,7 @@ func (x *ReleaseStatement_From) String() string {
 func (*ReleaseStatement_From) ProtoMessage() {}
 
 func (x *ReleaseStatement_From) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[445]
+	mi := &file_cobol_proto_msgTypes[446]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31292,7 +31652,7 @@ type ReceiveStatement_From struct {
 
 func (x *ReceiveStatement_From) Reset() {
 	*x = ReceiveStatement_From{}
-	mi := &file_cobol_proto_msgTypes[446]
+	mi := &file_cobol_proto_msgTypes[447]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31304,7 +31664,7 @@ func (x *ReceiveStatement_From) String() string {
 func (*ReceiveStatement_From) ProtoMessage() {}
 
 func (x *ReceiveStatement_From) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[446]
+	mi := &file_cobol_proto_msgTypes[447]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31335,7 +31695,7 @@ type ReceiveStatement_With struct {
 
 func (x *ReceiveStatement_With) Reset() {
 	*x = ReceiveStatement_With{}
-	mi := &file_cobol_proto_msgTypes[447]
+	mi := &file_cobol_proto_msgTypes[448]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31347,7 +31707,7 @@ func (x *ReceiveStatement_With) String() string {
 func (*ReceiveStatement_With) ProtoMessage() {}
 
 func (x *ReceiveStatement_With) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[447]
+	mi := &file_cobol_proto_msgTypes[448]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31372,7 +31732,7 @@ type ReceiveStatement_Thread struct {
 
 func (x *ReceiveStatement_Thread) Reset() {
 	*x = ReceiveStatement_Thread{}
-	mi := &file_cobol_proto_msgTypes[448]
+	mi := &file_cobol_proto_msgTypes[449]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31384,7 +31744,7 @@ func (x *ReceiveStatement_Thread) String() string {
 func (*ReceiveStatement_Thread) ProtoMessage() {}
 
 func (x *ReceiveStatement_Thread) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[448]
+	mi := &file_cobol_proto_msgTypes[449]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31420,7 +31780,7 @@ type ReceiveStatement_Size struct {
 
 func (x *ReceiveStatement_Size) Reset() {
 	*x = ReceiveStatement_Size{}
-	mi := &file_cobol_proto_msgTypes[449]
+	mi := &file_cobol_proto_msgTypes[450]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31432,7 +31792,7 @@ func (x *ReceiveStatement_Size) String() string {
 func (*ReceiveStatement_Size) ProtoMessage() {}
 
 func (x *ReceiveStatement_Size) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[449]
+	mi := &file_cobol_proto_msgTypes[450]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31498,7 +31858,7 @@ type ReceiveStatement_Status struct {
 
 func (x *ReceiveStatement_Status) Reset() {
 	*x = ReceiveStatement_Status{}
-	mi := &file_cobol_proto_msgTypes[450]
+	mi := &file_cobol_proto_msgTypes[451]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31510,7 +31870,7 @@ func (x *ReceiveStatement_Status) String() string {
 func (*ReceiveStatement_Status) ProtoMessage() {}
 
 func (x *ReceiveStatement_Status) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[450]
+	mi := &file_cobol_proto_msgTypes[451]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31546,7 +31906,7 @@ type ReceiveStatement_Before struct {
 
 func (x *ReceiveStatement_Before) Reset() {
 	*x = ReceiveStatement_Before{}
-	mi := &file_cobol_proto_msgTypes[451]
+	mi := &file_cobol_proto_msgTypes[452]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31558,7 +31918,7 @@ func (x *ReceiveStatement_Before) String() string {
 func (*ReceiveStatement_Before) ProtoMessage() {}
 
 func (x *ReceiveStatement_Before) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[451]
+	mi := &file_cobol_proto_msgTypes[452]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31630,7 +31990,7 @@ type ReceiveStatement_FromStatement struct {
 
 func (x *ReceiveStatement_FromStatement) Reset() {
 	*x = ReceiveStatement_FromStatement{}
-	mi := &file_cobol_proto_msgTypes[452]
+	mi := &file_cobol_proto_msgTypes[453]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31642,7 +32002,7 @@ func (x *ReceiveStatement_FromStatement) String() string {
 func (*ReceiveStatement_FromStatement) ProtoMessage() {}
 
 func (x *ReceiveStatement_FromStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[452]
+	mi := &file_cobol_proto_msgTypes[453]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31716,7 +32076,7 @@ type ReceiveStatement_NoData struct {
 
 func (x *ReceiveStatement_NoData) Reset() {
 	*x = ReceiveStatement_NoData{}
-	mi := &file_cobol_proto_msgTypes[453]
+	mi := &file_cobol_proto_msgTypes[454]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31728,7 +32088,7 @@ func (x *ReceiveStatement_NoData) String() string {
 func (*ReceiveStatement_NoData) ProtoMessage() {}
 
 func (x *ReceiveStatement_NoData) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[453]
+	mi := &file_cobol_proto_msgTypes[454]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31760,7 +32120,7 @@ type ReceiveStatement_WithData struct {
 
 func (x *ReceiveStatement_WithData) Reset() {
 	*x = ReceiveStatement_WithData{}
-	mi := &file_cobol_proto_msgTypes[454]
+	mi := &file_cobol_proto_msgTypes[455]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31772,7 +32132,7 @@ func (x *ReceiveStatement_WithData) String() string {
 func (*ReceiveStatement_WithData) ProtoMessage() {}
 
 func (x *ReceiveStatement_WithData) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[454]
+	mi := &file_cobol_proto_msgTypes[455]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31807,7 +32167,7 @@ type ReceiveStatement_IntoStatement struct {
 
 func (x *ReceiveStatement_IntoStatement) Reset() {
 	*x = ReceiveStatement_IntoStatement{}
-	mi := &file_cobol_proto_msgTypes[455]
+	mi := &file_cobol_proto_msgTypes[456]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31819,7 +32179,7 @@ func (x *ReceiveStatement_IntoStatement) String() string {
 func (*ReceiveStatement_IntoStatement) ProtoMessage() {}
 
 func (x *ReceiveStatement_IntoStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[455]
+	mi := &file_cobol_proto_msgTypes[456]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31872,7 +32232,7 @@ type ReadStatement_Into struct {
 
 func (x *ReadStatement_Into) Reset() {
 	*x = ReadStatement_Into{}
-	mi := &file_cobol_proto_msgTypes[456]
+	mi := &file_cobol_proto_msgTypes[457]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31884,7 +32244,7 @@ func (x *ReadStatement_Into) String() string {
 func (*ReadStatement_Into) ProtoMessage() {}
 
 func (x *ReadStatement_Into) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[456]
+	mi := &file_cobol_proto_msgTypes[457]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31915,7 +32275,7 @@ type ReadStatement_With struct {
 
 func (x *ReadStatement_With) Reset() {
 	*x = ReadStatement_With{}
-	mi := &file_cobol_proto_msgTypes[457]
+	mi := &file_cobol_proto_msgTypes[458]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31927,7 +32287,7 @@ func (x *ReadStatement_With) String() string {
 func (*ReadStatement_With) ProtoMessage() {}
 
 func (x *ReadStatement_With) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[457]
+	mi := &file_cobol_proto_msgTypes[458]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31952,7 +32312,7 @@ type ReadStatement_Key struct {
 
 func (x *ReadStatement_Key) Reset() {
 	*x = ReadStatement_Key{}
-	mi := &file_cobol_proto_msgTypes[458]
+	mi := &file_cobol_proto_msgTypes[459]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -31964,7 +32324,7 @@ func (x *ReadStatement_Key) String() string {
 func (*ReadStatement_Key) ProtoMessage() {}
 
 func (x *ReadStatement_Key) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[458]
+	mi := &file_cobol_proto_msgTypes[459]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -31995,7 +32355,7 @@ type PerformStatement_TestClause struct {
 
 func (x *PerformStatement_TestClause) Reset() {
 	*x = PerformStatement_TestClause{}
-	mi := &file_cobol_proto_msgTypes[459]
+	mi := &file_cobol_proto_msgTypes[460]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32007,7 +32367,7 @@ func (x *PerformStatement_TestClause) String() string {
 func (*PerformStatement_TestClause) ProtoMessage() {}
 
 func (x *PerformStatement_TestClause) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[459]
+	mi := &file_cobol_proto_msgTypes[460]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32036,7 +32396,7 @@ type PerformStatement_Times struct {
 
 func (x *PerformStatement_Times) Reset() {
 	*x = PerformStatement_Times{}
-	mi := &file_cobol_proto_msgTypes[460]
+	mi := &file_cobol_proto_msgTypes[461]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32048,7 +32408,7 @@ func (x *PerformStatement_Times) String() string {
 func (*PerformStatement_Times) ProtoMessage() {}
 
 func (x *PerformStatement_Times) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[460]
+	mi := &file_cobol_proto_msgTypes[461]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32115,7 +32475,7 @@ type PerformStatement_Until struct {
 
 func (x *PerformStatement_Until) Reset() {
 	*x = PerformStatement_Until{}
-	mi := &file_cobol_proto_msgTypes[461]
+	mi := &file_cobol_proto_msgTypes[462]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32127,7 +32487,7 @@ func (x *PerformStatement_Until) String() string {
 func (*PerformStatement_Until) ProtoMessage() {}
 
 func (x *PerformStatement_Until) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[461]
+	mi := &file_cobol_proto_msgTypes[462]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32171,7 +32531,7 @@ type PerformStatement_From struct {
 
 func (x *PerformStatement_From) Reset() {
 	*x = PerformStatement_From{}
-	mi := &file_cobol_proto_msgTypes[462]
+	mi := &file_cobol_proto_msgTypes[463]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32183,7 +32543,7 @@ func (x *PerformStatement_From) String() string {
 func (*PerformStatement_From) ProtoMessage() {}
 
 func (x *PerformStatement_From) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[462]
+	mi := &file_cobol_proto_msgTypes[463]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32269,7 +32629,7 @@ type PerformStatement_By struct {
 
 func (x *PerformStatement_By) Reset() {
 	*x = PerformStatement_By{}
-	mi := &file_cobol_proto_msgTypes[463]
+	mi := &file_cobol_proto_msgTypes[464]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32281,7 +32641,7 @@ func (x *PerformStatement_By) String() string {
 func (*PerformStatement_By) ProtoMessage() {}
 
 func (x *PerformStatement_By) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[463]
+	mi := &file_cobol_proto_msgTypes[464]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32369,7 +32729,7 @@ type PerformStatement_VaryingPhrase struct {
 
 func (x *PerformStatement_VaryingPhrase) Reset() {
 	*x = PerformStatement_VaryingPhrase{}
-	mi := &file_cobol_proto_msgTypes[464]
+	mi := &file_cobol_proto_msgTypes[465]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32381,7 +32741,7 @@ func (x *PerformStatement_VaryingPhrase) String() string {
 func (*PerformStatement_VaryingPhrase) ProtoMessage() {}
 
 func (x *PerformStatement_VaryingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[464]
+	mi := &file_cobol_proto_msgTypes[465]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32468,7 +32828,7 @@ type PerformStatement_After struct {
 
 func (x *PerformStatement_After) Reset() {
 	*x = PerformStatement_After{}
-	mi := &file_cobol_proto_msgTypes[465]
+	mi := &file_cobol_proto_msgTypes[466]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32480,7 +32840,7 @@ func (x *PerformStatement_After) String() string {
 func (*PerformStatement_After) ProtoMessage() {}
 
 func (x *PerformStatement_After) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[465]
+	mi := &file_cobol_proto_msgTypes[466]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32513,7 +32873,7 @@ type PerformStatement_VaryingClause struct {
 
 func (x *PerformStatement_VaryingClause) Reset() {
 	*x = PerformStatement_VaryingClause{}
-	mi := &file_cobol_proto_msgTypes[466]
+	mi := &file_cobol_proto_msgTypes[467]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32525,7 +32885,7 @@ func (x *PerformStatement_VaryingClause) String() string {
 func (*PerformStatement_VaryingClause) ProtoMessage() {}
 
 func (x *PerformStatement_VaryingClause) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[466]
+	mi := &file_cobol_proto_msgTypes[467]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32565,7 +32925,7 @@ type PerformStatement_Varying struct {
 
 func (x *PerformStatement_Varying) Reset() {
 	*x = PerformStatement_Varying{}
-	mi := &file_cobol_proto_msgTypes[467]
+	mi := &file_cobol_proto_msgTypes[468]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32577,7 +32937,7 @@ func (x *PerformStatement_Varying) String() string {
 func (*PerformStatement_Varying) ProtoMessage() {}
 
 func (x *PerformStatement_Varying) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[467]
+	mi := &file_cobol_proto_msgTypes[468]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32621,7 +32981,7 @@ type PerformStatement_Type struct {
 
 func (x *PerformStatement_Type) Reset() {
 	*x = PerformStatement_Type{}
-	mi := &file_cobol_proto_msgTypes[468]
+	mi := &file_cobol_proto_msgTypes[469]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32633,7 +32993,7 @@ func (x *PerformStatement_Type) String() string {
 func (*PerformStatement_Type) ProtoMessage() {}
 
 func (x *PerformStatement_Type) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[468]
+	mi := &file_cobol_proto_msgTypes[469]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32715,7 +33075,7 @@ type PerformStatement_InlineStatement struct {
 
 func (x *PerformStatement_InlineStatement) Reset() {
 	*x = PerformStatement_InlineStatement{}
-	mi := &file_cobol_proto_msgTypes[469]
+	mi := &file_cobol_proto_msgTypes[470]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32727,7 +33087,7 @@ func (x *PerformStatement_InlineStatement) String() string {
 func (*PerformStatement_InlineStatement) ProtoMessage() {}
 
 func (x *PerformStatement_InlineStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[469]
+	mi := &file_cobol_proto_msgTypes[470]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32768,7 +33128,7 @@ type PerformStatement_ProcedureStatement struct {
 
 func (x *PerformStatement_ProcedureStatement) Reset() {
 	*x = PerformStatement_ProcedureStatement{}
-	mi := &file_cobol_proto_msgTypes[470]
+	mi := &file_cobol_proto_msgTypes[471]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32780,7 +33140,7 @@ func (x *PerformStatement_ProcedureStatement) String() string {
 func (*PerformStatement_ProcedureStatement) ProtoMessage() {}
 
 func (x *PerformStatement_ProcedureStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[470]
+	mi := &file_cobol_proto_msgTypes[471]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32826,7 +33186,7 @@ type OpenStatement_Input struct {
 
 func (x *OpenStatement_Input) Reset() {
 	*x = OpenStatement_Input{}
-	mi := &file_cobol_proto_msgTypes[471]
+	mi := &file_cobol_proto_msgTypes[472]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32838,7 +33198,7 @@ func (x *OpenStatement_Input) String() string {
 func (*OpenStatement_Input) ProtoMessage() {}
 
 func (x *OpenStatement_Input) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[471]
+	mi := &file_cobol_proto_msgTypes[472]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32870,7 +33230,7 @@ type OpenStatement_InputStatement struct {
 
 func (x *OpenStatement_InputStatement) Reset() {
 	*x = OpenStatement_InputStatement{}
-	mi := &file_cobol_proto_msgTypes[472]
+	mi := &file_cobol_proto_msgTypes[473]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32882,7 +33242,7 @@ func (x *OpenStatement_InputStatement) String() string {
 func (*OpenStatement_InputStatement) ProtoMessage() {}
 
 func (x *OpenStatement_InputStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[472]
+	mi := &file_cobol_proto_msgTypes[473]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32914,7 +33274,7 @@ type OpenStatement_Output struct {
 
 func (x *OpenStatement_Output) Reset() {
 	*x = OpenStatement_Output{}
-	mi := &file_cobol_proto_msgTypes[473]
+	mi := &file_cobol_proto_msgTypes[474]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32926,7 +33286,7 @@ func (x *OpenStatement_Output) String() string {
 func (*OpenStatement_Output) ProtoMessage() {}
 
 func (x *OpenStatement_Output) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[473]
+	mi := &file_cobol_proto_msgTypes[474]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -32958,7 +33318,7 @@ type OpenStatement_OutputStatement struct {
 
 func (x *OpenStatement_OutputStatement) Reset() {
 	*x = OpenStatement_OutputStatement{}
-	mi := &file_cobol_proto_msgTypes[474]
+	mi := &file_cobol_proto_msgTypes[475]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -32970,7 +33330,7 @@ func (x *OpenStatement_OutputStatement) String() string {
 func (*OpenStatement_OutputStatement) ProtoMessage() {}
 
 func (x *OpenStatement_OutputStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[474]
+	mi := &file_cobol_proto_msgTypes[475]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33002,7 +33362,7 @@ type OpenStatement_IOStatement struct {
 
 func (x *OpenStatement_IOStatement) Reset() {
 	*x = OpenStatement_IOStatement{}
-	mi := &file_cobol_proto_msgTypes[475]
+	mi := &file_cobol_proto_msgTypes[476]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33014,7 +33374,7 @@ func (x *OpenStatement_IOStatement) String() string {
 func (*OpenStatement_IOStatement) ProtoMessage() {}
 
 func (x *OpenStatement_IOStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[475]
+	mi := &file_cobol_proto_msgTypes[476]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33046,7 +33406,7 @@ type OpenStatement_ExtendStatement struct {
 
 func (x *OpenStatement_ExtendStatement) Reset() {
 	*x = OpenStatement_ExtendStatement{}
-	mi := &file_cobol_proto_msgTypes[476]
+	mi := &file_cobol_proto_msgTypes[477]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33058,7 +33418,7 @@ func (x *OpenStatement_ExtendStatement) String() string {
 func (*OpenStatement_ExtendStatement) ProtoMessage() {}
 
 func (x *OpenStatement_ExtendStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[476]
+	mi := &file_cobol_proto_msgTypes[477]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33094,7 +33454,7 @@ type MultiplyStatement_GivingOperand struct {
 
 func (x *MultiplyStatement_GivingOperand) Reset() {
 	*x = MultiplyStatement_GivingOperand{}
-	mi := &file_cobol_proto_msgTypes[477]
+	mi := &file_cobol_proto_msgTypes[478]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33106,7 +33466,7 @@ func (x *MultiplyStatement_GivingOperand) String() string {
 func (*MultiplyStatement_GivingOperand) ProtoMessage() {}
 
 func (x *MultiplyStatement_GivingOperand) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[477]
+	mi := &file_cobol_proto_msgTypes[478]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33172,7 +33532,7 @@ type MultiplyStatement_GivingResult struct {
 
 func (x *MultiplyStatement_GivingResult) Reset() {
 	*x = MultiplyStatement_GivingResult{}
-	mi := &file_cobol_proto_msgTypes[478]
+	mi := &file_cobol_proto_msgTypes[479]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33184,7 +33544,7 @@ func (x *MultiplyStatement_GivingResult) String() string {
 func (*MultiplyStatement_GivingResult) ProtoMessage() {}
 
 func (x *MultiplyStatement_GivingResult) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[478]
+	mi := &file_cobol_proto_msgTypes[479]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33217,7 +33577,7 @@ type MultiplyStatement_Giving struct {
 
 func (x *MultiplyStatement_Giving) Reset() {
 	*x = MultiplyStatement_Giving{}
-	mi := &file_cobol_proto_msgTypes[479]
+	mi := &file_cobol_proto_msgTypes[480]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33229,7 +33589,7 @@ func (x *MultiplyStatement_Giving) String() string {
 func (*MultiplyStatement_Giving) ProtoMessage() {}
 
 func (x *MultiplyStatement_Giving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[479]
+	mi := &file_cobol_proto_msgTypes[480]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33268,7 +33628,7 @@ type MultiplyStatement_Regular struct {
 
 func (x *MultiplyStatement_Regular) Reset() {
 	*x = MultiplyStatement_Regular{}
-	mi := &file_cobol_proto_msgTypes[480]
+	mi := &file_cobol_proto_msgTypes[481]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33280,7 +33640,7 @@ func (x *MultiplyStatement_Regular) String() string {
 func (*MultiplyStatement_Regular) ProtoMessage() {}
 
 func (x *MultiplyStatement_Regular) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[480]
+	mi := &file_cobol_proto_msgTypes[481]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33312,7 +33672,7 @@ type MergeStatement_OnKeyClause struct {
 
 func (x *MergeStatement_OnKeyClause) Reset() {
 	*x = MergeStatement_OnKeyClause{}
-	mi := &file_cobol_proto_msgTypes[481]
+	mi := &file_cobol_proto_msgTypes[482]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33324,7 +33684,7 @@ func (x *MergeStatement_OnKeyClause) String() string {
 func (*MergeStatement_OnKeyClause) ProtoMessage() {}
 
 func (x *MergeStatement_OnKeyClause) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[481]
+	mi := &file_cobol_proto_msgTypes[482]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33358,7 +33718,7 @@ type MergeStatement_CollatingSequencePhrase struct {
 
 func (x *MergeStatement_CollatingSequencePhrase) Reset() {
 	*x = MergeStatement_CollatingSequencePhrase{}
-	mi := &file_cobol_proto_msgTypes[482]
+	mi := &file_cobol_proto_msgTypes[483]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33370,7 +33730,7 @@ func (x *MergeStatement_CollatingSequencePhrase) String() string {
 func (*MergeStatement_CollatingSequencePhrase) ProtoMessage() {}
 
 func (x *MergeStatement_CollatingSequencePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[482]
+	mi := &file_cobol_proto_msgTypes[483]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33416,7 +33776,7 @@ type MergeStatement_CollatingAlphanumeric struct {
 
 func (x *MergeStatement_CollatingAlphanumeric) Reset() {
 	*x = MergeStatement_CollatingAlphanumeric{}
-	mi := &file_cobol_proto_msgTypes[483]
+	mi := &file_cobol_proto_msgTypes[484]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33428,7 +33788,7 @@ func (x *MergeStatement_CollatingAlphanumeric) String() string {
 func (*MergeStatement_CollatingAlphanumeric) ProtoMessage() {}
 
 func (x *MergeStatement_CollatingAlphanumeric) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[483]
+	mi := &file_cobol_proto_msgTypes[484]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33460,7 +33820,7 @@ type MergeStatement_CollatingNational struct {
 
 func (x *MergeStatement_CollatingNational) Reset() {
 	*x = MergeStatement_CollatingNational{}
-	mi := &file_cobol_proto_msgTypes[484]
+	mi := &file_cobol_proto_msgTypes[485]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33472,7 +33832,7 @@ func (x *MergeStatement_CollatingNational) String() string {
 func (*MergeStatement_CollatingNational) ProtoMessage() {}
 
 func (x *MergeStatement_CollatingNational) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[484]
+	mi := &file_cobol_proto_msgTypes[485]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33504,7 +33864,7 @@ type MergeStatement_Using struct {
 
 func (x *MergeStatement_Using) Reset() {
 	*x = MergeStatement_Using{}
-	mi := &file_cobol_proto_msgTypes[485]
+	mi := &file_cobol_proto_msgTypes[486]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33516,7 +33876,7 @@ func (x *MergeStatement_Using) String() string {
 func (*MergeStatement_Using) ProtoMessage() {}
 
 func (x *MergeStatement_Using) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[485]
+	mi := &file_cobol_proto_msgTypes[486]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33549,7 +33909,7 @@ type MergeStatement_OutputProcedurePhrase struct {
 
 func (x *MergeStatement_OutputProcedurePhrase) Reset() {
 	*x = MergeStatement_OutputProcedurePhrase{}
-	mi := &file_cobol_proto_msgTypes[486]
+	mi := &file_cobol_proto_msgTypes[487]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33561,7 +33921,7 @@ func (x *MergeStatement_OutputProcedurePhrase) String() string {
 func (*MergeStatement_OutputProcedurePhrase) ProtoMessage() {}
 
 func (x *MergeStatement_OutputProcedurePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[486]
+	mi := &file_cobol_proto_msgTypes[487]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33600,7 +33960,7 @@ type MergeStatement_OutputThrough struct {
 
 func (x *MergeStatement_OutputThrough) Reset() {
 	*x = MergeStatement_OutputThrough{}
-	mi := &file_cobol_proto_msgTypes[487]
+	mi := &file_cobol_proto_msgTypes[488]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33612,7 +33972,7 @@ func (x *MergeStatement_OutputThrough) String() string {
 func (*MergeStatement_OutputThrough) ProtoMessage() {}
 
 func (x *MergeStatement_OutputThrough) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[487]
+	mi := &file_cobol_proto_msgTypes[488]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33644,7 +34004,7 @@ type MergeStatement_GivingPhrase struct {
 
 func (x *MergeStatement_GivingPhrase) Reset() {
 	*x = MergeStatement_GivingPhrase{}
-	mi := &file_cobol_proto_msgTypes[488]
+	mi := &file_cobol_proto_msgTypes[489]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33656,7 +34016,7 @@ func (x *MergeStatement_GivingPhrase) String() string {
 func (*MergeStatement_GivingPhrase) ProtoMessage() {}
 
 func (x *MergeStatement_GivingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[488]
+	mi := &file_cobol_proto_msgTypes[489]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33689,7 +34049,7 @@ type MergeStatement_Giving struct {
 
 func (x *MergeStatement_Giving) Reset() {
 	*x = MergeStatement_Giving{}
-	mi := &file_cobol_proto_msgTypes[489]
+	mi := &file_cobol_proto_msgTypes[490]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33701,7 +34061,7 @@ func (x *MergeStatement_Giving) String() string {
 func (*MergeStatement_Giving) ProtoMessage() {}
 
 func (x *MergeStatement_Giving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[489]
+	mi := &file_cobol_proto_msgTypes[490]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33744,7 +34104,7 @@ type InspectStatement_By struct {
 
 func (x *InspectStatement_By) Reset() {
 	*x = InspectStatement_By{}
-	mi := &file_cobol_proto_msgTypes[490]
+	mi := &file_cobol_proto_msgTypes[491]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33756,7 +34116,7 @@ func (x *InspectStatement_By) String() string {
 func (*InspectStatement_By) ProtoMessage() {}
 
 func (x *InspectStatement_By) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[490]
+	mi := &file_cobol_proto_msgTypes[491]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33826,7 +34186,7 @@ type InspectStatement_To struct {
 
 func (x *InspectStatement_To) Reset() {
 	*x = InspectStatement_To{}
-	mi := &file_cobol_proto_msgTypes[491]
+	mi := &file_cobol_proto_msgTypes[492]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33838,7 +34198,7 @@ func (x *InspectStatement_To) String() string {
 func (*InspectStatement_To) ProtoMessage() {}
 
 func (x *InspectStatement_To) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[491]
+	mi := &file_cobol_proto_msgTypes[492]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33908,7 +34268,7 @@ type InspectStatement_BeforeAfter struct {
 
 func (x *InspectStatement_BeforeAfter) Reset() {
 	*x = InspectStatement_BeforeAfter{}
-	mi := &file_cobol_proto_msgTypes[492]
+	mi := &file_cobol_proto_msgTypes[493]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -33920,7 +34280,7 @@ func (x *InspectStatement_BeforeAfter) String() string {
 func (*InspectStatement_BeforeAfter) ProtoMessage() {}
 
 func (x *InspectStatement_BeforeAfter) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[492]
+	mi := &file_cobol_proto_msgTypes[493]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -33992,7 +34352,7 @@ type InspectStatement_ReplacingAllLeading struct {
 
 func (x *InspectStatement_ReplacingAllLeading) Reset() {
 	*x = InspectStatement_ReplacingAllLeading{}
-	mi := &file_cobol_proto_msgTypes[493]
+	mi := &file_cobol_proto_msgTypes[494]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34004,7 +34364,7 @@ func (x *InspectStatement_ReplacingAllLeading) String() string {
 func (*InspectStatement_ReplacingAllLeading) ProtoMessage() {}
 
 func (x *InspectStatement_ReplacingAllLeading) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[493]
+	mi := &file_cobol_proto_msgTypes[494]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34085,7 +34445,7 @@ type InspectStatement_ReplacingAllLeadings struct {
 
 func (x *InspectStatement_ReplacingAllLeadings) Reset() {
 	*x = InspectStatement_ReplacingAllLeadings{}
-	mi := &file_cobol_proto_msgTypes[494]
+	mi := &file_cobol_proto_msgTypes[495]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34097,7 +34457,7 @@ func (x *InspectStatement_ReplacingAllLeadings) String() string {
 func (*InspectStatement_ReplacingAllLeadings) ProtoMessage() {}
 
 func (x *InspectStatement_ReplacingAllLeadings) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[494]
+	mi := &file_cobol_proto_msgTypes[495]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34134,7 +34494,7 @@ type InspectStatement_AllLeading struct {
 
 func (x *InspectStatement_AllLeading) Reset() {
 	*x = InspectStatement_AllLeading{}
-	mi := &file_cobol_proto_msgTypes[495]
+	mi := &file_cobol_proto_msgTypes[496]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34146,7 +34506,7 @@ func (x *InspectStatement_AllLeading) String() string {
 func (*InspectStatement_AllLeading) ProtoMessage() {}
 
 func (x *InspectStatement_AllLeading) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[495]
+	mi := &file_cobol_proto_msgTypes[496]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34219,7 +34579,7 @@ type InspectStatement_AllLeadings struct {
 
 func (x *InspectStatement_AllLeadings) Reset() {
 	*x = InspectStatement_AllLeadings{}
-	mi := &file_cobol_proto_msgTypes[496]
+	mi := &file_cobol_proto_msgTypes[497]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34231,7 +34591,7 @@ func (x *InspectStatement_AllLeadings) String() string {
 func (*InspectStatement_AllLeadings) ProtoMessage() {}
 
 func (x *InspectStatement_AllLeadings) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[496]
+	mi := &file_cobol_proto_msgTypes[497]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34264,7 +34624,7 @@ type InspectStatement_ReplacingCharacters struct {
 
 func (x *InspectStatement_ReplacingCharacters) Reset() {
 	*x = InspectStatement_ReplacingCharacters{}
-	mi := &file_cobol_proto_msgTypes[497]
+	mi := &file_cobol_proto_msgTypes[498]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34276,7 +34636,7 @@ func (x *InspectStatement_ReplacingCharacters) String() string {
 func (*InspectStatement_ReplacingCharacters) ProtoMessage() {}
 
 func (x *InspectStatement_ReplacingCharacters) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[497]
+	mi := &file_cobol_proto_msgTypes[498]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34315,7 +34675,7 @@ type InspectStatement_Characters struct {
 
 func (x *InspectStatement_Characters) Reset() {
 	*x = InspectStatement_Characters{}
-	mi := &file_cobol_proto_msgTypes[498]
+	mi := &file_cobol_proto_msgTypes[499]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34327,7 +34687,7 @@ func (x *InspectStatement_Characters) String() string {
 func (*InspectStatement_Characters) ProtoMessage() {}
 
 func (x *InspectStatement_Characters) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[498]
+	mi := &file_cobol_proto_msgTypes[499]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34360,7 +34720,7 @@ type InspectStatement_CharactersLeadings struct {
 
 func (x *InspectStatement_CharactersLeadings) Reset() {
 	*x = InspectStatement_CharactersLeadings{}
-	mi := &file_cobol_proto_msgTypes[499]
+	mi := &file_cobol_proto_msgTypes[500]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34372,7 +34732,7 @@ func (x *InspectStatement_CharactersLeadings) String() string {
 func (*InspectStatement_CharactersLeadings) ProtoMessage() {}
 
 func (x *InspectStatement_CharactersLeadings) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[499]
+	mi := &file_cobol_proto_msgTypes[500]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34412,7 +34772,7 @@ type InspectStatement_For struct {
 
 func (x *InspectStatement_For) Reset() {
 	*x = InspectStatement_For{}
-	mi := &file_cobol_proto_msgTypes[500]
+	mi := &file_cobol_proto_msgTypes[501]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34424,7 +34784,7 @@ func (x *InspectStatement_For) String() string {
 func (*InspectStatement_For) ProtoMessage() {}
 
 func (x *InspectStatement_For) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[500]
+	mi := &file_cobol_proto_msgTypes[501]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34469,7 +34829,7 @@ type InspectStatement_ConvertingPhrase struct {
 
 func (x *InspectStatement_ConvertingPhrase) Reset() {
 	*x = InspectStatement_ConvertingPhrase{}
-	mi := &file_cobol_proto_msgTypes[501]
+	mi := &file_cobol_proto_msgTypes[502]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34481,7 +34841,7 @@ func (x *InspectStatement_ConvertingPhrase) String() string {
 func (*InspectStatement_ConvertingPhrase) ProtoMessage() {}
 
 func (x *InspectStatement_ConvertingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[501]
+	mi := &file_cobol_proto_msgTypes[502]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34562,7 +34922,7 @@ type InspectStatement_ReplacingCharactersLeadings struct {
 
 func (x *InspectStatement_ReplacingCharactersLeadings) Reset() {
 	*x = InspectStatement_ReplacingCharactersLeadings{}
-	mi := &file_cobol_proto_msgTypes[502]
+	mi := &file_cobol_proto_msgTypes[503]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34574,7 +34934,7 @@ func (x *InspectStatement_ReplacingCharactersLeadings) String() string {
 func (*InspectStatement_ReplacingCharactersLeadings) ProtoMessage() {}
 
 func (x *InspectStatement_ReplacingCharactersLeadings) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[502]
+	mi := &file_cobol_proto_msgTypes[503]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34613,7 +34973,7 @@ type InspectStatement_ReplacingPhrase struct {
 
 func (x *InspectStatement_ReplacingPhrase) Reset() {
 	*x = InspectStatement_ReplacingPhrase{}
-	mi := &file_cobol_proto_msgTypes[503]
+	mi := &file_cobol_proto_msgTypes[504]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34625,7 +34985,7 @@ func (x *InspectStatement_ReplacingPhrase) String() string {
 func (*InspectStatement_ReplacingPhrase) ProtoMessage() {}
 
 func (x *InspectStatement_ReplacingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[503]
+	mi := &file_cobol_proto_msgTypes[504]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34658,7 +35018,7 @@ type InspectStatement_TallyingReplacingPhrase struct {
 
 func (x *InspectStatement_TallyingReplacingPhrase) Reset() {
 	*x = InspectStatement_TallyingReplacingPhrase{}
-	mi := &file_cobol_proto_msgTypes[504]
+	mi := &file_cobol_proto_msgTypes[505]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34670,7 +35030,7 @@ func (x *InspectStatement_TallyingReplacingPhrase) String() string {
 func (*InspectStatement_TallyingReplacingPhrase) ProtoMessage() {}
 
 func (x *InspectStatement_TallyingReplacingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[504]
+	mi := &file_cobol_proto_msgTypes[505]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34709,7 +35069,7 @@ type InspectStatement_TallyingPhrase struct {
 
 func (x *InspectStatement_TallyingPhrase) Reset() {
 	*x = InspectStatement_TallyingPhrase{}
-	mi := &file_cobol_proto_msgTypes[505]
+	mi := &file_cobol_proto_msgTypes[506]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34721,7 +35081,7 @@ func (x *InspectStatement_TallyingPhrase) String() string {
 func (*InspectStatement_TallyingPhrase) ProtoMessage() {}
 
 func (x *InspectStatement_TallyingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[505]
+	mi := &file_cobol_proto_msgTypes[506]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34758,7 +35118,7 @@ type InitializeStatement_ReplacingBy struct {
 
 func (x *InitializeStatement_ReplacingBy) Reset() {
 	*x = InitializeStatement_ReplacingBy{}
-	mi := &file_cobol_proto_msgTypes[506]
+	mi := &file_cobol_proto_msgTypes[507]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34770,7 +35130,7 @@ func (x *InitializeStatement_ReplacingBy) String() string {
 func (*InitializeStatement_ReplacingBy) ProtoMessage() {}
 
 func (x *InitializeStatement_ReplacingBy) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[506]
+	mi := &file_cobol_proto_msgTypes[507]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34843,7 +35203,7 @@ type InitializeStatement_ReplacingPhrase struct {
 
 func (x *InitializeStatement_ReplacingPhrase) Reset() {
 	*x = InitializeStatement_ReplacingPhrase{}
-	mi := &file_cobol_proto_msgTypes[507]
+	mi := &file_cobol_proto_msgTypes[508]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34855,7 +35215,7 @@ func (x *InitializeStatement_ReplacingPhrase) String() string {
 func (*InitializeStatement_ReplacingPhrase) ProtoMessage() {}
 
 func (x *InitializeStatement_ReplacingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[507]
+	mi := &file_cobol_proto_msgTypes[508]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34888,7 +35248,7 @@ type IfStatement_Then struct {
 
 func (x *IfStatement_Then) Reset() {
 	*x = IfStatement_Then{}
-	mi := &file_cobol_proto_msgTypes[508]
+	mi := &file_cobol_proto_msgTypes[509]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34900,7 +35260,7 @@ func (x *IfStatement_Then) String() string {
 func (*IfStatement_Then) ProtoMessage() {}
 
 func (x *IfStatement_Then) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[508]
+	mi := &file_cobol_proto_msgTypes[509]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34940,7 +35300,7 @@ type IfStatement_Else struct {
 
 func (x *IfStatement_Else) Reset() {
 	*x = IfStatement_Else{}
-	mi := &file_cobol_proto_msgTypes[509]
+	mi := &file_cobol_proto_msgTypes[510]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -34952,7 +35312,7 @@ func (x *IfStatement_Else) String() string {
 func (*IfStatement_Else) ProtoMessage() {}
 
 func (x *IfStatement_Else) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[509]
+	mi := &file_cobol_proto_msgTypes[510]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -34991,7 +35351,7 @@ type GoToStatement_SimpleStatement struct {
 
 func (x *GoToStatement_SimpleStatement) Reset() {
 	*x = GoToStatement_SimpleStatement{}
-	mi := &file_cobol_proto_msgTypes[510]
+	mi := &file_cobol_proto_msgTypes[511]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35003,7 +35363,7 @@ func (x *GoToStatement_SimpleStatement) String() string {
 func (*GoToStatement_SimpleStatement) ProtoMessage() {}
 
 func (x *GoToStatement_SimpleStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[510]
+	mi := &file_cobol_proto_msgTypes[511]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35036,7 +35396,7 @@ type GoToStatement_DependingOn struct {
 
 func (x *GoToStatement_DependingOn) Reset() {
 	*x = GoToStatement_DependingOn{}
-	mi := &file_cobol_proto_msgTypes[511]
+	mi := &file_cobol_proto_msgTypes[512]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35048,7 +35408,7 @@ func (x *GoToStatement_DependingOn) String() string {
 func (*GoToStatement_DependingOn) ProtoMessage() {}
 
 func (x *GoToStatement_DependingOn) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[511]
+	mi := &file_cobol_proto_msgTypes[512]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35091,7 +35451,7 @@ type GoToStatement_DependingOnStatement struct {
 
 func (x *GoToStatement_DependingOnStatement) Reset() {
 	*x = GoToStatement_DependingOnStatement{}
-	mi := &file_cobol_proto_msgTypes[512]
+	mi := &file_cobol_proto_msgTypes[513]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35103,7 +35463,7 @@ func (x *GoToStatement_DependingOnStatement) String() string {
 func (*GoToStatement_DependingOnStatement) ProtoMessage() {}
 
 func (x *GoToStatement_DependingOnStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[512]
+	mi := &file_cobol_proto_msgTypes[513]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35173,7 +35533,7 @@ type ExhibitStatement_Operand struct {
 
 func (x *ExhibitStatement_Operand) Reset() {
 	*x = ExhibitStatement_Operand{}
-	mi := &file_cobol_proto_msgTypes[513]
+	mi := &file_cobol_proto_msgTypes[514]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35185,7 +35545,7 @@ func (x *ExhibitStatement_Operand) String() string {
 func (*ExhibitStatement_Operand) ProtoMessage() {}
 
 func (x *ExhibitStatement_Operand) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[513]
+	mi := &file_cobol_proto_msgTypes[514]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35257,7 +35617,7 @@ type EvaluateStatement_Select struct {
 
 func (x *EvaluateStatement_Select) Reset() {
 	*x = EvaluateStatement_Select{}
-	mi := &file_cobol_proto_msgTypes[514]
+	mi := &file_cobol_proto_msgTypes[515]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35269,7 +35629,7 @@ func (x *EvaluateStatement_Select) String() string {
 func (*EvaluateStatement_Select) ProtoMessage() {}
 
 func (x *EvaluateStatement_Select) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[514]
+	mi := &file_cobol_proto_msgTypes[515]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35365,7 +35725,7 @@ type EvaluateStatement_AlsoSelect struct {
 
 func (x *EvaluateStatement_AlsoSelect) Reset() {
 	*x = EvaluateStatement_AlsoSelect{}
-	mi := &file_cobol_proto_msgTypes[515]
+	mi := &file_cobol_proto_msgTypes[516]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35377,7 +35737,7 @@ func (x *EvaluateStatement_AlsoSelect) String() string {
 func (*EvaluateStatement_AlsoSelect) ProtoMessage() {}
 
 func (x *EvaluateStatement_AlsoSelect) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[515]
+	mi := &file_cobol_proto_msgTypes[516]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35410,7 +35770,7 @@ type EvaluateStatement_ValueThrough struct {
 
 func (x *EvaluateStatement_ValueThrough) Reset() {
 	*x = EvaluateStatement_ValueThrough{}
-	mi := &file_cobol_proto_msgTypes[516]
+	mi := &file_cobol_proto_msgTypes[517]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35422,7 +35782,7 @@ func (x *EvaluateStatement_ValueThrough) String() string {
 func (*EvaluateStatement_ValueThrough) ProtoMessage() {}
 
 func (x *EvaluateStatement_ValueThrough) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[516]
+	mi := &file_cobol_proto_msgTypes[517]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35461,7 +35821,7 @@ type EvaluateStatement_Through struct {
 
 func (x *EvaluateStatement_Through) Reset() {
 	*x = EvaluateStatement_Through{}
-	mi := &file_cobol_proto_msgTypes[517]
+	mi := &file_cobol_proto_msgTypes[518]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35473,7 +35833,7 @@ func (x *EvaluateStatement_Through) String() string {
 func (*EvaluateStatement_Through) ProtoMessage() {}
 
 func (x *EvaluateStatement_Through) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[517]
+	mi := &file_cobol_proto_msgTypes[518]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35510,7 +35870,7 @@ type EvaluateStatement_Value struct {
 
 func (x *EvaluateStatement_Value) Reset() {
 	*x = EvaluateStatement_Value{}
-	mi := &file_cobol_proto_msgTypes[518]
+	mi := &file_cobol_proto_msgTypes[519]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35522,7 +35882,7 @@ func (x *EvaluateStatement_Value) String() string {
 func (*EvaluateStatement_Value) ProtoMessage() {}
 
 func (x *EvaluateStatement_Value) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[518]
+	mi := &file_cobol_proto_msgTypes[519]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35609,7 +35969,7 @@ type EvaluateStatement_WhenCondition struct {
 
 func (x *EvaluateStatement_WhenCondition) Reset() {
 	*x = EvaluateStatement_WhenCondition{}
-	mi := &file_cobol_proto_msgTypes[519]
+	mi := &file_cobol_proto_msgTypes[520]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35621,7 +35981,7 @@ func (x *EvaluateStatement_WhenCondition) String() string {
 func (*EvaluateStatement_WhenCondition) ProtoMessage() {}
 
 func (x *EvaluateStatement_WhenCondition) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[519]
+	mi := &file_cobol_proto_msgTypes[520]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35717,7 +36077,7 @@ type EvaluateStatement_AlsoCondition struct {
 
 func (x *EvaluateStatement_AlsoCondition) Reset() {
 	*x = EvaluateStatement_AlsoCondition{}
-	mi := &file_cobol_proto_msgTypes[520]
+	mi := &file_cobol_proto_msgTypes[521]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35729,7 +36089,7 @@ func (x *EvaluateStatement_AlsoCondition) String() string {
 func (*EvaluateStatement_AlsoCondition) ProtoMessage() {}
 
 func (x *EvaluateStatement_AlsoCondition) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[520]
+	mi := &file_cobol_proto_msgTypes[521]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35761,7 +36121,7 @@ type EvaluateStatement_WhenOther struct {
 
 func (x *EvaluateStatement_WhenOther) Reset() {
 	*x = EvaluateStatement_WhenOther{}
-	mi := &file_cobol_proto_msgTypes[521]
+	mi := &file_cobol_proto_msgTypes[522]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35773,7 +36133,7 @@ func (x *EvaluateStatement_WhenOther) String() string {
 func (*EvaluateStatement_WhenOther) ProtoMessage() {}
 
 func (x *EvaluateStatement_WhenOther) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[521]
+	mi := &file_cobol_proto_msgTypes[522]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35806,7 +36166,7 @@ type EvaluateStatement_When struct {
 
 func (x *EvaluateStatement_When) Reset() {
 	*x = EvaluateStatement_When{}
-	mi := &file_cobol_proto_msgTypes[522]
+	mi := &file_cobol_proto_msgTypes[523]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35818,7 +36178,7 @@ func (x *EvaluateStatement_When) String() string {
 func (*EvaluateStatement_When) ProtoMessage() {}
 
 func (x *EvaluateStatement_When) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[522]
+	mi := &file_cobol_proto_msgTypes[523]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35858,7 +36218,7 @@ type EvaluateStatement_WhenPhrase struct {
 
 func (x *EvaluateStatement_WhenPhrase) Reset() {
 	*x = EvaluateStatement_WhenPhrase{}
-	mi := &file_cobol_proto_msgTypes[523]
+	mi := &file_cobol_proto_msgTypes[524]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35870,7 +36230,7 @@ func (x *EvaluateStatement_WhenPhrase) String() string {
 func (*EvaluateStatement_WhenPhrase) ProtoMessage() {}
 
 func (x *EvaluateStatement_WhenPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[523]
+	mi := &file_cobol_proto_msgTypes[524]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35909,7 +36269,7 @@ type DivideStatement_Giving struct {
 
 func (x *DivideStatement_Giving) Reset() {
 	*x = DivideStatement_Giving{}
-	mi := &file_cobol_proto_msgTypes[524]
+	mi := &file_cobol_proto_msgTypes[525]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35921,7 +36281,7 @@ func (x *DivideStatement_Giving) String() string {
 func (*DivideStatement_Giving) ProtoMessage() {}
 
 func (x *DivideStatement_Giving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[524]
+	mi := &file_cobol_proto_msgTypes[525]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35953,7 +36313,7 @@ type DivideStatement_GivingPhrase struct {
 
 func (x *DivideStatement_GivingPhrase) Reset() {
 	*x = DivideStatement_GivingPhrase{}
-	mi := &file_cobol_proto_msgTypes[525]
+	mi := &file_cobol_proto_msgTypes[526]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -35965,7 +36325,7 @@ func (x *DivideStatement_GivingPhrase) String() string {
 func (*DivideStatement_GivingPhrase) ProtoMessage() {}
 
 func (x *DivideStatement_GivingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[525]
+	mi := &file_cobol_proto_msgTypes[526]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -35997,7 +36357,7 @@ type DivideStatement_Into struct {
 
 func (x *DivideStatement_Into) Reset() {
 	*x = DivideStatement_Into{}
-	mi := &file_cobol_proto_msgTypes[526]
+	mi := &file_cobol_proto_msgTypes[527]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36009,7 +36369,7 @@ func (x *DivideStatement_Into) String() string {
 func (*DivideStatement_Into) ProtoMessage() {}
 
 func (x *DivideStatement_Into) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[526]
+	mi := &file_cobol_proto_msgTypes[527]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36041,7 +36401,7 @@ type DivideStatement_IntoStatement struct {
 
 func (x *DivideStatement_IntoStatement) Reset() {
 	*x = DivideStatement_IntoStatement{}
-	mi := &file_cobol_proto_msgTypes[527]
+	mi := &file_cobol_proto_msgTypes[528]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36053,7 +36413,7 @@ func (x *DivideStatement_IntoStatement) String() string {
 func (*DivideStatement_IntoStatement) ProtoMessage() {}
 
 func (x *DivideStatement_IntoStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[527]
+	mi := &file_cobol_proto_msgTypes[528]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36090,7 +36450,7 @@ type DivideStatement_IntoGivingStatement struct {
 
 func (x *DivideStatement_IntoGivingStatement) Reset() {
 	*x = DivideStatement_IntoGivingStatement{}
-	mi := &file_cobol_proto_msgTypes[528]
+	mi := &file_cobol_proto_msgTypes[529]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36102,7 +36462,7 @@ func (x *DivideStatement_IntoGivingStatement) String() string {
 func (*DivideStatement_IntoGivingStatement) ProtoMessage() {}
 
 func (x *DivideStatement_IntoGivingStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[528]
+	mi := &file_cobol_proto_msgTypes[529]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36180,7 +36540,7 @@ type DivideStatement_ByGivingStatement struct {
 
 func (x *DivideStatement_ByGivingStatement) Reset() {
 	*x = DivideStatement_ByGivingStatement{}
-	mi := &file_cobol_proto_msgTypes[529]
+	mi := &file_cobol_proto_msgTypes[530]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36192,7 +36552,7 @@ func (x *DivideStatement_ByGivingStatement) String() string {
 func (*DivideStatement_ByGivingStatement) ProtoMessage() {}
 
 func (x *DivideStatement_ByGivingStatement) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[529]
+	mi := &file_cobol_proto_msgTypes[530]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36265,7 +36625,7 @@ type DivideStatement_Remainder struct {
 
 func (x *DivideStatement_Remainder) Reset() {
 	*x = DivideStatement_Remainder{}
-	mi := &file_cobol_proto_msgTypes[530]
+	mi := &file_cobol_proto_msgTypes[531]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36277,7 +36637,7 @@ func (x *DivideStatement_Remainder) String() string {
 func (*DivideStatement_Remainder) ProtoMessage() {}
 
 func (x *DivideStatement_Remainder) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[530]
+	mi := &file_cobol_proto_msgTypes[531]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36308,7 +36668,7 @@ type ClosePortFileIOUsing_CloseDisposition struct {
 
 func (x *ClosePortFileIOUsing_CloseDisposition) Reset() {
 	*x = ClosePortFileIOUsing_CloseDisposition{}
-	mi := &file_cobol_proto_msgTypes[531]
+	mi := &file_cobol_proto_msgTypes[532]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36320,7 +36680,7 @@ func (x *ClosePortFileIOUsing_CloseDisposition) String() string {
 func (*ClosePortFileIOUsing_CloseDisposition) ProtoMessage() {}
 
 func (x *ClosePortFileIOUsing_CloseDisposition) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[531]
+	mi := &file_cobol_proto_msgTypes[532]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36349,7 +36709,7 @@ type ClosePortFileIOUsing_AssociatedData struct {
 
 func (x *ClosePortFileIOUsing_AssociatedData) Reset() {
 	*x = ClosePortFileIOUsing_AssociatedData{}
-	mi := &file_cobol_proto_msgTypes[532]
+	mi := &file_cobol_proto_msgTypes[533]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36361,7 +36721,7 @@ func (x *ClosePortFileIOUsing_AssociatedData) String() string {
 func (*ClosePortFileIOUsing_AssociatedData) ProtoMessage() {}
 
 func (x *ClosePortFileIOUsing_AssociatedData) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[532]
+	mi := &file_cobol_proto_msgTypes[533]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36433,7 +36793,7 @@ type ClosePortFileIOUsing_AssociatedDataLength struct {
 
 func (x *ClosePortFileIOUsing_AssociatedDataLength) Reset() {
 	*x = ClosePortFileIOUsing_AssociatedDataLength{}
-	mi := &file_cobol_proto_msgTypes[533]
+	mi := &file_cobol_proto_msgTypes[534]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36445,7 +36805,7 @@ func (x *ClosePortFileIOUsing_AssociatedDataLength) String() string {
 func (*ClosePortFileIOUsing_AssociatedDataLength) ProtoMessage() {}
 
 func (x *ClosePortFileIOUsing_AssociatedDataLength) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[533]
+	mi := &file_cobol_proto_msgTypes[534]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36518,7 +36878,7 @@ type CallStatement_ByContent struct {
 
 func (x *CallStatement_ByContent) Reset() {
 	*x = CallStatement_ByContent{}
-	mi := &file_cobol_proto_msgTypes[534]
+	mi := &file_cobol_proto_msgTypes[535]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36530,7 +36890,7 @@ func (x *CallStatement_ByContent) String() string {
 func (*CallStatement_ByContent) ProtoMessage() {}
 
 func (x *CallStatement_ByContent) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[534]
+	mi := &file_cobol_proto_msgTypes[535]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36615,7 +36975,7 @@ type CallStatement_ByValue struct {
 
 func (x *CallStatement_ByValue) Reset() {
 	*x = CallStatement_ByValue{}
-	mi := &file_cobol_proto_msgTypes[535]
+	mi := &file_cobol_proto_msgTypes[536]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36627,7 +36987,7 @@ func (x *CallStatement_ByValue) String() string {
 func (*CallStatement_ByValue) ProtoMessage() {}
 
 func (x *CallStatement_ByValue) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[535]
+	mi := &file_cobol_proto_msgTypes[536]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36699,7 +37059,7 @@ type CallStatement_ByReference struct {
 
 func (x *CallStatement_ByReference) Reset() {
 	*x = CallStatement_ByReference{}
-	mi := &file_cobol_proto_msgTypes[536]
+	mi := &file_cobol_proto_msgTypes[537]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36711,7 +37071,7 @@ func (x *CallStatement_ByReference) String() string {
 func (*CallStatement_ByReference) ProtoMessage() {}
 
 func (x *CallStatement_ByReference) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[536]
+	mi := &file_cobol_proto_msgTypes[537]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36807,7 +37167,7 @@ type CallStatement_ByReferencePhrase struct {
 
 func (x *CallStatement_ByReferencePhrase) Reset() {
 	*x = CallStatement_ByReferencePhrase{}
-	mi := &file_cobol_proto_msgTypes[537]
+	mi := &file_cobol_proto_msgTypes[538]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36819,7 +37179,7 @@ func (x *CallStatement_ByReferencePhrase) String() string {
 func (*CallStatement_ByReferencePhrase) ProtoMessage() {}
 
 func (x *CallStatement_ByReferencePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[537]
+	mi := &file_cobol_proto_msgTypes[538]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36851,7 +37211,7 @@ type CallStatement_ByValuePhrase struct {
 
 func (x *CallStatement_ByValuePhrase) Reset() {
 	*x = CallStatement_ByValuePhrase{}
-	mi := &file_cobol_proto_msgTypes[538]
+	mi := &file_cobol_proto_msgTypes[539]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36863,7 +37223,7 @@ func (x *CallStatement_ByValuePhrase) String() string {
 func (*CallStatement_ByValuePhrase) ProtoMessage() {}
 
 func (x *CallStatement_ByValuePhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[538]
+	mi := &file_cobol_proto_msgTypes[539]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36895,7 +37255,7 @@ type CallStatement_ByContentPhrase struct {
 
 func (x *CallStatement_ByContentPhrase) Reset() {
 	*x = CallStatement_ByContentPhrase{}
-	mi := &file_cobol_proto_msgTypes[539]
+	mi := &file_cobol_proto_msgTypes[540]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36907,7 +37267,7 @@ func (x *CallStatement_ByContentPhrase) String() string {
 func (*CallStatement_ByContentPhrase) ProtoMessage() {}
 
 func (x *CallStatement_ByContentPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[539]
+	mi := &file_cobol_proto_msgTypes[540]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -36944,7 +37304,7 @@ type CallStatement_UsingParameter struct {
 
 func (x *CallStatement_UsingParameter) Reset() {
 	*x = CallStatement_UsingParameter{}
-	mi := &file_cobol_proto_msgTypes[540]
+	mi := &file_cobol_proto_msgTypes[541]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -36956,7 +37316,7 @@ func (x *CallStatement_UsingParameter) String() string {
 func (*CallStatement_UsingParameter) ProtoMessage() {}
 
 func (x *CallStatement_UsingParameter) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[540]
+	mi := &file_cobol_proto_msgTypes[541]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37037,7 +37397,7 @@ type CallStatement_UsingPhrase struct {
 
 func (x *CallStatement_UsingPhrase) Reset() {
 	*x = CallStatement_UsingPhrase{}
-	mi := &file_cobol_proto_msgTypes[541]
+	mi := &file_cobol_proto_msgTypes[542]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37049,7 +37409,7 @@ func (x *CallStatement_UsingPhrase) String() string {
 func (*CallStatement_UsingPhrase) ProtoMessage() {}
 
 func (x *CallStatement_UsingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[541]
+	mi := &file_cobol_proto_msgTypes[542]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37081,7 +37441,7 @@ type CallStatement_GivingPhrase struct {
 
 func (x *CallStatement_GivingPhrase) Reset() {
 	*x = CallStatement_GivingPhrase{}
-	mi := &file_cobol_proto_msgTypes[542]
+	mi := &file_cobol_proto_msgTypes[543]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37093,7 +37453,7 @@ func (x *CallStatement_GivingPhrase) String() string {
 func (*CallStatement_GivingPhrase) ProtoMessage() {}
 
 func (x *CallStatement_GivingPhrase) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[542]
+	mi := &file_cobol_proto_msgTypes[543]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37126,7 +37486,7 @@ type AlterStatement_ProceedTo struct {
 
 func (x *AlterStatement_ProceedTo) Reset() {
 	*x = AlterStatement_ProceedTo{}
-	mi := &file_cobol_proto_msgTypes[543]
+	mi := &file_cobol_proto_msgTypes[544]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37138,7 +37498,7 @@ func (x *AlterStatement_ProceedTo) String() string {
 func (*AlterStatement_ProceedTo) ProtoMessage() {}
 
 func (x *AlterStatement_ProceedTo) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[543]
+	mi := &file_cobol_proto_msgTypes[544]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37181,7 +37541,7 @@ type AddStatement_AddFrom struct {
 
 func (x *AddStatement_AddFrom) Reset() {
 	*x = AddStatement_AddFrom{}
-	mi := &file_cobol_proto_msgTypes[544]
+	mi := &file_cobol_proto_msgTypes[545]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37193,7 +37553,7 @@ func (x *AddStatement_AddFrom) String() string {
 func (*AddStatement_AddFrom) ProtoMessage() {}
 
 func (x *AddStatement_AddFrom) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[544]
+	mi := &file_cobol_proto_msgTypes[545]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37263,7 +37623,7 @@ type AddStatement_AddToGiving struct {
 
 func (x *AddStatement_AddToGiving) Reset() {
 	*x = AddStatement_AddToGiving{}
-	mi := &file_cobol_proto_msgTypes[545]
+	mi := &file_cobol_proto_msgTypes[546]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37275,7 +37635,7 @@ func (x *AddStatement_AddToGiving) String() string {
 func (*AddStatement_AddToGiving) ProtoMessage() {}
 
 func (x *AddStatement_AddToGiving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[545]
+	mi := &file_cobol_proto_msgTypes[546]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37342,7 +37702,7 @@ type AddStatement_To struct {
 
 func (x *AddStatement_To) Reset() {
 	*x = AddStatement_To{}
-	mi := &file_cobol_proto_msgTypes[546]
+	mi := &file_cobol_proto_msgTypes[547]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37354,7 +37714,7 @@ func (x *AddStatement_To) String() string {
 func (*AddStatement_To) ProtoMessage() {}
 
 func (x *AddStatement_To) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[546]
+	mi := &file_cobol_proto_msgTypes[547]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37395,7 +37755,7 @@ type AddStatement_ToGiving struct {
 
 func (x *AddStatement_ToGiving) Reset() {
 	*x = AddStatement_ToGiving{}
-	mi := &file_cobol_proto_msgTypes[547]
+	mi := &file_cobol_proto_msgTypes[548]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37407,7 +37767,7 @@ func (x *AddStatement_ToGiving) String() string {
 func (*AddStatement_ToGiving) ProtoMessage() {}
 
 func (x *AddStatement_ToGiving) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[547]
+	mi := &file_cobol_proto_msgTypes[548]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37454,7 +37814,7 @@ type AddStatement_Corresponding struct {
 
 func (x *AddStatement_Corresponding) Reset() {
 	*x = AddStatement_Corresponding{}
-	mi := &file_cobol_proto_msgTypes[548]
+	mi := &file_cobol_proto_msgTypes[549]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37466,7 +37826,7 @@ func (x *AddStatement_Corresponding) String() string {
 func (*AddStatement_Corresponding) ProtoMessage() {}
 
 func (x *AddStatement_Corresponding) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[548]
+	mi := &file_cobol_proto_msgTypes[549]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37505,7 +37865,7 @@ type AcceptStatement_FromDate struct {
 
 func (x *AcceptStatement_FromDate) Reset() {
 	*x = AcceptStatement_FromDate{}
-	mi := &file_cobol_proto_msgTypes[549]
+	mi := &file_cobol_proto_msgTypes[550]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37517,7 +37877,7 @@ func (x *AcceptStatement_FromDate) String() string {
 func (*AcceptStatement_FromDate) ProtoMessage() {}
 
 func (x *AcceptStatement_FromDate) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[549]
+	mi := &file_cobol_proto_msgTypes[550]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37548,7 +37908,7 @@ type AcceptStatement_FromEscapeKey struct {
 
 func (x *AcceptStatement_FromEscapeKey) Reset() {
 	*x = AcceptStatement_FromEscapeKey{}
-	mi := &file_cobol_proto_msgTypes[550]
+	mi := &file_cobol_proto_msgTypes[551]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37560,7 +37920,7 @@ func (x *AcceptStatement_FromEscapeKey) String() string {
 func (*AcceptStatement_FromEscapeKey) ProtoMessage() {}
 
 func (x *AcceptStatement_FromEscapeKey) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[550]
+	mi := &file_cobol_proto_msgTypes[551]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37585,7 +37945,7 @@ type AcceptStatement_FromMnemonic struct {
 
 func (x *AcceptStatement_FromMnemonic) Reset() {
 	*x = AcceptStatement_FromMnemonic{}
-	mi := &file_cobol_proto_msgTypes[551]
+	mi := &file_cobol_proto_msgTypes[552]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37597,7 +37957,7 @@ func (x *AcceptStatement_FromMnemonic) String() string {
 func (*AcceptStatement_FromMnemonic) ProtoMessage() {}
 
 func (x *AcceptStatement_FromMnemonic) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[551]
+	mi := &file_cobol_proto_msgTypes[552]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37628,7 +37988,7 @@ type AcceptStatement_MessageCount struct {
 
 func (x *AcceptStatement_MessageCount) Reset() {
 	*x = AcceptStatement_MessageCount{}
-	mi := &file_cobol_proto_msgTypes[552]
+	mi := &file_cobol_proto_msgTypes[553]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37640,7 +38000,7 @@ func (x *AcceptStatement_MessageCount) String() string {
 func (*AcceptStatement_MessageCount) ProtoMessage() {}
 
 func (x *AcceptStatement_MessageCount) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[552]
+	mi := &file_cobol_proto_msgTypes[553]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37665,7 +38025,7 @@ type UseAfterClause_FileNames struct {
 
 func (x *UseAfterClause_FileNames) Reset() {
 	*x = UseAfterClause_FileNames{}
-	mi := &file_cobol_proto_msgTypes[553]
+	mi := &file_cobol_proto_msgTypes[554]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37677,7 +38037,7 @@ func (x *UseAfterClause_FileNames) String() string {
 func (*UseAfterClause_FileNames) ProtoMessage() {}
 
 func (x *UseAfterClause_FileNames) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[553]
+	mi := &file_cobol_proto_msgTypes[554]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37709,7 +38069,7 @@ type ConditionNameReference_SubscriptReference struct {
 
 func (x *ConditionNameReference_SubscriptReference) Reset() {
 	*x = ConditionNameReference_SubscriptReference{}
-	mi := &file_cobol_proto_msgTypes[554]
+	mi := &file_cobol_proto_msgTypes[555]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37721,7 +38081,7 @@ func (x *ConditionNameReference_SubscriptReference) String() string {
 func (*ConditionNameReference_SubscriptReference) ProtoMessage() {}
 
 func (x *ConditionNameReference_SubscriptReference) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[554]
+	mi := &file_cobol_proto_msgTypes[555]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -37755,7 +38115,7 @@ type ConditionNameReference_InSubscript struct {
 
 func (x *ConditionNameReference_InSubscript) Reset() {
 	*x = ConditionNameReference_InSubscript{}
-	mi := &file_cobol_proto_msgTypes[555]
+	mi := &file_cobol_proto_msgTypes[556]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -37767,7 +38127,7 @@ func (x *ConditionNameReference_InSubscript) String() string {
 func (*ConditionNameReference_InSubscript) ProtoMessage() {}
 
 func (x *ConditionNameReference_InSubscript) ProtoReflect() protoreflect.Message {
-	mi := &file_cobol_proto_msgTypes[555]
+	mi := &file_cobol_proto_msgTypes[556]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -40462,7 +40822,29 @@ const file_cobol_proto_rawDesc = "" +
 	"\vSORT_RETURN\x10\x17\x12\t\n" +
 	"\x05TALLY\x10\x18\x12\b\n" +
 	"\x04TIME\x10\x19\x12\x11\n" +
-	"\rWHEN_COMPILED\x10\x1a\")\n" +
+	"\rWHEN_COMPILED\x10\x1a\"\xf8\x05\n" +
+	"\x04Call\x12 \n" +
+	"\x04type\x18\x01 \x01(\x0e2\f.pb.CallTypeR\x04type\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12+\n" +
+	"\tdata_name\x18\x03 \x01(\v2\f.pb.DataNameH\x00R\bdataName\x12:\n" +
+	"\x0econdition_name\x18\x04 \x01(\v2\x11.pb.ConditionNameH\x00R\rconditionName\x12+\n" +
+	"\tfile_name\x18\x05 \x01(\v2\f.pb.FileNameH\x00R\bfileName\x12:\n" +
+	"\x0eprocedure_name\x18\x06 \x01(\v2\x11.pb.ProcedureNameH\x00R\rprocedureName\x124\n" +
+	"\fsection_name\x18\a \x01(\v2\x0f.pb.SectionNameH\x00R\vsectionName\x12:\n" +
+	"\x0eparagraph_name\x18\b \x01(\v2\x11.pb.ParagraphNameH\x00R\rparagraphName\x124\n" +
+	"\fprogram_name\x18\t \x01(\v2\x0f.pb.ProgramNameH\x00R\vprogramName\x12.\n" +
+	"\n" +
+	"index_name\x18\n" +
+	" \x01(\v2\r.pb.IndexNameH\x00R\tindexName\x127\n" +
+	"\rmnemonic_name\x18\v \x01(\v2\x10.pb.MnemonicNameH\x00R\fmnemonicName\x121\n" +
+	"\vreport_name\x18\f \x01(\v2\x0e.pb.ReportNameH\x00R\n" +
+	"reportName\x12%\n" +
+	"\acd_name\x18\r \x01(\v2\n" +
+	".pb.CdNameH\x00R\x06cdName\x121\n" +
+	"\vscreen_name\x18\x0e \x01(\v2\x0e.pb.ScreenNameH\x00R\n" +
+	"screenName\x12@\n" +
+	"\x10special_register\x18\x0f \x01(\v2\x13.pb.SpecialRegisterH\x00R\x0fspecialRegisterB\b\n" +
+	"\x06target\")\n" +
 	"\x11NonNumericLiteral\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\tR\x05value\"%\n" +
 	"\rStringLiteral\x12\x14\n" +
@@ -40481,7 +40863,26 @@ const file_cobol_proto_rawDesc = "" +
 	"\aGREATER\x10\x04\x12\x0f\n" +
 	"\vNOT_GREATER\x10\x05\x12\b\n" +
 	"\x04LESS\x10\x06\x12\f\n" +
-	"\bNOT_LESS\x10\aB&Z$github.com/aixfoundry/cobol-go/pb;pbb\x06proto3"
+	"\bNOT_LESS\x10\a*\xfa\x02\n" +
+	"\bCallType\x12\x1f\n" +
+	"\x1bDATA_DESCRIPTION_ENTRY_CALL\x10\x00\x12\x12\n" +
+	"\x0ePROCEDURE_CALL\x10\x01\x12\x10\n" +
+	"\fSECTION_CALL\x10\x02\x12\x1b\n" +
+	"\x17FILE_CONTROL_ENTRY_CALL\x10\x03\x12\x11\n" +
+	"\rFUNCTION_CALL\x10\x04\x12\x0e\n" +
+	"\n" +
+	"TABLE_CALL\x10\x05\x12\x0e\n" +
+	"\n" +
+	"INDEX_CALL\x10\x06\x12\x11\n" +
+	"\rMNEMONIC_CALL\x10\a\x12\x19\n" +
+	"\x15SPECIAL_REGISTER_CALL\x10\b\x12\x0f\n" +
+	"\vREPORT_CALL\x10\t\x12!\n" +
+	"\x1dREPORT_DESCRIPTION_ENTRY_CALL\x10\n" +
+	"\x12!\n" +
+	"\x1dSCREEN_DESCRIPTION_ENTRY_CALL\x10\v\x12(\n" +
+	"$COMMUNICATION_DESCRIPTION_ENTRY_CALL\x10\f\x12\x14\n" +
+	"\x10ENVIRONMENT_CALL\x10\r\x12\x12\n" +
+	"\x0eUNDEFINED_CALL\x10\x0eB&Z$github.com/aixfoundry/cobol-go/pb;pbb\x06proto3"
 
 var (
 	file_cobol_proto_rawDescOnce sync.Once
@@ -40495,1786 +40896,1802 @@ func file_cobol_proto_rawDescGZIP() []byte {
 	return file_cobol_proto_rawDescData
 }
 
-var file_cobol_proto_enumTypes = make([]protoimpl.EnumInfo, 59)
-var file_cobol_proto_msgTypes = make([]protoimpl.MessageInfo, 556)
+var file_cobol_proto_enumTypes = make([]protoimpl.EnumInfo, 60)
+var file_cobol_proto_msgTypes = make([]protoimpl.MessageInfo, 557)
 var file_cobol_proto_goTypes = []any{
 	(RelationalOperator)(0),                              // 0: pb.RelationalOperator
-	(ProgramIdParagraph_Attribute)(0),                    // 1: pb.ProgramIdParagraph.Attribute
-	(MemorySizeClause_Unit)(0),                           // 2: pb.MemorySizeClause.Unit
-	(DiskSizeClause_Unit)(0),                             // 3: pb.DiskSizeClause.Unit
-	(AlphabetClause_Alphanumeric_Type)(0),                // 4: pb.AlphabetClause.Alphanumeric.Type
-	(AlphabetClause_National_Type)(0),                    // 5: pb.AlphabetClause.National.Type
-	(ClassClause_Type)(0),                                // 6: pb.ClassClause.Type
-	(DefaultDisplaySignClause_Type)(0),                   // 7: pb.DefaultDisplaySignClause.Type
-	(DefaultComputationalSignClause_Type)(0),             // 8: pb.DefaultComputationalSignClause.Type
-	(SymbolicCharactersClause_Type)(0),                   // 9: pb.SymbolicCharactersClause.Type
-	(AssignClause_Type)(0),                               // 10: pb.AssignClause.Type
-	(OrganizationClause_Mode)(0),                         // 11: pb.OrganizationClause.Mode
-	(OrganizationClause_Type)(0),                         // 12: pb.OrganizationClause.Type
-	(RecordDelimiterClause_Type)(0),                      // 13: pb.RecordDelimiterClause.Type
-	(AccessModeClause_Mode)(0),                           // 14: pb.AccessModeClause.Mode
-	(RerunEveryOf_Type)(0),                               // 15: pb.RerunEveryOf.Type
-	(SameClause_Form)(0),                                 // 16: pb.SameClause.Form
-	(BlockContainsClause_Unit)(0),                        // 17: pb.BlockContainsClause.Unit
-	(LabelRecordsClause_Type)(0),                         // 18: pb.LabelRecordsClause.Type
-	(DataDescriptionEntry_Format1_LevelNumber)(0),        // 19: pb.DataDescriptionEntry.Format1.LevelNumber
-	(PictureChars_Type)(0),                               // 20: pb.PictureChars.Type
-	(DataCommonOwnLocalClause_Type)(0),                   // 21: pb.DataCommonOwnLocalClause.Type
-	(DataTypeClause_Type)(0),                             // 22: pb.DataTypeClause.Type
-	(DataTypeClause_Mode)(0),                             // 23: pb.DataTypeClause.Mode
-	(DataUsingClause_Type)(0),                            // 24: pb.DataUsingClause.Type
-	(DataUsageClause_Type)(0),                            // 25: pb.DataUsageClause.Type
-	(DataReceivedByClause_Type)(0),                       // 26: pb.DataReceivedByClause.Type
-	(DataSignClause_Type)(0),                             // 27: pb.DataSignClause.Type
-	(DataSynchronizedClause_Type)(0),                     // 28: pb.DataSynchronizedClause.Type
-	(FullClause_Type)(0),                                 // 29: pb.FullClause.Type
-	(RequiredClause_Type)(0),                             // 30: pb.RequiredClause.Type
-	(SecureClause_Type)(0),                               // 31: pb.SecureClause.Type
-	(AutoClause_Type)(0),                                 // 32: pb.AutoClause.Type
-	(BlankClause_Type)(0),                                // 33: pb.BlankClause.Type
-	(BellClause_Type)(0),                                 // 34: pb.BellClause.Type
-	(EraseClause_Type)(0),                                // 35: pb.EraseClause.Type
-	(LightClause_Type)(0),                                // 36: pb.LightClause.Type
-	(GridClause_Type)(0),                                 // 37: pb.GridClause.Type
-	(LineClause_Type)(0),                                 // 38: pb.LineClause.Type
-	(ColumnClause_Type)(0),                               // 39: pb.ColumnClause.Type
-	(SignClause_Type)(0),                                 // 40: pb.SignClause.Type
-	(AttributeClause1_Sharing)(0),                        // 41: pb.AttributeClause1.Sharing
-	(AttributeClause2_LibAccess)(0),                      // 42: pb.AttributeClause2.LibAccess
-	(ProcedureDivision_GivingClause_Type)(0),             // 43: pb.ProcedureDivision.GivingClause.Type
-	(ProcedureDivision_UsingClause_Type)(0),              // 44: pb.ProcedureDivision.UsingClause.Type
-	(StartStatement_Type)(0),                             // 45: pb.StartStatement.Type
-	(SortStatement_Giving_Type)(0),                       // 46: pb.SortStatement.Giving.Type
-	(MergeStatement_Giving_Type)(0),                      // 47: pb.MergeStatement.Giving.Type
-	(InitializeStatement_ReplacingBy_Type)(0),            // 48: pb.InitializeStatement.ReplacingBy.Type
-	(AcceptStatement_FromDate_Type)(0),                   // 49: pb.AcceptStatement.FromDate.Type
-	(UseAfterClause_Type)(0),                             // 50: pb.UseAfterClause.Type
-	(AndOrCondition_AndOr)(0),                            // 51: pb.AndOrCondition.AndOr
-	(ClassCondition_Type)(0),                             // 52: pb.ClassCondition.Type
-	(RelationSignCondition_Type)(0),                      // 53: pb.RelationSignCondition.Type
-	(RelationCombinedCondition_AndOr)(0),                 // 54: pb.RelationCombinedCondition.AndOr
-	(Literal_Type)(0),                                    // 55: pb.Literal.Type
-	(NumericLiteral_Type)(0),                             // 56: pb.NumericLiteral.Type
-	(FigurativeConstant_Type)(0),                         // 57: pb.FigurativeConstant.Type
-	(SpecialRegister_Type)(0),                            // 58: pb.SpecialRegister.Type
-	(*Program)(nil),                                      // 59: pb.Program
-	(*CompilationUnit)(nil),                              // 60: pb.CompilationUnit
-	(*ProgramUnit)(nil),                                  // 61: pb.ProgramUnit
-	(*IdentificationDivision)(nil),                       // 62: pb.IdentificationDivision
-	(*ProgramIdParagraph)(nil),                           // 63: pb.ProgramIdParagraph
-	(*AuthorParagraph)(nil),                              // 64: pb.AuthorParagraph
-	(*DateCompiledParagraph)(nil),                        // 65: pb.DateCompiledParagraph
-	(*DateWrittenParagraph)(nil),                         // 66: pb.DateWrittenParagraph
-	(*InstallationParagraph)(nil),                        // 67: pb.InstallationParagraph
-	(*RemarksParagraph)(nil),                             // 68: pb.RemarksParagraph
-	(*SecurityParagraph)(nil),                            // 69: pb.SecurityParagraph
-	(*EnvironmentDivision)(nil),                          // 70: pb.EnvironmentDivision
-	(*ConfigurationSection)(nil),                         // 71: pb.ConfigurationSection
-	(*SourceComputerParagraph)(nil),                      // 72: pb.SourceComputerParagraph
-	(*ObjectComputerParagraph)(nil),                      // 73: pb.ObjectComputerParagraph
-	(*MemorySizeClause)(nil),                             // 74: pb.MemorySizeClause
-	(*DiskSizeClause)(nil),                               // 75: pb.DiskSizeClause
-	(*CollatingSequenceClause)(nil),                      // 76: pb.CollatingSequenceClause
-	(*SegmentLimitClause)(nil),                           // 77: pb.SegmentLimitClause
-	(*CharacterSetClause)(nil),                           // 78: pb.CharacterSetClause
-	(*SpecialNamesParagraph)(nil),                        // 79: pb.SpecialNamesParagraph
-	(*AlphabetClause)(nil),                               // 80: pb.AlphabetClause
-	(*ChannelClause)(nil),                                // 81: pb.ChannelClause
-	(*ClassClause)(nil),                                  // 82: pb.ClassClause
-	(*ClassClauseThrough)(nil),                           // 83: pb.ClassClauseThrough
-	(*CurrencySignClause)(nil),                           // 84: pb.CurrencySignClause
-	(*DecimalPointClause)(nil),                           // 85: pb.DecimalPointClause
-	(*DefaultDisplaySignClause)(nil),                     // 86: pb.DefaultDisplaySignClause
-	(*OdtClause)(nil),                                    // 87: pb.OdtClause
-	(*ReserveNetworkClause)(nil),                         // 88: pb.ReserveNetworkClause
-	(*DefaultComputationalSignClause)(nil),               // 89: pb.DefaultComputationalSignClause
-	(*EnvironmentSwitchNameClause)(nil),                  // 90: pb.EnvironmentSwitchNameClause
-	(*SymbolicCharactersClause)(nil),                     // 91: pb.SymbolicCharactersClause
-	(*InputOutputSection)(nil),                           // 92: pb.InputOutputSection
-	(*FileControlParagraph)(nil),                         // 93: pb.FileControlParagraph
-	(*FileControlEntry)(nil),                             // 94: pb.FileControlEntry
-	(*SelectClause)(nil),                                 // 95: pb.SelectClause
-	(*AssignClause)(nil),                                 // 96: pb.AssignClause
-	(*ReserveClause)(nil),                                // 97: pb.ReserveClause
-	(*OrganizationClause)(nil),                           // 98: pb.OrganizationClause
-	(*PaddingCharacterClause)(nil),                       // 99: pb.PaddingCharacterClause
-	(*RecordDelimiterClause)(nil),                        // 100: pb.RecordDelimiterClause
-	(*AccessModeClause)(nil),                             // 101: pb.AccessModeClause
-	(*RecordKeyClause)(nil),                              // 102: pb.RecordKeyClause
-	(*AlternateRecordKeyClause)(nil),                     // 103: pb.AlternateRecordKeyClause
-	(*PasswordClause)(nil),                               // 104: pb.PasswordClause
-	(*FileStatusClause)(nil),                             // 105: pb.FileStatusClause
-	(*RelativeKeyClause)(nil),                            // 106: pb.RelativeKeyClause
-	(*IoControlParagraph)(nil),                           // 107: pb.IoControlParagraph
-	(*RerunClause)(nil),                                  // 108: pb.RerunClause
-	(*RerunEveryRecords)(nil),                            // 109: pb.RerunEveryRecords
-	(*RerunEveryOf)(nil),                                 // 110: pb.RerunEveryOf
-	(*RerunEveryClock)(nil),                              // 111: pb.RerunEveryClock
-	(*SameClause)(nil),                                   // 112: pb.SameClause
-	(*MultipleFileClause)(nil),                           // 113: pb.MultipleFileClause
-	(*MultipleFilePosition)(nil),                         // 114: pb.MultipleFilePosition
-	(*CommitmentControlClause)(nil),                      // 115: pb.CommitmentControlClause
-	(*DataDivision)(nil),                                 // 116: pb.DataDivision
-	(*FileSection)(nil),                                  // 117: pb.FileSection
-	(*FileDescriptionEntry)(nil),                         // 118: pb.FileDescriptionEntry
-	(*ModeStatement)(nil),                                // 119: pb.ModeStatement
-	(*RecordingModeClause)(nil),                          // 120: pb.RecordingModeClause
-	(*ExternalClause)(nil),                               // 121: pb.ExternalClause
-	(*GlobalClause)(nil),                                 // 122: pb.GlobalClause
-	(*BlockContainsClause)(nil),                          // 123: pb.BlockContainsClause
-	(*RecordContainsClause)(nil),                         // 124: pb.RecordContainsClause
-	(*LabelRecordsClause)(nil),                           // 125: pb.LabelRecordsClause
-	(*ValueOfClause)(nil),                                // 126: pb.ValueOfClause
-	(*ValuePair)(nil),                                    // 127: pb.ValuePair
-	(*DataRecordsClause)(nil),                            // 128: pb.DataRecordsClause
-	(*DataNameOrIntegerLiteral)(nil),                     // 129: pb.DataNameOrIntegerLiteral
-	(*LinageClause)(nil),                                 // 130: pb.LinageClause
-	(*CodeSetClause)(nil),                                // 131: pb.CodeSetClause
-	(*ReportClause)(nil),                                 // 132: pb.ReportClause
-	(*WorkingStorageSection)(nil),                        // 133: pb.WorkingStorageSection
-	(*DataDescriptionEntry)(nil),                         // 134: pb.DataDescriptionEntry
-	(*DataRenamesClause)(nil),                            // 135: pb.DataRenamesClause
-	(*DataRedefinesClause)(nil),                          // 136: pb.DataRedefinesClause
-	(*DataIntegerStringClause)(nil),                      // 137: pb.DataIntegerStringClause
-	(*DataExternalClause)(nil),                           // 138: pb.DataExternalClause
-	(*DataGlobalClause)(nil),                             // 139: pb.DataGlobalClause
-	(*DataTypeDefClause)(nil),                            // 140: pb.DataTypeDefClause
-	(*DataThreadLocalClause)(nil),                        // 141: pb.DataThreadLocalClause
-	(*DataPictureClause)(nil),                            // 142: pb.DataPictureClause
-	(*PictureString)(nil),                                // 143: pb.PictureString
-	(*PictureChars)(nil),                                 // 144: pb.PictureChars
-	(*PictureCardinality)(nil),                           // 145: pb.PictureCardinality
-	(*DataCommonOwnLocalClause)(nil),                     // 146: pb.DataCommonOwnLocalClause
-	(*DataTypeClause)(nil),                               // 147: pb.DataTypeClause
-	(*DataUsingClause)(nil),                              // 148: pb.DataUsingClause
-	(*DataUsageClause)(nil),                              // 149: pb.DataUsageClause
-	(*DataValueInterval)(nil),                            // 150: pb.DataValueInterval
-	(*DataValueClause)(nil),                              // 151: pb.DataValueClause
-	(*DataReceivedByClause)(nil),                         // 152: pb.DataReceivedByClause
-	(*DataOccursClause)(nil),                             // 153: pb.DataOccursClause
-	(*DataSignClause)(nil),                               // 154: pb.DataSignClause
-	(*DataSynchronizedClause)(nil),                       // 155: pb.DataSynchronizedClause
-	(*DataJustifiedClause)(nil),                          // 156: pb.DataJustifiedClause
-	(*DataBlankWhenZeroClause)(nil),                      // 157: pb.DataBlankWhenZeroClause
-	(*DataWithLowerBoundsClause)(nil),                    // 158: pb.DataWithLowerBoundsClause
-	(*DataAlignedClause)(nil),                            // 159: pb.DataAlignedClause
-	(*DataRecordAreaClause)(nil),                         // 160: pb.DataRecordAreaClause
-	(*ScreenSection)(nil),                                // 161: pb.ScreenSection
-	(*ScreenDescriptionEntry)(nil),                       // 162: pb.ScreenDescriptionEntry
-	(*ZeroFillClause)(nil),                               // 163: pb.ZeroFillClause
-	(*FullClause)(nil),                                   // 164: pb.FullClause
-	(*PromptClause)(nil),                                 // 165: pb.PromptClause
-	(*RequiredClause)(nil),                               // 166: pb.RequiredClause
-	(*SecureClause)(nil),                                 // 167: pb.SecureClause
-	(*AutoClause)(nil),                                   // 168: pb.AutoClause
-	(*UsingClause)(nil),                                  // 169: pb.UsingClause
-	(*FromClause)(nil),                                   // 170: pb.FromClause
-	(*BlankClause)(nil),                                  // 171: pb.BlankClause
-	(*BellClause)(nil),                                   // 172: pb.BellClause
-	(*BlinkClause)(nil),                                  // 173: pb.BlinkClause
-	(*EraseClause)(nil),                                  // 174: pb.EraseClause
-	(*LightClause)(nil),                                  // 175: pb.LightClause
-	(*GridClause)(nil),                                   // 176: pb.GridClause
-	(*ReverseVideoClause)(nil),                           // 177: pb.ReverseVideoClause
-	(*UnderlineClause)(nil),                              // 178: pb.UnderlineClause
-	(*SizeClause)(nil),                                   // 179: pb.SizeClause
-	(*LineClause)(nil),                                   // 180: pb.LineClause
-	(*ColumnClause)(nil),                                 // 181: pb.ColumnClause
-	(*ForegroundColorClause)(nil),                        // 182: pb.ForegroundColorClause
-	(*BackgroundColorClause)(nil),                        // 183: pb.BackgroundColorClause
-	(*ControlClause)(nil),                                // 184: pb.ControlClause
-	(*ReportSection)(nil),                                // 185: pb.ReportSection
-	(*ReportDescription)(nil),                            // 186: pb.ReportDescription
-	(*ReportDescriptionEntry)(nil),                       // 187: pb.ReportDescriptionEntry
-	(*PageLimitClause)(nil),                              // 188: pb.PageLimitClause
-	(*HeadingClause)(nil),                                // 189: pb.HeadingClause
-	(*FirstDetailClause)(nil),                            // 190: pb.FirstDetailClause
-	(*LastDetailClause)(nil),                             // 191: pb.LastDetailClause
-	(*FootingClause)(nil),                                // 192: pb.FootingClause
-	(*ReportGroupDescriptionEntry)(nil),                  // 193: pb.ReportGroupDescriptionEntry
-	(*ResetClause)(nil),                                  // 194: pb.ResetClause
-	(*SumClause)(nil),                                    // 195: pb.SumClause
-	(*ValueClause)(nil),                                  // 196: pb.ValueClause
-	(*SourceClause)(nil),                                 // 197: pb.SourceClause
-	(*IndicateClause)(nil),                               // 198: pb.IndicateClause
-	(*ColumnNumberClause)(nil),                           // 199: pb.ColumnNumberClause
-	(*BlankWhenZeroClause)(nil),                          // 200: pb.BlankWhenZeroClause
-	(*JustifiedClause)(nil),                              // 201: pb.JustifiedClause
-	(*SignClause)(nil),                                   // 202: pb.SignClause
-	(*PictureClause)(nil),                                // 203: pb.PictureClause
-	(*LineNumberClause)(nil),                             // 204: pb.LineNumberClause
-	(*NextGroupClause)(nil),                              // 205: pb.NextGroupClause
-	(*TypeClause)(nil),                                   // 206: pb.TypeClause
-	(*UsageClause)(nil),                                  // 207: pb.UsageClause
-	(*ProgramLibrarySection)(nil),                        // 208: pb.ProgramLibrarySection
-	(*LibraryDescriptionEntry)(nil),                      // 209: pb.LibraryDescriptionEntry
-	(*IsCommonClause)(nil),                               // 210: pb.IsCommonClause
-	(*AttributeClause1)(nil),                             // 211: pb.AttributeClause1
-	(*AttributeClause2)(nil),                             // 212: pb.AttributeClause2
-	(*ProcedureClause1)(nil),                             // 213: pb.ProcedureClause1
-	(*ProcedureClause2)(nil),                             // 214: pb.ProcedureClause2
-	(*LocalStorageSection)(nil),                          // 215: pb.LocalStorageSection
-	(*LinkageSection)(nil),                               // 216: pb.LinkageSection
-	(*CommunicationSection)(nil),                         // 217: pb.CommunicationSection
-	(*CommunicationDescriptionEntry)(nil),                // 218: pb.CommunicationDescriptionEntry
-	(*SymbolicTerminalClause)(nil),                       // 219: pb.SymbolicTerminalClause
-	(*SymbolicDestinationClause)(nil),                    // 220: pb.SymbolicDestinationClause
-	(*ErrorKeyClause)(nil),                               // 221: pb.ErrorKeyClause
-	(*DestinationTableClause)(nil),                       // 222: pb.DestinationTableClause
-	(*DestinationCountClause)(nil),                       // 223: pb.DestinationCountClause
-	(*SymbolicQueueClause)(nil),                          // 224: pb.SymbolicQueueClause
-	(*SymbolicSubQueueClause)(nil),                       // 225: pb.SymbolicSubQueueClause
-	(*MessageDateClause)(nil),                            // 226: pb.MessageDateClause
-	(*MessageTimeClause)(nil),                            // 227: pb.MessageTimeClause
-	(*SymbolicSourceClause)(nil),                         // 228: pb.SymbolicSourceClause
-	(*TextLengthClause)(nil),                             // 229: pb.TextLengthClause
-	(*EndKeyClause)(nil),                                 // 230: pb.EndKeyClause
-	(*StatusKeyClause)(nil),                              // 231: pb.StatusKeyClause
-	(*MessageCountClause)(nil),                           // 232: pb.MessageCountClause
-	(*DataBaseSection)(nil),                              // 233: pb.DataBaseSection
-	(*DataBaseSectionEntry)(nil),                         // 234: pb.DataBaseSectionEntry
-	(*ProcedureDivision)(nil),                            // 235: pb.ProcedureDivision
-	(*ProcedureSection)(nil),                             // 236: pb.ProcedureSection
-	(*Declarative)(nil),                                  // 237: pb.Declarative
-	(*ProcedureSectionHeader)(nil),                       // 238: pb.ProcedureSectionHeader
-	(*Paragraphs)(nil),                                   // 239: pb.Paragraphs
-	(*Paragraph)(nil),                                    // 240: pb.Paragraph
-	(*Sentences)(nil),                                    // 241: pb.Sentences
-	(*Sentence)(nil),                                     // 242: pb.Sentence
-	(*Statement)(nil),                                    // 243: pb.Statement
-	(*WriteStatement)(nil),                               // 244: pb.WriteStatement
-	(*UnstringStatement)(nil),                            // 245: pb.UnstringStatement
-	(*TerminateStatement)(nil),                           // 246: pb.TerminateStatement
-	(*SubtractStatement)(nil),                            // 247: pb.SubtractStatement
-	(*StringStatement)(nil),                              // 248: pb.StringStatement
-	(*StopStatement)(nil),                                // 249: pb.StopStatement
-	(*StartStatement)(nil),                               // 250: pb.StartStatement
-	(*SortStatement)(nil),                                // 251: pb.SortStatement
-	(*SetStatement)(nil),                                 // 252: pb.SetStatement
-	(*SendStatement)(nil),                                // 253: pb.SendStatement
-	(*SearchStatement)(nil),                              // 254: pb.SearchStatement
-	(*RewriteStatement)(nil),                             // 255: pb.RewriteStatement
-	(*ReturnStatement)(nil),                              // 256: pb.ReturnStatement
-	(*ReleaseStatement)(nil),                             // 257: pb.ReleaseStatement
-	(*ReceiveStatement)(nil),                             // 258: pb.ReceiveStatement
-	(*ReadStatement)(nil),                                // 259: pb.ReadStatement
-	(*PurgeStatement)(nil),                               // 260: pb.PurgeStatement
-	(*PerformStatement)(nil),                             // 261: pb.PerformStatement
-	(*OpenStatement)(nil),                                // 262: pb.OpenStatement
-	(*NextSentenceStatement)(nil),                        // 263: pb.NextSentenceStatement
-	(*MultiplyStatement)(nil),                            // 264: pb.MultiplyStatement
-	(*MoveStatement)(nil),                                // 265: pb.MoveStatement
-	(*MoveToStatement)(nil),                              // 266: pb.MoveToStatement
-	(*MoveCorrespondingToStatement)(nil),                 // 267: pb.MoveCorrespondingToStatement
-	(*MergeStatement)(nil),                               // 268: pb.MergeStatement
-	(*InspectStatement)(nil),                             // 269: pb.InspectStatement
-	(*InitiateStatement)(nil),                            // 270: pb.InitiateStatement
-	(*InitializeStatement)(nil),                          // 271: pb.InitializeStatement
-	(*IfStatement)(nil),                                  // 272: pb.IfStatement
-	(*GoToStatement)(nil),                                // 273: pb.GoToStatement
-	(*GobackStatement)(nil),                              // 274: pb.GobackStatement
-	(*GenerateStatement)(nil),                            // 275: pb.GenerateStatement
-	(*ExitStatement)(nil),                                // 276: pb.ExitStatement
-	(*ExecSqlImsStatement)(nil),                          // 277: pb.ExecSqlImsStatement
-	(*ExecSqlStatement)(nil),                             // 278: pb.ExecSqlStatement
-	(*ExecCicsStatement)(nil),                            // 279: pb.ExecCicsStatement
-	(*ExhibitStatement)(nil),                             // 280: pb.ExhibitStatement
-	(*EvaluateStatement)(nil),                            // 281: pb.EvaluateStatement
-	(*EntryStatement)(nil),                               // 282: pb.EntryStatement
-	(*EnableStatement)(nil),                              // 283: pb.EnableStatement
-	(*DivideStatement)(nil),                              // 284: pb.DivideStatement
-	(*DisplayOperand)(nil),                               // 285: pb.DisplayOperand
-	(*DisplayAt)(nil),                                    // 286: pb.DisplayAt
-	(*DisplayUpon)(nil),                                  // 287: pb.DisplayUpon
-	(*DisplayWith)(nil),                                  // 288: pb.DisplayWith
-	(*DisplayStatement)(nil),                             // 289: pb.DisplayStatement
-	(*DisableStatement)(nil),                             // 290: pb.DisableStatement
-	(*DeleteStatement)(nil),                              // 291: pb.DeleteStatement
-	(*ContinueStatement)(nil),                            // 292: pb.ContinueStatement
-	(*ComputeStore)(nil),                                 // 293: pb.ComputeStore
-	(*ComputeStatement)(nil),                             // 294: pb.ComputeStatement
-	(*CloseReelUnitStatement)(nil),                       // 295: pb.CloseReelUnitStatement
-	(*CloseRelativeStatement)(nil),                       // 296: pb.CloseRelativeStatement
-	(*ClosePortFileIOUsing)(nil),                         // 297: pb.ClosePortFileIOUsing
-	(*ClosePortFileIOStatement)(nil),                     // 298: pb.ClosePortFileIOStatement
-	(*CloseFile)(nil),                                    // 299: pb.CloseFile
-	(*CloseStatement)(nil),                               // 300: pb.CloseStatement
-	(*CancelCall)(nil),                                   // 301: pb.CancelCall
-	(*CancelStatement)(nil),                              // 302: pb.CancelStatement
-	(*CallStatement)(nil),                                // 303: pb.CallStatement
-	(*AlterStatement)(nil),                               // 304: pb.AlterStatement
-	(*AddStatement)(nil),                                 // 305: pb.AddStatement
-	(*AcceptStatement)(nil),                              // 306: pb.AcceptStatement
-	(*AtEndOfPagePhrase)(nil),                            // 307: pb.AtEndOfPagePhrase
-	(*NotAtEndOfPagePhrase)(nil),                         // 308: pb.NotAtEndOfPagePhrase
-	(*OnSizeErrorPhrase)(nil),                            // 309: pb.OnSizeErrorPhrase
-	(*NotOnSizeErrorPhrase)(nil),                         // 310: pb.NotOnSizeErrorPhrase
-	(*OnOverflowPhrase)(nil),                             // 311: pb.OnOverflowPhrase
-	(*NotOnOverflowPhrase)(nil),                          // 312: pb.NotOnOverflowPhrase
-	(*InvalidKeyPhrase)(nil),                             // 313: pb.InvalidKeyPhrase
-	(*NotInvalidKeyPhrase)(nil),                          // 314: pb.NotInvalidKeyPhrase
-	(*AtEndPhrase)(nil),                                  // 315: pb.AtEndPhrase
-	(*NotAtEndPhrase)(nil),                               // 316: pb.NotAtEndPhrase
-	(*OnExceptionClause)(nil),                            // 317: pb.OnExceptionClause
-	(*NotOnExceptionClause)(nil),                         // 318: pb.NotOnExceptionClause
-	(*UseStatement)(nil),                                 // 319: pb.UseStatement
-	(*UseDebugOn)(nil),                                   // 320: pb.UseDebugOn
-	(*UseDebugClause)(nil),                               // 321: pb.UseDebugClause
-	(*UseAfterClause)(nil),                               // 322: pb.UseAfterClause
-	(*ArithmeticExpression)(nil),                         // 323: pb.ArithmeticExpression
-	(*PlusMinus)(nil),                                    // 324: pb.PlusMinus
-	(*MultDivs)(nil),                                     // 325: pb.MultDivs
-	(*MultDiv)(nil),                                      // 326: pb.MultDiv
-	(*Powers)(nil),                                       // 327: pb.Powers
-	(*Power)(nil),                                        // 328: pb.Power
-	(*Basis)(nil),                                        // 329: pb.Basis
-	(*Condition)(nil),                                    // 330: pb.Condition
-	(*AndOrCondition)(nil),                               // 331: pb.AndOrCondition
-	(*CombinableCondition)(nil),                          // 332: pb.CombinableCondition
-	(*SimpleCondition)(nil),                              // 333: pb.SimpleCondition
-	(*ClassCondition)(nil),                               // 334: pb.ClassCondition
-	(*ConditionNameReference)(nil),                       // 335: pb.ConditionNameReference
-	(*RelationCondition)(nil),                            // 336: pb.RelationCondition
-	(*RelationSignCondition)(nil),                        // 337: pb.RelationSignCondition
-	(*RelationArithmeticComparison)(nil),                 // 338: pb.RelationArithmeticComparison
-	(*RelationCombinedComparison)(nil),                   // 339: pb.RelationCombinedComparison
-	(*RelationCombinedCondition)(nil),                    // 340: pb.RelationCombinedCondition
-	(*Abbreviation)(nil),                                 // 341: pb.Abbreviation
-	(*Identifier)(nil),                                   // 342: pb.Identifier
-	(*TableCall)(nil),                                    // 343: pb.TableCall
-	(*FunctionCall)(nil),                                 // 344: pb.FunctionCall
-	(*ReferenceModifier)(nil),                            // 345: pb.ReferenceModifier
-	(*CharacterPosition)(nil),                            // 346: pb.CharacterPosition
-	(*Length)(nil),                                       // 347: pb.Length
-	(*Subscript)(nil),                                    // 348: pb.Subscript
-	(*Argument)(nil),                                     // 349: pb.Argument
-	(*QualifiedDataNameIntegerLiteral)(nil),              // 350: pb.QualifiedDataNameIntegerLiteral
-	(*IndexNameIntegerLiteral)(nil),                      // 351: pb.IndexNameIntegerLiteral
-	(*QualifiedDataName)(nil),                            // 352: pb.QualifiedDataName
-	(*QualifiedDataNameFormat1)(nil),                     // 353: pb.QualifiedDataNameFormat1
-	(*QualifiedDataNameFormat2)(nil),                     // 354: pb.QualifiedDataNameFormat2
-	(*QualifiedDataNameFormat3)(nil),                     // 355: pb.QualifiedDataNameFormat3
-	(*QualifiedDataNameFormat4)(nil),                     // 356: pb.QualifiedDataNameFormat4
-	(*InData)(nil),                                       // 357: pb.InData
-	(*InFile)(nil),                                       // 358: pb.InFile
-	(*InMnemonic)(nil),                                   // 359: pb.InMnemonic
-	(*InSection)(nil),                                    // 360: pb.InSection
-	(*InLibrary)(nil),                                    // 361: pb.InLibrary
-	(*InTable)(nil),                                      // 362: pb.InTable
-	(*AlphabetName)(nil),                                 // 363: pb.AlphabetName
-	(*AssignmentName)(nil),                               // 364: pb.AssignmentName
-	(*BasisName)(nil),                                    // 365: pb.BasisName
-	(*CdName)(nil),                                       // 366: pb.CdName
-	(*ClassName)(nil),                                    // 367: pb.ClassName
-	(*ComputerName)(nil),                                 // 368: pb.ComputerName
-	(*ConditionName)(nil),                                // 369: pb.ConditionName
-	(*DataName)(nil),                                     // 370: pb.DataName
-	(*DataDescName)(nil),                                 // 371: pb.DataDescName
-	(*EnvironmentName)(nil),                              // 372: pb.EnvironmentName
-	(*FileName)(nil),                                     // 373: pb.FileName
-	(*FunctionName)(nil),                                 // 374: pb.FunctionName
-	(*IndexName)(nil),                                    // 375: pb.IndexName
-	(*LanguageName)(nil),                                 // 376: pb.LanguageName
-	(*LibraryName)(nil),                                  // 377: pb.LibraryName
-	(*LocalName)(nil),                                    // 378: pb.LocalName
-	(*MnemonicName)(nil),                                 // 379: pb.MnemonicName
-	(*ParagraphName)(nil),                                // 380: pb.ParagraphName
-	(*ProcedureName)(nil),                                // 381: pb.ProcedureName
-	(*ProgramName)(nil),                                  // 382: pb.ProgramName
-	(*RecordName)(nil),                                   // 383: pb.RecordName
-	(*ReportName)(nil),                                   // 384: pb.ReportName
-	(*RoutingName)(nil),                                  // 385: pb.RoutingName
-	(*RoutineName)(nil),                                  // 386: pb.RoutineName
-	(*ScreenName)(nil),                                   // 387: pb.ScreenName
-	(*SectionName)(nil),                                  // 388: pb.SectionName
-	(*SystemName)(nil),                                   // 389: pb.SystemName
-	(*SymbolicCharacter)(nil),                            // 390: pb.SymbolicCharacter
-	(*TextName)(nil),                                     // 391: pb.TextName
-	(*CobolWord)(nil),                                    // 392: pb.CobolWord
-	(*Literal)(nil),                                      // 393: pb.Literal
-	(*BooleanLiteral)(nil),                               // 394: pb.BooleanLiteral
-	(*NumericLiteral)(nil),                               // 395: pb.NumericLiteral
-	(*IntegerLiteral)(nil),                               // 396: pb.IntegerLiteral
-	(*FigurativeConstant)(nil),                           // 397: pb.FigurativeConstant
-	(*SpecialRegister)(nil),                              // 398: pb.SpecialRegister
-	(*NonNumericLiteral)(nil),                            // 399: pb.NonNumericLiteral
-	(*StringLiteral)(nil),                                // 400: pb.StringLiteral
-	(*DbcsLiteral)(nil),                                  // 401: pb.DbcsLiteral
-	(*HexNumber)(nil),                                    // 402: pb.HexNumber
-	(*NullTerminated)(nil),                               // 403: pb.NullTerminated
-	(*AlphabetClause_Also)(nil),                          // 404: pb.AlphabetClause.Also
-	(*AlphabetClause_AlphabetLiteral)(nil),               // 405: pb.AlphabetClause.AlphabetLiteral
-	(*AlphabetClause_AlphabetLiterals)(nil),              // 406: pb.AlphabetClause.AlphabetLiterals
-	(*AlphabetClause_Alphanumeric)(nil),                  // 407: pb.AlphabetClause.Alphanumeric
-	(*AlphabetClause_National)(nil),                      // 408: pb.AlphabetClause.National
-	(*EnvironmentSwitchNameClause_StatusPhrase)(nil),     // 409: pb.EnvironmentSwitchNameClause.StatusPhrase
-	(*LabelRecordsClause_DataNames)(nil),                 // 410: pb.LabelRecordsClause.DataNames
-	(*DataDescriptionEntry_Format1)(nil),                 // 411: pb.DataDescriptionEntry.Format1
-	(*DataDescriptionEntry_Format2)(nil),                 // 412: pb.DataDescriptionEntry.Format2
-	(*DataDescriptionEntry_Format3)(nil),                 // 413: pb.DataDescriptionEntry.Format3
-	(*DataDescriptionEntry_ExecSql)(nil),                 // 414: pb.DataDescriptionEntry.ExecSql
-	(*DataTypeClause_Lob)(nil),                           // 415: pb.DataTypeClause.Lob
-	(*DataOccursClause_Sort)(nil),                        // 416: pb.DataOccursClause.Sort
-	(*DataOccursClause_Indexed)(nil),                     // 417: pb.DataOccursClause.Indexed
-	(*ReportGroupDescriptionEntry_Vertical)(nil),         // 418: pb.ReportGroupDescriptionEntry.Vertical
-	(*ReportGroupDescriptionEntry_Single)(nil),           // 419: pb.ReportGroupDescriptionEntry.Single
-	(*ReportGroupDescriptionEntry_Printable)(nil),        // 420: pb.ReportGroupDescriptionEntry.Printable
-	(*TypeClause_ReportHeading)(nil),                     // 421: pb.TypeClause.ReportHeading
-	(*TypeClause_PageHeading)(nil),                       // 422: pb.TypeClause.PageHeading
-	(*TypeClause_ControlHeading)(nil),                    // 423: pb.TypeClause.ControlHeading
-	(*TypeClause_Detail)(nil),                            // 424: pb.TypeClause.Detail
-	(*TypeClause_ControlFooting)(nil),                    // 425: pb.TypeClause.ControlFooting
-	(*TypeClause_PageFooting)(nil),                       // 426: pb.TypeClause.PageFooting
-	(*TypeClause_ReportFooting)(nil),                     // 427: pb.TypeClause.ReportFooting
-	(*LibraryDescriptionEntry_Import)(nil),               // 428: pb.LibraryDescriptionEntry.Import
-	(*LibraryDescriptionEntry_Export)(nil),               // 429: pb.LibraryDescriptionEntry.Export
-	(*ProcedureClause2_WithName)(nil),                    // 430: pb.ProcedureClause2.WithName
-	(*ProcedureClause2_UsingName)(nil),                   // 431: pb.ProcedureClause2.UsingName
-	(*CommunicationDescriptionEntry_Input)(nil),          // 432: pb.CommunicationDescriptionEntry.Input
-	(*CommunicationDescriptionEntry_Output)(nil),         // 433: pb.CommunicationDescriptionEntry.Output
-	(*CommunicationDescriptionEntry_Io)(nil),             // 434: pb.CommunicationDescriptionEntry.Io
-	(*ProcedureDivision_ByReference)(nil),                // 435: pb.ProcedureDivision.ByReference
-	(*ProcedureDivision_ByReferencePhrase)(nil),          // 436: pb.ProcedureDivision.ByReferencePhrase
-	(*ProcedureDivision_ByValue)(nil),                    // 437: pb.ProcedureDivision.ByValue
-	(*ProcedureDivision_ByValuePhrase)(nil),              // 438: pb.ProcedureDivision.ByValuePhrase
-	(*ProcedureDivision_UsingParameter)(nil),             // 439: pb.ProcedureDivision.UsingParameter
-	(*ProcedureDivision_GivingClause)(nil),               // 440: pb.ProcedureDivision.GivingClause
-	(*ProcedureDivision_UsingClause)(nil),                // 441: pb.ProcedureDivision.UsingClause
-	(*WriteStatement_FromPhrase)(nil),                    // 442: pb.WriteStatement.FromPhrase
-	(*WriteStatement_AdvancingPage)(nil),                 // 443: pb.WriteStatement.AdvancingPage
-	(*WriteStatement_AdvancingLines)(nil),                // 444: pb.WriteStatement.AdvancingLines
-	(*WriteStatement_AdvancingMnemonic)(nil),             // 445: pb.WriteStatement.AdvancingMnemonic
-	(*WriteStatement_AdvancingPhrase)(nil),               // 446: pb.WriteStatement.AdvancingPhrase
-	(*UnstringStatement_DelimitedByPhrase)(nil),          // 447: pb.UnstringStatement.DelimitedByPhrase
-	(*UnstringStatement_OrAllPhrase)(nil),                // 448: pb.UnstringStatement.OrAllPhrase
-	(*UnstringStatement_DelimitedOr)(nil),                // 449: pb.UnstringStatement.DelimitedOr
-	(*UnstringStatement_Into)(nil),                       // 450: pb.UnstringStatement.Into
-	(*UnstringStatement_DelimiterIn)(nil),                // 451: pb.UnstringStatement.DelimiterIn
-	(*UnstringStatement_CountIn)(nil),                    // 452: pb.UnstringStatement.CountIn
-	(*UnstringStatement_SendingPhrase)(nil),              // 453: pb.UnstringStatement.SendingPhrase
-	(*UnstringStatement_IntoPhrase)(nil),                 // 454: pb.UnstringStatement.IntoPhrase
-	(*UnstringStatement_WithPointerPhrase)(nil),          // 455: pb.UnstringStatement.WithPointerPhrase
-	(*UnstringStatement_TallyingPhrase)(nil),             // 456: pb.UnstringStatement.TallyingPhrase
-	(*SubtractStatement_Subtrahend)(nil),                 // 457: pb.SubtractStatement.Subtrahend
-	(*SubtractStatement_Minuend)(nil),                    // 458: pb.SubtractStatement.Minuend
-	(*SubtractStatement_MinuendGiving)(nil),              // 459: pb.SubtractStatement.MinuendGiving
-	(*SubtractStatement_Giving)(nil),                     // 460: pb.SubtractStatement.Giving
-	(*SubtractStatement_MinuendCorresponding)(nil),       // 461: pb.SubtractStatement.MinuendCorresponding
-	(*SubtractStatement_FromStatement)(nil),              // 462: pb.SubtractStatement.FromStatement
-	(*SubtractStatement_FromGivingStatement)(nil),        // 463: pb.SubtractStatement.FromGivingStatement
-	(*SubtractStatement_CorrespondingStatement)(nil),     // 464: pb.SubtractStatement.CorrespondingStatement
-	(*StringStatement_Sending)(nil),                      // 465: pb.StringStatement.Sending
-	(*StringStatement_DelimitedByPhrase)(nil),            // 466: pb.StringStatement.DelimitedByPhrase
-	(*StringStatement_ForPhrase)(nil),                    // 467: pb.StringStatement.ForPhrase
-	(*StringStatement_SendingPhrase)(nil),                // 468: pb.StringStatement.SendingPhrase
-	(*StringStatement_IntoPhrase)(nil),                   // 469: pb.StringStatement.IntoPhrase
-	(*StringStatement_WithPointerPhrase)(nil),            // 470: pb.StringStatement.WithPointerPhrase
-	(*StopStatement_Giving)(nil),                         // 471: pb.StopStatement.Giving
-	(*StartStatement_Key)(nil),                           // 472: pb.StartStatement.Key
-	(*SortStatement_OnKeyClause)(nil),                    // 473: pb.SortStatement.OnKeyClause
-	(*SortStatement_DuplicatesPhrase)(nil),               // 474: pb.SortStatement.DuplicatesPhrase
-	(*SortStatement_CollatingAlphanumeric)(nil),          // 475: pb.SortStatement.CollatingAlphanumeric
-	(*SortStatement_CollatingNational)(nil),              // 476: pb.SortStatement.CollatingNational
-	(*SortStatement_CollatingSequencePhrase)(nil),        // 477: pb.SortStatement.CollatingSequencePhrase
-	(*SortStatement_InputThrough)(nil),                   // 478: pb.SortStatement.InputThrough
-	(*SortStatement_InputProcedurePhrase)(nil),           // 479: pb.SortStatement.InputProcedurePhrase
-	(*SortStatement_Using)(nil),                          // 480: pb.SortStatement.Using
-	(*SortStatement_OutputThrough)(nil),                  // 481: pb.SortStatement.OutputThrough
-	(*SortStatement_OutputProcedurePhrase)(nil),          // 482: pb.SortStatement.OutputProcedurePhrase
-	(*SortStatement_Giving)(nil),                         // 483: pb.SortStatement.Giving
-	(*SortStatement_GivingPhrase)(nil),                   // 484: pb.SortStatement.GivingPhrase
-	(*SetStatement_To)(nil),                              // 485: pb.SetStatement.To
-	(*SetStatement_Entry)(nil),                           // 486: pb.SetStatement.Entry
-	(*SetStatement_ToValue)(nil),                         // 487: pb.SetStatement.ToValue
-	(*SetStatement_ByValue)(nil),                         // 488: pb.SetStatement.ByValue
-	(*SetStatement_ToStatement)(nil),                     // 489: pb.SetStatement.ToStatement
-	(*SetStatement_UpDownByStatement)(nil),               // 490: pb.SetStatement.UpDownByStatement
-	(*SendStatement_FromPhrase)(nil),                     // 491: pb.SendStatement.FromPhrase
-	(*SendStatement_WithPhrase)(nil),                     // 492: pb.SendStatement.WithPhrase
-	(*SendStatement_ReplacingPhrase)(nil),                // 493: pb.SendStatement.ReplacingPhrase
-	(*SendStatement_AdvancingPage)(nil),                  // 494: pb.SendStatement.AdvancingPage
-	(*SendStatement_AdvancingLines)(nil),                 // 495: pb.SendStatement.AdvancingLines
-	(*SendStatement_AdvancingMnemonic)(nil),              // 496: pb.SendStatement.AdvancingMnemonic
-	(*SendStatement_AdvancingPhrase)(nil),                // 497: pb.SendStatement.AdvancingPhrase
-	(*SendStatement_SyncStatement)(nil),                  // 498: pb.SendStatement.SyncStatement
-	(*SendStatement_AsyncStatement)(nil),                 // 499: pb.SendStatement.AsyncStatement
-	(*SearchStatement_Varying)(nil),                      // 500: pb.SearchStatement.Varying
-	(*SearchStatement_When)(nil),                         // 501: pb.SearchStatement.When
-	(*RewriteStatement_From)(nil),                        // 502: pb.RewriteStatement.From
-	(*ReturnStatement_Into)(nil),                         // 503: pb.ReturnStatement.Into
-	(*ReleaseStatement_From)(nil),                        // 504: pb.ReleaseStatement.From
-	(*ReceiveStatement_From)(nil),                        // 505: pb.ReceiveStatement.From
-	(*ReceiveStatement_With)(nil),                        // 506: pb.ReceiveStatement.With
-	(*ReceiveStatement_Thread)(nil),                      // 507: pb.ReceiveStatement.Thread
-	(*ReceiveStatement_Size)(nil),                        // 508: pb.ReceiveStatement.Size
-	(*ReceiveStatement_Status)(nil),                      // 509: pb.ReceiveStatement.Status
-	(*ReceiveStatement_Before)(nil),                      // 510: pb.ReceiveStatement.Before
-	(*ReceiveStatement_FromStatement)(nil),               // 511: pb.ReceiveStatement.FromStatement
-	(*ReceiveStatement_NoData)(nil),                      // 512: pb.ReceiveStatement.NoData
-	(*ReceiveStatement_WithData)(nil),                    // 513: pb.ReceiveStatement.WithData
-	(*ReceiveStatement_IntoStatement)(nil),               // 514: pb.ReceiveStatement.IntoStatement
-	(*ReadStatement_Into)(nil),                           // 515: pb.ReadStatement.Into
-	(*ReadStatement_With)(nil),                           // 516: pb.ReadStatement.With
-	(*ReadStatement_Key)(nil),                            // 517: pb.ReadStatement.Key
-	(*PerformStatement_TestClause)(nil),                  // 518: pb.PerformStatement.TestClause
-	(*PerformStatement_Times)(nil),                       // 519: pb.PerformStatement.Times
-	(*PerformStatement_Until)(nil),                       // 520: pb.PerformStatement.Until
-	(*PerformStatement_From)(nil),                        // 521: pb.PerformStatement.From
-	(*PerformStatement_By)(nil),                          // 522: pb.PerformStatement.By
-	(*PerformStatement_VaryingPhrase)(nil),               // 523: pb.PerformStatement.VaryingPhrase
-	(*PerformStatement_After)(nil),                       // 524: pb.PerformStatement.After
-	(*PerformStatement_VaryingClause)(nil),               // 525: pb.PerformStatement.VaryingClause
-	(*PerformStatement_Varying)(nil),                     // 526: pb.PerformStatement.Varying
-	(*PerformStatement_Type)(nil),                        // 527: pb.PerformStatement.Type
-	(*PerformStatement_InlineStatement)(nil),             // 528: pb.PerformStatement.InlineStatement
-	(*PerformStatement_ProcedureStatement)(nil),          // 529: pb.PerformStatement.ProcedureStatement
-	(*OpenStatement_Input)(nil),                          // 530: pb.OpenStatement.Input
-	(*OpenStatement_InputStatement)(nil),                 // 531: pb.OpenStatement.InputStatement
-	(*OpenStatement_Output)(nil),                         // 532: pb.OpenStatement.Output
-	(*OpenStatement_OutputStatement)(nil),                // 533: pb.OpenStatement.OutputStatement
-	(*OpenStatement_IOStatement)(nil),                    // 534: pb.OpenStatement.IOStatement
-	(*OpenStatement_ExtendStatement)(nil),                // 535: pb.OpenStatement.ExtendStatement
-	(*MultiplyStatement_GivingOperand)(nil),              // 536: pb.MultiplyStatement.GivingOperand
-	(*MultiplyStatement_GivingResult)(nil),               // 537: pb.MultiplyStatement.GivingResult
-	(*MultiplyStatement_Giving)(nil),                     // 538: pb.MultiplyStatement.Giving
-	(*MultiplyStatement_Regular)(nil),                    // 539: pb.MultiplyStatement.Regular
-	(*MergeStatement_OnKeyClause)(nil),                   // 540: pb.MergeStatement.OnKeyClause
-	(*MergeStatement_CollatingSequencePhrase)(nil),       // 541: pb.MergeStatement.CollatingSequencePhrase
-	(*MergeStatement_CollatingAlphanumeric)(nil),         // 542: pb.MergeStatement.CollatingAlphanumeric
-	(*MergeStatement_CollatingNational)(nil),             // 543: pb.MergeStatement.CollatingNational
-	(*MergeStatement_Using)(nil),                         // 544: pb.MergeStatement.Using
-	(*MergeStatement_OutputProcedurePhrase)(nil),         // 545: pb.MergeStatement.OutputProcedurePhrase
-	(*MergeStatement_OutputThrough)(nil),                 // 546: pb.MergeStatement.OutputThrough
-	(*MergeStatement_GivingPhrase)(nil),                  // 547: pb.MergeStatement.GivingPhrase
-	(*MergeStatement_Giving)(nil),                        // 548: pb.MergeStatement.Giving
-	(*InspectStatement_By)(nil),                          // 549: pb.InspectStatement.By
-	(*InspectStatement_To)(nil),                          // 550: pb.InspectStatement.To
-	(*InspectStatement_BeforeAfter)(nil),                 // 551: pb.InspectStatement.BeforeAfter
-	(*InspectStatement_ReplacingAllLeading)(nil),         // 552: pb.InspectStatement.ReplacingAllLeading
-	(*InspectStatement_ReplacingAllLeadings)(nil),        // 553: pb.InspectStatement.ReplacingAllLeadings
-	(*InspectStatement_AllLeading)(nil),                  // 554: pb.InspectStatement.AllLeading
-	(*InspectStatement_AllLeadings)(nil),                 // 555: pb.InspectStatement.AllLeadings
-	(*InspectStatement_ReplacingCharacters)(nil),         // 556: pb.InspectStatement.ReplacingCharacters
-	(*InspectStatement_Characters)(nil),                  // 557: pb.InspectStatement.Characters
-	(*InspectStatement_CharactersLeadings)(nil),          // 558: pb.InspectStatement.CharactersLeadings
-	(*InspectStatement_For)(nil),                         // 559: pb.InspectStatement.For
-	(*InspectStatement_ConvertingPhrase)(nil),            // 560: pb.InspectStatement.ConvertingPhrase
-	(*InspectStatement_ReplacingCharactersLeadings)(nil), // 561: pb.InspectStatement.ReplacingCharactersLeadings
-	(*InspectStatement_ReplacingPhrase)(nil),             // 562: pb.InspectStatement.ReplacingPhrase
-	(*InspectStatement_TallyingReplacingPhrase)(nil),     // 563: pb.InspectStatement.TallyingReplacingPhrase
-	(*InspectStatement_TallyingPhrase)(nil),              // 564: pb.InspectStatement.TallyingPhrase
-	(*InitializeStatement_ReplacingBy)(nil),              // 565: pb.InitializeStatement.ReplacingBy
-	(*InitializeStatement_ReplacingPhrase)(nil),          // 566: pb.InitializeStatement.ReplacingPhrase
-	(*IfStatement_Then)(nil),                             // 567: pb.IfStatement.Then
-	(*IfStatement_Else)(nil),                             // 568: pb.IfStatement.Else
-	(*GoToStatement_SimpleStatement)(nil),                // 569: pb.GoToStatement.SimpleStatement
-	(*GoToStatement_DependingOn)(nil),                    // 570: pb.GoToStatement.DependingOn
-	(*GoToStatement_DependingOnStatement)(nil),           // 571: pb.GoToStatement.DependingOnStatement
-	(*ExhibitStatement_Operand)(nil),                     // 572: pb.ExhibitStatement.Operand
-	(*EvaluateStatement_Select)(nil),                     // 573: pb.EvaluateStatement.Select
-	(*EvaluateStatement_AlsoSelect)(nil),                 // 574: pb.EvaluateStatement.AlsoSelect
-	(*EvaluateStatement_ValueThrough)(nil),               // 575: pb.EvaluateStatement.ValueThrough
-	(*EvaluateStatement_Through)(nil),                    // 576: pb.EvaluateStatement.Through
-	(*EvaluateStatement_Value)(nil),                      // 577: pb.EvaluateStatement.Value
-	(*EvaluateStatement_WhenCondition)(nil),              // 578: pb.EvaluateStatement.WhenCondition
-	(*EvaluateStatement_AlsoCondition)(nil),              // 579: pb.EvaluateStatement.AlsoCondition
-	(*EvaluateStatement_WhenOther)(nil),                  // 580: pb.EvaluateStatement.WhenOther
-	(*EvaluateStatement_When)(nil),                       // 581: pb.EvaluateStatement.When
-	(*EvaluateStatement_WhenPhrase)(nil),                 // 582: pb.EvaluateStatement.WhenPhrase
-	(*DivideStatement_Giving)(nil),                       // 583: pb.DivideStatement.Giving
-	(*DivideStatement_GivingPhrase)(nil),                 // 584: pb.DivideStatement.GivingPhrase
-	(*DivideStatement_Into)(nil),                         // 585: pb.DivideStatement.Into
-	(*DivideStatement_IntoStatement)(nil),                // 586: pb.DivideStatement.IntoStatement
-	(*DivideStatement_IntoGivingStatement)(nil),          // 587: pb.DivideStatement.IntoGivingStatement
-	(*DivideStatement_ByGivingStatement)(nil),            // 588: pb.DivideStatement.ByGivingStatement
-	(*DivideStatement_Remainder)(nil),                    // 589: pb.DivideStatement.Remainder
-	(*ClosePortFileIOUsing_CloseDisposition)(nil),        // 590: pb.ClosePortFileIOUsing.CloseDisposition
-	(*ClosePortFileIOUsing_AssociatedData)(nil),          // 591: pb.ClosePortFileIOUsing.AssociatedData
-	(*ClosePortFileIOUsing_AssociatedDataLength)(nil),    // 592: pb.ClosePortFileIOUsing.AssociatedDataLength
-	(*CallStatement_ByContent)(nil),                      // 593: pb.CallStatement.ByContent
-	(*CallStatement_ByValue)(nil),                        // 594: pb.CallStatement.ByValue
-	(*CallStatement_ByReference)(nil),                    // 595: pb.CallStatement.ByReference
-	(*CallStatement_ByReferencePhrase)(nil),              // 596: pb.CallStatement.ByReferencePhrase
-	(*CallStatement_ByValuePhrase)(nil),                  // 597: pb.CallStatement.ByValuePhrase
-	(*CallStatement_ByContentPhrase)(nil),                // 598: pb.CallStatement.ByContentPhrase
-	(*CallStatement_UsingParameter)(nil),                 // 599: pb.CallStatement.UsingParameter
-	(*CallStatement_UsingPhrase)(nil),                    // 600: pb.CallStatement.UsingPhrase
-	(*CallStatement_GivingPhrase)(nil),                   // 601: pb.CallStatement.GivingPhrase
-	(*AlterStatement_ProceedTo)(nil),                     // 602: pb.AlterStatement.ProceedTo
-	(*AddStatement_AddFrom)(nil),                         // 603: pb.AddStatement.AddFrom
-	(*AddStatement_AddToGiving)(nil),                     // 604: pb.AddStatement.AddToGiving
-	(*AddStatement_To)(nil),                              // 605: pb.AddStatement.To
-	(*AddStatement_ToGiving)(nil),                        // 606: pb.AddStatement.ToGiving
-	(*AddStatement_Corresponding)(nil),                   // 607: pb.AddStatement.Corresponding
-	(*AcceptStatement_FromDate)(nil),                     // 608: pb.AcceptStatement.FromDate
-	(*AcceptStatement_FromEscapeKey)(nil),                // 609: pb.AcceptStatement.FromEscapeKey
-	(*AcceptStatement_FromMnemonic)(nil),                 // 610: pb.AcceptStatement.FromMnemonic
-	(*AcceptStatement_MessageCount)(nil),                 // 611: pb.AcceptStatement.MessageCount
-	(*UseAfterClause_FileNames)(nil),                     // 612: pb.UseAfterClause.FileNames
-	(*ConditionNameReference_SubscriptReference)(nil),    // 613: pb.ConditionNameReference.SubscriptReference
-	(*ConditionNameReference_InSubscript)(nil),           // 614: pb.ConditionNameReference.InSubscript
+	(CallType)(0),                                        // 1: pb.CallType
+	(ProgramIdParagraph_Attribute)(0),                    // 2: pb.ProgramIdParagraph.Attribute
+	(MemorySizeClause_Unit)(0),                           // 3: pb.MemorySizeClause.Unit
+	(DiskSizeClause_Unit)(0),                             // 4: pb.DiskSizeClause.Unit
+	(AlphabetClause_Alphanumeric_Type)(0),                // 5: pb.AlphabetClause.Alphanumeric.Type
+	(AlphabetClause_National_Type)(0),                    // 6: pb.AlphabetClause.National.Type
+	(ClassClause_Type)(0),                                // 7: pb.ClassClause.Type
+	(DefaultDisplaySignClause_Type)(0),                   // 8: pb.DefaultDisplaySignClause.Type
+	(DefaultComputationalSignClause_Type)(0),             // 9: pb.DefaultComputationalSignClause.Type
+	(SymbolicCharactersClause_Type)(0),                   // 10: pb.SymbolicCharactersClause.Type
+	(AssignClause_Type)(0),                               // 11: pb.AssignClause.Type
+	(OrganizationClause_Mode)(0),                         // 12: pb.OrganizationClause.Mode
+	(OrganizationClause_Type)(0),                         // 13: pb.OrganizationClause.Type
+	(RecordDelimiterClause_Type)(0),                      // 14: pb.RecordDelimiterClause.Type
+	(AccessModeClause_Mode)(0),                           // 15: pb.AccessModeClause.Mode
+	(RerunEveryOf_Type)(0),                               // 16: pb.RerunEveryOf.Type
+	(SameClause_Form)(0),                                 // 17: pb.SameClause.Form
+	(BlockContainsClause_Unit)(0),                        // 18: pb.BlockContainsClause.Unit
+	(LabelRecordsClause_Type)(0),                         // 19: pb.LabelRecordsClause.Type
+	(DataDescriptionEntry_Format1_LevelNumber)(0),        // 20: pb.DataDescriptionEntry.Format1.LevelNumber
+	(PictureChars_Type)(0),                               // 21: pb.PictureChars.Type
+	(DataCommonOwnLocalClause_Type)(0),                   // 22: pb.DataCommonOwnLocalClause.Type
+	(DataTypeClause_Type)(0),                             // 23: pb.DataTypeClause.Type
+	(DataTypeClause_Mode)(0),                             // 24: pb.DataTypeClause.Mode
+	(DataUsingClause_Type)(0),                            // 25: pb.DataUsingClause.Type
+	(DataUsageClause_Type)(0),                            // 26: pb.DataUsageClause.Type
+	(DataReceivedByClause_Type)(0),                       // 27: pb.DataReceivedByClause.Type
+	(DataSignClause_Type)(0),                             // 28: pb.DataSignClause.Type
+	(DataSynchronizedClause_Type)(0),                     // 29: pb.DataSynchronizedClause.Type
+	(FullClause_Type)(0),                                 // 30: pb.FullClause.Type
+	(RequiredClause_Type)(0),                             // 31: pb.RequiredClause.Type
+	(SecureClause_Type)(0),                               // 32: pb.SecureClause.Type
+	(AutoClause_Type)(0),                                 // 33: pb.AutoClause.Type
+	(BlankClause_Type)(0),                                // 34: pb.BlankClause.Type
+	(BellClause_Type)(0),                                 // 35: pb.BellClause.Type
+	(EraseClause_Type)(0),                                // 36: pb.EraseClause.Type
+	(LightClause_Type)(0),                                // 37: pb.LightClause.Type
+	(GridClause_Type)(0),                                 // 38: pb.GridClause.Type
+	(LineClause_Type)(0),                                 // 39: pb.LineClause.Type
+	(ColumnClause_Type)(0),                               // 40: pb.ColumnClause.Type
+	(SignClause_Type)(0),                                 // 41: pb.SignClause.Type
+	(AttributeClause1_Sharing)(0),                        // 42: pb.AttributeClause1.Sharing
+	(AttributeClause2_LibAccess)(0),                      // 43: pb.AttributeClause2.LibAccess
+	(ProcedureDivision_GivingClause_Type)(0),             // 44: pb.ProcedureDivision.GivingClause.Type
+	(ProcedureDivision_UsingClause_Type)(0),              // 45: pb.ProcedureDivision.UsingClause.Type
+	(StartStatement_Type)(0),                             // 46: pb.StartStatement.Type
+	(SortStatement_Giving_Type)(0),                       // 47: pb.SortStatement.Giving.Type
+	(MergeStatement_Giving_Type)(0),                      // 48: pb.MergeStatement.Giving.Type
+	(InitializeStatement_ReplacingBy_Type)(0),            // 49: pb.InitializeStatement.ReplacingBy.Type
+	(AcceptStatement_FromDate_Type)(0),                   // 50: pb.AcceptStatement.FromDate.Type
+	(UseAfterClause_Type)(0),                             // 51: pb.UseAfterClause.Type
+	(AndOrCondition_AndOr)(0),                            // 52: pb.AndOrCondition.AndOr
+	(ClassCondition_Type)(0),                             // 53: pb.ClassCondition.Type
+	(RelationSignCondition_Type)(0),                      // 54: pb.RelationSignCondition.Type
+	(RelationCombinedCondition_AndOr)(0),                 // 55: pb.RelationCombinedCondition.AndOr
+	(Literal_Type)(0),                                    // 56: pb.Literal.Type
+	(NumericLiteral_Type)(0),                             // 57: pb.NumericLiteral.Type
+	(FigurativeConstant_Type)(0),                         // 58: pb.FigurativeConstant.Type
+	(SpecialRegister_Type)(0),                            // 59: pb.SpecialRegister.Type
+	(*Program)(nil),                                      // 60: pb.Program
+	(*CompilationUnit)(nil),                              // 61: pb.CompilationUnit
+	(*ProgramUnit)(nil),                                  // 62: pb.ProgramUnit
+	(*IdentificationDivision)(nil),                       // 63: pb.IdentificationDivision
+	(*ProgramIdParagraph)(nil),                           // 64: pb.ProgramIdParagraph
+	(*AuthorParagraph)(nil),                              // 65: pb.AuthorParagraph
+	(*DateCompiledParagraph)(nil),                        // 66: pb.DateCompiledParagraph
+	(*DateWrittenParagraph)(nil),                         // 67: pb.DateWrittenParagraph
+	(*InstallationParagraph)(nil),                        // 68: pb.InstallationParagraph
+	(*RemarksParagraph)(nil),                             // 69: pb.RemarksParagraph
+	(*SecurityParagraph)(nil),                            // 70: pb.SecurityParagraph
+	(*EnvironmentDivision)(nil),                          // 71: pb.EnvironmentDivision
+	(*ConfigurationSection)(nil),                         // 72: pb.ConfigurationSection
+	(*SourceComputerParagraph)(nil),                      // 73: pb.SourceComputerParagraph
+	(*ObjectComputerParagraph)(nil),                      // 74: pb.ObjectComputerParagraph
+	(*MemorySizeClause)(nil),                             // 75: pb.MemorySizeClause
+	(*DiskSizeClause)(nil),                               // 76: pb.DiskSizeClause
+	(*CollatingSequenceClause)(nil),                      // 77: pb.CollatingSequenceClause
+	(*SegmentLimitClause)(nil),                           // 78: pb.SegmentLimitClause
+	(*CharacterSetClause)(nil),                           // 79: pb.CharacterSetClause
+	(*SpecialNamesParagraph)(nil),                        // 80: pb.SpecialNamesParagraph
+	(*AlphabetClause)(nil),                               // 81: pb.AlphabetClause
+	(*ChannelClause)(nil),                                // 82: pb.ChannelClause
+	(*ClassClause)(nil),                                  // 83: pb.ClassClause
+	(*ClassClauseThrough)(nil),                           // 84: pb.ClassClauseThrough
+	(*CurrencySignClause)(nil),                           // 85: pb.CurrencySignClause
+	(*DecimalPointClause)(nil),                           // 86: pb.DecimalPointClause
+	(*DefaultDisplaySignClause)(nil),                     // 87: pb.DefaultDisplaySignClause
+	(*OdtClause)(nil),                                    // 88: pb.OdtClause
+	(*ReserveNetworkClause)(nil),                         // 89: pb.ReserveNetworkClause
+	(*DefaultComputationalSignClause)(nil),               // 90: pb.DefaultComputationalSignClause
+	(*EnvironmentSwitchNameClause)(nil),                  // 91: pb.EnvironmentSwitchNameClause
+	(*SymbolicCharactersClause)(nil),                     // 92: pb.SymbolicCharactersClause
+	(*InputOutputSection)(nil),                           // 93: pb.InputOutputSection
+	(*FileControlParagraph)(nil),                         // 94: pb.FileControlParagraph
+	(*FileControlEntry)(nil),                             // 95: pb.FileControlEntry
+	(*SelectClause)(nil),                                 // 96: pb.SelectClause
+	(*AssignClause)(nil),                                 // 97: pb.AssignClause
+	(*ReserveClause)(nil),                                // 98: pb.ReserveClause
+	(*OrganizationClause)(nil),                           // 99: pb.OrganizationClause
+	(*PaddingCharacterClause)(nil),                       // 100: pb.PaddingCharacterClause
+	(*RecordDelimiterClause)(nil),                        // 101: pb.RecordDelimiterClause
+	(*AccessModeClause)(nil),                             // 102: pb.AccessModeClause
+	(*RecordKeyClause)(nil),                              // 103: pb.RecordKeyClause
+	(*AlternateRecordKeyClause)(nil),                     // 104: pb.AlternateRecordKeyClause
+	(*PasswordClause)(nil),                               // 105: pb.PasswordClause
+	(*FileStatusClause)(nil),                             // 106: pb.FileStatusClause
+	(*RelativeKeyClause)(nil),                            // 107: pb.RelativeKeyClause
+	(*IoControlParagraph)(nil),                           // 108: pb.IoControlParagraph
+	(*RerunClause)(nil),                                  // 109: pb.RerunClause
+	(*RerunEveryRecords)(nil),                            // 110: pb.RerunEveryRecords
+	(*RerunEveryOf)(nil),                                 // 111: pb.RerunEveryOf
+	(*RerunEveryClock)(nil),                              // 112: pb.RerunEveryClock
+	(*SameClause)(nil),                                   // 113: pb.SameClause
+	(*MultipleFileClause)(nil),                           // 114: pb.MultipleFileClause
+	(*MultipleFilePosition)(nil),                         // 115: pb.MultipleFilePosition
+	(*CommitmentControlClause)(nil),                      // 116: pb.CommitmentControlClause
+	(*DataDivision)(nil),                                 // 117: pb.DataDivision
+	(*FileSection)(nil),                                  // 118: pb.FileSection
+	(*FileDescriptionEntry)(nil),                         // 119: pb.FileDescriptionEntry
+	(*ModeStatement)(nil),                                // 120: pb.ModeStatement
+	(*RecordingModeClause)(nil),                          // 121: pb.RecordingModeClause
+	(*ExternalClause)(nil),                               // 122: pb.ExternalClause
+	(*GlobalClause)(nil),                                 // 123: pb.GlobalClause
+	(*BlockContainsClause)(nil),                          // 124: pb.BlockContainsClause
+	(*RecordContainsClause)(nil),                         // 125: pb.RecordContainsClause
+	(*LabelRecordsClause)(nil),                           // 126: pb.LabelRecordsClause
+	(*ValueOfClause)(nil),                                // 127: pb.ValueOfClause
+	(*ValuePair)(nil),                                    // 128: pb.ValuePair
+	(*DataRecordsClause)(nil),                            // 129: pb.DataRecordsClause
+	(*DataNameOrIntegerLiteral)(nil),                     // 130: pb.DataNameOrIntegerLiteral
+	(*LinageClause)(nil),                                 // 131: pb.LinageClause
+	(*CodeSetClause)(nil),                                // 132: pb.CodeSetClause
+	(*ReportClause)(nil),                                 // 133: pb.ReportClause
+	(*WorkingStorageSection)(nil),                        // 134: pb.WorkingStorageSection
+	(*DataDescriptionEntry)(nil),                         // 135: pb.DataDescriptionEntry
+	(*DataRenamesClause)(nil),                            // 136: pb.DataRenamesClause
+	(*DataRedefinesClause)(nil),                          // 137: pb.DataRedefinesClause
+	(*DataIntegerStringClause)(nil),                      // 138: pb.DataIntegerStringClause
+	(*DataExternalClause)(nil),                           // 139: pb.DataExternalClause
+	(*DataGlobalClause)(nil),                             // 140: pb.DataGlobalClause
+	(*DataTypeDefClause)(nil),                            // 141: pb.DataTypeDefClause
+	(*DataThreadLocalClause)(nil),                        // 142: pb.DataThreadLocalClause
+	(*DataPictureClause)(nil),                            // 143: pb.DataPictureClause
+	(*PictureString)(nil),                                // 144: pb.PictureString
+	(*PictureChars)(nil),                                 // 145: pb.PictureChars
+	(*PictureCardinality)(nil),                           // 146: pb.PictureCardinality
+	(*DataCommonOwnLocalClause)(nil),                     // 147: pb.DataCommonOwnLocalClause
+	(*DataTypeClause)(nil),                               // 148: pb.DataTypeClause
+	(*DataUsingClause)(nil),                              // 149: pb.DataUsingClause
+	(*DataUsageClause)(nil),                              // 150: pb.DataUsageClause
+	(*DataValueInterval)(nil),                            // 151: pb.DataValueInterval
+	(*DataValueClause)(nil),                              // 152: pb.DataValueClause
+	(*DataReceivedByClause)(nil),                         // 153: pb.DataReceivedByClause
+	(*DataOccursClause)(nil),                             // 154: pb.DataOccursClause
+	(*DataSignClause)(nil),                               // 155: pb.DataSignClause
+	(*DataSynchronizedClause)(nil),                       // 156: pb.DataSynchronizedClause
+	(*DataJustifiedClause)(nil),                          // 157: pb.DataJustifiedClause
+	(*DataBlankWhenZeroClause)(nil),                      // 158: pb.DataBlankWhenZeroClause
+	(*DataWithLowerBoundsClause)(nil),                    // 159: pb.DataWithLowerBoundsClause
+	(*DataAlignedClause)(nil),                            // 160: pb.DataAlignedClause
+	(*DataRecordAreaClause)(nil),                         // 161: pb.DataRecordAreaClause
+	(*ScreenSection)(nil),                                // 162: pb.ScreenSection
+	(*ScreenDescriptionEntry)(nil),                       // 163: pb.ScreenDescriptionEntry
+	(*ZeroFillClause)(nil),                               // 164: pb.ZeroFillClause
+	(*FullClause)(nil),                                   // 165: pb.FullClause
+	(*PromptClause)(nil),                                 // 166: pb.PromptClause
+	(*RequiredClause)(nil),                               // 167: pb.RequiredClause
+	(*SecureClause)(nil),                                 // 168: pb.SecureClause
+	(*AutoClause)(nil),                                   // 169: pb.AutoClause
+	(*UsingClause)(nil),                                  // 170: pb.UsingClause
+	(*FromClause)(nil),                                   // 171: pb.FromClause
+	(*BlankClause)(nil),                                  // 172: pb.BlankClause
+	(*BellClause)(nil),                                   // 173: pb.BellClause
+	(*BlinkClause)(nil),                                  // 174: pb.BlinkClause
+	(*EraseClause)(nil),                                  // 175: pb.EraseClause
+	(*LightClause)(nil),                                  // 176: pb.LightClause
+	(*GridClause)(nil),                                   // 177: pb.GridClause
+	(*ReverseVideoClause)(nil),                           // 178: pb.ReverseVideoClause
+	(*UnderlineClause)(nil),                              // 179: pb.UnderlineClause
+	(*SizeClause)(nil),                                   // 180: pb.SizeClause
+	(*LineClause)(nil),                                   // 181: pb.LineClause
+	(*ColumnClause)(nil),                                 // 182: pb.ColumnClause
+	(*ForegroundColorClause)(nil),                        // 183: pb.ForegroundColorClause
+	(*BackgroundColorClause)(nil),                        // 184: pb.BackgroundColorClause
+	(*ControlClause)(nil),                                // 185: pb.ControlClause
+	(*ReportSection)(nil),                                // 186: pb.ReportSection
+	(*ReportDescription)(nil),                            // 187: pb.ReportDescription
+	(*ReportDescriptionEntry)(nil),                       // 188: pb.ReportDescriptionEntry
+	(*PageLimitClause)(nil),                              // 189: pb.PageLimitClause
+	(*HeadingClause)(nil),                                // 190: pb.HeadingClause
+	(*FirstDetailClause)(nil),                            // 191: pb.FirstDetailClause
+	(*LastDetailClause)(nil),                             // 192: pb.LastDetailClause
+	(*FootingClause)(nil),                                // 193: pb.FootingClause
+	(*ReportGroupDescriptionEntry)(nil),                  // 194: pb.ReportGroupDescriptionEntry
+	(*ResetClause)(nil),                                  // 195: pb.ResetClause
+	(*SumClause)(nil),                                    // 196: pb.SumClause
+	(*ValueClause)(nil),                                  // 197: pb.ValueClause
+	(*SourceClause)(nil),                                 // 198: pb.SourceClause
+	(*IndicateClause)(nil),                               // 199: pb.IndicateClause
+	(*ColumnNumberClause)(nil),                           // 200: pb.ColumnNumberClause
+	(*BlankWhenZeroClause)(nil),                          // 201: pb.BlankWhenZeroClause
+	(*JustifiedClause)(nil),                              // 202: pb.JustifiedClause
+	(*SignClause)(nil),                                   // 203: pb.SignClause
+	(*PictureClause)(nil),                                // 204: pb.PictureClause
+	(*LineNumberClause)(nil),                             // 205: pb.LineNumberClause
+	(*NextGroupClause)(nil),                              // 206: pb.NextGroupClause
+	(*TypeClause)(nil),                                   // 207: pb.TypeClause
+	(*UsageClause)(nil),                                  // 208: pb.UsageClause
+	(*ProgramLibrarySection)(nil),                        // 209: pb.ProgramLibrarySection
+	(*LibraryDescriptionEntry)(nil),                      // 210: pb.LibraryDescriptionEntry
+	(*IsCommonClause)(nil),                               // 211: pb.IsCommonClause
+	(*AttributeClause1)(nil),                             // 212: pb.AttributeClause1
+	(*AttributeClause2)(nil),                             // 213: pb.AttributeClause2
+	(*ProcedureClause1)(nil),                             // 214: pb.ProcedureClause1
+	(*ProcedureClause2)(nil),                             // 215: pb.ProcedureClause2
+	(*LocalStorageSection)(nil),                          // 216: pb.LocalStorageSection
+	(*LinkageSection)(nil),                               // 217: pb.LinkageSection
+	(*CommunicationSection)(nil),                         // 218: pb.CommunicationSection
+	(*CommunicationDescriptionEntry)(nil),                // 219: pb.CommunicationDescriptionEntry
+	(*SymbolicTerminalClause)(nil),                       // 220: pb.SymbolicTerminalClause
+	(*SymbolicDestinationClause)(nil),                    // 221: pb.SymbolicDestinationClause
+	(*ErrorKeyClause)(nil),                               // 222: pb.ErrorKeyClause
+	(*DestinationTableClause)(nil),                       // 223: pb.DestinationTableClause
+	(*DestinationCountClause)(nil),                       // 224: pb.DestinationCountClause
+	(*SymbolicQueueClause)(nil),                          // 225: pb.SymbolicQueueClause
+	(*SymbolicSubQueueClause)(nil),                       // 226: pb.SymbolicSubQueueClause
+	(*MessageDateClause)(nil),                            // 227: pb.MessageDateClause
+	(*MessageTimeClause)(nil),                            // 228: pb.MessageTimeClause
+	(*SymbolicSourceClause)(nil),                         // 229: pb.SymbolicSourceClause
+	(*TextLengthClause)(nil),                             // 230: pb.TextLengthClause
+	(*EndKeyClause)(nil),                                 // 231: pb.EndKeyClause
+	(*StatusKeyClause)(nil),                              // 232: pb.StatusKeyClause
+	(*MessageCountClause)(nil),                           // 233: pb.MessageCountClause
+	(*DataBaseSection)(nil),                              // 234: pb.DataBaseSection
+	(*DataBaseSectionEntry)(nil),                         // 235: pb.DataBaseSectionEntry
+	(*ProcedureDivision)(nil),                            // 236: pb.ProcedureDivision
+	(*ProcedureSection)(nil),                             // 237: pb.ProcedureSection
+	(*Declarative)(nil),                                  // 238: pb.Declarative
+	(*ProcedureSectionHeader)(nil),                       // 239: pb.ProcedureSectionHeader
+	(*Paragraphs)(nil),                                   // 240: pb.Paragraphs
+	(*Paragraph)(nil),                                    // 241: pb.Paragraph
+	(*Sentences)(nil),                                    // 242: pb.Sentences
+	(*Sentence)(nil),                                     // 243: pb.Sentence
+	(*Statement)(nil),                                    // 244: pb.Statement
+	(*WriteStatement)(nil),                               // 245: pb.WriteStatement
+	(*UnstringStatement)(nil),                            // 246: pb.UnstringStatement
+	(*TerminateStatement)(nil),                           // 247: pb.TerminateStatement
+	(*SubtractStatement)(nil),                            // 248: pb.SubtractStatement
+	(*StringStatement)(nil),                              // 249: pb.StringStatement
+	(*StopStatement)(nil),                                // 250: pb.StopStatement
+	(*StartStatement)(nil),                               // 251: pb.StartStatement
+	(*SortStatement)(nil),                                // 252: pb.SortStatement
+	(*SetStatement)(nil),                                 // 253: pb.SetStatement
+	(*SendStatement)(nil),                                // 254: pb.SendStatement
+	(*SearchStatement)(nil),                              // 255: pb.SearchStatement
+	(*RewriteStatement)(nil),                             // 256: pb.RewriteStatement
+	(*ReturnStatement)(nil),                              // 257: pb.ReturnStatement
+	(*ReleaseStatement)(nil),                             // 258: pb.ReleaseStatement
+	(*ReceiveStatement)(nil),                             // 259: pb.ReceiveStatement
+	(*ReadStatement)(nil),                                // 260: pb.ReadStatement
+	(*PurgeStatement)(nil),                               // 261: pb.PurgeStatement
+	(*PerformStatement)(nil),                             // 262: pb.PerformStatement
+	(*OpenStatement)(nil),                                // 263: pb.OpenStatement
+	(*NextSentenceStatement)(nil),                        // 264: pb.NextSentenceStatement
+	(*MultiplyStatement)(nil),                            // 265: pb.MultiplyStatement
+	(*MoveStatement)(nil),                                // 266: pb.MoveStatement
+	(*MoveToStatement)(nil),                              // 267: pb.MoveToStatement
+	(*MoveCorrespondingToStatement)(nil),                 // 268: pb.MoveCorrespondingToStatement
+	(*MergeStatement)(nil),                               // 269: pb.MergeStatement
+	(*InspectStatement)(nil),                             // 270: pb.InspectStatement
+	(*InitiateStatement)(nil),                            // 271: pb.InitiateStatement
+	(*InitializeStatement)(nil),                          // 272: pb.InitializeStatement
+	(*IfStatement)(nil),                                  // 273: pb.IfStatement
+	(*GoToStatement)(nil),                                // 274: pb.GoToStatement
+	(*GobackStatement)(nil),                              // 275: pb.GobackStatement
+	(*GenerateStatement)(nil),                            // 276: pb.GenerateStatement
+	(*ExitStatement)(nil),                                // 277: pb.ExitStatement
+	(*ExecSqlImsStatement)(nil),                          // 278: pb.ExecSqlImsStatement
+	(*ExecSqlStatement)(nil),                             // 279: pb.ExecSqlStatement
+	(*ExecCicsStatement)(nil),                            // 280: pb.ExecCicsStatement
+	(*ExhibitStatement)(nil),                             // 281: pb.ExhibitStatement
+	(*EvaluateStatement)(nil),                            // 282: pb.EvaluateStatement
+	(*EntryStatement)(nil),                               // 283: pb.EntryStatement
+	(*EnableStatement)(nil),                              // 284: pb.EnableStatement
+	(*DivideStatement)(nil),                              // 285: pb.DivideStatement
+	(*DisplayOperand)(nil),                               // 286: pb.DisplayOperand
+	(*DisplayAt)(nil),                                    // 287: pb.DisplayAt
+	(*DisplayUpon)(nil),                                  // 288: pb.DisplayUpon
+	(*DisplayWith)(nil),                                  // 289: pb.DisplayWith
+	(*DisplayStatement)(nil),                             // 290: pb.DisplayStatement
+	(*DisableStatement)(nil),                             // 291: pb.DisableStatement
+	(*DeleteStatement)(nil),                              // 292: pb.DeleteStatement
+	(*ContinueStatement)(nil),                            // 293: pb.ContinueStatement
+	(*ComputeStore)(nil),                                 // 294: pb.ComputeStore
+	(*ComputeStatement)(nil),                             // 295: pb.ComputeStatement
+	(*CloseReelUnitStatement)(nil),                       // 296: pb.CloseReelUnitStatement
+	(*CloseRelativeStatement)(nil),                       // 297: pb.CloseRelativeStatement
+	(*ClosePortFileIOUsing)(nil),                         // 298: pb.ClosePortFileIOUsing
+	(*ClosePortFileIOStatement)(nil),                     // 299: pb.ClosePortFileIOStatement
+	(*CloseFile)(nil),                                    // 300: pb.CloseFile
+	(*CloseStatement)(nil),                               // 301: pb.CloseStatement
+	(*CancelCall)(nil),                                   // 302: pb.CancelCall
+	(*CancelStatement)(nil),                              // 303: pb.CancelStatement
+	(*CallStatement)(nil),                                // 304: pb.CallStatement
+	(*AlterStatement)(nil),                               // 305: pb.AlterStatement
+	(*AddStatement)(nil),                                 // 306: pb.AddStatement
+	(*AcceptStatement)(nil),                              // 307: pb.AcceptStatement
+	(*AtEndOfPagePhrase)(nil),                            // 308: pb.AtEndOfPagePhrase
+	(*NotAtEndOfPagePhrase)(nil),                         // 309: pb.NotAtEndOfPagePhrase
+	(*OnSizeErrorPhrase)(nil),                            // 310: pb.OnSizeErrorPhrase
+	(*NotOnSizeErrorPhrase)(nil),                         // 311: pb.NotOnSizeErrorPhrase
+	(*OnOverflowPhrase)(nil),                             // 312: pb.OnOverflowPhrase
+	(*NotOnOverflowPhrase)(nil),                          // 313: pb.NotOnOverflowPhrase
+	(*InvalidKeyPhrase)(nil),                             // 314: pb.InvalidKeyPhrase
+	(*NotInvalidKeyPhrase)(nil),                          // 315: pb.NotInvalidKeyPhrase
+	(*AtEndPhrase)(nil),                                  // 316: pb.AtEndPhrase
+	(*NotAtEndPhrase)(nil),                               // 317: pb.NotAtEndPhrase
+	(*OnExceptionClause)(nil),                            // 318: pb.OnExceptionClause
+	(*NotOnExceptionClause)(nil),                         // 319: pb.NotOnExceptionClause
+	(*UseStatement)(nil),                                 // 320: pb.UseStatement
+	(*UseDebugOn)(nil),                                   // 321: pb.UseDebugOn
+	(*UseDebugClause)(nil),                               // 322: pb.UseDebugClause
+	(*UseAfterClause)(nil),                               // 323: pb.UseAfterClause
+	(*ArithmeticExpression)(nil),                         // 324: pb.ArithmeticExpression
+	(*PlusMinus)(nil),                                    // 325: pb.PlusMinus
+	(*MultDivs)(nil),                                     // 326: pb.MultDivs
+	(*MultDiv)(nil),                                      // 327: pb.MultDiv
+	(*Powers)(nil),                                       // 328: pb.Powers
+	(*Power)(nil),                                        // 329: pb.Power
+	(*Basis)(nil),                                        // 330: pb.Basis
+	(*Condition)(nil),                                    // 331: pb.Condition
+	(*AndOrCondition)(nil),                               // 332: pb.AndOrCondition
+	(*CombinableCondition)(nil),                          // 333: pb.CombinableCondition
+	(*SimpleCondition)(nil),                              // 334: pb.SimpleCondition
+	(*ClassCondition)(nil),                               // 335: pb.ClassCondition
+	(*ConditionNameReference)(nil),                       // 336: pb.ConditionNameReference
+	(*RelationCondition)(nil),                            // 337: pb.RelationCondition
+	(*RelationSignCondition)(nil),                        // 338: pb.RelationSignCondition
+	(*RelationArithmeticComparison)(nil),                 // 339: pb.RelationArithmeticComparison
+	(*RelationCombinedComparison)(nil),                   // 340: pb.RelationCombinedComparison
+	(*RelationCombinedCondition)(nil),                    // 341: pb.RelationCombinedCondition
+	(*Abbreviation)(nil),                                 // 342: pb.Abbreviation
+	(*Identifier)(nil),                                   // 343: pb.Identifier
+	(*TableCall)(nil),                                    // 344: pb.TableCall
+	(*FunctionCall)(nil),                                 // 345: pb.FunctionCall
+	(*ReferenceModifier)(nil),                            // 346: pb.ReferenceModifier
+	(*CharacterPosition)(nil),                            // 347: pb.CharacterPosition
+	(*Length)(nil),                                       // 348: pb.Length
+	(*Subscript)(nil),                                    // 349: pb.Subscript
+	(*Argument)(nil),                                     // 350: pb.Argument
+	(*QualifiedDataNameIntegerLiteral)(nil),              // 351: pb.QualifiedDataNameIntegerLiteral
+	(*IndexNameIntegerLiteral)(nil),                      // 352: pb.IndexNameIntegerLiteral
+	(*QualifiedDataName)(nil),                            // 353: pb.QualifiedDataName
+	(*QualifiedDataNameFormat1)(nil),                     // 354: pb.QualifiedDataNameFormat1
+	(*QualifiedDataNameFormat2)(nil),                     // 355: pb.QualifiedDataNameFormat2
+	(*QualifiedDataNameFormat3)(nil),                     // 356: pb.QualifiedDataNameFormat3
+	(*QualifiedDataNameFormat4)(nil),                     // 357: pb.QualifiedDataNameFormat4
+	(*InData)(nil),                                       // 358: pb.InData
+	(*InFile)(nil),                                       // 359: pb.InFile
+	(*InMnemonic)(nil),                                   // 360: pb.InMnemonic
+	(*InSection)(nil),                                    // 361: pb.InSection
+	(*InLibrary)(nil),                                    // 362: pb.InLibrary
+	(*InTable)(nil),                                      // 363: pb.InTable
+	(*AlphabetName)(nil),                                 // 364: pb.AlphabetName
+	(*AssignmentName)(nil),                               // 365: pb.AssignmentName
+	(*BasisName)(nil),                                    // 366: pb.BasisName
+	(*CdName)(nil),                                       // 367: pb.CdName
+	(*ClassName)(nil),                                    // 368: pb.ClassName
+	(*ComputerName)(nil),                                 // 369: pb.ComputerName
+	(*ConditionName)(nil),                                // 370: pb.ConditionName
+	(*DataName)(nil),                                     // 371: pb.DataName
+	(*DataDescName)(nil),                                 // 372: pb.DataDescName
+	(*EnvironmentName)(nil),                              // 373: pb.EnvironmentName
+	(*FileName)(nil),                                     // 374: pb.FileName
+	(*FunctionName)(nil),                                 // 375: pb.FunctionName
+	(*IndexName)(nil),                                    // 376: pb.IndexName
+	(*LanguageName)(nil),                                 // 377: pb.LanguageName
+	(*LibraryName)(nil),                                  // 378: pb.LibraryName
+	(*LocalName)(nil),                                    // 379: pb.LocalName
+	(*MnemonicName)(nil),                                 // 380: pb.MnemonicName
+	(*ParagraphName)(nil),                                // 381: pb.ParagraphName
+	(*ProcedureName)(nil),                                // 382: pb.ProcedureName
+	(*ProgramName)(nil),                                  // 383: pb.ProgramName
+	(*RecordName)(nil),                                   // 384: pb.RecordName
+	(*ReportName)(nil),                                   // 385: pb.ReportName
+	(*RoutingName)(nil),                                  // 386: pb.RoutingName
+	(*RoutineName)(nil),                                  // 387: pb.RoutineName
+	(*ScreenName)(nil),                                   // 388: pb.ScreenName
+	(*SectionName)(nil),                                  // 389: pb.SectionName
+	(*SystemName)(nil),                                   // 390: pb.SystemName
+	(*SymbolicCharacter)(nil),                            // 391: pb.SymbolicCharacter
+	(*TextName)(nil),                                     // 392: pb.TextName
+	(*CobolWord)(nil),                                    // 393: pb.CobolWord
+	(*Literal)(nil),                                      // 394: pb.Literal
+	(*BooleanLiteral)(nil),                               // 395: pb.BooleanLiteral
+	(*NumericLiteral)(nil),                               // 396: pb.NumericLiteral
+	(*IntegerLiteral)(nil),                               // 397: pb.IntegerLiteral
+	(*FigurativeConstant)(nil),                           // 398: pb.FigurativeConstant
+	(*SpecialRegister)(nil),                              // 399: pb.SpecialRegister
+	(*Call)(nil),                                         // 400: pb.Call
+	(*NonNumericLiteral)(nil),                            // 401: pb.NonNumericLiteral
+	(*StringLiteral)(nil),                                // 402: pb.StringLiteral
+	(*DbcsLiteral)(nil),                                  // 403: pb.DbcsLiteral
+	(*HexNumber)(nil),                                    // 404: pb.HexNumber
+	(*NullTerminated)(nil),                               // 405: pb.NullTerminated
+	(*AlphabetClause_Also)(nil),                          // 406: pb.AlphabetClause.Also
+	(*AlphabetClause_AlphabetLiteral)(nil),               // 407: pb.AlphabetClause.AlphabetLiteral
+	(*AlphabetClause_AlphabetLiterals)(nil),              // 408: pb.AlphabetClause.AlphabetLiterals
+	(*AlphabetClause_Alphanumeric)(nil),                  // 409: pb.AlphabetClause.Alphanumeric
+	(*AlphabetClause_National)(nil),                      // 410: pb.AlphabetClause.National
+	(*EnvironmentSwitchNameClause_StatusPhrase)(nil),     // 411: pb.EnvironmentSwitchNameClause.StatusPhrase
+	(*LabelRecordsClause_DataNames)(nil),                 // 412: pb.LabelRecordsClause.DataNames
+	(*DataDescriptionEntry_Format1)(nil),                 // 413: pb.DataDescriptionEntry.Format1
+	(*DataDescriptionEntry_Format2)(nil),                 // 414: pb.DataDescriptionEntry.Format2
+	(*DataDescriptionEntry_Format3)(nil),                 // 415: pb.DataDescriptionEntry.Format3
+	(*DataDescriptionEntry_ExecSql)(nil),                 // 416: pb.DataDescriptionEntry.ExecSql
+	(*DataTypeClause_Lob)(nil),                           // 417: pb.DataTypeClause.Lob
+	(*DataOccursClause_Sort)(nil),                        // 418: pb.DataOccursClause.Sort
+	(*DataOccursClause_Indexed)(nil),                     // 419: pb.DataOccursClause.Indexed
+	(*ReportGroupDescriptionEntry_Vertical)(nil),         // 420: pb.ReportGroupDescriptionEntry.Vertical
+	(*ReportGroupDescriptionEntry_Single)(nil),           // 421: pb.ReportGroupDescriptionEntry.Single
+	(*ReportGroupDescriptionEntry_Printable)(nil),        // 422: pb.ReportGroupDescriptionEntry.Printable
+	(*TypeClause_ReportHeading)(nil),                     // 423: pb.TypeClause.ReportHeading
+	(*TypeClause_PageHeading)(nil),                       // 424: pb.TypeClause.PageHeading
+	(*TypeClause_ControlHeading)(nil),                    // 425: pb.TypeClause.ControlHeading
+	(*TypeClause_Detail)(nil),                            // 426: pb.TypeClause.Detail
+	(*TypeClause_ControlFooting)(nil),                    // 427: pb.TypeClause.ControlFooting
+	(*TypeClause_PageFooting)(nil),                       // 428: pb.TypeClause.PageFooting
+	(*TypeClause_ReportFooting)(nil),                     // 429: pb.TypeClause.ReportFooting
+	(*LibraryDescriptionEntry_Import)(nil),               // 430: pb.LibraryDescriptionEntry.Import
+	(*LibraryDescriptionEntry_Export)(nil),               // 431: pb.LibraryDescriptionEntry.Export
+	(*ProcedureClause2_WithName)(nil),                    // 432: pb.ProcedureClause2.WithName
+	(*ProcedureClause2_UsingName)(nil),                   // 433: pb.ProcedureClause2.UsingName
+	(*CommunicationDescriptionEntry_Input)(nil),          // 434: pb.CommunicationDescriptionEntry.Input
+	(*CommunicationDescriptionEntry_Output)(nil),         // 435: pb.CommunicationDescriptionEntry.Output
+	(*CommunicationDescriptionEntry_Io)(nil),             // 436: pb.CommunicationDescriptionEntry.Io
+	(*ProcedureDivision_ByReference)(nil),                // 437: pb.ProcedureDivision.ByReference
+	(*ProcedureDivision_ByReferencePhrase)(nil),          // 438: pb.ProcedureDivision.ByReferencePhrase
+	(*ProcedureDivision_ByValue)(nil),                    // 439: pb.ProcedureDivision.ByValue
+	(*ProcedureDivision_ByValuePhrase)(nil),              // 440: pb.ProcedureDivision.ByValuePhrase
+	(*ProcedureDivision_UsingParameter)(nil),             // 441: pb.ProcedureDivision.UsingParameter
+	(*ProcedureDivision_GivingClause)(nil),               // 442: pb.ProcedureDivision.GivingClause
+	(*ProcedureDivision_UsingClause)(nil),                // 443: pb.ProcedureDivision.UsingClause
+	(*WriteStatement_FromPhrase)(nil),                    // 444: pb.WriteStatement.FromPhrase
+	(*WriteStatement_AdvancingPage)(nil),                 // 445: pb.WriteStatement.AdvancingPage
+	(*WriteStatement_AdvancingLines)(nil),                // 446: pb.WriteStatement.AdvancingLines
+	(*WriteStatement_AdvancingMnemonic)(nil),             // 447: pb.WriteStatement.AdvancingMnemonic
+	(*WriteStatement_AdvancingPhrase)(nil),               // 448: pb.WriteStatement.AdvancingPhrase
+	(*UnstringStatement_DelimitedByPhrase)(nil),          // 449: pb.UnstringStatement.DelimitedByPhrase
+	(*UnstringStatement_OrAllPhrase)(nil),                // 450: pb.UnstringStatement.OrAllPhrase
+	(*UnstringStatement_DelimitedOr)(nil),                // 451: pb.UnstringStatement.DelimitedOr
+	(*UnstringStatement_Into)(nil),                       // 452: pb.UnstringStatement.Into
+	(*UnstringStatement_DelimiterIn)(nil),                // 453: pb.UnstringStatement.DelimiterIn
+	(*UnstringStatement_CountIn)(nil),                    // 454: pb.UnstringStatement.CountIn
+	(*UnstringStatement_SendingPhrase)(nil),              // 455: pb.UnstringStatement.SendingPhrase
+	(*UnstringStatement_IntoPhrase)(nil),                 // 456: pb.UnstringStatement.IntoPhrase
+	(*UnstringStatement_WithPointerPhrase)(nil),          // 457: pb.UnstringStatement.WithPointerPhrase
+	(*UnstringStatement_TallyingPhrase)(nil),             // 458: pb.UnstringStatement.TallyingPhrase
+	(*SubtractStatement_Subtrahend)(nil),                 // 459: pb.SubtractStatement.Subtrahend
+	(*SubtractStatement_Minuend)(nil),                    // 460: pb.SubtractStatement.Minuend
+	(*SubtractStatement_MinuendGiving)(nil),              // 461: pb.SubtractStatement.MinuendGiving
+	(*SubtractStatement_Giving)(nil),                     // 462: pb.SubtractStatement.Giving
+	(*SubtractStatement_MinuendCorresponding)(nil),       // 463: pb.SubtractStatement.MinuendCorresponding
+	(*SubtractStatement_FromStatement)(nil),              // 464: pb.SubtractStatement.FromStatement
+	(*SubtractStatement_FromGivingStatement)(nil),        // 465: pb.SubtractStatement.FromGivingStatement
+	(*SubtractStatement_CorrespondingStatement)(nil),     // 466: pb.SubtractStatement.CorrespondingStatement
+	(*StringStatement_Sending)(nil),                      // 467: pb.StringStatement.Sending
+	(*StringStatement_DelimitedByPhrase)(nil),            // 468: pb.StringStatement.DelimitedByPhrase
+	(*StringStatement_ForPhrase)(nil),                    // 469: pb.StringStatement.ForPhrase
+	(*StringStatement_SendingPhrase)(nil),                // 470: pb.StringStatement.SendingPhrase
+	(*StringStatement_IntoPhrase)(nil),                   // 471: pb.StringStatement.IntoPhrase
+	(*StringStatement_WithPointerPhrase)(nil),            // 472: pb.StringStatement.WithPointerPhrase
+	(*StopStatement_Giving)(nil),                         // 473: pb.StopStatement.Giving
+	(*StartStatement_Key)(nil),                           // 474: pb.StartStatement.Key
+	(*SortStatement_OnKeyClause)(nil),                    // 475: pb.SortStatement.OnKeyClause
+	(*SortStatement_DuplicatesPhrase)(nil),               // 476: pb.SortStatement.DuplicatesPhrase
+	(*SortStatement_CollatingAlphanumeric)(nil),          // 477: pb.SortStatement.CollatingAlphanumeric
+	(*SortStatement_CollatingNational)(nil),              // 478: pb.SortStatement.CollatingNational
+	(*SortStatement_CollatingSequencePhrase)(nil),        // 479: pb.SortStatement.CollatingSequencePhrase
+	(*SortStatement_InputThrough)(nil),                   // 480: pb.SortStatement.InputThrough
+	(*SortStatement_InputProcedurePhrase)(nil),           // 481: pb.SortStatement.InputProcedurePhrase
+	(*SortStatement_Using)(nil),                          // 482: pb.SortStatement.Using
+	(*SortStatement_OutputThrough)(nil),                  // 483: pb.SortStatement.OutputThrough
+	(*SortStatement_OutputProcedurePhrase)(nil),          // 484: pb.SortStatement.OutputProcedurePhrase
+	(*SortStatement_Giving)(nil),                         // 485: pb.SortStatement.Giving
+	(*SortStatement_GivingPhrase)(nil),                   // 486: pb.SortStatement.GivingPhrase
+	(*SetStatement_To)(nil),                              // 487: pb.SetStatement.To
+	(*SetStatement_Entry)(nil),                           // 488: pb.SetStatement.Entry
+	(*SetStatement_ToValue)(nil),                         // 489: pb.SetStatement.ToValue
+	(*SetStatement_ByValue)(nil),                         // 490: pb.SetStatement.ByValue
+	(*SetStatement_ToStatement)(nil),                     // 491: pb.SetStatement.ToStatement
+	(*SetStatement_UpDownByStatement)(nil),               // 492: pb.SetStatement.UpDownByStatement
+	(*SendStatement_FromPhrase)(nil),                     // 493: pb.SendStatement.FromPhrase
+	(*SendStatement_WithPhrase)(nil),                     // 494: pb.SendStatement.WithPhrase
+	(*SendStatement_ReplacingPhrase)(nil),                // 495: pb.SendStatement.ReplacingPhrase
+	(*SendStatement_AdvancingPage)(nil),                  // 496: pb.SendStatement.AdvancingPage
+	(*SendStatement_AdvancingLines)(nil),                 // 497: pb.SendStatement.AdvancingLines
+	(*SendStatement_AdvancingMnemonic)(nil),              // 498: pb.SendStatement.AdvancingMnemonic
+	(*SendStatement_AdvancingPhrase)(nil),                // 499: pb.SendStatement.AdvancingPhrase
+	(*SendStatement_SyncStatement)(nil),                  // 500: pb.SendStatement.SyncStatement
+	(*SendStatement_AsyncStatement)(nil),                 // 501: pb.SendStatement.AsyncStatement
+	(*SearchStatement_Varying)(nil),                      // 502: pb.SearchStatement.Varying
+	(*SearchStatement_When)(nil),                         // 503: pb.SearchStatement.When
+	(*RewriteStatement_From)(nil),                        // 504: pb.RewriteStatement.From
+	(*ReturnStatement_Into)(nil),                         // 505: pb.ReturnStatement.Into
+	(*ReleaseStatement_From)(nil),                        // 506: pb.ReleaseStatement.From
+	(*ReceiveStatement_From)(nil),                        // 507: pb.ReceiveStatement.From
+	(*ReceiveStatement_With)(nil),                        // 508: pb.ReceiveStatement.With
+	(*ReceiveStatement_Thread)(nil),                      // 509: pb.ReceiveStatement.Thread
+	(*ReceiveStatement_Size)(nil),                        // 510: pb.ReceiveStatement.Size
+	(*ReceiveStatement_Status)(nil),                      // 511: pb.ReceiveStatement.Status
+	(*ReceiveStatement_Before)(nil),                      // 512: pb.ReceiveStatement.Before
+	(*ReceiveStatement_FromStatement)(nil),               // 513: pb.ReceiveStatement.FromStatement
+	(*ReceiveStatement_NoData)(nil),                      // 514: pb.ReceiveStatement.NoData
+	(*ReceiveStatement_WithData)(nil),                    // 515: pb.ReceiveStatement.WithData
+	(*ReceiveStatement_IntoStatement)(nil),               // 516: pb.ReceiveStatement.IntoStatement
+	(*ReadStatement_Into)(nil),                           // 517: pb.ReadStatement.Into
+	(*ReadStatement_With)(nil),                           // 518: pb.ReadStatement.With
+	(*ReadStatement_Key)(nil),                            // 519: pb.ReadStatement.Key
+	(*PerformStatement_TestClause)(nil),                  // 520: pb.PerformStatement.TestClause
+	(*PerformStatement_Times)(nil),                       // 521: pb.PerformStatement.Times
+	(*PerformStatement_Until)(nil),                       // 522: pb.PerformStatement.Until
+	(*PerformStatement_From)(nil),                        // 523: pb.PerformStatement.From
+	(*PerformStatement_By)(nil),                          // 524: pb.PerformStatement.By
+	(*PerformStatement_VaryingPhrase)(nil),               // 525: pb.PerformStatement.VaryingPhrase
+	(*PerformStatement_After)(nil),                       // 526: pb.PerformStatement.After
+	(*PerformStatement_VaryingClause)(nil),               // 527: pb.PerformStatement.VaryingClause
+	(*PerformStatement_Varying)(nil),                     // 528: pb.PerformStatement.Varying
+	(*PerformStatement_Type)(nil),                        // 529: pb.PerformStatement.Type
+	(*PerformStatement_InlineStatement)(nil),             // 530: pb.PerformStatement.InlineStatement
+	(*PerformStatement_ProcedureStatement)(nil),          // 531: pb.PerformStatement.ProcedureStatement
+	(*OpenStatement_Input)(nil),                          // 532: pb.OpenStatement.Input
+	(*OpenStatement_InputStatement)(nil),                 // 533: pb.OpenStatement.InputStatement
+	(*OpenStatement_Output)(nil),                         // 534: pb.OpenStatement.Output
+	(*OpenStatement_OutputStatement)(nil),                // 535: pb.OpenStatement.OutputStatement
+	(*OpenStatement_IOStatement)(nil),                    // 536: pb.OpenStatement.IOStatement
+	(*OpenStatement_ExtendStatement)(nil),                // 537: pb.OpenStatement.ExtendStatement
+	(*MultiplyStatement_GivingOperand)(nil),              // 538: pb.MultiplyStatement.GivingOperand
+	(*MultiplyStatement_GivingResult)(nil),               // 539: pb.MultiplyStatement.GivingResult
+	(*MultiplyStatement_Giving)(nil),                     // 540: pb.MultiplyStatement.Giving
+	(*MultiplyStatement_Regular)(nil),                    // 541: pb.MultiplyStatement.Regular
+	(*MergeStatement_OnKeyClause)(nil),                   // 542: pb.MergeStatement.OnKeyClause
+	(*MergeStatement_CollatingSequencePhrase)(nil),       // 543: pb.MergeStatement.CollatingSequencePhrase
+	(*MergeStatement_CollatingAlphanumeric)(nil),         // 544: pb.MergeStatement.CollatingAlphanumeric
+	(*MergeStatement_CollatingNational)(nil),             // 545: pb.MergeStatement.CollatingNational
+	(*MergeStatement_Using)(nil),                         // 546: pb.MergeStatement.Using
+	(*MergeStatement_OutputProcedurePhrase)(nil),         // 547: pb.MergeStatement.OutputProcedurePhrase
+	(*MergeStatement_OutputThrough)(nil),                 // 548: pb.MergeStatement.OutputThrough
+	(*MergeStatement_GivingPhrase)(nil),                  // 549: pb.MergeStatement.GivingPhrase
+	(*MergeStatement_Giving)(nil),                        // 550: pb.MergeStatement.Giving
+	(*InspectStatement_By)(nil),                          // 551: pb.InspectStatement.By
+	(*InspectStatement_To)(nil),                          // 552: pb.InspectStatement.To
+	(*InspectStatement_BeforeAfter)(nil),                 // 553: pb.InspectStatement.BeforeAfter
+	(*InspectStatement_ReplacingAllLeading)(nil),         // 554: pb.InspectStatement.ReplacingAllLeading
+	(*InspectStatement_ReplacingAllLeadings)(nil),        // 555: pb.InspectStatement.ReplacingAllLeadings
+	(*InspectStatement_AllLeading)(nil),                  // 556: pb.InspectStatement.AllLeading
+	(*InspectStatement_AllLeadings)(nil),                 // 557: pb.InspectStatement.AllLeadings
+	(*InspectStatement_ReplacingCharacters)(nil),         // 558: pb.InspectStatement.ReplacingCharacters
+	(*InspectStatement_Characters)(nil),                  // 559: pb.InspectStatement.Characters
+	(*InspectStatement_CharactersLeadings)(nil),          // 560: pb.InspectStatement.CharactersLeadings
+	(*InspectStatement_For)(nil),                         // 561: pb.InspectStatement.For
+	(*InspectStatement_ConvertingPhrase)(nil),            // 562: pb.InspectStatement.ConvertingPhrase
+	(*InspectStatement_ReplacingCharactersLeadings)(nil), // 563: pb.InspectStatement.ReplacingCharactersLeadings
+	(*InspectStatement_ReplacingPhrase)(nil),             // 564: pb.InspectStatement.ReplacingPhrase
+	(*InspectStatement_TallyingReplacingPhrase)(nil),     // 565: pb.InspectStatement.TallyingReplacingPhrase
+	(*InspectStatement_TallyingPhrase)(nil),              // 566: pb.InspectStatement.TallyingPhrase
+	(*InitializeStatement_ReplacingBy)(nil),              // 567: pb.InitializeStatement.ReplacingBy
+	(*InitializeStatement_ReplacingPhrase)(nil),          // 568: pb.InitializeStatement.ReplacingPhrase
+	(*IfStatement_Then)(nil),                             // 569: pb.IfStatement.Then
+	(*IfStatement_Else)(nil),                             // 570: pb.IfStatement.Else
+	(*GoToStatement_SimpleStatement)(nil),                // 571: pb.GoToStatement.SimpleStatement
+	(*GoToStatement_DependingOn)(nil),                    // 572: pb.GoToStatement.DependingOn
+	(*GoToStatement_DependingOnStatement)(nil),           // 573: pb.GoToStatement.DependingOnStatement
+	(*ExhibitStatement_Operand)(nil),                     // 574: pb.ExhibitStatement.Operand
+	(*EvaluateStatement_Select)(nil),                     // 575: pb.EvaluateStatement.Select
+	(*EvaluateStatement_AlsoSelect)(nil),                 // 576: pb.EvaluateStatement.AlsoSelect
+	(*EvaluateStatement_ValueThrough)(nil),               // 577: pb.EvaluateStatement.ValueThrough
+	(*EvaluateStatement_Through)(nil),                    // 578: pb.EvaluateStatement.Through
+	(*EvaluateStatement_Value)(nil),                      // 579: pb.EvaluateStatement.Value
+	(*EvaluateStatement_WhenCondition)(nil),              // 580: pb.EvaluateStatement.WhenCondition
+	(*EvaluateStatement_AlsoCondition)(nil),              // 581: pb.EvaluateStatement.AlsoCondition
+	(*EvaluateStatement_WhenOther)(nil),                  // 582: pb.EvaluateStatement.WhenOther
+	(*EvaluateStatement_When)(nil),                       // 583: pb.EvaluateStatement.When
+	(*EvaluateStatement_WhenPhrase)(nil),                 // 584: pb.EvaluateStatement.WhenPhrase
+	(*DivideStatement_Giving)(nil),                       // 585: pb.DivideStatement.Giving
+	(*DivideStatement_GivingPhrase)(nil),                 // 586: pb.DivideStatement.GivingPhrase
+	(*DivideStatement_Into)(nil),                         // 587: pb.DivideStatement.Into
+	(*DivideStatement_IntoStatement)(nil),                // 588: pb.DivideStatement.IntoStatement
+	(*DivideStatement_IntoGivingStatement)(nil),          // 589: pb.DivideStatement.IntoGivingStatement
+	(*DivideStatement_ByGivingStatement)(nil),            // 590: pb.DivideStatement.ByGivingStatement
+	(*DivideStatement_Remainder)(nil),                    // 591: pb.DivideStatement.Remainder
+	(*ClosePortFileIOUsing_CloseDisposition)(nil),        // 592: pb.ClosePortFileIOUsing.CloseDisposition
+	(*ClosePortFileIOUsing_AssociatedData)(nil),          // 593: pb.ClosePortFileIOUsing.AssociatedData
+	(*ClosePortFileIOUsing_AssociatedDataLength)(nil),    // 594: pb.ClosePortFileIOUsing.AssociatedDataLength
+	(*CallStatement_ByContent)(nil),                      // 595: pb.CallStatement.ByContent
+	(*CallStatement_ByValue)(nil),                        // 596: pb.CallStatement.ByValue
+	(*CallStatement_ByReference)(nil),                    // 597: pb.CallStatement.ByReference
+	(*CallStatement_ByReferencePhrase)(nil),              // 598: pb.CallStatement.ByReferencePhrase
+	(*CallStatement_ByValuePhrase)(nil),                  // 599: pb.CallStatement.ByValuePhrase
+	(*CallStatement_ByContentPhrase)(nil),                // 600: pb.CallStatement.ByContentPhrase
+	(*CallStatement_UsingParameter)(nil),                 // 601: pb.CallStatement.UsingParameter
+	(*CallStatement_UsingPhrase)(nil),                    // 602: pb.CallStatement.UsingPhrase
+	(*CallStatement_GivingPhrase)(nil),                   // 603: pb.CallStatement.GivingPhrase
+	(*AlterStatement_ProceedTo)(nil),                     // 604: pb.AlterStatement.ProceedTo
+	(*AddStatement_AddFrom)(nil),                         // 605: pb.AddStatement.AddFrom
+	(*AddStatement_AddToGiving)(nil),                     // 606: pb.AddStatement.AddToGiving
+	(*AddStatement_To)(nil),                              // 607: pb.AddStatement.To
+	(*AddStatement_ToGiving)(nil),                        // 608: pb.AddStatement.ToGiving
+	(*AddStatement_Corresponding)(nil),                   // 609: pb.AddStatement.Corresponding
+	(*AcceptStatement_FromDate)(nil),                     // 610: pb.AcceptStatement.FromDate
+	(*AcceptStatement_FromEscapeKey)(nil),                // 611: pb.AcceptStatement.FromEscapeKey
+	(*AcceptStatement_FromMnemonic)(nil),                 // 612: pb.AcceptStatement.FromMnemonic
+	(*AcceptStatement_MessageCount)(nil),                 // 613: pb.AcceptStatement.MessageCount
+	(*UseAfterClause_FileNames)(nil),                     // 614: pb.UseAfterClause.FileNames
+	(*ConditionNameReference_SubscriptReference)(nil),    // 615: pb.ConditionNameReference.SubscriptReference
+	(*ConditionNameReference_InSubscript)(nil),           // 616: pb.ConditionNameReference.InSubscript
 }
 var file_cobol_proto_depIdxs = []int32{
-	60,   // 0: pb.Program.compilation_units:type_name -> pb.CompilationUnit
-	61,   // 1: pb.CompilationUnit.program_units:type_name -> pb.ProgramUnit
-	62,   // 2: pb.ProgramUnit.identification_division:type_name -> pb.IdentificationDivision
-	70,   // 3: pb.ProgramUnit.environment_division:type_name -> pb.EnvironmentDivision
-	116,  // 4: pb.ProgramUnit.data_division:type_name -> pb.DataDivision
-	235,  // 5: pb.ProgramUnit.procedure_division:type_name -> pb.ProcedureDivision
-	61,   // 6: pb.ProgramUnit.program_units:type_name -> pb.ProgramUnit
-	382,  // 7: pb.ProgramUnit.end_program_name:type_name -> pb.ProgramName
-	63,   // 8: pb.IdentificationDivision.program_id_paragraph:type_name -> pb.ProgramIdParagraph
-	64,   // 9: pb.IdentificationDivision.author_paragraph:type_name -> pb.AuthorParagraph
-	65,   // 10: pb.IdentificationDivision.date_compiled_paragraph:type_name -> pb.DateCompiledParagraph
-	66,   // 11: pb.IdentificationDivision.date_written_paragraph:type_name -> pb.DateWrittenParagraph
-	67,   // 12: pb.IdentificationDivision.installation_paragraph:type_name -> pb.InstallationParagraph
-	68,   // 13: pb.IdentificationDivision.remarks_paragraph:type_name -> pb.RemarksParagraph
-	69,   // 14: pb.IdentificationDivision.security_paragraph:type_name -> pb.SecurityParagraph
-	382,  // 15: pb.ProgramIdParagraph.program_name:type_name -> pb.ProgramName
-	1,    // 16: pb.ProgramIdParagraph.attribute:type_name -> pb.ProgramIdParagraph.Attribute
-	71,   // 17: pb.EnvironmentDivision.configuration_section:type_name -> pb.ConfigurationSection
-	92,   // 18: pb.EnvironmentDivision.input_output_section:type_name -> pb.InputOutputSection
-	79,   // 19: pb.EnvironmentDivision.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
-	73,   // 20: pb.ConfigurationSection.object_computer_paragraph:type_name -> pb.ObjectComputerParagraph
-	72,   // 21: pb.ConfigurationSection.source_computer_paragraph:type_name -> pb.SourceComputerParagraph
-	79,   // 22: pb.ConfigurationSection.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
-	368,  // 23: pb.SourceComputerParagraph.computer_name:type_name -> pb.ComputerName
-	368,  // 24: pb.ObjectComputerParagraph.computer_name:type_name -> pb.ComputerName
-	74,   // 25: pb.ObjectComputerParagraph.memory_size_clause:type_name -> pb.MemorySizeClause
-	75,   // 26: pb.ObjectComputerParagraph.disk_size_clause:type_name -> pb.DiskSizeClause
-	76,   // 27: pb.ObjectComputerParagraph.collating_sequence_clause:type_name -> pb.CollatingSequenceClause
-	77,   // 28: pb.ObjectComputerParagraph.segment_limit_clause:type_name -> pb.SegmentLimitClause
-	78,   // 29: pb.ObjectComputerParagraph.character_set_clause:type_name -> pb.CharacterSetClause
-	2,    // 30: pb.MemorySizeClause.unit:type_name -> pb.MemorySizeClause.Unit
-	396,  // 31: pb.MemorySizeClause.integer_literal:type_name -> pb.IntegerLiteral
-	392,  // 32: pb.MemorySizeClause.cobol_word:type_name -> pb.CobolWord
-	3,    // 33: pb.DiskSizeClause.unit:type_name -> pb.DiskSizeClause.Unit
-	396,  // 34: pb.DiskSizeClause.integer_literal:type_name -> pb.IntegerLiteral
-	392,  // 35: pb.DiskSizeClause.cobol_word:type_name -> pb.CobolWord
-	363,  // 36: pb.CollatingSequenceClause.national:type_name -> pb.AlphabetName
-	363,  // 37: pb.CollatingSequenceClause.alphanumeric:type_name -> pb.AlphabetName
-	363,  // 38: pb.CollatingSequenceClause.alphabet_names:type_name -> pb.AlphabetName
-	396,  // 39: pb.SegmentLimitClause.segment_limit:type_name -> pb.IntegerLiteral
-	80,   // 40: pb.SpecialNamesParagraph.alphabet_clauses:type_name -> pb.AlphabetClause
-	81,   // 41: pb.SpecialNamesParagraph.channel_clause:type_name -> pb.ChannelClause
-	82,   // 42: pb.SpecialNamesParagraph.class_clause:type_name -> pb.ClassClause
-	84,   // 43: pb.SpecialNamesParagraph.currency_sign_clause:type_name -> pb.CurrencySignClause
-	85,   // 44: pb.SpecialNamesParagraph.decimal_point_clause:type_name -> pb.DecimalPointClause
-	86,   // 45: pb.SpecialNamesParagraph.default_display_sign_clause:type_name -> pb.DefaultDisplaySignClause
-	87,   // 46: pb.SpecialNamesParagraph.odt_clause:type_name -> pb.OdtClause
-	88,   // 47: pb.SpecialNamesParagraph.reserve_network_clause:type_name -> pb.ReserveNetworkClause
-	91,   // 48: pb.SpecialNamesParagraph.symbolic_characters_clause:type_name -> pb.SymbolicCharactersClause
-	89,   // 49: pb.SpecialNamesParagraph.default_computational_sign_clause:type_name -> pb.DefaultComputationalSignClause
-	90,   // 50: pb.SpecialNamesParagraph.environment_switch_name_clauses:type_name -> pb.EnvironmentSwitchNameClause
-	363,  // 51: pb.AlphabetClause.alphabet_name:type_name -> pb.AlphabetName
-	407,  // 52: pb.AlphabetClause.alphanumeric:type_name -> pb.AlphabetClause.Alphanumeric
-	408,  // 53: pb.AlphabetClause.national:type_name -> pb.AlphabetClause.National
-	396,  // 54: pb.ChannelClause.Channel:type_name -> pb.IntegerLiteral
-	379,  // 55: pb.ChannelClause.mnemonic_name:type_name -> pb.MnemonicName
-	367,  // 56: pb.ClassClause.class_name:type_name -> pb.ClassName
-	6,    // 57: pb.ClassClause.type:type_name -> pb.ClassClause.Type
-	83,   // 58: pb.ClassClause.class_throughs:type_name -> pb.ClassClauseThrough
-	342,  // 59: pb.ClassClauseThrough.identifier_from:type_name -> pb.Identifier
-	393,  // 60: pb.ClassClauseThrough.literal_from:type_name -> pb.Literal
-	342,  // 61: pb.ClassClauseThrough.identifier_to:type_name -> pb.Identifier
-	393,  // 62: pb.ClassClauseThrough.literal_to:type_name -> pb.Literal
-	393,  // 63: pb.CurrencySignClause.currency_literal:type_name -> pb.Literal
-	393,  // 64: pb.CurrencySignClause.picture_symbol_literal:type_name -> pb.Literal
-	7,    // 65: pb.DefaultDisplaySignClause.type:type_name -> pb.DefaultDisplaySignClause.Type
-	379,  // 66: pb.OdtClause.mnemonic_name:type_name -> pb.MnemonicName
-	8,    // 67: pb.DefaultComputationalSignClause.type:type_name -> pb.DefaultComputationalSignClause.Type
-	372,  // 68: pb.EnvironmentSwitchNameClause.environment_name:type_name -> pb.EnvironmentName
-	379,  // 69: pb.EnvironmentSwitchNameClause.mnemonic_name:type_name -> pb.MnemonicName
-	409,  // 70: pb.EnvironmentSwitchNameClause.status_phrases:type_name -> pb.EnvironmentSwitchNameClause.StatusPhrase
-	9,    // 71: pb.SymbolicCharactersClause.type:type_name -> pb.SymbolicCharactersClause.Type
-	93,   // 72: pb.InputOutputSection.file_control_paragraph:type_name -> pb.FileControlParagraph
-	107,  // 73: pb.InputOutputSection.io_control_paragraph:type_name -> pb.IoControlParagraph
-	94,   // 74: pb.FileControlParagraph.file_control_entries:type_name -> pb.FileControlEntry
-	373,  // 75: pb.FileControlEntry.file_name:type_name -> pb.FileName
-	95,   // 76: pb.FileControlEntry.select_clause:type_name -> pb.SelectClause
-	103,  // 77: pb.FileControlEntry.alternate_record_key_clause:type_name -> pb.AlternateRecordKeyClause
-	96,   // 78: pb.FileControlEntry.assign_clause:type_name -> pb.AssignClause
-	105,  // 79: pb.FileControlEntry.file_status_clause:type_name -> pb.FileStatusClause
-	98,   // 80: pb.FileControlEntry.organization_clause:type_name -> pb.OrganizationClause
-	99,   // 81: pb.FileControlEntry.padding_character_clause:type_name -> pb.PaddingCharacterClause
-	104,  // 82: pb.FileControlEntry.password_clause:type_name -> pb.PasswordClause
-	100,  // 83: pb.FileControlEntry.record_delimiter_clause:type_name -> pb.RecordDelimiterClause
-	102,  // 84: pb.FileControlEntry.record_key_clause:type_name -> pb.RecordKeyClause
-	106,  // 85: pb.FileControlEntry.relative_key_clause:type_name -> pb.RelativeKeyClause
-	97,   // 86: pb.FileControlEntry.reserve_clause:type_name -> pb.ReserveClause
-	101,  // 87: pb.FileControlEntry.access_mode_clause:type_name -> pb.AccessModeClause
-	373,  // 88: pb.SelectClause.file_name:type_name -> pb.FileName
-	10,   // 89: pb.AssignClause.type:type_name -> pb.AssignClause.Type
-	364,  // 90: pb.AssignClause.assignment_name:type_name -> pb.AssignmentName
-	393,  // 91: pb.AssignClause.literal:type_name -> pb.Literal
-	396,  // 92: pb.ReserveClause.value:type_name -> pb.IntegerLiteral
-	11,   // 93: pb.OrganizationClause.mode:type_name -> pb.OrganizationClause.Mode
-	12,   // 94: pb.OrganizationClause.type:type_name -> pb.OrganizationClause.Type
-	352,  // 95: pb.PaddingCharacterClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	393,  // 96: pb.PaddingCharacterClause.literal:type_name -> pb.Literal
-	13,   // 97: pb.RecordDelimiterClause.type:type_name -> pb.RecordDelimiterClause.Type
-	364,  // 98: pb.RecordDelimiterClause.assignment_name:type_name -> pb.AssignmentName
-	14,   // 99: pb.AccessModeClause.mode:type_name -> pb.AccessModeClause.Mode
-	104,  // 100: pb.RecordKeyClause.password_clause:type_name -> pb.PasswordClause
-	352,  // 101: pb.RecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	104,  // 102: pb.AlternateRecordKeyClause.password_clause:type_name -> pb.PasswordClause
-	352,  // 103: pb.AlternateRecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	370,  // 104: pb.PasswordClause.data_name:type_name -> pb.DataName
-	352,  // 105: pb.FileStatusClause.qualified_data_name_1:type_name -> pb.QualifiedDataName
-	352,  // 106: pb.FileStatusClause.qualified_data_name_2:type_name -> pb.QualifiedDataName
-	352,  // 107: pb.RelativeKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	373,  // 108: pb.IoControlParagraph.file_name:type_name -> pb.FileName
-	115,  // 109: pb.IoControlParagraph.commitment_control_clause:type_name -> pb.CommitmentControlClause
-	113,  // 110: pb.IoControlParagraph.multiple_file_clause:type_name -> pb.MultipleFileClause
-	108,  // 111: pb.IoControlParagraph.rerun_clause:type_name -> pb.RerunClause
-	112,  // 112: pb.IoControlParagraph.same_clauses:type_name -> pb.SameClause
-	364,  // 113: pb.RerunClause.assignment_name:type_name -> pb.AssignmentName
-	373,  // 114: pb.RerunClause.file_name:type_name -> pb.FileName
-	111,  // 115: pb.RerunClause.rerun_every_clock:type_name -> pb.RerunEveryClock
-	110,  // 116: pb.RerunClause.rerun_every_of:type_name -> pb.RerunEveryOf
-	109,  // 117: pb.RerunClause.rerun_every_records:type_name -> pb.RerunEveryRecords
-	396,  // 118: pb.RerunEveryRecords.records:type_name -> pb.IntegerLiteral
-	15,   // 119: pb.RerunEveryOf.type:type_name -> pb.RerunEveryOf.Type
-	373,  // 120: pb.RerunEveryOf.file_name:type_name -> pb.FileName
-	396,  // 121: pb.RerunEveryClock.clock_units:type_name -> pb.IntegerLiteral
-	373,  // 122: pb.SameClause.file_names:type_name -> pb.FileName
-	16,   // 123: pb.SameClause.form:type_name -> pb.SameClause.Form
-	114,  // 124: pb.MultipleFileClause.multiple_file_positions:type_name -> pb.MultipleFilePosition
-	396,  // 125: pb.MultipleFilePosition.position:type_name -> pb.IntegerLiteral
-	373,  // 126: pb.MultipleFilePosition.file_name:type_name -> pb.FileName
-	373,  // 127: pb.CommitmentControlClause.file_name:type_name -> pb.FileName
-	217,  // 128: pb.DataDivision.communication_section:type_name -> pb.CommunicationSection
-	233,  // 129: pb.DataDivision.data_base_section:type_name -> pb.DataBaseSection
-	117,  // 130: pb.DataDivision.file_section:type_name -> pb.FileSection
-	216,  // 131: pb.DataDivision.linkage_section:type_name -> pb.LinkageSection
-	215,  // 132: pb.DataDivision.local_storage_section:type_name -> pb.LocalStorageSection
-	208,  // 133: pb.DataDivision.program_library_section:type_name -> pb.ProgramLibrarySection
-	185,  // 134: pb.DataDivision.report_section:type_name -> pb.ReportSection
-	161,  // 135: pb.DataDivision.ScreenSection:type_name -> pb.ScreenSection
-	133,  // 136: pb.DataDivision.working_storage_section:type_name -> pb.WorkingStorageSection
-	118,  // 137: pb.FileSection.file_description_entries:type_name -> pb.FileDescriptionEntry
-	373,  // 138: pb.FileDescriptionEntry.file_name:type_name -> pb.FileName
-	121,  // 139: pb.FileDescriptionEntry.external_clause:type_name -> pb.ExternalClause
-	122,  // 140: pb.FileDescriptionEntry.global_clause:type_name -> pb.GlobalClause
-	123,  // 141: pb.FileDescriptionEntry.block_contains_clause:type_name -> pb.BlockContainsClause
-	124,  // 142: pb.FileDescriptionEntry.record_contains_clause:type_name -> pb.RecordContainsClause
-	125,  // 143: pb.FileDescriptionEntry.label_records_clause:type_name -> pb.LabelRecordsClause
-	126,  // 144: pb.FileDescriptionEntry.value_of_clause:type_name -> pb.ValueOfClause
-	128,  // 145: pb.FileDescriptionEntry.data_records_clause:type_name -> pb.DataRecordsClause
-	130,  // 146: pb.FileDescriptionEntry.linage_clause:type_name -> pb.LinageClause
-	131,  // 147: pb.FileDescriptionEntry.code_set_clause:type_name -> pb.CodeSetClause
-	132,  // 148: pb.FileDescriptionEntry.report_clause:type_name -> pb.ReportClause
-	134,  // 149: pb.FileDescriptionEntry.data_description_entries:type_name -> pb.DataDescriptionEntry
-	120,  // 150: pb.FileDescriptionEntry.recording_mode_clause:type_name -> pb.RecordingModeClause
-	392,  // 151: pb.ModeStatement.cobol_word:type_name -> pb.CobolWord
-	119,  // 152: pb.RecordingModeClause.mode_statement:type_name -> pb.ModeStatement
-	396,  // 153: pb.BlockContainsClause.from:type_name -> pb.IntegerLiteral
-	396,  // 154: pb.BlockContainsClause.to:type_name -> pb.IntegerLiteral
-	17,   // 155: pb.BlockContainsClause.unit:type_name -> pb.BlockContainsClause.Unit
-	396,  // 156: pb.RecordContainsClause.from:type_name -> pb.IntegerLiteral
-	396,  // 157: pb.RecordContainsClause.to:type_name -> pb.IntegerLiteral
-	352,  // 158: pb.RecordContainsClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	18,   // 159: pb.LabelRecordsClause.type:type_name -> pb.LabelRecordsClause.Type
-	410,  // 160: pb.LabelRecordsClause.data_names:type_name -> pb.LabelRecordsClause.DataNames
-	127,  // 161: pb.ValueOfClause.value_pairs:type_name -> pb.ValuePair
-	389,  // 162: pb.ValuePair.system_name:type_name -> pb.SystemName
-	352,  // 163: pb.ValuePair.qualified_data_name:type_name -> pb.QualifiedDataName
-	393,  // 164: pb.ValuePair.literal:type_name -> pb.Literal
-	370,  // 165: pb.DataRecordsClause.data_names:type_name -> pb.DataName
-	370,  // 166: pb.DataNameOrIntegerLiteral.data_name:type_name -> pb.DataName
-	396,  // 167: pb.DataNameOrIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
-	129,  // 168: pb.LinageClause.footing_at:type_name -> pb.DataNameOrIntegerLiteral
-	129,  // 169: pb.LinageClause.lines_at_bottom:type_name -> pb.DataNameOrIntegerLiteral
-	129,  // 170: pb.LinageClause.lines_at_top:type_name -> pb.DataNameOrIntegerLiteral
-	129,  // 171: pb.LinageClause.number_of_lines:type_name -> pb.DataNameOrIntegerLiteral
-	363,  // 172: pb.CodeSetClause.alphabet_name:type_name -> pb.AlphabetName
-	384,  // 173: pb.ReportClause.report_names:type_name -> pb.ReportName
-	134,  // 174: pb.WorkingStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	411,  // 175: pb.DataDescriptionEntry.f1:type_name -> pb.DataDescriptionEntry.Format1
-	412,  // 176: pb.DataDescriptionEntry.f2:type_name -> pb.DataDescriptionEntry.Format2
-	413,  // 177: pb.DataDescriptionEntry.f3:type_name -> pb.DataDescriptionEntry.Format3
-	414,  // 178: pb.DataDescriptionEntry.exec_sql:type_name -> pb.DataDescriptionEntry.ExecSql
-	352,  // 179: pb.DataRenamesClause.from:type_name -> pb.QualifiedDataName
-	352,  // 180: pb.DataRenamesClause.to:type_name -> pb.QualifiedDataName
-	370,  // 181: pb.DataRedefinesClause.data_name:type_name -> pb.DataName
-	393,  // 182: pb.DataExternalClause.literal:type_name -> pb.Literal
-	143,  // 183: pb.DataPictureClause.picture_string:type_name -> pb.PictureString
-	144,  // 184: pb.PictureString.chars:type_name -> pb.PictureChars
-	20,   // 185: pb.PictureChars.type:type_name -> pb.PictureChars.Type
-	396,  // 186: pb.PictureChars.integer_literal:type_name -> pb.IntegerLiteral
-	396,  // 187: pb.PictureCardinality.integer_literal:type_name -> pb.IntegerLiteral
-	21,   // 188: pb.DataCommonOwnLocalClause.type:type_name -> pb.DataCommonOwnLocalClause.Type
-	22,   // 189: pb.DataTypeClause.type:type_name -> pb.DataTypeClause.Type
-	415,  // 190: pb.DataTypeClause.lob:type_name -> pb.DataTypeClause.Lob
-	24,   // 191: pb.DataUsingClause.type:type_name -> pb.DataUsingClause.Type
-	392,  // 192: pb.DataUsingClause.cobol_word:type_name -> pb.CobolWord
-	370,  // 193: pb.DataUsingClause.data_name:type_name -> pb.DataName
-	25,   // 194: pb.DataUsageClause.type:type_name -> pb.DataUsageClause.Type
-	393,  // 195: pb.DataValueInterval.literal_from:type_name -> pb.Literal
-	392,  // 196: pb.DataValueInterval.cobol_word_from:type_name -> pb.CobolWord
-	393,  // 197: pb.DataValueInterval.literal_to:type_name -> pb.Literal
-	150,  // 198: pb.DataValueClause.data_value_interval:type_name -> pb.DataValueInterval
-	26,   // 199: pb.DataReceivedByClause.type:type_name -> pb.DataReceivedByClause.Type
-	342,  // 200: pb.DataOccursClause.identifier:type_name -> pb.Identifier
-	396,  // 201: pb.DataOccursClause.integer_literal:type_name -> pb.IntegerLiteral
-	396,  // 202: pb.DataOccursClause.to:type_name -> pb.IntegerLiteral
-	352,  // 203: pb.DataOccursClause.depending_on:type_name -> pb.QualifiedDataName
-	416,  // 204: pb.DataOccursClause.sorts:type_name -> pb.DataOccursClause.Sort
-	417,  // 205: pb.DataOccursClause.indexes:type_name -> pb.DataOccursClause.Indexed
-	27,   // 206: pb.DataSignClause.type:type_name -> pb.DataSignClause.Type
-	28,   // 207: pb.DataSynchronizedClause.type:type_name -> pb.DataSynchronizedClause.Type
-	162,  // 208: pb.ScreenSection.screen_description_entries:type_name -> pb.ScreenDescriptionEntry
-	387,  // 209: pb.ScreenDescriptionEntry.screen_name:type_name -> pb.ScreenName
-	171,  // 210: pb.ScreenDescriptionEntry.blank_clause:type_name -> pb.BlankClause
-	172,  // 211: pb.ScreenDescriptionEntry.bell_clause:type_name -> pb.BellClause
-	173,  // 212: pb.ScreenDescriptionEntry.blink_clause:type_name -> pb.BlinkClause
-	174,  // 213: pb.ScreenDescriptionEntry.erase_clause:type_name -> pb.EraseClause
-	175,  // 214: pb.ScreenDescriptionEntry.light_clause:type_name -> pb.LightClause
-	176,  // 215: pb.ScreenDescriptionEntry.grid_clause:type_name -> pb.GridClause
-	177,  // 216: pb.ScreenDescriptionEntry.reverse_video_clause:type_name -> pb.ReverseVideoClause
-	178,  // 217: pb.ScreenDescriptionEntry.underline_clause:type_name -> pb.UnderlineClause
-	179,  // 218: pb.ScreenDescriptionEntry.size_clause:type_name -> pb.SizeClause
-	180,  // 219: pb.ScreenDescriptionEntry.line_clause:type_name -> pb.LineClause
-	181,  // 220: pb.ScreenDescriptionEntry.column_clause:type_name -> pb.ColumnClause
-	182,  // 221: pb.ScreenDescriptionEntry.foreground_color_clause:type_name -> pb.ForegroundColorClause
-	183,  // 222: pb.ScreenDescriptionEntry.background_color_clause:type_name -> pb.BackgroundColorClause
-	184,  // 223: pb.ScreenDescriptionEntry.control_clause:type_name -> pb.ControlClause
-	196,  // 224: pb.ScreenDescriptionEntry.value_clause:type_name -> pb.ValueClause
-	203,  // 225: pb.ScreenDescriptionEntry.picture_clause:type_name -> pb.PictureClause
-	170,  // 226: pb.ScreenDescriptionEntry.from_clause:type_name -> pb.FromClause
-	169,  // 227: pb.ScreenDescriptionEntry.using_clause:type_name -> pb.UsingClause
-	207,  // 228: pb.ScreenDescriptionEntry.usage_clause:type_name -> pb.UsageClause
-	202,  // 229: pb.ScreenDescriptionEntry.sign_clause:type_name -> pb.SignClause
-	200,  // 230: pb.ScreenDescriptionEntry.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
-	201,  // 231: pb.ScreenDescriptionEntry.justified_clause:type_name -> pb.JustifiedClause
-	168,  // 232: pb.ScreenDescriptionEntry.auto_clause:type_name -> pb.AutoClause
-	167,  // 233: pb.ScreenDescriptionEntry.secure_clause:type_name -> pb.SecureClause
-	166,  // 234: pb.ScreenDescriptionEntry.required_clause:type_name -> pb.RequiredClause
-	165,  // 235: pb.ScreenDescriptionEntry.prompt_clause:type_name -> pb.PromptClause
-	164,  // 236: pb.ScreenDescriptionEntry.full_clause:type_name -> pb.FullClause
-	163,  // 237: pb.ScreenDescriptionEntry.zero_fill_clause:type_name -> pb.ZeroFillClause
-	29,   // 238: pb.FullClause.type:type_name -> pb.FullClause.Type
-	342,  // 239: pb.PromptClause.identifier:type_name -> pb.Identifier
-	393,  // 240: pb.PromptClause.literal:type_name -> pb.Literal
-	396,  // 241: pb.PromptClause.times:type_name -> pb.IntegerLiteral
-	30,   // 242: pb.RequiredClause.type:type_name -> pb.RequiredClause.Type
-	31,   // 243: pb.SecureClause.type:type_name -> pb.SecureClause.Type
-	32,   // 244: pb.AutoClause.type:type_name -> pb.AutoClause.Type
-	342,  // 245: pb.UsingClause.using:type_name -> pb.Identifier
-	342,  // 246: pb.FromClause.identifier:type_name -> pb.Identifier
-	393,  // 247: pb.FromClause.literal:type_name -> pb.Literal
-	342,  // 248: pb.FromClause.to:type_name -> pb.Identifier
-	33,   // 249: pb.BlankClause.type:type_name -> pb.BlankClause.Type
-	34,   // 250: pb.BellClause.type:type_name -> pb.BellClause.Type
-	35,   // 251: pb.EraseClause.type:type_name -> pb.EraseClause.Type
-	36,   // 252: pb.LightClause.type:type_name -> pb.LightClause.Type
-	37,   // 253: pb.GridClause.type:type_name -> pb.GridClause.Type
-	342,  // 254: pb.SizeClause.identifier:type_name -> pb.Identifier
-	396,  // 255: pb.SizeClause.integer_literal:type_name -> pb.IntegerLiteral
-	38,   // 256: pb.LineClause.type:type_name -> pb.LineClause.Type
-	342,  // 257: pb.LineClause.identifier:type_name -> pb.Identifier
-	396,  // 258: pb.LineClause.integer_literal:type_name -> pb.IntegerLiteral
-	39,   // 259: pb.ColumnClause.type:type_name -> pb.ColumnClause.Type
-	342,  // 260: pb.ColumnClause.identifier:type_name -> pb.Identifier
-	396,  // 261: pb.ColumnClause.integer_literal:type_name -> pb.IntegerLiteral
-	342,  // 262: pb.ForegroundColorClause.identifier:type_name -> pb.Identifier
-	396,  // 263: pb.ForegroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
-	342,  // 264: pb.BackgroundColorClause.identifier:type_name -> pb.Identifier
-	396,  // 265: pb.BackgroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
-	342,  // 266: pb.ControlClause.control:type_name -> pb.Identifier
-	186,  // 267: pb.ReportSection.report_descriptions:type_name -> pb.ReportDescription
-	187,  // 268: pb.ReportDescription.report_description_entry:type_name -> pb.ReportDescriptionEntry
-	193,  // 269: pb.ReportDescription.report_group_description_entries:type_name -> pb.ReportGroupDescriptionEntry
-	384,  // 270: pb.ReportDescriptionEntry.report_name:type_name -> pb.ReportName
-	122,  // 271: pb.ReportDescriptionEntry.global_clause:type_name -> pb.GlobalClause
-	188,  // 272: pb.ReportDescriptionEntry.page_limit_clause:type_name -> pb.PageLimitClause
-	189,  // 273: pb.ReportDescriptionEntry.heading_clause:type_name -> pb.HeadingClause
-	190,  // 274: pb.ReportDescriptionEntry.first_detail_clause:type_name -> pb.FirstDetailClause
-	191,  // 275: pb.ReportDescriptionEntry.last_detail_clause:type_name -> pb.LastDetailClause
-	192,  // 276: pb.ReportDescriptionEntry.footing_clause:type_name -> pb.FootingClause
-	396,  // 277: pb.PageLimitClause.page:type_name -> pb.IntegerLiteral
-	396,  // 278: pb.HeadingClause.heading:type_name -> pb.IntegerLiteral
-	396,  // 279: pb.FirstDetailClause.first_detail:type_name -> pb.IntegerLiteral
-	396,  // 280: pb.LastDetailClause.last_detail:type_name -> pb.IntegerLiteral
-	396,  // 281: pb.FootingClause.footing:type_name -> pb.IntegerLiteral
-	396,  // 282: pb.ReportGroupDescriptionEntry.integer_literal:type_name -> pb.IntegerLiteral
-	370,  // 283: pb.ReportGroupDescriptionEntry.data_name:type_name -> pb.DataName
-	418,  // 284: pb.ReportGroupDescriptionEntry.vertical:type_name -> pb.ReportGroupDescriptionEntry.Vertical
-	419,  // 285: pb.ReportGroupDescriptionEntry.single:type_name -> pb.ReportGroupDescriptionEntry.Single
-	420,  // 286: pb.ReportGroupDescriptionEntry.printable:type_name -> pb.ReportGroupDescriptionEntry.Printable
-	370,  // 287: pb.ResetClause.data_name:type_name -> pb.DataName
-	342,  // 288: pb.SumClause.sums:type_name -> pb.Identifier
-	370,  // 289: pb.SumClause.upons:type_name -> pb.DataName
-	393,  // 290: pb.ValueClause.value:type_name -> pb.Literal
-	342,  // 291: pb.SourceClause.source:type_name -> pb.Identifier
-	396,  // 292: pb.ColumnNumberClause.column_number:type_name -> pb.IntegerLiteral
-	40,   // 293: pb.SignClause.type:type_name -> pb.SignClause.Type
-	143,  // 294: pb.PictureClause.picture_string:type_name -> pb.PictureString
-	396,  // 295: pb.LineNumberClause.next_page:type_name -> pb.IntegerLiteral
-	396,  // 296: pb.LineNumberClause.plus:type_name -> pb.IntegerLiteral
-	396,  // 297: pb.NextGroupClause.next_group:type_name -> pb.IntegerLiteral
-	396,  // 298: pb.NextGroupClause.plus:type_name -> pb.IntegerLiteral
-	421,  // 299: pb.TypeClause.report_heading:type_name -> pb.TypeClause.ReportHeading
-	422,  // 300: pb.TypeClause.page_heading:type_name -> pb.TypeClause.PageHeading
-	423,  // 301: pb.TypeClause.control_heading:type_name -> pb.TypeClause.ControlHeading
-	424,  // 302: pb.TypeClause.detail:type_name -> pb.TypeClause.Detail
-	425,  // 303: pb.TypeClause.control_footing:type_name -> pb.TypeClause.ControlFooting
-	426,  // 304: pb.TypeClause.page_footing:type_name -> pb.TypeClause.PageFooting
-	427,  // 305: pb.TypeClause.report_footing:type_name -> pb.TypeClause.ReportFooting
-	209,  // 306: pb.ProgramLibrarySection.library_description_entries:type_name -> pb.LibraryDescriptionEntry
-	377,  // 307: pb.LibraryDescriptionEntry.library_name:type_name -> pb.LibraryName
-	428,  // 308: pb.LibraryDescriptionEntry.import:type_name -> pb.LibraryDescriptionEntry.Import
-	429,  // 309: pb.LibraryDescriptionEntry.export:type_name -> pb.LibraryDescriptionEntry.Export
-	41,   // 310: pb.AttributeClause1.sharing:type_name -> pb.AttributeClause1.Sharing
-	393,  // 311: pb.AttributeClause2.function_name:type_name -> pb.Literal
-	42,   // 312: pb.AttributeClause2.lib_access:type_name -> pb.AttributeClause2.LibAccess
-	393,  // 313: pb.AttributeClause2.lib_parameter:type_name -> pb.Literal
-	393,  // 314: pb.AttributeClause2.title:type_name -> pb.Literal
-	382,  // 315: pb.ProcedureClause1.program_name:type_name -> pb.ProgramName
-	393,  // 316: pb.ProcedureClause1.for:type_name -> pb.Literal
-	382,  // 317: pb.ProcedureClause2.program_name:type_name -> pb.ProgramName
-	393,  // 318: pb.ProcedureClause2.for:type_name -> pb.Literal
-	430,  // 319: pb.ProcedureClause2.with_names:type_name -> pb.ProcedureClause2.WithName
-	431,  // 320: pb.ProcedureClause2.using_names:type_name -> pb.ProcedureClause2.UsingName
-	370,  // 321: pb.ProcedureClause2.giving:type_name -> pb.DataName
-	134,  // 322: pb.LocalStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	378,  // 323: pb.LocalStorageSection.local_name:type_name -> pb.LocalName
-	134,  // 324: pb.LinkageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	218,  // 325: pb.CommunicationSection.communication_description_entries:type_name -> pb.CommunicationDescriptionEntry
-	134,  // 326: pb.CommunicationSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	366,  // 327: pb.CommunicationDescriptionEntry.cd_name:type_name -> pb.CdName
-	432,  // 328: pb.CommunicationDescriptionEntry.input:type_name -> pb.CommunicationDescriptionEntry.Input
-	433,  // 329: pb.CommunicationDescriptionEntry.output:type_name -> pb.CommunicationDescriptionEntry.Output
-	434,  // 330: pb.CommunicationDescriptionEntry.io:type_name -> pb.CommunicationDescriptionEntry.Io
-	371,  // 331: pb.SymbolicTerminalClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 332: pb.SymbolicDestinationClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 333: pb.ErrorKeyClause.data_desc_name:type_name -> pb.DataDescName
-	396,  // 334: pb.DestinationTableClause.times:type_name -> pb.IntegerLiteral
-	375,  // 335: pb.DestinationTableClause.indexes:type_name -> pb.IndexName
-	371,  // 336: pb.DestinationCountClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 337: pb.SymbolicQueueClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 338: pb.SymbolicSubQueueClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 339: pb.MessageDateClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 340: pb.MessageTimeClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 341: pb.SymbolicSourceClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 342: pb.TextLengthClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 343: pb.EndKeyClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 344: pb.StatusKeyClause.data_desc_name:type_name -> pb.DataDescName
-	371,  // 345: pb.MessageCountClause.data_desc_name:type_name -> pb.DataDescName
-	234,  // 346: pb.DataBaseSection.data_base_section_entries:type_name -> pb.DataBaseSectionEntry
-	396,  // 347: pb.DataBaseSectionEntry.integer_literal:type_name -> pb.IntegerLiteral
-	393,  // 348: pb.DataBaseSectionEntry.literal:type_name -> pb.Literal
-	393,  // 349: pb.DataBaseSectionEntry.invoke:type_name -> pb.Literal
-	441,  // 350: pb.ProcedureDivision.using_clause:type_name -> pb.ProcedureDivision.UsingClause
-	440,  // 351: pb.ProcedureDivision.giving_clause:type_name -> pb.ProcedureDivision.GivingClause
-	237,  // 352: pb.ProcedureDivision.declaratives:type_name -> pb.Declarative
-	239,  // 353: pb.ProcedureDivision.paragraphs:type_name -> pb.Paragraphs
-	236,  // 354: pb.ProcedureDivision.procedure_sections:type_name -> pb.ProcedureSection
-	238,  // 355: pb.ProcedureSection.procedure_section_header:type_name -> pb.ProcedureSectionHeader
-	239,  // 356: pb.ProcedureSection.paragraphs:type_name -> pb.Paragraphs
-	238,  // 357: pb.Declarative.procedure_section_header:type_name -> pb.ProcedureSectionHeader
-	319,  // 358: pb.Declarative.use_statement:type_name -> pb.UseStatement
-	239,  // 359: pb.Declarative.paragraphs:type_name -> pb.Paragraphs
-	388,  // 360: pb.ProcedureSectionHeader.section_name:type_name -> pb.SectionName
-	396,  // 361: pb.ProcedureSectionHeader.integer_literal:type_name -> pb.IntegerLiteral
-	241,  // 362: pb.Paragraphs.sentences:type_name -> pb.Sentences
-	240,  // 363: pb.Paragraphs.paragraphs:type_name -> pb.Paragraph
-	380,  // 364: pb.Paragraph.paragraph_name:type_name -> pb.ParagraphName
-	241,  // 365: pb.Paragraph.sentences:type_name -> pb.Sentences
-	242,  // 366: pb.Sentences.sentences:type_name -> pb.Sentence
-	243,  // 367: pb.Sentence.statements:type_name -> pb.Statement
-	306,  // 368: pb.Statement.accept_statement:type_name -> pb.AcceptStatement
-	305,  // 369: pb.Statement.add_statement:type_name -> pb.AddStatement
-	304,  // 370: pb.Statement.alter_statement:type_name -> pb.AlterStatement
-	303,  // 371: pb.Statement.call_statement:type_name -> pb.CallStatement
-	302,  // 372: pb.Statement.cancel_statement:type_name -> pb.CancelStatement
-	300,  // 373: pb.Statement.close_statement:type_name -> pb.CloseStatement
-	294,  // 374: pb.Statement.compute_statement:type_name -> pb.ComputeStatement
-	292,  // 375: pb.Statement.continue_statement:type_name -> pb.ContinueStatement
-	291,  // 376: pb.Statement.delete_statement:type_name -> pb.DeleteStatement
-	290,  // 377: pb.Statement.disable_statement:type_name -> pb.DisableStatement
-	289,  // 378: pb.Statement.display_statement:type_name -> pb.DisplayStatement
-	284,  // 379: pb.Statement.divide_statement:type_name -> pb.DivideStatement
-	283,  // 380: pb.Statement.enable_statement:type_name -> pb.EnableStatement
-	282,  // 381: pb.Statement.entry_statement:type_name -> pb.EntryStatement
-	281,  // 382: pb.Statement.evaluate_statement:type_name -> pb.EvaluateStatement
-	280,  // 383: pb.Statement.exhibit_statement:type_name -> pb.ExhibitStatement
-	279,  // 384: pb.Statement.exec_cics_statement:type_name -> pb.ExecCicsStatement
-	278,  // 385: pb.Statement.exec_sql_statement:type_name -> pb.ExecSqlStatement
-	277,  // 386: pb.Statement.exec_sql_ims_statement:type_name -> pb.ExecSqlImsStatement
-	276,  // 387: pb.Statement.exit_statement:type_name -> pb.ExitStatement
-	275,  // 388: pb.Statement.generate_statement:type_name -> pb.GenerateStatement
-	274,  // 389: pb.Statement.goback_statement:type_name -> pb.GobackStatement
-	273,  // 390: pb.Statement.go_to_statement:type_name -> pb.GoToStatement
-	272,  // 391: pb.Statement.if_statement:type_name -> pb.IfStatement
-	271,  // 392: pb.Statement.initialize_statement:type_name -> pb.InitializeStatement
-	270,  // 393: pb.Statement.initiate_statement:type_name -> pb.InitiateStatement
-	269,  // 394: pb.Statement.inspect_statement:type_name -> pb.InspectStatement
-	268,  // 395: pb.Statement.merge_statement:type_name -> pb.MergeStatement
-	265,  // 396: pb.Statement.move_statement:type_name -> pb.MoveStatement
-	264,  // 397: pb.Statement.multiply_statement:type_name -> pb.MultiplyStatement
-	263,  // 398: pb.Statement.next_sentence_statement:type_name -> pb.NextSentenceStatement
-	262,  // 399: pb.Statement.open_statement:type_name -> pb.OpenStatement
-	261,  // 400: pb.Statement.perform_statement:type_name -> pb.PerformStatement
-	260,  // 401: pb.Statement.purge_statement:type_name -> pb.PurgeStatement
-	259,  // 402: pb.Statement.read_statement:type_name -> pb.ReadStatement
-	258,  // 403: pb.Statement.receive_statement:type_name -> pb.ReceiveStatement
-	257,  // 404: pb.Statement.release_statement:type_name -> pb.ReleaseStatement
-	256,  // 405: pb.Statement.return_statement:type_name -> pb.ReturnStatement
-	255,  // 406: pb.Statement.rewrite_statement:type_name -> pb.RewriteStatement
-	254,  // 407: pb.Statement.search_statement:type_name -> pb.SearchStatement
-	253,  // 408: pb.Statement.send_statement:type_name -> pb.SendStatement
-	252,  // 409: pb.Statement.set_statement:type_name -> pb.SetStatement
-	251,  // 410: pb.Statement.sort_statement:type_name -> pb.SortStatement
-	250,  // 411: pb.Statement.start_statement:type_name -> pb.StartStatement
-	249,  // 412: pb.Statement.stop_statement:type_name -> pb.StopStatement
-	248,  // 413: pb.Statement.string_statement:type_name -> pb.StringStatement
-	247,  // 414: pb.Statement.subtract_statement:type_name -> pb.SubtractStatement
-	246,  // 415: pb.Statement.terminate_statement:type_name -> pb.TerminateStatement
-	245,  // 416: pb.Statement.unstring_statement:type_name -> pb.UnstringStatement
-	244,  // 417: pb.Statement.write_statement:type_name -> pb.WriteStatement
-	383,  // 418: pb.WriteStatement.record_name:type_name -> pb.RecordName
-	442,  // 419: pb.WriteStatement.from_phrase:type_name -> pb.WriteStatement.FromPhrase
-	446,  // 420: pb.WriteStatement.advancing_phrase:type_name -> pb.WriteStatement.AdvancingPhrase
-	307,  // 421: pb.WriteStatement.at_end_of_page_phrase:type_name -> pb.AtEndOfPagePhrase
-	308,  // 422: pb.WriteStatement.not_at_end_of_page_phrase:type_name -> pb.NotAtEndOfPagePhrase
-	313,  // 423: pb.WriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	314,  // 424: pb.WriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	453,  // 425: pb.UnstringStatement.sending_phrase:type_name -> pb.UnstringStatement.SendingPhrase
-	454,  // 426: pb.UnstringStatement.into_phrase:type_name -> pb.UnstringStatement.IntoPhrase
-	455,  // 427: pb.UnstringStatement.with_pointer_phrase:type_name -> pb.UnstringStatement.WithPointerPhrase
-	456,  // 428: pb.UnstringStatement.tallying_phrase:type_name -> pb.UnstringStatement.TallyingPhrase
-	311,  // 429: pb.UnstringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
-	312,  // 430: pb.UnstringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
-	384,  // 431: pb.TerminateStatement.report_name:type_name -> pb.ReportName
-	462,  // 432: pb.SubtractStatement.from_statement:type_name -> pb.SubtractStatement.FromStatement
-	463,  // 433: pb.SubtractStatement.from_giving_statement:type_name -> pb.SubtractStatement.FromGivingStatement
-	464,  // 434: pb.SubtractStatement.corresponding_statement:type_name -> pb.SubtractStatement.CorrespondingStatement
-	309,  // 435: pb.SubtractStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	310,  // 436: pb.SubtractStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	468,  // 437: pb.StringStatement.sending_phrases:type_name -> pb.StringStatement.SendingPhrase
-	469,  // 438: pb.StringStatement.into_phrase:type_name -> pb.StringStatement.IntoPhrase
-	470,  // 439: pb.StringStatement.with_pointer_phrase:type_name -> pb.StringStatement.WithPointerPhrase
-	311,  // 440: pb.StringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
-	312,  // 441: pb.StringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
-	393,  // 442: pb.StopStatement.literal:type_name -> pb.Literal
-	471,  // 443: pb.StopStatement.giving:type_name -> pb.StopStatement.Giving
-	373,  // 444: pb.StartStatement.file_name:type_name -> pb.FileName
-	472,  // 445: pb.StartStatement.key:type_name -> pb.StartStatement.Key
-	313,  // 446: pb.StartStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	314,  // 447: pb.StartStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	373,  // 448: pb.SortStatement.file_name:type_name -> pb.FileName
-	473,  // 449: pb.SortStatement.on_key_clauses:type_name -> pb.SortStatement.OnKeyClause
-	474,  // 450: pb.SortStatement.duplicates_phrase:type_name -> pb.SortStatement.DuplicatesPhrase
-	477,  // 451: pb.SortStatement.collating_sequence_phrase:type_name -> pb.SortStatement.CollatingSequencePhrase
-	479,  // 452: pb.SortStatement.input_procedure_phrase:type_name -> pb.SortStatement.InputProcedurePhrase
-	480,  // 453: pb.SortStatement.usings:type_name -> pb.SortStatement.Using
-	482,  // 454: pb.SortStatement.output_procedure_phrase:type_name -> pb.SortStatement.OutputProcedurePhrase
-	484,  // 455: pb.SortStatement.giving_phrases:type_name -> pb.SortStatement.GivingPhrase
-	489,  // 456: pb.SetStatement.to_statements:type_name -> pb.SetStatement.ToStatement
-	490,  // 457: pb.SetStatement.up_down_by_statement:type_name -> pb.SetStatement.UpDownByStatement
-	498,  // 458: pb.SendStatement.sync_statement:type_name -> pb.SendStatement.SyncStatement
-	499,  // 459: pb.SendStatement.async_statement:type_name -> pb.SendStatement.AsyncStatement
-	317,  // 460: pb.SendStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	318,  // 461: pb.SendStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	352,  // 462: pb.SearchStatement.qualified_data_name:type_name -> pb.QualifiedDataName
-	500,  // 463: pb.SearchStatement.varying:type_name -> pb.SearchStatement.Varying
-	501,  // 464: pb.SearchStatement.when:type_name -> pb.SearchStatement.When
-	383,  // 465: pb.RewriteStatement.record_name:type_name -> pb.RecordName
-	502,  // 466: pb.RewriteStatement.from:type_name -> pb.RewriteStatement.From
-	313,  // 467: pb.RewriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	314,  // 468: pb.RewriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	373,  // 469: pb.ReturnStatement.file_name:type_name -> pb.FileName
-	503,  // 470: pb.ReturnStatement.into:type_name -> pb.ReturnStatement.Into
-	315,  // 471: pb.ReturnStatement.at_end_phrase:type_name -> pb.AtEndPhrase
-	316,  // 472: pb.ReturnStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
-	383,  // 473: pb.ReleaseStatement.record_name:type_name -> pb.RecordName
-	504,  // 474: pb.ReleaseStatement.from:type_name -> pb.ReleaseStatement.From
-	511,  // 475: pb.ReceiveStatement.from_statement:type_name -> pb.ReceiveStatement.FromStatement
-	514,  // 476: pb.ReceiveStatement.into_statement:type_name -> pb.ReceiveStatement.IntoStatement
-	317,  // 477: pb.ReceiveStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	318,  // 478: pb.ReceiveStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	373,  // 479: pb.ReadStatement.file_name:type_name -> pb.FileName
-	515,  // 480: pb.ReadStatement.into:type_name -> pb.ReadStatement.Into
-	516,  // 481: pb.ReadStatement.with:type_name -> pb.ReadStatement.With
-	517,  // 482: pb.ReadStatement.key:type_name -> pb.ReadStatement.Key
-	315,  // 483: pb.ReadStatement.at_end_phrase:type_name -> pb.AtEndPhrase
-	316,  // 484: pb.ReadStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
-	313,  // 485: pb.ReadStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	314,  // 486: pb.ReadStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	366,  // 487: pb.PurgeStatement.cd_names:type_name -> pb.CdName
-	528,  // 488: pb.PerformStatement.inline_statement:type_name -> pb.PerformStatement.InlineStatement
-	529,  // 489: pb.PerformStatement.procedure_statement:type_name -> pb.PerformStatement.ProcedureStatement
-	531,  // 490: pb.OpenStatement.input_statement:type_name -> pb.OpenStatement.InputStatement
-	533,  // 491: pb.OpenStatement.output_statement:type_name -> pb.OpenStatement.OutputStatement
-	534,  // 492: pb.OpenStatement.io_statement:type_name -> pb.OpenStatement.IOStatement
-	535,  // 493: pb.OpenStatement.extend_statement:type_name -> pb.OpenStatement.ExtendStatement
-	342,  // 494: pb.MultiplyStatement.identifier:type_name -> pb.Identifier
-	393,  // 495: pb.MultiplyStatement.literal:type_name -> pb.Literal
-	539,  // 496: pb.MultiplyStatement.regular:type_name -> pb.MultiplyStatement.Regular
-	538,  // 497: pb.MultiplyStatement.giving:type_name -> pb.MultiplyStatement.Giving
-	309,  // 498: pb.MultiplyStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	310,  // 499: pb.MultiplyStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	266,  // 500: pb.MoveStatement.move_to:type_name -> pb.MoveToStatement
-	267,  // 501: pb.MoveStatement.move_corresponding_to:type_name -> pb.MoveCorrespondingToStatement
-	342,  // 502: pb.MoveToStatement.identifier:type_name -> pb.Identifier
-	393,  // 503: pb.MoveToStatement.literal:type_name -> pb.Literal
-	342,  // 504: pb.MoveToStatement.to:type_name -> pb.Identifier
-	342,  // 505: pb.MoveCorrespondingToStatement.sending_area:type_name -> pb.Identifier
-	342,  // 506: pb.MoveCorrespondingToStatement.to:type_name -> pb.Identifier
-	373,  // 507: pb.MergeStatement.file_name:type_name -> pb.FileName
-	540,  // 508: pb.MergeStatement.on_key_clauses:type_name -> pb.MergeStatement.OnKeyClause
-	541,  // 509: pb.MergeStatement.collating_sequence_phrase:type_name -> pb.MergeStatement.CollatingSequencePhrase
-	544,  // 510: pb.MergeStatement.usings:type_name -> pb.MergeStatement.Using
-	545,  // 511: pb.MergeStatement.output_procedure_phrase:type_name -> pb.MergeStatement.OutputProcedurePhrase
-	547,  // 512: pb.MergeStatement.giving_phrases:type_name -> pb.MergeStatement.GivingPhrase
-	342,  // 513: pb.InspectStatement.identifier:type_name -> pb.Identifier
-	564,  // 514: pb.InspectStatement.tallying_phrase:type_name -> pb.InspectStatement.TallyingPhrase
-	563,  // 515: pb.InspectStatement.tallying_replacing_phrase:type_name -> pb.InspectStatement.TallyingReplacingPhrase
-	562,  // 516: pb.InspectStatement.replacing_phrase:type_name -> pb.InspectStatement.ReplacingPhrase
-	560,  // 517: pb.InspectStatement.converting_phrase:type_name -> pb.InspectStatement.ConvertingPhrase
-	384,  // 518: pb.InitiateStatement.report_names:type_name -> pb.ReportName
-	342,  // 519: pb.InitializeStatement.identifiers:type_name -> pb.Identifier
-	566,  // 520: pb.InitializeStatement.replacing_phrase:type_name -> pb.InitializeStatement.ReplacingPhrase
-	330,  // 521: pb.IfStatement.condition:type_name -> pb.Condition
-	567,  // 522: pb.IfStatement.then:type_name -> pb.IfStatement.Then
-	568,  // 523: pb.IfStatement.else:type_name -> pb.IfStatement.Else
-	569,  // 524: pb.GoToStatement.simple:type_name -> pb.GoToStatement.SimpleStatement
-	571,  // 525: pb.GoToStatement.depending_on:type_name -> pb.GoToStatement.DependingOnStatement
-	384,  // 526: pb.GenerateStatement.report_name:type_name -> pb.ReportName
-	572,  // 527: pb.ExhibitStatement.operands:type_name -> pb.ExhibitStatement.Operand
-	573,  // 528: pb.EvaluateStatement.select:type_name -> pb.EvaluateStatement.Select
-	574,  // 529: pb.EvaluateStatement.also_selects:type_name -> pb.EvaluateStatement.AlsoSelect
-	582,  // 530: pb.EvaluateStatement.when_phrases:type_name -> pb.EvaluateStatement.WhenPhrase
-	580,  // 531: pb.EvaluateStatement.when_other:type_name -> pb.EvaluateStatement.WhenOther
-	393,  // 532: pb.EntryStatement.entry:type_name -> pb.Literal
-	342,  // 533: pb.EntryStatement.usings:type_name -> pb.Identifier
-	366,  // 534: pb.EnableStatement.cd_name:type_name -> pb.CdName
-	342,  // 535: pb.EnableStatement.identifier:type_name -> pb.Identifier
-	393,  // 536: pb.EnableStatement.literal:type_name -> pb.Literal
-	342,  // 537: pb.DivideStatement.identifier:type_name -> pb.Identifier
-	393,  // 538: pb.DivideStatement.literal:type_name -> pb.Literal
-	586,  // 539: pb.DivideStatement.into_statement:type_name -> pb.DivideStatement.IntoStatement
-	587,  // 540: pb.DivideStatement.into_giving_statement:type_name -> pb.DivideStatement.IntoGivingStatement
-	588,  // 541: pb.DivideStatement.by_giving_statement:type_name -> pb.DivideStatement.ByGivingStatement
-	589,  // 542: pb.DivideStatement.remainder:type_name -> pb.DivideStatement.Remainder
-	309,  // 543: pb.DivideStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	310,  // 544: pb.DivideStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	342,  // 545: pb.DisplayOperand.Identifier:type_name -> pb.Identifier
-	393,  // 546: pb.DisplayOperand.Literal:type_name -> pb.Literal
-	342,  // 547: pb.DisplayAt.Identifier:type_name -> pb.Identifier
-	393,  // 548: pb.DisplayAt.Literal:type_name -> pb.Literal
-	379,  // 549: pb.DisplayUpon.mnemonic_name:type_name -> pb.MnemonicName
-	372,  // 550: pb.DisplayUpon.environment_name:type_name -> pb.EnvironmentName
-	285,  // 551: pb.DisplayStatement.operands:type_name -> pb.DisplayOperand
-	286,  // 552: pb.DisplayStatement.at:type_name -> pb.DisplayAt
-	287,  // 553: pb.DisplayStatement.upon:type_name -> pb.DisplayUpon
-	288,  // 554: pb.DisplayStatement.with:type_name -> pb.DisplayWith
-	317,  // 555: pb.DisplayStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	318,  // 556: pb.DisplayStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	366,  // 557: pb.DisableStatement.cd_name:type_name -> pb.CdName
-	342,  // 558: pb.DisableStatement.identifier:type_name -> pb.Identifier
-	393,  // 559: pb.DisableStatement.literal:type_name -> pb.Literal
-	373,  // 560: pb.DeleteStatement.file_name:type_name -> pb.FileName
-	313,  // 561: pb.DeleteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	314,  // 562: pb.DeleteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	342,  // 563: pb.ComputeStore.identifier:type_name -> pb.Identifier
-	293,  // 564: pb.ComputeStatement.stores:type_name -> pb.ComputeStore
-	323,  // 565: pb.ComputeStatement.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	309,  // 566: pb.ComputeStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	310,  // 567: pb.ComputeStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	590,  // 568: pb.ClosePortFileIOUsing.close_disposition:type_name -> pb.ClosePortFileIOUsing.CloseDisposition
-	591,  // 569: pb.ClosePortFileIOUsing.associated_data:type_name -> pb.ClosePortFileIOUsing.AssociatedData
-	592,  // 570: pb.ClosePortFileIOUsing.associated_data_length:type_name -> pb.ClosePortFileIOUsing.AssociatedDataLength
-	297,  // 571: pb.ClosePortFileIOStatement.usings:type_name -> pb.ClosePortFileIOUsing
-	373,  // 572: pb.CloseFile.file_name:type_name -> pb.FileName
-	295,  // 573: pb.CloseFile.close_reel_unit_statement:type_name -> pb.CloseReelUnitStatement
-	296,  // 574: pb.CloseFile.close_relative_statement:type_name -> pb.CloseRelativeStatement
-	298,  // 575: pb.CloseFile.close_port_file_io_statement:type_name -> pb.ClosePortFileIOStatement
-	299,  // 576: pb.CloseStatement.close_files:type_name -> pb.CloseFile
-	377,  // 577: pb.CancelCall.library_name:type_name -> pb.LibraryName
-	342,  // 578: pb.CancelCall.identifier:type_name -> pb.Identifier
-	393,  // 579: pb.CancelCall.literal:type_name -> pb.Literal
-	301,  // 580: pb.CancelStatement.calls:type_name -> pb.CancelCall
-	342,  // 581: pb.CallStatement.target_identifier:type_name -> pb.Identifier
-	393,  // 582: pb.CallStatement.target_literal:type_name -> pb.Literal
-	600,  // 583: pb.CallStatement.using_phrase:type_name -> pb.CallStatement.UsingPhrase
-	601,  // 584: pb.CallStatement.giving_phrase:type_name -> pb.CallStatement.GivingPhrase
-	311,  // 585: pb.CallStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
-	317,  // 586: pb.CallStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	318,  // 587: pb.CallStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	602,  // 588: pb.AlterStatement.proceed_tos:type_name -> pb.AlterStatement.ProceedTo
-	605,  // 589: pb.AddStatement.to:type_name -> pb.AddStatement.To
-	606,  // 590: pb.AddStatement.to_giving:type_name -> pb.AddStatement.ToGiving
-	607,  // 591: pb.AddStatement.corresponding:type_name -> pb.AddStatement.Corresponding
-	309,  // 592: pb.AddStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	310,  // 593: pb.AddStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	342,  // 594: pb.AcceptStatement.identifier:type_name -> pb.Identifier
-	608,  // 595: pb.AcceptStatement.from_date:type_name -> pb.AcceptStatement.FromDate
-	609,  // 596: pb.AcceptStatement.from_escape_key:type_name -> pb.AcceptStatement.FromEscapeKey
-	610,  // 597: pb.AcceptStatement.from_mnemonic:type_name -> pb.AcceptStatement.FromMnemonic
-	611,  // 598: pb.AcceptStatement.message_count:type_name -> pb.AcceptStatement.MessageCount
-	317,  // 599: pb.AcceptStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	318,  // 600: pb.AcceptStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	243,  // 601: pb.AtEndOfPagePhrase.statements:type_name -> pb.Statement
-	243,  // 602: pb.NotAtEndOfPagePhrase.statements:type_name -> pb.Statement
-	243,  // 603: pb.OnSizeErrorPhrase.statements:type_name -> pb.Statement
-	243,  // 604: pb.NotOnSizeErrorPhrase.statements:type_name -> pb.Statement
-	243,  // 605: pb.OnOverflowPhrase.statements:type_name -> pb.Statement
-	243,  // 606: pb.NotOnOverflowPhrase.statements:type_name -> pb.Statement
-	243,  // 607: pb.InvalidKeyPhrase.statements:type_name -> pb.Statement
-	243,  // 608: pb.NotInvalidKeyPhrase.statements:type_name -> pb.Statement
-	243,  // 609: pb.AtEndPhrase.statements:type_name -> pb.Statement
-	243,  // 610: pb.NotAtEndPhrase.statements:type_name -> pb.Statement
-	243,  // 611: pb.OnExceptionClause.statements:type_name -> pb.Statement
-	243,  // 612: pb.NotOnExceptionClause.statements:type_name -> pb.Statement
-	322,  // 613: pb.UseStatement.use_after_clause:type_name -> pb.UseAfterClause
-	321,  // 614: pb.UseStatement.use_debug_clause:type_name -> pb.UseDebugClause
-	342,  // 615: pb.UseDebugOn.Identifier:type_name -> pb.Identifier
-	381,  // 616: pb.UseDebugOn.procedureName:type_name -> pb.ProcedureName
-	373,  // 617: pb.UseDebugOn.fileName:type_name -> pb.FileName
-	320,  // 618: pb.UseDebugClause.ons:type_name -> pb.UseDebugOn
-	50,   // 619: pb.UseAfterClause.type:type_name -> pb.UseAfterClause.Type
-	612,  // 620: pb.UseAfterClause.file_names:type_name -> pb.UseAfterClause.FileNames
-	325,  // 621: pb.ArithmeticExpression.mult_divs:type_name -> pb.MultDivs
-	324,  // 622: pb.ArithmeticExpression.plus_minus:type_name -> pb.PlusMinus
-	325,  // 623: pb.PlusMinus.mult_divs:type_name -> pb.MultDivs
-	327,  // 624: pb.MultDivs.powers:type_name -> pb.Powers
-	326,  // 625: pb.MultDivs.mult_div:type_name -> pb.MultDiv
-	327,  // 626: pb.MultDiv.powers:type_name -> pb.Powers
-	329,  // 627: pb.Powers.basis:type_name -> pb.Basis
-	328,  // 628: pb.Powers.powers:type_name -> pb.Power
-	329,  // 629: pb.Power.basis:type_name -> pb.Basis
-	323,  // 630: pb.Basis.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	342,  // 631: pb.Basis.identifier:type_name -> pb.Identifier
-	393,  // 632: pb.Basis.literal:type_name -> pb.Literal
-	332,  // 633: pb.Condition.combinable_condition:type_name -> pb.CombinableCondition
-	331,  // 634: pb.Condition.and_or_condition:type_name -> pb.AndOrCondition
-	51,   // 635: pb.AndOrCondition.and_or:type_name -> pb.AndOrCondition.AndOr
-	332,  // 636: pb.AndOrCondition.combinable_condition:type_name -> pb.CombinableCondition
-	341,  // 637: pb.AndOrCondition.abbreviations:type_name -> pb.Abbreviation
-	333,  // 638: pb.CombinableCondition.simple_condition:type_name -> pb.SimpleCondition
-	330,  // 639: pb.SimpleCondition.condition:type_name -> pb.Condition
-	336,  // 640: pb.SimpleCondition.relation_condition:type_name -> pb.RelationCondition
-	334,  // 641: pb.SimpleCondition.class_condition:type_name -> pb.ClassCondition
-	335,  // 642: pb.SimpleCondition.condition_name_reference:type_name -> pb.ConditionNameReference
-	342,  // 643: pb.ClassCondition.identifier:type_name -> pb.Identifier
-	52,   // 644: pb.ClassCondition.value:type_name -> pb.ClassCondition.Type
-	367,  // 645: pb.ClassCondition.class_name:type_name -> pb.ClassName
-	369,  // 646: pb.ConditionNameReference.condition_name:type_name -> pb.ConditionName
-	614,  // 647: pb.ConditionNameReference.in_subscript:type_name -> pb.ConditionNameReference.InSubscript
-	359,  // 648: pb.ConditionNameReference.in_mnemonic:type_name -> pb.InMnemonic
-	337,  // 649: pb.RelationCondition.relation_sign_condition:type_name -> pb.RelationSignCondition
-	338,  // 650: pb.RelationCondition.relation_arithmetic_comparison:type_name -> pb.RelationArithmeticComparison
-	339,  // 651: pb.RelationCondition.relation_combined_comparison:type_name -> pb.RelationCombinedComparison
-	323,  // 652: pb.RelationSignCondition.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	53,   // 653: pb.RelationSignCondition.type:type_name -> pb.RelationSignCondition.Type
-	323,  // 654: pb.RelationArithmeticComparison.left_expression:type_name -> pb.ArithmeticExpression
+	61,   // 0: pb.Program.compilation_units:type_name -> pb.CompilationUnit
+	62,   // 1: pb.CompilationUnit.program_units:type_name -> pb.ProgramUnit
+	63,   // 2: pb.ProgramUnit.identification_division:type_name -> pb.IdentificationDivision
+	71,   // 3: pb.ProgramUnit.environment_division:type_name -> pb.EnvironmentDivision
+	117,  // 4: pb.ProgramUnit.data_division:type_name -> pb.DataDivision
+	236,  // 5: pb.ProgramUnit.procedure_division:type_name -> pb.ProcedureDivision
+	62,   // 6: pb.ProgramUnit.program_units:type_name -> pb.ProgramUnit
+	383,  // 7: pb.ProgramUnit.end_program_name:type_name -> pb.ProgramName
+	64,   // 8: pb.IdentificationDivision.program_id_paragraph:type_name -> pb.ProgramIdParagraph
+	65,   // 9: pb.IdentificationDivision.author_paragraph:type_name -> pb.AuthorParagraph
+	66,   // 10: pb.IdentificationDivision.date_compiled_paragraph:type_name -> pb.DateCompiledParagraph
+	67,   // 11: pb.IdentificationDivision.date_written_paragraph:type_name -> pb.DateWrittenParagraph
+	68,   // 12: pb.IdentificationDivision.installation_paragraph:type_name -> pb.InstallationParagraph
+	69,   // 13: pb.IdentificationDivision.remarks_paragraph:type_name -> pb.RemarksParagraph
+	70,   // 14: pb.IdentificationDivision.security_paragraph:type_name -> pb.SecurityParagraph
+	383,  // 15: pb.ProgramIdParagraph.program_name:type_name -> pb.ProgramName
+	2,    // 16: pb.ProgramIdParagraph.attribute:type_name -> pb.ProgramIdParagraph.Attribute
+	72,   // 17: pb.EnvironmentDivision.configuration_section:type_name -> pb.ConfigurationSection
+	93,   // 18: pb.EnvironmentDivision.input_output_section:type_name -> pb.InputOutputSection
+	80,   // 19: pb.EnvironmentDivision.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
+	74,   // 20: pb.ConfigurationSection.object_computer_paragraph:type_name -> pb.ObjectComputerParagraph
+	73,   // 21: pb.ConfigurationSection.source_computer_paragraph:type_name -> pb.SourceComputerParagraph
+	80,   // 22: pb.ConfigurationSection.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
+	369,  // 23: pb.SourceComputerParagraph.computer_name:type_name -> pb.ComputerName
+	369,  // 24: pb.ObjectComputerParagraph.computer_name:type_name -> pb.ComputerName
+	75,   // 25: pb.ObjectComputerParagraph.memory_size_clause:type_name -> pb.MemorySizeClause
+	76,   // 26: pb.ObjectComputerParagraph.disk_size_clause:type_name -> pb.DiskSizeClause
+	77,   // 27: pb.ObjectComputerParagraph.collating_sequence_clause:type_name -> pb.CollatingSequenceClause
+	78,   // 28: pb.ObjectComputerParagraph.segment_limit_clause:type_name -> pb.SegmentLimitClause
+	79,   // 29: pb.ObjectComputerParagraph.character_set_clause:type_name -> pb.CharacterSetClause
+	3,    // 30: pb.MemorySizeClause.unit:type_name -> pb.MemorySizeClause.Unit
+	397,  // 31: pb.MemorySizeClause.integer_literal:type_name -> pb.IntegerLiteral
+	393,  // 32: pb.MemorySizeClause.cobol_word:type_name -> pb.CobolWord
+	4,    // 33: pb.DiskSizeClause.unit:type_name -> pb.DiskSizeClause.Unit
+	397,  // 34: pb.DiskSizeClause.integer_literal:type_name -> pb.IntegerLiteral
+	393,  // 35: pb.DiskSizeClause.cobol_word:type_name -> pb.CobolWord
+	364,  // 36: pb.CollatingSequenceClause.national:type_name -> pb.AlphabetName
+	364,  // 37: pb.CollatingSequenceClause.alphanumeric:type_name -> pb.AlphabetName
+	364,  // 38: pb.CollatingSequenceClause.alphabet_names:type_name -> pb.AlphabetName
+	397,  // 39: pb.SegmentLimitClause.segment_limit:type_name -> pb.IntegerLiteral
+	81,   // 40: pb.SpecialNamesParagraph.alphabet_clauses:type_name -> pb.AlphabetClause
+	82,   // 41: pb.SpecialNamesParagraph.channel_clause:type_name -> pb.ChannelClause
+	83,   // 42: pb.SpecialNamesParagraph.class_clause:type_name -> pb.ClassClause
+	85,   // 43: pb.SpecialNamesParagraph.currency_sign_clause:type_name -> pb.CurrencySignClause
+	86,   // 44: pb.SpecialNamesParagraph.decimal_point_clause:type_name -> pb.DecimalPointClause
+	87,   // 45: pb.SpecialNamesParagraph.default_display_sign_clause:type_name -> pb.DefaultDisplaySignClause
+	88,   // 46: pb.SpecialNamesParagraph.odt_clause:type_name -> pb.OdtClause
+	89,   // 47: pb.SpecialNamesParagraph.reserve_network_clause:type_name -> pb.ReserveNetworkClause
+	92,   // 48: pb.SpecialNamesParagraph.symbolic_characters_clause:type_name -> pb.SymbolicCharactersClause
+	90,   // 49: pb.SpecialNamesParagraph.default_computational_sign_clause:type_name -> pb.DefaultComputationalSignClause
+	91,   // 50: pb.SpecialNamesParagraph.environment_switch_name_clauses:type_name -> pb.EnvironmentSwitchNameClause
+	364,  // 51: pb.AlphabetClause.alphabet_name:type_name -> pb.AlphabetName
+	409,  // 52: pb.AlphabetClause.alphanumeric:type_name -> pb.AlphabetClause.Alphanumeric
+	410,  // 53: pb.AlphabetClause.national:type_name -> pb.AlphabetClause.National
+	397,  // 54: pb.ChannelClause.Channel:type_name -> pb.IntegerLiteral
+	380,  // 55: pb.ChannelClause.mnemonic_name:type_name -> pb.MnemonicName
+	368,  // 56: pb.ClassClause.class_name:type_name -> pb.ClassName
+	7,    // 57: pb.ClassClause.type:type_name -> pb.ClassClause.Type
+	84,   // 58: pb.ClassClause.class_throughs:type_name -> pb.ClassClauseThrough
+	343,  // 59: pb.ClassClauseThrough.identifier_from:type_name -> pb.Identifier
+	394,  // 60: pb.ClassClauseThrough.literal_from:type_name -> pb.Literal
+	343,  // 61: pb.ClassClauseThrough.identifier_to:type_name -> pb.Identifier
+	394,  // 62: pb.ClassClauseThrough.literal_to:type_name -> pb.Literal
+	394,  // 63: pb.CurrencySignClause.currency_literal:type_name -> pb.Literal
+	394,  // 64: pb.CurrencySignClause.picture_symbol_literal:type_name -> pb.Literal
+	8,    // 65: pb.DefaultDisplaySignClause.type:type_name -> pb.DefaultDisplaySignClause.Type
+	380,  // 66: pb.OdtClause.mnemonic_name:type_name -> pb.MnemonicName
+	9,    // 67: pb.DefaultComputationalSignClause.type:type_name -> pb.DefaultComputationalSignClause.Type
+	373,  // 68: pb.EnvironmentSwitchNameClause.environment_name:type_name -> pb.EnvironmentName
+	380,  // 69: pb.EnvironmentSwitchNameClause.mnemonic_name:type_name -> pb.MnemonicName
+	411,  // 70: pb.EnvironmentSwitchNameClause.status_phrases:type_name -> pb.EnvironmentSwitchNameClause.StatusPhrase
+	10,   // 71: pb.SymbolicCharactersClause.type:type_name -> pb.SymbolicCharactersClause.Type
+	94,   // 72: pb.InputOutputSection.file_control_paragraph:type_name -> pb.FileControlParagraph
+	108,  // 73: pb.InputOutputSection.io_control_paragraph:type_name -> pb.IoControlParagraph
+	95,   // 74: pb.FileControlParagraph.file_control_entries:type_name -> pb.FileControlEntry
+	374,  // 75: pb.FileControlEntry.file_name:type_name -> pb.FileName
+	96,   // 76: pb.FileControlEntry.select_clause:type_name -> pb.SelectClause
+	104,  // 77: pb.FileControlEntry.alternate_record_key_clause:type_name -> pb.AlternateRecordKeyClause
+	97,   // 78: pb.FileControlEntry.assign_clause:type_name -> pb.AssignClause
+	106,  // 79: pb.FileControlEntry.file_status_clause:type_name -> pb.FileStatusClause
+	99,   // 80: pb.FileControlEntry.organization_clause:type_name -> pb.OrganizationClause
+	100,  // 81: pb.FileControlEntry.padding_character_clause:type_name -> pb.PaddingCharacterClause
+	105,  // 82: pb.FileControlEntry.password_clause:type_name -> pb.PasswordClause
+	101,  // 83: pb.FileControlEntry.record_delimiter_clause:type_name -> pb.RecordDelimiterClause
+	103,  // 84: pb.FileControlEntry.record_key_clause:type_name -> pb.RecordKeyClause
+	107,  // 85: pb.FileControlEntry.relative_key_clause:type_name -> pb.RelativeKeyClause
+	98,   // 86: pb.FileControlEntry.reserve_clause:type_name -> pb.ReserveClause
+	102,  // 87: pb.FileControlEntry.access_mode_clause:type_name -> pb.AccessModeClause
+	374,  // 88: pb.SelectClause.file_name:type_name -> pb.FileName
+	11,   // 89: pb.AssignClause.type:type_name -> pb.AssignClause.Type
+	365,  // 90: pb.AssignClause.assignment_name:type_name -> pb.AssignmentName
+	394,  // 91: pb.AssignClause.literal:type_name -> pb.Literal
+	397,  // 92: pb.ReserveClause.value:type_name -> pb.IntegerLiteral
+	12,   // 93: pb.OrganizationClause.mode:type_name -> pb.OrganizationClause.Mode
+	13,   // 94: pb.OrganizationClause.type:type_name -> pb.OrganizationClause.Type
+	353,  // 95: pb.PaddingCharacterClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	394,  // 96: pb.PaddingCharacterClause.literal:type_name -> pb.Literal
+	14,   // 97: pb.RecordDelimiterClause.type:type_name -> pb.RecordDelimiterClause.Type
+	365,  // 98: pb.RecordDelimiterClause.assignment_name:type_name -> pb.AssignmentName
+	15,   // 99: pb.AccessModeClause.mode:type_name -> pb.AccessModeClause.Mode
+	105,  // 100: pb.RecordKeyClause.password_clause:type_name -> pb.PasswordClause
+	353,  // 101: pb.RecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	105,  // 102: pb.AlternateRecordKeyClause.password_clause:type_name -> pb.PasswordClause
+	353,  // 103: pb.AlternateRecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	371,  // 104: pb.PasswordClause.data_name:type_name -> pb.DataName
+	353,  // 105: pb.FileStatusClause.qualified_data_name_1:type_name -> pb.QualifiedDataName
+	353,  // 106: pb.FileStatusClause.qualified_data_name_2:type_name -> pb.QualifiedDataName
+	353,  // 107: pb.RelativeKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	374,  // 108: pb.IoControlParagraph.file_name:type_name -> pb.FileName
+	116,  // 109: pb.IoControlParagraph.commitment_control_clause:type_name -> pb.CommitmentControlClause
+	114,  // 110: pb.IoControlParagraph.multiple_file_clause:type_name -> pb.MultipleFileClause
+	109,  // 111: pb.IoControlParagraph.rerun_clause:type_name -> pb.RerunClause
+	113,  // 112: pb.IoControlParagraph.same_clauses:type_name -> pb.SameClause
+	365,  // 113: pb.RerunClause.assignment_name:type_name -> pb.AssignmentName
+	374,  // 114: pb.RerunClause.file_name:type_name -> pb.FileName
+	112,  // 115: pb.RerunClause.rerun_every_clock:type_name -> pb.RerunEveryClock
+	111,  // 116: pb.RerunClause.rerun_every_of:type_name -> pb.RerunEveryOf
+	110,  // 117: pb.RerunClause.rerun_every_records:type_name -> pb.RerunEveryRecords
+	397,  // 118: pb.RerunEveryRecords.records:type_name -> pb.IntegerLiteral
+	16,   // 119: pb.RerunEveryOf.type:type_name -> pb.RerunEveryOf.Type
+	374,  // 120: pb.RerunEveryOf.file_name:type_name -> pb.FileName
+	397,  // 121: pb.RerunEveryClock.clock_units:type_name -> pb.IntegerLiteral
+	374,  // 122: pb.SameClause.file_names:type_name -> pb.FileName
+	17,   // 123: pb.SameClause.form:type_name -> pb.SameClause.Form
+	115,  // 124: pb.MultipleFileClause.multiple_file_positions:type_name -> pb.MultipleFilePosition
+	397,  // 125: pb.MultipleFilePosition.position:type_name -> pb.IntegerLiteral
+	374,  // 126: pb.MultipleFilePosition.file_name:type_name -> pb.FileName
+	374,  // 127: pb.CommitmentControlClause.file_name:type_name -> pb.FileName
+	218,  // 128: pb.DataDivision.communication_section:type_name -> pb.CommunicationSection
+	234,  // 129: pb.DataDivision.data_base_section:type_name -> pb.DataBaseSection
+	118,  // 130: pb.DataDivision.file_section:type_name -> pb.FileSection
+	217,  // 131: pb.DataDivision.linkage_section:type_name -> pb.LinkageSection
+	216,  // 132: pb.DataDivision.local_storage_section:type_name -> pb.LocalStorageSection
+	209,  // 133: pb.DataDivision.program_library_section:type_name -> pb.ProgramLibrarySection
+	186,  // 134: pb.DataDivision.report_section:type_name -> pb.ReportSection
+	162,  // 135: pb.DataDivision.ScreenSection:type_name -> pb.ScreenSection
+	134,  // 136: pb.DataDivision.working_storage_section:type_name -> pb.WorkingStorageSection
+	119,  // 137: pb.FileSection.file_description_entries:type_name -> pb.FileDescriptionEntry
+	374,  // 138: pb.FileDescriptionEntry.file_name:type_name -> pb.FileName
+	122,  // 139: pb.FileDescriptionEntry.external_clause:type_name -> pb.ExternalClause
+	123,  // 140: pb.FileDescriptionEntry.global_clause:type_name -> pb.GlobalClause
+	124,  // 141: pb.FileDescriptionEntry.block_contains_clause:type_name -> pb.BlockContainsClause
+	125,  // 142: pb.FileDescriptionEntry.record_contains_clause:type_name -> pb.RecordContainsClause
+	126,  // 143: pb.FileDescriptionEntry.label_records_clause:type_name -> pb.LabelRecordsClause
+	127,  // 144: pb.FileDescriptionEntry.value_of_clause:type_name -> pb.ValueOfClause
+	129,  // 145: pb.FileDescriptionEntry.data_records_clause:type_name -> pb.DataRecordsClause
+	131,  // 146: pb.FileDescriptionEntry.linage_clause:type_name -> pb.LinageClause
+	132,  // 147: pb.FileDescriptionEntry.code_set_clause:type_name -> pb.CodeSetClause
+	133,  // 148: pb.FileDescriptionEntry.report_clause:type_name -> pb.ReportClause
+	135,  // 149: pb.FileDescriptionEntry.data_description_entries:type_name -> pb.DataDescriptionEntry
+	121,  // 150: pb.FileDescriptionEntry.recording_mode_clause:type_name -> pb.RecordingModeClause
+	393,  // 151: pb.ModeStatement.cobol_word:type_name -> pb.CobolWord
+	120,  // 152: pb.RecordingModeClause.mode_statement:type_name -> pb.ModeStatement
+	397,  // 153: pb.BlockContainsClause.from:type_name -> pb.IntegerLiteral
+	397,  // 154: pb.BlockContainsClause.to:type_name -> pb.IntegerLiteral
+	18,   // 155: pb.BlockContainsClause.unit:type_name -> pb.BlockContainsClause.Unit
+	397,  // 156: pb.RecordContainsClause.from:type_name -> pb.IntegerLiteral
+	397,  // 157: pb.RecordContainsClause.to:type_name -> pb.IntegerLiteral
+	353,  // 158: pb.RecordContainsClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	19,   // 159: pb.LabelRecordsClause.type:type_name -> pb.LabelRecordsClause.Type
+	412,  // 160: pb.LabelRecordsClause.data_names:type_name -> pb.LabelRecordsClause.DataNames
+	128,  // 161: pb.ValueOfClause.value_pairs:type_name -> pb.ValuePair
+	390,  // 162: pb.ValuePair.system_name:type_name -> pb.SystemName
+	353,  // 163: pb.ValuePair.qualified_data_name:type_name -> pb.QualifiedDataName
+	394,  // 164: pb.ValuePair.literal:type_name -> pb.Literal
+	371,  // 165: pb.DataRecordsClause.data_names:type_name -> pb.DataName
+	371,  // 166: pb.DataNameOrIntegerLiteral.data_name:type_name -> pb.DataName
+	397,  // 167: pb.DataNameOrIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
+	130,  // 168: pb.LinageClause.footing_at:type_name -> pb.DataNameOrIntegerLiteral
+	130,  // 169: pb.LinageClause.lines_at_bottom:type_name -> pb.DataNameOrIntegerLiteral
+	130,  // 170: pb.LinageClause.lines_at_top:type_name -> pb.DataNameOrIntegerLiteral
+	130,  // 171: pb.LinageClause.number_of_lines:type_name -> pb.DataNameOrIntegerLiteral
+	364,  // 172: pb.CodeSetClause.alphabet_name:type_name -> pb.AlphabetName
+	385,  // 173: pb.ReportClause.report_names:type_name -> pb.ReportName
+	135,  // 174: pb.WorkingStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	413,  // 175: pb.DataDescriptionEntry.f1:type_name -> pb.DataDescriptionEntry.Format1
+	414,  // 176: pb.DataDescriptionEntry.f2:type_name -> pb.DataDescriptionEntry.Format2
+	415,  // 177: pb.DataDescriptionEntry.f3:type_name -> pb.DataDescriptionEntry.Format3
+	416,  // 178: pb.DataDescriptionEntry.exec_sql:type_name -> pb.DataDescriptionEntry.ExecSql
+	353,  // 179: pb.DataRenamesClause.from:type_name -> pb.QualifiedDataName
+	353,  // 180: pb.DataRenamesClause.to:type_name -> pb.QualifiedDataName
+	371,  // 181: pb.DataRedefinesClause.data_name:type_name -> pb.DataName
+	394,  // 182: pb.DataExternalClause.literal:type_name -> pb.Literal
+	144,  // 183: pb.DataPictureClause.picture_string:type_name -> pb.PictureString
+	145,  // 184: pb.PictureString.chars:type_name -> pb.PictureChars
+	21,   // 185: pb.PictureChars.type:type_name -> pb.PictureChars.Type
+	397,  // 186: pb.PictureChars.integer_literal:type_name -> pb.IntegerLiteral
+	397,  // 187: pb.PictureCardinality.integer_literal:type_name -> pb.IntegerLiteral
+	22,   // 188: pb.DataCommonOwnLocalClause.type:type_name -> pb.DataCommonOwnLocalClause.Type
+	23,   // 189: pb.DataTypeClause.type:type_name -> pb.DataTypeClause.Type
+	417,  // 190: pb.DataTypeClause.lob:type_name -> pb.DataTypeClause.Lob
+	25,   // 191: pb.DataUsingClause.type:type_name -> pb.DataUsingClause.Type
+	393,  // 192: pb.DataUsingClause.cobol_word:type_name -> pb.CobolWord
+	371,  // 193: pb.DataUsingClause.data_name:type_name -> pb.DataName
+	26,   // 194: pb.DataUsageClause.type:type_name -> pb.DataUsageClause.Type
+	394,  // 195: pb.DataValueInterval.literal_from:type_name -> pb.Literal
+	393,  // 196: pb.DataValueInterval.cobol_word_from:type_name -> pb.CobolWord
+	394,  // 197: pb.DataValueInterval.literal_to:type_name -> pb.Literal
+	151,  // 198: pb.DataValueClause.data_value_interval:type_name -> pb.DataValueInterval
+	27,   // 199: pb.DataReceivedByClause.type:type_name -> pb.DataReceivedByClause.Type
+	343,  // 200: pb.DataOccursClause.identifier:type_name -> pb.Identifier
+	397,  // 201: pb.DataOccursClause.integer_literal:type_name -> pb.IntegerLiteral
+	397,  // 202: pb.DataOccursClause.to:type_name -> pb.IntegerLiteral
+	353,  // 203: pb.DataOccursClause.depending_on:type_name -> pb.QualifiedDataName
+	418,  // 204: pb.DataOccursClause.sorts:type_name -> pb.DataOccursClause.Sort
+	419,  // 205: pb.DataOccursClause.indexes:type_name -> pb.DataOccursClause.Indexed
+	28,   // 206: pb.DataSignClause.type:type_name -> pb.DataSignClause.Type
+	29,   // 207: pb.DataSynchronizedClause.type:type_name -> pb.DataSynchronizedClause.Type
+	163,  // 208: pb.ScreenSection.screen_description_entries:type_name -> pb.ScreenDescriptionEntry
+	388,  // 209: pb.ScreenDescriptionEntry.screen_name:type_name -> pb.ScreenName
+	172,  // 210: pb.ScreenDescriptionEntry.blank_clause:type_name -> pb.BlankClause
+	173,  // 211: pb.ScreenDescriptionEntry.bell_clause:type_name -> pb.BellClause
+	174,  // 212: pb.ScreenDescriptionEntry.blink_clause:type_name -> pb.BlinkClause
+	175,  // 213: pb.ScreenDescriptionEntry.erase_clause:type_name -> pb.EraseClause
+	176,  // 214: pb.ScreenDescriptionEntry.light_clause:type_name -> pb.LightClause
+	177,  // 215: pb.ScreenDescriptionEntry.grid_clause:type_name -> pb.GridClause
+	178,  // 216: pb.ScreenDescriptionEntry.reverse_video_clause:type_name -> pb.ReverseVideoClause
+	179,  // 217: pb.ScreenDescriptionEntry.underline_clause:type_name -> pb.UnderlineClause
+	180,  // 218: pb.ScreenDescriptionEntry.size_clause:type_name -> pb.SizeClause
+	181,  // 219: pb.ScreenDescriptionEntry.line_clause:type_name -> pb.LineClause
+	182,  // 220: pb.ScreenDescriptionEntry.column_clause:type_name -> pb.ColumnClause
+	183,  // 221: pb.ScreenDescriptionEntry.foreground_color_clause:type_name -> pb.ForegroundColorClause
+	184,  // 222: pb.ScreenDescriptionEntry.background_color_clause:type_name -> pb.BackgroundColorClause
+	185,  // 223: pb.ScreenDescriptionEntry.control_clause:type_name -> pb.ControlClause
+	197,  // 224: pb.ScreenDescriptionEntry.value_clause:type_name -> pb.ValueClause
+	204,  // 225: pb.ScreenDescriptionEntry.picture_clause:type_name -> pb.PictureClause
+	171,  // 226: pb.ScreenDescriptionEntry.from_clause:type_name -> pb.FromClause
+	170,  // 227: pb.ScreenDescriptionEntry.using_clause:type_name -> pb.UsingClause
+	208,  // 228: pb.ScreenDescriptionEntry.usage_clause:type_name -> pb.UsageClause
+	203,  // 229: pb.ScreenDescriptionEntry.sign_clause:type_name -> pb.SignClause
+	201,  // 230: pb.ScreenDescriptionEntry.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
+	202,  // 231: pb.ScreenDescriptionEntry.justified_clause:type_name -> pb.JustifiedClause
+	169,  // 232: pb.ScreenDescriptionEntry.auto_clause:type_name -> pb.AutoClause
+	168,  // 233: pb.ScreenDescriptionEntry.secure_clause:type_name -> pb.SecureClause
+	167,  // 234: pb.ScreenDescriptionEntry.required_clause:type_name -> pb.RequiredClause
+	166,  // 235: pb.ScreenDescriptionEntry.prompt_clause:type_name -> pb.PromptClause
+	165,  // 236: pb.ScreenDescriptionEntry.full_clause:type_name -> pb.FullClause
+	164,  // 237: pb.ScreenDescriptionEntry.zero_fill_clause:type_name -> pb.ZeroFillClause
+	30,   // 238: pb.FullClause.type:type_name -> pb.FullClause.Type
+	343,  // 239: pb.PromptClause.identifier:type_name -> pb.Identifier
+	394,  // 240: pb.PromptClause.literal:type_name -> pb.Literal
+	397,  // 241: pb.PromptClause.times:type_name -> pb.IntegerLiteral
+	31,   // 242: pb.RequiredClause.type:type_name -> pb.RequiredClause.Type
+	32,   // 243: pb.SecureClause.type:type_name -> pb.SecureClause.Type
+	33,   // 244: pb.AutoClause.type:type_name -> pb.AutoClause.Type
+	343,  // 245: pb.UsingClause.using:type_name -> pb.Identifier
+	343,  // 246: pb.FromClause.identifier:type_name -> pb.Identifier
+	394,  // 247: pb.FromClause.literal:type_name -> pb.Literal
+	343,  // 248: pb.FromClause.to:type_name -> pb.Identifier
+	34,   // 249: pb.BlankClause.type:type_name -> pb.BlankClause.Type
+	35,   // 250: pb.BellClause.type:type_name -> pb.BellClause.Type
+	36,   // 251: pb.EraseClause.type:type_name -> pb.EraseClause.Type
+	37,   // 252: pb.LightClause.type:type_name -> pb.LightClause.Type
+	38,   // 253: pb.GridClause.type:type_name -> pb.GridClause.Type
+	343,  // 254: pb.SizeClause.identifier:type_name -> pb.Identifier
+	397,  // 255: pb.SizeClause.integer_literal:type_name -> pb.IntegerLiteral
+	39,   // 256: pb.LineClause.type:type_name -> pb.LineClause.Type
+	343,  // 257: pb.LineClause.identifier:type_name -> pb.Identifier
+	397,  // 258: pb.LineClause.integer_literal:type_name -> pb.IntegerLiteral
+	40,   // 259: pb.ColumnClause.type:type_name -> pb.ColumnClause.Type
+	343,  // 260: pb.ColumnClause.identifier:type_name -> pb.Identifier
+	397,  // 261: pb.ColumnClause.integer_literal:type_name -> pb.IntegerLiteral
+	343,  // 262: pb.ForegroundColorClause.identifier:type_name -> pb.Identifier
+	397,  // 263: pb.ForegroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
+	343,  // 264: pb.BackgroundColorClause.identifier:type_name -> pb.Identifier
+	397,  // 265: pb.BackgroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
+	343,  // 266: pb.ControlClause.control:type_name -> pb.Identifier
+	187,  // 267: pb.ReportSection.report_descriptions:type_name -> pb.ReportDescription
+	188,  // 268: pb.ReportDescription.report_description_entry:type_name -> pb.ReportDescriptionEntry
+	194,  // 269: pb.ReportDescription.report_group_description_entries:type_name -> pb.ReportGroupDescriptionEntry
+	385,  // 270: pb.ReportDescriptionEntry.report_name:type_name -> pb.ReportName
+	123,  // 271: pb.ReportDescriptionEntry.global_clause:type_name -> pb.GlobalClause
+	189,  // 272: pb.ReportDescriptionEntry.page_limit_clause:type_name -> pb.PageLimitClause
+	190,  // 273: pb.ReportDescriptionEntry.heading_clause:type_name -> pb.HeadingClause
+	191,  // 274: pb.ReportDescriptionEntry.first_detail_clause:type_name -> pb.FirstDetailClause
+	192,  // 275: pb.ReportDescriptionEntry.last_detail_clause:type_name -> pb.LastDetailClause
+	193,  // 276: pb.ReportDescriptionEntry.footing_clause:type_name -> pb.FootingClause
+	397,  // 277: pb.PageLimitClause.page:type_name -> pb.IntegerLiteral
+	397,  // 278: pb.HeadingClause.heading:type_name -> pb.IntegerLiteral
+	397,  // 279: pb.FirstDetailClause.first_detail:type_name -> pb.IntegerLiteral
+	397,  // 280: pb.LastDetailClause.last_detail:type_name -> pb.IntegerLiteral
+	397,  // 281: pb.FootingClause.footing:type_name -> pb.IntegerLiteral
+	397,  // 282: pb.ReportGroupDescriptionEntry.integer_literal:type_name -> pb.IntegerLiteral
+	371,  // 283: pb.ReportGroupDescriptionEntry.data_name:type_name -> pb.DataName
+	420,  // 284: pb.ReportGroupDescriptionEntry.vertical:type_name -> pb.ReportGroupDescriptionEntry.Vertical
+	421,  // 285: pb.ReportGroupDescriptionEntry.single:type_name -> pb.ReportGroupDescriptionEntry.Single
+	422,  // 286: pb.ReportGroupDescriptionEntry.printable:type_name -> pb.ReportGroupDescriptionEntry.Printable
+	371,  // 287: pb.ResetClause.data_name:type_name -> pb.DataName
+	343,  // 288: pb.SumClause.sums:type_name -> pb.Identifier
+	371,  // 289: pb.SumClause.upons:type_name -> pb.DataName
+	394,  // 290: pb.ValueClause.value:type_name -> pb.Literal
+	343,  // 291: pb.SourceClause.source:type_name -> pb.Identifier
+	397,  // 292: pb.ColumnNumberClause.column_number:type_name -> pb.IntegerLiteral
+	41,   // 293: pb.SignClause.type:type_name -> pb.SignClause.Type
+	144,  // 294: pb.PictureClause.picture_string:type_name -> pb.PictureString
+	397,  // 295: pb.LineNumberClause.next_page:type_name -> pb.IntegerLiteral
+	397,  // 296: pb.LineNumberClause.plus:type_name -> pb.IntegerLiteral
+	397,  // 297: pb.NextGroupClause.next_group:type_name -> pb.IntegerLiteral
+	397,  // 298: pb.NextGroupClause.plus:type_name -> pb.IntegerLiteral
+	423,  // 299: pb.TypeClause.report_heading:type_name -> pb.TypeClause.ReportHeading
+	424,  // 300: pb.TypeClause.page_heading:type_name -> pb.TypeClause.PageHeading
+	425,  // 301: pb.TypeClause.control_heading:type_name -> pb.TypeClause.ControlHeading
+	426,  // 302: pb.TypeClause.detail:type_name -> pb.TypeClause.Detail
+	427,  // 303: pb.TypeClause.control_footing:type_name -> pb.TypeClause.ControlFooting
+	428,  // 304: pb.TypeClause.page_footing:type_name -> pb.TypeClause.PageFooting
+	429,  // 305: pb.TypeClause.report_footing:type_name -> pb.TypeClause.ReportFooting
+	210,  // 306: pb.ProgramLibrarySection.library_description_entries:type_name -> pb.LibraryDescriptionEntry
+	378,  // 307: pb.LibraryDescriptionEntry.library_name:type_name -> pb.LibraryName
+	430,  // 308: pb.LibraryDescriptionEntry.import:type_name -> pb.LibraryDescriptionEntry.Import
+	431,  // 309: pb.LibraryDescriptionEntry.export:type_name -> pb.LibraryDescriptionEntry.Export
+	42,   // 310: pb.AttributeClause1.sharing:type_name -> pb.AttributeClause1.Sharing
+	394,  // 311: pb.AttributeClause2.function_name:type_name -> pb.Literal
+	43,   // 312: pb.AttributeClause2.lib_access:type_name -> pb.AttributeClause2.LibAccess
+	394,  // 313: pb.AttributeClause2.lib_parameter:type_name -> pb.Literal
+	394,  // 314: pb.AttributeClause2.title:type_name -> pb.Literal
+	383,  // 315: pb.ProcedureClause1.program_name:type_name -> pb.ProgramName
+	394,  // 316: pb.ProcedureClause1.for:type_name -> pb.Literal
+	383,  // 317: pb.ProcedureClause2.program_name:type_name -> pb.ProgramName
+	394,  // 318: pb.ProcedureClause2.for:type_name -> pb.Literal
+	432,  // 319: pb.ProcedureClause2.with_names:type_name -> pb.ProcedureClause2.WithName
+	433,  // 320: pb.ProcedureClause2.using_names:type_name -> pb.ProcedureClause2.UsingName
+	371,  // 321: pb.ProcedureClause2.giving:type_name -> pb.DataName
+	135,  // 322: pb.LocalStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	379,  // 323: pb.LocalStorageSection.local_name:type_name -> pb.LocalName
+	135,  // 324: pb.LinkageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	219,  // 325: pb.CommunicationSection.communication_description_entries:type_name -> pb.CommunicationDescriptionEntry
+	135,  // 326: pb.CommunicationSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	367,  // 327: pb.CommunicationDescriptionEntry.cd_name:type_name -> pb.CdName
+	434,  // 328: pb.CommunicationDescriptionEntry.input:type_name -> pb.CommunicationDescriptionEntry.Input
+	435,  // 329: pb.CommunicationDescriptionEntry.output:type_name -> pb.CommunicationDescriptionEntry.Output
+	436,  // 330: pb.CommunicationDescriptionEntry.io:type_name -> pb.CommunicationDescriptionEntry.Io
+	372,  // 331: pb.SymbolicTerminalClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 332: pb.SymbolicDestinationClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 333: pb.ErrorKeyClause.data_desc_name:type_name -> pb.DataDescName
+	397,  // 334: pb.DestinationTableClause.times:type_name -> pb.IntegerLiteral
+	376,  // 335: pb.DestinationTableClause.indexes:type_name -> pb.IndexName
+	372,  // 336: pb.DestinationCountClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 337: pb.SymbolicQueueClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 338: pb.SymbolicSubQueueClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 339: pb.MessageDateClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 340: pb.MessageTimeClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 341: pb.SymbolicSourceClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 342: pb.TextLengthClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 343: pb.EndKeyClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 344: pb.StatusKeyClause.data_desc_name:type_name -> pb.DataDescName
+	372,  // 345: pb.MessageCountClause.data_desc_name:type_name -> pb.DataDescName
+	235,  // 346: pb.DataBaseSection.data_base_section_entries:type_name -> pb.DataBaseSectionEntry
+	397,  // 347: pb.DataBaseSectionEntry.integer_literal:type_name -> pb.IntegerLiteral
+	394,  // 348: pb.DataBaseSectionEntry.literal:type_name -> pb.Literal
+	394,  // 349: pb.DataBaseSectionEntry.invoke:type_name -> pb.Literal
+	443,  // 350: pb.ProcedureDivision.using_clause:type_name -> pb.ProcedureDivision.UsingClause
+	442,  // 351: pb.ProcedureDivision.giving_clause:type_name -> pb.ProcedureDivision.GivingClause
+	238,  // 352: pb.ProcedureDivision.declaratives:type_name -> pb.Declarative
+	240,  // 353: pb.ProcedureDivision.paragraphs:type_name -> pb.Paragraphs
+	237,  // 354: pb.ProcedureDivision.procedure_sections:type_name -> pb.ProcedureSection
+	239,  // 355: pb.ProcedureSection.procedure_section_header:type_name -> pb.ProcedureSectionHeader
+	240,  // 356: pb.ProcedureSection.paragraphs:type_name -> pb.Paragraphs
+	239,  // 357: pb.Declarative.procedure_section_header:type_name -> pb.ProcedureSectionHeader
+	320,  // 358: pb.Declarative.use_statement:type_name -> pb.UseStatement
+	240,  // 359: pb.Declarative.paragraphs:type_name -> pb.Paragraphs
+	389,  // 360: pb.ProcedureSectionHeader.section_name:type_name -> pb.SectionName
+	397,  // 361: pb.ProcedureSectionHeader.integer_literal:type_name -> pb.IntegerLiteral
+	242,  // 362: pb.Paragraphs.sentences:type_name -> pb.Sentences
+	241,  // 363: pb.Paragraphs.paragraphs:type_name -> pb.Paragraph
+	381,  // 364: pb.Paragraph.paragraph_name:type_name -> pb.ParagraphName
+	242,  // 365: pb.Paragraph.sentences:type_name -> pb.Sentences
+	243,  // 366: pb.Sentences.sentences:type_name -> pb.Sentence
+	244,  // 367: pb.Sentence.statements:type_name -> pb.Statement
+	307,  // 368: pb.Statement.accept_statement:type_name -> pb.AcceptStatement
+	306,  // 369: pb.Statement.add_statement:type_name -> pb.AddStatement
+	305,  // 370: pb.Statement.alter_statement:type_name -> pb.AlterStatement
+	304,  // 371: pb.Statement.call_statement:type_name -> pb.CallStatement
+	303,  // 372: pb.Statement.cancel_statement:type_name -> pb.CancelStatement
+	301,  // 373: pb.Statement.close_statement:type_name -> pb.CloseStatement
+	295,  // 374: pb.Statement.compute_statement:type_name -> pb.ComputeStatement
+	293,  // 375: pb.Statement.continue_statement:type_name -> pb.ContinueStatement
+	292,  // 376: pb.Statement.delete_statement:type_name -> pb.DeleteStatement
+	291,  // 377: pb.Statement.disable_statement:type_name -> pb.DisableStatement
+	290,  // 378: pb.Statement.display_statement:type_name -> pb.DisplayStatement
+	285,  // 379: pb.Statement.divide_statement:type_name -> pb.DivideStatement
+	284,  // 380: pb.Statement.enable_statement:type_name -> pb.EnableStatement
+	283,  // 381: pb.Statement.entry_statement:type_name -> pb.EntryStatement
+	282,  // 382: pb.Statement.evaluate_statement:type_name -> pb.EvaluateStatement
+	281,  // 383: pb.Statement.exhibit_statement:type_name -> pb.ExhibitStatement
+	280,  // 384: pb.Statement.exec_cics_statement:type_name -> pb.ExecCicsStatement
+	279,  // 385: pb.Statement.exec_sql_statement:type_name -> pb.ExecSqlStatement
+	278,  // 386: pb.Statement.exec_sql_ims_statement:type_name -> pb.ExecSqlImsStatement
+	277,  // 387: pb.Statement.exit_statement:type_name -> pb.ExitStatement
+	276,  // 388: pb.Statement.generate_statement:type_name -> pb.GenerateStatement
+	275,  // 389: pb.Statement.goback_statement:type_name -> pb.GobackStatement
+	274,  // 390: pb.Statement.go_to_statement:type_name -> pb.GoToStatement
+	273,  // 391: pb.Statement.if_statement:type_name -> pb.IfStatement
+	272,  // 392: pb.Statement.initialize_statement:type_name -> pb.InitializeStatement
+	271,  // 393: pb.Statement.initiate_statement:type_name -> pb.InitiateStatement
+	270,  // 394: pb.Statement.inspect_statement:type_name -> pb.InspectStatement
+	269,  // 395: pb.Statement.merge_statement:type_name -> pb.MergeStatement
+	266,  // 396: pb.Statement.move_statement:type_name -> pb.MoveStatement
+	265,  // 397: pb.Statement.multiply_statement:type_name -> pb.MultiplyStatement
+	264,  // 398: pb.Statement.next_sentence_statement:type_name -> pb.NextSentenceStatement
+	263,  // 399: pb.Statement.open_statement:type_name -> pb.OpenStatement
+	262,  // 400: pb.Statement.perform_statement:type_name -> pb.PerformStatement
+	261,  // 401: pb.Statement.purge_statement:type_name -> pb.PurgeStatement
+	260,  // 402: pb.Statement.read_statement:type_name -> pb.ReadStatement
+	259,  // 403: pb.Statement.receive_statement:type_name -> pb.ReceiveStatement
+	258,  // 404: pb.Statement.release_statement:type_name -> pb.ReleaseStatement
+	257,  // 405: pb.Statement.return_statement:type_name -> pb.ReturnStatement
+	256,  // 406: pb.Statement.rewrite_statement:type_name -> pb.RewriteStatement
+	255,  // 407: pb.Statement.search_statement:type_name -> pb.SearchStatement
+	254,  // 408: pb.Statement.send_statement:type_name -> pb.SendStatement
+	253,  // 409: pb.Statement.set_statement:type_name -> pb.SetStatement
+	252,  // 410: pb.Statement.sort_statement:type_name -> pb.SortStatement
+	251,  // 411: pb.Statement.start_statement:type_name -> pb.StartStatement
+	250,  // 412: pb.Statement.stop_statement:type_name -> pb.StopStatement
+	249,  // 413: pb.Statement.string_statement:type_name -> pb.StringStatement
+	248,  // 414: pb.Statement.subtract_statement:type_name -> pb.SubtractStatement
+	247,  // 415: pb.Statement.terminate_statement:type_name -> pb.TerminateStatement
+	246,  // 416: pb.Statement.unstring_statement:type_name -> pb.UnstringStatement
+	245,  // 417: pb.Statement.write_statement:type_name -> pb.WriteStatement
+	384,  // 418: pb.WriteStatement.record_name:type_name -> pb.RecordName
+	444,  // 419: pb.WriteStatement.from_phrase:type_name -> pb.WriteStatement.FromPhrase
+	448,  // 420: pb.WriteStatement.advancing_phrase:type_name -> pb.WriteStatement.AdvancingPhrase
+	308,  // 421: pb.WriteStatement.at_end_of_page_phrase:type_name -> pb.AtEndOfPagePhrase
+	309,  // 422: pb.WriteStatement.not_at_end_of_page_phrase:type_name -> pb.NotAtEndOfPagePhrase
+	314,  // 423: pb.WriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	315,  // 424: pb.WriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	455,  // 425: pb.UnstringStatement.sending_phrase:type_name -> pb.UnstringStatement.SendingPhrase
+	456,  // 426: pb.UnstringStatement.into_phrase:type_name -> pb.UnstringStatement.IntoPhrase
+	457,  // 427: pb.UnstringStatement.with_pointer_phrase:type_name -> pb.UnstringStatement.WithPointerPhrase
+	458,  // 428: pb.UnstringStatement.tallying_phrase:type_name -> pb.UnstringStatement.TallyingPhrase
+	312,  // 429: pb.UnstringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
+	313,  // 430: pb.UnstringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
+	385,  // 431: pb.TerminateStatement.report_name:type_name -> pb.ReportName
+	464,  // 432: pb.SubtractStatement.from_statement:type_name -> pb.SubtractStatement.FromStatement
+	465,  // 433: pb.SubtractStatement.from_giving_statement:type_name -> pb.SubtractStatement.FromGivingStatement
+	466,  // 434: pb.SubtractStatement.corresponding_statement:type_name -> pb.SubtractStatement.CorrespondingStatement
+	310,  // 435: pb.SubtractStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	311,  // 436: pb.SubtractStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	470,  // 437: pb.StringStatement.sending_phrases:type_name -> pb.StringStatement.SendingPhrase
+	471,  // 438: pb.StringStatement.into_phrase:type_name -> pb.StringStatement.IntoPhrase
+	472,  // 439: pb.StringStatement.with_pointer_phrase:type_name -> pb.StringStatement.WithPointerPhrase
+	312,  // 440: pb.StringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
+	313,  // 441: pb.StringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
+	394,  // 442: pb.StopStatement.literal:type_name -> pb.Literal
+	473,  // 443: pb.StopStatement.giving:type_name -> pb.StopStatement.Giving
+	374,  // 444: pb.StartStatement.file_name:type_name -> pb.FileName
+	474,  // 445: pb.StartStatement.key:type_name -> pb.StartStatement.Key
+	314,  // 446: pb.StartStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	315,  // 447: pb.StartStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	374,  // 448: pb.SortStatement.file_name:type_name -> pb.FileName
+	475,  // 449: pb.SortStatement.on_key_clauses:type_name -> pb.SortStatement.OnKeyClause
+	476,  // 450: pb.SortStatement.duplicates_phrase:type_name -> pb.SortStatement.DuplicatesPhrase
+	479,  // 451: pb.SortStatement.collating_sequence_phrase:type_name -> pb.SortStatement.CollatingSequencePhrase
+	481,  // 452: pb.SortStatement.input_procedure_phrase:type_name -> pb.SortStatement.InputProcedurePhrase
+	482,  // 453: pb.SortStatement.usings:type_name -> pb.SortStatement.Using
+	484,  // 454: pb.SortStatement.output_procedure_phrase:type_name -> pb.SortStatement.OutputProcedurePhrase
+	486,  // 455: pb.SortStatement.giving_phrases:type_name -> pb.SortStatement.GivingPhrase
+	491,  // 456: pb.SetStatement.to_statements:type_name -> pb.SetStatement.ToStatement
+	492,  // 457: pb.SetStatement.up_down_by_statement:type_name -> pb.SetStatement.UpDownByStatement
+	500,  // 458: pb.SendStatement.sync_statement:type_name -> pb.SendStatement.SyncStatement
+	501,  // 459: pb.SendStatement.async_statement:type_name -> pb.SendStatement.AsyncStatement
+	318,  // 460: pb.SendStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	319,  // 461: pb.SendStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	353,  // 462: pb.SearchStatement.qualified_data_name:type_name -> pb.QualifiedDataName
+	502,  // 463: pb.SearchStatement.varying:type_name -> pb.SearchStatement.Varying
+	503,  // 464: pb.SearchStatement.when:type_name -> pb.SearchStatement.When
+	384,  // 465: pb.RewriteStatement.record_name:type_name -> pb.RecordName
+	504,  // 466: pb.RewriteStatement.from:type_name -> pb.RewriteStatement.From
+	314,  // 467: pb.RewriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	315,  // 468: pb.RewriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	374,  // 469: pb.ReturnStatement.file_name:type_name -> pb.FileName
+	505,  // 470: pb.ReturnStatement.into:type_name -> pb.ReturnStatement.Into
+	316,  // 471: pb.ReturnStatement.at_end_phrase:type_name -> pb.AtEndPhrase
+	317,  // 472: pb.ReturnStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
+	384,  // 473: pb.ReleaseStatement.record_name:type_name -> pb.RecordName
+	506,  // 474: pb.ReleaseStatement.from:type_name -> pb.ReleaseStatement.From
+	513,  // 475: pb.ReceiveStatement.from_statement:type_name -> pb.ReceiveStatement.FromStatement
+	516,  // 476: pb.ReceiveStatement.into_statement:type_name -> pb.ReceiveStatement.IntoStatement
+	318,  // 477: pb.ReceiveStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	319,  // 478: pb.ReceiveStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	374,  // 479: pb.ReadStatement.file_name:type_name -> pb.FileName
+	517,  // 480: pb.ReadStatement.into:type_name -> pb.ReadStatement.Into
+	518,  // 481: pb.ReadStatement.with:type_name -> pb.ReadStatement.With
+	519,  // 482: pb.ReadStatement.key:type_name -> pb.ReadStatement.Key
+	316,  // 483: pb.ReadStatement.at_end_phrase:type_name -> pb.AtEndPhrase
+	317,  // 484: pb.ReadStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
+	314,  // 485: pb.ReadStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	315,  // 486: pb.ReadStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	367,  // 487: pb.PurgeStatement.cd_names:type_name -> pb.CdName
+	530,  // 488: pb.PerformStatement.inline_statement:type_name -> pb.PerformStatement.InlineStatement
+	531,  // 489: pb.PerformStatement.procedure_statement:type_name -> pb.PerformStatement.ProcedureStatement
+	533,  // 490: pb.OpenStatement.input_statement:type_name -> pb.OpenStatement.InputStatement
+	535,  // 491: pb.OpenStatement.output_statement:type_name -> pb.OpenStatement.OutputStatement
+	536,  // 492: pb.OpenStatement.io_statement:type_name -> pb.OpenStatement.IOStatement
+	537,  // 493: pb.OpenStatement.extend_statement:type_name -> pb.OpenStatement.ExtendStatement
+	343,  // 494: pb.MultiplyStatement.identifier:type_name -> pb.Identifier
+	394,  // 495: pb.MultiplyStatement.literal:type_name -> pb.Literal
+	541,  // 496: pb.MultiplyStatement.regular:type_name -> pb.MultiplyStatement.Regular
+	540,  // 497: pb.MultiplyStatement.giving:type_name -> pb.MultiplyStatement.Giving
+	310,  // 498: pb.MultiplyStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	311,  // 499: pb.MultiplyStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	267,  // 500: pb.MoveStatement.move_to:type_name -> pb.MoveToStatement
+	268,  // 501: pb.MoveStatement.move_corresponding_to:type_name -> pb.MoveCorrespondingToStatement
+	343,  // 502: pb.MoveToStatement.identifier:type_name -> pb.Identifier
+	394,  // 503: pb.MoveToStatement.literal:type_name -> pb.Literal
+	343,  // 504: pb.MoveToStatement.to:type_name -> pb.Identifier
+	343,  // 505: pb.MoveCorrespondingToStatement.sending_area:type_name -> pb.Identifier
+	343,  // 506: pb.MoveCorrespondingToStatement.to:type_name -> pb.Identifier
+	374,  // 507: pb.MergeStatement.file_name:type_name -> pb.FileName
+	542,  // 508: pb.MergeStatement.on_key_clauses:type_name -> pb.MergeStatement.OnKeyClause
+	543,  // 509: pb.MergeStatement.collating_sequence_phrase:type_name -> pb.MergeStatement.CollatingSequencePhrase
+	546,  // 510: pb.MergeStatement.usings:type_name -> pb.MergeStatement.Using
+	547,  // 511: pb.MergeStatement.output_procedure_phrase:type_name -> pb.MergeStatement.OutputProcedurePhrase
+	549,  // 512: pb.MergeStatement.giving_phrases:type_name -> pb.MergeStatement.GivingPhrase
+	343,  // 513: pb.InspectStatement.identifier:type_name -> pb.Identifier
+	566,  // 514: pb.InspectStatement.tallying_phrase:type_name -> pb.InspectStatement.TallyingPhrase
+	565,  // 515: pb.InspectStatement.tallying_replacing_phrase:type_name -> pb.InspectStatement.TallyingReplacingPhrase
+	564,  // 516: pb.InspectStatement.replacing_phrase:type_name -> pb.InspectStatement.ReplacingPhrase
+	562,  // 517: pb.InspectStatement.converting_phrase:type_name -> pb.InspectStatement.ConvertingPhrase
+	385,  // 518: pb.InitiateStatement.report_names:type_name -> pb.ReportName
+	343,  // 519: pb.InitializeStatement.identifiers:type_name -> pb.Identifier
+	568,  // 520: pb.InitializeStatement.replacing_phrase:type_name -> pb.InitializeStatement.ReplacingPhrase
+	331,  // 521: pb.IfStatement.condition:type_name -> pb.Condition
+	569,  // 522: pb.IfStatement.then:type_name -> pb.IfStatement.Then
+	570,  // 523: pb.IfStatement.else:type_name -> pb.IfStatement.Else
+	571,  // 524: pb.GoToStatement.simple:type_name -> pb.GoToStatement.SimpleStatement
+	573,  // 525: pb.GoToStatement.depending_on:type_name -> pb.GoToStatement.DependingOnStatement
+	385,  // 526: pb.GenerateStatement.report_name:type_name -> pb.ReportName
+	574,  // 527: pb.ExhibitStatement.operands:type_name -> pb.ExhibitStatement.Operand
+	575,  // 528: pb.EvaluateStatement.select:type_name -> pb.EvaluateStatement.Select
+	576,  // 529: pb.EvaluateStatement.also_selects:type_name -> pb.EvaluateStatement.AlsoSelect
+	584,  // 530: pb.EvaluateStatement.when_phrases:type_name -> pb.EvaluateStatement.WhenPhrase
+	582,  // 531: pb.EvaluateStatement.when_other:type_name -> pb.EvaluateStatement.WhenOther
+	394,  // 532: pb.EntryStatement.entry:type_name -> pb.Literal
+	343,  // 533: pb.EntryStatement.usings:type_name -> pb.Identifier
+	367,  // 534: pb.EnableStatement.cd_name:type_name -> pb.CdName
+	343,  // 535: pb.EnableStatement.identifier:type_name -> pb.Identifier
+	394,  // 536: pb.EnableStatement.literal:type_name -> pb.Literal
+	343,  // 537: pb.DivideStatement.identifier:type_name -> pb.Identifier
+	394,  // 538: pb.DivideStatement.literal:type_name -> pb.Literal
+	588,  // 539: pb.DivideStatement.into_statement:type_name -> pb.DivideStatement.IntoStatement
+	589,  // 540: pb.DivideStatement.into_giving_statement:type_name -> pb.DivideStatement.IntoGivingStatement
+	590,  // 541: pb.DivideStatement.by_giving_statement:type_name -> pb.DivideStatement.ByGivingStatement
+	591,  // 542: pb.DivideStatement.remainder:type_name -> pb.DivideStatement.Remainder
+	310,  // 543: pb.DivideStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	311,  // 544: pb.DivideStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	343,  // 545: pb.DisplayOperand.Identifier:type_name -> pb.Identifier
+	394,  // 546: pb.DisplayOperand.Literal:type_name -> pb.Literal
+	343,  // 547: pb.DisplayAt.Identifier:type_name -> pb.Identifier
+	394,  // 548: pb.DisplayAt.Literal:type_name -> pb.Literal
+	380,  // 549: pb.DisplayUpon.mnemonic_name:type_name -> pb.MnemonicName
+	373,  // 550: pb.DisplayUpon.environment_name:type_name -> pb.EnvironmentName
+	286,  // 551: pb.DisplayStatement.operands:type_name -> pb.DisplayOperand
+	287,  // 552: pb.DisplayStatement.at:type_name -> pb.DisplayAt
+	288,  // 553: pb.DisplayStatement.upon:type_name -> pb.DisplayUpon
+	289,  // 554: pb.DisplayStatement.with:type_name -> pb.DisplayWith
+	318,  // 555: pb.DisplayStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	319,  // 556: pb.DisplayStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	367,  // 557: pb.DisableStatement.cd_name:type_name -> pb.CdName
+	343,  // 558: pb.DisableStatement.identifier:type_name -> pb.Identifier
+	394,  // 559: pb.DisableStatement.literal:type_name -> pb.Literal
+	374,  // 560: pb.DeleteStatement.file_name:type_name -> pb.FileName
+	314,  // 561: pb.DeleteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	315,  // 562: pb.DeleteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	343,  // 563: pb.ComputeStore.identifier:type_name -> pb.Identifier
+	294,  // 564: pb.ComputeStatement.stores:type_name -> pb.ComputeStore
+	324,  // 565: pb.ComputeStatement.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	310,  // 566: pb.ComputeStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	311,  // 567: pb.ComputeStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	592,  // 568: pb.ClosePortFileIOUsing.close_disposition:type_name -> pb.ClosePortFileIOUsing.CloseDisposition
+	593,  // 569: pb.ClosePortFileIOUsing.associated_data:type_name -> pb.ClosePortFileIOUsing.AssociatedData
+	594,  // 570: pb.ClosePortFileIOUsing.associated_data_length:type_name -> pb.ClosePortFileIOUsing.AssociatedDataLength
+	298,  // 571: pb.ClosePortFileIOStatement.usings:type_name -> pb.ClosePortFileIOUsing
+	374,  // 572: pb.CloseFile.file_name:type_name -> pb.FileName
+	296,  // 573: pb.CloseFile.close_reel_unit_statement:type_name -> pb.CloseReelUnitStatement
+	297,  // 574: pb.CloseFile.close_relative_statement:type_name -> pb.CloseRelativeStatement
+	299,  // 575: pb.CloseFile.close_port_file_io_statement:type_name -> pb.ClosePortFileIOStatement
+	300,  // 576: pb.CloseStatement.close_files:type_name -> pb.CloseFile
+	378,  // 577: pb.CancelCall.library_name:type_name -> pb.LibraryName
+	343,  // 578: pb.CancelCall.identifier:type_name -> pb.Identifier
+	394,  // 579: pb.CancelCall.literal:type_name -> pb.Literal
+	302,  // 580: pb.CancelStatement.calls:type_name -> pb.CancelCall
+	343,  // 581: pb.CallStatement.target_identifier:type_name -> pb.Identifier
+	394,  // 582: pb.CallStatement.target_literal:type_name -> pb.Literal
+	602,  // 583: pb.CallStatement.using_phrase:type_name -> pb.CallStatement.UsingPhrase
+	603,  // 584: pb.CallStatement.giving_phrase:type_name -> pb.CallStatement.GivingPhrase
+	312,  // 585: pb.CallStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
+	318,  // 586: pb.CallStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	319,  // 587: pb.CallStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	604,  // 588: pb.AlterStatement.proceed_tos:type_name -> pb.AlterStatement.ProceedTo
+	607,  // 589: pb.AddStatement.to:type_name -> pb.AddStatement.To
+	608,  // 590: pb.AddStatement.to_giving:type_name -> pb.AddStatement.ToGiving
+	609,  // 591: pb.AddStatement.corresponding:type_name -> pb.AddStatement.Corresponding
+	310,  // 592: pb.AddStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	311,  // 593: pb.AddStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	343,  // 594: pb.AcceptStatement.identifier:type_name -> pb.Identifier
+	610,  // 595: pb.AcceptStatement.from_date:type_name -> pb.AcceptStatement.FromDate
+	611,  // 596: pb.AcceptStatement.from_escape_key:type_name -> pb.AcceptStatement.FromEscapeKey
+	612,  // 597: pb.AcceptStatement.from_mnemonic:type_name -> pb.AcceptStatement.FromMnemonic
+	613,  // 598: pb.AcceptStatement.message_count:type_name -> pb.AcceptStatement.MessageCount
+	318,  // 599: pb.AcceptStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	319,  // 600: pb.AcceptStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	244,  // 601: pb.AtEndOfPagePhrase.statements:type_name -> pb.Statement
+	244,  // 602: pb.NotAtEndOfPagePhrase.statements:type_name -> pb.Statement
+	244,  // 603: pb.OnSizeErrorPhrase.statements:type_name -> pb.Statement
+	244,  // 604: pb.NotOnSizeErrorPhrase.statements:type_name -> pb.Statement
+	244,  // 605: pb.OnOverflowPhrase.statements:type_name -> pb.Statement
+	244,  // 606: pb.NotOnOverflowPhrase.statements:type_name -> pb.Statement
+	244,  // 607: pb.InvalidKeyPhrase.statements:type_name -> pb.Statement
+	244,  // 608: pb.NotInvalidKeyPhrase.statements:type_name -> pb.Statement
+	244,  // 609: pb.AtEndPhrase.statements:type_name -> pb.Statement
+	244,  // 610: pb.NotAtEndPhrase.statements:type_name -> pb.Statement
+	244,  // 611: pb.OnExceptionClause.statements:type_name -> pb.Statement
+	244,  // 612: pb.NotOnExceptionClause.statements:type_name -> pb.Statement
+	323,  // 613: pb.UseStatement.use_after_clause:type_name -> pb.UseAfterClause
+	322,  // 614: pb.UseStatement.use_debug_clause:type_name -> pb.UseDebugClause
+	343,  // 615: pb.UseDebugOn.Identifier:type_name -> pb.Identifier
+	382,  // 616: pb.UseDebugOn.procedureName:type_name -> pb.ProcedureName
+	374,  // 617: pb.UseDebugOn.fileName:type_name -> pb.FileName
+	321,  // 618: pb.UseDebugClause.ons:type_name -> pb.UseDebugOn
+	51,   // 619: pb.UseAfterClause.type:type_name -> pb.UseAfterClause.Type
+	614,  // 620: pb.UseAfterClause.file_names:type_name -> pb.UseAfterClause.FileNames
+	326,  // 621: pb.ArithmeticExpression.mult_divs:type_name -> pb.MultDivs
+	325,  // 622: pb.ArithmeticExpression.plus_minus:type_name -> pb.PlusMinus
+	326,  // 623: pb.PlusMinus.mult_divs:type_name -> pb.MultDivs
+	328,  // 624: pb.MultDivs.powers:type_name -> pb.Powers
+	327,  // 625: pb.MultDivs.mult_div:type_name -> pb.MultDiv
+	328,  // 626: pb.MultDiv.powers:type_name -> pb.Powers
+	330,  // 627: pb.Powers.basis:type_name -> pb.Basis
+	329,  // 628: pb.Powers.powers:type_name -> pb.Power
+	330,  // 629: pb.Power.basis:type_name -> pb.Basis
+	324,  // 630: pb.Basis.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	343,  // 631: pb.Basis.identifier:type_name -> pb.Identifier
+	394,  // 632: pb.Basis.literal:type_name -> pb.Literal
+	333,  // 633: pb.Condition.combinable_condition:type_name -> pb.CombinableCondition
+	332,  // 634: pb.Condition.and_or_condition:type_name -> pb.AndOrCondition
+	52,   // 635: pb.AndOrCondition.and_or:type_name -> pb.AndOrCondition.AndOr
+	333,  // 636: pb.AndOrCondition.combinable_condition:type_name -> pb.CombinableCondition
+	342,  // 637: pb.AndOrCondition.abbreviations:type_name -> pb.Abbreviation
+	334,  // 638: pb.CombinableCondition.simple_condition:type_name -> pb.SimpleCondition
+	331,  // 639: pb.SimpleCondition.condition:type_name -> pb.Condition
+	337,  // 640: pb.SimpleCondition.relation_condition:type_name -> pb.RelationCondition
+	335,  // 641: pb.SimpleCondition.class_condition:type_name -> pb.ClassCondition
+	336,  // 642: pb.SimpleCondition.condition_name_reference:type_name -> pb.ConditionNameReference
+	343,  // 643: pb.ClassCondition.identifier:type_name -> pb.Identifier
+	53,   // 644: pb.ClassCondition.value:type_name -> pb.ClassCondition.Type
+	368,  // 645: pb.ClassCondition.class_name:type_name -> pb.ClassName
+	370,  // 646: pb.ConditionNameReference.condition_name:type_name -> pb.ConditionName
+	616,  // 647: pb.ConditionNameReference.in_subscript:type_name -> pb.ConditionNameReference.InSubscript
+	360,  // 648: pb.ConditionNameReference.in_mnemonic:type_name -> pb.InMnemonic
+	338,  // 649: pb.RelationCondition.relation_sign_condition:type_name -> pb.RelationSignCondition
+	339,  // 650: pb.RelationCondition.relation_arithmetic_comparison:type_name -> pb.RelationArithmeticComparison
+	340,  // 651: pb.RelationCondition.relation_combined_comparison:type_name -> pb.RelationCombinedComparison
+	324,  // 652: pb.RelationSignCondition.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	54,   // 653: pb.RelationSignCondition.type:type_name -> pb.RelationSignCondition.Type
+	324,  // 654: pb.RelationArithmeticComparison.left_expression:type_name -> pb.ArithmeticExpression
 	0,    // 655: pb.RelationArithmeticComparison.relational_operator:type_name -> pb.RelationalOperator
-	323,  // 656: pb.RelationArithmeticComparison.right_expression:type_name -> pb.ArithmeticExpression
-	323,  // 657: pb.RelationCombinedComparison.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	324,  // 656: pb.RelationArithmeticComparison.right_expression:type_name -> pb.ArithmeticExpression
+	324,  // 657: pb.RelationCombinedComparison.arithmetic_expression:type_name -> pb.ArithmeticExpression
 	0,    // 658: pb.RelationCombinedComparison.relational_operator:type_name -> pb.RelationalOperator
-	340,  // 659: pb.RelationCombinedComparison.relation_combined_condition:type_name -> pb.RelationCombinedCondition
-	323,  // 660: pb.RelationCombinedCondition.left_expression:type_name -> pb.ArithmeticExpression
-	54,   // 661: pb.RelationCombinedCondition.and_or:type_name -> pb.RelationCombinedCondition.AndOr
-	323,  // 662: pb.RelationCombinedCondition.right_expressions:type_name -> pb.ArithmeticExpression
+	341,  // 659: pb.RelationCombinedComparison.relation_combined_condition:type_name -> pb.RelationCombinedCondition
+	324,  // 660: pb.RelationCombinedCondition.left_expression:type_name -> pb.ArithmeticExpression
+	55,   // 661: pb.RelationCombinedCondition.and_or:type_name -> pb.RelationCombinedCondition.AndOr
+	324,  // 662: pb.RelationCombinedCondition.right_expressions:type_name -> pb.ArithmeticExpression
 	0,    // 663: pb.Abbreviation.relational_operator:type_name -> pb.RelationalOperator
-	323,  // 664: pb.Abbreviation.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	341,  // 665: pb.Abbreviation.abbreviation:type_name -> pb.Abbreviation
-	352,  // 666: pb.Identifier.qualified_data_name:type_name -> pb.QualifiedDataName
-	343,  // 667: pb.Identifier.table_call:type_name -> pb.TableCall
-	344,  // 668: pb.Identifier.function_call:type_name -> pb.FunctionCall
-	398,  // 669: pb.Identifier.special_register:type_name -> pb.SpecialRegister
-	352,  // 670: pb.TableCall.qualified_data_name:type_name -> pb.QualifiedDataName
-	348,  // 671: pb.TableCall.subscripts:type_name -> pb.Subscript
-	345,  // 672: pb.TableCall.reference_modifier:type_name -> pb.ReferenceModifier
-	374,  // 673: pb.FunctionCall.function_name:type_name -> pb.FunctionName
-	349,  // 674: pb.FunctionCall.arguments:type_name -> pb.Argument
-	345,  // 675: pb.FunctionCall.reference_modifier:type_name -> pb.ReferenceModifier
-	346,  // 676: pb.ReferenceModifier.character_position:type_name -> pb.CharacterPosition
-	347,  // 677: pb.ReferenceModifier.length:type_name -> pb.Length
-	323,  // 678: pb.CharacterPosition.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	323,  // 679: pb.Length.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	396,  // 680: pb.Subscript.integer_literal:type_name -> pb.IntegerLiteral
-	350,  // 681: pb.Subscript.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
-	351,  // 682: pb.Subscript.index_name:type_name -> pb.IndexNameIntegerLiteral
-	323,  // 683: pb.Subscript.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	393,  // 684: pb.Argument.literal:type_name -> pb.Literal
-	342,  // 685: pb.Argument.identifier:type_name -> pb.Identifier
-	350,  // 686: pb.Argument.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
-	351,  // 687: pb.Argument.index_name:type_name -> pb.IndexNameIntegerLiteral
-	323,  // 688: pb.Argument.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	352,  // 689: pb.QualifiedDataNameIntegerLiteral.qualified_data_name:type_name -> pb.QualifiedDataName
-	396,  // 690: pb.QualifiedDataNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
-	375,  // 691: pb.IndexNameIntegerLiteral.index_name:type_name -> pb.IndexName
-	396,  // 692: pb.IndexNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
-	353,  // 693: pb.QualifiedDataName.f1:type_name -> pb.QualifiedDataNameFormat1
-	354,  // 694: pb.QualifiedDataName.f2:type_name -> pb.QualifiedDataNameFormat2
-	355,  // 695: pb.QualifiedDataName.f3:type_name -> pb.QualifiedDataNameFormat3
-	356,  // 696: pb.QualifiedDataName.f4:type_name -> pb.QualifiedDataNameFormat4
-	370,  // 697: pb.QualifiedDataNameFormat1.data_name:type_name -> pb.DataName
-	369,  // 698: pb.QualifiedDataNameFormat1.condition_name:type_name -> pb.ConditionName
-	357,  // 699: pb.QualifiedDataNameFormat1.in_datas:type_name -> pb.InData
-	362,  // 700: pb.QualifiedDataNameFormat1.in_tables:type_name -> pb.InTable
-	358,  // 701: pb.QualifiedDataNameFormat1.in_file:type_name -> pb.InFile
-	380,  // 702: pb.QualifiedDataNameFormat2.paragraph_name:type_name -> pb.ParagraphName
-	360,  // 703: pb.QualifiedDataNameFormat2.in_section:type_name -> pb.InSection
-	391,  // 704: pb.QualifiedDataNameFormat3.text_name:type_name -> pb.TextName
-	361,  // 705: pb.QualifiedDataNameFormat3.in_library:type_name -> pb.InLibrary
-	358,  // 706: pb.QualifiedDataNameFormat4.in_file:type_name -> pb.InFile
-	370,  // 707: pb.InData.data_name:type_name -> pb.DataName
-	373,  // 708: pb.InFile.file_name:type_name -> pb.FileName
-	379,  // 709: pb.InMnemonic.mnemonic_name:type_name -> pb.MnemonicName
-	388,  // 710: pb.InSection.section_name:type_name -> pb.SectionName
-	377,  // 711: pb.InLibrary.library_name:type_name -> pb.LibraryName
-	343,  // 712: pb.InTable.table_call:type_name -> pb.TableCall
-	392,  // 713: pb.AlphabetName.cobol_word:type_name -> pb.CobolWord
-	389,  // 714: pb.AssignmentName.system_name:type_name -> pb.SystemName
-	382,  // 715: pb.BasisName.program_name:type_name -> pb.ProgramName
-	392,  // 716: pb.CdName.cobol_word:type_name -> pb.CobolWord
-	392,  // 717: pb.ClassName.cobol_word:type_name -> pb.CobolWord
-	389,  // 718: pb.ComputerName.system_name:type_name -> pb.SystemName
-	392,  // 719: pb.ConditionName.cobol_word:type_name -> pb.CobolWord
-	392,  // 720: pb.DataName.cobol_word:type_name -> pb.CobolWord
-	389,  // 721: pb.EnvironmentName.system_name:type_name -> pb.SystemName
-	392,  // 722: pb.FileName.cobol_word:type_name -> pb.CobolWord
-	392,  // 723: pb.IndexName.cobol_word:type_name -> pb.CobolWord
-	389,  // 724: pb.LanguageName.system_name:type_name -> pb.SystemName
-	392,  // 725: pb.LibraryName.cobol_word:type_name -> pb.CobolWord
-	392,  // 726: pb.LocalName.cobol_word:type_name -> pb.CobolWord
-	392,  // 727: pb.MnemonicName.cobol_word:type_name -> pb.CobolWord
-	392,  // 728: pb.ParagraphName.cobol_word:type_name -> pb.CobolWord
-	396,  // 729: pb.ParagraphName.integer_literal:type_name -> pb.IntegerLiteral
-	380,  // 730: pb.ProcedureName.paragraph_name:type_name -> pb.ParagraphName
-	388,  // 731: pb.ProcedureName.section_name:type_name -> pb.SectionName
-	399,  // 732: pb.ProgramName.non_numeric_literal:type_name -> pb.NonNumericLiteral
-	392,  // 733: pb.ProgramName.cobol_word:type_name -> pb.CobolWord
-	352,  // 734: pb.RecordName.qualified_data_name:type_name -> pb.QualifiedDataName
-	352,  // 735: pb.ReportName.qualified_data_name:type_name -> pb.QualifiedDataName
-	392,  // 736: pb.RoutingName.cobol_word:type_name -> pb.CobolWord
-	392,  // 737: pb.RoutineName.cobol_word:type_name -> pb.CobolWord
-	392,  // 738: pb.ScreenName.cobol_word:type_name -> pb.CobolWord
-	392,  // 739: pb.SectionName.cobol_word:type_name -> pb.CobolWord
-	396,  // 740: pb.SectionName.integer_literal:type_name -> pb.IntegerLiteral
-	392,  // 741: pb.SystemName.cobol_word:type_name -> pb.CobolWord
-	392,  // 742: pb.SymbolicCharacter.cobol_word:type_name -> pb.CobolWord
-	392,  // 743: pb.TextName.cobol_word:type_name -> pb.CobolWord
-	55,   // 744: pb.Literal.type:type_name -> pb.Literal.Type
-	395,  // 745: pb.Literal.numeric_literal:type_name -> pb.NumericLiteral
-	394,  // 746: pb.Literal.boolean_literal:type_name -> pb.BooleanLiteral
-	399,  // 747: pb.Literal.non_numeric_literal:type_name -> pb.NonNumericLiteral
-	397,  // 748: pb.Literal.figurative_constant:type_name -> pb.FigurativeConstant
-	56,   // 749: pb.NumericLiteral.type:type_name -> pb.NumericLiteral.Type
-	57,   // 750: pb.FigurativeConstant.type:type_name -> pb.FigurativeConstant.Type
-	393,  // 751: pb.FigurativeConstant.literal:type_name -> pb.Literal
-	58,   // 752: pb.SpecialRegister.type:type_name -> pb.SpecialRegister.Type
-	342,  // 753: pb.SpecialRegister.identifier:type_name -> pb.Identifier
-	393,  // 754: pb.AlphabetClause.Also.alsos:type_name -> pb.Literal
-	393,  // 755: pb.AlphabetClause.AlphabetLiteral.literal:type_name -> pb.Literal
-	393,  // 756: pb.AlphabetClause.AlphabetLiteral.through:type_name -> pb.Literal
-	404,  // 757: pb.AlphabetClause.AlphabetLiteral.alsos:type_name -> pb.AlphabetClause.Also
-	405,  // 758: pb.AlphabetClause.AlphabetLiterals.values:type_name -> pb.AlphabetClause.AlphabetLiteral
-	4,    // 759: pb.AlphabetClause.Alphanumeric.type:type_name -> pb.AlphabetClause.Alphanumeric.Type
-	392,  // 760: pb.AlphabetClause.Alphanumeric.cobol_word:type_name -> pb.CobolWord
-	406,  // 761: pb.AlphabetClause.Alphanumeric.values:type_name -> pb.AlphabetClause.AlphabetLiterals
-	5,    // 762: pb.AlphabetClause.National.type:type_name -> pb.AlphabetClause.National.Type
-	393,  // 763: pb.AlphabetClause.National.ccs_version:type_name -> pb.Literal
-	330,  // 764: pb.EnvironmentSwitchNameClause.StatusPhrase.condition:type_name -> pb.Condition
-	330,  // 765: pb.EnvironmentSwitchNameClause.StatusPhrase.off_condition:type_name -> pb.Condition
-	370,  // 766: pb.LabelRecordsClause.DataNames.data_names:type_name -> pb.DataName
-	396,  // 767: pb.DataDescriptionEntry.Format1.level_number:type_name -> pb.IntegerLiteral
-	370,  // 768: pb.DataDescriptionEntry.Format1.data_name:type_name -> pb.DataName
-	136,  // 769: pb.DataDescriptionEntry.Format1.data_redefines_clause:type_name -> pb.DataRedefinesClause
-	137,  // 770: pb.DataDescriptionEntry.Format1.data_integer_string_clause:type_name -> pb.DataIntegerStringClause
-	138,  // 771: pb.DataDescriptionEntry.Format1.data_external_clause:type_name -> pb.DataExternalClause
-	139,  // 772: pb.DataDescriptionEntry.Format1.data_global_clause:type_name -> pb.DataGlobalClause
-	140,  // 773: pb.DataDescriptionEntry.Format1.data_type_def_clause:type_name -> pb.DataTypeDefClause
-	141,  // 774: pb.DataDescriptionEntry.Format1.data_thread_local_clause:type_name -> pb.DataThreadLocalClause
-	142,  // 775: pb.DataDescriptionEntry.Format1.data_picture_clause:type_name -> pb.DataPictureClause
-	146,  // 776: pb.DataDescriptionEntry.Format1.data_common_own_local_clause:type_name -> pb.DataCommonOwnLocalClause
-	147,  // 777: pb.DataDescriptionEntry.Format1.data_type_clause:type_name -> pb.DataTypeClause
-	148,  // 778: pb.DataDescriptionEntry.Format1.data_using_clause:type_name -> pb.DataUsingClause
-	149,  // 779: pb.DataDescriptionEntry.Format1.data_usage_clause:type_name -> pb.DataUsageClause
-	151,  // 780: pb.DataDescriptionEntry.Format1.data_value_clause:type_name -> pb.DataValueClause
-	152,  // 781: pb.DataDescriptionEntry.Format1.data_received_by_clause:type_name -> pb.DataReceivedByClause
-	153,  // 782: pb.DataDescriptionEntry.Format1.data_occurs_clause:type_name -> pb.DataOccursClause
-	154,  // 783: pb.DataDescriptionEntry.Format1.data_sign_clause:type_name -> pb.DataSignClause
-	155,  // 784: pb.DataDescriptionEntry.Format1.data_synchronized_clause:type_name -> pb.DataSynchronizedClause
-	156,  // 785: pb.DataDescriptionEntry.Format1.data_justified_clause:type_name -> pb.DataJustifiedClause
-	157,  // 786: pb.DataDescriptionEntry.Format1.data_blank_when_zero_clause:type_name -> pb.DataBlankWhenZeroClause
-	158,  // 787: pb.DataDescriptionEntry.Format1.data_with_lower_bounds_clause:type_name -> pb.DataWithLowerBoundsClause
-	159,  // 788: pb.DataDescriptionEntry.Format1.data_aligned_clause:type_name -> pb.DataAlignedClause
-	160,  // 789: pb.DataDescriptionEntry.Format1.data_record_area_clause:type_name -> pb.DataRecordAreaClause
-	370,  // 790: pb.DataDescriptionEntry.Format2.data_name:type_name -> pb.DataName
-	135,  // 791: pb.DataDescriptionEntry.Format2.data_renames_clause:type_name -> pb.DataRenamesClause
-	369,  // 792: pb.DataDescriptionEntry.Format3.condition_name:type_name -> pb.ConditionName
-	151,  // 793: pb.DataDescriptionEntry.Format3.data_value_clause:type_name -> pb.DataValueClause
-	23,   // 794: pb.DataTypeClause.Lob.mode:type_name -> pb.DataTypeClause.Mode
-	396,  // 795: pb.DataTypeClause.Lob.integer_literal:type_name -> pb.IntegerLiteral
-	352,  // 796: pb.DataOccursClause.Sort.qualified_data_names:type_name -> pb.QualifiedDataName
-	375,  // 797: pb.DataOccursClause.Indexed.index_names:type_name -> pb.IndexName
-	204,  // 798: pb.ReportGroupDescriptionEntry.Vertical.line_number_clause:type_name -> pb.LineNumberClause
-	205,  // 799: pb.ReportGroupDescriptionEntry.Vertical.next_group_clause:type_name -> pb.NextGroupClause
-	206,  // 800: pb.ReportGroupDescriptionEntry.Vertical.type_clause:type_name -> pb.TypeClause
-	207,  // 801: pb.ReportGroupDescriptionEntry.Vertical.usage_clause:type_name -> pb.UsageClause
-	204,  // 802: pb.ReportGroupDescriptionEntry.Single.line_number_clause:type_name -> pb.LineNumberClause
-	207,  // 803: pb.ReportGroupDescriptionEntry.Single.usage_clause:type_name -> pb.UsageClause
-	203,  // 804: pb.ReportGroupDescriptionEntry.Printable.picture_clause:type_name -> pb.PictureClause
-	207,  // 805: pb.ReportGroupDescriptionEntry.Printable.usage_clause:type_name -> pb.UsageClause
-	202,  // 806: pb.ReportGroupDescriptionEntry.Printable.sign_clause:type_name -> pb.SignClause
-	201,  // 807: pb.ReportGroupDescriptionEntry.Printable.justified_clause:type_name -> pb.JustifiedClause
-	200,  // 808: pb.ReportGroupDescriptionEntry.Printable.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
-	204,  // 809: pb.ReportGroupDescriptionEntry.Printable.line_number_clause:type_name -> pb.LineNumberClause
-	199,  // 810: pb.ReportGroupDescriptionEntry.Printable.column_number_clause:type_name -> pb.ColumnNumberClause
-	198,  // 811: pb.ReportGroupDescriptionEntry.Printable.IndicateClause:type_name -> pb.IndicateClause
-	197,  // 812: pb.ReportGroupDescriptionEntry.Printable.source_clause:type_name -> pb.SourceClause
-	196,  // 813: pb.ReportGroupDescriptionEntry.Printable.value_clause:type_name -> pb.ValueClause
-	195,  // 814: pb.ReportGroupDescriptionEntry.Printable.SumClause:type_name -> pb.SumClause
-	194,  // 815: pb.ReportGroupDescriptionEntry.Printable.reset_clause:type_name -> pb.ResetClause
-	370,  // 816: pb.TypeClause.ControlHeading.data_name:type_name -> pb.DataName
-	370,  // 817: pb.TypeClause.ControlFooting.data_name:type_name -> pb.DataName
-	122,  // 818: pb.LibraryDescriptionEntry.Import.global_clause:type_name -> pb.GlobalClause
-	210,  // 819: pb.LibraryDescriptionEntry.Import.is_common_clause:type_name -> pb.IsCommonClause
-	212,  // 820: pb.LibraryDescriptionEntry.Import.attribute_clause:type_name -> pb.AttributeClause2
-	214,  // 821: pb.LibraryDescriptionEntry.Import.procedure_clause:type_name -> pb.ProcedureClause2
-	211,  // 822: pb.LibraryDescriptionEntry.Export.attribute_clause:type_name -> pb.AttributeClause1
-	213,  // 823: pb.LibraryDescriptionEntry.Export.procedure_clause:type_name -> pb.ProcedureClause1
-	378,  // 824: pb.ProcedureClause2.WithName.local_name:type_name -> pb.LocalName
-	373,  // 825: pb.ProcedureClause2.WithName.file_name:type_name -> pb.FileName
-	370,  // 826: pb.ProcedureClause2.UsingName.data_name:type_name -> pb.DataName
-	373,  // 827: pb.ProcedureClause2.UsingName.file_name:type_name -> pb.FileName
-	366,  // 828: pb.CommunicationDescriptionEntry.Input.cd_name:type_name -> pb.CdName
-	224,  // 829: pb.CommunicationDescriptionEntry.Input.symbolic_queue_clause:type_name -> pb.SymbolicQueueClause
-	225,  // 830: pb.CommunicationDescriptionEntry.Input.symbolic_sub_queue_clause:type_name -> pb.SymbolicSubQueueClause
-	226,  // 831: pb.CommunicationDescriptionEntry.Input.message_date_clause:type_name -> pb.MessageDateClause
-	227,  // 832: pb.CommunicationDescriptionEntry.Input.message_time_clause:type_name -> pb.MessageTimeClause
-	228,  // 833: pb.CommunicationDescriptionEntry.Input.symbolic_source_clause:type_name -> pb.SymbolicSourceClause
-	229,  // 834: pb.CommunicationDescriptionEntry.Input.text_length_clause:type_name -> pb.TextLengthClause
-	230,  // 835: pb.CommunicationDescriptionEntry.Input.end_key_clause:type_name -> pb.EndKeyClause
-	231,  // 836: pb.CommunicationDescriptionEntry.Input.status_key_clause:type_name -> pb.StatusKeyClause
-	232,  // 837: pb.CommunicationDescriptionEntry.Input.message_count_clause:type_name -> pb.MessageCountClause
-	371,  // 838: pb.CommunicationDescriptionEntry.Input.data_desc_name:type_name -> pb.DataDescName
-	223,  // 839: pb.CommunicationDescriptionEntry.Output.destination_count_clause:type_name -> pb.DestinationCountClause
-	229,  // 840: pb.CommunicationDescriptionEntry.Output.text_length_clause:type_name -> pb.TextLengthClause
-	231,  // 841: pb.CommunicationDescriptionEntry.Output.status_key_clause:type_name -> pb.StatusKeyClause
-	222,  // 842: pb.CommunicationDescriptionEntry.Output.destination_table_clause:type_name -> pb.DestinationTableClause
-	221,  // 843: pb.CommunicationDescriptionEntry.Output.errorKeyClause:type_name -> pb.ErrorKeyClause
-	220,  // 844: pb.CommunicationDescriptionEntry.Output.symbolic_destination_clause:type_name -> pb.SymbolicDestinationClause
-	366,  // 845: pb.CommunicationDescriptionEntry.Io.cd_name:type_name -> pb.CdName
-	226,  // 846: pb.CommunicationDescriptionEntry.Io.message_date_clause:type_name -> pb.MessageDateClause
-	227,  // 847: pb.CommunicationDescriptionEntry.Io.message_time_clause:type_name -> pb.MessageTimeClause
-	219,  // 848: pb.CommunicationDescriptionEntry.Io.symbolic_terminal_clause:type_name -> pb.SymbolicTerminalClause
-	229,  // 849: pb.CommunicationDescriptionEntry.Io.text_length_clause:type_name -> pb.TextLengthClause
-	230,  // 850: pb.CommunicationDescriptionEntry.Io.end_key_clause:type_name -> pb.EndKeyClause
-	231,  // 851: pb.CommunicationDescriptionEntry.Io.status_key_clause:type_name -> pb.StatusKeyClause
-	342,  // 852: pb.ProcedureDivision.ByReference.identifier:type_name -> pb.Identifier
-	373,  // 853: pb.ProcedureDivision.ByReference.file_name:type_name -> pb.FileName
-	435,  // 854: pb.ProcedureDivision.ByReferencePhrase.references:type_name -> pb.ProcedureDivision.ByReference
-	342,  // 855: pb.ProcedureDivision.ByValue.identifier:type_name -> pb.Identifier
-	393,  // 856: pb.ProcedureDivision.ByValue.literal:type_name -> pb.Literal
-	437,  // 857: pb.ProcedureDivision.ByValuePhrase.values:type_name -> pb.ProcedureDivision.ByValue
-	436,  // 858: pb.ProcedureDivision.UsingParameter.by_reference_phrase:type_name -> pb.ProcedureDivision.ByReferencePhrase
-	438,  // 859: pb.ProcedureDivision.UsingParameter.by_value_phrase:type_name -> pb.ProcedureDivision.ByValuePhrase
-	43,   // 860: pb.ProcedureDivision.GivingClause.type:type_name -> pb.ProcedureDivision.GivingClause.Type
-	370,  // 861: pb.ProcedureDivision.GivingClause.data_name:type_name -> pb.DataName
-	44,   // 862: pb.ProcedureDivision.UsingClause.type:type_name -> pb.ProcedureDivision.UsingClause.Type
-	439,  // 863: pb.ProcedureDivision.UsingClause.using_parameters:type_name -> pb.ProcedureDivision.UsingParameter
-	342,  // 864: pb.WriteStatement.FromPhrase.identifier:type_name -> pb.Identifier
-	393,  // 865: pb.WriteStatement.FromPhrase.literal:type_name -> pb.Literal
-	342,  // 866: pb.WriteStatement.AdvancingLines.identifier:type_name -> pb.Identifier
-	393,  // 867: pb.WriteStatement.AdvancingLines.literal:type_name -> pb.Literal
-	379,  // 868: pb.WriteStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
-	443,  // 869: pb.WriteStatement.AdvancingPhrase.advancing_page:type_name -> pb.WriteStatement.AdvancingPage
-	444,  // 870: pb.WriteStatement.AdvancingPhrase.advancing_lines:type_name -> pb.WriteStatement.AdvancingLines
-	445,  // 871: pb.WriteStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.WriteStatement.AdvancingMnemonic
-	342,  // 872: pb.UnstringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
-	393,  // 873: pb.UnstringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
-	342,  // 874: pb.UnstringStatement.OrAllPhrase.identifier:type_name -> pb.Identifier
-	393,  // 875: pb.UnstringStatement.OrAllPhrase.literal:type_name -> pb.Literal
-	447,  // 876: pb.UnstringStatement.DelimitedOr.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
-	448,  // 877: pb.UnstringStatement.DelimitedOr.or_all_phrases:type_name -> pb.UnstringStatement.OrAllPhrase
-	342,  // 878: pb.UnstringStatement.Into.identifier:type_name -> pb.Identifier
-	451,  // 879: pb.UnstringStatement.Into.delimiter_in:type_name -> pb.UnstringStatement.DelimiterIn
-	452,  // 880: pb.UnstringStatement.Into.count_in:type_name -> pb.UnstringStatement.CountIn
-	342,  // 881: pb.UnstringStatement.DelimiterIn.identifier:type_name -> pb.Identifier
-	342,  // 882: pb.UnstringStatement.CountIn.identifier:type_name -> pb.Identifier
-	342,  // 883: pb.UnstringStatement.SendingPhrase.identifier:type_name -> pb.Identifier
-	447,  // 884: pb.UnstringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
-	450,  // 885: pb.UnstringStatement.IntoPhrase.into:type_name -> pb.UnstringStatement.Into
-	352,  // 886: pb.UnstringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
-	352,  // 887: pb.UnstringStatement.TallyingPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
-	342,  // 888: pb.SubtractStatement.Subtrahend.identifier:type_name -> pb.Identifier
-	393,  // 889: pb.SubtractStatement.Subtrahend.literal:type_name -> pb.Literal
-	342,  // 890: pb.SubtractStatement.Minuend.identifier:type_name -> pb.Identifier
-	342,  // 891: pb.SubtractStatement.MinuendGiving.identifier:type_name -> pb.Identifier
-	393,  // 892: pb.SubtractStatement.MinuendGiving.literal:type_name -> pb.Literal
-	342,  // 893: pb.SubtractStatement.Giving.identifier:type_name -> pb.Identifier
-	352,  // 894: pb.SubtractStatement.MinuendCorresponding.qualified_data_name:type_name -> pb.QualifiedDataName
-	457,  // 895: pb.SubtractStatement.FromStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
-	458,  // 896: pb.SubtractStatement.FromStatement.minuends:type_name -> pb.SubtractStatement.Minuend
-	457,  // 897: pb.SubtractStatement.FromGivingStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
-	459,  // 898: pb.SubtractStatement.FromGivingStatement.minuend_giving:type_name -> pb.SubtractStatement.MinuendGiving
-	460,  // 899: pb.SubtractStatement.FromGivingStatement.givings:type_name -> pb.SubtractStatement.Giving
-	352,  // 900: pb.SubtractStatement.CorrespondingStatement.qualified_data_name:type_name -> pb.QualifiedDataName
-	461,  // 901: pb.SubtractStatement.CorrespondingStatement.minuend_corresponding:type_name -> pb.SubtractStatement.MinuendCorresponding
-	342,  // 902: pb.StringStatement.Sending.identifier:type_name -> pb.Identifier
-	393,  // 903: pb.StringStatement.Sending.literal:type_name -> pb.Literal
-	342,  // 904: pb.StringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
-	393,  // 905: pb.StringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
-	342,  // 906: pb.StringStatement.ForPhrase.identifier:type_name -> pb.Identifier
-	393,  // 907: pb.StringStatement.ForPhrase.literal:type_name -> pb.Literal
-	465,  // 908: pb.StringStatement.SendingPhrase.sendings:type_name -> pb.StringStatement.Sending
-	466,  // 909: pb.StringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.StringStatement.DelimitedByPhrase
-	467,  // 910: pb.StringStatement.SendingPhrase.for_phrase:type_name -> pb.StringStatement.ForPhrase
-	342,  // 911: pb.StringStatement.IntoPhrase.identifier:type_name -> pb.Identifier
-	352,  // 912: pb.StringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
-	342,  // 913: pb.StopStatement.Giving.identifier:type_name -> pb.Identifier
-	396,  // 914: pb.StopStatement.Giving.integer_literal:type_name -> pb.IntegerLiteral
-	45,   // 915: pb.StartStatement.Key.type:type_name -> pb.StartStatement.Type
-	352,  // 916: pb.StartStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
-	352,  // 917: pb.SortStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
-	363,  // 918: pb.SortStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
-	363,  // 919: pb.SortStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
-	363,  // 920: pb.SortStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
-	475,  // 921: pb.SortStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.SortStatement.CollatingAlphanumeric
-	476,  // 922: pb.SortStatement.CollatingSequencePhrase.collating_national:type_name -> pb.SortStatement.CollatingNational
-	381,  // 923: pb.SortStatement.InputThrough.procedure_name:type_name -> pb.ProcedureName
-	381,  // 924: pb.SortStatement.InputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
-	478,  // 925: pb.SortStatement.InputProcedurePhrase.input_through:type_name -> pb.SortStatement.InputThrough
-	373,  // 926: pb.SortStatement.Using.file_names:type_name -> pb.FileName
-	381,  // 927: pb.SortStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
-	381,  // 928: pb.SortStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
-	481,  // 929: pb.SortStatement.OutputProcedurePhrase.output_through:type_name -> pb.SortStatement.OutputThrough
-	373,  // 930: pb.SortStatement.Giving.file_name:type_name -> pb.FileName
-	46,   // 931: pb.SortStatement.Giving.type:type_name -> pb.SortStatement.Giving.Type
-	483,  // 932: pb.SortStatement.GivingPhrase.givings:type_name -> pb.SortStatement.Giving
-	342,  // 933: pb.SetStatement.To.identifier:type_name -> pb.Identifier
-	342,  // 934: pb.SetStatement.Entry.identifier:type_name -> pb.Identifier
-	393,  // 935: pb.SetStatement.Entry.literal:type_name -> pb.Literal
-	486,  // 936: pb.SetStatement.ToValue.Entry:type_name -> pb.SetStatement.Entry
-	342,  // 937: pb.SetStatement.ToValue.identifier:type_name -> pb.Identifier
-	393,  // 938: pb.SetStatement.ToValue.literal:type_name -> pb.Literal
-	342,  // 939: pb.SetStatement.ByValue.identifier:type_name -> pb.Identifier
-	393,  // 940: pb.SetStatement.ByValue.literal:type_name -> pb.Literal
-	485,  // 941: pb.SetStatement.ToStatement.tos:type_name -> pb.SetStatement.To
-	487,  // 942: pb.SetStatement.ToStatement.to_values:type_name -> pb.SetStatement.ToValue
-	485,  // 943: pb.SetStatement.UpDownByStatement.tos:type_name -> pb.SetStatement.To
-	488,  // 944: pb.SetStatement.UpDownByStatement.by_value:type_name -> pb.SetStatement.ByValue
-	342,  // 945: pb.SendStatement.FromPhrase.identifier:type_name -> pb.Identifier
-	342,  // 946: pb.SendStatement.WithPhrase.identifier:type_name -> pb.Identifier
-	342,  // 947: pb.SendStatement.AdvancingLines.identifier:type_name -> pb.Identifier
-	393,  // 948: pb.SendStatement.AdvancingLines.literal:type_name -> pb.Literal
-	379,  // 949: pb.SendStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
-	494,  // 950: pb.SendStatement.AdvancingPhrase.advancing_page:type_name -> pb.SendStatement.AdvancingPage
-	495,  // 951: pb.SendStatement.AdvancingPhrase.advancing_lines:type_name -> pb.SendStatement.AdvancingLines
-	496,  // 952: pb.SendStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.SendStatement.AdvancingMnemonic
-	342,  // 953: pb.SendStatement.SyncStatement.identifier:type_name -> pb.Identifier
-	393,  // 954: pb.SendStatement.SyncStatement.literal:type_name -> pb.Literal
-	491,  // 955: pb.SendStatement.SyncStatement.from_phrase:type_name -> pb.SendStatement.FromPhrase
-	492,  // 956: pb.SendStatement.SyncStatement.with_phrase:type_name -> pb.SendStatement.WithPhrase
-	493,  // 957: pb.SendStatement.SyncStatement.replacing_phrase:type_name -> pb.SendStatement.ReplacingPhrase
-	497,  // 958: pb.SendStatement.SyncStatement.advancing_phrase:type_name -> pb.SendStatement.AdvancingPhrase
-	342,  // 959: pb.SendStatement.AsyncStatement.identifier:type_name -> pb.Identifier
-	352,  // 960: pb.SearchStatement.Varying.qualified_data_name:type_name -> pb.QualifiedDataName
-	330,  // 961: pb.SearchStatement.When.condition:type_name -> pb.Condition
-	243,  // 962: pb.SearchStatement.When.statements:type_name -> pb.Statement
-	342,  // 963: pb.RewriteStatement.From.identifier:type_name -> pb.Identifier
-	352,  // 964: pb.ReturnStatement.Into.qualified_data_name:type_name -> pb.QualifiedDataName
-	352,  // 965: pb.ReleaseStatement.From.qualified_data_name:type_name -> pb.QualifiedDataName
-	370,  // 966: pb.ReceiveStatement.From.data_name:type_name -> pb.DataName
-	370,  // 967: pb.ReceiveStatement.Thread.data_name:type_name -> pb.DataName
-	395,  // 968: pb.ReceiveStatement.Size.numeric_literal:type_name -> pb.NumericLiteral
-	342,  // 969: pb.ReceiveStatement.Size.identifier:type_name -> pb.Identifier
-	342,  // 970: pb.ReceiveStatement.Status.identifier:type_name -> pb.Identifier
-	395,  // 971: pb.ReceiveStatement.Before.numeric_literal:type_name -> pb.NumericLiteral
-	342,  // 972: pb.ReceiveStatement.Before.identifier:type_name -> pb.Identifier
-	370,  // 973: pb.ReceiveStatement.FromStatement.data_name:type_name -> pb.DataName
-	505,  // 974: pb.ReceiveStatement.FromStatement.from:type_name -> pb.ReceiveStatement.From
-	510,  // 975: pb.ReceiveStatement.FromStatement.before:type_name -> pb.ReceiveStatement.Before
-	506,  // 976: pb.ReceiveStatement.FromStatement.with:type_name -> pb.ReceiveStatement.With
-	507,  // 977: pb.ReceiveStatement.FromStatement.thread:type_name -> pb.ReceiveStatement.Thread
-	508,  // 978: pb.ReceiveStatement.FromStatement.size:type_name -> pb.ReceiveStatement.Size
-	509,  // 979: pb.ReceiveStatement.FromStatement.status:type_name -> pb.ReceiveStatement.Status
-	243,  // 980: pb.ReceiveStatement.NoData.statements:type_name -> pb.Statement
-	243,  // 981: pb.ReceiveStatement.WithData.statements:type_name -> pb.Statement
-	366,  // 982: pb.ReceiveStatement.IntoStatement.cd_name:type_name -> pb.CdName
-	342,  // 983: pb.ReceiveStatement.IntoStatement.identifier:type_name -> pb.Identifier
-	512,  // 984: pb.ReceiveStatement.IntoStatement.no_data:type_name -> pb.ReceiveStatement.NoData
-	513,  // 985: pb.ReceiveStatement.IntoStatement.with_data:type_name -> pb.ReceiveStatement.WithData
-	342,  // 986: pb.ReadStatement.Into.identifier:type_name -> pb.Identifier
-	352,  // 987: pb.ReadStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
-	342,  // 988: pb.PerformStatement.Times.identifier:type_name -> pb.Identifier
-	396,  // 989: pb.PerformStatement.Times.integer_literal:type_name -> pb.IntegerLiteral
-	518,  // 990: pb.PerformStatement.Until.test_clause:type_name -> pb.PerformStatement.TestClause
-	330,  // 991: pb.PerformStatement.Until.condition:type_name -> pb.Condition
-	342,  // 992: pb.PerformStatement.From.identifier:type_name -> pb.Identifier
-	393,  // 993: pb.PerformStatement.From.literal:type_name -> pb.Literal
-	323,  // 994: pb.PerformStatement.From.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	342,  // 995: pb.PerformStatement.By.identifier:type_name -> pb.Identifier
-	393,  // 996: pb.PerformStatement.By.literal:type_name -> pb.Literal
-	323,  // 997: pb.PerformStatement.By.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	342,  // 998: pb.PerformStatement.VaryingPhrase.identifier:type_name -> pb.Identifier
-	393,  // 999: pb.PerformStatement.VaryingPhrase.literal:type_name -> pb.Literal
-	521,  // 1000: pb.PerformStatement.VaryingPhrase.from:type_name -> pb.PerformStatement.From
-	522,  // 1001: pb.PerformStatement.VaryingPhrase.by:type_name -> pb.PerformStatement.By
-	520,  // 1002: pb.PerformStatement.VaryingPhrase.until:type_name -> pb.PerformStatement.Until
-	523,  // 1003: pb.PerformStatement.After.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
-	523,  // 1004: pb.PerformStatement.VaryingClause.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
-	524,  // 1005: pb.PerformStatement.VaryingClause.after:type_name -> pb.PerformStatement.After
-	518,  // 1006: pb.PerformStatement.Varying.test_clause:type_name -> pb.PerformStatement.TestClause
-	525,  // 1007: pb.PerformStatement.Varying.varying_clause:type_name -> pb.PerformStatement.VaryingClause
-	519,  // 1008: pb.PerformStatement.Type.times:type_name -> pb.PerformStatement.Times
-	520,  // 1009: pb.PerformStatement.Type.until:type_name -> pb.PerformStatement.Until
-	526,  // 1010: pb.PerformStatement.Type.varying:type_name -> pb.PerformStatement.Varying
-	527,  // 1011: pb.PerformStatement.InlineStatement.type:type_name -> pb.PerformStatement.Type
-	243,  // 1012: pb.PerformStatement.InlineStatement.statements:type_name -> pb.Statement
-	381,  // 1013: pb.PerformStatement.ProcedureStatement.procedure_name:type_name -> pb.ProcedureName
-	381,  // 1014: pb.PerformStatement.ProcedureStatement.through:type_name -> pb.ProcedureName
-	527,  // 1015: pb.PerformStatement.ProcedureStatement.type:type_name -> pb.PerformStatement.Type
-	373,  // 1016: pb.OpenStatement.Input.file_name:type_name -> pb.FileName
-	530,  // 1017: pb.OpenStatement.InputStatement.inputs:type_name -> pb.OpenStatement.Input
-	373,  // 1018: pb.OpenStatement.Output.file_name:type_name -> pb.FileName
-	532,  // 1019: pb.OpenStatement.OutputStatement.outputs:type_name -> pb.OpenStatement.Output
-	373,  // 1020: pb.OpenStatement.IOStatement.file_names:type_name -> pb.FileName
-	373,  // 1021: pb.OpenStatement.ExtendStatement.file_names:type_name -> pb.FileName
-	342,  // 1022: pb.MultiplyStatement.GivingOperand.identifier:type_name -> pb.Identifier
-	393,  // 1023: pb.MultiplyStatement.GivingOperand.literal:type_name -> pb.Literal
-	342,  // 1024: pb.MultiplyStatement.GivingResult.identifier:type_name -> pb.Identifier
-	536,  // 1025: pb.MultiplyStatement.Giving.giving_operand:type_name -> pb.MultiplyStatement.GivingOperand
-	537,  // 1026: pb.MultiplyStatement.Giving.giving_result:type_name -> pb.MultiplyStatement.GivingResult
-	342,  // 1027: pb.MultiplyStatement.Regular.regular_operands:type_name -> pb.Identifier
-	352,  // 1028: pb.MergeStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
-	363,  // 1029: pb.MergeStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
-	542,  // 1030: pb.MergeStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.MergeStatement.CollatingAlphanumeric
-	543,  // 1031: pb.MergeStatement.CollatingSequencePhrase.collating_national:type_name -> pb.MergeStatement.CollatingNational
-	363,  // 1032: pb.MergeStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
-	363,  // 1033: pb.MergeStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
-	373,  // 1034: pb.MergeStatement.Using.file_names:type_name -> pb.FileName
-	381,  // 1035: pb.MergeStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
-	546,  // 1036: pb.MergeStatement.OutputProcedurePhrase.output_through:type_name -> pb.MergeStatement.OutputThrough
-	381,  // 1037: pb.MergeStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
-	548,  // 1038: pb.MergeStatement.GivingPhrase.givings:type_name -> pb.MergeStatement.Giving
-	373,  // 1039: pb.MergeStatement.Giving.file_name:type_name -> pb.FileName
-	47,   // 1040: pb.MergeStatement.Giving.type:type_name -> pb.MergeStatement.Giving.Type
-	342,  // 1041: pb.InspectStatement.By.identifier:type_name -> pb.Identifier
-	393,  // 1042: pb.InspectStatement.By.literal:type_name -> pb.Literal
-	342,  // 1043: pb.InspectStatement.To.identifier:type_name -> pb.Identifier
-	393,  // 1044: pb.InspectStatement.To.literal:type_name -> pb.Literal
-	342,  // 1045: pb.InspectStatement.BeforeAfter.identifier:type_name -> pb.Identifier
-	393,  // 1046: pb.InspectStatement.BeforeAfter.literal:type_name -> pb.Literal
-	342,  // 1047: pb.InspectStatement.ReplacingAllLeading.identifier:type_name -> pb.Identifier
-	393,  // 1048: pb.InspectStatement.ReplacingAllLeading.literal:type_name -> pb.Literal
-	549,  // 1049: pb.InspectStatement.ReplacingAllLeading.by:type_name -> pb.InspectStatement.By
-	551,  // 1050: pb.InspectStatement.ReplacingAllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	552,  // 1051: pb.InspectStatement.ReplacingAllLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeading
-	342,  // 1052: pb.InspectStatement.AllLeading.identifier:type_name -> pb.Identifier
-	393,  // 1053: pb.InspectStatement.AllLeading.literal:type_name -> pb.Literal
-	551,  // 1054: pb.InspectStatement.AllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	554,  // 1055: pb.InspectStatement.AllLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeading
-	549,  // 1056: pb.InspectStatement.ReplacingCharacters.by:type_name -> pb.InspectStatement.By
-	551,  // 1057: pb.InspectStatement.ReplacingCharacters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	551,  // 1058: pb.InspectStatement.Characters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	557,  // 1059: pb.InspectStatement.CharactersLeadings.characters:type_name -> pb.InspectStatement.Characters
-	555,  // 1060: pb.InspectStatement.CharactersLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeadings
-	342,  // 1061: pb.InspectStatement.For.identifier:type_name -> pb.Identifier
-	558,  // 1062: pb.InspectStatement.For.characters_leadings:type_name -> pb.InspectStatement.CharactersLeadings
-	342,  // 1063: pb.InspectStatement.ConvertingPhrase.identifier:type_name -> pb.Identifier
-	393,  // 1064: pb.InspectStatement.ConvertingPhrase.literal:type_name -> pb.Literal
-	550,  // 1065: pb.InspectStatement.ConvertingPhrase.to:type_name -> pb.InspectStatement.To
-	551,  // 1066: pb.InspectStatement.ConvertingPhrase.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	556,  // 1067: pb.InspectStatement.ReplacingCharactersLeadings.replacing_characters:type_name -> pb.InspectStatement.ReplacingCharacters
-	553,  // 1068: pb.InspectStatement.ReplacingCharactersLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeadings
-	561,  // 1069: pb.InspectStatement.ReplacingPhrase.replacing_characters_leadings:type_name -> pb.InspectStatement.ReplacingCharactersLeadings
-	559,  // 1070: pb.InspectStatement.TallyingReplacingPhrase.fors:type_name -> pb.InspectStatement.For
-	562,  // 1071: pb.InspectStatement.TallyingReplacingPhrase.replacing_phrases:type_name -> pb.InspectStatement.ReplacingPhrase
-	559,  // 1072: pb.InspectStatement.TallyingPhrase.fors:type_name -> pb.InspectStatement.For
-	48,   // 1073: pb.InitializeStatement.ReplacingBy.type:type_name -> pb.InitializeStatement.ReplacingBy.Type
-	342,  // 1074: pb.InitializeStatement.ReplacingBy.identifier:type_name -> pb.Identifier
-	393,  // 1075: pb.InitializeStatement.ReplacingBy.literal:type_name -> pb.Literal
-	565,  // 1076: pb.InitializeStatement.ReplacingPhrase.bys:type_name -> pb.InitializeStatement.ReplacingBy
-	243,  // 1077: pb.IfStatement.Then.statements:type_name -> pb.Statement
-	243,  // 1078: pb.IfStatement.Else.statements:type_name -> pb.Statement
-	381,  // 1079: pb.GoToStatement.SimpleStatement.procedure_name:type_name -> pb.ProcedureName
-	381,  // 1080: pb.GoToStatement.DependingOn.procedure_names:type_name -> pb.ProcedureName
-	342,  // 1081: pb.GoToStatement.DependingOn.depending_on:type_name -> pb.Identifier
-	570,  // 1082: pb.GoToStatement.DependingOnStatement.depending_on:type_name -> pb.GoToStatement.DependingOn
-	342,  // 1083: pb.ExhibitStatement.Operand.identifier:type_name -> pb.Identifier
-	393,  // 1084: pb.ExhibitStatement.Operand.literal:type_name -> pb.Literal
-	342,  // 1085: pb.EvaluateStatement.Select.identifier:type_name -> pb.Identifier
-	393,  // 1086: pb.EvaluateStatement.Select.literal:type_name -> pb.Literal
-	323,  // 1087: pb.EvaluateStatement.Select.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	330,  // 1088: pb.EvaluateStatement.Select.condition:type_name -> pb.Condition
-	573,  // 1089: pb.EvaluateStatement.AlsoSelect.select:type_name -> pb.EvaluateStatement.Select
-	577,  // 1090: pb.EvaluateStatement.ValueThrough.value:type_name -> pb.EvaluateStatement.Value
-	576,  // 1091: pb.EvaluateStatement.ValueThrough.through:type_name -> pb.EvaluateStatement.Through
-	577,  // 1092: pb.EvaluateStatement.Through.value:type_name -> pb.EvaluateStatement.Value
-	342,  // 1093: pb.EvaluateStatement.Value.identifier:type_name -> pb.Identifier
-	393,  // 1094: pb.EvaluateStatement.Value.literal:type_name -> pb.Literal
-	323,  // 1095: pb.EvaluateStatement.Value.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	575,  // 1096: pb.EvaluateStatement.WhenCondition.value_through:type_name -> pb.EvaluateStatement.ValueThrough
-	330,  // 1097: pb.EvaluateStatement.WhenCondition.condition:type_name -> pb.Condition
-	394,  // 1098: pb.EvaluateStatement.WhenCondition.boolean_literal:type_name -> pb.BooleanLiteral
-	578,  // 1099: pb.EvaluateStatement.AlsoCondition.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
-	243,  // 1100: pb.EvaluateStatement.WhenOther.statements:type_name -> pb.Statement
-	578,  // 1101: pb.EvaluateStatement.When.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
-	579,  // 1102: pb.EvaluateStatement.When.alsos:type_name -> pb.EvaluateStatement.AlsoCondition
-	581,  // 1103: pb.EvaluateStatement.WhenPhrase.whens:type_name -> pb.EvaluateStatement.When
-	243,  // 1104: pb.EvaluateStatement.WhenPhrase.statements:type_name -> pb.Statement
-	342,  // 1105: pb.DivideStatement.Giving.identifier:type_name -> pb.Identifier
-	583,  // 1106: pb.DivideStatement.GivingPhrase.givings:type_name -> pb.DivideStatement.Giving
-	342,  // 1107: pb.DivideStatement.Into.identifier:type_name -> pb.Identifier
-	585,  // 1108: pb.DivideStatement.IntoStatement.intos:type_name -> pb.DivideStatement.Into
-	342,  // 1109: pb.DivideStatement.IntoGivingStatement.identifier:type_name -> pb.Identifier
-	393,  // 1110: pb.DivideStatement.IntoGivingStatement.literal:type_name -> pb.Literal
-	584,  // 1111: pb.DivideStatement.IntoGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
-	342,  // 1112: pb.DivideStatement.ByGivingStatement.identifier:type_name -> pb.Identifier
-	393,  // 1113: pb.DivideStatement.ByGivingStatement.literal:type_name -> pb.Literal
-	584,  // 1114: pb.DivideStatement.ByGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
-	342,  // 1115: pb.DivideStatement.Remainder.identifier:type_name -> pb.Identifier
-	342,  // 1116: pb.ClosePortFileIOUsing.AssociatedData.identifier:type_name -> pb.Identifier
-	396,  // 1117: pb.ClosePortFileIOUsing.AssociatedData.integer_literal:type_name -> pb.IntegerLiteral
-	342,  // 1118: pb.ClosePortFileIOUsing.AssociatedDataLength.identifier:type_name -> pb.Identifier
-	396,  // 1119: pb.ClosePortFileIOUsing.AssociatedDataLength.integer_literal:type_name -> pb.IntegerLiteral
-	342,  // 1120: pb.CallStatement.ByContent.identifier:type_name -> pb.Identifier
-	393,  // 1121: pb.CallStatement.ByContent.literal:type_name -> pb.Literal
-	342,  // 1122: pb.CallStatement.ByValue.identifier:type_name -> pb.Identifier
-	393,  // 1123: pb.CallStatement.ByValue.literal:type_name -> pb.Literal
-	342,  // 1124: pb.CallStatement.ByReference.identifier:type_name -> pb.Identifier
-	393,  // 1125: pb.CallStatement.ByReference.literal:type_name -> pb.Literal
-	373,  // 1126: pb.CallStatement.ByReference.file_name:type_name -> pb.FileName
-	595,  // 1127: pb.CallStatement.ByReferencePhrase.refs:type_name -> pb.CallStatement.ByReference
-	594,  // 1128: pb.CallStatement.ByValuePhrase.values:type_name -> pb.CallStatement.ByValue
-	593,  // 1129: pb.CallStatement.ByContentPhrase.contents:type_name -> pb.CallStatement.ByContent
-	596,  // 1130: pb.CallStatement.UsingParameter.by_reference_phrase:type_name -> pb.CallStatement.ByReferencePhrase
-	597,  // 1131: pb.CallStatement.UsingParameter.by_value_phrase:type_name -> pb.CallStatement.ByValuePhrase
-	598,  // 1132: pb.CallStatement.UsingParameter.by_content_phrase:type_name -> pb.CallStatement.ByContentPhrase
-	599,  // 1133: pb.CallStatement.UsingPhrase.parameters:type_name -> pb.CallStatement.UsingParameter
-	342,  // 1134: pb.CallStatement.GivingPhrase.identifier:type_name -> pb.Identifier
-	381,  // 1135: pb.AlterStatement.ProceedTo.from:type_name -> pb.ProcedureName
-	381,  // 1136: pb.AlterStatement.ProceedTo.to:type_name -> pb.ProcedureName
-	342,  // 1137: pb.AddStatement.AddFrom.Identifier:type_name -> pb.Identifier
-	393,  // 1138: pb.AddStatement.AddFrom.literal:type_name -> pb.Literal
-	342,  // 1139: pb.AddStatement.AddToGiving.Identifier:type_name -> pb.Identifier
-	393,  // 1140: pb.AddStatement.AddToGiving.literal:type_name -> pb.Literal
-	603,  // 1141: pb.AddStatement.To.froms:type_name -> pb.AddStatement.AddFrom
-	342,  // 1142: pb.AddStatement.To.tos:type_name -> pb.Identifier
-	603,  // 1143: pb.AddStatement.ToGiving.froms:type_name -> pb.AddStatement.AddFrom
-	604,  // 1144: pb.AddStatement.ToGiving.tos:type_name -> pb.AddStatement.AddToGiving
-	342,  // 1145: pb.AddStatement.ToGiving.givings:type_name -> pb.Identifier
-	342,  // 1146: pb.AddStatement.Corresponding.corresponding:type_name -> pb.Identifier
-	342,  // 1147: pb.AddStatement.Corresponding.to:type_name -> pb.Identifier
-	49,   // 1148: pb.AcceptStatement.FromDate.type:type_name -> pb.AcceptStatement.FromDate.Type
-	379,  // 1149: pb.AcceptStatement.FromMnemonic.mnemonic_name:type_name -> pb.MnemonicName
-	373,  // 1150: pb.UseAfterClause.FileNames.file_names:type_name -> pb.FileName
-	348,  // 1151: pb.ConditionNameReference.SubscriptReference.subscripts:type_name -> pb.Subscript
-	357,  // 1152: pb.ConditionNameReference.InSubscript.in_datas:type_name -> pb.InData
-	358,  // 1153: pb.ConditionNameReference.InSubscript.in_file:type_name -> pb.InFile
-	613,  // 1154: pb.ConditionNameReference.InSubscript.refs:type_name -> pb.ConditionNameReference.SubscriptReference
-	1155, // [1155:1155] is the sub-list for method output_type
-	1155, // [1155:1155] is the sub-list for method input_type
-	1155, // [1155:1155] is the sub-list for extension type_name
-	1155, // [1155:1155] is the sub-list for extension extendee
-	0,    // [0:1155] is the sub-list for field type_name
+	324,  // 664: pb.Abbreviation.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	342,  // 665: pb.Abbreviation.abbreviation:type_name -> pb.Abbreviation
+	353,  // 666: pb.Identifier.qualified_data_name:type_name -> pb.QualifiedDataName
+	344,  // 667: pb.Identifier.table_call:type_name -> pb.TableCall
+	345,  // 668: pb.Identifier.function_call:type_name -> pb.FunctionCall
+	399,  // 669: pb.Identifier.special_register:type_name -> pb.SpecialRegister
+	353,  // 670: pb.TableCall.qualified_data_name:type_name -> pb.QualifiedDataName
+	349,  // 671: pb.TableCall.subscripts:type_name -> pb.Subscript
+	346,  // 672: pb.TableCall.reference_modifier:type_name -> pb.ReferenceModifier
+	375,  // 673: pb.FunctionCall.function_name:type_name -> pb.FunctionName
+	350,  // 674: pb.FunctionCall.arguments:type_name -> pb.Argument
+	346,  // 675: pb.FunctionCall.reference_modifier:type_name -> pb.ReferenceModifier
+	347,  // 676: pb.ReferenceModifier.character_position:type_name -> pb.CharacterPosition
+	348,  // 677: pb.ReferenceModifier.length:type_name -> pb.Length
+	324,  // 678: pb.CharacterPosition.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	324,  // 679: pb.Length.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	397,  // 680: pb.Subscript.integer_literal:type_name -> pb.IntegerLiteral
+	351,  // 681: pb.Subscript.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
+	352,  // 682: pb.Subscript.index_name:type_name -> pb.IndexNameIntegerLiteral
+	324,  // 683: pb.Subscript.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	394,  // 684: pb.Argument.literal:type_name -> pb.Literal
+	343,  // 685: pb.Argument.identifier:type_name -> pb.Identifier
+	351,  // 686: pb.Argument.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
+	352,  // 687: pb.Argument.index_name:type_name -> pb.IndexNameIntegerLiteral
+	324,  // 688: pb.Argument.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	353,  // 689: pb.QualifiedDataNameIntegerLiteral.qualified_data_name:type_name -> pb.QualifiedDataName
+	397,  // 690: pb.QualifiedDataNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
+	376,  // 691: pb.IndexNameIntegerLiteral.index_name:type_name -> pb.IndexName
+	397,  // 692: pb.IndexNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
+	354,  // 693: pb.QualifiedDataName.f1:type_name -> pb.QualifiedDataNameFormat1
+	355,  // 694: pb.QualifiedDataName.f2:type_name -> pb.QualifiedDataNameFormat2
+	356,  // 695: pb.QualifiedDataName.f3:type_name -> pb.QualifiedDataNameFormat3
+	357,  // 696: pb.QualifiedDataName.f4:type_name -> pb.QualifiedDataNameFormat4
+	371,  // 697: pb.QualifiedDataNameFormat1.data_name:type_name -> pb.DataName
+	370,  // 698: pb.QualifiedDataNameFormat1.condition_name:type_name -> pb.ConditionName
+	358,  // 699: pb.QualifiedDataNameFormat1.in_datas:type_name -> pb.InData
+	363,  // 700: pb.QualifiedDataNameFormat1.in_tables:type_name -> pb.InTable
+	359,  // 701: pb.QualifiedDataNameFormat1.in_file:type_name -> pb.InFile
+	381,  // 702: pb.QualifiedDataNameFormat2.paragraph_name:type_name -> pb.ParagraphName
+	361,  // 703: pb.QualifiedDataNameFormat2.in_section:type_name -> pb.InSection
+	392,  // 704: pb.QualifiedDataNameFormat3.text_name:type_name -> pb.TextName
+	362,  // 705: pb.QualifiedDataNameFormat3.in_library:type_name -> pb.InLibrary
+	359,  // 706: pb.QualifiedDataNameFormat4.in_file:type_name -> pb.InFile
+	371,  // 707: pb.InData.data_name:type_name -> pb.DataName
+	374,  // 708: pb.InFile.file_name:type_name -> pb.FileName
+	380,  // 709: pb.InMnemonic.mnemonic_name:type_name -> pb.MnemonicName
+	389,  // 710: pb.InSection.section_name:type_name -> pb.SectionName
+	378,  // 711: pb.InLibrary.library_name:type_name -> pb.LibraryName
+	344,  // 712: pb.InTable.table_call:type_name -> pb.TableCall
+	393,  // 713: pb.AlphabetName.cobol_word:type_name -> pb.CobolWord
+	390,  // 714: pb.AssignmentName.system_name:type_name -> pb.SystemName
+	383,  // 715: pb.BasisName.program_name:type_name -> pb.ProgramName
+	393,  // 716: pb.CdName.cobol_word:type_name -> pb.CobolWord
+	393,  // 717: pb.ClassName.cobol_word:type_name -> pb.CobolWord
+	390,  // 718: pb.ComputerName.system_name:type_name -> pb.SystemName
+	393,  // 719: pb.ConditionName.cobol_word:type_name -> pb.CobolWord
+	393,  // 720: pb.DataName.cobol_word:type_name -> pb.CobolWord
+	390,  // 721: pb.EnvironmentName.system_name:type_name -> pb.SystemName
+	393,  // 722: pb.FileName.cobol_word:type_name -> pb.CobolWord
+	393,  // 723: pb.IndexName.cobol_word:type_name -> pb.CobolWord
+	390,  // 724: pb.LanguageName.system_name:type_name -> pb.SystemName
+	393,  // 725: pb.LibraryName.cobol_word:type_name -> pb.CobolWord
+	393,  // 726: pb.LocalName.cobol_word:type_name -> pb.CobolWord
+	393,  // 727: pb.MnemonicName.cobol_word:type_name -> pb.CobolWord
+	393,  // 728: pb.ParagraphName.cobol_word:type_name -> pb.CobolWord
+	397,  // 729: pb.ParagraphName.integer_literal:type_name -> pb.IntegerLiteral
+	381,  // 730: pb.ProcedureName.paragraph_name:type_name -> pb.ParagraphName
+	389,  // 731: pb.ProcedureName.section_name:type_name -> pb.SectionName
+	401,  // 732: pb.ProgramName.non_numeric_literal:type_name -> pb.NonNumericLiteral
+	393,  // 733: pb.ProgramName.cobol_word:type_name -> pb.CobolWord
+	353,  // 734: pb.RecordName.qualified_data_name:type_name -> pb.QualifiedDataName
+	353,  // 735: pb.ReportName.qualified_data_name:type_name -> pb.QualifiedDataName
+	393,  // 736: pb.RoutingName.cobol_word:type_name -> pb.CobolWord
+	393,  // 737: pb.RoutineName.cobol_word:type_name -> pb.CobolWord
+	393,  // 738: pb.ScreenName.cobol_word:type_name -> pb.CobolWord
+	393,  // 739: pb.SectionName.cobol_word:type_name -> pb.CobolWord
+	397,  // 740: pb.SectionName.integer_literal:type_name -> pb.IntegerLiteral
+	393,  // 741: pb.SystemName.cobol_word:type_name -> pb.CobolWord
+	393,  // 742: pb.SymbolicCharacter.cobol_word:type_name -> pb.CobolWord
+	393,  // 743: pb.TextName.cobol_word:type_name -> pb.CobolWord
+	56,   // 744: pb.Literal.type:type_name -> pb.Literal.Type
+	396,  // 745: pb.Literal.numeric_literal:type_name -> pb.NumericLiteral
+	395,  // 746: pb.Literal.boolean_literal:type_name -> pb.BooleanLiteral
+	401,  // 747: pb.Literal.non_numeric_literal:type_name -> pb.NonNumericLiteral
+	398,  // 748: pb.Literal.figurative_constant:type_name -> pb.FigurativeConstant
+	57,   // 749: pb.NumericLiteral.type:type_name -> pb.NumericLiteral.Type
+	58,   // 750: pb.FigurativeConstant.type:type_name -> pb.FigurativeConstant.Type
+	394,  // 751: pb.FigurativeConstant.literal:type_name -> pb.Literal
+	59,   // 752: pb.SpecialRegister.type:type_name -> pb.SpecialRegister.Type
+	343,  // 753: pb.SpecialRegister.identifier:type_name -> pb.Identifier
+	1,    // 754: pb.Call.type:type_name -> pb.CallType
+	371,  // 755: pb.Call.data_name:type_name -> pb.DataName
+	370,  // 756: pb.Call.condition_name:type_name -> pb.ConditionName
+	374,  // 757: pb.Call.file_name:type_name -> pb.FileName
+	382,  // 758: pb.Call.procedure_name:type_name -> pb.ProcedureName
+	389,  // 759: pb.Call.section_name:type_name -> pb.SectionName
+	381,  // 760: pb.Call.paragraph_name:type_name -> pb.ParagraphName
+	383,  // 761: pb.Call.program_name:type_name -> pb.ProgramName
+	376,  // 762: pb.Call.index_name:type_name -> pb.IndexName
+	380,  // 763: pb.Call.mnemonic_name:type_name -> pb.MnemonicName
+	385,  // 764: pb.Call.report_name:type_name -> pb.ReportName
+	367,  // 765: pb.Call.cd_name:type_name -> pb.CdName
+	388,  // 766: pb.Call.screen_name:type_name -> pb.ScreenName
+	399,  // 767: pb.Call.special_register:type_name -> pb.SpecialRegister
+	394,  // 768: pb.AlphabetClause.Also.alsos:type_name -> pb.Literal
+	394,  // 769: pb.AlphabetClause.AlphabetLiteral.literal:type_name -> pb.Literal
+	394,  // 770: pb.AlphabetClause.AlphabetLiteral.through:type_name -> pb.Literal
+	406,  // 771: pb.AlphabetClause.AlphabetLiteral.alsos:type_name -> pb.AlphabetClause.Also
+	407,  // 772: pb.AlphabetClause.AlphabetLiterals.values:type_name -> pb.AlphabetClause.AlphabetLiteral
+	5,    // 773: pb.AlphabetClause.Alphanumeric.type:type_name -> pb.AlphabetClause.Alphanumeric.Type
+	393,  // 774: pb.AlphabetClause.Alphanumeric.cobol_word:type_name -> pb.CobolWord
+	408,  // 775: pb.AlphabetClause.Alphanumeric.values:type_name -> pb.AlphabetClause.AlphabetLiterals
+	6,    // 776: pb.AlphabetClause.National.type:type_name -> pb.AlphabetClause.National.Type
+	394,  // 777: pb.AlphabetClause.National.ccs_version:type_name -> pb.Literal
+	331,  // 778: pb.EnvironmentSwitchNameClause.StatusPhrase.condition:type_name -> pb.Condition
+	331,  // 779: pb.EnvironmentSwitchNameClause.StatusPhrase.off_condition:type_name -> pb.Condition
+	371,  // 780: pb.LabelRecordsClause.DataNames.data_names:type_name -> pb.DataName
+	397,  // 781: pb.DataDescriptionEntry.Format1.level_number:type_name -> pb.IntegerLiteral
+	371,  // 782: pb.DataDescriptionEntry.Format1.data_name:type_name -> pb.DataName
+	137,  // 783: pb.DataDescriptionEntry.Format1.data_redefines_clause:type_name -> pb.DataRedefinesClause
+	138,  // 784: pb.DataDescriptionEntry.Format1.data_integer_string_clause:type_name -> pb.DataIntegerStringClause
+	139,  // 785: pb.DataDescriptionEntry.Format1.data_external_clause:type_name -> pb.DataExternalClause
+	140,  // 786: pb.DataDescriptionEntry.Format1.data_global_clause:type_name -> pb.DataGlobalClause
+	141,  // 787: pb.DataDescriptionEntry.Format1.data_type_def_clause:type_name -> pb.DataTypeDefClause
+	142,  // 788: pb.DataDescriptionEntry.Format1.data_thread_local_clause:type_name -> pb.DataThreadLocalClause
+	143,  // 789: pb.DataDescriptionEntry.Format1.data_picture_clause:type_name -> pb.DataPictureClause
+	147,  // 790: pb.DataDescriptionEntry.Format1.data_common_own_local_clause:type_name -> pb.DataCommonOwnLocalClause
+	148,  // 791: pb.DataDescriptionEntry.Format1.data_type_clause:type_name -> pb.DataTypeClause
+	149,  // 792: pb.DataDescriptionEntry.Format1.data_using_clause:type_name -> pb.DataUsingClause
+	150,  // 793: pb.DataDescriptionEntry.Format1.data_usage_clause:type_name -> pb.DataUsageClause
+	152,  // 794: pb.DataDescriptionEntry.Format1.data_value_clause:type_name -> pb.DataValueClause
+	153,  // 795: pb.DataDescriptionEntry.Format1.data_received_by_clause:type_name -> pb.DataReceivedByClause
+	154,  // 796: pb.DataDescriptionEntry.Format1.data_occurs_clause:type_name -> pb.DataOccursClause
+	155,  // 797: pb.DataDescriptionEntry.Format1.data_sign_clause:type_name -> pb.DataSignClause
+	156,  // 798: pb.DataDescriptionEntry.Format1.data_synchronized_clause:type_name -> pb.DataSynchronizedClause
+	157,  // 799: pb.DataDescriptionEntry.Format1.data_justified_clause:type_name -> pb.DataJustifiedClause
+	158,  // 800: pb.DataDescriptionEntry.Format1.data_blank_when_zero_clause:type_name -> pb.DataBlankWhenZeroClause
+	159,  // 801: pb.DataDescriptionEntry.Format1.data_with_lower_bounds_clause:type_name -> pb.DataWithLowerBoundsClause
+	160,  // 802: pb.DataDescriptionEntry.Format1.data_aligned_clause:type_name -> pb.DataAlignedClause
+	161,  // 803: pb.DataDescriptionEntry.Format1.data_record_area_clause:type_name -> pb.DataRecordAreaClause
+	371,  // 804: pb.DataDescriptionEntry.Format2.data_name:type_name -> pb.DataName
+	136,  // 805: pb.DataDescriptionEntry.Format2.data_renames_clause:type_name -> pb.DataRenamesClause
+	370,  // 806: pb.DataDescriptionEntry.Format3.condition_name:type_name -> pb.ConditionName
+	152,  // 807: pb.DataDescriptionEntry.Format3.data_value_clause:type_name -> pb.DataValueClause
+	24,   // 808: pb.DataTypeClause.Lob.mode:type_name -> pb.DataTypeClause.Mode
+	397,  // 809: pb.DataTypeClause.Lob.integer_literal:type_name -> pb.IntegerLiteral
+	353,  // 810: pb.DataOccursClause.Sort.qualified_data_names:type_name -> pb.QualifiedDataName
+	376,  // 811: pb.DataOccursClause.Indexed.index_names:type_name -> pb.IndexName
+	205,  // 812: pb.ReportGroupDescriptionEntry.Vertical.line_number_clause:type_name -> pb.LineNumberClause
+	206,  // 813: pb.ReportGroupDescriptionEntry.Vertical.next_group_clause:type_name -> pb.NextGroupClause
+	207,  // 814: pb.ReportGroupDescriptionEntry.Vertical.type_clause:type_name -> pb.TypeClause
+	208,  // 815: pb.ReportGroupDescriptionEntry.Vertical.usage_clause:type_name -> pb.UsageClause
+	205,  // 816: pb.ReportGroupDescriptionEntry.Single.line_number_clause:type_name -> pb.LineNumberClause
+	208,  // 817: pb.ReportGroupDescriptionEntry.Single.usage_clause:type_name -> pb.UsageClause
+	204,  // 818: pb.ReportGroupDescriptionEntry.Printable.picture_clause:type_name -> pb.PictureClause
+	208,  // 819: pb.ReportGroupDescriptionEntry.Printable.usage_clause:type_name -> pb.UsageClause
+	203,  // 820: pb.ReportGroupDescriptionEntry.Printable.sign_clause:type_name -> pb.SignClause
+	202,  // 821: pb.ReportGroupDescriptionEntry.Printable.justified_clause:type_name -> pb.JustifiedClause
+	201,  // 822: pb.ReportGroupDescriptionEntry.Printable.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
+	205,  // 823: pb.ReportGroupDescriptionEntry.Printable.line_number_clause:type_name -> pb.LineNumberClause
+	200,  // 824: pb.ReportGroupDescriptionEntry.Printable.column_number_clause:type_name -> pb.ColumnNumberClause
+	199,  // 825: pb.ReportGroupDescriptionEntry.Printable.IndicateClause:type_name -> pb.IndicateClause
+	198,  // 826: pb.ReportGroupDescriptionEntry.Printable.source_clause:type_name -> pb.SourceClause
+	197,  // 827: pb.ReportGroupDescriptionEntry.Printable.value_clause:type_name -> pb.ValueClause
+	196,  // 828: pb.ReportGroupDescriptionEntry.Printable.SumClause:type_name -> pb.SumClause
+	195,  // 829: pb.ReportGroupDescriptionEntry.Printable.reset_clause:type_name -> pb.ResetClause
+	371,  // 830: pb.TypeClause.ControlHeading.data_name:type_name -> pb.DataName
+	371,  // 831: pb.TypeClause.ControlFooting.data_name:type_name -> pb.DataName
+	123,  // 832: pb.LibraryDescriptionEntry.Import.global_clause:type_name -> pb.GlobalClause
+	211,  // 833: pb.LibraryDescriptionEntry.Import.is_common_clause:type_name -> pb.IsCommonClause
+	213,  // 834: pb.LibraryDescriptionEntry.Import.attribute_clause:type_name -> pb.AttributeClause2
+	215,  // 835: pb.LibraryDescriptionEntry.Import.procedure_clause:type_name -> pb.ProcedureClause2
+	212,  // 836: pb.LibraryDescriptionEntry.Export.attribute_clause:type_name -> pb.AttributeClause1
+	214,  // 837: pb.LibraryDescriptionEntry.Export.procedure_clause:type_name -> pb.ProcedureClause1
+	379,  // 838: pb.ProcedureClause2.WithName.local_name:type_name -> pb.LocalName
+	374,  // 839: pb.ProcedureClause2.WithName.file_name:type_name -> pb.FileName
+	371,  // 840: pb.ProcedureClause2.UsingName.data_name:type_name -> pb.DataName
+	374,  // 841: pb.ProcedureClause2.UsingName.file_name:type_name -> pb.FileName
+	367,  // 842: pb.CommunicationDescriptionEntry.Input.cd_name:type_name -> pb.CdName
+	225,  // 843: pb.CommunicationDescriptionEntry.Input.symbolic_queue_clause:type_name -> pb.SymbolicQueueClause
+	226,  // 844: pb.CommunicationDescriptionEntry.Input.symbolic_sub_queue_clause:type_name -> pb.SymbolicSubQueueClause
+	227,  // 845: pb.CommunicationDescriptionEntry.Input.message_date_clause:type_name -> pb.MessageDateClause
+	228,  // 846: pb.CommunicationDescriptionEntry.Input.message_time_clause:type_name -> pb.MessageTimeClause
+	229,  // 847: pb.CommunicationDescriptionEntry.Input.symbolic_source_clause:type_name -> pb.SymbolicSourceClause
+	230,  // 848: pb.CommunicationDescriptionEntry.Input.text_length_clause:type_name -> pb.TextLengthClause
+	231,  // 849: pb.CommunicationDescriptionEntry.Input.end_key_clause:type_name -> pb.EndKeyClause
+	232,  // 850: pb.CommunicationDescriptionEntry.Input.status_key_clause:type_name -> pb.StatusKeyClause
+	233,  // 851: pb.CommunicationDescriptionEntry.Input.message_count_clause:type_name -> pb.MessageCountClause
+	372,  // 852: pb.CommunicationDescriptionEntry.Input.data_desc_name:type_name -> pb.DataDescName
+	224,  // 853: pb.CommunicationDescriptionEntry.Output.destination_count_clause:type_name -> pb.DestinationCountClause
+	230,  // 854: pb.CommunicationDescriptionEntry.Output.text_length_clause:type_name -> pb.TextLengthClause
+	232,  // 855: pb.CommunicationDescriptionEntry.Output.status_key_clause:type_name -> pb.StatusKeyClause
+	223,  // 856: pb.CommunicationDescriptionEntry.Output.destination_table_clause:type_name -> pb.DestinationTableClause
+	222,  // 857: pb.CommunicationDescriptionEntry.Output.errorKeyClause:type_name -> pb.ErrorKeyClause
+	221,  // 858: pb.CommunicationDescriptionEntry.Output.symbolic_destination_clause:type_name -> pb.SymbolicDestinationClause
+	367,  // 859: pb.CommunicationDescriptionEntry.Io.cd_name:type_name -> pb.CdName
+	227,  // 860: pb.CommunicationDescriptionEntry.Io.message_date_clause:type_name -> pb.MessageDateClause
+	228,  // 861: pb.CommunicationDescriptionEntry.Io.message_time_clause:type_name -> pb.MessageTimeClause
+	220,  // 862: pb.CommunicationDescriptionEntry.Io.symbolic_terminal_clause:type_name -> pb.SymbolicTerminalClause
+	230,  // 863: pb.CommunicationDescriptionEntry.Io.text_length_clause:type_name -> pb.TextLengthClause
+	231,  // 864: pb.CommunicationDescriptionEntry.Io.end_key_clause:type_name -> pb.EndKeyClause
+	232,  // 865: pb.CommunicationDescriptionEntry.Io.status_key_clause:type_name -> pb.StatusKeyClause
+	343,  // 866: pb.ProcedureDivision.ByReference.identifier:type_name -> pb.Identifier
+	374,  // 867: pb.ProcedureDivision.ByReference.file_name:type_name -> pb.FileName
+	437,  // 868: pb.ProcedureDivision.ByReferencePhrase.references:type_name -> pb.ProcedureDivision.ByReference
+	343,  // 869: pb.ProcedureDivision.ByValue.identifier:type_name -> pb.Identifier
+	394,  // 870: pb.ProcedureDivision.ByValue.literal:type_name -> pb.Literal
+	439,  // 871: pb.ProcedureDivision.ByValuePhrase.values:type_name -> pb.ProcedureDivision.ByValue
+	438,  // 872: pb.ProcedureDivision.UsingParameter.by_reference_phrase:type_name -> pb.ProcedureDivision.ByReferencePhrase
+	440,  // 873: pb.ProcedureDivision.UsingParameter.by_value_phrase:type_name -> pb.ProcedureDivision.ByValuePhrase
+	44,   // 874: pb.ProcedureDivision.GivingClause.type:type_name -> pb.ProcedureDivision.GivingClause.Type
+	371,  // 875: pb.ProcedureDivision.GivingClause.data_name:type_name -> pb.DataName
+	45,   // 876: pb.ProcedureDivision.UsingClause.type:type_name -> pb.ProcedureDivision.UsingClause.Type
+	441,  // 877: pb.ProcedureDivision.UsingClause.using_parameters:type_name -> pb.ProcedureDivision.UsingParameter
+	343,  // 878: pb.WriteStatement.FromPhrase.identifier:type_name -> pb.Identifier
+	394,  // 879: pb.WriteStatement.FromPhrase.literal:type_name -> pb.Literal
+	343,  // 880: pb.WriteStatement.AdvancingLines.identifier:type_name -> pb.Identifier
+	394,  // 881: pb.WriteStatement.AdvancingLines.literal:type_name -> pb.Literal
+	380,  // 882: pb.WriteStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
+	445,  // 883: pb.WriteStatement.AdvancingPhrase.advancing_page:type_name -> pb.WriteStatement.AdvancingPage
+	446,  // 884: pb.WriteStatement.AdvancingPhrase.advancing_lines:type_name -> pb.WriteStatement.AdvancingLines
+	447,  // 885: pb.WriteStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.WriteStatement.AdvancingMnemonic
+	343,  // 886: pb.UnstringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
+	394,  // 887: pb.UnstringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
+	343,  // 888: pb.UnstringStatement.OrAllPhrase.identifier:type_name -> pb.Identifier
+	394,  // 889: pb.UnstringStatement.OrAllPhrase.literal:type_name -> pb.Literal
+	449,  // 890: pb.UnstringStatement.DelimitedOr.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
+	450,  // 891: pb.UnstringStatement.DelimitedOr.or_all_phrases:type_name -> pb.UnstringStatement.OrAllPhrase
+	343,  // 892: pb.UnstringStatement.Into.identifier:type_name -> pb.Identifier
+	453,  // 893: pb.UnstringStatement.Into.delimiter_in:type_name -> pb.UnstringStatement.DelimiterIn
+	454,  // 894: pb.UnstringStatement.Into.count_in:type_name -> pb.UnstringStatement.CountIn
+	343,  // 895: pb.UnstringStatement.DelimiterIn.identifier:type_name -> pb.Identifier
+	343,  // 896: pb.UnstringStatement.CountIn.identifier:type_name -> pb.Identifier
+	343,  // 897: pb.UnstringStatement.SendingPhrase.identifier:type_name -> pb.Identifier
+	449,  // 898: pb.UnstringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
+	452,  // 899: pb.UnstringStatement.IntoPhrase.into:type_name -> pb.UnstringStatement.Into
+	353,  // 900: pb.UnstringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
+	353,  // 901: pb.UnstringStatement.TallyingPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
+	343,  // 902: pb.SubtractStatement.Subtrahend.identifier:type_name -> pb.Identifier
+	394,  // 903: pb.SubtractStatement.Subtrahend.literal:type_name -> pb.Literal
+	343,  // 904: pb.SubtractStatement.Minuend.identifier:type_name -> pb.Identifier
+	343,  // 905: pb.SubtractStatement.MinuendGiving.identifier:type_name -> pb.Identifier
+	394,  // 906: pb.SubtractStatement.MinuendGiving.literal:type_name -> pb.Literal
+	343,  // 907: pb.SubtractStatement.Giving.identifier:type_name -> pb.Identifier
+	353,  // 908: pb.SubtractStatement.MinuendCorresponding.qualified_data_name:type_name -> pb.QualifiedDataName
+	459,  // 909: pb.SubtractStatement.FromStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
+	460,  // 910: pb.SubtractStatement.FromStatement.minuends:type_name -> pb.SubtractStatement.Minuend
+	459,  // 911: pb.SubtractStatement.FromGivingStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
+	461,  // 912: pb.SubtractStatement.FromGivingStatement.minuend_giving:type_name -> pb.SubtractStatement.MinuendGiving
+	462,  // 913: pb.SubtractStatement.FromGivingStatement.givings:type_name -> pb.SubtractStatement.Giving
+	353,  // 914: pb.SubtractStatement.CorrespondingStatement.qualified_data_name:type_name -> pb.QualifiedDataName
+	463,  // 915: pb.SubtractStatement.CorrespondingStatement.minuend_corresponding:type_name -> pb.SubtractStatement.MinuendCorresponding
+	343,  // 916: pb.StringStatement.Sending.identifier:type_name -> pb.Identifier
+	394,  // 917: pb.StringStatement.Sending.literal:type_name -> pb.Literal
+	343,  // 918: pb.StringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
+	394,  // 919: pb.StringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
+	343,  // 920: pb.StringStatement.ForPhrase.identifier:type_name -> pb.Identifier
+	394,  // 921: pb.StringStatement.ForPhrase.literal:type_name -> pb.Literal
+	467,  // 922: pb.StringStatement.SendingPhrase.sendings:type_name -> pb.StringStatement.Sending
+	468,  // 923: pb.StringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.StringStatement.DelimitedByPhrase
+	469,  // 924: pb.StringStatement.SendingPhrase.for_phrase:type_name -> pb.StringStatement.ForPhrase
+	343,  // 925: pb.StringStatement.IntoPhrase.identifier:type_name -> pb.Identifier
+	353,  // 926: pb.StringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
+	343,  // 927: pb.StopStatement.Giving.identifier:type_name -> pb.Identifier
+	397,  // 928: pb.StopStatement.Giving.integer_literal:type_name -> pb.IntegerLiteral
+	46,   // 929: pb.StartStatement.Key.type:type_name -> pb.StartStatement.Type
+	353,  // 930: pb.StartStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
+	353,  // 931: pb.SortStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
+	364,  // 932: pb.SortStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
+	364,  // 933: pb.SortStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
+	364,  // 934: pb.SortStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
+	477,  // 935: pb.SortStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.SortStatement.CollatingAlphanumeric
+	478,  // 936: pb.SortStatement.CollatingSequencePhrase.collating_national:type_name -> pb.SortStatement.CollatingNational
+	382,  // 937: pb.SortStatement.InputThrough.procedure_name:type_name -> pb.ProcedureName
+	382,  // 938: pb.SortStatement.InputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
+	480,  // 939: pb.SortStatement.InputProcedurePhrase.input_through:type_name -> pb.SortStatement.InputThrough
+	374,  // 940: pb.SortStatement.Using.file_names:type_name -> pb.FileName
+	382,  // 941: pb.SortStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
+	382,  // 942: pb.SortStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
+	483,  // 943: pb.SortStatement.OutputProcedurePhrase.output_through:type_name -> pb.SortStatement.OutputThrough
+	374,  // 944: pb.SortStatement.Giving.file_name:type_name -> pb.FileName
+	47,   // 945: pb.SortStatement.Giving.type:type_name -> pb.SortStatement.Giving.Type
+	485,  // 946: pb.SortStatement.GivingPhrase.givings:type_name -> pb.SortStatement.Giving
+	343,  // 947: pb.SetStatement.To.identifier:type_name -> pb.Identifier
+	343,  // 948: pb.SetStatement.Entry.identifier:type_name -> pb.Identifier
+	394,  // 949: pb.SetStatement.Entry.literal:type_name -> pb.Literal
+	488,  // 950: pb.SetStatement.ToValue.Entry:type_name -> pb.SetStatement.Entry
+	343,  // 951: pb.SetStatement.ToValue.identifier:type_name -> pb.Identifier
+	394,  // 952: pb.SetStatement.ToValue.literal:type_name -> pb.Literal
+	343,  // 953: pb.SetStatement.ByValue.identifier:type_name -> pb.Identifier
+	394,  // 954: pb.SetStatement.ByValue.literal:type_name -> pb.Literal
+	487,  // 955: pb.SetStatement.ToStatement.tos:type_name -> pb.SetStatement.To
+	489,  // 956: pb.SetStatement.ToStatement.to_values:type_name -> pb.SetStatement.ToValue
+	487,  // 957: pb.SetStatement.UpDownByStatement.tos:type_name -> pb.SetStatement.To
+	490,  // 958: pb.SetStatement.UpDownByStatement.by_value:type_name -> pb.SetStatement.ByValue
+	343,  // 959: pb.SendStatement.FromPhrase.identifier:type_name -> pb.Identifier
+	343,  // 960: pb.SendStatement.WithPhrase.identifier:type_name -> pb.Identifier
+	343,  // 961: pb.SendStatement.AdvancingLines.identifier:type_name -> pb.Identifier
+	394,  // 962: pb.SendStatement.AdvancingLines.literal:type_name -> pb.Literal
+	380,  // 963: pb.SendStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
+	496,  // 964: pb.SendStatement.AdvancingPhrase.advancing_page:type_name -> pb.SendStatement.AdvancingPage
+	497,  // 965: pb.SendStatement.AdvancingPhrase.advancing_lines:type_name -> pb.SendStatement.AdvancingLines
+	498,  // 966: pb.SendStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.SendStatement.AdvancingMnemonic
+	343,  // 967: pb.SendStatement.SyncStatement.identifier:type_name -> pb.Identifier
+	394,  // 968: pb.SendStatement.SyncStatement.literal:type_name -> pb.Literal
+	493,  // 969: pb.SendStatement.SyncStatement.from_phrase:type_name -> pb.SendStatement.FromPhrase
+	494,  // 970: pb.SendStatement.SyncStatement.with_phrase:type_name -> pb.SendStatement.WithPhrase
+	495,  // 971: pb.SendStatement.SyncStatement.replacing_phrase:type_name -> pb.SendStatement.ReplacingPhrase
+	499,  // 972: pb.SendStatement.SyncStatement.advancing_phrase:type_name -> pb.SendStatement.AdvancingPhrase
+	343,  // 973: pb.SendStatement.AsyncStatement.identifier:type_name -> pb.Identifier
+	353,  // 974: pb.SearchStatement.Varying.qualified_data_name:type_name -> pb.QualifiedDataName
+	331,  // 975: pb.SearchStatement.When.condition:type_name -> pb.Condition
+	244,  // 976: pb.SearchStatement.When.statements:type_name -> pb.Statement
+	343,  // 977: pb.RewriteStatement.From.identifier:type_name -> pb.Identifier
+	353,  // 978: pb.ReturnStatement.Into.qualified_data_name:type_name -> pb.QualifiedDataName
+	353,  // 979: pb.ReleaseStatement.From.qualified_data_name:type_name -> pb.QualifiedDataName
+	371,  // 980: pb.ReceiveStatement.From.data_name:type_name -> pb.DataName
+	371,  // 981: pb.ReceiveStatement.Thread.data_name:type_name -> pb.DataName
+	396,  // 982: pb.ReceiveStatement.Size.numeric_literal:type_name -> pb.NumericLiteral
+	343,  // 983: pb.ReceiveStatement.Size.identifier:type_name -> pb.Identifier
+	343,  // 984: pb.ReceiveStatement.Status.identifier:type_name -> pb.Identifier
+	396,  // 985: pb.ReceiveStatement.Before.numeric_literal:type_name -> pb.NumericLiteral
+	343,  // 986: pb.ReceiveStatement.Before.identifier:type_name -> pb.Identifier
+	371,  // 987: pb.ReceiveStatement.FromStatement.data_name:type_name -> pb.DataName
+	507,  // 988: pb.ReceiveStatement.FromStatement.from:type_name -> pb.ReceiveStatement.From
+	512,  // 989: pb.ReceiveStatement.FromStatement.before:type_name -> pb.ReceiveStatement.Before
+	508,  // 990: pb.ReceiveStatement.FromStatement.with:type_name -> pb.ReceiveStatement.With
+	509,  // 991: pb.ReceiveStatement.FromStatement.thread:type_name -> pb.ReceiveStatement.Thread
+	510,  // 992: pb.ReceiveStatement.FromStatement.size:type_name -> pb.ReceiveStatement.Size
+	511,  // 993: pb.ReceiveStatement.FromStatement.status:type_name -> pb.ReceiveStatement.Status
+	244,  // 994: pb.ReceiveStatement.NoData.statements:type_name -> pb.Statement
+	244,  // 995: pb.ReceiveStatement.WithData.statements:type_name -> pb.Statement
+	367,  // 996: pb.ReceiveStatement.IntoStatement.cd_name:type_name -> pb.CdName
+	343,  // 997: pb.ReceiveStatement.IntoStatement.identifier:type_name -> pb.Identifier
+	514,  // 998: pb.ReceiveStatement.IntoStatement.no_data:type_name -> pb.ReceiveStatement.NoData
+	515,  // 999: pb.ReceiveStatement.IntoStatement.with_data:type_name -> pb.ReceiveStatement.WithData
+	343,  // 1000: pb.ReadStatement.Into.identifier:type_name -> pb.Identifier
+	353,  // 1001: pb.ReadStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
+	343,  // 1002: pb.PerformStatement.Times.identifier:type_name -> pb.Identifier
+	397,  // 1003: pb.PerformStatement.Times.integer_literal:type_name -> pb.IntegerLiteral
+	520,  // 1004: pb.PerformStatement.Until.test_clause:type_name -> pb.PerformStatement.TestClause
+	331,  // 1005: pb.PerformStatement.Until.condition:type_name -> pb.Condition
+	343,  // 1006: pb.PerformStatement.From.identifier:type_name -> pb.Identifier
+	394,  // 1007: pb.PerformStatement.From.literal:type_name -> pb.Literal
+	324,  // 1008: pb.PerformStatement.From.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	343,  // 1009: pb.PerformStatement.By.identifier:type_name -> pb.Identifier
+	394,  // 1010: pb.PerformStatement.By.literal:type_name -> pb.Literal
+	324,  // 1011: pb.PerformStatement.By.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	343,  // 1012: pb.PerformStatement.VaryingPhrase.identifier:type_name -> pb.Identifier
+	394,  // 1013: pb.PerformStatement.VaryingPhrase.literal:type_name -> pb.Literal
+	523,  // 1014: pb.PerformStatement.VaryingPhrase.from:type_name -> pb.PerformStatement.From
+	524,  // 1015: pb.PerformStatement.VaryingPhrase.by:type_name -> pb.PerformStatement.By
+	522,  // 1016: pb.PerformStatement.VaryingPhrase.until:type_name -> pb.PerformStatement.Until
+	525,  // 1017: pb.PerformStatement.After.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
+	525,  // 1018: pb.PerformStatement.VaryingClause.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
+	526,  // 1019: pb.PerformStatement.VaryingClause.after:type_name -> pb.PerformStatement.After
+	520,  // 1020: pb.PerformStatement.Varying.test_clause:type_name -> pb.PerformStatement.TestClause
+	527,  // 1021: pb.PerformStatement.Varying.varying_clause:type_name -> pb.PerformStatement.VaryingClause
+	521,  // 1022: pb.PerformStatement.Type.times:type_name -> pb.PerformStatement.Times
+	522,  // 1023: pb.PerformStatement.Type.until:type_name -> pb.PerformStatement.Until
+	528,  // 1024: pb.PerformStatement.Type.varying:type_name -> pb.PerformStatement.Varying
+	529,  // 1025: pb.PerformStatement.InlineStatement.type:type_name -> pb.PerformStatement.Type
+	244,  // 1026: pb.PerformStatement.InlineStatement.statements:type_name -> pb.Statement
+	382,  // 1027: pb.PerformStatement.ProcedureStatement.procedure_name:type_name -> pb.ProcedureName
+	382,  // 1028: pb.PerformStatement.ProcedureStatement.through:type_name -> pb.ProcedureName
+	529,  // 1029: pb.PerformStatement.ProcedureStatement.type:type_name -> pb.PerformStatement.Type
+	374,  // 1030: pb.OpenStatement.Input.file_name:type_name -> pb.FileName
+	532,  // 1031: pb.OpenStatement.InputStatement.inputs:type_name -> pb.OpenStatement.Input
+	374,  // 1032: pb.OpenStatement.Output.file_name:type_name -> pb.FileName
+	534,  // 1033: pb.OpenStatement.OutputStatement.outputs:type_name -> pb.OpenStatement.Output
+	374,  // 1034: pb.OpenStatement.IOStatement.file_names:type_name -> pb.FileName
+	374,  // 1035: pb.OpenStatement.ExtendStatement.file_names:type_name -> pb.FileName
+	343,  // 1036: pb.MultiplyStatement.GivingOperand.identifier:type_name -> pb.Identifier
+	394,  // 1037: pb.MultiplyStatement.GivingOperand.literal:type_name -> pb.Literal
+	343,  // 1038: pb.MultiplyStatement.GivingResult.identifier:type_name -> pb.Identifier
+	538,  // 1039: pb.MultiplyStatement.Giving.giving_operand:type_name -> pb.MultiplyStatement.GivingOperand
+	539,  // 1040: pb.MultiplyStatement.Giving.giving_result:type_name -> pb.MultiplyStatement.GivingResult
+	343,  // 1041: pb.MultiplyStatement.Regular.regular_operands:type_name -> pb.Identifier
+	353,  // 1042: pb.MergeStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
+	364,  // 1043: pb.MergeStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
+	544,  // 1044: pb.MergeStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.MergeStatement.CollatingAlphanumeric
+	545,  // 1045: pb.MergeStatement.CollatingSequencePhrase.collating_national:type_name -> pb.MergeStatement.CollatingNational
+	364,  // 1046: pb.MergeStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
+	364,  // 1047: pb.MergeStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
+	374,  // 1048: pb.MergeStatement.Using.file_names:type_name -> pb.FileName
+	382,  // 1049: pb.MergeStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
+	548,  // 1050: pb.MergeStatement.OutputProcedurePhrase.output_through:type_name -> pb.MergeStatement.OutputThrough
+	382,  // 1051: pb.MergeStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
+	550,  // 1052: pb.MergeStatement.GivingPhrase.givings:type_name -> pb.MergeStatement.Giving
+	374,  // 1053: pb.MergeStatement.Giving.file_name:type_name -> pb.FileName
+	48,   // 1054: pb.MergeStatement.Giving.type:type_name -> pb.MergeStatement.Giving.Type
+	343,  // 1055: pb.InspectStatement.By.identifier:type_name -> pb.Identifier
+	394,  // 1056: pb.InspectStatement.By.literal:type_name -> pb.Literal
+	343,  // 1057: pb.InspectStatement.To.identifier:type_name -> pb.Identifier
+	394,  // 1058: pb.InspectStatement.To.literal:type_name -> pb.Literal
+	343,  // 1059: pb.InspectStatement.BeforeAfter.identifier:type_name -> pb.Identifier
+	394,  // 1060: pb.InspectStatement.BeforeAfter.literal:type_name -> pb.Literal
+	343,  // 1061: pb.InspectStatement.ReplacingAllLeading.identifier:type_name -> pb.Identifier
+	394,  // 1062: pb.InspectStatement.ReplacingAllLeading.literal:type_name -> pb.Literal
+	551,  // 1063: pb.InspectStatement.ReplacingAllLeading.by:type_name -> pb.InspectStatement.By
+	553,  // 1064: pb.InspectStatement.ReplacingAllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	554,  // 1065: pb.InspectStatement.ReplacingAllLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeading
+	343,  // 1066: pb.InspectStatement.AllLeading.identifier:type_name -> pb.Identifier
+	394,  // 1067: pb.InspectStatement.AllLeading.literal:type_name -> pb.Literal
+	553,  // 1068: pb.InspectStatement.AllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	556,  // 1069: pb.InspectStatement.AllLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeading
+	551,  // 1070: pb.InspectStatement.ReplacingCharacters.by:type_name -> pb.InspectStatement.By
+	553,  // 1071: pb.InspectStatement.ReplacingCharacters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	553,  // 1072: pb.InspectStatement.Characters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	559,  // 1073: pb.InspectStatement.CharactersLeadings.characters:type_name -> pb.InspectStatement.Characters
+	557,  // 1074: pb.InspectStatement.CharactersLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeadings
+	343,  // 1075: pb.InspectStatement.For.identifier:type_name -> pb.Identifier
+	560,  // 1076: pb.InspectStatement.For.characters_leadings:type_name -> pb.InspectStatement.CharactersLeadings
+	343,  // 1077: pb.InspectStatement.ConvertingPhrase.identifier:type_name -> pb.Identifier
+	394,  // 1078: pb.InspectStatement.ConvertingPhrase.literal:type_name -> pb.Literal
+	552,  // 1079: pb.InspectStatement.ConvertingPhrase.to:type_name -> pb.InspectStatement.To
+	553,  // 1080: pb.InspectStatement.ConvertingPhrase.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	558,  // 1081: pb.InspectStatement.ReplacingCharactersLeadings.replacing_characters:type_name -> pb.InspectStatement.ReplacingCharacters
+	555,  // 1082: pb.InspectStatement.ReplacingCharactersLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeadings
+	563,  // 1083: pb.InspectStatement.ReplacingPhrase.replacing_characters_leadings:type_name -> pb.InspectStatement.ReplacingCharactersLeadings
+	561,  // 1084: pb.InspectStatement.TallyingReplacingPhrase.fors:type_name -> pb.InspectStatement.For
+	564,  // 1085: pb.InspectStatement.TallyingReplacingPhrase.replacing_phrases:type_name -> pb.InspectStatement.ReplacingPhrase
+	561,  // 1086: pb.InspectStatement.TallyingPhrase.fors:type_name -> pb.InspectStatement.For
+	49,   // 1087: pb.InitializeStatement.ReplacingBy.type:type_name -> pb.InitializeStatement.ReplacingBy.Type
+	343,  // 1088: pb.InitializeStatement.ReplacingBy.identifier:type_name -> pb.Identifier
+	394,  // 1089: pb.InitializeStatement.ReplacingBy.literal:type_name -> pb.Literal
+	567,  // 1090: pb.InitializeStatement.ReplacingPhrase.bys:type_name -> pb.InitializeStatement.ReplacingBy
+	244,  // 1091: pb.IfStatement.Then.statements:type_name -> pb.Statement
+	244,  // 1092: pb.IfStatement.Else.statements:type_name -> pb.Statement
+	382,  // 1093: pb.GoToStatement.SimpleStatement.procedure_name:type_name -> pb.ProcedureName
+	382,  // 1094: pb.GoToStatement.DependingOn.procedure_names:type_name -> pb.ProcedureName
+	343,  // 1095: pb.GoToStatement.DependingOn.depending_on:type_name -> pb.Identifier
+	572,  // 1096: pb.GoToStatement.DependingOnStatement.depending_on:type_name -> pb.GoToStatement.DependingOn
+	343,  // 1097: pb.ExhibitStatement.Operand.identifier:type_name -> pb.Identifier
+	394,  // 1098: pb.ExhibitStatement.Operand.literal:type_name -> pb.Literal
+	343,  // 1099: pb.EvaluateStatement.Select.identifier:type_name -> pb.Identifier
+	394,  // 1100: pb.EvaluateStatement.Select.literal:type_name -> pb.Literal
+	324,  // 1101: pb.EvaluateStatement.Select.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	331,  // 1102: pb.EvaluateStatement.Select.condition:type_name -> pb.Condition
+	575,  // 1103: pb.EvaluateStatement.AlsoSelect.select:type_name -> pb.EvaluateStatement.Select
+	579,  // 1104: pb.EvaluateStatement.ValueThrough.value:type_name -> pb.EvaluateStatement.Value
+	578,  // 1105: pb.EvaluateStatement.ValueThrough.through:type_name -> pb.EvaluateStatement.Through
+	579,  // 1106: pb.EvaluateStatement.Through.value:type_name -> pb.EvaluateStatement.Value
+	343,  // 1107: pb.EvaluateStatement.Value.identifier:type_name -> pb.Identifier
+	394,  // 1108: pb.EvaluateStatement.Value.literal:type_name -> pb.Literal
+	324,  // 1109: pb.EvaluateStatement.Value.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	577,  // 1110: pb.EvaluateStatement.WhenCondition.value_through:type_name -> pb.EvaluateStatement.ValueThrough
+	331,  // 1111: pb.EvaluateStatement.WhenCondition.condition:type_name -> pb.Condition
+	395,  // 1112: pb.EvaluateStatement.WhenCondition.boolean_literal:type_name -> pb.BooleanLiteral
+	580,  // 1113: pb.EvaluateStatement.AlsoCondition.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
+	244,  // 1114: pb.EvaluateStatement.WhenOther.statements:type_name -> pb.Statement
+	580,  // 1115: pb.EvaluateStatement.When.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
+	581,  // 1116: pb.EvaluateStatement.When.alsos:type_name -> pb.EvaluateStatement.AlsoCondition
+	583,  // 1117: pb.EvaluateStatement.WhenPhrase.whens:type_name -> pb.EvaluateStatement.When
+	244,  // 1118: pb.EvaluateStatement.WhenPhrase.statements:type_name -> pb.Statement
+	343,  // 1119: pb.DivideStatement.Giving.identifier:type_name -> pb.Identifier
+	585,  // 1120: pb.DivideStatement.GivingPhrase.givings:type_name -> pb.DivideStatement.Giving
+	343,  // 1121: pb.DivideStatement.Into.identifier:type_name -> pb.Identifier
+	587,  // 1122: pb.DivideStatement.IntoStatement.intos:type_name -> pb.DivideStatement.Into
+	343,  // 1123: pb.DivideStatement.IntoGivingStatement.identifier:type_name -> pb.Identifier
+	394,  // 1124: pb.DivideStatement.IntoGivingStatement.literal:type_name -> pb.Literal
+	586,  // 1125: pb.DivideStatement.IntoGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
+	343,  // 1126: pb.DivideStatement.ByGivingStatement.identifier:type_name -> pb.Identifier
+	394,  // 1127: pb.DivideStatement.ByGivingStatement.literal:type_name -> pb.Literal
+	586,  // 1128: pb.DivideStatement.ByGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
+	343,  // 1129: pb.DivideStatement.Remainder.identifier:type_name -> pb.Identifier
+	343,  // 1130: pb.ClosePortFileIOUsing.AssociatedData.identifier:type_name -> pb.Identifier
+	397,  // 1131: pb.ClosePortFileIOUsing.AssociatedData.integer_literal:type_name -> pb.IntegerLiteral
+	343,  // 1132: pb.ClosePortFileIOUsing.AssociatedDataLength.identifier:type_name -> pb.Identifier
+	397,  // 1133: pb.ClosePortFileIOUsing.AssociatedDataLength.integer_literal:type_name -> pb.IntegerLiteral
+	343,  // 1134: pb.CallStatement.ByContent.identifier:type_name -> pb.Identifier
+	394,  // 1135: pb.CallStatement.ByContent.literal:type_name -> pb.Literal
+	343,  // 1136: pb.CallStatement.ByValue.identifier:type_name -> pb.Identifier
+	394,  // 1137: pb.CallStatement.ByValue.literal:type_name -> pb.Literal
+	343,  // 1138: pb.CallStatement.ByReference.identifier:type_name -> pb.Identifier
+	394,  // 1139: pb.CallStatement.ByReference.literal:type_name -> pb.Literal
+	374,  // 1140: pb.CallStatement.ByReference.file_name:type_name -> pb.FileName
+	597,  // 1141: pb.CallStatement.ByReferencePhrase.refs:type_name -> pb.CallStatement.ByReference
+	596,  // 1142: pb.CallStatement.ByValuePhrase.values:type_name -> pb.CallStatement.ByValue
+	595,  // 1143: pb.CallStatement.ByContentPhrase.contents:type_name -> pb.CallStatement.ByContent
+	598,  // 1144: pb.CallStatement.UsingParameter.by_reference_phrase:type_name -> pb.CallStatement.ByReferencePhrase
+	599,  // 1145: pb.CallStatement.UsingParameter.by_value_phrase:type_name -> pb.CallStatement.ByValuePhrase
+	600,  // 1146: pb.CallStatement.UsingParameter.by_content_phrase:type_name -> pb.CallStatement.ByContentPhrase
+	601,  // 1147: pb.CallStatement.UsingPhrase.parameters:type_name -> pb.CallStatement.UsingParameter
+	343,  // 1148: pb.CallStatement.GivingPhrase.identifier:type_name -> pb.Identifier
+	382,  // 1149: pb.AlterStatement.ProceedTo.from:type_name -> pb.ProcedureName
+	382,  // 1150: pb.AlterStatement.ProceedTo.to:type_name -> pb.ProcedureName
+	343,  // 1151: pb.AddStatement.AddFrom.Identifier:type_name -> pb.Identifier
+	394,  // 1152: pb.AddStatement.AddFrom.literal:type_name -> pb.Literal
+	343,  // 1153: pb.AddStatement.AddToGiving.Identifier:type_name -> pb.Identifier
+	394,  // 1154: pb.AddStatement.AddToGiving.literal:type_name -> pb.Literal
+	605,  // 1155: pb.AddStatement.To.froms:type_name -> pb.AddStatement.AddFrom
+	343,  // 1156: pb.AddStatement.To.tos:type_name -> pb.Identifier
+	605,  // 1157: pb.AddStatement.ToGiving.froms:type_name -> pb.AddStatement.AddFrom
+	606,  // 1158: pb.AddStatement.ToGiving.tos:type_name -> pb.AddStatement.AddToGiving
+	343,  // 1159: pb.AddStatement.ToGiving.givings:type_name -> pb.Identifier
+	343,  // 1160: pb.AddStatement.Corresponding.corresponding:type_name -> pb.Identifier
+	343,  // 1161: pb.AddStatement.Corresponding.to:type_name -> pb.Identifier
+	50,   // 1162: pb.AcceptStatement.FromDate.type:type_name -> pb.AcceptStatement.FromDate.Type
+	380,  // 1163: pb.AcceptStatement.FromMnemonic.mnemonic_name:type_name -> pb.MnemonicName
+	374,  // 1164: pb.UseAfterClause.FileNames.file_names:type_name -> pb.FileName
+	349,  // 1165: pb.ConditionNameReference.SubscriptReference.subscripts:type_name -> pb.Subscript
+	358,  // 1166: pb.ConditionNameReference.InSubscript.in_datas:type_name -> pb.InData
+	359,  // 1167: pb.ConditionNameReference.InSubscript.in_file:type_name -> pb.InFile
+	615,  // 1168: pb.ConditionNameReference.InSubscript.refs:type_name -> pb.ConditionNameReference.SubscriptReference
+	1169, // [1169:1169] is the sub-list for method output_type
+	1169, // [1169:1169] is the sub-list for method input_type
+	1169, // [1169:1169] is the sub-list for extension type_name
+	1169, // [1169:1169] is the sub-list for extension extendee
+	0,    // [0:1169] is the sub-list for field type_name
 }
 
 func init() { file_cobol_proto_init() }
@@ -42678,249 +43095,264 @@ func file_cobol_proto_init() {
 		(*Literal_NonNumericLiteral)(nil),
 		(*Literal_FigurativeConstant)(nil),
 	}
-	file_cobol_proto_msgTypes[348].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[340].OneofWrappers = []any{
+		(*Call_DataName)(nil),
+		(*Call_ConditionName)(nil),
+		(*Call_FileName)(nil),
+		(*Call_ProcedureName)(nil),
+		(*Call_SectionName)(nil),
+		(*Call_ParagraphName)(nil),
+		(*Call_ProgramName)(nil),
+		(*Call_IndexName)(nil),
+		(*Call_MnemonicName)(nil),
+		(*Call_ReportName)(nil),
+		(*Call_CdName)(nil),
+		(*Call_ScreenName)(nil),
+		(*Call_SpecialRegister)(nil),
+	}
+	file_cobol_proto_msgTypes[349].OneofWrappers = []any{
 		(*AlphabetClause_Alphanumeric_Type_)(nil),
 		(*AlphabetClause_Alphanumeric_CobolWord)(nil),
 		(*AlphabetClause_Alphanumeric_Values)(nil),
 	}
-	file_cobol_proto_msgTypes[352].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[353].OneofWrappers = []any{
 		(*DataDescriptionEntry_Format1_LevelNumber_)(nil),
 		(*DataDescriptionEntry_Format1_IsLevel_77)(nil),
 		(*DataDescriptionEntry_Format1_DataName)(nil),
 		(*DataDescriptionEntry_Format1_Filler)(nil),
 	}
-	file_cobol_proto_msgTypes[364].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[365].OneofWrappers = []any{
 		(*TypeClause_ControlHeading_Final)(nil),
 		(*TypeClause_ControlHeading_DataName)(nil),
 	}
-	file_cobol_proto_msgTypes[366].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[367].OneofWrappers = []any{
 		(*TypeClause_ControlFooting_Final)(nil),
 		(*TypeClause_ControlFooting_DataName)(nil),
 	}
-	file_cobol_proto_msgTypes[371].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[372].OneofWrappers = []any{
 		(*ProcedureClause2_WithName_LocalName)(nil),
 		(*ProcedureClause2_WithName_FileName)(nil),
 	}
-	file_cobol_proto_msgTypes[372].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[373].OneofWrappers = []any{
 		(*ProcedureClause2_UsingName_DataName)(nil),
 		(*ProcedureClause2_UsingName_FileName)(nil),
 	}
-	file_cobol_proto_msgTypes[376].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[377].OneofWrappers = []any{
 		(*ProcedureDivision_ByReference_Identifier)(nil),
 		(*ProcedureDivision_ByReference_FileName)(nil),
 		(*ProcedureDivision_ByReference_Any)(nil),
 	}
-	file_cobol_proto_msgTypes[378].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[379].OneofWrappers = []any{
 		(*ProcedureDivision_ByValue_Identifier)(nil),
 		(*ProcedureDivision_ByValue_Literal)(nil),
 		(*ProcedureDivision_ByValue_Any)(nil),
 	}
-	file_cobol_proto_msgTypes[380].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[381].OneofWrappers = []any{
 		(*ProcedureDivision_UsingParameter_ByReferencePhrase)(nil),
 		(*ProcedureDivision_UsingParameter_ByValuePhrase)(nil),
 	}
-	file_cobol_proto_msgTypes[383].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[384].OneofWrappers = []any{
 		(*WriteStatement_FromPhrase_Identifier)(nil),
 		(*WriteStatement_FromPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[385].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[386].OneofWrappers = []any{
 		(*WriteStatement_AdvancingLines_Identifier)(nil),
 		(*WriteStatement_AdvancingLines_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[387].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[388].OneofWrappers = []any{
 		(*WriteStatement_AdvancingPhrase_AdvancingPage)(nil),
 		(*WriteStatement_AdvancingPhrase_AdvancingLines)(nil),
 		(*WriteStatement_AdvancingPhrase_AdvancingMnemonic)(nil),
 	}
-	file_cobol_proto_msgTypes[388].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[389].OneofWrappers = []any{
 		(*UnstringStatement_DelimitedByPhrase_Identifier)(nil),
 		(*UnstringStatement_DelimitedByPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[389].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[390].OneofWrappers = []any{
 		(*UnstringStatement_OrAllPhrase_Identifier)(nil),
 		(*UnstringStatement_OrAllPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[398].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[399].OneofWrappers = []any{
 		(*SubtractStatement_Subtrahend_Identifier)(nil),
 		(*SubtractStatement_Subtrahend_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[400].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[401].OneofWrappers = []any{
 		(*SubtractStatement_MinuendGiving_Identifier)(nil),
 		(*SubtractStatement_MinuendGiving_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[406].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[407].OneofWrappers = []any{
 		(*StringStatement_Sending_Identifier)(nil),
 		(*StringStatement_Sending_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[407].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[408].OneofWrappers = []any{
 		(*StringStatement_DelimitedByPhrase_Identifier)(nil),
 		(*StringStatement_DelimitedByPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[408].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[409].OneofWrappers = []any{
 		(*StringStatement_ForPhrase_Identifier)(nil),
 		(*StringStatement_ForPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[412].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[413].OneofWrappers = []any{
 		(*StopStatement_Giving_Identifier)(nil),
 		(*StopStatement_Giving_IntegerLiteral)(nil),
 	}
-	file_cobol_proto_msgTypes[427].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[428].OneofWrappers = []any{
 		(*SetStatement_Entry_Identifier)(nil),
 		(*SetStatement_Entry_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[428].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[429].OneofWrappers = []any{
 		(*SetStatement_ToValue_ON)(nil),
 		(*SetStatement_ToValue_OFF)(nil),
 		(*SetStatement_ToValue_Entry)(nil),
 		(*SetStatement_ToValue_Identifier)(nil),
 		(*SetStatement_ToValue_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[429].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[430].OneofWrappers = []any{
 		(*SetStatement_ByValue_Identifier)(nil),
 		(*SetStatement_ByValue_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[436].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[437].OneofWrappers = []any{
 		(*SendStatement_AdvancingLines_Identifier)(nil),
 		(*SendStatement_AdvancingLines_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[438].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[439].OneofWrappers = []any{
 		(*SendStatement_AdvancingPhrase_AdvancingPage)(nil),
 		(*SendStatement_AdvancingPhrase_AdvancingLines)(nil),
 		(*SendStatement_AdvancingPhrase_AdvancingMnemonic)(nil),
 	}
-	file_cobol_proto_msgTypes[439].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[440].OneofWrappers = []any{
 		(*SendStatement_SyncStatement_Identifier)(nil),
 		(*SendStatement_SyncStatement_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[449].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[450].OneofWrappers = []any{
 		(*ReceiveStatement_Size_NumericLiteral)(nil),
 		(*ReceiveStatement_Size_Identifier)(nil),
 	}
-	file_cobol_proto_msgTypes[451].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[452].OneofWrappers = []any{
 		(*ReceiveStatement_Before_NumericLiteral)(nil),
 		(*ReceiveStatement_Before_Identifier)(nil),
 	}
-	file_cobol_proto_msgTypes[460].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[461].OneofWrappers = []any{
 		(*PerformStatement_Times_Identifier)(nil),
 		(*PerformStatement_Times_IntegerLiteral)(nil),
 	}
-	file_cobol_proto_msgTypes[462].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[463].OneofWrappers = []any{
 		(*PerformStatement_From_Identifier)(nil),
 		(*PerformStatement_From_Literal)(nil),
 		(*PerformStatement_From_ArithmeticExpression)(nil),
 	}
-	file_cobol_proto_msgTypes[463].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[464].OneofWrappers = []any{
 		(*PerformStatement_By_Identifier)(nil),
 		(*PerformStatement_By_Literal)(nil),
 		(*PerformStatement_By_ArithmeticExpression)(nil),
 	}
-	file_cobol_proto_msgTypes[464].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[465].OneofWrappers = []any{
 		(*PerformStatement_VaryingPhrase_Identifier)(nil),
 		(*PerformStatement_VaryingPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[468].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[469].OneofWrappers = []any{
 		(*PerformStatement_Type_Times)(nil),
 		(*PerformStatement_Type_Until)(nil),
 		(*PerformStatement_Type_Varying)(nil),
 	}
-	file_cobol_proto_msgTypes[477].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[478].OneofWrappers = []any{
 		(*MultiplyStatement_GivingOperand_Identifier)(nil),
 		(*MultiplyStatement_GivingOperand_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[490].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[491].OneofWrappers = []any{
 		(*InspectStatement_By_Identifier)(nil),
 		(*InspectStatement_By_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[491].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[492].OneofWrappers = []any{
 		(*InspectStatement_To_Identifier)(nil),
 		(*InspectStatement_To_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[492].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[493].OneofWrappers = []any{
 		(*InspectStatement_BeforeAfter_Identifier)(nil),
 		(*InspectStatement_BeforeAfter_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[493].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[494].OneofWrappers = []any{
 		(*InspectStatement_ReplacingAllLeading_Identifier)(nil),
 		(*InspectStatement_ReplacingAllLeading_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[495].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[496].OneofWrappers = []any{
 		(*InspectStatement_AllLeading_Identifier)(nil),
 		(*InspectStatement_AllLeading_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[501].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[502].OneofWrappers = []any{
 		(*InspectStatement_ConvertingPhrase_Identifier)(nil),
 		(*InspectStatement_ConvertingPhrase_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[506].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[507].OneofWrappers = []any{
 		(*InitializeStatement_ReplacingBy_Identifier)(nil),
 		(*InitializeStatement_ReplacingBy_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[512].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[513].OneofWrappers = []any{
 		(*GoToStatement_DependingOnStatement_MoreLabels)(nil),
 		(*GoToStatement_DependingOnStatement_DependingOn)(nil),
 	}
-	file_cobol_proto_msgTypes[513].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[514].OneofWrappers = []any{
 		(*ExhibitStatement_Operand_Identifier)(nil),
 		(*ExhibitStatement_Operand_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[514].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[515].OneofWrappers = []any{
 		(*EvaluateStatement_Select_Identifier)(nil),
 		(*EvaluateStatement_Select_Literal)(nil),
 		(*EvaluateStatement_Select_ArithmeticExpression)(nil),
 		(*EvaluateStatement_Select_Condition)(nil),
 	}
-	file_cobol_proto_msgTypes[518].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[519].OneofWrappers = []any{
 		(*EvaluateStatement_Value_Identifier)(nil),
 		(*EvaluateStatement_Value_Literal)(nil),
 		(*EvaluateStatement_Value_ArithmeticExpression)(nil),
 	}
-	file_cobol_proto_msgTypes[519].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[520].OneofWrappers = []any{
 		(*EvaluateStatement_WhenCondition_Any)(nil),
 		(*EvaluateStatement_WhenCondition_ValueThrough)(nil),
 		(*EvaluateStatement_WhenCondition_Condition)(nil),
 		(*EvaluateStatement_WhenCondition_BooleanLiteral)(nil),
 	}
-	file_cobol_proto_msgTypes[528].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[529].OneofWrappers = []any{
 		(*DivideStatement_IntoGivingStatement_Identifier)(nil),
 		(*DivideStatement_IntoGivingStatement_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[529].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[530].OneofWrappers = []any{
 		(*DivideStatement_ByGivingStatement_Identifier)(nil),
 		(*DivideStatement_ByGivingStatement_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[532].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[533].OneofWrappers = []any{
 		(*ClosePortFileIOUsing_AssociatedData_Identifier)(nil),
 		(*ClosePortFileIOUsing_AssociatedData_IntegerLiteral)(nil),
 	}
-	file_cobol_proto_msgTypes[533].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[534].OneofWrappers = []any{
 		(*ClosePortFileIOUsing_AssociatedDataLength_Identifier)(nil),
 		(*ClosePortFileIOUsing_AssociatedDataLength_IntegerLiteral)(nil),
 	}
-	file_cobol_proto_msgTypes[534].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[535].OneofWrappers = []any{
 		(*CallStatement_ByContent_Identifier)(nil),
 		(*CallStatement_ByContent_Literal)(nil),
 		(*CallStatement_ByContent_Omitted)(nil),
 	}
-	file_cobol_proto_msgTypes[535].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[536].OneofWrappers = []any{
 		(*CallStatement_ByValue_Identifier)(nil),
 		(*CallStatement_ByValue_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[536].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[537].OneofWrappers = []any{
 		(*CallStatement_ByReference_Identifier)(nil),
 		(*CallStatement_ByReference_Literal)(nil),
 		(*CallStatement_ByReference_FileName)(nil),
 		(*CallStatement_ByReference_Omitted)(nil),
 	}
-	file_cobol_proto_msgTypes[540].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[541].OneofWrappers = []any{
 		(*CallStatement_UsingParameter_ByReferencePhrase)(nil),
 		(*CallStatement_UsingParameter_ByValuePhrase)(nil),
 		(*CallStatement_UsingParameter_ByContentPhrase)(nil),
 	}
-	file_cobol_proto_msgTypes[544].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[545].OneofWrappers = []any{
 		(*AddStatement_AddFrom_Identifier)(nil),
 		(*AddStatement_AddFrom_Literal)(nil),
 	}
-	file_cobol_proto_msgTypes[545].OneofWrappers = []any{
+	file_cobol_proto_msgTypes[546].OneofWrappers = []any{
 		(*AddStatement_AddToGiving_Identifier)(nil),
 		(*AddStatement_AddToGiving_Literal)(nil),
 	}
@@ -42929,8 +43361,8 @@ func file_cobol_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_cobol_proto_rawDesc), len(file_cobol_proto_rawDesc)),
-			NumEnums:      59,
-			NumMessages:   556,
+			NumEnums:      60,
+			NumMessages:   557,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
