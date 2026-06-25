@@ -19,6 +19,8 @@ message ProgramUnit {
     EnvironmentDivision environment_division = 2;
     DataDivision data_division = 3;
     ProcedureDivision procedure_division = 4;
+    repeated ProgramUnit program_units = 5;
+    ProgramName end_program_name = 6;
 }
 
 message IdentificationDivision {
@@ -142,6 +144,8 @@ message SpecialNamesParagraph {
     OdtClause odt_clause = 7;
     ReserveNetworkClause reserve_network_clause = 8;
     SymbolicCharactersClause symbolic_characters_clause = 9;
+    DefaultComputationalSignClause default_computational_sign_clause = 10;
+    repeated EnvironmentSwitchNameClause environment_switch_name_clauses = 11;
 }
 
 message AlphabetClause {
@@ -234,6 +238,25 @@ message OdtClause {
 
 message ReserveNetworkClause {
 
+}
+
+message DefaultComputationalSignClause {
+    enum Type {
+        LEADING = 0;
+        TRAILING = 1;
+    }
+    Type type = 1;
+    bool separate_character = 2;
+}
+
+message EnvironmentSwitchNameClause {
+    message StatusPhrase {
+        Condition condition = 1;
+        Condition off_condition = 2;
+    }
+    EnvironmentName environment_name = 1;
+    MnemonicName mnemonic_name = 2;
+    repeated StatusPhrase status_phrases = 3;
 }
 
 message SymbolicCharactersClause {
@@ -547,7 +570,19 @@ message WorkingStorageSection {
 
 message DataDescriptionEntry {
     message Format1 {
-        DataName data_name = 1;
+        enum LevelNumber {
+            LEVEL_66 = 0;  // handled by Format2
+            LEVEL_77 = 1;
+            LEVEL_88 = 2;  // handled by Format3
+        }
+        oneof levelOrDataName {
+            IntegerLiteral level_number = 23;
+            bool is_level_77 = 24;
+        }
+        oneof nameOrFiller {
+            DataName data_name = 1;
+            bool filler = 25;
+        }
         DataRedefinesClause data_redefines_clause = 2;
         DataIntegerStringClause data_integer_string_clause = 3;
         DataExternalClause data_external_clause = 4;
@@ -1265,7 +1300,8 @@ message CommunicationSection {
 }
 
 message CommunicationDescriptionEntry {
-    message Input {  
+    message Input {
+        CdName cd_name = 1;
         SymbolicQueueClause symbolic_queue_clause = 2;
         SymbolicSubQueueClause symbolic_sub_queue_clause = 3;
         MessageDateClause message_date_clause = 4;
@@ -1286,12 +1322,13 @@ message CommunicationDescriptionEntry {
         SymbolicDestinationClause symbolic_destination_clause = 6;
     }
     message Io {
-        MessageDateClause message_date_clause = 4;
-        MessageTimeClause message_time_clause = 5;
-        SymbolicTerminalClause symbolic_terminal_clause = 3;
-        TextLengthClause text_length_clause = 2;
-        EndKeyClause end_key_clause = 8;
-        StatusKeyClause status_key_clause = 9;
+        CdName cd_name = 1;
+        MessageDateClause message_date_clause = 2;
+        MessageTimeClause message_time_clause = 3;
+        SymbolicTerminalClause symbolic_terminal_clause = 4;
+        TextLengthClause text_length_clause = 5;
+        EndKeyClause end_key_clause = 6;
+        StatusKeyClause status_key_clause = 7;
     }
     CdName cd_name = 1;
     oneof one_of {
@@ -1458,55 +1495,55 @@ message Sentence {
 message Statement {
     oneof one_of {
         AcceptStatement accept_statement = 1;
-        AddStatement AddStatement = 2;
-        AlterStatement alterStatement = 3;
-        CallStatement callStatement = 4;
-        CancelStatement cancelStatement = 5;
-        CloseStatement closeStatement = 6;
-        ComputeStatement computeStatement = 7;
-        ContinueStatement continueStatement = 8;
-        DeleteStatement deleteStatement = 9;
-        DisableStatement disableStatement = 10;
-        DisplayStatement displayStatement = 11;
-        DivideStatement divideStatement = 12;
-        EnableStatement enableStatement = 13;
-        EntryStatement entryStatement = 14;
-        EvaluateStatement evaluateStatement = 15;
-        ExhibitStatement exhibitStatement = 16;
-        ExecCicsStatement execCicsStatement = 17;
-        ExecSqlStatement execSqlStatement = 18;
-        ExecSqlImsStatement execSqlImsStatement = 19;
-        ExitStatement exitStatement = 20;
-        GenerateStatement generateStatement = 21;
-        GobackStatement gobackStatement = 22;
-        GoToStatement goToStatement = 23;
-        IfStatement ifStatement = 24;
-        InitializeStatement initializeStatement = 25;
-        InitiateStatement initiateStatement = 26;
-        InspectStatement inspectStatement = 27;
-        MergeStatement mergeStatement = 28;
-        MoveStatement moveStatement = 29;
-        MultiplyStatement multiplyStatement = 30;
-        NextSentenceStatement nextSentenceStatement = 31;
-        OpenStatement openStatement = 32;
-        PerformStatement performStatement = 33;
-        PurgeStatement purgeStatement = 34;
-        ReadStatement readStatement = 35;
-        ReceiveStatement receiveStatement = 36;
-        ReleaseStatement releaseStatement = 37;
-        ReturnStatement returnStatement = 38;
-        RewriteStatement rewriteStatement = 39;
-        SearchStatement searchStatement = 40;
-        SendStatement sendStatement = 41;
-        SetStatement setStatement = 42;
-        SortStatement sortStatement = 43;
-        StartStatement startStatement = 44;
-        StopStatement stopStatement = 45;
-        StringStatement stringStatement = 46;
-        SubtractStatement subtractStatement = 47;
-        TerminateStatement terminateStatement = 48;
-        UnstringStatement unstringStatement = 49;
-        WriteStatement writeStatement = 50;
+        AddStatement add_statement = 2;
+        AlterStatement alter_statement = 3;
+        CallStatement call_statement = 4;
+        CancelStatement cancel_statement = 5;
+        CloseStatement close_statement = 6;
+        ComputeStatement compute_statement = 7;
+        ContinueStatement continue_statement = 8;
+        DeleteStatement delete_statement = 9;
+        DisableStatement disable_statement = 10;
+        DisplayStatement display_statement = 11;
+        DivideStatement divide_statement = 12;
+        EnableStatement enable_statement = 13;
+        EntryStatement entry_statement = 14;
+        EvaluateStatement evaluate_statement = 15;
+        ExhibitStatement exhibit_statement = 16;
+        ExecCicsStatement exec_cics_statement = 17;
+        ExecSqlStatement exec_sql_statement = 18;
+        ExecSqlImsStatement exec_sql_ims_statement = 19;
+        ExitStatement exit_statement = 20;
+        GenerateStatement generate_statement = 21;
+        GobackStatement goback_statement = 22;
+        GoToStatement go_to_statement = 23;
+        IfStatement if_statement = 24;
+        InitializeStatement initialize_statement = 25;
+        InitiateStatement initiate_statement = 26;
+        InspectStatement inspect_statement = 27;
+        MergeStatement merge_statement = 28;
+        MoveStatement move_statement = 29;
+        MultiplyStatement multiply_statement = 30;
+        NextSentenceStatement next_sentence_statement = 31;
+        OpenStatement open_statement = 32;
+        PerformStatement perform_statement = 33;
+        PurgeStatement purge_statement = 34;
+        ReadStatement read_statement = 35;
+        ReceiveStatement receive_statement = 36;
+        ReleaseStatement release_statement = 37;
+        ReturnStatement return_statement = 38;
+        RewriteStatement rewrite_statement = 39;
+        SearchStatement search_statement = 40;
+        SendStatement send_statement = 41;
+        SetStatement set_statement = 42;
+        SortStatement sort_statement = 43;
+        StartStatement start_statement = 44;
+        StopStatement stop_statement = 45;
+        StringStatement string_statement = 46;
+        SubtractStatement subtract_statement = 47;
+        TerminateStatement terminate_statement = 48;
+        UnstringStatement unstring_statement = 49;
+        WriteStatement write_statement = 50;
     }
 }
 
@@ -2354,7 +2391,7 @@ message EvaluateStatement {
             Identifier identifier = 1;
             Literal literal = 2;
             ArithmeticExpression arithmetic_expression = 3;
-            pb.Condition condition = 4;
+            Condition condition = 4;
         }
     }
     message AlsoSelect {
@@ -2378,17 +2415,17 @@ message EvaluateStatement {
         }
     }
 
-    message Condition {
+    message WhenCondition {
         oneof one_of {
             bool any = 1;
             ValueThrough value_through = 2;
-            pb.Condition condition = 3;
+            Condition condition = 3;
             BooleanLiteral boolean_literal = 4;
         }
     }
 
     message AlsoCondition {
-        Condition condition = 1;
+        WhenCondition when_condition = 1;
     }
 
     message WhenOther {
@@ -2396,7 +2433,7 @@ message EvaluateStatement {
     }
 
     message When {
-        Condition condition = 1;
+        WhenCondition when_condition = 1;
         repeated AlsoCondition alsos = 2;
     }
 
@@ -2636,8 +2673,12 @@ message CallStatement {
     message GivingPhrase {
         Identifier identifier = 1;
     }
-    UsingPhrase using_phrase = 1;
-    GivingPhrase giving_phrase = 2;
+    oneof target {
+        Identifier target_identifier = 1;
+        Literal target_literal = 2;
+    }
+    UsingPhrase using_phrase = 3;
+    GivingPhrase giving_phrase = 4;
     OnOverflowPhrase on_overflow_phrase = 97;
     OnExceptionClause on_exception_clause = 98;
     NotOnExceptionClause not_on_exception_clause = 99;
@@ -3198,6 +3239,10 @@ message ReportName {
 }
 
 message RoutingName {
+    CobolWord cobol_word = 1;
+}
+
+message RoutineName {
     CobolWord cobol_word = 1;
 }
 

@@ -871,19 +871,19 @@ func EvaluateValue(in cobol85.IEvaluateValueContext) (out *pb.EvaluateStatement_
 	return
 }
 
-func EvaluateCondition(in cobol85.IEvaluateConditionContext) (out *pb.EvaluateStatement_Condition) {
+func EvaluateCondition(in cobol85.IEvaluateConditionContext) (out *pb.EvaluateStatement_WhenCondition) {
 	ctx := in.(*cobol85.EvaluateConditionContext)
-	out = &pb.EvaluateStatement_Condition{}
+	out = &pb.EvaluateStatement_WhenCondition{}
 	if ctx.ANY() != nil {
-		out.OneOf = &pb.EvaluateStatement_Condition_Any{
+		out.OneOf = &pb.EvaluateStatement_WhenCondition_Any{
 			Any: true,
 		}
 	} else if ctx.Condition() != nil {
-		out.OneOf = &pb.EvaluateStatement_Condition_Condition{
+		out.OneOf = &pb.EvaluateStatement_WhenCondition_Condition{
 			Condition: Condition(ctx.Condition()),
 		}
 	} else if ctx.BooleanLiteral() != nil {
-		out.OneOf = &pb.EvaluateStatement_Condition_BooleanLiteral{
+		out.OneOf = &pb.EvaluateStatement_WhenCondition_BooleanLiteral{
 			BooleanLiteral: BooleanLiteral(ctx.BooleanLiteral()),
 		}
 	} else if ictx := ctx.EvaluateValue(); ictx != nil {
@@ -899,7 +899,7 @@ func EvaluateCondition(in cobol85.IEvaluateConditionContext) (out *pb.EvaluateSt
 			}
 			valueThrough.Through = through
 		}
-		out.OneOf = &pb.EvaluateStatement_Condition_ValueThrough{
+		out.OneOf = &pb.EvaluateStatement_WhenCondition_ValueThrough{
 			ValueThrough: valueThrough,
 		}
 	}
@@ -932,13 +932,13 @@ func EvaluateStatement(in cobol85.IEvaluateStatementContext) (out *pb.EvaluateSt
 			cvv := ivv.(*cobol85.EvaluateWhenContext)
 			w := &pb.EvaluateStatement_When{}
 			if cvv.EvaluateCondition() != nil {
-				w.Condition = EvaluateCondition(cvv.EvaluateCondition())
+				w.WhenCondition = EvaluateCondition(cvv.EvaluateCondition())
 			}
 			for _, ivvv := range cvv.AllEvaluateAlsoCondition() {
 				cvvv := ivvv.(*cobol85.EvaluateAlsoConditionContext)
 				if cvvv.EvaluateCondition() != nil {
 					w.Alsos = append(w.Alsos, &pb.EvaluateStatement_AlsoCondition{
-						Condition: EvaluateCondition(cvvv.EvaluateCondition()),
+						WhenCondition: EvaluateCondition(cvvv.EvaluateCondition()),
 					})
 				}
 			}
