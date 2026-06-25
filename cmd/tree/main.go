@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/document"
 	"github.com/aixfoundry/cobol-go/format"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/options"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 var (
@@ -130,7 +130,7 @@ func NewErrorListener() *ErrorListener {
 	}
 }
 
-func (l *ErrorListener) SyntaxError(recognizer antlr.Recognizer, offendingSymbol interface{}, line, column int, msg string, e antlr.RecognitionException) {
+func (l *ErrorListener) SyntaxError(recognizer antlr.Recognizer, offendingSymbol any, line, column int, msg string, e antlr.RecognitionException) {
 	err := fmt.Sprintf("syntax error in line %d : %d %s", line, column, msg)
 	l.errs = append(l.errs, err)
 }

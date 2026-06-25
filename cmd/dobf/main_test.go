@@ -3,11 +3,12 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"maps"
 	"os"
 	"testing"
 
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 func TestDobf(t *testing.T) {
@@ -25,12 +26,8 @@ func TestDobf(t *testing.T) {
 	listener := NewDobfListener(cts)
 	antlr.ParseTreeWalkerDefault.Walk(listener, cpp.StartRule())
 	vars := map[string]string{}
-	for k, v := range listener.GetVars() {
-		vars[k] = v
-	}
-	for k, v := range listener.GetFuncs() {
-		vars[k] = v
-	}
+	maps.Copy(vars, listener.GetVars())
+	maps.Copy(vars, listener.GetFuncs())
 	output := map[string]any{
 		"vars":   vars,
 		"tokens": listener.GetTokens(),

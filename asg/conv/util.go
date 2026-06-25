@@ -3,8 +3,8 @@ package conv
 import (
 	"strings"
 
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/constant"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 func Symbol(name string) string {
@@ -31,18 +31,18 @@ func TreesStringTree(tree antlr.Tree, ruleNames []string, depth int) string {
 	if c == 0 {
 		return s
 	}
-	res := ""
+	var res strings.Builder
 	if depth > 0 {
-		res += "\n"
+		res.WriteString("\n")
 	}
-	res += strings.Repeat("\t", depth) + "(" + s + " "
+	res.WriteString(strings.Repeat("\t", depth) + "(" + s + " ")
 	for k, child := range tree.GetChildren() {
 		if k > 0 {
-			res += " "
+			res.WriteString(" ")
 		}
 		s = TreesStringTree(child, ruleNames, depth+1)
-		res += s
+		res.WriteString(s)
 	}
-	res += ")"
-	return res
+	res.WriteString(")")
+	return res.String()
 }

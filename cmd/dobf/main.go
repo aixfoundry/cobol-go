@@ -4,13 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"maps"
 	"os"
 	"strings"
 
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/document"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/options"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 func main() {
@@ -34,12 +35,8 @@ func main() {
 	listener := NewDobfListener(cts)
 	antlr.ParseTreeWalkerDefault.Walk(listener, cpp.StartRule())
 	vars := map[string]string{}
-	for k, v := range listener.GetVars() {
-		vars[k] = v
-	}
-	for k, v := range listener.GetFuncs() {
-		vars[k] = v
-	}
+	maps.Copy(vars, listener.GetVars())
+	maps.Copy(vars, listener.GetFuncs())
 	output := map[string]any{
 		"text":   listener.GetText(),
 		"vars":   vars,

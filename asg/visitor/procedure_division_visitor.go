@@ -1,11 +1,11 @@
 package visitor
 
 import (
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/asg/visitor/procedure"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/pb"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 type ProcedureDivisionVisitor struct {
@@ -19,18 +19,18 @@ func NewProcedureDivisionVisitor(division *pb.ProcedureDivision) *ProcedureDivis
 	}
 }
 
-func (v *ProcedureDivisionVisitor) VisitProcedureDeclarative(ctx *cobol85.ProcedureDeclarativeContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitProcedureDeclarative(ctx *cobol85.ProcedureDeclarativeContext) any {
 	declarative := &pb.Declarative{}
 	v.division.Declaratives = append(v.division.Declaratives, declarative)
 	vr := procedure.NewProcedureDeclarativeVisitor(declarative)
 	return vr.Visit(ctx)
 }
 
-func (v *ProcedureDivisionVisitor) VisitProcedureDeclaratives(ctx *cobol85.ProcedureDeclarativesContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitProcedureDeclaratives(ctx *cobol85.ProcedureDeclarativesContext) any {
 	return v.VisitChildren(ctx)
 }
 
-func (v *ProcedureDivisionVisitor) VisitProcedureDivisionGivingClause(ctx *cobol85.ProcedureDivisionGivingClauseContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitProcedureDivisionGivingClause(ctx *cobol85.ProcedureDivisionGivingClauseContext) any {
 	gc := &pb.ProcedureDivision_GivingClause{
 		DataName: conv.DataName(ctx.DataName()),
 	}
@@ -46,7 +46,7 @@ func (v *ProcedureDivisionVisitor) VisitProcedureDivisionGivingClause(ctx *cobol
 	return v.VisitChildren(ctx)
 }
 
-func (v *ProcedureDivisionVisitor) VisitProcedureDivisionUsingClause(ctx *cobol85.ProcedureDivisionUsingClauseContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitProcedureDivisionUsingClause(ctx *cobol85.ProcedureDivisionUsingClauseContext) any {
 	uc := &pb.ProcedureDivision_UsingClause{}
 	switch {
 	case ctx.USING() != nil:
@@ -116,20 +116,20 @@ func (v *ProcedureDivisionVisitor) VisitProcedureDivisionUsingClause(ctx *cobol8
 	return v.VisitChildren(ctx)
 }
 
-func (v *ProcedureDivisionVisitor) VisitParagraphs(ctx *cobol85.ParagraphsContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitParagraphs(ctx *cobol85.ParagraphsContext) any {
 	v.division.Paragraphs = &pb.Paragraphs{}
 	vr := procedure.NewParagraphsVisitor(v.division.Paragraphs)
 	return vr.Visit(ctx)
 }
 
-func (v *ProcedureDivisionVisitor) VisitProcedureSection(ctx *cobol85.ProcedureSectionContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitProcedureSection(ctx *cobol85.ProcedureSectionContext) any {
 	section := &pb.ProcedureSection{}
 	v.division.ProcedureSections = append(v.division.ProcedureSections, section)
 	vr := procedure.NewProcedureSectionVisitor(section)
 	return vr.Visit(ctx)
 }
 
-func (v *ProcedureDivisionVisitor) VisitProcedureDivisionBody(ctx *cobol85.ProcedureDivisionBodyContext) interface{} {
+func (v *ProcedureDivisionVisitor) VisitProcedureDivisionBody(ctx *cobol85.ProcedureDivisionBodyContext) any {
 	return v.VisitChildren(ctx)
 }
 

@@ -1,6 +1,8 @@
 package options
 
 import (
+	"slices"
+
 	"github.com/aixfoundry/cobol-go/format"
 )
 
@@ -41,30 +43,24 @@ func (o *Options) SetDialect(d format.Dialect) *Options {
 }
 
 func (o *Options) AddCopyBookFile(f string) *Options {
-	for _, v := range o.CopyBookFiles {
-		if v == f {
-			return o
-		}
+	if slices.Contains(o.CopyBookFiles, f) {
+		return o
 	}
 	o.CopyBookFiles = append(o.CopyBookFiles, f)
 	return o
 }
 
 func (o *Options) AddCopyBookDirectory(f string) *Options {
-	for _, v := range o.CopyBookDirectories {
-		if v == f {
-			return o
-		}
+	if slices.Contains(o.CopyBookDirectories, f) {
+		return o
 	}
 	o.CopyBookDirectories = append(o.CopyBookDirectories, f)
 	return o
 }
 
 func (o *Options) AddCopyBookExtension(f string) *Options {
-	for _, v := range o.CopyBookExtensions {
-		if v == f {
-			return o
-		}
+	if slices.Contains(o.CopyBookExtensions, f) {
+		return o
 	}
 	o.CopyBookExtensions = append(o.CopyBookExtensions, f)
 	return o

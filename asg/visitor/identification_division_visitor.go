@@ -1,11 +1,11 @@
 package visitor
 
 import (
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/constant"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/pb"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 type IdentificationDivisionVisitor struct {
@@ -19,7 +19,7 @@ func NewIdentificationDivisionVisitor(division *pb.IdentificationDivision) *Iden
 	}
 }
 
-func (v *IdentificationDivisionVisitor) VisitProgramIdParagraph(ctx *cobol85.ProgramIdParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitProgramIdParagraph(ctx *cobol85.ProgramIdParagraphContext) any {
 	attribute := pb.ProgramIdParagraph_COMMON
 	switch {
 	case ctx.COMMON() != nil:
@@ -57,7 +57,7 @@ func (v *IdentificationDivisionVisitor) VisitProgramIdParagraph(ctx *cobol85.Pro
 	return v.VisitChildren(ctx)
 }
 
-func (v *IdentificationDivisionVisitor) VisitAuthorParagraph(ctx *cobol85.AuthorParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitAuthorParagraph(ctx *cobol85.AuthorParagraphContext) any {
 	text := ""
 	if ictx := ctx.CommentEntry(); ictx != nil {
 		cctx := ictx.(*cobol85.CommentEntryContext)
@@ -69,7 +69,7 @@ func (v *IdentificationDivisionVisitor) VisitAuthorParagraph(ctx *cobol85.Author
 	return v.VisitChildren(ctx)
 }
 
-func (v *IdentificationDivisionVisitor) VisitInstallationParagraph(ctx *cobol85.InstallationParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitInstallationParagraph(ctx *cobol85.InstallationParagraphContext) any {
 	text := ""
 	if ictx := ctx.CommentEntry(); ictx != nil {
 		cctx := ictx.(*cobol85.CommentEntryContext)
@@ -81,7 +81,7 @@ func (v *IdentificationDivisionVisitor) VisitInstallationParagraph(ctx *cobol85.
 	return v.VisitChildren(ctx)
 }
 
-func (v *IdentificationDivisionVisitor) VisitDateWrittenParagraph(ctx *cobol85.DateWrittenParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitDateWrittenParagraph(ctx *cobol85.DateWrittenParagraphContext) any {
 	text := ""
 	if ictx := ctx.CommentEntry(); ictx != nil {
 		cctx := ictx.(*cobol85.CommentEntryContext)
@@ -93,7 +93,7 @@ func (v *IdentificationDivisionVisitor) VisitDateWrittenParagraph(ctx *cobol85.D
 	return v.VisitChildren(ctx)
 }
 
-func (v *IdentificationDivisionVisitor) VisitDateCompiledParagraph(ctx *cobol85.DateCompiledParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitDateCompiledParagraph(ctx *cobol85.DateCompiledParagraphContext) any {
 	text := ""
 	if ictx := ctx.CommentEntry(); ictx != nil {
 		cctx := ictx.(*cobol85.CommentEntryContext)
@@ -105,7 +105,7 @@ func (v *IdentificationDivisionVisitor) VisitDateCompiledParagraph(ctx *cobol85.
 	return v.VisitChildren(ctx)
 }
 
-func (v *IdentificationDivisionVisitor) VisitSecurityParagraph(ctx *cobol85.SecurityParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitSecurityParagraph(ctx *cobol85.SecurityParagraphContext) any {
 	text := ""
 	if ictx := ctx.CommentEntry(); ictx != nil {
 		cctx := ictx.(*cobol85.CommentEntryContext)
@@ -117,7 +117,7 @@ func (v *IdentificationDivisionVisitor) VisitSecurityParagraph(ctx *cobol85.Secu
 	return v.VisitChildren(ctx)
 }
 
-func (v *IdentificationDivisionVisitor) VisitRemarksParagraph(ctx *cobol85.RemarksParagraphContext) interface{} {
+func (v *IdentificationDivisionVisitor) VisitRemarksParagraph(ctx *cobol85.RemarksParagraphContext) any {
 	text := ""
 	if ictx := ctx.CommentEntry(); ictx != nil {
 		cctx := ictx.(*cobol85.CommentEntryContext)

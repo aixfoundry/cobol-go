@@ -1,10 +1,10 @@
 package environment
 
 import (
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/pb"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 type InputOutputSectionVisitor struct {
@@ -18,7 +18,7 @@ func NewInputOutputSectionVisitor(section *pb.InputOutputSection) *InputOutputSe
 	}
 }
 
-func (v *InputOutputSectionVisitor) VisitFileControlParagraph(ctx *cobol85.FileControlParagraphContext) interface{} {
+func (v *InputOutputSectionVisitor) VisitFileControlParagraph(ctx *cobol85.FileControlParagraphContext) any {
 	fcp := &pb.FileControlParagraph{}
 	for _, ictx := range ctx.AllFileControlEntry() {
 		cctx := ictx.(*cobol85.FileControlEntryContext)
@@ -241,7 +241,7 @@ func (v *InputOutputSectionVisitor) VisitFileControlParagraph(ctx *cobol85.FileC
 	return v.VisitChildren(ctx)
 }
 
-func (v *InputOutputSectionVisitor) VisitIoControlParagraph(ctx *cobol85.IoControlParagraphContext) interface{} {
+func (v *InputOutputSectionVisitor) VisitIoControlParagraph(ctx *cobol85.IoControlParagraphContext) any {
 	iop := &pb.IoControlParagraph{
 		FileName: conv.FileName(ctx.FileName()),
 	}
@@ -333,7 +333,7 @@ func (v *InputOutputSectionVisitor) VisitIoControlParagraph(ctx *cobol85.IoContr
 	return v.VisitChildren(ctx)
 }
 
-func (v *InputOutputSectionVisitor) VisitInputOutputSectionParagraph(ctx *cobol85.InputOutputSectionParagraphContext) interface{} {
+func (v *InputOutputSectionVisitor) VisitInputOutputSectionParagraph(ctx *cobol85.InputOutputSectionParagraphContext) any {
 	return v.VisitChildren(ctx)
 }
 

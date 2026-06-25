@@ -1,10 +1,10 @@
 package procedure
 
 import (
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/pb"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 type SentenceVisitor struct {
@@ -18,7 +18,7 @@ func NewSentenceVisitor(sentence *pb.Sentence) *SentenceVisitor {
 	}
 }
 
-func (v *SentenceVisitor) VisitStatement(ctx *cobol85.StatementContext) interface{} {
+func (v *SentenceVisitor) VisitStatement(ctx *cobol85.StatementContext) any {
 	v.sentence.Statements = append(v.sentence.Statements, conv.Statement(ctx))
 	return v.VisitChildren(ctx)
 }

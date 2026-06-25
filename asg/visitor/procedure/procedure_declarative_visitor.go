@@ -1,10 +1,10 @@
 package procedure
 
 import (
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/pb"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 type ProcedureDeclarativeVisitor struct {
@@ -18,7 +18,7 @@ func NewProcedureDeclarativeVisitor(declarative *pb.Declarative) *ProcedureDecla
 	}
 }
 
-func (v *ProcedureDeclarativeVisitor) VisitUseStatement(ctx *cobol85.UseStatementContext) interface{} {
+func (v *ProcedureDeclarativeVisitor) VisitUseStatement(ctx *cobol85.UseStatementContext) any {
 	useStatement := &pb.UseStatement{}
 	if iuse := ctx.UseAfterClause(); iuse != nil {
 		clause := &pb.UseAfterClause{}
@@ -92,7 +92,7 @@ func (v *ProcedureDeclarativeVisitor) VisitUseStatement(ctx *cobol85.UseStatemen
 	return v.VisitChildren(ctx)
 }
 
-func (v *ProcedureDeclarativeVisitor) VisitParagraphs(ctx *cobol85.ParagraphsContext) interface{} {
+func (v *ProcedureDeclarativeVisitor) VisitParagraphs(ctx *cobol85.ParagraphsContext) any {
 	v.declarative.Paragraphs = &pb.Paragraphs{}
 	vr := NewParagraphsVisitor(v.declarative.Paragraphs)
 	return vr.Visit(ctx)

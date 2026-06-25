@@ -1,10 +1,10 @@
 package environment
 
 import (
-	"github.com/antlr4-go/antlr/v4"
 	"github.com/aixfoundry/cobol-go/asg/conv"
 	"github.com/aixfoundry/cobol-go/gen/cobol85"
 	"github.com/aixfoundry/cobol-go/pb"
+	"github.com/antlr4-go/antlr/v4"
 )
 
 type ConfigurationSectionVisitor struct {
@@ -18,7 +18,7 @@ func NewConfigurationSectionVisitor(section *pb.ConfigurationSection) *Configura
 	}
 }
 
-func (v *ConfigurationSectionVisitor) VisitSegmentLimitClause(ctx *cobol85.SegmentLimitClauseContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitSegmentLimitClause(ctx *cobol85.SegmentLimitClauseContext) any {
 	var integerLiteral *pb.IntegerLiteral
 	if ictx := ctx.IntegerLiteral(); ictx != nil {
 		integerLiteral = conv.IntegerLiteral(ictx)
@@ -29,12 +29,12 @@ func (v *ConfigurationSectionVisitor) VisitSegmentLimitClause(ctx *cobol85.Segme
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitCharacterSetClause(ctx *cobol85.CharacterSetClauseContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitCharacterSetClause(ctx *cobol85.CharacterSetClauseContext) any {
 	v.section.ObjectComputerParagraph.CharacterSetClause = &pb.CharacterSetClause{}
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitCollatingSequenceClause(ctx *cobol85.CollatingSequenceClauseContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitCollatingSequenceClause(ctx *cobol85.CollatingSequenceClauseContext) any {
 	csc := &pb.CollatingSequenceClause{}
 	for _, v := range ctx.AllAlphabetName() {
 		csc.AlphabetNames = append(csc.AlphabetNames, conv.AlphabetName(v))
@@ -51,7 +51,7 @@ func (v *ConfigurationSectionVisitor) VisitCollatingSequenceClause(ctx *cobol85.
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitDiskSizeClause(ctx *cobol85.DiskSizeClauseContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitDiskSizeClause(ctx *cobol85.DiskSizeClauseContext) any {
 	unit := pb.DiskSizeClause_WORDS
 	switch {
 	case ctx.WORDS() != nil:
@@ -75,7 +75,7 @@ func (v *ConfigurationSectionVisitor) VisitDiskSizeClause(ctx *cobol85.DiskSizeC
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitMemorySizeClause(ctx *cobol85.MemorySizeClauseContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitMemorySizeClause(ctx *cobol85.MemorySizeClauseContext) any {
 	unit := pb.MemorySizeClause_WORDS
 	switch {
 	case ctx.WORDS() != nil:
@@ -102,18 +102,18 @@ func (v *ConfigurationSectionVisitor) VisitMemorySizeClause(ctx *cobol85.MemoryS
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitObjectComputerClause(ctx *cobol85.ObjectComputerClauseContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitObjectComputerClause(ctx *cobol85.ObjectComputerClauseContext) any {
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitObjectComputerParagraph(ctx *cobol85.ObjectComputerParagraphContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitObjectComputerParagraph(ctx *cobol85.ObjectComputerParagraphContext) any {
 	v.section.ObjectComputerParagraph = &pb.ObjectComputerParagraph{
 		ComputerName: conv.ComputerName(ctx.ComputerName()),
 	}
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitSourceComputerParagraph(ctx *cobol85.SourceComputerParagraphContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitSourceComputerParagraph(ctx *cobol85.SourceComputerParagraphContext) any {
 	v.section.SourceComputerParagraph = &pb.SourceComputerParagraph{
 		ComputerName:  conv.ComputerName(ctx.ComputerName()),
 		DebuggingMode: ctx.DEBUGGING() != nil,
@@ -121,7 +121,7 @@ func (v *ConfigurationSectionVisitor) VisitSourceComputerParagraph(ctx *cobol85.
 	return v.VisitChildren(ctx)
 }
 
-func (v *ConfigurationSectionVisitor) VisitConfigurationSectionParagraph(ctx *cobol85.ConfigurationSectionParagraphContext) interface{} {
+func (v *ConfigurationSectionVisitor) VisitConfigurationSectionParagraph(ctx *cobol85.ConfigurationSectionParagraphContext) any {
 	return v.VisitChildren(ctx)
 }
 
