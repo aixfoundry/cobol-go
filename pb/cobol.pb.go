@@ -2776,6 +2776,98 @@ func (UseAfterClause_Type) EnumDescriptor() ([]byte, []int) {
 	return file_cobol_proto_rawDescGZIP(), []int{263, 0}
 }
 
+type PlusMinus_Operator int32
+
+const (
+	PlusMinus_PLUS  PlusMinus_Operator = 0
+	PlusMinus_MINUS PlusMinus_Operator = 1
+)
+
+// Enum value maps for PlusMinus_Operator.
+var (
+	PlusMinus_Operator_name = map[int32]string{
+		0: "PLUS",
+		1: "MINUS",
+	}
+	PlusMinus_Operator_value = map[string]int32{
+		"PLUS":  0,
+		"MINUS": 1,
+	}
+)
+
+func (x PlusMinus_Operator) Enum() *PlusMinus_Operator {
+	p := new(PlusMinus_Operator)
+	*p = x
+	return p
+}
+
+func (x PlusMinus_Operator) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (PlusMinus_Operator) Descriptor() protoreflect.EnumDescriptor {
+	return file_cobol_proto_enumTypes[52].Descriptor()
+}
+
+func (PlusMinus_Operator) Type() protoreflect.EnumType {
+	return &file_cobol_proto_enumTypes[52]
+}
+
+func (x PlusMinus_Operator) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use PlusMinus_Operator.Descriptor instead.
+func (PlusMinus_Operator) EnumDescriptor() ([]byte, []int) {
+	return file_cobol_proto_rawDescGZIP(), []int{265, 0}
+}
+
+type MultDiv_Operator int32
+
+const (
+	MultDiv_MULT MultDiv_Operator = 0
+	MultDiv_DIV  MultDiv_Operator = 1
+)
+
+// Enum value maps for MultDiv_Operator.
+var (
+	MultDiv_Operator_name = map[int32]string{
+		0: "MULT",
+		1: "DIV",
+	}
+	MultDiv_Operator_value = map[string]int32{
+		"MULT": 0,
+		"DIV":  1,
+	}
+)
+
+func (x MultDiv_Operator) Enum() *MultDiv_Operator {
+	p := new(MultDiv_Operator)
+	*p = x
+	return p
+}
+
+func (x MultDiv_Operator) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (MultDiv_Operator) Descriptor() protoreflect.EnumDescriptor {
+	return file_cobol_proto_enumTypes[53].Descriptor()
+}
+
+func (MultDiv_Operator) Type() protoreflect.EnumType {
+	return &file_cobol_proto_enumTypes[53]
+}
+
+func (x MultDiv_Operator) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use MultDiv_Operator.Descriptor instead.
+func (MultDiv_Operator) EnumDescriptor() ([]byte, []int) {
+	return file_cobol_proto_rawDescGZIP(), []int{267, 0}
+}
+
 type AndOrCondition_AndOr int32
 
 const (
@@ -2806,11 +2898,11 @@ func (x AndOrCondition_AndOr) String() string {
 }
 
 func (AndOrCondition_AndOr) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[52].Descriptor()
+	return file_cobol_proto_enumTypes[54].Descriptor()
 }
 
 func (AndOrCondition_AndOr) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[52]
+	return &file_cobol_proto_enumTypes[54]
 }
 
 func (x AndOrCondition_AndOr) Number() protoreflect.EnumNumber {
@@ -2864,11 +2956,11 @@ func (x ClassCondition_Type) String() string {
 }
 
 func (ClassCondition_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[53].Descriptor()
+	return file_cobol_proto_enumTypes[55].Descriptor()
 }
 
 func (ClassCondition_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[53]
+	return &file_cobol_proto_enumTypes[55]
 }
 
 func (x ClassCondition_Type) Number() protoreflect.EnumNumber {
@@ -2913,11 +3005,11 @@ func (x RelationSignCondition_Type) String() string {
 }
 
 func (RelationSignCondition_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[54].Descriptor()
+	return file_cobol_proto_enumTypes[56].Descriptor()
 }
 
 func (RelationSignCondition_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[54]
+	return &file_cobol_proto_enumTypes[56]
 }
 
 func (x RelationSignCondition_Type) Number() protoreflect.EnumNumber {
@@ -2959,11 +3051,11 @@ func (x RelationCombinedCondition_AndOr) String() string {
 }
 
 func (RelationCombinedCondition_AndOr) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[55].Descriptor()
+	return file_cobol_proto_enumTypes[57].Descriptor()
 }
 
 func (RelationCombinedCondition_AndOr) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[55]
+	return &file_cobol_proto_enumTypes[57]
 }
 
 func (x RelationCombinedCondition_AndOr) Number() protoreflect.EnumNumber {
@@ -3017,11 +3109,11 @@ func (x Literal_Type) String() string {
 }
 
 func (Literal_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[56].Descriptor()
+	return file_cobol_proto_enumTypes[58].Descriptor()
 }
 
 func (Literal_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[56]
+	return &file_cobol_proto_enumTypes[58]
 }
 
 func (x Literal_Type) Number() protoreflect.EnumNumber {
@@ -3063,11 +3155,11 @@ func (x NumericLiteral_Type) String() string {
 }
 
 func (NumericLiteral_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[57].Descriptor()
+	return file_cobol_proto_enumTypes[59].Descriptor()
 }
 
 func (NumericLiteral_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[57]
+	return &file_cobol_proto_enumTypes[59]
 }
 
 func (x NumericLiteral_Type) Number() protoreflect.EnumNumber {
@@ -3145,11 +3237,11 @@ func (x FigurativeConstant_Type) String() string {
 }
 
 func (FigurativeConstant_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[58].Descriptor()
+	return file_cobol_proto_enumTypes[60].Descriptor()
 }
 
 func (FigurativeConstant_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[58]
+	return &file_cobol_proto_enumTypes[60]
 }
 
 func (x FigurativeConstant_Type) Number() protoreflect.EnumNumber {
@@ -3266,11 +3358,11 @@ func (x SpecialRegister_Type) String() string {
 }
 
 func (SpecialRegister_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_cobol_proto_enumTypes[59].Descriptor()
+	return file_cobol_proto_enumTypes[61].Descriptor()
 }
 
 func (SpecialRegister_Type) Type() protoreflect.EnumType {
-	return &file_cobol_proto_enumTypes[59]
+	return &file_cobol_proto_enumTypes[61]
 }
 
 func (x SpecialRegister_Type) Number() protoreflect.EnumNumber {
@@ -20480,7 +20572,8 @@ func (x *ArithmeticExpression) GetPlusMinus() []*PlusMinus {
 
 type PlusMinus struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	MultDivs      *MultDivs              `protobuf:"bytes,1,opt,name=mult_divs,json=multDivs,proto3" json:"mult_divs,omitempty"`
+	Operator      PlusMinus_Operator     `protobuf:"varint,1,opt,name=operator,proto3,enum=pb.PlusMinus_Operator" json:"operator,omitempty"`
+	MultDivs      *MultDivs              `protobuf:"bytes,2,opt,name=mult_divs,json=multDivs,proto3" json:"mult_divs,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -20513,6 +20606,13 @@ func (x *PlusMinus) ProtoReflect() protoreflect.Message {
 // Deprecated: Use PlusMinus.ProtoReflect.Descriptor instead.
 func (*PlusMinus) Descriptor() ([]byte, []int) {
 	return file_cobol_proto_rawDescGZIP(), []int{265}
+}
+
+func (x *PlusMinus) GetOperator() PlusMinus_Operator {
+	if x != nil {
+		return x.Operator
+	}
+	return PlusMinus_PLUS
 }
 
 func (x *PlusMinus) GetMultDivs() *MultDivs {
@@ -20576,7 +20676,8 @@ func (x *MultDivs) GetMultDiv() []*MultDiv {
 
 type MultDiv struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Powers        *Powers                `protobuf:"bytes,1,opt,name=powers,proto3" json:"powers,omitempty"`
+	Operator      MultDiv_Operator       `protobuf:"varint,1,opt,name=operator,proto3,enum=pb.MultDiv_Operator" json:"operator,omitempty"`
+	Powers        *Powers                `protobuf:"bytes,2,opt,name=powers,proto3" json:"powers,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -20609,6 +20710,13 @@ func (x *MultDiv) ProtoReflect() protoreflect.Message {
 // Deprecated: Use MultDiv.ProtoReflect.Descriptor instead.
 func (*MultDiv) Descriptor() ([]byte, []int) {
 	return file_cobol_proto_rawDescGZIP(), []int{267}
+}
+
+func (x *MultDiv) GetOperator() MultDiv_Operator {
+	if x != nil {
+		return x.Operator
+	}
+	return MultDiv_MULT
 }
 
 func (x *MultDiv) GetPowers() *Powers {
@@ -20671,10 +20779,11 @@ func (x *Powers) GetPowers() []*Power {
 }
 
 type Power struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Basis         *Basis                 `protobuf:"bytes,1,opt,name=basis,proto3" json:"basis,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Basis            *Basis                 `protobuf:"bytes,1,opt,name=basis,proto3" json:"basis,omitempty"`
+	HasPowerOperator bool                   `protobuf:"varint,2,opt,name=has_power_operator,json=hasPowerOperator,proto3" json:"has_power_operator,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *Power) Reset() {
@@ -20712,6 +20821,13 @@ func (x *Power) GetBasis() *Basis {
 		return x.Basis
 	}
 	return nil
+}
+
+func (x *Power) GetHasPowerOperator() bool {
+	if x != nil {
+		return x.HasPowerOperator
+	}
+	return false
 }
 
 type Basis struct {
@@ -40447,21 +40563,30 @@ const file_cobol_proto_rawDesc = "" +
 	"\x14ArithmeticExpression\x12)\n" +
 	"\tmult_divs\x18\x01 \x01(\v2\f.pb.MultDivsR\bmultDivs\x12,\n" +
 	"\n" +
-	"plus_minus\x18\x02 \x03(\v2\r.pb.PlusMinusR\tplusMinus\"6\n" +
-	"\tPlusMinus\x12)\n" +
-	"\tmult_divs\x18\x01 \x01(\v2\f.pb.MultDivsR\bmultDivs\"V\n" +
+	"plus_minus\x18\x02 \x03(\v2\r.pb.PlusMinusR\tplusMinus\"\x8b\x01\n" +
+	"\tPlusMinus\x122\n" +
+	"\boperator\x18\x01 \x01(\x0e2\x16.pb.PlusMinus.OperatorR\boperator\x12)\n" +
+	"\tmult_divs\x18\x02 \x01(\v2\f.pb.MultDivsR\bmultDivs\"\x1f\n" +
+	"\bOperator\x12\b\n" +
+	"\x04PLUS\x10\x00\x12\t\n" +
+	"\x05MINUS\x10\x01\"V\n" +
 	"\bMultDivs\x12\"\n" +
 	"\x06powers\x18\x01 \x01(\v2\n" +
 	".pb.PowersR\x06powers\x12&\n" +
-	"\bmult_div\x18\x02 \x03(\v2\v.pb.MultDivR\amultDiv\"-\n" +
-	"\aMultDiv\x12\"\n" +
-	"\x06powers\x18\x01 \x01(\v2\n" +
-	".pb.PowersR\x06powers\"L\n" +
+	"\bmult_div\x18\x02 \x03(\v2\v.pb.MultDivR\amultDiv\"~\n" +
+	"\aMultDiv\x120\n" +
+	"\boperator\x18\x01 \x01(\x0e2\x14.pb.MultDiv.OperatorR\boperator\x12\"\n" +
+	"\x06powers\x18\x02 \x01(\v2\n" +
+	".pb.PowersR\x06powers\"\x1d\n" +
+	"\bOperator\x12\b\n" +
+	"\x04MULT\x10\x00\x12\a\n" +
+	"\x03DIV\x10\x01\"L\n" +
 	"\x06Powers\x12\x1f\n" +
 	"\x05basis\x18\x01 \x01(\v2\t.pb.BasisR\x05basis\x12!\n" +
-	"\x06powers\x18\x02 \x03(\v2\t.pb.PowerR\x06powers\"(\n" +
+	"\x06powers\x18\x02 \x03(\v2\t.pb.PowerR\x06powers\"V\n" +
 	"\x05Power\x12\x1f\n" +
-	"\x05basis\x18\x01 \x01(\v2\t.pb.BasisR\x05basis\"\xbd\x01\n" +
+	"\x05basis\x18\x01 \x01(\v2\t.pb.BasisR\x05basis\x12,\n" +
+	"\x12has_power_operator\x18\x02 \x01(\bR\x10hasPowerOperator\"\xbd\x01\n" +
 	"\x05Basis\x12O\n" +
 	"\x15arithmetic_expression\x18\x01 \x01(\v2\x18.pb.ArithmeticExpressionH\x00R\x14arithmeticExpression\x120\n" +
 	"\n" +
@@ -40896,7 +41021,7 @@ func file_cobol_proto_rawDescGZIP() []byte {
 	return file_cobol_proto_rawDescData
 }
 
-var file_cobol_proto_enumTypes = make([]protoimpl.EnumInfo, 60)
+var file_cobol_proto_enumTypes = make([]protoimpl.EnumInfo, 62)
 var file_cobol_proto_msgTypes = make([]protoimpl.MessageInfo, 557)
 var file_cobol_proto_goTypes = []any{
 	(RelationalOperator)(0),                              // 0: pb.RelationalOperator
@@ -40951,1747 +41076,1751 @@ var file_cobol_proto_goTypes = []any{
 	(InitializeStatement_ReplacingBy_Type)(0),            // 49: pb.InitializeStatement.ReplacingBy.Type
 	(AcceptStatement_FromDate_Type)(0),                   // 50: pb.AcceptStatement.FromDate.Type
 	(UseAfterClause_Type)(0),                             // 51: pb.UseAfterClause.Type
-	(AndOrCondition_AndOr)(0),                            // 52: pb.AndOrCondition.AndOr
-	(ClassCondition_Type)(0),                             // 53: pb.ClassCondition.Type
-	(RelationSignCondition_Type)(0),                      // 54: pb.RelationSignCondition.Type
-	(RelationCombinedCondition_AndOr)(0),                 // 55: pb.RelationCombinedCondition.AndOr
-	(Literal_Type)(0),                                    // 56: pb.Literal.Type
-	(NumericLiteral_Type)(0),                             // 57: pb.NumericLiteral.Type
-	(FigurativeConstant_Type)(0),                         // 58: pb.FigurativeConstant.Type
-	(SpecialRegister_Type)(0),                            // 59: pb.SpecialRegister.Type
-	(*Program)(nil),                                      // 60: pb.Program
-	(*CompilationUnit)(nil),                              // 61: pb.CompilationUnit
-	(*ProgramUnit)(nil),                                  // 62: pb.ProgramUnit
-	(*IdentificationDivision)(nil),                       // 63: pb.IdentificationDivision
-	(*ProgramIdParagraph)(nil),                           // 64: pb.ProgramIdParagraph
-	(*AuthorParagraph)(nil),                              // 65: pb.AuthorParagraph
-	(*DateCompiledParagraph)(nil),                        // 66: pb.DateCompiledParagraph
-	(*DateWrittenParagraph)(nil),                         // 67: pb.DateWrittenParagraph
-	(*InstallationParagraph)(nil),                        // 68: pb.InstallationParagraph
-	(*RemarksParagraph)(nil),                             // 69: pb.RemarksParagraph
-	(*SecurityParagraph)(nil),                            // 70: pb.SecurityParagraph
-	(*EnvironmentDivision)(nil),                          // 71: pb.EnvironmentDivision
-	(*ConfigurationSection)(nil),                         // 72: pb.ConfigurationSection
-	(*SourceComputerParagraph)(nil),                      // 73: pb.SourceComputerParagraph
-	(*ObjectComputerParagraph)(nil),                      // 74: pb.ObjectComputerParagraph
-	(*MemorySizeClause)(nil),                             // 75: pb.MemorySizeClause
-	(*DiskSizeClause)(nil),                               // 76: pb.DiskSizeClause
-	(*CollatingSequenceClause)(nil),                      // 77: pb.CollatingSequenceClause
-	(*SegmentLimitClause)(nil),                           // 78: pb.SegmentLimitClause
-	(*CharacterSetClause)(nil),                           // 79: pb.CharacterSetClause
-	(*SpecialNamesParagraph)(nil),                        // 80: pb.SpecialNamesParagraph
-	(*AlphabetClause)(nil),                               // 81: pb.AlphabetClause
-	(*ChannelClause)(nil),                                // 82: pb.ChannelClause
-	(*ClassClause)(nil),                                  // 83: pb.ClassClause
-	(*ClassClauseThrough)(nil),                           // 84: pb.ClassClauseThrough
-	(*CurrencySignClause)(nil),                           // 85: pb.CurrencySignClause
-	(*DecimalPointClause)(nil),                           // 86: pb.DecimalPointClause
-	(*DefaultDisplaySignClause)(nil),                     // 87: pb.DefaultDisplaySignClause
-	(*OdtClause)(nil),                                    // 88: pb.OdtClause
-	(*ReserveNetworkClause)(nil),                         // 89: pb.ReserveNetworkClause
-	(*DefaultComputationalSignClause)(nil),               // 90: pb.DefaultComputationalSignClause
-	(*EnvironmentSwitchNameClause)(nil),                  // 91: pb.EnvironmentSwitchNameClause
-	(*SymbolicCharactersClause)(nil),                     // 92: pb.SymbolicCharactersClause
-	(*InputOutputSection)(nil),                           // 93: pb.InputOutputSection
-	(*FileControlParagraph)(nil),                         // 94: pb.FileControlParagraph
-	(*FileControlEntry)(nil),                             // 95: pb.FileControlEntry
-	(*SelectClause)(nil),                                 // 96: pb.SelectClause
-	(*AssignClause)(nil),                                 // 97: pb.AssignClause
-	(*ReserveClause)(nil),                                // 98: pb.ReserveClause
-	(*OrganizationClause)(nil),                           // 99: pb.OrganizationClause
-	(*PaddingCharacterClause)(nil),                       // 100: pb.PaddingCharacterClause
-	(*RecordDelimiterClause)(nil),                        // 101: pb.RecordDelimiterClause
-	(*AccessModeClause)(nil),                             // 102: pb.AccessModeClause
-	(*RecordKeyClause)(nil),                              // 103: pb.RecordKeyClause
-	(*AlternateRecordKeyClause)(nil),                     // 104: pb.AlternateRecordKeyClause
-	(*PasswordClause)(nil),                               // 105: pb.PasswordClause
-	(*FileStatusClause)(nil),                             // 106: pb.FileStatusClause
-	(*RelativeKeyClause)(nil),                            // 107: pb.RelativeKeyClause
-	(*IoControlParagraph)(nil),                           // 108: pb.IoControlParagraph
-	(*RerunClause)(nil),                                  // 109: pb.RerunClause
-	(*RerunEveryRecords)(nil),                            // 110: pb.RerunEveryRecords
-	(*RerunEveryOf)(nil),                                 // 111: pb.RerunEveryOf
-	(*RerunEveryClock)(nil),                              // 112: pb.RerunEveryClock
-	(*SameClause)(nil),                                   // 113: pb.SameClause
-	(*MultipleFileClause)(nil),                           // 114: pb.MultipleFileClause
-	(*MultipleFilePosition)(nil),                         // 115: pb.MultipleFilePosition
-	(*CommitmentControlClause)(nil),                      // 116: pb.CommitmentControlClause
-	(*DataDivision)(nil),                                 // 117: pb.DataDivision
-	(*FileSection)(nil),                                  // 118: pb.FileSection
-	(*FileDescriptionEntry)(nil),                         // 119: pb.FileDescriptionEntry
-	(*ModeStatement)(nil),                                // 120: pb.ModeStatement
-	(*RecordingModeClause)(nil),                          // 121: pb.RecordingModeClause
-	(*ExternalClause)(nil),                               // 122: pb.ExternalClause
-	(*GlobalClause)(nil),                                 // 123: pb.GlobalClause
-	(*BlockContainsClause)(nil),                          // 124: pb.BlockContainsClause
-	(*RecordContainsClause)(nil),                         // 125: pb.RecordContainsClause
-	(*LabelRecordsClause)(nil),                           // 126: pb.LabelRecordsClause
-	(*ValueOfClause)(nil),                                // 127: pb.ValueOfClause
-	(*ValuePair)(nil),                                    // 128: pb.ValuePair
-	(*DataRecordsClause)(nil),                            // 129: pb.DataRecordsClause
-	(*DataNameOrIntegerLiteral)(nil),                     // 130: pb.DataNameOrIntegerLiteral
-	(*LinageClause)(nil),                                 // 131: pb.LinageClause
-	(*CodeSetClause)(nil),                                // 132: pb.CodeSetClause
-	(*ReportClause)(nil),                                 // 133: pb.ReportClause
-	(*WorkingStorageSection)(nil),                        // 134: pb.WorkingStorageSection
-	(*DataDescriptionEntry)(nil),                         // 135: pb.DataDescriptionEntry
-	(*DataRenamesClause)(nil),                            // 136: pb.DataRenamesClause
-	(*DataRedefinesClause)(nil),                          // 137: pb.DataRedefinesClause
-	(*DataIntegerStringClause)(nil),                      // 138: pb.DataIntegerStringClause
-	(*DataExternalClause)(nil),                           // 139: pb.DataExternalClause
-	(*DataGlobalClause)(nil),                             // 140: pb.DataGlobalClause
-	(*DataTypeDefClause)(nil),                            // 141: pb.DataTypeDefClause
-	(*DataThreadLocalClause)(nil),                        // 142: pb.DataThreadLocalClause
-	(*DataPictureClause)(nil),                            // 143: pb.DataPictureClause
-	(*PictureString)(nil),                                // 144: pb.PictureString
-	(*PictureChars)(nil),                                 // 145: pb.PictureChars
-	(*PictureCardinality)(nil),                           // 146: pb.PictureCardinality
-	(*DataCommonOwnLocalClause)(nil),                     // 147: pb.DataCommonOwnLocalClause
-	(*DataTypeClause)(nil),                               // 148: pb.DataTypeClause
-	(*DataUsingClause)(nil),                              // 149: pb.DataUsingClause
-	(*DataUsageClause)(nil),                              // 150: pb.DataUsageClause
-	(*DataValueInterval)(nil),                            // 151: pb.DataValueInterval
-	(*DataValueClause)(nil),                              // 152: pb.DataValueClause
-	(*DataReceivedByClause)(nil),                         // 153: pb.DataReceivedByClause
-	(*DataOccursClause)(nil),                             // 154: pb.DataOccursClause
-	(*DataSignClause)(nil),                               // 155: pb.DataSignClause
-	(*DataSynchronizedClause)(nil),                       // 156: pb.DataSynchronizedClause
-	(*DataJustifiedClause)(nil),                          // 157: pb.DataJustifiedClause
-	(*DataBlankWhenZeroClause)(nil),                      // 158: pb.DataBlankWhenZeroClause
-	(*DataWithLowerBoundsClause)(nil),                    // 159: pb.DataWithLowerBoundsClause
-	(*DataAlignedClause)(nil),                            // 160: pb.DataAlignedClause
-	(*DataRecordAreaClause)(nil),                         // 161: pb.DataRecordAreaClause
-	(*ScreenSection)(nil),                                // 162: pb.ScreenSection
-	(*ScreenDescriptionEntry)(nil),                       // 163: pb.ScreenDescriptionEntry
-	(*ZeroFillClause)(nil),                               // 164: pb.ZeroFillClause
-	(*FullClause)(nil),                                   // 165: pb.FullClause
-	(*PromptClause)(nil),                                 // 166: pb.PromptClause
-	(*RequiredClause)(nil),                               // 167: pb.RequiredClause
-	(*SecureClause)(nil),                                 // 168: pb.SecureClause
-	(*AutoClause)(nil),                                   // 169: pb.AutoClause
-	(*UsingClause)(nil),                                  // 170: pb.UsingClause
-	(*FromClause)(nil),                                   // 171: pb.FromClause
-	(*BlankClause)(nil),                                  // 172: pb.BlankClause
-	(*BellClause)(nil),                                   // 173: pb.BellClause
-	(*BlinkClause)(nil),                                  // 174: pb.BlinkClause
-	(*EraseClause)(nil),                                  // 175: pb.EraseClause
-	(*LightClause)(nil),                                  // 176: pb.LightClause
-	(*GridClause)(nil),                                   // 177: pb.GridClause
-	(*ReverseVideoClause)(nil),                           // 178: pb.ReverseVideoClause
-	(*UnderlineClause)(nil),                              // 179: pb.UnderlineClause
-	(*SizeClause)(nil),                                   // 180: pb.SizeClause
-	(*LineClause)(nil),                                   // 181: pb.LineClause
-	(*ColumnClause)(nil),                                 // 182: pb.ColumnClause
-	(*ForegroundColorClause)(nil),                        // 183: pb.ForegroundColorClause
-	(*BackgroundColorClause)(nil),                        // 184: pb.BackgroundColorClause
-	(*ControlClause)(nil),                                // 185: pb.ControlClause
-	(*ReportSection)(nil),                                // 186: pb.ReportSection
-	(*ReportDescription)(nil),                            // 187: pb.ReportDescription
-	(*ReportDescriptionEntry)(nil),                       // 188: pb.ReportDescriptionEntry
-	(*PageLimitClause)(nil),                              // 189: pb.PageLimitClause
-	(*HeadingClause)(nil),                                // 190: pb.HeadingClause
-	(*FirstDetailClause)(nil),                            // 191: pb.FirstDetailClause
-	(*LastDetailClause)(nil),                             // 192: pb.LastDetailClause
-	(*FootingClause)(nil),                                // 193: pb.FootingClause
-	(*ReportGroupDescriptionEntry)(nil),                  // 194: pb.ReportGroupDescriptionEntry
-	(*ResetClause)(nil),                                  // 195: pb.ResetClause
-	(*SumClause)(nil),                                    // 196: pb.SumClause
-	(*ValueClause)(nil),                                  // 197: pb.ValueClause
-	(*SourceClause)(nil),                                 // 198: pb.SourceClause
-	(*IndicateClause)(nil),                               // 199: pb.IndicateClause
-	(*ColumnNumberClause)(nil),                           // 200: pb.ColumnNumberClause
-	(*BlankWhenZeroClause)(nil),                          // 201: pb.BlankWhenZeroClause
-	(*JustifiedClause)(nil),                              // 202: pb.JustifiedClause
-	(*SignClause)(nil),                                   // 203: pb.SignClause
-	(*PictureClause)(nil),                                // 204: pb.PictureClause
-	(*LineNumberClause)(nil),                             // 205: pb.LineNumberClause
-	(*NextGroupClause)(nil),                              // 206: pb.NextGroupClause
-	(*TypeClause)(nil),                                   // 207: pb.TypeClause
-	(*UsageClause)(nil),                                  // 208: pb.UsageClause
-	(*ProgramLibrarySection)(nil),                        // 209: pb.ProgramLibrarySection
-	(*LibraryDescriptionEntry)(nil),                      // 210: pb.LibraryDescriptionEntry
-	(*IsCommonClause)(nil),                               // 211: pb.IsCommonClause
-	(*AttributeClause1)(nil),                             // 212: pb.AttributeClause1
-	(*AttributeClause2)(nil),                             // 213: pb.AttributeClause2
-	(*ProcedureClause1)(nil),                             // 214: pb.ProcedureClause1
-	(*ProcedureClause2)(nil),                             // 215: pb.ProcedureClause2
-	(*LocalStorageSection)(nil),                          // 216: pb.LocalStorageSection
-	(*LinkageSection)(nil),                               // 217: pb.LinkageSection
-	(*CommunicationSection)(nil),                         // 218: pb.CommunicationSection
-	(*CommunicationDescriptionEntry)(nil),                // 219: pb.CommunicationDescriptionEntry
-	(*SymbolicTerminalClause)(nil),                       // 220: pb.SymbolicTerminalClause
-	(*SymbolicDestinationClause)(nil),                    // 221: pb.SymbolicDestinationClause
-	(*ErrorKeyClause)(nil),                               // 222: pb.ErrorKeyClause
-	(*DestinationTableClause)(nil),                       // 223: pb.DestinationTableClause
-	(*DestinationCountClause)(nil),                       // 224: pb.DestinationCountClause
-	(*SymbolicQueueClause)(nil),                          // 225: pb.SymbolicQueueClause
-	(*SymbolicSubQueueClause)(nil),                       // 226: pb.SymbolicSubQueueClause
-	(*MessageDateClause)(nil),                            // 227: pb.MessageDateClause
-	(*MessageTimeClause)(nil),                            // 228: pb.MessageTimeClause
-	(*SymbolicSourceClause)(nil),                         // 229: pb.SymbolicSourceClause
-	(*TextLengthClause)(nil),                             // 230: pb.TextLengthClause
-	(*EndKeyClause)(nil),                                 // 231: pb.EndKeyClause
-	(*StatusKeyClause)(nil),                              // 232: pb.StatusKeyClause
-	(*MessageCountClause)(nil),                           // 233: pb.MessageCountClause
-	(*DataBaseSection)(nil),                              // 234: pb.DataBaseSection
-	(*DataBaseSectionEntry)(nil),                         // 235: pb.DataBaseSectionEntry
-	(*ProcedureDivision)(nil),                            // 236: pb.ProcedureDivision
-	(*ProcedureSection)(nil),                             // 237: pb.ProcedureSection
-	(*Declarative)(nil),                                  // 238: pb.Declarative
-	(*ProcedureSectionHeader)(nil),                       // 239: pb.ProcedureSectionHeader
-	(*Paragraphs)(nil),                                   // 240: pb.Paragraphs
-	(*Paragraph)(nil),                                    // 241: pb.Paragraph
-	(*Sentences)(nil),                                    // 242: pb.Sentences
-	(*Sentence)(nil),                                     // 243: pb.Sentence
-	(*Statement)(nil),                                    // 244: pb.Statement
-	(*WriteStatement)(nil),                               // 245: pb.WriteStatement
-	(*UnstringStatement)(nil),                            // 246: pb.UnstringStatement
-	(*TerminateStatement)(nil),                           // 247: pb.TerminateStatement
-	(*SubtractStatement)(nil),                            // 248: pb.SubtractStatement
-	(*StringStatement)(nil),                              // 249: pb.StringStatement
-	(*StopStatement)(nil),                                // 250: pb.StopStatement
-	(*StartStatement)(nil),                               // 251: pb.StartStatement
-	(*SortStatement)(nil),                                // 252: pb.SortStatement
-	(*SetStatement)(nil),                                 // 253: pb.SetStatement
-	(*SendStatement)(nil),                                // 254: pb.SendStatement
-	(*SearchStatement)(nil),                              // 255: pb.SearchStatement
-	(*RewriteStatement)(nil),                             // 256: pb.RewriteStatement
-	(*ReturnStatement)(nil),                              // 257: pb.ReturnStatement
-	(*ReleaseStatement)(nil),                             // 258: pb.ReleaseStatement
-	(*ReceiveStatement)(nil),                             // 259: pb.ReceiveStatement
-	(*ReadStatement)(nil),                                // 260: pb.ReadStatement
-	(*PurgeStatement)(nil),                               // 261: pb.PurgeStatement
-	(*PerformStatement)(nil),                             // 262: pb.PerformStatement
-	(*OpenStatement)(nil),                                // 263: pb.OpenStatement
-	(*NextSentenceStatement)(nil),                        // 264: pb.NextSentenceStatement
-	(*MultiplyStatement)(nil),                            // 265: pb.MultiplyStatement
-	(*MoveStatement)(nil),                                // 266: pb.MoveStatement
-	(*MoveToStatement)(nil),                              // 267: pb.MoveToStatement
-	(*MoveCorrespondingToStatement)(nil),                 // 268: pb.MoveCorrespondingToStatement
-	(*MergeStatement)(nil),                               // 269: pb.MergeStatement
-	(*InspectStatement)(nil),                             // 270: pb.InspectStatement
-	(*InitiateStatement)(nil),                            // 271: pb.InitiateStatement
-	(*InitializeStatement)(nil),                          // 272: pb.InitializeStatement
-	(*IfStatement)(nil),                                  // 273: pb.IfStatement
-	(*GoToStatement)(nil),                                // 274: pb.GoToStatement
-	(*GobackStatement)(nil),                              // 275: pb.GobackStatement
-	(*GenerateStatement)(nil),                            // 276: pb.GenerateStatement
-	(*ExitStatement)(nil),                                // 277: pb.ExitStatement
-	(*ExecSqlImsStatement)(nil),                          // 278: pb.ExecSqlImsStatement
-	(*ExecSqlStatement)(nil),                             // 279: pb.ExecSqlStatement
-	(*ExecCicsStatement)(nil),                            // 280: pb.ExecCicsStatement
-	(*ExhibitStatement)(nil),                             // 281: pb.ExhibitStatement
-	(*EvaluateStatement)(nil),                            // 282: pb.EvaluateStatement
-	(*EntryStatement)(nil),                               // 283: pb.EntryStatement
-	(*EnableStatement)(nil),                              // 284: pb.EnableStatement
-	(*DivideStatement)(nil),                              // 285: pb.DivideStatement
-	(*DisplayOperand)(nil),                               // 286: pb.DisplayOperand
-	(*DisplayAt)(nil),                                    // 287: pb.DisplayAt
-	(*DisplayUpon)(nil),                                  // 288: pb.DisplayUpon
-	(*DisplayWith)(nil),                                  // 289: pb.DisplayWith
-	(*DisplayStatement)(nil),                             // 290: pb.DisplayStatement
-	(*DisableStatement)(nil),                             // 291: pb.DisableStatement
-	(*DeleteStatement)(nil),                              // 292: pb.DeleteStatement
-	(*ContinueStatement)(nil),                            // 293: pb.ContinueStatement
-	(*ComputeStore)(nil),                                 // 294: pb.ComputeStore
-	(*ComputeStatement)(nil),                             // 295: pb.ComputeStatement
-	(*CloseReelUnitStatement)(nil),                       // 296: pb.CloseReelUnitStatement
-	(*CloseRelativeStatement)(nil),                       // 297: pb.CloseRelativeStatement
-	(*ClosePortFileIOUsing)(nil),                         // 298: pb.ClosePortFileIOUsing
-	(*ClosePortFileIOStatement)(nil),                     // 299: pb.ClosePortFileIOStatement
-	(*CloseFile)(nil),                                    // 300: pb.CloseFile
-	(*CloseStatement)(nil),                               // 301: pb.CloseStatement
-	(*CancelCall)(nil),                                   // 302: pb.CancelCall
-	(*CancelStatement)(nil),                              // 303: pb.CancelStatement
-	(*CallStatement)(nil),                                // 304: pb.CallStatement
-	(*AlterStatement)(nil),                               // 305: pb.AlterStatement
-	(*AddStatement)(nil),                                 // 306: pb.AddStatement
-	(*AcceptStatement)(nil),                              // 307: pb.AcceptStatement
-	(*AtEndOfPagePhrase)(nil),                            // 308: pb.AtEndOfPagePhrase
-	(*NotAtEndOfPagePhrase)(nil),                         // 309: pb.NotAtEndOfPagePhrase
-	(*OnSizeErrorPhrase)(nil),                            // 310: pb.OnSizeErrorPhrase
-	(*NotOnSizeErrorPhrase)(nil),                         // 311: pb.NotOnSizeErrorPhrase
-	(*OnOverflowPhrase)(nil),                             // 312: pb.OnOverflowPhrase
-	(*NotOnOverflowPhrase)(nil),                          // 313: pb.NotOnOverflowPhrase
-	(*InvalidKeyPhrase)(nil),                             // 314: pb.InvalidKeyPhrase
-	(*NotInvalidKeyPhrase)(nil),                          // 315: pb.NotInvalidKeyPhrase
-	(*AtEndPhrase)(nil),                                  // 316: pb.AtEndPhrase
-	(*NotAtEndPhrase)(nil),                               // 317: pb.NotAtEndPhrase
-	(*OnExceptionClause)(nil),                            // 318: pb.OnExceptionClause
-	(*NotOnExceptionClause)(nil),                         // 319: pb.NotOnExceptionClause
-	(*UseStatement)(nil),                                 // 320: pb.UseStatement
-	(*UseDebugOn)(nil),                                   // 321: pb.UseDebugOn
-	(*UseDebugClause)(nil),                               // 322: pb.UseDebugClause
-	(*UseAfterClause)(nil),                               // 323: pb.UseAfterClause
-	(*ArithmeticExpression)(nil),                         // 324: pb.ArithmeticExpression
-	(*PlusMinus)(nil),                                    // 325: pb.PlusMinus
-	(*MultDivs)(nil),                                     // 326: pb.MultDivs
-	(*MultDiv)(nil),                                      // 327: pb.MultDiv
-	(*Powers)(nil),                                       // 328: pb.Powers
-	(*Power)(nil),                                        // 329: pb.Power
-	(*Basis)(nil),                                        // 330: pb.Basis
-	(*Condition)(nil),                                    // 331: pb.Condition
-	(*AndOrCondition)(nil),                               // 332: pb.AndOrCondition
-	(*CombinableCondition)(nil),                          // 333: pb.CombinableCondition
-	(*SimpleCondition)(nil),                              // 334: pb.SimpleCondition
-	(*ClassCondition)(nil),                               // 335: pb.ClassCondition
-	(*ConditionNameReference)(nil),                       // 336: pb.ConditionNameReference
-	(*RelationCondition)(nil),                            // 337: pb.RelationCondition
-	(*RelationSignCondition)(nil),                        // 338: pb.RelationSignCondition
-	(*RelationArithmeticComparison)(nil),                 // 339: pb.RelationArithmeticComparison
-	(*RelationCombinedComparison)(nil),                   // 340: pb.RelationCombinedComparison
-	(*RelationCombinedCondition)(nil),                    // 341: pb.RelationCombinedCondition
-	(*Abbreviation)(nil),                                 // 342: pb.Abbreviation
-	(*Identifier)(nil),                                   // 343: pb.Identifier
-	(*TableCall)(nil),                                    // 344: pb.TableCall
-	(*FunctionCall)(nil),                                 // 345: pb.FunctionCall
-	(*ReferenceModifier)(nil),                            // 346: pb.ReferenceModifier
-	(*CharacterPosition)(nil),                            // 347: pb.CharacterPosition
-	(*Length)(nil),                                       // 348: pb.Length
-	(*Subscript)(nil),                                    // 349: pb.Subscript
-	(*Argument)(nil),                                     // 350: pb.Argument
-	(*QualifiedDataNameIntegerLiteral)(nil),              // 351: pb.QualifiedDataNameIntegerLiteral
-	(*IndexNameIntegerLiteral)(nil),                      // 352: pb.IndexNameIntegerLiteral
-	(*QualifiedDataName)(nil),                            // 353: pb.QualifiedDataName
-	(*QualifiedDataNameFormat1)(nil),                     // 354: pb.QualifiedDataNameFormat1
-	(*QualifiedDataNameFormat2)(nil),                     // 355: pb.QualifiedDataNameFormat2
-	(*QualifiedDataNameFormat3)(nil),                     // 356: pb.QualifiedDataNameFormat3
-	(*QualifiedDataNameFormat4)(nil),                     // 357: pb.QualifiedDataNameFormat4
-	(*InData)(nil),                                       // 358: pb.InData
-	(*InFile)(nil),                                       // 359: pb.InFile
-	(*InMnemonic)(nil),                                   // 360: pb.InMnemonic
-	(*InSection)(nil),                                    // 361: pb.InSection
-	(*InLibrary)(nil),                                    // 362: pb.InLibrary
-	(*InTable)(nil),                                      // 363: pb.InTable
-	(*AlphabetName)(nil),                                 // 364: pb.AlphabetName
-	(*AssignmentName)(nil),                               // 365: pb.AssignmentName
-	(*BasisName)(nil),                                    // 366: pb.BasisName
-	(*CdName)(nil),                                       // 367: pb.CdName
-	(*ClassName)(nil),                                    // 368: pb.ClassName
-	(*ComputerName)(nil),                                 // 369: pb.ComputerName
-	(*ConditionName)(nil),                                // 370: pb.ConditionName
-	(*DataName)(nil),                                     // 371: pb.DataName
-	(*DataDescName)(nil),                                 // 372: pb.DataDescName
-	(*EnvironmentName)(nil),                              // 373: pb.EnvironmentName
-	(*FileName)(nil),                                     // 374: pb.FileName
-	(*FunctionName)(nil),                                 // 375: pb.FunctionName
-	(*IndexName)(nil),                                    // 376: pb.IndexName
-	(*LanguageName)(nil),                                 // 377: pb.LanguageName
-	(*LibraryName)(nil),                                  // 378: pb.LibraryName
-	(*LocalName)(nil),                                    // 379: pb.LocalName
-	(*MnemonicName)(nil),                                 // 380: pb.MnemonicName
-	(*ParagraphName)(nil),                                // 381: pb.ParagraphName
-	(*ProcedureName)(nil),                                // 382: pb.ProcedureName
-	(*ProgramName)(nil),                                  // 383: pb.ProgramName
-	(*RecordName)(nil),                                   // 384: pb.RecordName
-	(*ReportName)(nil),                                   // 385: pb.ReportName
-	(*RoutingName)(nil),                                  // 386: pb.RoutingName
-	(*RoutineName)(nil),                                  // 387: pb.RoutineName
-	(*ScreenName)(nil),                                   // 388: pb.ScreenName
-	(*SectionName)(nil),                                  // 389: pb.SectionName
-	(*SystemName)(nil),                                   // 390: pb.SystemName
-	(*SymbolicCharacter)(nil),                            // 391: pb.SymbolicCharacter
-	(*TextName)(nil),                                     // 392: pb.TextName
-	(*CobolWord)(nil),                                    // 393: pb.CobolWord
-	(*Literal)(nil),                                      // 394: pb.Literal
-	(*BooleanLiteral)(nil),                               // 395: pb.BooleanLiteral
-	(*NumericLiteral)(nil),                               // 396: pb.NumericLiteral
-	(*IntegerLiteral)(nil),                               // 397: pb.IntegerLiteral
-	(*FigurativeConstant)(nil),                           // 398: pb.FigurativeConstant
-	(*SpecialRegister)(nil),                              // 399: pb.SpecialRegister
-	(*Call)(nil),                                         // 400: pb.Call
-	(*NonNumericLiteral)(nil),                            // 401: pb.NonNumericLiteral
-	(*StringLiteral)(nil),                                // 402: pb.StringLiteral
-	(*DbcsLiteral)(nil),                                  // 403: pb.DbcsLiteral
-	(*HexNumber)(nil),                                    // 404: pb.HexNumber
-	(*NullTerminated)(nil),                               // 405: pb.NullTerminated
-	(*AlphabetClause_Also)(nil),                          // 406: pb.AlphabetClause.Also
-	(*AlphabetClause_AlphabetLiteral)(nil),               // 407: pb.AlphabetClause.AlphabetLiteral
-	(*AlphabetClause_AlphabetLiterals)(nil),              // 408: pb.AlphabetClause.AlphabetLiterals
-	(*AlphabetClause_Alphanumeric)(nil),                  // 409: pb.AlphabetClause.Alphanumeric
-	(*AlphabetClause_National)(nil),                      // 410: pb.AlphabetClause.National
-	(*EnvironmentSwitchNameClause_StatusPhrase)(nil),     // 411: pb.EnvironmentSwitchNameClause.StatusPhrase
-	(*LabelRecordsClause_DataNames)(nil),                 // 412: pb.LabelRecordsClause.DataNames
-	(*DataDescriptionEntry_Format1)(nil),                 // 413: pb.DataDescriptionEntry.Format1
-	(*DataDescriptionEntry_Format2)(nil),                 // 414: pb.DataDescriptionEntry.Format2
-	(*DataDescriptionEntry_Format3)(nil),                 // 415: pb.DataDescriptionEntry.Format3
-	(*DataDescriptionEntry_ExecSql)(nil),                 // 416: pb.DataDescriptionEntry.ExecSql
-	(*DataTypeClause_Lob)(nil),                           // 417: pb.DataTypeClause.Lob
-	(*DataOccursClause_Sort)(nil),                        // 418: pb.DataOccursClause.Sort
-	(*DataOccursClause_Indexed)(nil),                     // 419: pb.DataOccursClause.Indexed
-	(*ReportGroupDescriptionEntry_Vertical)(nil),         // 420: pb.ReportGroupDescriptionEntry.Vertical
-	(*ReportGroupDescriptionEntry_Single)(nil),           // 421: pb.ReportGroupDescriptionEntry.Single
-	(*ReportGroupDescriptionEntry_Printable)(nil),        // 422: pb.ReportGroupDescriptionEntry.Printable
-	(*TypeClause_ReportHeading)(nil),                     // 423: pb.TypeClause.ReportHeading
-	(*TypeClause_PageHeading)(nil),                       // 424: pb.TypeClause.PageHeading
-	(*TypeClause_ControlHeading)(nil),                    // 425: pb.TypeClause.ControlHeading
-	(*TypeClause_Detail)(nil),                            // 426: pb.TypeClause.Detail
-	(*TypeClause_ControlFooting)(nil),                    // 427: pb.TypeClause.ControlFooting
-	(*TypeClause_PageFooting)(nil),                       // 428: pb.TypeClause.PageFooting
-	(*TypeClause_ReportFooting)(nil),                     // 429: pb.TypeClause.ReportFooting
-	(*LibraryDescriptionEntry_Import)(nil),               // 430: pb.LibraryDescriptionEntry.Import
-	(*LibraryDescriptionEntry_Export)(nil),               // 431: pb.LibraryDescriptionEntry.Export
-	(*ProcedureClause2_WithName)(nil),                    // 432: pb.ProcedureClause2.WithName
-	(*ProcedureClause2_UsingName)(nil),                   // 433: pb.ProcedureClause2.UsingName
-	(*CommunicationDescriptionEntry_Input)(nil),          // 434: pb.CommunicationDescriptionEntry.Input
-	(*CommunicationDescriptionEntry_Output)(nil),         // 435: pb.CommunicationDescriptionEntry.Output
-	(*CommunicationDescriptionEntry_Io)(nil),             // 436: pb.CommunicationDescriptionEntry.Io
-	(*ProcedureDivision_ByReference)(nil),                // 437: pb.ProcedureDivision.ByReference
-	(*ProcedureDivision_ByReferencePhrase)(nil),          // 438: pb.ProcedureDivision.ByReferencePhrase
-	(*ProcedureDivision_ByValue)(nil),                    // 439: pb.ProcedureDivision.ByValue
-	(*ProcedureDivision_ByValuePhrase)(nil),              // 440: pb.ProcedureDivision.ByValuePhrase
-	(*ProcedureDivision_UsingParameter)(nil),             // 441: pb.ProcedureDivision.UsingParameter
-	(*ProcedureDivision_GivingClause)(nil),               // 442: pb.ProcedureDivision.GivingClause
-	(*ProcedureDivision_UsingClause)(nil),                // 443: pb.ProcedureDivision.UsingClause
-	(*WriteStatement_FromPhrase)(nil),                    // 444: pb.WriteStatement.FromPhrase
-	(*WriteStatement_AdvancingPage)(nil),                 // 445: pb.WriteStatement.AdvancingPage
-	(*WriteStatement_AdvancingLines)(nil),                // 446: pb.WriteStatement.AdvancingLines
-	(*WriteStatement_AdvancingMnemonic)(nil),             // 447: pb.WriteStatement.AdvancingMnemonic
-	(*WriteStatement_AdvancingPhrase)(nil),               // 448: pb.WriteStatement.AdvancingPhrase
-	(*UnstringStatement_DelimitedByPhrase)(nil),          // 449: pb.UnstringStatement.DelimitedByPhrase
-	(*UnstringStatement_OrAllPhrase)(nil),                // 450: pb.UnstringStatement.OrAllPhrase
-	(*UnstringStatement_DelimitedOr)(nil),                // 451: pb.UnstringStatement.DelimitedOr
-	(*UnstringStatement_Into)(nil),                       // 452: pb.UnstringStatement.Into
-	(*UnstringStatement_DelimiterIn)(nil),                // 453: pb.UnstringStatement.DelimiterIn
-	(*UnstringStatement_CountIn)(nil),                    // 454: pb.UnstringStatement.CountIn
-	(*UnstringStatement_SendingPhrase)(nil),              // 455: pb.UnstringStatement.SendingPhrase
-	(*UnstringStatement_IntoPhrase)(nil),                 // 456: pb.UnstringStatement.IntoPhrase
-	(*UnstringStatement_WithPointerPhrase)(nil),          // 457: pb.UnstringStatement.WithPointerPhrase
-	(*UnstringStatement_TallyingPhrase)(nil),             // 458: pb.UnstringStatement.TallyingPhrase
-	(*SubtractStatement_Subtrahend)(nil),                 // 459: pb.SubtractStatement.Subtrahend
-	(*SubtractStatement_Minuend)(nil),                    // 460: pb.SubtractStatement.Minuend
-	(*SubtractStatement_MinuendGiving)(nil),              // 461: pb.SubtractStatement.MinuendGiving
-	(*SubtractStatement_Giving)(nil),                     // 462: pb.SubtractStatement.Giving
-	(*SubtractStatement_MinuendCorresponding)(nil),       // 463: pb.SubtractStatement.MinuendCorresponding
-	(*SubtractStatement_FromStatement)(nil),              // 464: pb.SubtractStatement.FromStatement
-	(*SubtractStatement_FromGivingStatement)(nil),        // 465: pb.SubtractStatement.FromGivingStatement
-	(*SubtractStatement_CorrespondingStatement)(nil),     // 466: pb.SubtractStatement.CorrespondingStatement
-	(*StringStatement_Sending)(nil),                      // 467: pb.StringStatement.Sending
-	(*StringStatement_DelimitedByPhrase)(nil),            // 468: pb.StringStatement.DelimitedByPhrase
-	(*StringStatement_ForPhrase)(nil),                    // 469: pb.StringStatement.ForPhrase
-	(*StringStatement_SendingPhrase)(nil),                // 470: pb.StringStatement.SendingPhrase
-	(*StringStatement_IntoPhrase)(nil),                   // 471: pb.StringStatement.IntoPhrase
-	(*StringStatement_WithPointerPhrase)(nil),            // 472: pb.StringStatement.WithPointerPhrase
-	(*StopStatement_Giving)(nil),                         // 473: pb.StopStatement.Giving
-	(*StartStatement_Key)(nil),                           // 474: pb.StartStatement.Key
-	(*SortStatement_OnKeyClause)(nil),                    // 475: pb.SortStatement.OnKeyClause
-	(*SortStatement_DuplicatesPhrase)(nil),               // 476: pb.SortStatement.DuplicatesPhrase
-	(*SortStatement_CollatingAlphanumeric)(nil),          // 477: pb.SortStatement.CollatingAlphanumeric
-	(*SortStatement_CollatingNational)(nil),              // 478: pb.SortStatement.CollatingNational
-	(*SortStatement_CollatingSequencePhrase)(nil),        // 479: pb.SortStatement.CollatingSequencePhrase
-	(*SortStatement_InputThrough)(nil),                   // 480: pb.SortStatement.InputThrough
-	(*SortStatement_InputProcedurePhrase)(nil),           // 481: pb.SortStatement.InputProcedurePhrase
-	(*SortStatement_Using)(nil),                          // 482: pb.SortStatement.Using
-	(*SortStatement_OutputThrough)(nil),                  // 483: pb.SortStatement.OutputThrough
-	(*SortStatement_OutputProcedurePhrase)(nil),          // 484: pb.SortStatement.OutputProcedurePhrase
-	(*SortStatement_Giving)(nil),                         // 485: pb.SortStatement.Giving
-	(*SortStatement_GivingPhrase)(nil),                   // 486: pb.SortStatement.GivingPhrase
-	(*SetStatement_To)(nil),                              // 487: pb.SetStatement.To
-	(*SetStatement_Entry)(nil),                           // 488: pb.SetStatement.Entry
-	(*SetStatement_ToValue)(nil),                         // 489: pb.SetStatement.ToValue
-	(*SetStatement_ByValue)(nil),                         // 490: pb.SetStatement.ByValue
-	(*SetStatement_ToStatement)(nil),                     // 491: pb.SetStatement.ToStatement
-	(*SetStatement_UpDownByStatement)(nil),               // 492: pb.SetStatement.UpDownByStatement
-	(*SendStatement_FromPhrase)(nil),                     // 493: pb.SendStatement.FromPhrase
-	(*SendStatement_WithPhrase)(nil),                     // 494: pb.SendStatement.WithPhrase
-	(*SendStatement_ReplacingPhrase)(nil),                // 495: pb.SendStatement.ReplacingPhrase
-	(*SendStatement_AdvancingPage)(nil),                  // 496: pb.SendStatement.AdvancingPage
-	(*SendStatement_AdvancingLines)(nil),                 // 497: pb.SendStatement.AdvancingLines
-	(*SendStatement_AdvancingMnemonic)(nil),              // 498: pb.SendStatement.AdvancingMnemonic
-	(*SendStatement_AdvancingPhrase)(nil),                // 499: pb.SendStatement.AdvancingPhrase
-	(*SendStatement_SyncStatement)(nil),                  // 500: pb.SendStatement.SyncStatement
-	(*SendStatement_AsyncStatement)(nil),                 // 501: pb.SendStatement.AsyncStatement
-	(*SearchStatement_Varying)(nil),                      // 502: pb.SearchStatement.Varying
-	(*SearchStatement_When)(nil),                         // 503: pb.SearchStatement.When
-	(*RewriteStatement_From)(nil),                        // 504: pb.RewriteStatement.From
-	(*ReturnStatement_Into)(nil),                         // 505: pb.ReturnStatement.Into
-	(*ReleaseStatement_From)(nil),                        // 506: pb.ReleaseStatement.From
-	(*ReceiveStatement_From)(nil),                        // 507: pb.ReceiveStatement.From
-	(*ReceiveStatement_With)(nil),                        // 508: pb.ReceiveStatement.With
-	(*ReceiveStatement_Thread)(nil),                      // 509: pb.ReceiveStatement.Thread
-	(*ReceiveStatement_Size)(nil),                        // 510: pb.ReceiveStatement.Size
-	(*ReceiveStatement_Status)(nil),                      // 511: pb.ReceiveStatement.Status
-	(*ReceiveStatement_Before)(nil),                      // 512: pb.ReceiveStatement.Before
-	(*ReceiveStatement_FromStatement)(nil),               // 513: pb.ReceiveStatement.FromStatement
-	(*ReceiveStatement_NoData)(nil),                      // 514: pb.ReceiveStatement.NoData
-	(*ReceiveStatement_WithData)(nil),                    // 515: pb.ReceiveStatement.WithData
-	(*ReceiveStatement_IntoStatement)(nil),               // 516: pb.ReceiveStatement.IntoStatement
-	(*ReadStatement_Into)(nil),                           // 517: pb.ReadStatement.Into
-	(*ReadStatement_With)(nil),                           // 518: pb.ReadStatement.With
-	(*ReadStatement_Key)(nil),                            // 519: pb.ReadStatement.Key
-	(*PerformStatement_TestClause)(nil),                  // 520: pb.PerformStatement.TestClause
-	(*PerformStatement_Times)(nil),                       // 521: pb.PerformStatement.Times
-	(*PerformStatement_Until)(nil),                       // 522: pb.PerformStatement.Until
-	(*PerformStatement_From)(nil),                        // 523: pb.PerformStatement.From
-	(*PerformStatement_By)(nil),                          // 524: pb.PerformStatement.By
-	(*PerformStatement_VaryingPhrase)(nil),               // 525: pb.PerformStatement.VaryingPhrase
-	(*PerformStatement_After)(nil),                       // 526: pb.PerformStatement.After
-	(*PerformStatement_VaryingClause)(nil),               // 527: pb.PerformStatement.VaryingClause
-	(*PerformStatement_Varying)(nil),                     // 528: pb.PerformStatement.Varying
-	(*PerformStatement_Type)(nil),                        // 529: pb.PerformStatement.Type
-	(*PerformStatement_InlineStatement)(nil),             // 530: pb.PerformStatement.InlineStatement
-	(*PerformStatement_ProcedureStatement)(nil),          // 531: pb.PerformStatement.ProcedureStatement
-	(*OpenStatement_Input)(nil),                          // 532: pb.OpenStatement.Input
-	(*OpenStatement_InputStatement)(nil),                 // 533: pb.OpenStatement.InputStatement
-	(*OpenStatement_Output)(nil),                         // 534: pb.OpenStatement.Output
-	(*OpenStatement_OutputStatement)(nil),                // 535: pb.OpenStatement.OutputStatement
-	(*OpenStatement_IOStatement)(nil),                    // 536: pb.OpenStatement.IOStatement
-	(*OpenStatement_ExtendStatement)(nil),                // 537: pb.OpenStatement.ExtendStatement
-	(*MultiplyStatement_GivingOperand)(nil),              // 538: pb.MultiplyStatement.GivingOperand
-	(*MultiplyStatement_GivingResult)(nil),               // 539: pb.MultiplyStatement.GivingResult
-	(*MultiplyStatement_Giving)(nil),                     // 540: pb.MultiplyStatement.Giving
-	(*MultiplyStatement_Regular)(nil),                    // 541: pb.MultiplyStatement.Regular
-	(*MergeStatement_OnKeyClause)(nil),                   // 542: pb.MergeStatement.OnKeyClause
-	(*MergeStatement_CollatingSequencePhrase)(nil),       // 543: pb.MergeStatement.CollatingSequencePhrase
-	(*MergeStatement_CollatingAlphanumeric)(nil),         // 544: pb.MergeStatement.CollatingAlphanumeric
-	(*MergeStatement_CollatingNational)(nil),             // 545: pb.MergeStatement.CollatingNational
-	(*MergeStatement_Using)(nil),                         // 546: pb.MergeStatement.Using
-	(*MergeStatement_OutputProcedurePhrase)(nil),         // 547: pb.MergeStatement.OutputProcedurePhrase
-	(*MergeStatement_OutputThrough)(nil),                 // 548: pb.MergeStatement.OutputThrough
-	(*MergeStatement_GivingPhrase)(nil),                  // 549: pb.MergeStatement.GivingPhrase
-	(*MergeStatement_Giving)(nil),                        // 550: pb.MergeStatement.Giving
-	(*InspectStatement_By)(nil),                          // 551: pb.InspectStatement.By
-	(*InspectStatement_To)(nil),                          // 552: pb.InspectStatement.To
-	(*InspectStatement_BeforeAfter)(nil),                 // 553: pb.InspectStatement.BeforeAfter
-	(*InspectStatement_ReplacingAllLeading)(nil),         // 554: pb.InspectStatement.ReplacingAllLeading
-	(*InspectStatement_ReplacingAllLeadings)(nil),        // 555: pb.InspectStatement.ReplacingAllLeadings
-	(*InspectStatement_AllLeading)(nil),                  // 556: pb.InspectStatement.AllLeading
-	(*InspectStatement_AllLeadings)(nil),                 // 557: pb.InspectStatement.AllLeadings
-	(*InspectStatement_ReplacingCharacters)(nil),         // 558: pb.InspectStatement.ReplacingCharacters
-	(*InspectStatement_Characters)(nil),                  // 559: pb.InspectStatement.Characters
-	(*InspectStatement_CharactersLeadings)(nil),          // 560: pb.InspectStatement.CharactersLeadings
-	(*InspectStatement_For)(nil),                         // 561: pb.InspectStatement.For
-	(*InspectStatement_ConvertingPhrase)(nil),            // 562: pb.InspectStatement.ConvertingPhrase
-	(*InspectStatement_ReplacingCharactersLeadings)(nil), // 563: pb.InspectStatement.ReplacingCharactersLeadings
-	(*InspectStatement_ReplacingPhrase)(nil),             // 564: pb.InspectStatement.ReplacingPhrase
-	(*InspectStatement_TallyingReplacingPhrase)(nil),     // 565: pb.InspectStatement.TallyingReplacingPhrase
-	(*InspectStatement_TallyingPhrase)(nil),              // 566: pb.InspectStatement.TallyingPhrase
-	(*InitializeStatement_ReplacingBy)(nil),              // 567: pb.InitializeStatement.ReplacingBy
-	(*InitializeStatement_ReplacingPhrase)(nil),          // 568: pb.InitializeStatement.ReplacingPhrase
-	(*IfStatement_Then)(nil),                             // 569: pb.IfStatement.Then
-	(*IfStatement_Else)(nil),                             // 570: pb.IfStatement.Else
-	(*GoToStatement_SimpleStatement)(nil),                // 571: pb.GoToStatement.SimpleStatement
-	(*GoToStatement_DependingOn)(nil),                    // 572: pb.GoToStatement.DependingOn
-	(*GoToStatement_DependingOnStatement)(nil),           // 573: pb.GoToStatement.DependingOnStatement
-	(*ExhibitStatement_Operand)(nil),                     // 574: pb.ExhibitStatement.Operand
-	(*EvaluateStatement_Select)(nil),                     // 575: pb.EvaluateStatement.Select
-	(*EvaluateStatement_AlsoSelect)(nil),                 // 576: pb.EvaluateStatement.AlsoSelect
-	(*EvaluateStatement_ValueThrough)(nil),               // 577: pb.EvaluateStatement.ValueThrough
-	(*EvaluateStatement_Through)(nil),                    // 578: pb.EvaluateStatement.Through
-	(*EvaluateStatement_Value)(nil),                      // 579: pb.EvaluateStatement.Value
-	(*EvaluateStatement_WhenCondition)(nil),              // 580: pb.EvaluateStatement.WhenCondition
-	(*EvaluateStatement_AlsoCondition)(nil),              // 581: pb.EvaluateStatement.AlsoCondition
-	(*EvaluateStatement_WhenOther)(nil),                  // 582: pb.EvaluateStatement.WhenOther
-	(*EvaluateStatement_When)(nil),                       // 583: pb.EvaluateStatement.When
-	(*EvaluateStatement_WhenPhrase)(nil),                 // 584: pb.EvaluateStatement.WhenPhrase
-	(*DivideStatement_Giving)(nil),                       // 585: pb.DivideStatement.Giving
-	(*DivideStatement_GivingPhrase)(nil),                 // 586: pb.DivideStatement.GivingPhrase
-	(*DivideStatement_Into)(nil),                         // 587: pb.DivideStatement.Into
-	(*DivideStatement_IntoStatement)(nil),                // 588: pb.DivideStatement.IntoStatement
-	(*DivideStatement_IntoGivingStatement)(nil),          // 589: pb.DivideStatement.IntoGivingStatement
-	(*DivideStatement_ByGivingStatement)(nil),            // 590: pb.DivideStatement.ByGivingStatement
-	(*DivideStatement_Remainder)(nil),                    // 591: pb.DivideStatement.Remainder
-	(*ClosePortFileIOUsing_CloseDisposition)(nil),        // 592: pb.ClosePortFileIOUsing.CloseDisposition
-	(*ClosePortFileIOUsing_AssociatedData)(nil),          // 593: pb.ClosePortFileIOUsing.AssociatedData
-	(*ClosePortFileIOUsing_AssociatedDataLength)(nil),    // 594: pb.ClosePortFileIOUsing.AssociatedDataLength
-	(*CallStatement_ByContent)(nil),                      // 595: pb.CallStatement.ByContent
-	(*CallStatement_ByValue)(nil),                        // 596: pb.CallStatement.ByValue
-	(*CallStatement_ByReference)(nil),                    // 597: pb.CallStatement.ByReference
-	(*CallStatement_ByReferencePhrase)(nil),              // 598: pb.CallStatement.ByReferencePhrase
-	(*CallStatement_ByValuePhrase)(nil),                  // 599: pb.CallStatement.ByValuePhrase
-	(*CallStatement_ByContentPhrase)(nil),                // 600: pb.CallStatement.ByContentPhrase
-	(*CallStatement_UsingParameter)(nil),                 // 601: pb.CallStatement.UsingParameter
-	(*CallStatement_UsingPhrase)(nil),                    // 602: pb.CallStatement.UsingPhrase
-	(*CallStatement_GivingPhrase)(nil),                   // 603: pb.CallStatement.GivingPhrase
-	(*AlterStatement_ProceedTo)(nil),                     // 604: pb.AlterStatement.ProceedTo
-	(*AddStatement_AddFrom)(nil),                         // 605: pb.AddStatement.AddFrom
-	(*AddStatement_AddToGiving)(nil),                     // 606: pb.AddStatement.AddToGiving
-	(*AddStatement_To)(nil),                              // 607: pb.AddStatement.To
-	(*AddStatement_ToGiving)(nil),                        // 608: pb.AddStatement.ToGiving
-	(*AddStatement_Corresponding)(nil),                   // 609: pb.AddStatement.Corresponding
-	(*AcceptStatement_FromDate)(nil),                     // 610: pb.AcceptStatement.FromDate
-	(*AcceptStatement_FromEscapeKey)(nil),                // 611: pb.AcceptStatement.FromEscapeKey
-	(*AcceptStatement_FromMnemonic)(nil),                 // 612: pb.AcceptStatement.FromMnemonic
-	(*AcceptStatement_MessageCount)(nil),                 // 613: pb.AcceptStatement.MessageCount
-	(*UseAfterClause_FileNames)(nil),                     // 614: pb.UseAfterClause.FileNames
-	(*ConditionNameReference_SubscriptReference)(nil),    // 615: pb.ConditionNameReference.SubscriptReference
-	(*ConditionNameReference_InSubscript)(nil),           // 616: pb.ConditionNameReference.InSubscript
+	(PlusMinus_Operator)(0),                              // 52: pb.PlusMinus.Operator
+	(MultDiv_Operator)(0),                                // 53: pb.MultDiv.Operator
+	(AndOrCondition_AndOr)(0),                            // 54: pb.AndOrCondition.AndOr
+	(ClassCondition_Type)(0),                             // 55: pb.ClassCondition.Type
+	(RelationSignCondition_Type)(0),                      // 56: pb.RelationSignCondition.Type
+	(RelationCombinedCondition_AndOr)(0),                 // 57: pb.RelationCombinedCondition.AndOr
+	(Literal_Type)(0),                                    // 58: pb.Literal.Type
+	(NumericLiteral_Type)(0),                             // 59: pb.NumericLiteral.Type
+	(FigurativeConstant_Type)(0),                         // 60: pb.FigurativeConstant.Type
+	(SpecialRegister_Type)(0),                            // 61: pb.SpecialRegister.Type
+	(*Program)(nil),                                      // 62: pb.Program
+	(*CompilationUnit)(nil),                              // 63: pb.CompilationUnit
+	(*ProgramUnit)(nil),                                  // 64: pb.ProgramUnit
+	(*IdentificationDivision)(nil),                       // 65: pb.IdentificationDivision
+	(*ProgramIdParagraph)(nil),                           // 66: pb.ProgramIdParagraph
+	(*AuthorParagraph)(nil),                              // 67: pb.AuthorParagraph
+	(*DateCompiledParagraph)(nil),                        // 68: pb.DateCompiledParagraph
+	(*DateWrittenParagraph)(nil),                         // 69: pb.DateWrittenParagraph
+	(*InstallationParagraph)(nil),                        // 70: pb.InstallationParagraph
+	(*RemarksParagraph)(nil),                             // 71: pb.RemarksParagraph
+	(*SecurityParagraph)(nil),                            // 72: pb.SecurityParagraph
+	(*EnvironmentDivision)(nil),                          // 73: pb.EnvironmentDivision
+	(*ConfigurationSection)(nil),                         // 74: pb.ConfigurationSection
+	(*SourceComputerParagraph)(nil),                      // 75: pb.SourceComputerParagraph
+	(*ObjectComputerParagraph)(nil),                      // 76: pb.ObjectComputerParagraph
+	(*MemorySizeClause)(nil),                             // 77: pb.MemorySizeClause
+	(*DiskSizeClause)(nil),                               // 78: pb.DiskSizeClause
+	(*CollatingSequenceClause)(nil),                      // 79: pb.CollatingSequenceClause
+	(*SegmentLimitClause)(nil),                           // 80: pb.SegmentLimitClause
+	(*CharacterSetClause)(nil),                           // 81: pb.CharacterSetClause
+	(*SpecialNamesParagraph)(nil),                        // 82: pb.SpecialNamesParagraph
+	(*AlphabetClause)(nil),                               // 83: pb.AlphabetClause
+	(*ChannelClause)(nil),                                // 84: pb.ChannelClause
+	(*ClassClause)(nil),                                  // 85: pb.ClassClause
+	(*ClassClauseThrough)(nil),                           // 86: pb.ClassClauseThrough
+	(*CurrencySignClause)(nil),                           // 87: pb.CurrencySignClause
+	(*DecimalPointClause)(nil),                           // 88: pb.DecimalPointClause
+	(*DefaultDisplaySignClause)(nil),                     // 89: pb.DefaultDisplaySignClause
+	(*OdtClause)(nil),                                    // 90: pb.OdtClause
+	(*ReserveNetworkClause)(nil),                         // 91: pb.ReserveNetworkClause
+	(*DefaultComputationalSignClause)(nil),               // 92: pb.DefaultComputationalSignClause
+	(*EnvironmentSwitchNameClause)(nil),                  // 93: pb.EnvironmentSwitchNameClause
+	(*SymbolicCharactersClause)(nil),                     // 94: pb.SymbolicCharactersClause
+	(*InputOutputSection)(nil),                           // 95: pb.InputOutputSection
+	(*FileControlParagraph)(nil),                         // 96: pb.FileControlParagraph
+	(*FileControlEntry)(nil),                             // 97: pb.FileControlEntry
+	(*SelectClause)(nil),                                 // 98: pb.SelectClause
+	(*AssignClause)(nil),                                 // 99: pb.AssignClause
+	(*ReserveClause)(nil),                                // 100: pb.ReserveClause
+	(*OrganizationClause)(nil),                           // 101: pb.OrganizationClause
+	(*PaddingCharacterClause)(nil),                       // 102: pb.PaddingCharacterClause
+	(*RecordDelimiterClause)(nil),                        // 103: pb.RecordDelimiterClause
+	(*AccessModeClause)(nil),                             // 104: pb.AccessModeClause
+	(*RecordKeyClause)(nil),                              // 105: pb.RecordKeyClause
+	(*AlternateRecordKeyClause)(nil),                     // 106: pb.AlternateRecordKeyClause
+	(*PasswordClause)(nil),                               // 107: pb.PasswordClause
+	(*FileStatusClause)(nil),                             // 108: pb.FileStatusClause
+	(*RelativeKeyClause)(nil),                            // 109: pb.RelativeKeyClause
+	(*IoControlParagraph)(nil),                           // 110: pb.IoControlParagraph
+	(*RerunClause)(nil),                                  // 111: pb.RerunClause
+	(*RerunEveryRecords)(nil),                            // 112: pb.RerunEveryRecords
+	(*RerunEveryOf)(nil),                                 // 113: pb.RerunEveryOf
+	(*RerunEveryClock)(nil),                              // 114: pb.RerunEveryClock
+	(*SameClause)(nil),                                   // 115: pb.SameClause
+	(*MultipleFileClause)(nil),                           // 116: pb.MultipleFileClause
+	(*MultipleFilePosition)(nil),                         // 117: pb.MultipleFilePosition
+	(*CommitmentControlClause)(nil),                      // 118: pb.CommitmentControlClause
+	(*DataDivision)(nil),                                 // 119: pb.DataDivision
+	(*FileSection)(nil),                                  // 120: pb.FileSection
+	(*FileDescriptionEntry)(nil),                         // 121: pb.FileDescriptionEntry
+	(*ModeStatement)(nil),                                // 122: pb.ModeStatement
+	(*RecordingModeClause)(nil),                          // 123: pb.RecordingModeClause
+	(*ExternalClause)(nil),                               // 124: pb.ExternalClause
+	(*GlobalClause)(nil),                                 // 125: pb.GlobalClause
+	(*BlockContainsClause)(nil),                          // 126: pb.BlockContainsClause
+	(*RecordContainsClause)(nil),                         // 127: pb.RecordContainsClause
+	(*LabelRecordsClause)(nil),                           // 128: pb.LabelRecordsClause
+	(*ValueOfClause)(nil),                                // 129: pb.ValueOfClause
+	(*ValuePair)(nil),                                    // 130: pb.ValuePair
+	(*DataRecordsClause)(nil),                            // 131: pb.DataRecordsClause
+	(*DataNameOrIntegerLiteral)(nil),                     // 132: pb.DataNameOrIntegerLiteral
+	(*LinageClause)(nil),                                 // 133: pb.LinageClause
+	(*CodeSetClause)(nil),                                // 134: pb.CodeSetClause
+	(*ReportClause)(nil),                                 // 135: pb.ReportClause
+	(*WorkingStorageSection)(nil),                        // 136: pb.WorkingStorageSection
+	(*DataDescriptionEntry)(nil),                         // 137: pb.DataDescriptionEntry
+	(*DataRenamesClause)(nil),                            // 138: pb.DataRenamesClause
+	(*DataRedefinesClause)(nil),                          // 139: pb.DataRedefinesClause
+	(*DataIntegerStringClause)(nil),                      // 140: pb.DataIntegerStringClause
+	(*DataExternalClause)(nil),                           // 141: pb.DataExternalClause
+	(*DataGlobalClause)(nil),                             // 142: pb.DataGlobalClause
+	(*DataTypeDefClause)(nil),                            // 143: pb.DataTypeDefClause
+	(*DataThreadLocalClause)(nil),                        // 144: pb.DataThreadLocalClause
+	(*DataPictureClause)(nil),                            // 145: pb.DataPictureClause
+	(*PictureString)(nil),                                // 146: pb.PictureString
+	(*PictureChars)(nil),                                 // 147: pb.PictureChars
+	(*PictureCardinality)(nil),                           // 148: pb.PictureCardinality
+	(*DataCommonOwnLocalClause)(nil),                     // 149: pb.DataCommonOwnLocalClause
+	(*DataTypeClause)(nil),                               // 150: pb.DataTypeClause
+	(*DataUsingClause)(nil),                              // 151: pb.DataUsingClause
+	(*DataUsageClause)(nil),                              // 152: pb.DataUsageClause
+	(*DataValueInterval)(nil),                            // 153: pb.DataValueInterval
+	(*DataValueClause)(nil),                              // 154: pb.DataValueClause
+	(*DataReceivedByClause)(nil),                         // 155: pb.DataReceivedByClause
+	(*DataOccursClause)(nil),                             // 156: pb.DataOccursClause
+	(*DataSignClause)(nil),                               // 157: pb.DataSignClause
+	(*DataSynchronizedClause)(nil),                       // 158: pb.DataSynchronizedClause
+	(*DataJustifiedClause)(nil),                          // 159: pb.DataJustifiedClause
+	(*DataBlankWhenZeroClause)(nil),                      // 160: pb.DataBlankWhenZeroClause
+	(*DataWithLowerBoundsClause)(nil),                    // 161: pb.DataWithLowerBoundsClause
+	(*DataAlignedClause)(nil),                            // 162: pb.DataAlignedClause
+	(*DataRecordAreaClause)(nil),                         // 163: pb.DataRecordAreaClause
+	(*ScreenSection)(nil),                                // 164: pb.ScreenSection
+	(*ScreenDescriptionEntry)(nil),                       // 165: pb.ScreenDescriptionEntry
+	(*ZeroFillClause)(nil),                               // 166: pb.ZeroFillClause
+	(*FullClause)(nil),                                   // 167: pb.FullClause
+	(*PromptClause)(nil),                                 // 168: pb.PromptClause
+	(*RequiredClause)(nil),                               // 169: pb.RequiredClause
+	(*SecureClause)(nil),                                 // 170: pb.SecureClause
+	(*AutoClause)(nil),                                   // 171: pb.AutoClause
+	(*UsingClause)(nil),                                  // 172: pb.UsingClause
+	(*FromClause)(nil),                                   // 173: pb.FromClause
+	(*BlankClause)(nil),                                  // 174: pb.BlankClause
+	(*BellClause)(nil),                                   // 175: pb.BellClause
+	(*BlinkClause)(nil),                                  // 176: pb.BlinkClause
+	(*EraseClause)(nil),                                  // 177: pb.EraseClause
+	(*LightClause)(nil),                                  // 178: pb.LightClause
+	(*GridClause)(nil),                                   // 179: pb.GridClause
+	(*ReverseVideoClause)(nil),                           // 180: pb.ReverseVideoClause
+	(*UnderlineClause)(nil),                              // 181: pb.UnderlineClause
+	(*SizeClause)(nil),                                   // 182: pb.SizeClause
+	(*LineClause)(nil),                                   // 183: pb.LineClause
+	(*ColumnClause)(nil),                                 // 184: pb.ColumnClause
+	(*ForegroundColorClause)(nil),                        // 185: pb.ForegroundColorClause
+	(*BackgroundColorClause)(nil),                        // 186: pb.BackgroundColorClause
+	(*ControlClause)(nil),                                // 187: pb.ControlClause
+	(*ReportSection)(nil),                                // 188: pb.ReportSection
+	(*ReportDescription)(nil),                            // 189: pb.ReportDescription
+	(*ReportDescriptionEntry)(nil),                       // 190: pb.ReportDescriptionEntry
+	(*PageLimitClause)(nil),                              // 191: pb.PageLimitClause
+	(*HeadingClause)(nil),                                // 192: pb.HeadingClause
+	(*FirstDetailClause)(nil),                            // 193: pb.FirstDetailClause
+	(*LastDetailClause)(nil),                             // 194: pb.LastDetailClause
+	(*FootingClause)(nil),                                // 195: pb.FootingClause
+	(*ReportGroupDescriptionEntry)(nil),                  // 196: pb.ReportGroupDescriptionEntry
+	(*ResetClause)(nil),                                  // 197: pb.ResetClause
+	(*SumClause)(nil),                                    // 198: pb.SumClause
+	(*ValueClause)(nil),                                  // 199: pb.ValueClause
+	(*SourceClause)(nil),                                 // 200: pb.SourceClause
+	(*IndicateClause)(nil),                               // 201: pb.IndicateClause
+	(*ColumnNumberClause)(nil),                           // 202: pb.ColumnNumberClause
+	(*BlankWhenZeroClause)(nil),                          // 203: pb.BlankWhenZeroClause
+	(*JustifiedClause)(nil),                              // 204: pb.JustifiedClause
+	(*SignClause)(nil),                                   // 205: pb.SignClause
+	(*PictureClause)(nil),                                // 206: pb.PictureClause
+	(*LineNumberClause)(nil),                             // 207: pb.LineNumberClause
+	(*NextGroupClause)(nil),                              // 208: pb.NextGroupClause
+	(*TypeClause)(nil),                                   // 209: pb.TypeClause
+	(*UsageClause)(nil),                                  // 210: pb.UsageClause
+	(*ProgramLibrarySection)(nil),                        // 211: pb.ProgramLibrarySection
+	(*LibraryDescriptionEntry)(nil),                      // 212: pb.LibraryDescriptionEntry
+	(*IsCommonClause)(nil),                               // 213: pb.IsCommonClause
+	(*AttributeClause1)(nil),                             // 214: pb.AttributeClause1
+	(*AttributeClause2)(nil),                             // 215: pb.AttributeClause2
+	(*ProcedureClause1)(nil),                             // 216: pb.ProcedureClause1
+	(*ProcedureClause2)(nil),                             // 217: pb.ProcedureClause2
+	(*LocalStorageSection)(nil),                          // 218: pb.LocalStorageSection
+	(*LinkageSection)(nil),                               // 219: pb.LinkageSection
+	(*CommunicationSection)(nil),                         // 220: pb.CommunicationSection
+	(*CommunicationDescriptionEntry)(nil),                // 221: pb.CommunicationDescriptionEntry
+	(*SymbolicTerminalClause)(nil),                       // 222: pb.SymbolicTerminalClause
+	(*SymbolicDestinationClause)(nil),                    // 223: pb.SymbolicDestinationClause
+	(*ErrorKeyClause)(nil),                               // 224: pb.ErrorKeyClause
+	(*DestinationTableClause)(nil),                       // 225: pb.DestinationTableClause
+	(*DestinationCountClause)(nil),                       // 226: pb.DestinationCountClause
+	(*SymbolicQueueClause)(nil),                          // 227: pb.SymbolicQueueClause
+	(*SymbolicSubQueueClause)(nil),                       // 228: pb.SymbolicSubQueueClause
+	(*MessageDateClause)(nil),                            // 229: pb.MessageDateClause
+	(*MessageTimeClause)(nil),                            // 230: pb.MessageTimeClause
+	(*SymbolicSourceClause)(nil),                         // 231: pb.SymbolicSourceClause
+	(*TextLengthClause)(nil),                             // 232: pb.TextLengthClause
+	(*EndKeyClause)(nil),                                 // 233: pb.EndKeyClause
+	(*StatusKeyClause)(nil),                              // 234: pb.StatusKeyClause
+	(*MessageCountClause)(nil),                           // 235: pb.MessageCountClause
+	(*DataBaseSection)(nil),                              // 236: pb.DataBaseSection
+	(*DataBaseSectionEntry)(nil),                         // 237: pb.DataBaseSectionEntry
+	(*ProcedureDivision)(nil),                            // 238: pb.ProcedureDivision
+	(*ProcedureSection)(nil),                             // 239: pb.ProcedureSection
+	(*Declarative)(nil),                                  // 240: pb.Declarative
+	(*ProcedureSectionHeader)(nil),                       // 241: pb.ProcedureSectionHeader
+	(*Paragraphs)(nil),                                   // 242: pb.Paragraphs
+	(*Paragraph)(nil),                                    // 243: pb.Paragraph
+	(*Sentences)(nil),                                    // 244: pb.Sentences
+	(*Sentence)(nil),                                     // 245: pb.Sentence
+	(*Statement)(nil),                                    // 246: pb.Statement
+	(*WriteStatement)(nil),                               // 247: pb.WriteStatement
+	(*UnstringStatement)(nil),                            // 248: pb.UnstringStatement
+	(*TerminateStatement)(nil),                           // 249: pb.TerminateStatement
+	(*SubtractStatement)(nil),                            // 250: pb.SubtractStatement
+	(*StringStatement)(nil),                              // 251: pb.StringStatement
+	(*StopStatement)(nil),                                // 252: pb.StopStatement
+	(*StartStatement)(nil),                               // 253: pb.StartStatement
+	(*SortStatement)(nil),                                // 254: pb.SortStatement
+	(*SetStatement)(nil),                                 // 255: pb.SetStatement
+	(*SendStatement)(nil),                                // 256: pb.SendStatement
+	(*SearchStatement)(nil),                              // 257: pb.SearchStatement
+	(*RewriteStatement)(nil),                             // 258: pb.RewriteStatement
+	(*ReturnStatement)(nil),                              // 259: pb.ReturnStatement
+	(*ReleaseStatement)(nil),                             // 260: pb.ReleaseStatement
+	(*ReceiveStatement)(nil),                             // 261: pb.ReceiveStatement
+	(*ReadStatement)(nil),                                // 262: pb.ReadStatement
+	(*PurgeStatement)(nil),                               // 263: pb.PurgeStatement
+	(*PerformStatement)(nil),                             // 264: pb.PerformStatement
+	(*OpenStatement)(nil),                                // 265: pb.OpenStatement
+	(*NextSentenceStatement)(nil),                        // 266: pb.NextSentenceStatement
+	(*MultiplyStatement)(nil),                            // 267: pb.MultiplyStatement
+	(*MoveStatement)(nil),                                // 268: pb.MoveStatement
+	(*MoveToStatement)(nil),                              // 269: pb.MoveToStatement
+	(*MoveCorrespondingToStatement)(nil),                 // 270: pb.MoveCorrespondingToStatement
+	(*MergeStatement)(nil),                               // 271: pb.MergeStatement
+	(*InspectStatement)(nil),                             // 272: pb.InspectStatement
+	(*InitiateStatement)(nil),                            // 273: pb.InitiateStatement
+	(*InitializeStatement)(nil),                          // 274: pb.InitializeStatement
+	(*IfStatement)(nil),                                  // 275: pb.IfStatement
+	(*GoToStatement)(nil),                                // 276: pb.GoToStatement
+	(*GobackStatement)(nil),                              // 277: pb.GobackStatement
+	(*GenerateStatement)(nil),                            // 278: pb.GenerateStatement
+	(*ExitStatement)(nil),                                // 279: pb.ExitStatement
+	(*ExecSqlImsStatement)(nil),                          // 280: pb.ExecSqlImsStatement
+	(*ExecSqlStatement)(nil),                             // 281: pb.ExecSqlStatement
+	(*ExecCicsStatement)(nil),                            // 282: pb.ExecCicsStatement
+	(*ExhibitStatement)(nil),                             // 283: pb.ExhibitStatement
+	(*EvaluateStatement)(nil),                            // 284: pb.EvaluateStatement
+	(*EntryStatement)(nil),                               // 285: pb.EntryStatement
+	(*EnableStatement)(nil),                              // 286: pb.EnableStatement
+	(*DivideStatement)(nil),                              // 287: pb.DivideStatement
+	(*DisplayOperand)(nil),                               // 288: pb.DisplayOperand
+	(*DisplayAt)(nil),                                    // 289: pb.DisplayAt
+	(*DisplayUpon)(nil),                                  // 290: pb.DisplayUpon
+	(*DisplayWith)(nil),                                  // 291: pb.DisplayWith
+	(*DisplayStatement)(nil),                             // 292: pb.DisplayStatement
+	(*DisableStatement)(nil),                             // 293: pb.DisableStatement
+	(*DeleteStatement)(nil),                              // 294: pb.DeleteStatement
+	(*ContinueStatement)(nil),                            // 295: pb.ContinueStatement
+	(*ComputeStore)(nil),                                 // 296: pb.ComputeStore
+	(*ComputeStatement)(nil),                             // 297: pb.ComputeStatement
+	(*CloseReelUnitStatement)(nil),                       // 298: pb.CloseReelUnitStatement
+	(*CloseRelativeStatement)(nil),                       // 299: pb.CloseRelativeStatement
+	(*ClosePortFileIOUsing)(nil),                         // 300: pb.ClosePortFileIOUsing
+	(*ClosePortFileIOStatement)(nil),                     // 301: pb.ClosePortFileIOStatement
+	(*CloseFile)(nil),                                    // 302: pb.CloseFile
+	(*CloseStatement)(nil),                               // 303: pb.CloseStatement
+	(*CancelCall)(nil),                                   // 304: pb.CancelCall
+	(*CancelStatement)(nil),                              // 305: pb.CancelStatement
+	(*CallStatement)(nil),                                // 306: pb.CallStatement
+	(*AlterStatement)(nil),                               // 307: pb.AlterStatement
+	(*AddStatement)(nil),                                 // 308: pb.AddStatement
+	(*AcceptStatement)(nil),                              // 309: pb.AcceptStatement
+	(*AtEndOfPagePhrase)(nil),                            // 310: pb.AtEndOfPagePhrase
+	(*NotAtEndOfPagePhrase)(nil),                         // 311: pb.NotAtEndOfPagePhrase
+	(*OnSizeErrorPhrase)(nil),                            // 312: pb.OnSizeErrorPhrase
+	(*NotOnSizeErrorPhrase)(nil),                         // 313: pb.NotOnSizeErrorPhrase
+	(*OnOverflowPhrase)(nil),                             // 314: pb.OnOverflowPhrase
+	(*NotOnOverflowPhrase)(nil),                          // 315: pb.NotOnOverflowPhrase
+	(*InvalidKeyPhrase)(nil),                             // 316: pb.InvalidKeyPhrase
+	(*NotInvalidKeyPhrase)(nil),                          // 317: pb.NotInvalidKeyPhrase
+	(*AtEndPhrase)(nil),                                  // 318: pb.AtEndPhrase
+	(*NotAtEndPhrase)(nil),                               // 319: pb.NotAtEndPhrase
+	(*OnExceptionClause)(nil),                            // 320: pb.OnExceptionClause
+	(*NotOnExceptionClause)(nil),                         // 321: pb.NotOnExceptionClause
+	(*UseStatement)(nil),                                 // 322: pb.UseStatement
+	(*UseDebugOn)(nil),                                   // 323: pb.UseDebugOn
+	(*UseDebugClause)(nil),                               // 324: pb.UseDebugClause
+	(*UseAfterClause)(nil),                               // 325: pb.UseAfterClause
+	(*ArithmeticExpression)(nil),                         // 326: pb.ArithmeticExpression
+	(*PlusMinus)(nil),                                    // 327: pb.PlusMinus
+	(*MultDivs)(nil),                                     // 328: pb.MultDivs
+	(*MultDiv)(nil),                                      // 329: pb.MultDiv
+	(*Powers)(nil),                                       // 330: pb.Powers
+	(*Power)(nil),                                        // 331: pb.Power
+	(*Basis)(nil),                                        // 332: pb.Basis
+	(*Condition)(nil),                                    // 333: pb.Condition
+	(*AndOrCondition)(nil),                               // 334: pb.AndOrCondition
+	(*CombinableCondition)(nil),                          // 335: pb.CombinableCondition
+	(*SimpleCondition)(nil),                              // 336: pb.SimpleCondition
+	(*ClassCondition)(nil),                               // 337: pb.ClassCondition
+	(*ConditionNameReference)(nil),                       // 338: pb.ConditionNameReference
+	(*RelationCondition)(nil),                            // 339: pb.RelationCondition
+	(*RelationSignCondition)(nil),                        // 340: pb.RelationSignCondition
+	(*RelationArithmeticComparison)(nil),                 // 341: pb.RelationArithmeticComparison
+	(*RelationCombinedComparison)(nil),                   // 342: pb.RelationCombinedComparison
+	(*RelationCombinedCondition)(nil),                    // 343: pb.RelationCombinedCondition
+	(*Abbreviation)(nil),                                 // 344: pb.Abbreviation
+	(*Identifier)(nil),                                   // 345: pb.Identifier
+	(*TableCall)(nil),                                    // 346: pb.TableCall
+	(*FunctionCall)(nil),                                 // 347: pb.FunctionCall
+	(*ReferenceModifier)(nil),                            // 348: pb.ReferenceModifier
+	(*CharacterPosition)(nil),                            // 349: pb.CharacterPosition
+	(*Length)(nil),                                       // 350: pb.Length
+	(*Subscript)(nil),                                    // 351: pb.Subscript
+	(*Argument)(nil),                                     // 352: pb.Argument
+	(*QualifiedDataNameIntegerLiteral)(nil),              // 353: pb.QualifiedDataNameIntegerLiteral
+	(*IndexNameIntegerLiteral)(nil),                      // 354: pb.IndexNameIntegerLiteral
+	(*QualifiedDataName)(nil),                            // 355: pb.QualifiedDataName
+	(*QualifiedDataNameFormat1)(nil),                     // 356: pb.QualifiedDataNameFormat1
+	(*QualifiedDataNameFormat2)(nil),                     // 357: pb.QualifiedDataNameFormat2
+	(*QualifiedDataNameFormat3)(nil),                     // 358: pb.QualifiedDataNameFormat3
+	(*QualifiedDataNameFormat4)(nil),                     // 359: pb.QualifiedDataNameFormat4
+	(*InData)(nil),                                       // 360: pb.InData
+	(*InFile)(nil),                                       // 361: pb.InFile
+	(*InMnemonic)(nil),                                   // 362: pb.InMnemonic
+	(*InSection)(nil),                                    // 363: pb.InSection
+	(*InLibrary)(nil),                                    // 364: pb.InLibrary
+	(*InTable)(nil),                                      // 365: pb.InTable
+	(*AlphabetName)(nil),                                 // 366: pb.AlphabetName
+	(*AssignmentName)(nil),                               // 367: pb.AssignmentName
+	(*BasisName)(nil),                                    // 368: pb.BasisName
+	(*CdName)(nil),                                       // 369: pb.CdName
+	(*ClassName)(nil),                                    // 370: pb.ClassName
+	(*ComputerName)(nil),                                 // 371: pb.ComputerName
+	(*ConditionName)(nil),                                // 372: pb.ConditionName
+	(*DataName)(nil),                                     // 373: pb.DataName
+	(*DataDescName)(nil),                                 // 374: pb.DataDescName
+	(*EnvironmentName)(nil),                              // 375: pb.EnvironmentName
+	(*FileName)(nil),                                     // 376: pb.FileName
+	(*FunctionName)(nil),                                 // 377: pb.FunctionName
+	(*IndexName)(nil),                                    // 378: pb.IndexName
+	(*LanguageName)(nil),                                 // 379: pb.LanguageName
+	(*LibraryName)(nil),                                  // 380: pb.LibraryName
+	(*LocalName)(nil),                                    // 381: pb.LocalName
+	(*MnemonicName)(nil),                                 // 382: pb.MnemonicName
+	(*ParagraphName)(nil),                                // 383: pb.ParagraphName
+	(*ProcedureName)(nil),                                // 384: pb.ProcedureName
+	(*ProgramName)(nil),                                  // 385: pb.ProgramName
+	(*RecordName)(nil),                                   // 386: pb.RecordName
+	(*ReportName)(nil),                                   // 387: pb.ReportName
+	(*RoutingName)(nil),                                  // 388: pb.RoutingName
+	(*RoutineName)(nil),                                  // 389: pb.RoutineName
+	(*ScreenName)(nil),                                   // 390: pb.ScreenName
+	(*SectionName)(nil),                                  // 391: pb.SectionName
+	(*SystemName)(nil),                                   // 392: pb.SystemName
+	(*SymbolicCharacter)(nil),                            // 393: pb.SymbolicCharacter
+	(*TextName)(nil),                                     // 394: pb.TextName
+	(*CobolWord)(nil),                                    // 395: pb.CobolWord
+	(*Literal)(nil),                                      // 396: pb.Literal
+	(*BooleanLiteral)(nil),                               // 397: pb.BooleanLiteral
+	(*NumericLiteral)(nil),                               // 398: pb.NumericLiteral
+	(*IntegerLiteral)(nil),                               // 399: pb.IntegerLiteral
+	(*FigurativeConstant)(nil),                           // 400: pb.FigurativeConstant
+	(*SpecialRegister)(nil),                              // 401: pb.SpecialRegister
+	(*Call)(nil),                                         // 402: pb.Call
+	(*NonNumericLiteral)(nil),                            // 403: pb.NonNumericLiteral
+	(*StringLiteral)(nil),                                // 404: pb.StringLiteral
+	(*DbcsLiteral)(nil),                                  // 405: pb.DbcsLiteral
+	(*HexNumber)(nil),                                    // 406: pb.HexNumber
+	(*NullTerminated)(nil),                               // 407: pb.NullTerminated
+	(*AlphabetClause_Also)(nil),                          // 408: pb.AlphabetClause.Also
+	(*AlphabetClause_AlphabetLiteral)(nil),               // 409: pb.AlphabetClause.AlphabetLiteral
+	(*AlphabetClause_AlphabetLiterals)(nil),              // 410: pb.AlphabetClause.AlphabetLiterals
+	(*AlphabetClause_Alphanumeric)(nil),                  // 411: pb.AlphabetClause.Alphanumeric
+	(*AlphabetClause_National)(nil),                      // 412: pb.AlphabetClause.National
+	(*EnvironmentSwitchNameClause_StatusPhrase)(nil),     // 413: pb.EnvironmentSwitchNameClause.StatusPhrase
+	(*LabelRecordsClause_DataNames)(nil),                 // 414: pb.LabelRecordsClause.DataNames
+	(*DataDescriptionEntry_Format1)(nil),                 // 415: pb.DataDescriptionEntry.Format1
+	(*DataDescriptionEntry_Format2)(nil),                 // 416: pb.DataDescriptionEntry.Format2
+	(*DataDescriptionEntry_Format3)(nil),                 // 417: pb.DataDescriptionEntry.Format3
+	(*DataDescriptionEntry_ExecSql)(nil),                 // 418: pb.DataDescriptionEntry.ExecSql
+	(*DataTypeClause_Lob)(nil),                           // 419: pb.DataTypeClause.Lob
+	(*DataOccursClause_Sort)(nil),                        // 420: pb.DataOccursClause.Sort
+	(*DataOccursClause_Indexed)(nil),                     // 421: pb.DataOccursClause.Indexed
+	(*ReportGroupDescriptionEntry_Vertical)(nil),         // 422: pb.ReportGroupDescriptionEntry.Vertical
+	(*ReportGroupDescriptionEntry_Single)(nil),           // 423: pb.ReportGroupDescriptionEntry.Single
+	(*ReportGroupDescriptionEntry_Printable)(nil),        // 424: pb.ReportGroupDescriptionEntry.Printable
+	(*TypeClause_ReportHeading)(nil),                     // 425: pb.TypeClause.ReportHeading
+	(*TypeClause_PageHeading)(nil),                       // 426: pb.TypeClause.PageHeading
+	(*TypeClause_ControlHeading)(nil),                    // 427: pb.TypeClause.ControlHeading
+	(*TypeClause_Detail)(nil),                            // 428: pb.TypeClause.Detail
+	(*TypeClause_ControlFooting)(nil),                    // 429: pb.TypeClause.ControlFooting
+	(*TypeClause_PageFooting)(nil),                       // 430: pb.TypeClause.PageFooting
+	(*TypeClause_ReportFooting)(nil),                     // 431: pb.TypeClause.ReportFooting
+	(*LibraryDescriptionEntry_Import)(nil),               // 432: pb.LibraryDescriptionEntry.Import
+	(*LibraryDescriptionEntry_Export)(nil),               // 433: pb.LibraryDescriptionEntry.Export
+	(*ProcedureClause2_WithName)(nil),                    // 434: pb.ProcedureClause2.WithName
+	(*ProcedureClause2_UsingName)(nil),                   // 435: pb.ProcedureClause2.UsingName
+	(*CommunicationDescriptionEntry_Input)(nil),          // 436: pb.CommunicationDescriptionEntry.Input
+	(*CommunicationDescriptionEntry_Output)(nil),         // 437: pb.CommunicationDescriptionEntry.Output
+	(*CommunicationDescriptionEntry_Io)(nil),             // 438: pb.CommunicationDescriptionEntry.Io
+	(*ProcedureDivision_ByReference)(nil),                // 439: pb.ProcedureDivision.ByReference
+	(*ProcedureDivision_ByReferencePhrase)(nil),          // 440: pb.ProcedureDivision.ByReferencePhrase
+	(*ProcedureDivision_ByValue)(nil),                    // 441: pb.ProcedureDivision.ByValue
+	(*ProcedureDivision_ByValuePhrase)(nil),              // 442: pb.ProcedureDivision.ByValuePhrase
+	(*ProcedureDivision_UsingParameter)(nil),             // 443: pb.ProcedureDivision.UsingParameter
+	(*ProcedureDivision_GivingClause)(nil),               // 444: pb.ProcedureDivision.GivingClause
+	(*ProcedureDivision_UsingClause)(nil),                // 445: pb.ProcedureDivision.UsingClause
+	(*WriteStatement_FromPhrase)(nil),                    // 446: pb.WriteStatement.FromPhrase
+	(*WriteStatement_AdvancingPage)(nil),                 // 447: pb.WriteStatement.AdvancingPage
+	(*WriteStatement_AdvancingLines)(nil),                // 448: pb.WriteStatement.AdvancingLines
+	(*WriteStatement_AdvancingMnemonic)(nil),             // 449: pb.WriteStatement.AdvancingMnemonic
+	(*WriteStatement_AdvancingPhrase)(nil),               // 450: pb.WriteStatement.AdvancingPhrase
+	(*UnstringStatement_DelimitedByPhrase)(nil),          // 451: pb.UnstringStatement.DelimitedByPhrase
+	(*UnstringStatement_OrAllPhrase)(nil),                // 452: pb.UnstringStatement.OrAllPhrase
+	(*UnstringStatement_DelimitedOr)(nil),                // 453: pb.UnstringStatement.DelimitedOr
+	(*UnstringStatement_Into)(nil),                       // 454: pb.UnstringStatement.Into
+	(*UnstringStatement_DelimiterIn)(nil),                // 455: pb.UnstringStatement.DelimiterIn
+	(*UnstringStatement_CountIn)(nil),                    // 456: pb.UnstringStatement.CountIn
+	(*UnstringStatement_SendingPhrase)(nil),              // 457: pb.UnstringStatement.SendingPhrase
+	(*UnstringStatement_IntoPhrase)(nil),                 // 458: pb.UnstringStatement.IntoPhrase
+	(*UnstringStatement_WithPointerPhrase)(nil),          // 459: pb.UnstringStatement.WithPointerPhrase
+	(*UnstringStatement_TallyingPhrase)(nil),             // 460: pb.UnstringStatement.TallyingPhrase
+	(*SubtractStatement_Subtrahend)(nil),                 // 461: pb.SubtractStatement.Subtrahend
+	(*SubtractStatement_Minuend)(nil),                    // 462: pb.SubtractStatement.Minuend
+	(*SubtractStatement_MinuendGiving)(nil),              // 463: pb.SubtractStatement.MinuendGiving
+	(*SubtractStatement_Giving)(nil),                     // 464: pb.SubtractStatement.Giving
+	(*SubtractStatement_MinuendCorresponding)(nil),       // 465: pb.SubtractStatement.MinuendCorresponding
+	(*SubtractStatement_FromStatement)(nil),              // 466: pb.SubtractStatement.FromStatement
+	(*SubtractStatement_FromGivingStatement)(nil),        // 467: pb.SubtractStatement.FromGivingStatement
+	(*SubtractStatement_CorrespondingStatement)(nil),     // 468: pb.SubtractStatement.CorrespondingStatement
+	(*StringStatement_Sending)(nil),                      // 469: pb.StringStatement.Sending
+	(*StringStatement_DelimitedByPhrase)(nil),            // 470: pb.StringStatement.DelimitedByPhrase
+	(*StringStatement_ForPhrase)(nil),                    // 471: pb.StringStatement.ForPhrase
+	(*StringStatement_SendingPhrase)(nil),                // 472: pb.StringStatement.SendingPhrase
+	(*StringStatement_IntoPhrase)(nil),                   // 473: pb.StringStatement.IntoPhrase
+	(*StringStatement_WithPointerPhrase)(nil),            // 474: pb.StringStatement.WithPointerPhrase
+	(*StopStatement_Giving)(nil),                         // 475: pb.StopStatement.Giving
+	(*StartStatement_Key)(nil),                           // 476: pb.StartStatement.Key
+	(*SortStatement_OnKeyClause)(nil),                    // 477: pb.SortStatement.OnKeyClause
+	(*SortStatement_DuplicatesPhrase)(nil),               // 478: pb.SortStatement.DuplicatesPhrase
+	(*SortStatement_CollatingAlphanumeric)(nil),          // 479: pb.SortStatement.CollatingAlphanumeric
+	(*SortStatement_CollatingNational)(nil),              // 480: pb.SortStatement.CollatingNational
+	(*SortStatement_CollatingSequencePhrase)(nil),        // 481: pb.SortStatement.CollatingSequencePhrase
+	(*SortStatement_InputThrough)(nil),                   // 482: pb.SortStatement.InputThrough
+	(*SortStatement_InputProcedurePhrase)(nil),           // 483: pb.SortStatement.InputProcedurePhrase
+	(*SortStatement_Using)(nil),                          // 484: pb.SortStatement.Using
+	(*SortStatement_OutputThrough)(nil),                  // 485: pb.SortStatement.OutputThrough
+	(*SortStatement_OutputProcedurePhrase)(nil),          // 486: pb.SortStatement.OutputProcedurePhrase
+	(*SortStatement_Giving)(nil),                         // 487: pb.SortStatement.Giving
+	(*SortStatement_GivingPhrase)(nil),                   // 488: pb.SortStatement.GivingPhrase
+	(*SetStatement_To)(nil),                              // 489: pb.SetStatement.To
+	(*SetStatement_Entry)(nil),                           // 490: pb.SetStatement.Entry
+	(*SetStatement_ToValue)(nil),                         // 491: pb.SetStatement.ToValue
+	(*SetStatement_ByValue)(nil),                         // 492: pb.SetStatement.ByValue
+	(*SetStatement_ToStatement)(nil),                     // 493: pb.SetStatement.ToStatement
+	(*SetStatement_UpDownByStatement)(nil),               // 494: pb.SetStatement.UpDownByStatement
+	(*SendStatement_FromPhrase)(nil),                     // 495: pb.SendStatement.FromPhrase
+	(*SendStatement_WithPhrase)(nil),                     // 496: pb.SendStatement.WithPhrase
+	(*SendStatement_ReplacingPhrase)(nil),                // 497: pb.SendStatement.ReplacingPhrase
+	(*SendStatement_AdvancingPage)(nil),                  // 498: pb.SendStatement.AdvancingPage
+	(*SendStatement_AdvancingLines)(nil),                 // 499: pb.SendStatement.AdvancingLines
+	(*SendStatement_AdvancingMnemonic)(nil),              // 500: pb.SendStatement.AdvancingMnemonic
+	(*SendStatement_AdvancingPhrase)(nil),                // 501: pb.SendStatement.AdvancingPhrase
+	(*SendStatement_SyncStatement)(nil),                  // 502: pb.SendStatement.SyncStatement
+	(*SendStatement_AsyncStatement)(nil),                 // 503: pb.SendStatement.AsyncStatement
+	(*SearchStatement_Varying)(nil),                      // 504: pb.SearchStatement.Varying
+	(*SearchStatement_When)(nil),                         // 505: pb.SearchStatement.When
+	(*RewriteStatement_From)(nil),                        // 506: pb.RewriteStatement.From
+	(*ReturnStatement_Into)(nil),                         // 507: pb.ReturnStatement.Into
+	(*ReleaseStatement_From)(nil),                        // 508: pb.ReleaseStatement.From
+	(*ReceiveStatement_From)(nil),                        // 509: pb.ReceiveStatement.From
+	(*ReceiveStatement_With)(nil),                        // 510: pb.ReceiveStatement.With
+	(*ReceiveStatement_Thread)(nil),                      // 511: pb.ReceiveStatement.Thread
+	(*ReceiveStatement_Size)(nil),                        // 512: pb.ReceiveStatement.Size
+	(*ReceiveStatement_Status)(nil),                      // 513: pb.ReceiveStatement.Status
+	(*ReceiveStatement_Before)(nil),                      // 514: pb.ReceiveStatement.Before
+	(*ReceiveStatement_FromStatement)(nil),               // 515: pb.ReceiveStatement.FromStatement
+	(*ReceiveStatement_NoData)(nil),                      // 516: pb.ReceiveStatement.NoData
+	(*ReceiveStatement_WithData)(nil),                    // 517: pb.ReceiveStatement.WithData
+	(*ReceiveStatement_IntoStatement)(nil),               // 518: pb.ReceiveStatement.IntoStatement
+	(*ReadStatement_Into)(nil),                           // 519: pb.ReadStatement.Into
+	(*ReadStatement_With)(nil),                           // 520: pb.ReadStatement.With
+	(*ReadStatement_Key)(nil),                            // 521: pb.ReadStatement.Key
+	(*PerformStatement_TestClause)(nil),                  // 522: pb.PerformStatement.TestClause
+	(*PerformStatement_Times)(nil),                       // 523: pb.PerformStatement.Times
+	(*PerformStatement_Until)(nil),                       // 524: pb.PerformStatement.Until
+	(*PerformStatement_From)(nil),                        // 525: pb.PerformStatement.From
+	(*PerformStatement_By)(nil),                          // 526: pb.PerformStatement.By
+	(*PerformStatement_VaryingPhrase)(nil),               // 527: pb.PerformStatement.VaryingPhrase
+	(*PerformStatement_After)(nil),                       // 528: pb.PerformStatement.After
+	(*PerformStatement_VaryingClause)(nil),               // 529: pb.PerformStatement.VaryingClause
+	(*PerformStatement_Varying)(nil),                     // 530: pb.PerformStatement.Varying
+	(*PerformStatement_Type)(nil),                        // 531: pb.PerformStatement.Type
+	(*PerformStatement_InlineStatement)(nil),             // 532: pb.PerformStatement.InlineStatement
+	(*PerformStatement_ProcedureStatement)(nil),          // 533: pb.PerformStatement.ProcedureStatement
+	(*OpenStatement_Input)(nil),                          // 534: pb.OpenStatement.Input
+	(*OpenStatement_InputStatement)(nil),                 // 535: pb.OpenStatement.InputStatement
+	(*OpenStatement_Output)(nil),                         // 536: pb.OpenStatement.Output
+	(*OpenStatement_OutputStatement)(nil),                // 537: pb.OpenStatement.OutputStatement
+	(*OpenStatement_IOStatement)(nil),                    // 538: pb.OpenStatement.IOStatement
+	(*OpenStatement_ExtendStatement)(nil),                // 539: pb.OpenStatement.ExtendStatement
+	(*MultiplyStatement_GivingOperand)(nil),              // 540: pb.MultiplyStatement.GivingOperand
+	(*MultiplyStatement_GivingResult)(nil),               // 541: pb.MultiplyStatement.GivingResult
+	(*MultiplyStatement_Giving)(nil),                     // 542: pb.MultiplyStatement.Giving
+	(*MultiplyStatement_Regular)(nil),                    // 543: pb.MultiplyStatement.Regular
+	(*MergeStatement_OnKeyClause)(nil),                   // 544: pb.MergeStatement.OnKeyClause
+	(*MergeStatement_CollatingSequencePhrase)(nil),       // 545: pb.MergeStatement.CollatingSequencePhrase
+	(*MergeStatement_CollatingAlphanumeric)(nil),         // 546: pb.MergeStatement.CollatingAlphanumeric
+	(*MergeStatement_CollatingNational)(nil),             // 547: pb.MergeStatement.CollatingNational
+	(*MergeStatement_Using)(nil),                         // 548: pb.MergeStatement.Using
+	(*MergeStatement_OutputProcedurePhrase)(nil),         // 549: pb.MergeStatement.OutputProcedurePhrase
+	(*MergeStatement_OutputThrough)(nil),                 // 550: pb.MergeStatement.OutputThrough
+	(*MergeStatement_GivingPhrase)(nil),                  // 551: pb.MergeStatement.GivingPhrase
+	(*MergeStatement_Giving)(nil),                        // 552: pb.MergeStatement.Giving
+	(*InspectStatement_By)(nil),                          // 553: pb.InspectStatement.By
+	(*InspectStatement_To)(nil),                          // 554: pb.InspectStatement.To
+	(*InspectStatement_BeforeAfter)(nil),                 // 555: pb.InspectStatement.BeforeAfter
+	(*InspectStatement_ReplacingAllLeading)(nil),         // 556: pb.InspectStatement.ReplacingAllLeading
+	(*InspectStatement_ReplacingAllLeadings)(nil),        // 557: pb.InspectStatement.ReplacingAllLeadings
+	(*InspectStatement_AllLeading)(nil),                  // 558: pb.InspectStatement.AllLeading
+	(*InspectStatement_AllLeadings)(nil),                 // 559: pb.InspectStatement.AllLeadings
+	(*InspectStatement_ReplacingCharacters)(nil),         // 560: pb.InspectStatement.ReplacingCharacters
+	(*InspectStatement_Characters)(nil),                  // 561: pb.InspectStatement.Characters
+	(*InspectStatement_CharactersLeadings)(nil),          // 562: pb.InspectStatement.CharactersLeadings
+	(*InspectStatement_For)(nil),                         // 563: pb.InspectStatement.For
+	(*InspectStatement_ConvertingPhrase)(nil),            // 564: pb.InspectStatement.ConvertingPhrase
+	(*InspectStatement_ReplacingCharactersLeadings)(nil), // 565: pb.InspectStatement.ReplacingCharactersLeadings
+	(*InspectStatement_ReplacingPhrase)(nil),             // 566: pb.InspectStatement.ReplacingPhrase
+	(*InspectStatement_TallyingReplacingPhrase)(nil),     // 567: pb.InspectStatement.TallyingReplacingPhrase
+	(*InspectStatement_TallyingPhrase)(nil),              // 568: pb.InspectStatement.TallyingPhrase
+	(*InitializeStatement_ReplacingBy)(nil),              // 569: pb.InitializeStatement.ReplacingBy
+	(*InitializeStatement_ReplacingPhrase)(nil),          // 570: pb.InitializeStatement.ReplacingPhrase
+	(*IfStatement_Then)(nil),                             // 571: pb.IfStatement.Then
+	(*IfStatement_Else)(nil),                             // 572: pb.IfStatement.Else
+	(*GoToStatement_SimpleStatement)(nil),                // 573: pb.GoToStatement.SimpleStatement
+	(*GoToStatement_DependingOn)(nil),                    // 574: pb.GoToStatement.DependingOn
+	(*GoToStatement_DependingOnStatement)(nil),           // 575: pb.GoToStatement.DependingOnStatement
+	(*ExhibitStatement_Operand)(nil),                     // 576: pb.ExhibitStatement.Operand
+	(*EvaluateStatement_Select)(nil),                     // 577: pb.EvaluateStatement.Select
+	(*EvaluateStatement_AlsoSelect)(nil),                 // 578: pb.EvaluateStatement.AlsoSelect
+	(*EvaluateStatement_ValueThrough)(nil),               // 579: pb.EvaluateStatement.ValueThrough
+	(*EvaluateStatement_Through)(nil),                    // 580: pb.EvaluateStatement.Through
+	(*EvaluateStatement_Value)(nil),                      // 581: pb.EvaluateStatement.Value
+	(*EvaluateStatement_WhenCondition)(nil),              // 582: pb.EvaluateStatement.WhenCondition
+	(*EvaluateStatement_AlsoCondition)(nil),              // 583: pb.EvaluateStatement.AlsoCondition
+	(*EvaluateStatement_WhenOther)(nil),                  // 584: pb.EvaluateStatement.WhenOther
+	(*EvaluateStatement_When)(nil),                       // 585: pb.EvaluateStatement.When
+	(*EvaluateStatement_WhenPhrase)(nil),                 // 586: pb.EvaluateStatement.WhenPhrase
+	(*DivideStatement_Giving)(nil),                       // 587: pb.DivideStatement.Giving
+	(*DivideStatement_GivingPhrase)(nil),                 // 588: pb.DivideStatement.GivingPhrase
+	(*DivideStatement_Into)(nil),                         // 589: pb.DivideStatement.Into
+	(*DivideStatement_IntoStatement)(nil),                // 590: pb.DivideStatement.IntoStatement
+	(*DivideStatement_IntoGivingStatement)(nil),          // 591: pb.DivideStatement.IntoGivingStatement
+	(*DivideStatement_ByGivingStatement)(nil),            // 592: pb.DivideStatement.ByGivingStatement
+	(*DivideStatement_Remainder)(nil),                    // 593: pb.DivideStatement.Remainder
+	(*ClosePortFileIOUsing_CloseDisposition)(nil),        // 594: pb.ClosePortFileIOUsing.CloseDisposition
+	(*ClosePortFileIOUsing_AssociatedData)(nil),          // 595: pb.ClosePortFileIOUsing.AssociatedData
+	(*ClosePortFileIOUsing_AssociatedDataLength)(nil),    // 596: pb.ClosePortFileIOUsing.AssociatedDataLength
+	(*CallStatement_ByContent)(nil),                      // 597: pb.CallStatement.ByContent
+	(*CallStatement_ByValue)(nil),                        // 598: pb.CallStatement.ByValue
+	(*CallStatement_ByReference)(nil),                    // 599: pb.CallStatement.ByReference
+	(*CallStatement_ByReferencePhrase)(nil),              // 600: pb.CallStatement.ByReferencePhrase
+	(*CallStatement_ByValuePhrase)(nil),                  // 601: pb.CallStatement.ByValuePhrase
+	(*CallStatement_ByContentPhrase)(nil),                // 602: pb.CallStatement.ByContentPhrase
+	(*CallStatement_UsingParameter)(nil),                 // 603: pb.CallStatement.UsingParameter
+	(*CallStatement_UsingPhrase)(nil),                    // 604: pb.CallStatement.UsingPhrase
+	(*CallStatement_GivingPhrase)(nil),                   // 605: pb.CallStatement.GivingPhrase
+	(*AlterStatement_ProceedTo)(nil),                     // 606: pb.AlterStatement.ProceedTo
+	(*AddStatement_AddFrom)(nil),                         // 607: pb.AddStatement.AddFrom
+	(*AddStatement_AddToGiving)(nil),                     // 608: pb.AddStatement.AddToGiving
+	(*AddStatement_To)(nil),                              // 609: pb.AddStatement.To
+	(*AddStatement_ToGiving)(nil),                        // 610: pb.AddStatement.ToGiving
+	(*AddStatement_Corresponding)(nil),                   // 611: pb.AddStatement.Corresponding
+	(*AcceptStatement_FromDate)(nil),                     // 612: pb.AcceptStatement.FromDate
+	(*AcceptStatement_FromEscapeKey)(nil),                // 613: pb.AcceptStatement.FromEscapeKey
+	(*AcceptStatement_FromMnemonic)(nil),                 // 614: pb.AcceptStatement.FromMnemonic
+	(*AcceptStatement_MessageCount)(nil),                 // 615: pb.AcceptStatement.MessageCount
+	(*UseAfterClause_FileNames)(nil),                     // 616: pb.UseAfterClause.FileNames
+	(*ConditionNameReference_SubscriptReference)(nil),    // 617: pb.ConditionNameReference.SubscriptReference
+	(*ConditionNameReference_InSubscript)(nil),           // 618: pb.ConditionNameReference.InSubscript
 }
 var file_cobol_proto_depIdxs = []int32{
-	61,   // 0: pb.Program.compilation_units:type_name -> pb.CompilationUnit
-	62,   // 1: pb.CompilationUnit.program_units:type_name -> pb.ProgramUnit
-	63,   // 2: pb.ProgramUnit.identification_division:type_name -> pb.IdentificationDivision
-	71,   // 3: pb.ProgramUnit.environment_division:type_name -> pb.EnvironmentDivision
-	117,  // 4: pb.ProgramUnit.data_division:type_name -> pb.DataDivision
-	236,  // 5: pb.ProgramUnit.procedure_division:type_name -> pb.ProcedureDivision
-	62,   // 6: pb.ProgramUnit.program_units:type_name -> pb.ProgramUnit
-	383,  // 7: pb.ProgramUnit.end_program_name:type_name -> pb.ProgramName
-	64,   // 8: pb.IdentificationDivision.program_id_paragraph:type_name -> pb.ProgramIdParagraph
-	65,   // 9: pb.IdentificationDivision.author_paragraph:type_name -> pb.AuthorParagraph
-	66,   // 10: pb.IdentificationDivision.date_compiled_paragraph:type_name -> pb.DateCompiledParagraph
-	67,   // 11: pb.IdentificationDivision.date_written_paragraph:type_name -> pb.DateWrittenParagraph
-	68,   // 12: pb.IdentificationDivision.installation_paragraph:type_name -> pb.InstallationParagraph
-	69,   // 13: pb.IdentificationDivision.remarks_paragraph:type_name -> pb.RemarksParagraph
-	70,   // 14: pb.IdentificationDivision.security_paragraph:type_name -> pb.SecurityParagraph
-	383,  // 15: pb.ProgramIdParagraph.program_name:type_name -> pb.ProgramName
+	63,   // 0: pb.Program.compilation_units:type_name -> pb.CompilationUnit
+	64,   // 1: pb.CompilationUnit.program_units:type_name -> pb.ProgramUnit
+	65,   // 2: pb.ProgramUnit.identification_division:type_name -> pb.IdentificationDivision
+	73,   // 3: pb.ProgramUnit.environment_division:type_name -> pb.EnvironmentDivision
+	119,  // 4: pb.ProgramUnit.data_division:type_name -> pb.DataDivision
+	238,  // 5: pb.ProgramUnit.procedure_division:type_name -> pb.ProcedureDivision
+	64,   // 6: pb.ProgramUnit.program_units:type_name -> pb.ProgramUnit
+	385,  // 7: pb.ProgramUnit.end_program_name:type_name -> pb.ProgramName
+	66,   // 8: pb.IdentificationDivision.program_id_paragraph:type_name -> pb.ProgramIdParagraph
+	67,   // 9: pb.IdentificationDivision.author_paragraph:type_name -> pb.AuthorParagraph
+	68,   // 10: pb.IdentificationDivision.date_compiled_paragraph:type_name -> pb.DateCompiledParagraph
+	69,   // 11: pb.IdentificationDivision.date_written_paragraph:type_name -> pb.DateWrittenParagraph
+	70,   // 12: pb.IdentificationDivision.installation_paragraph:type_name -> pb.InstallationParagraph
+	71,   // 13: pb.IdentificationDivision.remarks_paragraph:type_name -> pb.RemarksParagraph
+	72,   // 14: pb.IdentificationDivision.security_paragraph:type_name -> pb.SecurityParagraph
+	385,  // 15: pb.ProgramIdParagraph.program_name:type_name -> pb.ProgramName
 	2,    // 16: pb.ProgramIdParagraph.attribute:type_name -> pb.ProgramIdParagraph.Attribute
-	72,   // 17: pb.EnvironmentDivision.configuration_section:type_name -> pb.ConfigurationSection
-	93,   // 18: pb.EnvironmentDivision.input_output_section:type_name -> pb.InputOutputSection
-	80,   // 19: pb.EnvironmentDivision.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
-	74,   // 20: pb.ConfigurationSection.object_computer_paragraph:type_name -> pb.ObjectComputerParagraph
-	73,   // 21: pb.ConfigurationSection.source_computer_paragraph:type_name -> pb.SourceComputerParagraph
-	80,   // 22: pb.ConfigurationSection.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
-	369,  // 23: pb.SourceComputerParagraph.computer_name:type_name -> pb.ComputerName
-	369,  // 24: pb.ObjectComputerParagraph.computer_name:type_name -> pb.ComputerName
-	75,   // 25: pb.ObjectComputerParagraph.memory_size_clause:type_name -> pb.MemorySizeClause
-	76,   // 26: pb.ObjectComputerParagraph.disk_size_clause:type_name -> pb.DiskSizeClause
-	77,   // 27: pb.ObjectComputerParagraph.collating_sequence_clause:type_name -> pb.CollatingSequenceClause
-	78,   // 28: pb.ObjectComputerParagraph.segment_limit_clause:type_name -> pb.SegmentLimitClause
-	79,   // 29: pb.ObjectComputerParagraph.character_set_clause:type_name -> pb.CharacterSetClause
+	74,   // 17: pb.EnvironmentDivision.configuration_section:type_name -> pb.ConfigurationSection
+	95,   // 18: pb.EnvironmentDivision.input_output_section:type_name -> pb.InputOutputSection
+	82,   // 19: pb.EnvironmentDivision.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
+	76,   // 20: pb.ConfigurationSection.object_computer_paragraph:type_name -> pb.ObjectComputerParagraph
+	75,   // 21: pb.ConfigurationSection.source_computer_paragraph:type_name -> pb.SourceComputerParagraph
+	82,   // 22: pb.ConfigurationSection.special_names_paragraph:type_name -> pb.SpecialNamesParagraph
+	371,  // 23: pb.SourceComputerParagraph.computer_name:type_name -> pb.ComputerName
+	371,  // 24: pb.ObjectComputerParagraph.computer_name:type_name -> pb.ComputerName
+	77,   // 25: pb.ObjectComputerParagraph.memory_size_clause:type_name -> pb.MemorySizeClause
+	78,   // 26: pb.ObjectComputerParagraph.disk_size_clause:type_name -> pb.DiskSizeClause
+	79,   // 27: pb.ObjectComputerParagraph.collating_sequence_clause:type_name -> pb.CollatingSequenceClause
+	80,   // 28: pb.ObjectComputerParagraph.segment_limit_clause:type_name -> pb.SegmentLimitClause
+	81,   // 29: pb.ObjectComputerParagraph.character_set_clause:type_name -> pb.CharacterSetClause
 	3,    // 30: pb.MemorySizeClause.unit:type_name -> pb.MemorySizeClause.Unit
-	397,  // 31: pb.MemorySizeClause.integer_literal:type_name -> pb.IntegerLiteral
-	393,  // 32: pb.MemorySizeClause.cobol_word:type_name -> pb.CobolWord
+	399,  // 31: pb.MemorySizeClause.integer_literal:type_name -> pb.IntegerLiteral
+	395,  // 32: pb.MemorySizeClause.cobol_word:type_name -> pb.CobolWord
 	4,    // 33: pb.DiskSizeClause.unit:type_name -> pb.DiskSizeClause.Unit
-	397,  // 34: pb.DiskSizeClause.integer_literal:type_name -> pb.IntegerLiteral
-	393,  // 35: pb.DiskSizeClause.cobol_word:type_name -> pb.CobolWord
-	364,  // 36: pb.CollatingSequenceClause.national:type_name -> pb.AlphabetName
-	364,  // 37: pb.CollatingSequenceClause.alphanumeric:type_name -> pb.AlphabetName
-	364,  // 38: pb.CollatingSequenceClause.alphabet_names:type_name -> pb.AlphabetName
-	397,  // 39: pb.SegmentLimitClause.segment_limit:type_name -> pb.IntegerLiteral
-	81,   // 40: pb.SpecialNamesParagraph.alphabet_clauses:type_name -> pb.AlphabetClause
-	82,   // 41: pb.SpecialNamesParagraph.channel_clause:type_name -> pb.ChannelClause
-	83,   // 42: pb.SpecialNamesParagraph.class_clause:type_name -> pb.ClassClause
-	85,   // 43: pb.SpecialNamesParagraph.currency_sign_clause:type_name -> pb.CurrencySignClause
-	86,   // 44: pb.SpecialNamesParagraph.decimal_point_clause:type_name -> pb.DecimalPointClause
-	87,   // 45: pb.SpecialNamesParagraph.default_display_sign_clause:type_name -> pb.DefaultDisplaySignClause
-	88,   // 46: pb.SpecialNamesParagraph.odt_clause:type_name -> pb.OdtClause
-	89,   // 47: pb.SpecialNamesParagraph.reserve_network_clause:type_name -> pb.ReserveNetworkClause
-	92,   // 48: pb.SpecialNamesParagraph.symbolic_characters_clause:type_name -> pb.SymbolicCharactersClause
-	90,   // 49: pb.SpecialNamesParagraph.default_computational_sign_clause:type_name -> pb.DefaultComputationalSignClause
-	91,   // 50: pb.SpecialNamesParagraph.environment_switch_name_clauses:type_name -> pb.EnvironmentSwitchNameClause
-	364,  // 51: pb.AlphabetClause.alphabet_name:type_name -> pb.AlphabetName
-	409,  // 52: pb.AlphabetClause.alphanumeric:type_name -> pb.AlphabetClause.Alphanumeric
-	410,  // 53: pb.AlphabetClause.national:type_name -> pb.AlphabetClause.National
-	397,  // 54: pb.ChannelClause.Channel:type_name -> pb.IntegerLiteral
-	380,  // 55: pb.ChannelClause.mnemonic_name:type_name -> pb.MnemonicName
-	368,  // 56: pb.ClassClause.class_name:type_name -> pb.ClassName
+	399,  // 34: pb.DiskSizeClause.integer_literal:type_name -> pb.IntegerLiteral
+	395,  // 35: pb.DiskSizeClause.cobol_word:type_name -> pb.CobolWord
+	366,  // 36: pb.CollatingSequenceClause.national:type_name -> pb.AlphabetName
+	366,  // 37: pb.CollatingSequenceClause.alphanumeric:type_name -> pb.AlphabetName
+	366,  // 38: pb.CollatingSequenceClause.alphabet_names:type_name -> pb.AlphabetName
+	399,  // 39: pb.SegmentLimitClause.segment_limit:type_name -> pb.IntegerLiteral
+	83,   // 40: pb.SpecialNamesParagraph.alphabet_clauses:type_name -> pb.AlphabetClause
+	84,   // 41: pb.SpecialNamesParagraph.channel_clause:type_name -> pb.ChannelClause
+	85,   // 42: pb.SpecialNamesParagraph.class_clause:type_name -> pb.ClassClause
+	87,   // 43: pb.SpecialNamesParagraph.currency_sign_clause:type_name -> pb.CurrencySignClause
+	88,   // 44: pb.SpecialNamesParagraph.decimal_point_clause:type_name -> pb.DecimalPointClause
+	89,   // 45: pb.SpecialNamesParagraph.default_display_sign_clause:type_name -> pb.DefaultDisplaySignClause
+	90,   // 46: pb.SpecialNamesParagraph.odt_clause:type_name -> pb.OdtClause
+	91,   // 47: pb.SpecialNamesParagraph.reserve_network_clause:type_name -> pb.ReserveNetworkClause
+	94,   // 48: pb.SpecialNamesParagraph.symbolic_characters_clause:type_name -> pb.SymbolicCharactersClause
+	92,   // 49: pb.SpecialNamesParagraph.default_computational_sign_clause:type_name -> pb.DefaultComputationalSignClause
+	93,   // 50: pb.SpecialNamesParagraph.environment_switch_name_clauses:type_name -> pb.EnvironmentSwitchNameClause
+	366,  // 51: pb.AlphabetClause.alphabet_name:type_name -> pb.AlphabetName
+	411,  // 52: pb.AlphabetClause.alphanumeric:type_name -> pb.AlphabetClause.Alphanumeric
+	412,  // 53: pb.AlphabetClause.national:type_name -> pb.AlphabetClause.National
+	399,  // 54: pb.ChannelClause.Channel:type_name -> pb.IntegerLiteral
+	382,  // 55: pb.ChannelClause.mnemonic_name:type_name -> pb.MnemonicName
+	370,  // 56: pb.ClassClause.class_name:type_name -> pb.ClassName
 	7,    // 57: pb.ClassClause.type:type_name -> pb.ClassClause.Type
-	84,   // 58: pb.ClassClause.class_throughs:type_name -> pb.ClassClauseThrough
-	343,  // 59: pb.ClassClauseThrough.identifier_from:type_name -> pb.Identifier
-	394,  // 60: pb.ClassClauseThrough.literal_from:type_name -> pb.Literal
-	343,  // 61: pb.ClassClauseThrough.identifier_to:type_name -> pb.Identifier
-	394,  // 62: pb.ClassClauseThrough.literal_to:type_name -> pb.Literal
-	394,  // 63: pb.CurrencySignClause.currency_literal:type_name -> pb.Literal
-	394,  // 64: pb.CurrencySignClause.picture_symbol_literal:type_name -> pb.Literal
+	86,   // 58: pb.ClassClause.class_throughs:type_name -> pb.ClassClauseThrough
+	345,  // 59: pb.ClassClauseThrough.identifier_from:type_name -> pb.Identifier
+	396,  // 60: pb.ClassClauseThrough.literal_from:type_name -> pb.Literal
+	345,  // 61: pb.ClassClauseThrough.identifier_to:type_name -> pb.Identifier
+	396,  // 62: pb.ClassClauseThrough.literal_to:type_name -> pb.Literal
+	396,  // 63: pb.CurrencySignClause.currency_literal:type_name -> pb.Literal
+	396,  // 64: pb.CurrencySignClause.picture_symbol_literal:type_name -> pb.Literal
 	8,    // 65: pb.DefaultDisplaySignClause.type:type_name -> pb.DefaultDisplaySignClause.Type
-	380,  // 66: pb.OdtClause.mnemonic_name:type_name -> pb.MnemonicName
+	382,  // 66: pb.OdtClause.mnemonic_name:type_name -> pb.MnemonicName
 	9,    // 67: pb.DefaultComputationalSignClause.type:type_name -> pb.DefaultComputationalSignClause.Type
-	373,  // 68: pb.EnvironmentSwitchNameClause.environment_name:type_name -> pb.EnvironmentName
-	380,  // 69: pb.EnvironmentSwitchNameClause.mnemonic_name:type_name -> pb.MnemonicName
-	411,  // 70: pb.EnvironmentSwitchNameClause.status_phrases:type_name -> pb.EnvironmentSwitchNameClause.StatusPhrase
+	375,  // 68: pb.EnvironmentSwitchNameClause.environment_name:type_name -> pb.EnvironmentName
+	382,  // 69: pb.EnvironmentSwitchNameClause.mnemonic_name:type_name -> pb.MnemonicName
+	413,  // 70: pb.EnvironmentSwitchNameClause.status_phrases:type_name -> pb.EnvironmentSwitchNameClause.StatusPhrase
 	10,   // 71: pb.SymbolicCharactersClause.type:type_name -> pb.SymbolicCharactersClause.Type
-	94,   // 72: pb.InputOutputSection.file_control_paragraph:type_name -> pb.FileControlParagraph
-	108,  // 73: pb.InputOutputSection.io_control_paragraph:type_name -> pb.IoControlParagraph
-	95,   // 74: pb.FileControlParagraph.file_control_entries:type_name -> pb.FileControlEntry
-	374,  // 75: pb.FileControlEntry.file_name:type_name -> pb.FileName
-	96,   // 76: pb.FileControlEntry.select_clause:type_name -> pb.SelectClause
-	104,  // 77: pb.FileControlEntry.alternate_record_key_clause:type_name -> pb.AlternateRecordKeyClause
-	97,   // 78: pb.FileControlEntry.assign_clause:type_name -> pb.AssignClause
-	106,  // 79: pb.FileControlEntry.file_status_clause:type_name -> pb.FileStatusClause
-	99,   // 80: pb.FileControlEntry.organization_clause:type_name -> pb.OrganizationClause
-	100,  // 81: pb.FileControlEntry.padding_character_clause:type_name -> pb.PaddingCharacterClause
-	105,  // 82: pb.FileControlEntry.password_clause:type_name -> pb.PasswordClause
-	101,  // 83: pb.FileControlEntry.record_delimiter_clause:type_name -> pb.RecordDelimiterClause
-	103,  // 84: pb.FileControlEntry.record_key_clause:type_name -> pb.RecordKeyClause
-	107,  // 85: pb.FileControlEntry.relative_key_clause:type_name -> pb.RelativeKeyClause
-	98,   // 86: pb.FileControlEntry.reserve_clause:type_name -> pb.ReserveClause
-	102,  // 87: pb.FileControlEntry.access_mode_clause:type_name -> pb.AccessModeClause
-	374,  // 88: pb.SelectClause.file_name:type_name -> pb.FileName
+	96,   // 72: pb.InputOutputSection.file_control_paragraph:type_name -> pb.FileControlParagraph
+	110,  // 73: pb.InputOutputSection.io_control_paragraph:type_name -> pb.IoControlParagraph
+	97,   // 74: pb.FileControlParagraph.file_control_entries:type_name -> pb.FileControlEntry
+	376,  // 75: pb.FileControlEntry.file_name:type_name -> pb.FileName
+	98,   // 76: pb.FileControlEntry.select_clause:type_name -> pb.SelectClause
+	106,  // 77: pb.FileControlEntry.alternate_record_key_clause:type_name -> pb.AlternateRecordKeyClause
+	99,   // 78: pb.FileControlEntry.assign_clause:type_name -> pb.AssignClause
+	108,  // 79: pb.FileControlEntry.file_status_clause:type_name -> pb.FileStatusClause
+	101,  // 80: pb.FileControlEntry.organization_clause:type_name -> pb.OrganizationClause
+	102,  // 81: pb.FileControlEntry.padding_character_clause:type_name -> pb.PaddingCharacterClause
+	107,  // 82: pb.FileControlEntry.password_clause:type_name -> pb.PasswordClause
+	103,  // 83: pb.FileControlEntry.record_delimiter_clause:type_name -> pb.RecordDelimiterClause
+	105,  // 84: pb.FileControlEntry.record_key_clause:type_name -> pb.RecordKeyClause
+	109,  // 85: pb.FileControlEntry.relative_key_clause:type_name -> pb.RelativeKeyClause
+	100,  // 86: pb.FileControlEntry.reserve_clause:type_name -> pb.ReserveClause
+	104,  // 87: pb.FileControlEntry.access_mode_clause:type_name -> pb.AccessModeClause
+	376,  // 88: pb.SelectClause.file_name:type_name -> pb.FileName
 	11,   // 89: pb.AssignClause.type:type_name -> pb.AssignClause.Type
-	365,  // 90: pb.AssignClause.assignment_name:type_name -> pb.AssignmentName
-	394,  // 91: pb.AssignClause.literal:type_name -> pb.Literal
-	397,  // 92: pb.ReserveClause.value:type_name -> pb.IntegerLiteral
+	367,  // 90: pb.AssignClause.assignment_name:type_name -> pb.AssignmentName
+	396,  // 91: pb.AssignClause.literal:type_name -> pb.Literal
+	399,  // 92: pb.ReserveClause.value:type_name -> pb.IntegerLiteral
 	12,   // 93: pb.OrganizationClause.mode:type_name -> pb.OrganizationClause.Mode
 	13,   // 94: pb.OrganizationClause.type:type_name -> pb.OrganizationClause.Type
-	353,  // 95: pb.PaddingCharacterClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	394,  // 96: pb.PaddingCharacterClause.literal:type_name -> pb.Literal
+	355,  // 95: pb.PaddingCharacterClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	396,  // 96: pb.PaddingCharacterClause.literal:type_name -> pb.Literal
 	14,   // 97: pb.RecordDelimiterClause.type:type_name -> pb.RecordDelimiterClause.Type
-	365,  // 98: pb.RecordDelimiterClause.assignment_name:type_name -> pb.AssignmentName
+	367,  // 98: pb.RecordDelimiterClause.assignment_name:type_name -> pb.AssignmentName
 	15,   // 99: pb.AccessModeClause.mode:type_name -> pb.AccessModeClause.Mode
-	105,  // 100: pb.RecordKeyClause.password_clause:type_name -> pb.PasswordClause
-	353,  // 101: pb.RecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	105,  // 102: pb.AlternateRecordKeyClause.password_clause:type_name -> pb.PasswordClause
-	353,  // 103: pb.AlternateRecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	371,  // 104: pb.PasswordClause.data_name:type_name -> pb.DataName
-	353,  // 105: pb.FileStatusClause.qualified_data_name_1:type_name -> pb.QualifiedDataName
-	353,  // 106: pb.FileStatusClause.qualified_data_name_2:type_name -> pb.QualifiedDataName
-	353,  // 107: pb.RelativeKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
-	374,  // 108: pb.IoControlParagraph.file_name:type_name -> pb.FileName
-	116,  // 109: pb.IoControlParagraph.commitment_control_clause:type_name -> pb.CommitmentControlClause
-	114,  // 110: pb.IoControlParagraph.multiple_file_clause:type_name -> pb.MultipleFileClause
-	109,  // 111: pb.IoControlParagraph.rerun_clause:type_name -> pb.RerunClause
-	113,  // 112: pb.IoControlParagraph.same_clauses:type_name -> pb.SameClause
-	365,  // 113: pb.RerunClause.assignment_name:type_name -> pb.AssignmentName
-	374,  // 114: pb.RerunClause.file_name:type_name -> pb.FileName
-	112,  // 115: pb.RerunClause.rerun_every_clock:type_name -> pb.RerunEveryClock
-	111,  // 116: pb.RerunClause.rerun_every_of:type_name -> pb.RerunEveryOf
-	110,  // 117: pb.RerunClause.rerun_every_records:type_name -> pb.RerunEveryRecords
-	397,  // 118: pb.RerunEveryRecords.records:type_name -> pb.IntegerLiteral
+	107,  // 100: pb.RecordKeyClause.password_clause:type_name -> pb.PasswordClause
+	355,  // 101: pb.RecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	107,  // 102: pb.AlternateRecordKeyClause.password_clause:type_name -> pb.PasswordClause
+	355,  // 103: pb.AlternateRecordKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	373,  // 104: pb.PasswordClause.data_name:type_name -> pb.DataName
+	355,  // 105: pb.FileStatusClause.qualified_data_name_1:type_name -> pb.QualifiedDataName
+	355,  // 106: pb.FileStatusClause.qualified_data_name_2:type_name -> pb.QualifiedDataName
+	355,  // 107: pb.RelativeKeyClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	376,  // 108: pb.IoControlParagraph.file_name:type_name -> pb.FileName
+	118,  // 109: pb.IoControlParagraph.commitment_control_clause:type_name -> pb.CommitmentControlClause
+	116,  // 110: pb.IoControlParagraph.multiple_file_clause:type_name -> pb.MultipleFileClause
+	111,  // 111: pb.IoControlParagraph.rerun_clause:type_name -> pb.RerunClause
+	115,  // 112: pb.IoControlParagraph.same_clauses:type_name -> pb.SameClause
+	367,  // 113: pb.RerunClause.assignment_name:type_name -> pb.AssignmentName
+	376,  // 114: pb.RerunClause.file_name:type_name -> pb.FileName
+	114,  // 115: pb.RerunClause.rerun_every_clock:type_name -> pb.RerunEveryClock
+	113,  // 116: pb.RerunClause.rerun_every_of:type_name -> pb.RerunEveryOf
+	112,  // 117: pb.RerunClause.rerun_every_records:type_name -> pb.RerunEveryRecords
+	399,  // 118: pb.RerunEveryRecords.records:type_name -> pb.IntegerLiteral
 	16,   // 119: pb.RerunEveryOf.type:type_name -> pb.RerunEveryOf.Type
-	374,  // 120: pb.RerunEveryOf.file_name:type_name -> pb.FileName
-	397,  // 121: pb.RerunEveryClock.clock_units:type_name -> pb.IntegerLiteral
-	374,  // 122: pb.SameClause.file_names:type_name -> pb.FileName
+	376,  // 120: pb.RerunEveryOf.file_name:type_name -> pb.FileName
+	399,  // 121: pb.RerunEveryClock.clock_units:type_name -> pb.IntegerLiteral
+	376,  // 122: pb.SameClause.file_names:type_name -> pb.FileName
 	17,   // 123: pb.SameClause.form:type_name -> pb.SameClause.Form
-	115,  // 124: pb.MultipleFileClause.multiple_file_positions:type_name -> pb.MultipleFilePosition
-	397,  // 125: pb.MultipleFilePosition.position:type_name -> pb.IntegerLiteral
-	374,  // 126: pb.MultipleFilePosition.file_name:type_name -> pb.FileName
-	374,  // 127: pb.CommitmentControlClause.file_name:type_name -> pb.FileName
-	218,  // 128: pb.DataDivision.communication_section:type_name -> pb.CommunicationSection
-	234,  // 129: pb.DataDivision.data_base_section:type_name -> pb.DataBaseSection
-	118,  // 130: pb.DataDivision.file_section:type_name -> pb.FileSection
-	217,  // 131: pb.DataDivision.linkage_section:type_name -> pb.LinkageSection
-	216,  // 132: pb.DataDivision.local_storage_section:type_name -> pb.LocalStorageSection
-	209,  // 133: pb.DataDivision.program_library_section:type_name -> pb.ProgramLibrarySection
-	186,  // 134: pb.DataDivision.report_section:type_name -> pb.ReportSection
-	162,  // 135: pb.DataDivision.ScreenSection:type_name -> pb.ScreenSection
-	134,  // 136: pb.DataDivision.working_storage_section:type_name -> pb.WorkingStorageSection
-	119,  // 137: pb.FileSection.file_description_entries:type_name -> pb.FileDescriptionEntry
-	374,  // 138: pb.FileDescriptionEntry.file_name:type_name -> pb.FileName
-	122,  // 139: pb.FileDescriptionEntry.external_clause:type_name -> pb.ExternalClause
-	123,  // 140: pb.FileDescriptionEntry.global_clause:type_name -> pb.GlobalClause
-	124,  // 141: pb.FileDescriptionEntry.block_contains_clause:type_name -> pb.BlockContainsClause
-	125,  // 142: pb.FileDescriptionEntry.record_contains_clause:type_name -> pb.RecordContainsClause
-	126,  // 143: pb.FileDescriptionEntry.label_records_clause:type_name -> pb.LabelRecordsClause
-	127,  // 144: pb.FileDescriptionEntry.value_of_clause:type_name -> pb.ValueOfClause
-	129,  // 145: pb.FileDescriptionEntry.data_records_clause:type_name -> pb.DataRecordsClause
-	131,  // 146: pb.FileDescriptionEntry.linage_clause:type_name -> pb.LinageClause
-	132,  // 147: pb.FileDescriptionEntry.code_set_clause:type_name -> pb.CodeSetClause
-	133,  // 148: pb.FileDescriptionEntry.report_clause:type_name -> pb.ReportClause
-	135,  // 149: pb.FileDescriptionEntry.data_description_entries:type_name -> pb.DataDescriptionEntry
-	121,  // 150: pb.FileDescriptionEntry.recording_mode_clause:type_name -> pb.RecordingModeClause
-	393,  // 151: pb.ModeStatement.cobol_word:type_name -> pb.CobolWord
-	120,  // 152: pb.RecordingModeClause.mode_statement:type_name -> pb.ModeStatement
-	397,  // 153: pb.BlockContainsClause.from:type_name -> pb.IntegerLiteral
-	397,  // 154: pb.BlockContainsClause.to:type_name -> pb.IntegerLiteral
+	117,  // 124: pb.MultipleFileClause.multiple_file_positions:type_name -> pb.MultipleFilePosition
+	399,  // 125: pb.MultipleFilePosition.position:type_name -> pb.IntegerLiteral
+	376,  // 126: pb.MultipleFilePosition.file_name:type_name -> pb.FileName
+	376,  // 127: pb.CommitmentControlClause.file_name:type_name -> pb.FileName
+	220,  // 128: pb.DataDivision.communication_section:type_name -> pb.CommunicationSection
+	236,  // 129: pb.DataDivision.data_base_section:type_name -> pb.DataBaseSection
+	120,  // 130: pb.DataDivision.file_section:type_name -> pb.FileSection
+	219,  // 131: pb.DataDivision.linkage_section:type_name -> pb.LinkageSection
+	218,  // 132: pb.DataDivision.local_storage_section:type_name -> pb.LocalStorageSection
+	211,  // 133: pb.DataDivision.program_library_section:type_name -> pb.ProgramLibrarySection
+	188,  // 134: pb.DataDivision.report_section:type_name -> pb.ReportSection
+	164,  // 135: pb.DataDivision.ScreenSection:type_name -> pb.ScreenSection
+	136,  // 136: pb.DataDivision.working_storage_section:type_name -> pb.WorkingStorageSection
+	121,  // 137: pb.FileSection.file_description_entries:type_name -> pb.FileDescriptionEntry
+	376,  // 138: pb.FileDescriptionEntry.file_name:type_name -> pb.FileName
+	124,  // 139: pb.FileDescriptionEntry.external_clause:type_name -> pb.ExternalClause
+	125,  // 140: pb.FileDescriptionEntry.global_clause:type_name -> pb.GlobalClause
+	126,  // 141: pb.FileDescriptionEntry.block_contains_clause:type_name -> pb.BlockContainsClause
+	127,  // 142: pb.FileDescriptionEntry.record_contains_clause:type_name -> pb.RecordContainsClause
+	128,  // 143: pb.FileDescriptionEntry.label_records_clause:type_name -> pb.LabelRecordsClause
+	129,  // 144: pb.FileDescriptionEntry.value_of_clause:type_name -> pb.ValueOfClause
+	131,  // 145: pb.FileDescriptionEntry.data_records_clause:type_name -> pb.DataRecordsClause
+	133,  // 146: pb.FileDescriptionEntry.linage_clause:type_name -> pb.LinageClause
+	134,  // 147: pb.FileDescriptionEntry.code_set_clause:type_name -> pb.CodeSetClause
+	135,  // 148: pb.FileDescriptionEntry.report_clause:type_name -> pb.ReportClause
+	137,  // 149: pb.FileDescriptionEntry.data_description_entries:type_name -> pb.DataDescriptionEntry
+	123,  // 150: pb.FileDescriptionEntry.recording_mode_clause:type_name -> pb.RecordingModeClause
+	395,  // 151: pb.ModeStatement.cobol_word:type_name -> pb.CobolWord
+	122,  // 152: pb.RecordingModeClause.mode_statement:type_name -> pb.ModeStatement
+	399,  // 153: pb.BlockContainsClause.from:type_name -> pb.IntegerLiteral
+	399,  // 154: pb.BlockContainsClause.to:type_name -> pb.IntegerLiteral
 	18,   // 155: pb.BlockContainsClause.unit:type_name -> pb.BlockContainsClause.Unit
-	397,  // 156: pb.RecordContainsClause.from:type_name -> pb.IntegerLiteral
-	397,  // 157: pb.RecordContainsClause.to:type_name -> pb.IntegerLiteral
-	353,  // 158: pb.RecordContainsClause.qualified_data_name:type_name -> pb.QualifiedDataName
+	399,  // 156: pb.RecordContainsClause.from:type_name -> pb.IntegerLiteral
+	399,  // 157: pb.RecordContainsClause.to:type_name -> pb.IntegerLiteral
+	355,  // 158: pb.RecordContainsClause.qualified_data_name:type_name -> pb.QualifiedDataName
 	19,   // 159: pb.LabelRecordsClause.type:type_name -> pb.LabelRecordsClause.Type
-	412,  // 160: pb.LabelRecordsClause.data_names:type_name -> pb.LabelRecordsClause.DataNames
-	128,  // 161: pb.ValueOfClause.value_pairs:type_name -> pb.ValuePair
-	390,  // 162: pb.ValuePair.system_name:type_name -> pb.SystemName
-	353,  // 163: pb.ValuePair.qualified_data_name:type_name -> pb.QualifiedDataName
-	394,  // 164: pb.ValuePair.literal:type_name -> pb.Literal
-	371,  // 165: pb.DataRecordsClause.data_names:type_name -> pb.DataName
-	371,  // 166: pb.DataNameOrIntegerLiteral.data_name:type_name -> pb.DataName
-	397,  // 167: pb.DataNameOrIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
-	130,  // 168: pb.LinageClause.footing_at:type_name -> pb.DataNameOrIntegerLiteral
-	130,  // 169: pb.LinageClause.lines_at_bottom:type_name -> pb.DataNameOrIntegerLiteral
-	130,  // 170: pb.LinageClause.lines_at_top:type_name -> pb.DataNameOrIntegerLiteral
-	130,  // 171: pb.LinageClause.number_of_lines:type_name -> pb.DataNameOrIntegerLiteral
-	364,  // 172: pb.CodeSetClause.alphabet_name:type_name -> pb.AlphabetName
-	385,  // 173: pb.ReportClause.report_names:type_name -> pb.ReportName
-	135,  // 174: pb.WorkingStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	413,  // 175: pb.DataDescriptionEntry.f1:type_name -> pb.DataDescriptionEntry.Format1
-	414,  // 176: pb.DataDescriptionEntry.f2:type_name -> pb.DataDescriptionEntry.Format2
-	415,  // 177: pb.DataDescriptionEntry.f3:type_name -> pb.DataDescriptionEntry.Format3
-	416,  // 178: pb.DataDescriptionEntry.exec_sql:type_name -> pb.DataDescriptionEntry.ExecSql
-	353,  // 179: pb.DataRenamesClause.from:type_name -> pb.QualifiedDataName
-	353,  // 180: pb.DataRenamesClause.to:type_name -> pb.QualifiedDataName
-	371,  // 181: pb.DataRedefinesClause.data_name:type_name -> pb.DataName
-	394,  // 182: pb.DataExternalClause.literal:type_name -> pb.Literal
-	144,  // 183: pb.DataPictureClause.picture_string:type_name -> pb.PictureString
-	145,  // 184: pb.PictureString.chars:type_name -> pb.PictureChars
+	414,  // 160: pb.LabelRecordsClause.data_names:type_name -> pb.LabelRecordsClause.DataNames
+	130,  // 161: pb.ValueOfClause.value_pairs:type_name -> pb.ValuePair
+	392,  // 162: pb.ValuePair.system_name:type_name -> pb.SystemName
+	355,  // 163: pb.ValuePair.qualified_data_name:type_name -> pb.QualifiedDataName
+	396,  // 164: pb.ValuePair.literal:type_name -> pb.Literal
+	373,  // 165: pb.DataRecordsClause.data_names:type_name -> pb.DataName
+	373,  // 166: pb.DataNameOrIntegerLiteral.data_name:type_name -> pb.DataName
+	399,  // 167: pb.DataNameOrIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
+	132,  // 168: pb.LinageClause.footing_at:type_name -> pb.DataNameOrIntegerLiteral
+	132,  // 169: pb.LinageClause.lines_at_bottom:type_name -> pb.DataNameOrIntegerLiteral
+	132,  // 170: pb.LinageClause.lines_at_top:type_name -> pb.DataNameOrIntegerLiteral
+	132,  // 171: pb.LinageClause.number_of_lines:type_name -> pb.DataNameOrIntegerLiteral
+	366,  // 172: pb.CodeSetClause.alphabet_name:type_name -> pb.AlphabetName
+	387,  // 173: pb.ReportClause.report_names:type_name -> pb.ReportName
+	137,  // 174: pb.WorkingStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	415,  // 175: pb.DataDescriptionEntry.f1:type_name -> pb.DataDescriptionEntry.Format1
+	416,  // 176: pb.DataDescriptionEntry.f2:type_name -> pb.DataDescriptionEntry.Format2
+	417,  // 177: pb.DataDescriptionEntry.f3:type_name -> pb.DataDescriptionEntry.Format3
+	418,  // 178: pb.DataDescriptionEntry.exec_sql:type_name -> pb.DataDescriptionEntry.ExecSql
+	355,  // 179: pb.DataRenamesClause.from:type_name -> pb.QualifiedDataName
+	355,  // 180: pb.DataRenamesClause.to:type_name -> pb.QualifiedDataName
+	373,  // 181: pb.DataRedefinesClause.data_name:type_name -> pb.DataName
+	396,  // 182: pb.DataExternalClause.literal:type_name -> pb.Literal
+	146,  // 183: pb.DataPictureClause.picture_string:type_name -> pb.PictureString
+	147,  // 184: pb.PictureString.chars:type_name -> pb.PictureChars
 	21,   // 185: pb.PictureChars.type:type_name -> pb.PictureChars.Type
-	397,  // 186: pb.PictureChars.integer_literal:type_name -> pb.IntegerLiteral
-	397,  // 187: pb.PictureCardinality.integer_literal:type_name -> pb.IntegerLiteral
+	399,  // 186: pb.PictureChars.integer_literal:type_name -> pb.IntegerLiteral
+	399,  // 187: pb.PictureCardinality.integer_literal:type_name -> pb.IntegerLiteral
 	22,   // 188: pb.DataCommonOwnLocalClause.type:type_name -> pb.DataCommonOwnLocalClause.Type
 	23,   // 189: pb.DataTypeClause.type:type_name -> pb.DataTypeClause.Type
-	417,  // 190: pb.DataTypeClause.lob:type_name -> pb.DataTypeClause.Lob
+	419,  // 190: pb.DataTypeClause.lob:type_name -> pb.DataTypeClause.Lob
 	25,   // 191: pb.DataUsingClause.type:type_name -> pb.DataUsingClause.Type
-	393,  // 192: pb.DataUsingClause.cobol_word:type_name -> pb.CobolWord
-	371,  // 193: pb.DataUsingClause.data_name:type_name -> pb.DataName
+	395,  // 192: pb.DataUsingClause.cobol_word:type_name -> pb.CobolWord
+	373,  // 193: pb.DataUsingClause.data_name:type_name -> pb.DataName
 	26,   // 194: pb.DataUsageClause.type:type_name -> pb.DataUsageClause.Type
-	394,  // 195: pb.DataValueInterval.literal_from:type_name -> pb.Literal
-	393,  // 196: pb.DataValueInterval.cobol_word_from:type_name -> pb.CobolWord
-	394,  // 197: pb.DataValueInterval.literal_to:type_name -> pb.Literal
-	151,  // 198: pb.DataValueClause.data_value_interval:type_name -> pb.DataValueInterval
+	396,  // 195: pb.DataValueInterval.literal_from:type_name -> pb.Literal
+	395,  // 196: pb.DataValueInterval.cobol_word_from:type_name -> pb.CobolWord
+	396,  // 197: pb.DataValueInterval.literal_to:type_name -> pb.Literal
+	153,  // 198: pb.DataValueClause.data_value_interval:type_name -> pb.DataValueInterval
 	27,   // 199: pb.DataReceivedByClause.type:type_name -> pb.DataReceivedByClause.Type
-	343,  // 200: pb.DataOccursClause.identifier:type_name -> pb.Identifier
-	397,  // 201: pb.DataOccursClause.integer_literal:type_name -> pb.IntegerLiteral
-	397,  // 202: pb.DataOccursClause.to:type_name -> pb.IntegerLiteral
-	353,  // 203: pb.DataOccursClause.depending_on:type_name -> pb.QualifiedDataName
-	418,  // 204: pb.DataOccursClause.sorts:type_name -> pb.DataOccursClause.Sort
-	419,  // 205: pb.DataOccursClause.indexes:type_name -> pb.DataOccursClause.Indexed
+	345,  // 200: pb.DataOccursClause.identifier:type_name -> pb.Identifier
+	399,  // 201: pb.DataOccursClause.integer_literal:type_name -> pb.IntegerLiteral
+	399,  // 202: pb.DataOccursClause.to:type_name -> pb.IntegerLiteral
+	355,  // 203: pb.DataOccursClause.depending_on:type_name -> pb.QualifiedDataName
+	420,  // 204: pb.DataOccursClause.sorts:type_name -> pb.DataOccursClause.Sort
+	421,  // 205: pb.DataOccursClause.indexes:type_name -> pb.DataOccursClause.Indexed
 	28,   // 206: pb.DataSignClause.type:type_name -> pb.DataSignClause.Type
 	29,   // 207: pb.DataSynchronizedClause.type:type_name -> pb.DataSynchronizedClause.Type
-	163,  // 208: pb.ScreenSection.screen_description_entries:type_name -> pb.ScreenDescriptionEntry
-	388,  // 209: pb.ScreenDescriptionEntry.screen_name:type_name -> pb.ScreenName
-	172,  // 210: pb.ScreenDescriptionEntry.blank_clause:type_name -> pb.BlankClause
-	173,  // 211: pb.ScreenDescriptionEntry.bell_clause:type_name -> pb.BellClause
-	174,  // 212: pb.ScreenDescriptionEntry.blink_clause:type_name -> pb.BlinkClause
-	175,  // 213: pb.ScreenDescriptionEntry.erase_clause:type_name -> pb.EraseClause
-	176,  // 214: pb.ScreenDescriptionEntry.light_clause:type_name -> pb.LightClause
-	177,  // 215: pb.ScreenDescriptionEntry.grid_clause:type_name -> pb.GridClause
-	178,  // 216: pb.ScreenDescriptionEntry.reverse_video_clause:type_name -> pb.ReverseVideoClause
-	179,  // 217: pb.ScreenDescriptionEntry.underline_clause:type_name -> pb.UnderlineClause
-	180,  // 218: pb.ScreenDescriptionEntry.size_clause:type_name -> pb.SizeClause
-	181,  // 219: pb.ScreenDescriptionEntry.line_clause:type_name -> pb.LineClause
-	182,  // 220: pb.ScreenDescriptionEntry.column_clause:type_name -> pb.ColumnClause
-	183,  // 221: pb.ScreenDescriptionEntry.foreground_color_clause:type_name -> pb.ForegroundColorClause
-	184,  // 222: pb.ScreenDescriptionEntry.background_color_clause:type_name -> pb.BackgroundColorClause
-	185,  // 223: pb.ScreenDescriptionEntry.control_clause:type_name -> pb.ControlClause
-	197,  // 224: pb.ScreenDescriptionEntry.value_clause:type_name -> pb.ValueClause
-	204,  // 225: pb.ScreenDescriptionEntry.picture_clause:type_name -> pb.PictureClause
-	171,  // 226: pb.ScreenDescriptionEntry.from_clause:type_name -> pb.FromClause
-	170,  // 227: pb.ScreenDescriptionEntry.using_clause:type_name -> pb.UsingClause
-	208,  // 228: pb.ScreenDescriptionEntry.usage_clause:type_name -> pb.UsageClause
-	203,  // 229: pb.ScreenDescriptionEntry.sign_clause:type_name -> pb.SignClause
-	201,  // 230: pb.ScreenDescriptionEntry.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
-	202,  // 231: pb.ScreenDescriptionEntry.justified_clause:type_name -> pb.JustifiedClause
-	169,  // 232: pb.ScreenDescriptionEntry.auto_clause:type_name -> pb.AutoClause
-	168,  // 233: pb.ScreenDescriptionEntry.secure_clause:type_name -> pb.SecureClause
-	167,  // 234: pb.ScreenDescriptionEntry.required_clause:type_name -> pb.RequiredClause
-	166,  // 235: pb.ScreenDescriptionEntry.prompt_clause:type_name -> pb.PromptClause
-	165,  // 236: pb.ScreenDescriptionEntry.full_clause:type_name -> pb.FullClause
-	164,  // 237: pb.ScreenDescriptionEntry.zero_fill_clause:type_name -> pb.ZeroFillClause
+	165,  // 208: pb.ScreenSection.screen_description_entries:type_name -> pb.ScreenDescriptionEntry
+	390,  // 209: pb.ScreenDescriptionEntry.screen_name:type_name -> pb.ScreenName
+	174,  // 210: pb.ScreenDescriptionEntry.blank_clause:type_name -> pb.BlankClause
+	175,  // 211: pb.ScreenDescriptionEntry.bell_clause:type_name -> pb.BellClause
+	176,  // 212: pb.ScreenDescriptionEntry.blink_clause:type_name -> pb.BlinkClause
+	177,  // 213: pb.ScreenDescriptionEntry.erase_clause:type_name -> pb.EraseClause
+	178,  // 214: pb.ScreenDescriptionEntry.light_clause:type_name -> pb.LightClause
+	179,  // 215: pb.ScreenDescriptionEntry.grid_clause:type_name -> pb.GridClause
+	180,  // 216: pb.ScreenDescriptionEntry.reverse_video_clause:type_name -> pb.ReverseVideoClause
+	181,  // 217: pb.ScreenDescriptionEntry.underline_clause:type_name -> pb.UnderlineClause
+	182,  // 218: pb.ScreenDescriptionEntry.size_clause:type_name -> pb.SizeClause
+	183,  // 219: pb.ScreenDescriptionEntry.line_clause:type_name -> pb.LineClause
+	184,  // 220: pb.ScreenDescriptionEntry.column_clause:type_name -> pb.ColumnClause
+	185,  // 221: pb.ScreenDescriptionEntry.foreground_color_clause:type_name -> pb.ForegroundColorClause
+	186,  // 222: pb.ScreenDescriptionEntry.background_color_clause:type_name -> pb.BackgroundColorClause
+	187,  // 223: pb.ScreenDescriptionEntry.control_clause:type_name -> pb.ControlClause
+	199,  // 224: pb.ScreenDescriptionEntry.value_clause:type_name -> pb.ValueClause
+	206,  // 225: pb.ScreenDescriptionEntry.picture_clause:type_name -> pb.PictureClause
+	173,  // 226: pb.ScreenDescriptionEntry.from_clause:type_name -> pb.FromClause
+	172,  // 227: pb.ScreenDescriptionEntry.using_clause:type_name -> pb.UsingClause
+	210,  // 228: pb.ScreenDescriptionEntry.usage_clause:type_name -> pb.UsageClause
+	205,  // 229: pb.ScreenDescriptionEntry.sign_clause:type_name -> pb.SignClause
+	203,  // 230: pb.ScreenDescriptionEntry.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
+	204,  // 231: pb.ScreenDescriptionEntry.justified_clause:type_name -> pb.JustifiedClause
+	171,  // 232: pb.ScreenDescriptionEntry.auto_clause:type_name -> pb.AutoClause
+	170,  // 233: pb.ScreenDescriptionEntry.secure_clause:type_name -> pb.SecureClause
+	169,  // 234: pb.ScreenDescriptionEntry.required_clause:type_name -> pb.RequiredClause
+	168,  // 235: pb.ScreenDescriptionEntry.prompt_clause:type_name -> pb.PromptClause
+	167,  // 236: pb.ScreenDescriptionEntry.full_clause:type_name -> pb.FullClause
+	166,  // 237: pb.ScreenDescriptionEntry.zero_fill_clause:type_name -> pb.ZeroFillClause
 	30,   // 238: pb.FullClause.type:type_name -> pb.FullClause.Type
-	343,  // 239: pb.PromptClause.identifier:type_name -> pb.Identifier
-	394,  // 240: pb.PromptClause.literal:type_name -> pb.Literal
-	397,  // 241: pb.PromptClause.times:type_name -> pb.IntegerLiteral
+	345,  // 239: pb.PromptClause.identifier:type_name -> pb.Identifier
+	396,  // 240: pb.PromptClause.literal:type_name -> pb.Literal
+	399,  // 241: pb.PromptClause.times:type_name -> pb.IntegerLiteral
 	31,   // 242: pb.RequiredClause.type:type_name -> pb.RequiredClause.Type
 	32,   // 243: pb.SecureClause.type:type_name -> pb.SecureClause.Type
 	33,   // 244: pb.AutoClause.type:type_name -> pb.AutoClause.Type
-	343,  // 245: pb.UsingClause.using:type_name -> pb.Identifier
-	343,  // 246: pb.FromClause.identifier:type_name -> pb.Identifier
-	394,  // 247: pb.FromClause.literal:type_name -> pb.Literal
-	343,  // 248: pb.FromClause.to:type_name -> pb.Identifier
+	345,  // 245: pb.UsingClause.using:type_name -> pb.Identifier
+	345,  // 246: pb.FromClause.identifier:type_name -> pb.Identifier
+	396,  // 247: pb.FromClause.literal:type_name -> pb.Literal
+	345,  // 248: pb.FromClause.to:type_name -> pb.Identifier
 	34,   // 249: pb.BlankClause.type:type_name -> pb.BlankClause.Type
 	35,   // 250: pb.BellClause.type:type_name -> pb.BellClause.Type
 	36,   // 251: pb.EraseClause.type:type_name -> pb.EraseClause.Type
 	37,   // 252: pb.LightClause.type:type_name -> pb.LightClause.Type
 	38,   // 253: pb.GridClause.type:type_name -> pb.GridClause.Type
-	343,  // 254: pb.SizeClause.identifier:type_name -> pb.Identifier
-	397,  // 255: pb.SizeClause.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 254: pb.SizeClause.identifier:type_name -> pb.Identifier
+	399,  // 255: pb.SizeClause.integer_literal:type_name -> pb.IntegerLiteral
 	39,   // 256: pb.LineClause.type:type_name -> pb.LineClause.Type
-	343,  // 257: pb.LineClause.identifier:type_name -> pb.Identifier
-	397,  // 258: pb.LineClause.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 257: pb.LineClause.identifier:type_name -> pb.Identifier
+	399,  // 258: pb.LineClause.integer_literal:type_name -> pb.IntegerLiteral
 	40,   // 259: pb.ColumnClause.type:type_name -> pb.ColumnClause.Type
-	343,  // 260: pb.ColumnClause.identifier:type_name -> pb.Identifier
-	397,  // 261: pb.ColumnClause.integer_literal:type_name -> pb.IntegerLiteral
-	343,  // 262: pb.ForegroundColorClause.identifier:type_name -> pb.Identifier
-	397,  // 263: pb.ForegroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
-	343,  // 264: pb.BackgroundColorClause.identifier:type_name -> pb.Identifier
-	397,  // 265: pb.BackgroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
-	343,  // 266: pb.ControlClause.control:type_name -> pb.Identifier
-	187,  // 267: pb.ReportSection.report_descriptions:type_name -> pb.ReportDescription
-	188,  // 268: pb.ReportDescription.report_description_entry:type_name -> pb.ReportDescriptionEntry
-	194,  // 269: pb.ReportDescription.report_group_description_entries:type_name -> pb.ReportGroupDescriptionEntry
-	385,  // 270: pb.ReportDescriptionEntry.report_name:type_name -> pb.ReportName
-	123,  // 271: pb.ReportDescriptionEntry.global_clause:type_name -> pb.GlobalClause
-	189,  // 272: pb.ReportDescriptionEntry.page_limit_clause:type_name -> pb.PageLimitClause
-	190,  // 273: pb.ReportDescriptionEntry.heading_clause:type_name -> pb.HeadingClause
-	191,  // 274: pb.ReportDescriptionEntry.first_detail_clause:type_name -> pb.FirstDetailClause
-	192,  // 275: pb.ReportDescriptionEntry.last_detail_clause:type_name -> pb.LastDetailClause
-	193,  // 276: pb.ReportDescriptionEntry.footing_clause:type_name -> pb.FootingClause
-	397,  // 277: pb.PageLimitClause.page:type_name -> pb.IntegerLiteral
-	397,  // 278: pb.HeadingClause.heading:type_name -> pb.IntegerLiteral
-	397,  // 279: pb.FirstDetailClause.first_detail:type_name -> pb.IntegerLiteral
-	397,  // 280: pb.LastDetailClause.last_detail:type_name -> pb.IntegerLiteral
-	397,  // 281: pb.FootingClause.footing:type_name -> pb.IntegerLiteral
-	397,  // 282: pb.ReportGroupDescriptionEntry.integer_literal:type_name -> pb.IntegerLiteral
-	371,  // 283: pb.ReportGroupDescriptionEntry.data_name:type_name -> pb.DataName
-	420,  // 284: pb.ReportGroupDescriptionEntry.vertical:type_name -> pb.ReportGroupDescriptionEntry.Vertical
-	421,  // 285: pb.ReportGroupDescriptionEntry.single:type_name -> pb.ReportGroupDescriptionEntry.Single
-	422,  // 286: pb.ReportGroupDescriptionEntry.printable:type_name -> pb.ReportGroupDescriptionEntry.Printable
-	371,  // 287: pb.ResetClause.data_name:type_name -> pb.DataName
-	343,  // 288: pb.SumClause.sums:type_name -> pb.Identifier
-	371,  // 289: pb.SumClause.upons:type_name -> pb.DataName
-	394,  // 290: pb.ValueClause.value:type_name -> pb.Literal
-	343,  // 291: pb.SourceClause.source:type_name -> pb.Identifier
-	397,  // 292: pb.ColumnNumberClause.column_number:type_name -> pb.IntegerLiteral
+	345,  // 260: pb.ColumnClause.identifier:type_name -> pb.Identifier
+	399,  // 261: pb.ColumnClause.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 262: pb.ForegroundColorClause.identifier:type_name -> pb.Identifier
+	399,  // 263: pb.ForegroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 264: pb.BackgroundColorClause.identifier:type_name -> pb.Identifier
+	399,  // 265: pb.BackgroundColorClause.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 266: pb.ControlClause.control:type_name -> pb.Identifier
+	189,  // 267: pb.ReportSection.report_descriptions:type_name -> pb.ReportDescription
+	190,  // 268: pb.ReportDescription.report_description_entry:type_name -> pb.ReportDescriptionEntry
+	196,  // 269: pb.ReportDescription.report_group_description_entries:type_name -> pb.ReportGroupDescriptionEntry
+	387,  // 270: pb.ReportDescriptionEntry.report_name:type_name -> pb.ReportName
+	125,  // 271: pb.ReportDescriptionEntry.global_clause:type_name -> pb.GlobalClause
+	191,  // 272: pb.ReportDescriptionEntry.page_limit_clause:type_name -> pb.PageLimitClause
+	192,  // 273: pb.ReportDescriptionEntry.heading_clause:type_name -> pb.HeadingClause
+	193,  // 274: pb.ReportDescriptionEntry.first_detail_clause:type_name -> pb.FirstDetailClause
+	194,  // 275: pb.ReportDescriptionEntry.last_detail_clause:type_name -> pb.LastDetailClause
+	195,  // 276: pb.ReportDescriptionEntry.footing_clause:type_name -> pb.FootingClause
+	399,  // 277: pb.PageLimitClause.page:type_name -> pb.IntegerLiteral
+	399,  // 278: pb.HeadingClause.heading:type_name -> pb.IntegerLiteral
+	399,  // 279: pb.FirstDetailClause.first_detail:type_name -> pb.IntegerLiteral
+	399,  // 280: pb.LastDetailClause.last_detail:type_name -> pb.IntegerLiteral
+	399,  // 281: pb.FootingClause.footing:type_name -> pb.IntegerLiteral
+	399,  // 282: pb.ReportGroupDescriptionEntry.integer_literal:type_name -> pb.IntegerLiteral
+	373,  // 283: pb.ReportGroupDescriptionEntry.data_name:type_name -> pb.DataName
+	422,  // 284: pb.ReportGroupDescriptionEntry.vertical:type_name -> pb.ReportGroupDescriptionEntry.Vertical
+	423,  // 285: pb.ReportGroupDescriptionEntry.single:type_name -> pb.ReportGroupDescriptionEntry.Single
+	424,  // 286: pb.ReportGroupDescriptionEntry.printable:type_name -> pb.ReportGroupDescriptionEntry.Printable
+	373,  // 287: pb.ResetClause.data_name:type_name -> pb.DataName
+	345,  // 288: pb.SumClause.sums:type_name -> pb.Identifier
+	373,  // 289: pb.SumClause.upons:type_name -> pb.DataName
+	396,  // 290: pb.ValueClause.value:type_name -> pb.Literal
+	345,  // 291: pb.SourceClause.source:type_name -> pb.Identifier
+	399,  // 292: pb.ColumnNumberClause.column_number:type_name -> pb.IntegerLiteral
 	41,   // 293: pb.SignClause.type:type_name -> pb.SignClause.Type
-	144,  // 294: pb.PictureClause.picture_string:type_name -> pb.PictureString
-	397,  // 295: pb.LineNumberClause.next_page:type_name -> pb.IntegerLiteral
-	397,  // 296: pb.LineNumberClause.plus:type_name -> pb.IntegerLiteral
-	397,  // 297: pb.NextGroupClause.next_group:type_name -> pb.IntegerLiteral
-	397,  // 298: pb.NextGroupClause.plus:type_name -> pb.IntegerLiteral
-	423,  // 299: pb.TypeClause.report_heading:type_name -> pb.TypeClause.ReportHeading
-	424,  // 300: pb.TypeClause.page_heading:type_name -> pb.TypeClause.PageHeading
-	425,  // 301: pb.TypeClause.control_heading:type_name -> pb.TypeClause.ControlHeading
-	426,  // 302: pb.TypeClause.detail:type_name -> pb.TypeClause.Detail
-	427,  // 303: pb.TypeClause.control_footing:type_name -> pb.TypeClause.ControlFooting
-	428,  // 304: pb.TypeClause.page_footing:type_name -> pb.TypeClause.PageFooting
-	429,  // 305: pb.TypeClause.report_footing:type_name -> pb.TypeClause.ReportFooting
-	210,  // 306: pb.ProgramLibrarySection.library_description_entries:type_name -> pb.LibraryDescriptionEntry
-	378,  // 307: pb.LibraryDescriptionEntry.library_name:type_name -> pb.LibraryName
-	430,  // 308: pb.LibraryDescriptionEntry.import:type_name -> pb.LibraryDescriptionEntry.Import
-	431,  // 309: pb.LibraryDescriptionEntry.export:type_name -> pb.LibraryDescriptionEntry.Export
+	146,  // 294: pb.PictureClause.picture_string:type_name -> pb.PictureString
+	399,  // 295: pb.LineNumberClause.next_page:type_name -> pb.IntegerLiteral
+	399,  // 296: pb.LineNumberClause.plus:type_name -> pb.IntegerLiteral
+	399,  // 297: pb.NextGroupClause.next_group:type_name -> pb.IntegerLiteral
+	399,  // 298: pb.NextGroupClause.plus:type_name -> pb.IntegerLiteral
+	425,  // 299: pb.TypeClause.report_heading:type_name -> pb.TypeClause.ReportHeading
+	426,  // 300: pb.TypeClause.page_heading:type_name -> pb.TypeClause.PageHeading
+	427,  // 301: pb.TypeClause.control_heading:type_name -> pb.TypeClause.ControlHeading
+	428,  // 302: pb.TypeClause.detail:type_name -> pb.TypeClause.Detail
+	429,  // 303: pb.TypeClause.control_footing:type_name -> pb.TypeClause.ControlFooting
+	430,  // 304: pb.TypeClause.page_footing:type_name -> pb.TypeClause.PageFooting
+	431,  // 305: pb.TypeClause.report_footing:type_name -> pb.TypeClause.ReportFooting
+	212,  // 306: pb.ProgramLibrarySection.library_description_entries:type_name -> pb.LibraryDescriptionEntry
+	380,  // 307: pb.LibraryDescriptionEntry.library_name:type_name -> pb.LibraryName
+	432,  // 308: pb.LibraryDescriptionEntry.import:type_name -> pb.LibraryDescriptionEntry.Import
+	433,  // 309: pb.LibraryDescriptionEntry.export:type_name -> pb.LibraryDescriptionEntry.Export
 	42,   // 310: pb.AttributeClause1.sharing:type_name -> pb.AttributeClause1.Sharing
-	394,  // 311: pb.AttributeClause2.function_name:type_name -> pb.Literal
+	396,  // 311: pb.AttributeClause2.function_name:type_name -> pb.Literal
 	43,   // 312: pb.AttributeClause2.lib_access:type_name -> pb.AttributeClause2.LibAccess
-	394,  // 313: pb.AttributeClause2.lib_parameter:type_name -> pb.Literal
-	394,  // 314: pb.AttributeClause2.title:type_name -> pb.Literal
-	383,  // 315: pb.ProcedureClause1.program_name:type_name -> pb.ProgramName
-	394,  // 316: pb.ProcedureClause1.for:type_name -> pb.Literal
-	383,  // 317: pb.ProcedureClause2.program_name:type_name -> pb.ProgramName
-	394,  // 318: pb.ProcedureClause2.for:type_name -> pb.Literal
-	432,  // 319: pb.ProcedureClause2.with_names:type_name -> pb.ProcedureClause2.WithName
-	433,  // 320: pb.ProcedureClause2.using_names:type_name -> pb.ProcedureClause2.UsingName
-	371,  // 321: pb.ProcedureClause2.giving:type_name -> pb.DataName
-	135,  // 322: pb.LocalStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	379,  // 323: pb.LocalStorageSection.local_name:type_name -> pb.LocalName
-	135,  // 324: pb.LinkageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	219,  // 325: pb.CommunicationSection.communication_description_entries:type_name -> pb.CommunicationDescriptionEntry
-	135,  // 326: pb.CommunicationSection.data_description_entries:type_name -> pb.DataDescriptionEntry
-	367,  // 327: pb.CommunicationDescriptionEntry.cd_name:type_name -> pb.CdName
-	434,  // 328: pb.CommunicationDescriptionEntry.input:type_name -> pb.CommunicationDescriptionEntry.Input
-	435,  // 329: pb.CommunicationDescriptionEntry.output:type_name -> pb.CommunicationDescriptionEntry.Output
-	436,  // 330: pb.CommunicationDescriptionEntry.io:type_name -> pb.CommunicationDescriptionEntry.Io
-	372,  // 331: pb.SymbolicTerminalClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 332: pb.SymbolicDestinationClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 333: pb.ErrorKeyClause.data_desc_name:type_name -> pb.DataDescName
-	397,  // 334: pb.DestinationTableClause.times:type_name -> pb.IntegerLiteral
-	376,  // 335: pb.DestinationTableClause.indexes:type_name -> pb.IndexName
-	372,  // 336: pb.DestinationCountClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 337: pb.SymbolicQueueClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 338: pb.SymbolicSubQueueClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 339: pb.MessageDateClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 340: pb.MessageTimeClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 341: pb.SymbolicSourceClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 342: pb.TextLengthClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 343: pb.EndKeyClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 344: pb.StatusKeyClause.data_desc_name:type_name -> pb.DataDescName
-	372,  // 345: pb.MessageCountClause.data_desc_name:type_name -> pb.DataDescName
-	235,  // 346: pb.DataBaseSection.data_base_section_entries:type_name -> pb.DataBaseSectionEntry
-	397,  // 347: pb.DataBaseSectionEntry.integer_literal:type_name -> pb.IntegerLiteral
-	394,  // 348: pb.DataBaseSectionEntry.literal:type_name -> pb.Literal
-	394,  // 349: pb.DataBaseSectionEntry.invoke:type_name -> pb.Literal
-	443,  // 350: pb.ProcedureDivision.using_clause:type_name -> pb.ProcedureDivision.UsingClause
-	442,  // 351: pb.ProcedureDivision.giving_clause:type_name -> pb.ProcedureDivision.GivingClause
-	238,  // 352: pb.ProcedureDivision.declaratives:type_name -> pb.Declarative
-	240,  // 353: pb.ProcedureDivision.paragraphs:type_name -> pb.Paragraphs
-	237,  // 354: pb.ProcedureDivision.procedure_sections:type_name -> pb.ProcedureSection
-	239,  // 355: pb.ProcedureSection.procedure_section_header:type_name -> pb.ProcedureSectionHeader
-	240,  // 356: pb.ProcedureSection.paragraphs:type_name -> pb.Paragraphs
-	239,  // 357: pb.Declarative.procedure_section_header:type_name -> pb.ProcedureSectionHeader
-	320,  // 358: pb.Declarative.use_statement:type_name -> pb.UseStatement
-	240,  // 359: pb.Declarative.paragraphs:type_name -> pb.Paragraphs
-	389,  // 360: pb.ProcedureSectionHeader.section_name:type_name -> pb.SectionName
-	397,  // 361: pb.ProcedureSectionHeader.integer_literal:type_name -> pb.IntegerLiteral
-	242,  // 362: pb.Paragraphs.sentences:type_name -> pb.Sentences
-	241,  // 363: pb.Paragraphs.paragraphs:type_name -> pb.Paragraph
-	381,  // 364: pb.Paragraph.paragraph_name:type_name -> pb.ParagraphName
-	242,  // 365: pb.Paragraph.sentences:type_name -> pb.Sentences
-	243,  // 366: pb.Sentences.sentences:type_name -> pb.Sentence
-	244,  // 367: pb.Sentence.statements:type_name -> pb.Statement
-	307,  // 368: pb.Statement.accept_statement:type_name -> pb.AcceptStatement
-	306,  // 369: pb.Statement.add_statement:type_name -> pb.AddStatement
-	305,  // 370: pb.Statement.alter_statement:type_name -> pb.AlterStatement
-	304,  // 371: pb.Statement.call_statement:type_name -> pb.CallStatement
-	303,  // 372: pb.Statement.cancel_statement:type_name -> pb.CancelStatement
-	301,  // 373: pb.Statement.close_statement:type_name -> pb.CloseStatement
-	295,  // 374: pb.Statement.compute_statement:type_name -> pb.ComputeStatement
-	293,  // 375: pb.Statement.continue_statement:type_name -> pb.ContinueStatement
-	292,  // 376: pb.Statement.delete_statement:type_name -> pb.DeleteStatement
-	291,  // 377: pb.Statement.disable_statement:type_name -> pb.DisableStatement
-	290,  // 378: pb.Statement.display_statement:type_name -> pb.DisplayStatement
-	285,  // 379: pb.Statement.divide_statement:type_name -> pb.DivideStatement
-	284,  // 380: pb.Statement.enable_statement:type_name -> pb.EnableStatement
-	283,  // 381: pb.Statement.entry_statement:type_name -> pb.EntryStatement
-	282,  // 382: pb.Statement.evaluate_statement:type_name -> pb.EvaluateStatement
-	281,  // 383: pb.Statement.exhibit_statement:type_name -> pb.ExhibitStatement
-	280,  // 384: pb.Statement.exec_cics_statement:type_name -> pb.ExecCicsStatement
-	279,  // 385: pb.Statement.exec_sql_statement:type_name -> pb.ExecSqlStatement
-	278,  // 386: pb.Statement.exec_sql_ims_statement:type_name -> pb.ExecSqlImsStatement
-	277,  // 387: pb.Statement.exit_statement:type_name -> pb.ExitStatement
-	276,  // 388: pb.Statement.generate_statement:type_name -> pb.GenerateStatement
-	275,  // 389: pb.Statement.goback_statement:type_name -> pb.GobackStatement
-	274,  // 390: pb.Statement.go_to_statement:type_name -> pb.GoToStatement
-	273,  // 391: pb.Statement.if_statement:type_name -> pb.IfStatement
-	272,  // 392: pb.Statement.initialize_statement:type_name -> pb.InitializeStatement
-	271,  // 393: pb.Statement.initiate_statement:type_name -> pb.InitiateStatement
-	270,  // 394: pb.Statement.inspect_statement:type_name -> pb.InspectStatement
-	269,  // 395: pb.Statement.merge_statement:type_name -> pb.MergeStatement
-	266,  // 396: pb.Statement.move_statement:type_name -> pb.MoveStatement
-	265,  // 397: pb.Statement.multiply_statement:type_name -> pb.MultiplyStatement
-	264,  // 398: pb.Statement.next_sentence_statement:type_name -> pb.NextSentenceStatement
-	263,  // 399: pb.Statement.open_statement:type_name -> pb.OpenStatement
-	262,  // 400: pb.Statement.perform_statement:type_name -> pb.PerformStatement
-	261,  // 401: pb.Statement.purge_statement:type_name -> pb.PurgeStatement
-	260,  // 402: pb.Statement.read_statement:type_name -> pb.ReadStatement
-	259,  // 403: pb.Statement.receive_statement:type_name -> pb.ReceiveStatement
-	258,  // 404: pb.Statement.release_statement:type_name -> pb.ReleaseStatement
-	257,  // 405: pb.Statement.return_statement:type_name -> pb.ReturnStatement
-	256,  // 406: pb.Statement.rewrite_statement:type_name -> pb.RewriteStatement
-	255,  // 407: pb.Statement.search_statement:type_name -> pb.SearchStatement
-	254,  // 408: pb.Statement.send_statement:type_name -> pb.SendStatement
-	253,  // 409: pb.Statement.set_statement:type_name -> pb.SetStatement
-	252,  // 410: pb.Statement.sort_statement:type_name -> pb.SortStatement
-	251,  // 411: pb.Statement.start_statement:type_name -> pb.StartStatement
-	250,  // 412: pb.Statement.stop_statement:type_name -> pb.StopStatement
-	249,  // 413: pb.Statement.string_statement:type_name -> pb.StringStatement
-	248,  // 414: pb.Statement.subtract_statement:type_name -> pb.SubtractStatement
-	247,  // 415: pb.Statement.terminate_statement:type_name -> pb.TerminateStatement
-	246,  // 416: pb.Statement.unstring_statement:type_name -> pb.UnstringStatement
-	245,  // 417: pb.Statement.write_statement:type_name -> pb.WriteStatement
-	384,  // 418: pb.WriteStatement.record_name:type_name -> pb.RecordName
-	444,  // 419: pb.WriteStatement.from_phrase:type_name -> pb.WriteStatement.FromPhrase
-	448,  // 420: pb.WriteStatement.advancing_phrase:type_name -> pb.WriteStatement.AdvancingPhrase
-	308,  // 421: pb.WriteStatement.at_end_of_page_phrase:type_name -> pb.AtEndOfPagePhrase
-	309,  // 422: pb.WriteStatement.not_at_end_of_page_phrase:type_name -> pb.NotAtEndOfPagePhrase
-	314,  // 423: pb.WriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	315,  // 424: pb.WriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	455,  // 425: pb.UnstringStatement.sending_phrase:type_name -> pb.UnstringStatement.SendingPhrase
-	456,  // 426: pb.UnstringStatement.into_phrase:type_name -> pb.UnstringStatement.IntoPhrase
-	457,  // 427: pb.UnstringStatement.with_pointer_phrase:type_name -> pb.UnstringStatement.WithPointerPhrase
-	458,  // 428: pb.UnstringStatement.tallying_phrase:type_name -> pb.UnstringStatement.TallyingPhrase
-	312,  // 429: pb.UnstringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
-	313,  // 430: pb.UnstringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
-	385,  // 431: pb.TerminateStatement.report_name:type_name -> pb.ReportName
-	464,  // 432: pb.SubtractStatement.from_statement:type_name -> pb.SubtractStatement.FromStatement
-	465,  // 433: pb.SubtractStatement.from_giving_statement:type_name -> pb.SubtractStatement.FromGivingStatement
-	466,  // 434: pb.SubtractStatement.corresponding_statement:type_name -> pb.SubtractStatement.CorrespondingStatement
-	310,  // 435: pb.SubtractStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	311,  // 436: pb.SubtractStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	470,  // 437: pb.StringStatement.sending_phrases:type_name -> pb.StringStatement.SendingPhrase
-	471,  // 438: pb.StringStatement.into_phrase:type_name -> pb.StringStatement.IntoPhrase
-	472,  // 439: pb.StringStatement.with_pointer_phrase:type_name -> pb.StringStatement.WithPointerPhrase
-	312,  // 440: pb.StringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
-	313,  // 441: pb.StringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
-	394,  // 442: pb.StopStatement.literal:type_name -> pb.Literal
-	473,  // 443: pb.StopStatement.giving:type_name -> pb.StopStatement.Giving
-	374,  // 444: pb.StartStatement.file_name:type_name -> pb.FileName
-	474,  // 445: pb.StartStatement.key:type_name -> pb.StartStatement.Key
-	314,  // 446: pb.StartStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	315,  // 447: pb.StartStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	374,  // 448: pb.SortStatement.file_name:type_name -> pb.FileName
-	475,  // 449: pb.SortStatement.on_key_clauses:type_name -> pb.SortStatement.OnKeyClause
-	476,  // 450: pb.SortStatement.duplicates_phrase:type_name -> pb.SortStatement.DuplicatesPhrase
-	479,  // 451: pb.SortStatement.collating_sequence_phrase:type_name -> pb.SortStatement.CollatingSequencePhrase
-	481,  // 452: pb.SortStatement.input_procedure_phrase:type_name -> pb.SortStatement.InputProcedurePhrase
-	482,  // 453: pb.SortStatement.usings:type_name -> pb.SortStatement.Using
-	484,  // 454: pb.SortStatement.output_procedure_phrase:type_name -> pb.SortStatement.OutputProcedurePhrase
-	486,  // 455: pb.SortStatement.giving_phrases:type_name -> pb.SortStatement.GivingPhrase
-	491,  // 456: pb.SetStatement.to_statements:type_name -> pb.SetStatement.ToStatement
-	492,  // 457: pb.SetStatement.up_down_by_statement:type_name -> pb.SetStatement.UpDownByStatement
-	500,  // 458: pb.SendStatement.sync_statement:type_name -> pb.SendStatement.SyncStatement
-	501,  // 459: pb.SendStatement.async_statement:type_name -> pb.SendStatement.AsyncStatement
-	318,  // 460: pb.SendStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	319,  // 461: pb.SendStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	353,  // 462: pb.SearchStatement.qualified_data_name:type_name -> pb.QualifiedDataName
-	502,  // 463: pb.SearchStatement.varying:type_name -> pb.SearchStatement.Varying
-	503,  // 464: pb.SearchStatement.when:type_name -> pb.SearchStatement.When
-	384,  // 465: pb.RewriteStatement.record_name:type_name -> pb.RecordName
-	504,  // 466: pb.RewriteStatement.from:type_name -> pb.RewriteStatement.From
-	314,  // 467: pb.RewriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	315,  // 468: pb.RewriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	374,  // 469: pb.ReturnStatement.file_name:type_name -> pb.FileName
-	505,  // 470: pb.ReturnStatement.into:type_name -> pb.ReturnStatement.Into
-	316,  // 471: pb.ReturnStatement.at_end_phrase:type_name -> pb.AtEndPhrase
-	317,  // 472: pb.ReturnStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
-	384,  // 473: pb.ReleaseStatement.record_name:type_name -> pb.RecordName
-	506,  // 474: pb.ReleaseStatement.from:type_name -> pb.ReleaseStatement.From
-	513,  // 475: pb.ReceiveStatement.from_statement:type_name -> pb.ReceiveStatement.FromStatement
-	516,  // 476: pb.ReceiveStatement.into_statement:type_name -> pb.ReceiveStatement.IntoStatement
-	318,  // 477: pb.ReceiveStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	319,  // 478: pb.ReceiveStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	374,  // 479: pb.ReadStatement.file_name:type_name -> pb.FileName
-	517,  // 480: pb.ReadStatement.into:type_name -> pb.ReadStatement.Into
-	518,  // 481: pb.ReadStatement.with:type_name -> pb.ReadStatement.With
-	519,  // 482: pb.ReadStatement.key:type_name -> pb.ReadStatement.Key
-	316,  // 483: pb.ReadStatement.at_end_phrase:type_name -> pb.AtEndPhrase
-	317,  // 484: pb.ReadStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
-	314,  // 485: pb.ReadStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	315,  // 486: pb.ReadStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	367,  // 487: pb.PurgeStatement.cd_names:type_name -> pb.CdName
-	530,  // 488: pb.PerformStatement.inline_statement:type_name -> pb.PerformStatement.InlineStatement
-	531,  // 489: pb.PerformStatement.procedure_statement:type_name -> pb.PerformStatement.ProcedureStatement
-	533,  // 490: pb.OpenStatement.input_statement:type_name -> pb.OpenStatement.InputStatement
-	535,  // 491: pb.OpenStatement.output_statement:type_name -> pb.OpenStatement.OutputStatement
-	536,  // 492: pb.OpenStatement.io_statement:type_name -> pb.OpenStatement.IOStatement
-	537,  // 493: pb.OpenStatement.extend_statement:type_name -> pb.OpenStatement.ExtendStatement
-	343,  // 494: pb.MultiplyStatement.identifier:type_name -> pb.Identifier
-	394,  // 495: pb.MultiplyStatement.literal:type_name -> pb.Literal
-	541,  // 496: pb.MultiplyStatement.regular:type_name -> pb.MultiplyStatement.Regular
-	540,  // 497: pb.MultiplyStatement.giving:type_name -> pb.MultiplyStatement.Giving
-	310,  // 498: pb.MultiplyStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	311,  // 499: pb.MultiplyStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	267,  // 500: pb.MoveStatement.move_to:type_name -> pb.MoveToStatement
-	268,  // 501: pb.MoveStatement.move_corresponding_to:type_name -> pb.MoveCorrespondingToStatement
-	343,  // 502: pb.MoveToStatement.identifier:type_name -> pb.Identifier
-	394,  // 503: pb.MoveToStatement.literal:type_name -> pb.Literal
-	343,  // 504: pb.MoveToStatement.to:type_name -> pb.Identifier
-	343,  // 505: pb.MoveCorrespondingToStatement.sending_area:type_name -> pb.Identifier
-	343,  // 506: pb.MoveCorrespondingToStatement.to:type_name -> pb.Identifier
-	374,  // 507: pb.MergeStatement.file_name:type_name -> pb.FileName
-	542,  // 508: pb.MergeStatement.on_key_clauses:type_name -> pb.MergeStatement.OnKeyClause
-	543,  // 509: pb.MergeStatement.collating_sequence_phrase:type_name -> pb.MergeStatement.CollatingSequencePhrase
-	546,  // 510: pb.MergeStatement.usings:type_name -> pb.MergeStatement.Using
-	547,  // 511: pb.MergeStatement.output_procedure_phrase:type_name -> pb.MergeStatement.OutputProcedurePhrase
-	549,  // 512: pb.MergeStatement.giving_phrases:type_name -> pb.MergeStatement.GivingPhrase
-	343,  // 513: pb.InspectStatement.identifier:type_name -> pb.Identifier
-	566,  // 514: pb.InspectStatement.tallying_phrase:type_name -> pb.InspectStatement.TallyingPhrase
-	565,  // 515: pb.InspectStatement.tallying_replacing_phrase:type_name -> pb.InspectStatement.TallyingReplacingPhrase
-	564,  // 516: pb.InspectStatement.replacing_phrase:type_name -> pb.InspectStatement.ReplacingPhrase
-	562,  // 517: pb.InspectStatement.converting_phrase:type_name -> pb.InspectStatement.ConvertingPhrase
-	385,  // 518: pb.InitiateStatement.report_names:type_name -> pb.ReportName
-	343,  // 519: pb.InitializeStatement.identifiers:type_name -> pb.Identifier
-	568,  // 520: pb.InitializeStatement.replacing_phrase:type_name -> pb.InitializeStatement.ReplacingPhrase
-	331,  // 521: pb.IfStatement.condition:type_name -> pb.Condition
-	569,  // 522: pb.IfStatement.then:type_name -> pb.IfStatement.Then
-	570,  // 523: pb.IfStatement.else:type_name -> pb.IfStatement.Else
-	571,  // 524: pb.GoToStatement.simple:type_name -> pb.GoToStatement.SimpleStatement
-	573,  // 525: pb.GoToStatement.depending_on:type_name -> pb.GoToStatement.DependingOnStatement
-	385,  // 526: pb.GenerateStatement.report_name:type_name -> pb.ReportName
-	574,  // 527: pb.ExhibitStatement.operands:type_name -> pb.ExhibitStatement.Operand
-	575,  // 528: pb.EvaluateStatement.select:type_name -> pb.EvaluateStatement.Select
-	576,  // 529: pb.EvaluateStatement.also_selects:type_name -> pb.EvaluateStatement.AlsoSelect
-	584,  // 530: pb.EvaluateStatement.when_phrases:type_name -> pb.EvaluateStatement.WhenPhrase
-	582,  // 531: pb.EvaluateStatement.when_other:type_name -> pb.EvaluateStatement.WhenOther
-	394,  // 532: pb.EntryStatement.entry:type_name -> pb.Literal
-	343,  // 533: pb.EntryStatement.usings:type_name -> pb.Identifier
-	367,  // 534: pb.EnableStatement.cd_name:type_name -> pb.CdName
-	343,  // 535: pb.EnableStatement.identifier:type_name -> pb.Identifier
-	394,  // 536: pb.EnableStatement.literal:type_name -> pb.Literal
-	343,  // 537: pb.DivideStatement.identifier:type_name -> pb.Identifier
-	394,  // 538: pb.DivideStatement.literal:type_name -> pb.Literal
-	588,  // 539: pb.DivideStatement.into_statement:type_name -> pb.DivideStatement.IntoStatement
-	589,  // 540: pb.DivideStatement.into_giving_statement:type_name -> pb.DivideStatement.IntoGivingStatement
-	590,  // 541: pb.DivideStatement.by_giving_statement:type_name -> pb.DivideStatement.ByGivingStatement
-	591,  // 542: pb.DivideStatement.remainder:type_name -> pb.DivideStatement.Remainder
-	310,  // 543: pb.DivideStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	311,  // 544: pb.DivideStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	343,  // 545: pb.DisplayOperand.Identifier:type_name -> pb.Identifier
-	394,  // 546: pb.DisplayOperand.Literal:type_name -> pb.Literal
-	343,  // 547: pb.DisplayAt.Identifier:type_name -> pb.Identifier
-	394,  // 548: pb.DisplayAt.Literal:type_name -> pb.Literal
-	380,  // 549: pb.DisplayUpon.mnemonic_name:type_name -> pb.MnemonicName
-	373,  // 550: pb.DisplayUpon.environment_name:type_name -> pb.EnvironmentName
-	286,  // 551: pb.DisplayStatement.operands:type_name -> pb.DisplayOperand
-	287,  // 552: pb.DisplayStatement.at:type_name -> pb.DisplayAt
-	288,  // 553: pb.DisplayStatement.upon:type_name -> pb.DisplayUpon
-	289,  // 554: pb.DisplayStatement.with:type_name -> pb.DisplayWith
-	318,  // 555: pb.DisplayStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	319,  // 556: pb.DisplayStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	367,  // 557: pb.DisableStatement.cd_name:type_name -> pb.CdName
-	343,  // 558: pb.DisableStatement.identifier:type_name -> pb.Identifier
-	394,  // 559: pb.DisableStatement.literal:type_name -> pb.Literal
-	374,  // 560: pb.DeleteStatement.file_name:type_name -> pb.FileName
-	314,  // 561: pb.DeleteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
-	315,  // 562: pb.DeleteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
-	343,  // 563: pb.ComputeStore.identifier:type_name -> pb.Identifier
-	294,  // 564: pb.ComputeStatement.stores:type_name -> pb.ComputeStore
-	324,  // 565: pb.ComputeStatement.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	310,  // 566: pb.ComputeStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	311,  // 567: pb.ComputeStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	592,  // 568: pb.ClosePortFileIOUsing.close_disposition:type_name -> pb.ClosePortFileIOUsing.CloseDisposition
-	593,  // 569: pb.ClosePortFileIOUsing.associated_data:type_name -> pb.ClosePortFileIOUsing.AssociatedData
-	594,  // 570: pb.ClosePortFileIOUsing.associated_data_length:type_name -> pb.ClosePortFileIOUsing.AssociatedDataLength
-	298,  // 571: pb.ClosePortFileIOStatement.usings:type_name -> pb.ClosePortFileIOUsing
-	374,  // 572: pb.CloseFile.file_name:type_name -> pb.FileName
-	296,  // 573: pb.CloseFile.close_reel_unit_statement:type_name -> pb.CloseReelUnitStatement
-	297,  // 574: pb.CloseFile.close_relative_statement:type_name -> pb.CloseRelativeStatement
-	299,  // 575: pb.CloseFile.close_port_file_io_statement:type_name -> pb.ClosePortFileIOStatement
-	300,  // 576: pb.CloseStatement.close_files:type_name -> pb.CloseFile
-	378,  // 577: pb.CancelCall.library_name:type_name -> pb.LibraryName
-	343,  // 578: pb.CancelCall.identifier:type_name -> pb.Identifier
-	394,  // 579: pb.CancelCall.literal:type_name -> pb.Literal
-	302,  // 580: pb.CancelStatement.calls:type_name -> pb.CancelCall
-	343,  // 581: pb.CallStatement.target_identifier:type_name -> pb.Identifier
-	394,  // 582: pb.CallStatement.target_literal:type_name -> pb.Literal
-	602,  // 583: pb.CallStatement.using_phrase:type_name -> pb.CallStatement.UsingPhrase
-	603,  // 584: pb.CallStatement.giving_phrase:type_name -> pb.CallStatement.GivingPhrase
-	312,  // 585: pb.CallStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
-	318,  // 586: pb.CallStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	319,  // 587: pb.CallStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	604,  // 588: pb.AlterStatement.proceed_tos:type_name -> pb.AlterStatement.ProceedTo
-	607,  // 589: pb.AddStatement.to:type_name -> pb.AddStatement.To
-	608,  // 590: pb.AddStatement.to_giving:type_name -> pb.AddStatement.ToGiving
-	609,  // 591: pb.AddStatement.corresponding:type_name -> pb.AddStatement.Corresponding
-	310,  // 592: pb.AddStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
-	311,  // 593: pb.AddStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
-	343,  // 594: pb.AcceptStatement.identifier:type_name -> pb.Identifier
-	610,  // 595: pb.AcceptStatement.from_date:type_name -> pb.AcceptStatement.FromDate
-	611,  // 596: pb.AcceptStatement.from_escape_key:type_name -> pb.AcceptStatement.FromEscapeKey
-	612,  // 597: pb.AcceptStatement.from_mnemonic:type_name -> pb.AcceptStatement.FromMnemonic
-	613,  // 598: pb.AcceptStatement.message_count:type_name -> pb.AcceptStatement.MessageCount
-	318,  // 599: pb.AcceptStatement.on_exception_clause:type_name -> pb.OnExceptionClause
-	319,  // 600: pb.AcceptStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
-	244,  // 601: pb.AtEndOfPagePhrase.statements:type_name -> pb.Statement
-	244,  // 602: pb.NotAtEndOfPagePhrase.statements:type_name -> pb.Statement
-	244,  // 603: pb.OnSizeErrorPhrase.statements:type_name -> pb.Statement
-	244,  // 604: pb.NotOnSizeErrorPhrase.statements:type_name -> pb.Statement
-	244,  // 605: pb.OnOverflowPhrase.statements:type_name -> pb.Statement
-	244,  // 606: pb.NotOnOverflowPhrase.statements:type_name -> pb.Statement
-	244,  // 607: pb.InvalidKeyPhrase.statements:type_name -> pb.Statement
-	244,  // 608: pb.NotInvalidKeyPhrase.statements:type_name -> pb.Statement
-	244,  // 609: pb.AtEndPhrase.statements:type_name -> pb.Statement
-	244,  // 610: pb.NotAtEndPhrase.statements:type_name -> pb.Statement
-	244,  // 611: pb.OnExceptionClause.statements:type_name -> pb.Statement
-	244,  // 612: pb.NotOnExceptionClause.statements:type_name -> pb.Statement
-	323,  // 613: pb.UseStatement.use_after_clause:type_name -> pb.UseAfterClause
-	322,  // 614: pb.UseStatement.use_debug_clause:type_name -> pb.UseDebugClause
-	343,  // 615: pb.UseDebugOn.Identifier:type_name -> pb.Identifier
-	382,  // 616: pb.UseDebugOn.procedureName:type_name -> pb.ProcedureName
-	374,  // 617: pb.UseDebugOn.fileName:type_name -> pb.FileName
-	321,  // 618: pb.UseDebugClause.ons:type_name -> pb.UseDebugOn
+	396,  // 313: pb.AttributeClause2.lib_parameter:type_name -> pb.Literal
+	396,  // 314: pb.AttributeClause2.title:type_name -> pb.Literal
+	385,  // 315: pb.ProcedureClause1.program_name:type_name -> pb.ProgramName
+	396,  // 316: pb.ProcedureClause1.for:type_name -> pb.Literal
+	385,  // 317: pb.ProcedureClause2.program_name:type_name -> pb.ProgramName
+	396,  // 318: pb.ProcedureClause2.for:type_name -> pb.Literal
+	434,  // 319: pb.ProcedureClause2.with_names:type_name -> pb.ProcedureClause2.WithName
+	435,  // 320: pb.ProcedureClause2.using_names:type_name -> pb.ProcedureClause2.UsingName
+	373,  // 321: pb.ProcedureClause2.giving:type_name -> pb.DataName
+	137,  // 322: pb.LocalStorageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	381,  // 323: pb.LocalStorageSection.local_name:type_name -> pb.LocalName
+	137,  // 324: pb.LinkageSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	221,  // 325: pb.CommunicationSection.communication_description_entries:type_name -> pb.CommunicationDescriptionEntry
+	137,  // 326: pb.CommunicationSection.data_description_entries:type_name -> pb.DataDescriptionEntry
+	369,  // 327: pb.CommunicationDescriptionEntry.cd_name:type_name -> pb.CdName
+	436,  // 328: pb.CommunicationDescriptionEntry.input:type_name -> pb.CommunicationDescriptionEntry.Input
+	437,  // 329: pb.CommunicationDescriptionEntry.output:type_name -> pb.CommunicationDescriptionEntry.Output
+	438,  // 330: pb.CommunicationDescriptionEntry.io:type_name -> pb.CommunicationDescriptionEntry.Io
+	374,  // 331: pb.SymbolicTerminalClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 332: pb.SymbolicDestinationClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 333: pb.ErrorKeyClause.data_desc_name:type_name -> pb.DataDescName
+	399,  // 334: pb.DestinationTableClause.times:type_name -> pb.IntegerLiteral
+	378,  // 335: pb.DestinationTableClause.indexes:type_name -> pb.IndexName
+	374,  // 336: pb.DestinationCountClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 337: pb.SymbolicQueueClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 338: pb.SymbolicSubQueueClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 339: pb.MessageDateClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 340: pb.MessageTimeClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 341: pb.SymbolicSourceClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 342: pb.TextLengthClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 343: pb.EndKeyClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 344: pb.StatusKeyClause.data_desc_name:type_name -> pb.DataDescName
+	374,  // 345: pb.MessageCountClause.data_desc_name:type_name -> pb.DataDescName
+	237,  // 346: pb.DataBaseSection.data_base_section_entries:type_name -> pb.DataBaseSectionEntry
+	399,  // 347: pb.DataBaseSectionEntry.integer_literal:type_name -> pb.IntegerLiteral
+	396,  // 348: pb.DataBaseSectionEntry.literal:type_name -> pb.Literal
+	396,  // 349: pb.DataBaseSectionEntry.invoke:type_name -> pb.Literal
+	445,  // 350: pb.ProcedureDivision.using_clause:type_name -> pb.ProcedureDivision.UsingClause
+	444,  // 351: pb.ProcedureDivision.giving_clause:type_name -> pb.ProcedureDivision.GivingClause
+	240,  // 352: pb.ProcedureDivision.declaratives:type_name -> pb.Declarative
+	242,  // 353: pb.ProcedureDivision.paragraphs:type_name -> pb.Paragraphs
+	239,  // 354: pb.ProcedureDivision.procedure_sections:type_name -> pb.ProcedureSection
+	241,  // 355: pb.ProcedureSection.procedure_section_header:type_name -> pb.ProcedureSectionHeader
+	242,  // 356: pb.ProcedureSection.paragraphs:type_name -> pb.Paragraphs
+	241,  // 357: pb.Declarative.procedure_section_header:type_name -> pb.ProcedureSectionHeader
+	322,  // 358: pb.Declarative.use_statement:type_name -> pb.UseStatement
+	242,  // 359: pb.Declarative.paragraphs:type_name -> pb.Paragraphs
+	391,  // 360: pb.ProcedureSectionHeader.section_name:type_name -> pb.SectionName
+	399,  // 361: pb.ProcedureSectionHeader.integer_literal:type_name -> pb.IntegerLiteral
+	244,  // 362: pb.Paragraphs.sentences:type_name -> pb.Sentences
+	243,  // 363: pb.Paragraphs.paragraphs:type_name -> pb.Paragraph
+	383,  // 364: pb.Paragraph.paragraph_name:type_name -> pb.ParagraphName
+	244,  // 365: pb.Paragraph.sentences:type_name -> pb.Sentences
+	245,  // 366: pb.Sentences.sentences:type_name -> pb.Sentence
+	246,  // 367: pb.Sentence.statements:type_name -> pb.Statement
+	309,  // 368: pb.Statement.accept_statement:type_name -> pb.AcceptStatement
+	308,  // 369: pb.Statement.add_statement:type_name -> pb.AddStatement
+	307,  // 370: pb.Statement.alter_statement:type_name -> pb.AlterStatement
+	306,  // 371: pb.Statement.call_statement:type_name -> pb.CallStatement
+	305,  // 372: pb.Statement.cancel_statement:type_name -> pb.CancelStatement
+	303,  // 373: pb.Statement.close_statement:type_name -> pb.CloseStatement
+	297,  // 374: pb.Statement.compute_statement:type_name -> pb.ComputeStatement
+	295,  // 375: pb.Statement.continue_statement:type_name -> pb.ContinueStatement
+	294,  // 376: pb.Statement.delete_statement:type_name -> pb.DeleteStatement
+	293,  // 377: pb.Statement.disable_statement:type_name -> pb.DisableStatement
+	292,  // 378: pb.Statement.display_statement:type_name -> pb.DisplayStatement
+	287,  // 379: pb.Statement.divide_statement:type_name -> pb.DivideStatement
+	286,  // 380: pb.Statement.enable_statement:type_name -> pb.EnableStatement
+	285,  // 381: pb.Statement.entry_statement:type_name -> pb.EntryStatement
+	284,  // 382: pb.Statement.evaluate_statement:type_name -> pb.EvaluateStatement
+	283,  // 383: pb.Statement.exhibit_statement:type_name -> pb.ExhibitStatement
+	282,  // 384: pb.Statement.exec_cics_statement:type_name -> pb.ExecCicsStatement
+	281,  // 385: pb.Statement.exec_sql_statement:type_name -> pb.ExecSqlStatement
+	280,  // 386: pb.Statement.exec_sql_ims_statement:type_name -> pb.ExecSqlImsStatement
+	279,  // 387: pb.Statement.exit_statement:type_name -> pb.ExitStatement
+	278,  // 388: pb.Statement.generate_statement:type_name -> pb.GenerateStatement
+	277,  // 389: pb.Statement.goback_statement:type_name -> pb.GobackStatement
+	276,  // 390: pb.Statement.go_to_statement:type_name -> pb.GoToStatement
+	275,  // 391: pb.Statement.if_statement:type_name -> pb.IfStatement
+	274,  // 392: pb.Statement.initialize_statement:type_name -> pb.InitializeStatement
+	273,  // 393: pb.Statement.initiate_statement:type_name -> pb.InitiateStatement
+	272,  // 394: pb.Statement.inspect_statement:type_name -> pb.InspectStatement
+	271,  // 395: pb.Statement.merge_statement:type_name -> pb.MergeStatement
+	268,  // 396: pb.Statement.move_statement:type_name -> pb.MoveStatement
+	267,  // 397: pb.Statement.multiply_statement:type_name -> pb.MultiplyStatement
+	266,  // 398: pb.Statement.next_sentence_statement:type_name -> pb.NextSentenceStatement
+	265,  // 399: pb.Statement.open_statement:type_name -> pb.OpenStatement
+	264,  // 400: pb.Statement.perform_statement:type_name -> pb.PerformStatement
+	263,  // 401: pb.Statement.purge_statement:type_name -> pb.PurgeStatement
+	262,  // 402: pb.Statement.read_statement:type_name -> pb.ReadStatement
+	261,  // 403: pb.Statement.receive_statement:type_name -> pb.ReceiveStatement
+	260,  // 404: pb.Statement.release_statement:type_name -> pb.ReleaseStatement
+	259,  // 405: pb.Statement.return_statement:type_name -> pb.ReturnStatement
+	258,  // 406: pb.Statement.rewrite_statement:type_name -> pb.RewriteStatement
+	257,  // 407: pb.Statement.search_statement:type_name -> pb.SearchStatement
+	256,  // 408: pb.Statement.send_statement:type_name -> pb.SendStatement
+	255,  // 409: pb.Statement.set_statement:type_name -> pb.SetStatement
+	254,  // 410: pb.Statement.sort_statement:type_name -> pb.SortStatement
+	253,  // 411: pb.Statement.start_statement:type_name -> pb.StartStatement
+	252,  // 412: pb.Statement.stop_statement:type_name -> pb.StopStatement
+	251,  // 413: pb.Statement.string_statement:type_name -> pb.StringStatement
+	250,  // 414: pb.Statement.subtract_statement:type_name -> pb.SubtractStatement
+	249,  // 415: pb.Statement.terminate_statement:type_name -> pb.TerminateStatement
+	248,  // 416: pb.Statement.unstring_statement:type_name -> pb.UnstringStatement
+	247,  // 417: pb.Statement.write_statement:type_name -> pb.WriteStatement
+	386,  // 418: pb.WriteStatement.record_name:type_name -> pb.RecordName
+	446,  // 419: pb.WriteStatement.from_phrase:type_name -> pb.WriteStatement.FromPhrase
+	450,  // 420: pb.WriteStatement.advancing_phrase:type_name -> pb.WriteStatement.AdvancingPhrase
+	310,  // 421: pb.WriteStatement.at_end_of_page_phrase:type_name -> pb.AtEndOfPagePhrase
+	311,  // 422: pb.WriteStatement.not_at_end_of_page_phrase:type_name -> pb.NotAtEndOfPagePhrase
+	316,  // 423: pb.WriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	317,  // 424: pb.WriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	457,  // 425: pb.UnstringStatement.sending_phrase:type_name -> pb.UnstringStatement.SendingPhrase
+	458,  // 426: pb.UnstringStatement.into_phrase:type_name -> pb.UnstringStatement.IntoPhrase
+	459,  // 427: pb.UnstringStatement.with_pointer_phrase:type_name -> pb.UnstringStatement.WithPointerPhrase
+	460,  // 428: pb.UnstringStatement.tallying_phrase:type_name -> pb.UnstringStatement.TallyingPhrase
+	314,  // 429: pb.UnstringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
+	315,  // 430: pb.UnstringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
+	387,  // 431: pb.TerminateStatement.report_name:type_name -> pb.ReportName
+	466,  // 432: pb.SubtractStatement.from_statement:type_name -> pb.SubtractStatement.FromStatement
+	467,  // 433: pb.SubtractStatement.from_giving_statement:type_name -> pb.SubtractStatement.FromGivingStatement
+	468,  // 434: pb.SubtractStatement.corresponding_statement:type_name -> pb.SubtractStatement.CorrespondingStatement
+	312,  // 435: pb.SubtractStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	313,  // 436: pb.SubtractStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	472,  // 437: pb.StringStatement.sending_phrases:type_name -> pb.StringStatement.SendingPhrase
+	473,  // 438: pb.StringStatement.into_phrase:type_name -> pb.StringStatement.IntoPhrase
+	474,  // 439: pb.StringStatement.with_pointer_phrase:type_name -> pb.StringStatement.WithPointerPhrase
+	314,  // 440: pb.StringStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
+	315,  // 441: pb.StringStatement.not_on_overflow_phrase:type_name -> pb.NotOnOverflowPhrase
+	396,  // 442: pb.StopStatement.literal:type_name -> pb.Literal
+	475,  // 443: pb.StopStatement.giving:type_name -> pb.StopStatement.Giving
+	376,  // 444: pb.StartStatement.file_name:type_name -> pb.FileName
+	476,  // 445: pb.StartStatement.key:type_name -> pb.StartStatement.Key
+	316,  // 446: pb.StartStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	317,  // 447: pb.StartStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	376,  // 448: pb.SortStatement.file_name:type_name -> pb.FileName
+	477,  // 449: pb.SortStatement.on_key_clauses:type_name -> pb.SortStatement.OnKeyClause
+	478,  // 450: pb.SortStatement.duplicates_phrase:type_name -> pb.SortStatement.DuplicatesPhrase
+	481,  // 451: pb.SortStatement.collating_sequence_phrase:type_name -> pb.SortStatement.CollatingSequencePhrase
+	483,  // 452: pb.SortStatement.input_procedure_phrase:type_name -> pb.SortStatement.InputProcedurePhrase
+	484,  // 453: pb.SortStatement.usings:type_name -> pb.SortStatement.Using
+	486,  // 454: pb.SortStatement.output_procedure_phrase:type_name -> pb.SortStatement.OutputProcedurePhrase
+	488,  // 455: pb.SortStatement.giving_phrases:type_name -> pb.SortStatement.GivingPhrase
+	493,  // 456: pb.SetStatement.to_statements:type_name -> pb.SetStatement.ToStatement
+	494,  // 457: pb.SetStatement.up_down_by_statement:type_name -> pb.SetStatement.UpDownByStatement
+	502,  // 458: pb.SendStatement.sync_statement:type_name -> pb.SendStatement.SyncStatement
+	503,  // 459: pb.SendStatement.async_statement:type_name -> pb.SendStatement.AsyncStatement
+	320,  // 460: pb.SendStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	321,  // 461: pb.SendStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	355,  // 462: pb.SearchStatement.qualified_data_name:type_name -> pb.QualifiedDataName
+	504,  // 463: pb.SearchStatement.varying:type_name -> pb.SearchStatement.Varying
+	505,  // 464: pb.SearchStatement.when:type_name -> pb.SearchStatement.When
+	386,  // 465: pb.RewriteStatement.record_name:type_name -> pb.RecordName
+	506,  // 466: pb.RewriteStatement.from:type_name -> pb.RewriteStatement.From
+	316,  // 467: pb.RewriteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	317,  // 468: pb.RewriteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	376,  // 469: pb.ReturnStatement.file_name:type_name -> pb.FileName
+	507,  // 470: pb.ReturnStatement.into:type_name -> pb.ReturnStatement.Into
+	318,  // 471: pb.ReturnStatement.at_end_phrase:type_name -> pb.AtEndPhrase
+	319,  // 472: pb.ReturnStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
+	386,  // 473: pb.ReleaseStatement.record_name:type_name -> pb.RecordName
+	508,  // 474: pb.ReleaseStatement.from:type_name -> pb.ReleaseStatement.From
+	515,  // 475: pb.ReceiveStatement.from_statement:type_name -> pb.ReceiveStatement.FromStatement
+	518,  // 476: pb.ReceiveStatement.into_statement:type_name -> pb.ReceiveStatement.IntoStatement
+	320,  // 477: pb.ReceiveStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	321,  // 478: pb.ReceiveStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	376,  // 479: pb.ReadStatement.file_name:type_name -> pb.FileName
+	519,  // 480: pb.ReadStatement.into:type_name -> pb.ReadStatement.Into
+	520,  // 481: pb.ReadStatement.with:type_name -> pb.ReadStatement.With
+	521,  // 482: pb.ReadStatement.key:type_name -> pb.ReadStatement.Key
+	318,  // 483: pb.ReadStatement.at_end_phrase:type_name -> pb.AtEndPhrase
+	319,  // 484: pb.ReadStatement.not_at_end_phrase:type_name -> pb.NotAtEndPhrase
+	316,  // 485: pb.ReadStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	317,  // 486: pb.ReadStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	369,  // 487: pb.PurgeStatement.cd_names:type_name -> pb.CdName
+	532,  // 488: pb.PerformStatement.inline_statement:type_name -> pb.PerformStatement.InlineStatement
+	533,  // 489: pb.PerformStatement.procedure_statement:type_name -> pb.PerformStatement.ProcedureStatement
+	535,  // 490: pb.OpenStatement.input_statement:type_name -> pb.OpenStatement.InputStatement
+	537,  // 491: pb.OpenStatement.output_statement:type_name -> pb.OpenStatement.OutputStatement
+	538,  // 492: pb.OpenStatement.io_statement:type_name -> pb.OpenStatement.IOStatement
+	539,  // 493: pb.OpenStatement.extend_statement:type_name -> pb.OpenStatement.ExtendStatement
+	345,  // 494: pb.MultiplyStatement.identifier:type_name -> pb.Identifier
+	396,  // 495: pb.MultiplyStatement.literal:type_name -> pb.Literal
+	543,  // 496: pb.MultiplyStatement.regular:type_name -> pb.MultiplyStatement.Regular
+	542,  // 497: pb.MultiplyStatement.giving:type_name -> pb.MultiplyStatement.Giving
+	312,  // 498: pb.MultiplyStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	313,  // 499: pb.MultiplyStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	269,  // 500: pb.MoveStatement.move_to:type_name -> pb.MoveToStatement
+	270,  // 501: pb.MoveStatement.move_corresponding_to:type_name -> pb.MoveCorrespondingToStatement
+	345,  // 502: pb.MoveToStatement.identifier:type_name -> pb.Identifier
+	396,  // 503: pb.MoveToStatement.literal:type_name -> pb.Literal
+	345,  // 504: pb.MoveToStatement.to:type_name -> pb.Identifier
+	345,  // 505: pb.MoveCorrespondingToStatement.sending_area:type_name -> pb.Identifier
+	345,  // 506: pb.MoveCorrespondingToStatement.to:type_name -> pb.Identifier
+	376,  // 507: pb.MergeStatement.file_name:type_name -> pb.FileName
+	544,  // 508: pb.MergeStatement.on_key_clauses:type_name -> pb.MergeStatement.OnKeyClause
+	545,  // 509: pb.MergeStatement.collating_sequence_phrase:type_name -> pb.MergeStatement.CollatingSequencePhrase
+	548,  // 510: pb.MergeStatement.usings:type_name -> pb.MergeStatement.Using
+	549,  // 511: pb.MergeStatement.output_procedure_phrase:type_name -> pb.MergeStatement.OutputProcedurePhrase
+	551,  // 512: pb.MergeStatement.giving_phrases:type_name -> pb.MergeStatement.GivingPhrase
+	345,  // 513: pb.InspectStatement.identifier:type_name -> pb.Identifier
+	568,  // 514: pb.InspectStatement.tallying_phrase:type_name -> pb.InspectStatement.TallyingPhrase
+	567,  // 515: pb.InspectStatement.tallying_replacing_phrase:type_name -> pb.InspectStatement.TallyingReplacingPhrase
+	566,  // 516: pb.InspectStatement.replacing_phrase:type_name -> pb.InspectStatement.ReplacingPhrase
+	564,  // 517: pb.InspectStatement.converting_phrase:type_name -> pb.InspectStatement.ConvertingPhrase
+	387,  // 518: pb.InitiateStatement.report_names:type_name -> pb.ReportName
+	345,  // 519: pb.InitializeStatement.identifiers:type_name -> pb.Identifier
+	570,  // 520: pb.InitializeStatement.replacing_phrase:type_name -> pb.InitializeStatement.ReplacingPhrase
+	333,  // 521: pb.IfStatement.condition:type_name -> pb.Condition
+	571,  // 522: pb.IfStatement.then:type_name -> pb.IfStatement.Then
+	572,  // 523: pb.IfStatement.else:type_name -> pb.IfStatement.Else
+	573,  // 524: pb.GoToStatement.simple:type_name -> pb.GoToStatement.SimpleStatement
+	575,  // 525: pb.GoToStatement.depending_on:type_name -> pb.GoToStatement.DependingOnStatement
+	387,  // 526: pb.GenerateStatement.report_name:type_name -> pb.ReportName
+	576,  // 527: pb.ExhibitStatement.operands:type_name -> pb.ExhibitStatement.Operand
+	577,  // 528: pb.EvaluateStatement.select:type_name -> pb.EvaluateStatement.Select
+	578,  // 529: pb.EvaluateStatement.also_selects:type_name -> pb.EvaluateStatement.AlsoSelect
+	586,  // 530: pb.EvaluateStatement.when_phrases:type_name -> pb.EvaluateStatement.WhenPhrase
+	584,  // 531: pb.EvaluateStatement.when_other:type_name -> pb.EvaluateStatement.WhenOther
+	396,  // 532: pb.EntryStatement.entry:type_name -> pb.Literal
+	345,  // 533: pb.EntryStatement.usings:type_name -> pb.Identifier
+	369,  // 534: pb.EnableStatement.cd_name:type_name -> pb.CdName
+	345,  // 535: pb.EnableStatement.identifier:type_name -> pb.Identifier
+	396,  // 536: pb.EnableStatement.literal:type_name -> pb.Literal
+	345,  // 537: pb.DivideStatement.identifier:type_name -> pb.Identifier
+	396,  // 538: pb.DivideStatement.literal:type_name -> pb.Literal
+	590,  // 539: pb.DivideStatement.into_statement:type_name -> pb.DivideStatement.IntoStatement
+	591,  // 540: pb.DivideStatement.into_giving_statement:type_name -> pb.DivideStatement.IntoGivingStatement
+	592,  // 541: pb.DivideStatement.by_giving_statement:type_name -> pb.DivideStatement.ByGivingStatement
+	593,  // 542: pb.DivideStatement.remainder:type_name -> pb.DivideStatement.Remainder
+	312,  // 543: pb.DivideStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	313,  // 544: pb.DivideStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	345,  // 545: pb.DisplayOperand.Identifier:type_name -> pb.Identifier
+	396,  // 546: pb.DisplayOperand.Literal:type_name -> pb.Literal
+	345,  // 547: pb.DisplayAt.Identifier:type_name -> pb.Identifier
+	396,  // 548: pb.DisplayAt.Literal:type_name -> pb.Literal
+	382,  // 549: pb.DisplayUpon.mnemonic_name:type_name -> pb.MnemonicName
+	375,  // 550: pb.DisplayUpon.environment_name:type_name -> pb.EnvironmentName
+	288,  // 551: pb.DisplayStatement.operands:type_name -> pb.DisplayOperand
+	289,  // 552: pb.DisplayStatement.at:type_name -> pb.DisplayAt
+	290,  // 553: pb.DisplayStatement.upon:type_name -> pb.DisplayUpon
+	291,  // 554: pb.DisplayStatement.with:type_name -> pb.DisplayWith
+	320,  // 555: pb.DisplayStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	321,  // 556: pb.DisplayStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	369,  // 557: pb.DisableStatement.cd_name:type_name -> pb.CdName
+	345,  // 558: pb.DisableStatement.identifier:type_name -> pb.Identifier
+	396,  // 559: pb.DisableStatement.literal:type_name -> pb.Literal
+	376,  // 560: pb.DeleteStatement.file_name:type_name -> pb.FileName
+	316,  // 561: pb.DeleteStatement.invalid_key_phrase:type_name -> pb.InvalidKeyPhrase
+	317,  // 562: pb.DeleteStatement.not_invalid_key_phrase:type_name -> pb.NotInvalidKeyPhrase
+	345,  // 563: pb.ComputeStore.identifier:type_name -> pb.Identifier
+	296,  // 564: pb.ComputeStatement.stores:type_name -> pb.ComputeStore
+	326,  // 565: pb.ComputeStatement.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	312,  // 566: pb.ComputeStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	313,  // 567: pb.ComputeStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	594,  // 568: pb.ClosePortFileIOUsing.close_disposition:type_name -> pb.ClosePortFileIOUsing.CloseDisposition
+	595,  // 569: pb.ClosePortFileIOUsing.associated_data:type_name -> pb.ClosePortFileIOUsing.AssociatedData
+	596,  // 570: pb.ClosePortFileIOUsing.associated_data_length:type_name -> pb.ClosePortFileIOUsing.AssociatedDataLength
+	300,  // 571: pb.ClosePortFileIOStatement.usings:type_name -> pb.ClosePortFileIOUsing
+	376,  // 572: pb.CloseFile.file_name:type_name -> pb.FileName
+	298,  // 573: pb.CloseFile.close_reel_unit_statement:type_name -> pb.CloseReelUnitStatement
+	299,  // 574: pb.CloseFile.close_relative_statement:type_name -> pb.CloseRelativeStatement
+	301,  // 575: pb.CloseFile.close_port_file_io_statement:type_name -> pb.ClosePortFileIOStatement
+	302,  // 576: pb.CloseStatement.close_files:type_name -> pb.CloseFile
+	380,  // 577: pb.CancelCall.library_name:type_name -> pb.LibraryName
+	345,  // 578: pb.CancelCall.identifier:type_name -> pb.Identifier
+	396,  // 579: pb.CancelCall.literal:type_name -> pb.Literal
+	304,  // 580: pb.CancelStatement.calls:type_name -> pb.CancelCall
+	345,  // 581: pb.CallStatement.target_identifier:type_name -> pb.Identifier
+	396,  // 582: pb.CallStatement.target_literal:type_name -> pb.Literal
+	604,  // 583: pb.CallStatement.using_phrase:type_name -> pb.CallStatement.UsingPhrase
+	605,  // 584: pb.CallStatement.giving_phrase:type_name -> pb.CallStatement.GivingPhrase
+	314,  // 585: pb.CallStatement.on_overflow_phrase:type_name -> pb.OnOverflowPhrase
+	320,  // 586: pb.CallStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	321,  // 587: pb.CallStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	606,  // 588: pb.AlterStatement.proceed_tos:type_name -> pb.AlterStatement.ProceedTo
+	609,  // 589: pb.AddStatement.to:type_name -> pb.AddStatement.To
+	610,  // 590: pb.AddStatement.to_giving:type_name -> pb.AddStatement.ToGiving
+	611,  // 591: pb.AddStatement.corresponding:type_name -> pb.AddStatement.Corresponding
+	312,  // 592: pb.AddStatement.on_size_error_phrase:type_name -> pb.OnSizeErrorPhrase
+	313,  // 593: pb.AddStatement.not_on_size_error_phrase:type_name -> pb.NotOnSizeErrorPhrase
+	345,  // 594: pb.AcceptStatement.identifier:type_name -> pb.Identifier
+	612,  // 595: pb.AcceptStatement.from_date:type_name -> pb.AcceptStatement.FromDate
+	613,  // 596: pb.AcceptStatement.from_escape_key:type_name -> pb.AcceptStatement.FromEscapeKey
+	614,  // 597: pb.AcceptStatement.from_mnemonic:type_name -> pb.AcceptStatement.FromMnemonic
+	615,  // 598: pb.AcceptStatement.message_count:type_name -> pb.AcceptStatement.MessageCount
+	320,  // 599: pb.AcceptStatement.on_exception_clause:type_name -> pb.OnExceptionClause
+	321,  // 600: pb.AcceptStatement.not_on_exception_clause:type_name -> pb.NotOnExceptionClause
+	246,  // 601: pb.AtEndOfPagePhrase.statements:type_name -> pb.Statement
+	246,  // 602: pb.NotAtEndOfPagePhrase.statements:type_name -> pb.Statement
+	246,  // 603: pb.OnSizeErrorPhrase.statements:type_name -> pb.Statement
+	246,  // 604: pb.NotOnSizeErrorPhrase.statements:type_name -> pb.Statement
+	246,  // 605: pb.OnOverflowPhrase.statements:type_name -> pb.Statement
+	246,  // 606: pb.NotOnOverflowPhrase.statements:type_name -> pb.Statement
+	246,  // 607: pb.InvalidKeyPhrase.statements:type_name -> pb.Statement
+	246,  // 608: pb.NotInvalidKeyPhrase.statements:type_name -> pb.Statement
+	246,  // 609: pb.AtEndPhrase.statements:type_name -> pb.Statement
+	246,  // 610: pb.NotAtEndPhrase.statements:type_name -> pb.Statement
+	246,  // 611: pb.OnExceptionClause.statements:type_name -> pb.Statement
+	246,  // 612: pb.NotOnExceptionClause.statements:type_name -> pb.Statement
+	325,  // 613: pb.UseStatement.use_after_clause:type_name -> pb.UseAfterClause
+	324,  // 614: pb.UseStatement.use_debug_clause:type_name -> pb.UseDebugClause
+	345,  // 615: pb.UseDebugOn.Identifier:type_name -> pb.Identifier
+	384,  // 616: pb.UseDebugOn.procedureName:type_name -> pb.ProcedureName
+	376,  // 617: pb.UseDebugOn.fileName:type_name -> pb.FileName
+	323,  // 618: pb.UseDebugClause.ons:type_name -> pb.UseDebugOn
 	51,   // 619: pb.UseAfterClause.type:type_name -> pb.UseAfterClause.Type
-	614,  // 620: pb.UseAfterClause.file_names:type_name -> pb.UseAfterClause.FileNames
-	326,  // 621: pb.ArithmeticExpression.mult_divs:type_name -> pb.MultDivs
-	325,  // 622: pb.ArithmeticExpression.plus_minus:type_name -> pb.PlusMinus
-	326,  // 623: pb.PlusMinus.mult_divs:type_name -> pb.MultDivs
-	328,  // 624: pb.MultDivs.powers:type_name -> pb.Powers
-	327,  // 625: pb.MultDivs.mult_div:type_name -> pb.MultDiv
-	328,  // 626: pb.MultDiv.powers:type_name -> pb.Powers
-	330,  // 627: pb.Powers.basis:type_name -> pb.Basis
-	329,  // 628: pb.Powers.powers:type_name -> pb.Power
-	330,  // 629: pb.Power.basis:type_name -> pb.Basis
-	324,  // 630: pb.Basis.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	343,  // 631: pb.Basis.identifier:type_name -> pb.Identifier
-	394,  // 632: pb.Basis.literal:type_name -> pb.Literal
-	333,  // 633: pb.Condition.combinable_condition:type_name -> pb.CombinableCondition
-	332,  // 634: pb.Condition.and_or_condition:type_name -> pb.AndOrCondition
-	52,   // 635: pb.AndOrCondition.and_or:type_name -> pb.AndOrCondition.AndOr
-	333,  // 636: pb.AndOrCondition.combinable_condition:type_name -> pb.CombinableCondition
-	342,  // 637: pb.AndOrCondition.abbreviations:type_name -> pb.Abbreviation
-	334,  // 638: pb.CombinableCondition.simple_condition:type_name -> pb.SimpleCondition
-	331,  // 639: pb.SimpleCondition.condition:type_name -> pb.Condition
-	337,  // 640: pb.SimpleCondition.relation_condition:type_name -> pb.RelationCondition
-	335,  // 641: pb.SimpleCondition.class_condition:type_name -> pb.ClassCondition
-	336,  // 642: pb.SimpleCondition.condition_name_reference:type_name -> pb.ConditionNameReference
-	343,  // 643: pb.ClassCondition.identifier:type_name -> pb.Identifier
-	53,   // 644: pb.ClassCondition.value:type_name -> pb.ClassCondition.Type
-	368,  // 645: pb.ClassCondition.class_name:type_name -> pb.ClassName
-	370,  // 646: pb.ConditionNameReference.condition_name:type_name -> pb.ConditionName
-	616,  // 647: pb.ConditionNameReference.in_subscript:type_name -> pb.ConditionNameReference.InSubscript
-	360,  // 648: pb.ConditionNameReference.in_mnemonic:type_name -> pb.InMnemonic
-	338,  // 649: pb.RelationCondition.relation_sign_condition:type_name -> pb.RelationSignCondition
-	339,  // 650: pb.RelationCondition.relation_arithmetic_comparison:type_name -> pb.RelationArithmeticComparison
-	340,  // 651: pb.RelationCondition.relation_combined_comparison:type_name -> pb.RelationCombinedComparison
-	324,  // 652: pb.RelationSignCondition.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	54,   // 653: pb.RelationSignCondition.type:type_name -> pb.RelationSignCondition.Type
-	324,  // 654: pb.RelationArithmeticComparison.left_expression:type_name -> pb.ArithmeticExpression
-	0,    // 655: pb.RelationArithmeticComparison.relational_operator:type_name -> pb.RelationalOperator
-	324,  // 656: pb.RelationArithmeticComparison.right_expression:type_name -> pb.ArithmeticExpression
-	324,  // 657: pb.RelationCombinedComparison.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	0,    // 658: pb.RelationCombinedComparison.relational_operator:type_name -> pb.RelationalOperator
-	341,  // 659: pb.RelationCombinedComparison.relation_combined_condition:type_name -> pb.RelationCombinedCondition
-	324,  // 660: pb.RelationCombinedCondition.left_expression:type_name -> pb.ArithmeticExpression
-	55,   // 661: pb.RelationCombinedCondition.and_or:type_name -> pb.RelationCombinedCondition.AndOr
-	324,  // 662: pb.RelationCombinedCondition.right_expressions:type_name -> pb.ArithmeticExpression
-	0,    // 663: pb.Abbreviation.relational_operator:type_name -> pb.RelationalOperator
-	324,  // 664: pb.Abbreviation.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	342,  // 665: pb.Abbreviation.abbreviation:type_name -> pb.Abbreviation
-	353,  // 666: pb.Identifier.qualified_data_name:type_name -> pb.QualifiedDataName
-	344,  // 667: pb.Identifier.table_call:type_name -> pb.TableCall
-	345,  // 668: pb.Identifier.function_call:type_name -> pb.FunctionCall
-	399,  // 669: pb.Identifier.special_register:type_name -> pb.SpecialRegister
-	353,  // 670: pb.TableCall.qualified_data_name:type_name -> pb.QualifiedDataName
-	349,  // 671: pb.TableCall.subscripts:type_name -> pb.Subscript
-	346,  // 672: pb.TableCall.reference_modifier:type_name -> pb.ReferenceModifier
-	375,  // 673: pb.FunctionCall.function_name:type_name -> pb.FunctionName
-	350,  // 674: pb.FunctionCall.arguments:type_name -> pb.Argument
-	346,  // 675: pb.FunctionCall.reference_modifier:type_name -> pb.ReferenceModifier
-	347,  // 676: pb.ReferenceModifier.character_position:type_name -> pb.CharacterPosition
-	348,  // 677: pb.ReferenceModifier.length:type_name -> pb.Length
-	324,  // 678: pb.CharacterPosition.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	324,  // 679: pb.Length.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	397,  // 680: pb.Subscript.integer_literal:type_name -> pb.IntegerLiteral
-	351,  // 681: pb.Subscript.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
-	352,  // 682: pb.Subscript.index_name:type_name -> pb.IndexNameIntegerLiteral
-	324,  // 683: pb.Subscript.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	394,  // 684: pb.Argument.literal:type_name -> pb.Literal
-	343,  // 685: pb.Argument.identifier:type_name -> pb.Identifier
-	351,  // 686: pb.Argument.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
-	352,  // 687: pb.Argument.index_name:type_name -> pb.IndexNameIntegerLiteral
-	324,  // 688: pb.Argument.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	353,  // 689: pb.QualifiedDataNameIntegerLiteral.qualified_data_name:type_name -> pb.QualifiedDataName
-	397,  // 690: pb.QualifiedDataNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
-	376,  // 691: pb.IndexNameIntegerLiteral.index_name:type_name -> pb.IndexName
-	397,  // 692: pb.IndexNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
-	354,  // 693: pb.QualifiedDataName.f1:type_name -> pb.QualifiedDataNameFormat1
-	355,  // 694: pb.QualifiedDataName.f2:type_name -> pb.QualifiedDataNameFormat2
-	356,  // 695: pb.QualifiedDataName.f3:type_name -> pb.QualifiedDataNameFormat3
-	357,  // 696: pb.QualifiedDataName.f4:type_name -> pb.QualifiedDataNameFormat4
-	371,  // 697: pb.QualifiedDataNameFormat1.data_name:type_name -> pb.DataName
-	370,  // 698: pb.QualifiedDataNameFormat1.condition_name:type_name -> pb.ConditionName
-	358,  // 699: pb.QualifiedDataNameFormat1.in_datas:type_name -> pb.InData
-	363,  // 700: pb.QualifiedDataNameFormat1.in_tables:type_name -> pb.InTable
-	359,  // 701: pb.QualifiedDataNameFormat1.in_file:type_name -> pb.InFile
-	381,  // 702: pb.QualifiedDataNameFormat2.paragraph_name:type_name -> pb.ParagraphName
-	361,  // 703: pb.QualifiedDataNameFormat2.in_section:type_name -> pb.InSection
-	392,  // 704: pb.QualifiedDataNameFormat3.text_name:type_name -> pb.TextName
-	362,  // 705: pb.QualifiedDataNameFormat3.in_library:type_name -> pb.InLibrary
-	359,  // 706: pb.QualifiedDataNameFormat4.in_file:type_name -> pb.InFile
-	371,  // 707: pb.InData.data_name:type_name -> pb.DataName
-	374,  // 708: pb.InFile.file_name:type_name -> pb.FileName
-	380,  // 709: pb.InMnemonic.mnemonic_name:type_name -> pb.MnemonicName
-	389,  // 710: pb.InSection.section_name:type_name -> pb.SectionName
-	378,  // 711: pb.InLibrary.library_name:type_name -> pb.LibraryName
-	344,  // 712: pb.InTable.table_call:type_name -> pb.TableCall
-	393,  // 713: pb.AlphabetName.cobol_word:type_name -> pb.CobolWord
-	390,  // 714: pb.AssignmentName.system_name:type_name -> pb.SystemName
-	383,  // 715: pb.BasisName.program_name:type_name -> pb.ProgramName
-	393,  // 716: pb.CdName.cobol_word:type_name -> pb.CobolWord
-	393,  // 717: pb.ClassName.cobol_word:type_name -> pb.CobolWord
-	390,  // 718: pb.ComputerName.system_name:type_name -> pb.SystemName
-	393,  // 719: pb.ConditionName.cobol_word:type_name -> pb.CobolWord
-	393,  // 720: pb.DataName.cobol_word:type_name -> pb.CobolWord
-	390,  // 721: pb.EnvironmentName.system_name:type_name -> pb.SystemName
-	393,  // 722: pb.FileName.cobol_word:type_name -> pb.CobolWord
-	393,  // 723: pb.IndexName.cobol_word:type_name -> pb.CobolWord
-	390,  // 724: pb.LanguageName.system_name:type_name -> pb.SystemName
-	393,  // 725: pb.LibraryName.cobol_word:type_name -> pb.CobolWord
-	393,  // 726: pb.LocalName.cobol_word:type_name -> pb.CobolWord
-	393,  // 727: pb.MnemonicName.cobol_word:type_name -> pb.CobolWord
-	393,  // 728: pb.ParagraphName.cobol_word:type_name -> pb.CobolWord
-	397,  // 729: pb.ParagraphName.integer_literal:type_name -> pb.IntegerLiteral
-	381,  // 730: pb.ProcedureName.paragraph_name:type_name -> pb.ParagraphName
-	389,  // 731: pb.ProcedureName.section_name:type_name -> pb.SectionName
-	401,  // 732: pb.ProgramName.non_numeric_literal:type_name -> pb.NonNumericLiteral
-	393,  // 733: pb.ProgramName.cobol_word:type_name -> pb.CobolWord
-	353,  // 734: pb.RecordName.qualified_data_name:type_name -> pb.QualifiedDataName
-	353,  // 735: pb.ReportName.qualified_data_name:type_name -> pb.QualifiedDataName
-	393,  // 736: pb.RoutingName.cobol_word:type_name -> pb.CobolWord
-	393,  // 737: pb.RoutineName.cobol_word:type_name -> pb.CobolWord
-	393,  // 738: pb.ScreenName.cobol_word:type_name -> pb.CobolWord
-	393,  // 739: pb.SectionName.cobol_word:type_name -> pb.CobolWord
-	397,  // 740: pb.SectionName.integer_literal:type_name -> pb.IntegerLiteral
-	393,  // 741: pb.SystemName.cobol_word:type_name -> pb.CobolWord
-	393,  // 742: pb.SymbolicCharacter.cobol_word:type_name -> pb.CobolWord
-	393,  // 743: pb.TextName.cobol_word:type_name -> pb.CobolWord
-	56,   // 744: pb.Literal.type:type_name -> pb.Literal.Type
-	396,  // 745: pb.Literal.numeric_literal:type_name -> pb.NumericLiteral
-	395,  // 746: pb.Literal.boolean_literal:type_name -> pb.BooleanLiteral
-	401,  // 747: pb.Literal.non_numeric_literal:type_name -> pb.NonNumericLiteral
-	398,  // 748: pb.Literal.figurative_constant:type_name -> pb.FigurativeConstant
-	57,   // 749: pb.NumericLiteral.type:type_name -> pb.NumericLiteral.Type
-	58,   // 750: pb.FigurativeConstant.type:type_name -> pb.FigurativeConstant.Type
-	394,  // 751: pb.FigurativeConstant.literal:type_name -> pb.Literal
-	59,   // 752: pb.SpecialRegister.type:type_name -> pb.SpecialRegister.Type
-	343,  // 753: pb.SpecialRegister.identifier:type_name -> pb.Identifier
-	1,    // 754: pb.Call.type:type_name -> pb.CallType
-	371,  // 755: pb.Call.data_name:type_name -> pb.DataName
-	370,  // 756: pb.Call.condition_name:type_name -> pb.ConditionName
-	374,  // 757: pb.Call.file_name:type_name -> pb.FileName
-	382,  // 758: pb.Call.procedure_name:type_name -> pb.ProcedureName
-	389,  // 759: pb.Call.section_name:type_name -> pb.SectionName
-	381,  // 760: pb.Call.paragraph_name:type_name -> pb.ParagraphName
-	383,  // 761: pb.Call.program_name:type_name -> pb.ProgramName
-	376,  // 762: pb.Call.index_name:type_name -> pb.IndexName
-	380,  // 763: pb.Call.mnemonic_name:type_name -> pb.MnemonicName
-	385,  // 764: pb.Call.report_name:type_name -> pb.ReportName
-	367,  // 765: pb.Call.cd_name:type_name -> pb.CdName
-	388,  // 766: pb.Call.screen_name:type_name -> pb.ScreenName
-	399,  // 767: pb.Call.special_register:type_name -> pb.SpecialRegister
-	394,  // 768: pb.AlphabetClause.Also.alsos:type_name -> pb.Literal
-	394,  // 769: pb.AlphabetClause.AlphabetLiteral.literal:type_name -> pb.Literal
-	394,  // 770: pb.AlphabetClause.AlphabetLiteral.through:type_name -> pb.Literal
-	406,  // 771: pb.AlphabetClause.AlphabetLiteral.alsos:type_name -> pb.AlphabetClause.Also
-	407,  // 772: pb.AlphabetClause.AlphabetLiterals.values:type_name -> pb.AlphabetClause.AlphabetLiteral
-	5,    // 773: pb.AlphabetClause.Alphanumeric.type:type_name -> pb.AlphabetClause.Alphanumeric.Type
-	393,  // 774: pb.AlphabetClause.Alphanumeric.cobol_word:type_name -> pb.CobolWord
-	408,  // 775: pb.AlphabetClause.Alphanumeric.values:type_name -> pb.AlphabetClause.AlphabetLiterals
-	6,    // 776: pb.AlphabetClause.National.type:type_name -> pb.AlphabetClause.National.Type
-	394,  // 777: pb.AlphabetClause.National.ccs_version:type_name -> pb.Literal
-	331,  // 778: pb.EnvironmentSwitchNameClause.StatusPhrase.condition:type_name -> pb.Condition
-	331,  // 779: pb.EnvironmentSwitchNameClause.StatusPhrase.off_condition:type_name -> pb.Condition
-	371,  // 780: pb.LabelRecordsClause.DataNames.data_names:type_name -> pb.DataName
-	397,  // 781: pb.DataDescriptionEntry.Format1.level_number:type_name -> pb.IntegerLiteral
-	371,  // 782: pb.DataDescriptionEntry.Format1.data_name:type_name -> pb.DataName
-	137,  // 783: pb.DataDescriptionEntry.Format1.data_redefines_clause:type_name -> pb.DataRedefinesClause
-	138,  // 784: pb.DataDescriptionEntry.Format1.data_integer_string_clause:type_name -> pb.DataIntegerStringClause
-	139,  // 785: pb.DataDescriptionEntry.Format1.data_external_clause:type_name -> pb.DataExternalClause
-	140,  // 786: pb.DataDescriptionEntry.Format1.data_global_clause:type_name -> pb.DataGlobalClause
-	141,  // 787: pb.DataDescriptionEntry.Format1.data_type_def_clause:type_name -> pb.DataTypeDefClause
-	142,  // 788: pb.DataDescriptionEntry.Format1.data_thread_local_clause:type_name -> pb.DataThreadLocalClause
-	143,  // 789: pb.DataDescriptionEntry.Format1.data_picture_clause:type_name -> pb.DataPictureClause
-	147,  // 790: pb.DataDescriptionEntry.Format1.data_common_own_local_clause:type_name -> pb.DataCommonOwnLocalClause
-	148,  // 791: pb.DataDescriptionEntry.Format1.data_type_clause:type_name -> pb.DataTypeClause
-	149,  // 792: pb.DataDescriptionEntry.Format1.data_using_clause:type_name -> pb.DataUsingClause
-	150,  // 793: pb.DataDescriptionEntry.Format1.data_usage_clause:type_name -> pb.DataUsageClause
-	152,  // 794: pb.DataDescriptionEntry.Format1.data_value_clause:type_name -> pb.DataValueClause
-	153,  // 795: pb.DataDescriptionEntry.Format1.data_received_by_clause:type_name -> pb.DataReceivedByClause
-	154,  // 796: pb.DataDescriptionEntry.Format1.data_occurs_clause:type_name -> pb.DataOccursClause
-	155,  // 797: pb.DataDescriptionEntry.Format1.data_sign_clause:type_name -> pb.DataSignClause
-	156,  // 798: pb.DataDescriptionEntry.Format1.data_synchronized_clause:type_name -> pb.DataSynchronizedClause
-	157,  // 799: pb.DataDescriptionEntry.Format1.data_justified_clause:type_name -> pb.DataJustifiedClause
-	158,  // 800: pb.DataDescriptionEntry.Format1.data_blank_when_zero_clause:type_name -> pb.DataBlankWhenZeroClause
-	159,  // 801: pb.DataDescriptionEntry.Format1.data_with_lower_bounds_clause:type_name -> pb.DataWithLowerBoundsClause
-	160,  // 802: pb.DataDescriptionEntry.Format1.data_aligned_clause:type_name -> pb.DataAlignedClause
-	161,  // 803: pb.DataDescriptionEntry.Format1.data_record_area_clause:type_name -> pb.DataRecordAreaClause
-	371,  // 804: pb.DataDescriptionEntry.Format2.data_name:type_name -> pb.DataName
-	136,  // 805: pb.DataDescriptionEntry.Format2.data_renames_clause:type_name -> pb.DataRenamesClause
-	370,  // 806: pb.DataDescriptionEntry.Format3.condition_name:type_name -> pb.ConditionName
-	152,  // 807: pb.DataDescriptionEntry.Format3.data_value_clause:type_name -> pb.DataValueClause
-	24,   // 808: pb.DataTypeClause.Lob.mode:type_name -> pb.DataTypeClause.Mode
-	397,  // 809: pb.DataTypeClause.Lob.integer_literal:type_name -> pb.IntegerLiteral
-	353,  // 810: pb.DataOccursClause.Sort.qualified_data_names:type_name -> pb.QualifiedDataName
-	376,  // 811: pb.DataOccursClause.Indexed.index_names:type_name -> pb.IndexName
-	205,  // 812: pb.ReportGroupDescriptionEntry.Vertical.line_number_clause:type_name -> pb.LineNumberClause
-	206,  // 813: pb.ReportGroupDescriptionEntry.Vertical.next_group_clause:type_name -> pb.NextGroupClause
-	207,  // 814: pb.ReportGroupDescriptionEntry.Vertical.type_clause:type_name -> pb.TypeClause
-	208,  // 815: pb.ReportGroupDescriptionEntry.Vertical.usage_clause:type_name -> pb.UsageClause
-	205,  // 816: pb.ReportGroupDescriptionEntry.Single.line_number_clause:type_name -> pb.LineNumberClause
-	208,  // 817: pb.ReportGroupDescriptionEntry.Single.usage_clause:type_name -> pb.UsageClause
-	204,  // 818: pb.ReportGroupDescriptionEntry.Printable.picture_clause:type_name -> pb.PictureClause
-	208,  // 819: pb.ReportGroupDescriptionEntry.Printable.usage_clause:type_name -> pb.UsageClause
-	203,  // 820: pb.ReportGroupDescriptionEntry.Printable.sign_clause:type_name -> pb.SignClause
-	202,  // 821: pb.ReportGroupDescriptionEntry.Printable.justified_clause:type_name -> pb.JustifiedClause
-	201,  // 822: pb.ReportGroupDescriptionEntry.Printable.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
-	205,  // 823: pb.ReportGroupDescriptionEntry.Printable.line_number_clause:type_name -> pb.LineNumberClause
-	200,  // 824: pb.ReportGroupDescriptionEntry.Printable.column_number_clause:type_name -> pb.ColumnNumberClause
-	199,  // 825: pb.ReportGroupDescriptionEntry.Printable.IndicateClause:type_name -> pb.IndicateClause
-	198,  // 826: pb.ReportGroupDescriptionEntry.Printable.source_clause:type_name -> pb.SourceClause
-	197,  // 827: pb.ReportGroupDescriptionEntry.Printable.value_clause:type_name -> pb.ValueClause
-	196,  // 828: pb.ReportGroupDescriptionEntry.Printable.SumClause:type_name -> pb.SumClause
-	195,  // 829: pb.ReportGroupDescriptionEntry.Printable.reset_clause:type_name -> pb.ResetClause
-	371,  // 830: pb.TypeClause.ControlHeading.data_name:type_name -> pb.DataName
-	371,  // 831: pb.TypeClause.ControlFooting.data_name:type_name -> pb.DataName
-	123,  // 832: pb.LibraryDescriptionEntry.Import.global_clause:type_name -> pb.GlobalClause
-	211,  // 833: pb.LibraryDescriptionEntry.Import.is_common_clause:type_name -> pb.IsCommonClause
-	213,  // 834: pb.LibraryDescriptionEntry.Import.attribute_clause:type_name -> pb.AttributeClause2
-	215,  // 835: pb.LibraryDescriptionEntry.Import.procedure_clause:type_name -> pb.ProcedureClause2
-	212,  // 836: pb.LibraryDescriptionEntry.Export.attribute_clause:type_name -> pb.AttributeClause1
-	214,  // 837: pb.LibraryDescriptionEntry.Export.procedure_clause:type_name -> pb.ProcedureClause1
-	379,  // 838: pb.ProcedureClause2.WithName.local_name:type_name -> pb.LocalName
-	374,  // 839: pb.ProcedureClause2.WithName.file_name:type_name -> pb.FileName
-	371,  // 840: pb.ProcedureClause2.UsingName.data_name:type_name -> pb.DataName
-	374,  // 841: pb.ProcedureClause2.UsingName.file_name:type_name -> pb.FileName
-	367,  // 842: pb.CommunicationDescriptionEntry.Input.cd_name:type_name -> pb.CdName
-	225,  // 843: pb.CommunicationDescriptionEntry.Input.symbolic_queue_clause:type_name -> pb.SymbolicQueueClause
-	226,  // 844: pb.CommunicationDescriptionEntry.Input.symbolic_sub_queue_clause:type_name -> pb.SymbolicSubQueueClause
-	227,  // 845: pb.CommunicationDescriptionEntry.Input.message_date_clause:type_name -> pb.MessageDateClause
-	228,  // 846: pb.CommunicationDescriptionEntry.Input.message_time_clause:type_name -> pb.MessageTimeClause
-	229,  // 847: pb.CommunicationDescriptionEntry.Input.symbolic_source_clause:type_name -> pb.SymbolicSourceClause
-	230,  // 848: pb.CommunicationDescriptionEntry.Input.text_length_clause:type_name -> pb.TextLengthClause
-	231,  // 849: pb.CommunicationDescriptionEntry.Input.end_key_clause:type_name -> pb.EndKeyClause
-	232,  // 850: pb.CommunicationDescriptionEntry.Input.status_key_clause:type_name -> pb.StatusKeyClause
-	233,  // 851: pb.CommunicationDescriptionEntry.Input.message_count_clause:type_name -> pb.MessageCountClause
-	372,  // 852: pb.CommunicationDescriptionEntry.Input.data_desc_name:type_name -> pb.DataDescName
-	224,  // 853: pb.CommunicationDescriptionEntry.Output.destination_count_clause:type_name -> pb.DestinationCountClause
-	230,  // 854: pb.CommunicationDescriptionEntry.Output.text_length_clause:type_name -> pb.TextLengthClause
-	232,  // 855: pb.CommunicationDescriptionEntry.Output.status_key_clause:type_name -> pb.StatusKeyClause
-	223,  // 856: pb.CommunicationDescriptionEntry.Output.destination_table_clause:type_name -> pb.DestinationTableClause
-	222,  // 857: pb.CommunicationDescriptionEntry.Output.errorKeyClause:type_name -> pb.ErrorKeyClause
-	221,  // 858: pb.CommunicationDescriptionEntry.Output.symbolic_destination_clause:type_name -> pb.SymbolicDestinationClause
-	367,  // 859: pb.CommunicationDescriptionEntry.Io.cd_name:type_name -> pb.CdName
-	227,  // 860: pb.CommunicationDescriptionEntry.Io.message_date_clause:type_name -> pb.MessageDateClause
-	228,  // 861: pb.CommunicationDescriptionEntry.Io.message_time_clause:type_name -> pb.MessageTimeClause
-	220,  // 862: pb.CommunicationDescriptionEntry.Io.symbolic_terminal_clause:type_name -> pb.SymbolicTerminalClause
-	230,  // 863: pb.CommunicationDescriptionEntry.Io.text_length_clause:type_name -> pb.TextLengthClause
-	231,  // 864: pb.CommunicationDescriptionEntry.Io.end_key_clause:type_name -> pb.EndKeyClause
-	232,  // 865: pb.CommunicationDescriptionEntry.Io.status_key_clause:type_name -> pb.StatusKeyClause
-	343,  // 866: pb.ProcedureDivision.ByReference.identifier:type_name -> pb.Identifier
-	374,  // 867: pb.ProcedureDivision.ByReference.file_name:type_name -> pb.FileName
-	437,  // 868: pb.ProcedureDivision.ByReferencePhrase.references:type_name -> pb.ProcedureDivision.ByReference
-	343,  // 869: pb.ProcedureDivision.ByValue.identifier:type_name -> pb.Identifier
-	394,  // 870: pb.ProcedureDivision.ByValue.literal:type_name -> pb.Literal
-	439,  // 871: pb.ProcedureDivision.ByValuePhrase.values:type_name -> pb.ProcedureDivision.ByValue
-	438,  // 872: pb.ProcedureDivision.UsingParameter.by_reference_phrase:type_name -> pb.ProcedureDivision.ByReferencePhrase
-	440,  // 873: pb.ProcedureDivision.UsingParameter.by_value_phrase:type_name -> pb.ProcedureDivision.ByValuePhrase
-	44,   // 874: pb.ProcedureDivision.GivingClause.type:type_name -> pb.ProcedureDivision.GivingClause.Type
-	371,  // 875: pb.ProcedureDivision.GivingClause.data_name:type_name -> pb.DataName
-	45,   // 876: pb.ProcedureDivision.UsingClause.type:type_name -> pb.ProcedureDivision.UsingClause.Type
-	441,  // 877: pb.ProcedureDivision.UsingClause.using_parameters:type_name -> pb.ProcedureDivision.UsingParameter
-	343,  // 878: pb.WriteStatement.FromPhrase.identifier:type_name -> pb.Identifier
-	394,  // 879: pb.WriteStatement.FromPhrase.literal:type_name -> pb.Literal
-	343,  // 880: pb.WriteStatement.AdvancingLines.identifier:type_name -> pb.Identifier
-	394,  // 881: pb.WriteStatement.AdvancingLines.literal:type_name -> pb.Literal
-	380,  // 882: pb.WriteStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
-	445,  // 883: pb.WriteStatement.AdvancingPhrase.advancing_page:type_name -> pb.WriteStatement.AdvancingPage
-	446,  // 884: pb.WriteStatement.AdvancingPhrase.advancing_lines:type_name -> pb.WriteStatement.AdvancingLines
-	447,  // 885: pb.WriteStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.WriteStatement.AdvancingMnemonic
-	343,  // 886: pb.UnstringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
-	394,  // 887: pb.UnstringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
-	343,  // 888: pb.UnstringStatement.OrAllPhrase.identifier:type_name -> pb.Identifier
-	394,  // 889: pb.UnstringStatement.OrAllPhrase.literal:type_name -> pb.Literal
-	449,  // 890: pb.UnstringStatement.DelimitedOr.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
-	450,  // 891: pb.UnstringStatement.DelimitedOr.or_all_phrases:type_name -> pb.UnstringStatement.OrAllPhrase
-	343,  // 892: pb.UnstringStatement.Into.identifier:type_name -> pb.Identifier
-	453,  // 893: pb.UnstringStatement.Into.delimiter_in:type_name -> pb.UnstringStatement.DelimiterIn
-	454,  // 894: pb.UnstringStatement.Into.count_in:type_name -> pb.UnstringStatement.CountIn
-	343,  // 895: pb.UnstringStatement.DelimiterIn.identifier:type_name -> pb.Identifier
-	343,  // 896: pb.UnstringStatement.CountIn.identifier:type_name -> pb.Identifier
-	343,  // 897: pb.UnstringStatement.SendingPhrase.identifier:type_name -> pb.Identifier
-	449,  // 898: pb.UnstringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
-	452,  // 899: pb.UnstringStatement.IntoPhrase.into:type_name -> pb.UnstringStatement.Into
-	353,  // 900: pb.UnstringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
-	353,  // 901: pb.UnstringStatement.TallyingPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
-	343,  // 902: pb.SubtractStatement.Subtrahend.identifier:type_name -> pb.Identifier
-	394,  // 903: pb.SubtractStatement.Subtrahend.literal:type_name -> pb.Literal
-	343,  // 904: pb.SubtractStatement.Minuend.identifier:type_name -> pb.Identifier
-	343,  // 905: pb.SubtractStatement.MinuendGiving.identifier:type_name -> pb.Identifier
-	394,  // 906: pb.SubtractStatement.MinuendGiving.literal:type_name -> pb.Literal
-	343,  // 907: pb.SubtractStatement.Giving.identifier:type_name -> pb.Identifier
-	353,  // 908: pb.SubtractStatement.MinuendCorresponding.qualified_data_name:type_name -> pb.QualifiedDataName
-	459,  // 909: pb.SubtractStatement.FromStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
-	460,  // 910: pb.SubtractStatement.FromStatement.minuends:type_name -> pb.SubtractStatement.Minuend
-	459,  // 911: pb.SubtractStatement.FromGivingStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
-	461,  // 912: pb.SubtractStatement.FromGivingStatement.minuend_giving:type_name -> pb.SubtractStatement.MinuendGiving
-	462,  // 913: pb.SubtractStatement.FromGivingStatement.givings:type_name -> pb.SubtractStatement.Giving
-	353,  // 914: pb.SubtractStatement.CorrespondingStatement.qualified_data_name:type_name -> pb.QualifiedDataName
-	463,  // 915: pb.SubtractStatement.CorrespondingStatement.minuend_corresponding:type_name -> pb.SubtractStatement.MinuendCorresponding
-	343,  // 916: pb.StringStatement.Sending.identifier:type_name -> pb.Identifier
-	394,  // 917: pb.StringStatement.Sending.literal:type_name -> pb.Literal
-	343,  // 918: pb.StringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
-	394,  // 919: pb.StringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
-	343,  // 920: pb.StringStatement.ForPhrase.identifier:type_name -> pb.Identifier
-	394,  // 921: pb.StringStatement.ForPhrase.literal:type_name -> pb.Literal
-	467,  // 922: pb.StringStatement.SendingPhrase.sendings:type_name -> pb.StringStatement.Sending
-	468,  // 923: pb.StringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.StringStatement.DelimitedByPhrase
-	469,  // 924: pb.StringStatement.SendingPhrase.for_phrase:type_name -> pb.StringStatement.ForPhrase
-	343,  // 925: pb.StringStatement.IntoPhrase.identifier:type_name -> pb.Identifier
-	353,  // 926: pb.StringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
-	343,  // 927: pb.StopStatement.Giving.identifier:type_name -> pb.Identifier
-	397,  // 928: pb.StopStatement.Giving.integer_literal:type_name -> pb.IntegerLiteral
-	46,   // 929: pb.StartStatement.Key.type:type_name -> pb.StartStatement.Type
-	353,  // 930: pb.StartStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
-	353,  // 931: pb.SortStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
-	364,  // 932: pb.SortStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
-	364,  // 933: pb.SortStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
-	364,  // 934: pb.SortStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
-	477,  // 935: pb.SortStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.SortStatement.CollatingAlphanumeric
-	478,  // 936: pb.SortStatement.CollatingSequencePhrase.collating_national:type_name -> pb.SortStatement.CollatingNational
-	382,  // 937: pb.SortStatement.InputThrough.procedure_name:type_name -> pb.ProcedureName
-	382,  // 938: pb.SortStatement.InputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
-	480,  // 939: pb.SortStatement.InputProcedurePhrase.input_through:type_name -> pb.SortStatement.InputThrough
-	374,  // 940: pb.SortStatement.Using.file_names:type_name -> pb.FileName
-	382,  // 941: pb.SortStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
-	382,  // 942: pb.SortStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
-	483,  // 943: pb.SortStatement.OutputProcedurePhrase.output_through:type_name -> pb.SortStatement.OutputThrough
-	374,  // 944: pb.SortStatement.Giving.file_name:type_name -> pb.FileName
-	47,   // 945: pb.SortStatement.Giving.type:type_name -> pb.SortStatement.Giving.Type
-	485,  // 946: pb.SortStatement.GivingPhrase.givings:type_name -> pb.SortStatement.Giving
-	343,  // 947: pb.SetStatement.To.identifier:type_name -> pb.Identifier
-	343,  // 948: pb.SetStatement.Entry.identifier:type_name -> pb.Identifier
-	394,  // 949: pb.SetStatement.Entry.literal:type_name -> pb.Literal
-	488,  // 950: pb.SetStatement.ToValue.Entry:type_name -> pb.SetStatement.Entry
-	343,  // 951: pb.SetStatement.ToValue.identifier:type_name -> pb.Identifier
-	394,  // 952: pb.SetStatement.ToValue.literal:type_name -> pb.Literal
-	343,  // 953: pb.SetStatement.ByValue.identifier:type_name -> pb.Identifier
-	394,  // 954: pb.SetStatement.ByValue.literal:type_name -> pb.Literal
-	487,  // 955: pb.SetStatement.ToStatement.tos:type_name -> pb.SetStatement.To
-	489,  // 956: pb.SetStatement.ToStatement.to_values:type_name -> pb.SetStatement.ToValue
-	487,  // 957: pb.SetStatement.UpDownByStatement.tos:type_name -> pb.SetStatement.To
-	490,  // 958: pb.SetStatement.UpDownByStatement.by_value:type_name -> pb.SetStatement.ByValue
-	343,  // 959: pb.SendStatement.FromPhrase.identifier:type_name -> pb.Identifier
-	343,  // 960: pb.SendStatement.WithPhrase.identifier:type_name -> pb.Identifier
-	343,  // 961: pb.SendStatement.AdvancingLines.identifier:type_name -> pb.Identifier
-	394,  // 962: pb.SendStatement.AdvancingLines.literal:type_name -> pb.Literal
-	380,  // 963: pb.SendStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
-	496,  // 964: pb.SendStatement.AdvancingPhrase.advancing_page:type_name -> pb.SendStatement.AdvancingPage
-	497,  // 965: pb.SendStatement.AdvancingPhrase.advancing_lines:type_name -> pb.SendStatement.AdvancingLines
-	498,  // 966: pb.SendStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.SendStatement.AdvancingMnemonic
-	343,  // 967: pb.SendStatement.SyncStatement.identifier:type_name -> pb.Identifier
-	394,  // 968: pb.SendStatement.SyncStatement.literal:type_name -> pb.Literal
-	493,  // 969: pb.SendStatement.SyncStatement.from_phrase:type_name -> pb.SendStatement.FromPhrase
-	494,  // 970: pb.SendStatement.SyncStatement.with_phrase:type_name -> pb.SendStatement.WithPhrase
-	495,  // 971: pb.SendStatement.SyncStatement.replacing_phrase:type_name -> pb.SendStatement.ReplacingPhrase
-	499,  // 972: pb.SendStatement.SyncStatement.advancing_phrase:type_name -> pb.SendStatement.AdvancingPhrase
-	343,  // 973: pb.SendStatement.AsyncStatement.identifier:type_name -> pb.Identifier
-	353,  // 974: pb.SearchStatement.Varying.qualified_data_name:type_name -> pb.QualifiedDataName
-	331,  // 975: pb.SearchStatement.When.condition:type_name -> pb.Condition
-	244,  // 976: pb.SearchStatement.When.statements:type_name -> pb.Statement
-	343,  // 977: pb.RewriteStatement.From.identifier:type_name -> pb.Identifier
-	353,  // 978: pb.ReturnStatement.Into.qualified_data_name:type_name -> pb.QualifiedDataName
-	353,  // 979: pb.ReleaseStatement.From.qualified_data_name:type_name -> pb.QualifiedDataName
-	371,  // 980: pb.ReceiveStatement.From.data_name:type_name -> pb.DataName
-	371,  // 981: pb.ReceiveStatement.Thread.data_name:type_name -> pb.DataName
-	396,  // 982: pb.ReceiveStatement.Size.numeric_literal:type_name -> pb.NumericLiteral
-	343,  // 983: pb.ReceiveStatement.Size.identifier:type_name -> pb.Identifier
-	343,  // 984: pb.ReceiveStatement.Status.identifier:type_name -> pb.Identifier
-	396,  // 985: pb.ReceiveStatement.Before.numeric_literal:type_name -> pb.NumericLiteral
-	343,  // 986: pb.ReceiveStatement.Before.identifier:type_name -> pb.Identifier
-	371,  // 987: pb.ReceiveStatement.FromStatement.data_name:type_name -> pb.DataName
-	507,  // 988: pb.ReceiveStatement.FromStatement.from:type_name -> pb.ReceiveStatement.From
-	512,  // 989: pb.ReceiveStatement.FromStatement.before:type_name -> pb.ReceiveStatement.Before
-	508,  // 990: pb.ReceiveStatement.FromStatement.with:type_name -> pb.ReceiveStatement.With
-	509,  // 991: pb.ReceiveStatement.FromStatement.thread:type_name -> pb.ReceiveStatement.Thread
-	510,  // 992: pb.ReceiveStatement.FromStatement.size:type_name -> pb.ReceiveStatement.Size
-	511,  // 993: pb.ReceiveStatement.FromStatement.status:type_name -> pb.ReceiveStatement.Status
-	244,  // 994: pb.ReceiveStatement.NoData.statements:type_name -> pb.Statement
-	244,  // 995: pb.ReceiveStatement.WithData.statements:type_name -> pb.Statement
-	367,  // 996: pb.ReceiveStatement.IntoStatement.cd_name:type_name -> pb.CdName
-	343,  // 997: pb.ReceiveStatement.IntoStatement.identifier:type_name -> pb.Identifier
-	514,  // 998: pb.ReceiveStatement.IntoStatement.no_data:type_name -> pb.ReceiveStatement.NoData
-	515,  // 999: pb.ReceiveStatement.IntoStatement.with_data:type_name -> pb.ReceiveStatement.WithData
-	343,  // 1000: pb.ReadStatement.Into.identifier:type_name -> pb.Identifier
-	353,  // 1001: pb.ReadStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
-	343,  // 1002: pb.PerformStatement.Times.identifier:type_name -> pb.Identifier
-	397,  // 1003: pb.PerformStatement.Times.integer_literal:type_name -> pb.IntegerLiteral
-	520,  // 1004: pb.PerformStatement.Until.test_clause:type_name -> pb.PerformStatement.TestClause
-	331,  // 1005: pb.PerformStatement.Until.condition:type_name -> pb.Condition
-	343,  // 1006: pb.PerformStatement.From.identifier:type_name -> pb.Identifier
-	394,  // 1007: pb.PerformStatement.From.literal:type_name -> pb.Literal
-	324,  // 1008: pb.PerformStatement.From.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	343,  // 1009: pb.PerformStatement.By.identifier:type_name -> pb.Identifier
-	394,  // 1010: pb.PerformStatement.By.literal:type_name -> pb.Literal
-	324,  // 1011: pb.PerformStatement.By.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	343,  // 1012: pb.PerformStatement.VaryingPhrase.identifier:type_name -> pb.Identifier
-	394,  // 1013: pb.PerformStatement.VaryingPhrase.literal:type_name -> pb.Literal
-	523,  // 1014: pb.PerformStatement.VaryingPhrase.from:type_name -> pb.PerformStatement.From
-	524,  // 1015: pb.PerformStatement.VaryingPhrase.by:type_name -> pb.PerformStatement.By
-	522,  // 1016: pb.PerformStatement.VaryingPhrase.until:type_name -> pb.PerformStatement.Until
-	525,  // 1017: pb.PerformStatement.After.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
-	525,  // 1018: pb.PerformStatement.VaryingClause.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
-	526,  // 1019: pb.PerformStatement.VaryingClause.after:type_name -> pb.PerformStatement.After
-	520,  // 1020: pb.PerformStatement.Varying.test_clause:type_name -> pb.PerformStatement.TestClause
-	527,  // 1021: pb.PerformStatement.Varying.varying_clause:type_name -> pb.PerformStatement.VaryingClause
-	521,  // 1022: pb.PerformStatement.Type.times:type_name -> pb.PerformStatement.Times
-	522,  // 1023: pb.PerformStatement.Type.until:type_name -> pb.PerformStatement.Until
-	528,  // 1024: pb.PerformStatement.Type.varying:type_name -> pb.PerformStatement.Varying
-	529,  // 1025: pb.PerformStatement.InlineStatement.type:type_name -> pb.PerformStatement.Type
-	244,  // 1026: pb.PerformStatement.InlineStatement.statements:type_name -> pb.Statement
-	382,  // 1027: pb.PerformStatement.ProcedureStatement.procedure_name:type_name -> pb.ProcedureName
-	382,  // 1028: pb.PerformStatement.ProcedureStatement.through:type_name -> pb.ProcedureName
-	529,  // 1029: pb.PerformStatement.ProcedureStatement.type:type_name -> pb.PerformStatement.Type
-	374,  // 1030: pb.OpenStatement.Input.file_name:type_name -> pb.FileName
-	532,  // 1031: pb.OpenStatement.InputStatement.inputs:type_name -> pb.OpenStatement.Input
-	374,  // 1032: pb.OpenStatement.Output.file_name:type_name -> pb.FileName
-	534,  // 1033: pb.OpenStatement.OutputStatement.outputs:type_name -> pb.OpenStatement.Output
-	374,  // 1034: pb.OpenStatement.IOStatement.file_names:type_name -> pb.FileName
-	374,  // 1035: pb.OpenStatement.ExtendStatement.file_names:type_name -> pb.FileName
-	343,  // 1036: pb.MultiplyStatement.GivingOperand.identifier:type_name -> pb.Identifier
-	394,  // 1037: pb.MultiplyStatement.GivingOperand.literal:type_name -> pb.Literal
-	343,  // 1038: pb.MultiplyStatement.GivingResult.identifier:type_name -> pb.Identifier
-	538,  // 1039: pb.MultiplyStatement.Giving.giving_operand:type_name -> pb.MultiplyStatement.GivingOperand
-	539,  // 1040: pb.MultiplyStatement.Giving.giving_result:type_name -> pb.MultiplyStatement.GivingResult
-	343,  // 1041: pb.MultiplyStatement.Regular.regular_operands:type_name -> pb.Identifier
-	353,  // 1042: pb.MergeStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
-	364,  // 1043: pb.MergeStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
-	544,  // 1044: pb.MergeStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.MergeStatement.CollatingAlphanumeric
-	545,  // 1045: pb.MergeStatement.CollatingSequencePhrase.collating_national:type_name -> pb.MergeStatement.CollatingNational
-	364,  // 1046: pb.MergeStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
-	364,  // 1047: pb.MergeStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
-	374,  // 1048: pb.MergeStatement.Using.file_names:type_name -> pb.FileName
-	382,  // 1049: pb.MergeStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
-	548,  // 1050: pb.MergeStatement.OutputProcedurePhrase.output_through:type_name -> pb.MergeStatement.OutputThrough
-	382,  // 1051: pb.MergeStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
-	550,  // 1052: pb.MergeStatement.GivingPhrase.givings:type_name -> pb.MergeStatement.Giving
-	374,  // 1053: pb.MergeStatement.Giving.file_name:type_name -> pb.FileName
-	48,   // 1054: pb.MergeStatement.Giving.type:type_name -> pb.MergeStatement.Giving.Type
-	343,  // 1055: pb.InspectStatement.By.identifier:type_name -> pb.Identifier
-	394,  // 1056: pb.InspectStatement.By.literal:type_name -> pb.Literal
-	343,  // 1057: pb.InspectStatement.To.identifier:type_name -> pb.Identifier
-	394,  // 1058: pb.InspectStatement.To.literal:type_name -> pb.Literal
-	343,  // 1059: pb.InspectStatement.BeforeAfter.identifier:type_name -> pb.Identifier
-	394,  // 1060: pb.InspectStatement.BeforeAfter.literal:type_name -> pb.Literal
-	343,  // 1061: pb.InspectStatement.ReplacingAllLeading.identifier:type_name -> pb.Identifier
-	394,  // 1062: pb.InspectStatement.ReplacingAllLeading.literal:type_name -> pb.Literal
-	551,  // 1063: pb.InspectStatement.ReplacingAllLeading.by:type_name -> pb.InspectStatement.By
-	553,  // 1064: pb.InspectStatement.ReplacingAllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	554,  // 1065: pb.InspectStatement.ReplacingAllLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeading
-	343,  // 1066: pb.InspectStatement.AllLeading.identifier:type_name -> pb.Identifier
-	394,  // 1067: pb.InspectStatement.AllLeading.literal:type_name -> pb.Literal
-	553,  // 1068: pb.InspectStatement.AllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	556,  // 1069: pb.InspectStatement.AllLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeading
-	551,  // 1070: pb.InspectStatement.ReplacingCharacters.by:type_name -> pb.InspectStatement.By
-	553,  // 1071: pb.InspectStatement.ReplacingCharacters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	553,  // 1072: pb.InspectStatement.Characters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	559,  // 1073: pb.InspectStatement.CharactersLeadings.characters:type_name -> pb.InspectStatement.Characters
-	557,  // 1074: pb.InspectStatement.CharactersLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeadings
-	343,  // 1075: pb.InspectStatement.For.identifier:type_name -> pb.Identifier
-	560,  // 1076: pb.InspectStatement.For.characters_leadings:type_name -> pb.InspectStatement.CharactersLeadings
-	343,  // 1077: pb.InspectStatement.ConvertingPhrase.identifier:type_name -> pb.Identifier
-	394,  // 1078: pb.InspectStatement.ConvertingPhrase.literal:type_name -> pb.Literal
-	552,  // 1079: pb.InspectStatement.ConvertingPhrase.to:type_name -> pb.InspectStatement.To
-	553,  // 1080: pb.InspectStatement.ConvertingPhrase.before_afters:type_name -> pb.InspectStatement.BeforeAfter
-	558,  // 1081: pb.InspectStatement.ReplacingCharactersLeadings.replacing_characters:type_name -> pb.InspectStatement.ReplacingCharacters
-	555,  // 1082: pb.InspectStatement.ReplacingCharactersLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeadings
-	563,  // 1083: pb.InspectStatement.ReplacingPhrase.replacing_characters_leadings:type_name -> pb.InspectStatement.ReplacingCharactersLeadings
-	561,  // 1084: pb.InspectStatement.TallyingReplacingPhrase.fors:type_name -> pb.InspectStatement.For
-	564,  // 1085: pb.InspectStatement.TallyingReplacingPhrase.replacing_phrases:type_name -> pb.InspectStatement.ReplacingPhrase
-	561,  // 1086: pb.InspectStatement.TallyingPhrase.fors:type_name -> pb.InspectStatement.For
-	49,   // 1087: pb.InitializeStatement.ReplacingBy.type:type_name -> pb.InitializeStatement.ReplacingBy.Type
-	343,  // 1088: pb.InitializeStatement.ReplacingBy.identifier:type_name -> pb.Identifier
-	394,  // 1089: pb.InitializeStatement.ReplacingBy.literal:type_name -> pb.Literal
-	567,  // 1090: pb.InitializeStatement.ReplacingPhrase.bys:type_name -> pb.InitializeStatement.ReplacingBy
-	244,  // 1091: pb.IfStatement.Then.statements:type_name -> pb.Statement
-	244,  // 1092: pb.IfStatement.Else.statements:type_name -> pb.Statement
-	382,  // 1093: pb.GoToStatement.SimpleStatement.procedure_name:type_name -> pb.ProcedureName
-	382,  // 1094: pb.GoToStatement.DependingOn.procedure_names:type_name -> pb.ProcedureName
-	343,  // 1095: pb.GoToStatement.DependingOn.depending_on:type_name -> pb.Identifier
-	572,  // 1096: pb.GoToStatement.DependingOnStatement.depending_on:type_name -> pb.GoToStatement.DependingOn
-	343,  // 1097: pb.ExhibitStatement.Operand.identifier:type_name -> pb.Identifier
-	394,  // 1098: pb.ExhibitStatement.Operand.literal:type_name -> pb.Literal
-	343,  // 1099: pb.EvaluateStatement.Select.identifier:type_name -> pb.Identifier
-	394,  // 1100: pb.EvaluateStatement.Select.literal:type_name -> pb.Literal
-	324,  // 1101: pb.EvaluateStatement.Select.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	331,  // 1102: pb.EvaluateStatement.Select.condition:type_name -> pb.Condition
-	575,  // 1103: pb.EvaluateStatement.AlsoSelect.select:type_name -> pb.EvaluateStatement.Select
-	579,  // 1104: pb.EvaluateStatement.ValueThrough.value:type_name -> pb.EvaluateStatement.Value
-	578,  // 1105: pb.EvaluateStatement.ValueThrough.through:type_name -> pb.EvaluateStatement.Through
-	579,  // 1106: pb.EvaluateStatement.Through.value:type_name -> pb.EvaluateStatement.Value
-	343,  // 1107: pb.EvaluateStatement.Value.identifier:type_name -> pb.Identifier
-	394,  // 1108: pb.EvaluateStatement.Value.literal:type_name -> pb.Literal
-	324,  // 1109: pb.EvaluateStatement.Value.arithmetic_expression:type_name -> pb.ArithmeticExpression
-	577,  // 1110: pb.EvaluateStatement.WhenCondition.value_through:type_name -> pb.EvaluateStatement.ValueThrough
-	331,  // 1111: pb.EvaluateStatement.WhenCondition.condition:type_name -> pb.Condition
-	395,  // 1112: pb.EvaluateStatement.WhenCondition.boolean_literal:type_name -> pb.BooleanLiteral
-	580,  // 1113: pb.EvaluateStatement.AlsoCondition.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
-	244,  // 1114: pb.EvaluateStatement.WhenOther.statements:type_name -> pb.Statement
-	580,  // 1115: pb.EvaluateStatement.When.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
-	581,  // 1116: pb.EvaluateStatement.When.alsos:type_name -> pb.EvaluateStatement.AlsoCondition
-	583,  // 1117: pb.EvaluateStatement.WhenPhrase.whens:type_name -> pb.EvaluateStatement.When
-	244,  // 1118: pb.EvaluateStatement.WhenPhrase.statements:type_name -> pb.Statement
-	343,  // 1119: pb.DivideStatement.Giving.identifier:type_name -> pb.Identifier
-	585,  // 1120: pb.DivideStatement.GivingPhrase.givings:type_name -> pb.DivideStatement.Giving
-	343,  // 1121: pb.DivideStatement.Into.identifier:type_name -> pb.Identifier
-	587,  // 1122: pb.DivideStatement.IntoStatement.intos:type_name -> pb.DivideStatement.Into
-	343,  // 1123: pb.DivideStatement.IntoGivingStatement.identifier:type_name -> pb.Identifier
-	394,  // 1124: pb.DivideStatement.IntoGivingStatement.literal:type_name -> pb.Literal
-	586,  // 1125: pb.DivideStatement.IntoGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
-	343,  // 1126: pb.DivideStatement.ByGivingStatement.identifier:type_name -> pb.Identifier
-	394,  // 1127: pb.DivideStatement.ByGivingStatement.literal:type_name -> pb.Literal
-	586,  // 1128: pb.DivideStatement.ByGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
-	343,  // 1129: pb.DivideStatement.Remainder.identifier:type_name -> pb.Identifier
-	343,  // 1130: pb.ClosePortFileIOUsing.AssociatedData.identifier:type_name -> pb.Identifier
-	397,  // 1131: pb.ClosePortFileIOUsing.AssociatedData.integer_literal:type_name -> pb.IntegerLiteral
-	343,  // 1132: pb.ClosePortFileIOUsing.AssociatedDataLength.identifier:type_name -> pb.Identifier
-	397,  // 1133: pb.ClosePortFileIOUsing.AssociatedDataLength.integer_literal:type_name -> pb.IntegerLiteral
-	343,  // 1134: pb.CallStatement.ByContent.identifier:type_name -> pb.Identifier
-	394,  // 1135: pb.CallStatement.ByContent.literal:type_name -> pb.Literal
-	343,  // 1136: pb.CallStatement.ByValue.identifier:type_name -> pb.Identifier
-	394,  // 1137: pb.CallStatement.ByValue.literal:type_name -> pb.Literal
-	343,  // 1138: pb.CallStatement.ByReference.identifier:type_name -> pb.Identifier
-	394,  // 1139: pb.CallStatement.ByReference.literal:type_name -> pb.Literal
-	374,  // 1140: pb.CallStatement.ByReference.file_name:type_name -> pb.FileName
-	597,  // 1141: pb.CallStatement.ByReferencePhrase.refs:type_name -> pb.CallStatement.ByReference
-	596,  // 1142: pb.CallStatement.ByValuePhrase.values:type_name -> pb.CallStatement.ByValue
-	595,  // 1143: pb.CallStatement.ByContentPhrase.contents:type_name -> pb.CallStatement.ByContent
-	598,  // 1144: pb.CallStatement.UsingParameter.by_reference_phrase:type_name -> pb.CallStatement.ByReferencePhrase
-	599,  // 1145: pb.CallStatement.UsingParameter.by_value_phrase:type_name -> pb.CallStatement.ByValuePhrase
-	600,  // 1146: pb.CallStatement.UsingParameter.by_content_phrase:type_name -> pb.CallStatement.ByContentPhrase
-	601,  // 1147: pb.CallStatement.UsingPhrase.parameters:type_name -> pb.CallStatement.UsingParameter
-	343,  // 1148: pb.CallStatement.GivingPhrase.identifier:type_name -> pb.Identifier
-	382,  // 1149: pb.AlterStatement.ProceedTo.from:type_name -> pb.ProcedureName
-	382,  // 1150: pb.AlterStatement.ProceedTo.to:type_name -> pb.ProcedureName
-	343,  // 1151: pb.AddStatement.AddFrom.Identifier:type_name -> pb.Identifier
-	394,  // 1152: pb.AddStatement.AddFrom.literal:type_name -> pb.Literal
-	343,  // 1153: pb.AddStatement.AddToGiving.Identifier:type_name -> pb.Identifier
-	394,  // 1154: pb.AddStatement.AddToGiving.literal:type_name -> pb.Literal
-	605,  // 1155: pb.AddStatement.To.froms:type_name -> pb.AddStatement.AddFrom
-	343,  // 1156: pb.AddStatement.To.tos:type_name -> pb.Identifier
-	605,  // 1157: pb.AddStatement.ToGiving.froms:type_name -> pb.AddStatement.AddFrom
-	606,  // 1158: pb.AddStatement.ToGiving.tos:type_name -> pb.AddStatement.AddToGiving
-	343,  // 1159: pb.AddStatement.ToGiving.givings:type_name -> pb.Identifier
-	343,  // 1160: pb.AddStatement.Corresponding.corresponding:type_name -> pb.Identifier
-	343,  // 1161: pb.AddStatement.Corresponding.to:type_name -> pb.Identifier
-	50,   // 1162: pb.AcceptStatement.FromDate.type:type_name -> pb.AcceptStatement.FromDate.Type
-	380,  // 1163: pb.AcceptStatement.FromMnemonic.mnemonic_name:type_name -> pb.MnemonicName
-	374,  // 1164: pb.UseAfterClause.FileNames.file_names:type_name -> pb.FileName
-	349,  // 1165: pb.ConditionNameReference.SubscriptReference.subscripts:type_name -> pb.Subscript
-	358,  // 1166: pb.ConditionNameReference.InSubscript.in_datas:type_name -> pb.InData
-	359,  // 1167: pb.ConditionNameReference.InSubscript.in_file:type_name -> pb.InFile
-	615,  // 1168: pb.ConditionNameReference.InSubscript.refs:type_name -> pb.ConditionNameReference.SubscriptReference
-	1169, // [1169:1169] is the sub-list for method output_type
-	1169, // [1169:1169] is the sub-list for method input_type
-	1169, // [1169:1169] is the sub-list for extension type_name
-	1169, // [1169:1169] is the sub-list for extension extendee
-	0,    // [0:1169] is the sub-list for field type_name
+	616,  // 620: pb.UseAfterClause.file_names:type_name -> pb.UseAfterClause.FileNames
+	328,  // 621: pb.ArithmeticExpression.mult_divs:type_name -> pb.MultDivs
+	327,  // 622: pb.ArithmeticExpression.plus_minus:type_name -> pb.PlusMinus
+	52,   // 623: pb.PlusMinus.operator:type_name -> pb.PlusMinus.Operator
+	328,  // 624: pb.PlusMinus.mult_divs:type_name -> pb.MultDivs
+	330,  // 625: pb.MultDivs.powers:type_name -> pb.Powers
+	329,  // 626: pb.MultDivs.mult_div:type_name -> pb.MultDiv
+	53,   // 627: pb.MultDiv.operator:type_name -> pb.MultDiv.Operator
+	330,  // 628: pb.MultDiv.powers:type_name -> pb.Powers
+	332,  // 629: pb.Powers.basis:type_name -> pb.Basis
+	331,  // 630: pb.Powers.powers:type_name -> pb.Power
+	332,  // 631: pb.Power.basis:type_name -> pb.Basis
+	326,  // 632: pb.Basis.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	345,  // 633: pb.Basis.identifier:type_name -> pb.Identifier
+	396,  // 634: pb.Basis.literal:type_name -> pb.Literal
+	335,  // 635: pb.Condition.combinable_condition:type_name -> pb.CombinableCondition
+	334,  // 636: pb.Condition.and_or_condition:type_name -> pb.AndOrCondition
+	54,   // 637: pb.AndOrCondition.and_or:type_name -> pb.AndOrCondition.AndOr
+	335,  // 638: pb.AndOrCondition.combinable_condition:type_name -> pb.CombinableCondition
+	344,  // 639: pb.AndOrCondition.abbreviations:type_name -> pb.Abbreviation
+	336,  // 640: pb.CombinableCondition.simple_condition:type_name -> pb.SimpleCondition
+	333,  // 641: pb.SimpleCondition.condition:type_name -> pb.Condition
+	339,  // 642: pb.SimpleCondition.relation_condition:type_name -> pb.RelationCondition
+	337,  // 643: pb.SimpleCondition.class_condition:type_name -> pb.ClassCondition
+	338,  // 644: pb.SimpleCondition.condition_name_reference:type_name -> pb.ConditionNameReference
+	345,  // 645: pb.ClassCondition.identifier:type_name -> pb.Identifier
+	55,   // 646: pb.ClassCondition.value:type_name -> pb.ClassCondition.Type
+	370,  // 647: pb.ClassCondition.class_name:type_name -> pb.ClassName
+	372,  // 648: pb.ConditionNameReference.condition_name:type_name -> pb.ConditionName
+	618,  // 649: pb.ConditionNameReference.in_subscript:type_name -> pb.ConditionNameReference.InSubscript
+	362,  // 650: pb.ConditionNameReference.in_mnemonic:type_name -> pb.InMnemonic
+	340,  // 651: pb.RelationCondition.relation_sign_condition:type_name -> pb.RelationSignCondition
+	341,  // 652: pb.RelationCondition.relation_arithmetic_comparison:type_name -> pb.RelationArithmeticComparison
+	342,  // 653: pb.RelationCondition.relation_combined_comparison:type_name -> pb.RelationCombinedComparison
+	326,  // 654: pb.RelationSignCondition.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	56,   // 655: pb.RelationSignCondition.type:type_name -> pb.RelationSignCondition.Type
+	326,  // 656: pb.RelationArithmeticComparison.left_expression:type_name -> pb.ArithmeticExpression
+	0,    // 657: pb.RelationArithmeticComparison.relational_operator:type_name -> pb.RelationalOperator
+	326,  // 658: pb.RelationArithmeticComparison.right_expression:type_name -> pb.ArithmeticExpression
+	326,  // 659: pb.RelationCombinedComparison.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	0,    // 660: pb.RelationCombinedComparison.relational_operator:type_name -> pb.RelationalOperator
+	343,  // 661: pb.RelationCombinedComparison.relation_combined_condition:type_name -> pb.RelationCombinedCondition
+	326,  // 662: pb.RelationCombinedCondition.left_expression:type_name -> pb.ArithmeticExpression
+	57,   // 663: pb.RelationCombinedCondition.and_or:type_name -> pb.RelationCombinedCondition.AndOr
+	326,  // 664: pb.RelationCombinedCondition.right_expressions:type_name -> pb.ArithmeticExpression
+	0,    // 665: pb.Abbreviation.relational_operator:type_name -> pb.RelationalOperator
+	326,  // 666: pb.Abbreviation.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	344,  // 667: pb.Abbreviation.abbreviation:type_name -> pb.Abbreviation
+	355,  // 668: pb.Identifier.qualified_data_name:type_name -> pb.QualifiedDataName
+	346,  // 669: pb.Identifier.table_call:type_name -> pb.TableCall
+	347,  // 670: pb.Identifier.function_call:type_name -> pb.FunctionCall
+	401,  // 671: pb.Identifier.special_register:type_name -> pb.SpecialRegister
+	355,  // 672: pb.TableCall.qualified_data_name:type_name -> pb.QualifiedDataName
+	351,  // 673: pb.TableCall.subscripts:type_name -> pb.Subscript
+	348,  // 674: pb.TableCall.reference_modifier:type_name -> pb.ReferenceModifier
+	377,  // 675: pb.FunctionCall.function_name:type_name -> pb.FunctionName
+	352,  // 676: pb.FunctionCall.arguments:type_name -> pb.Argument
+	348,  // 677: pb.FunctionCall.reference_modifier:type_name -> pb.ReferenceModifier
+	349,  // 678: pb.ReferenceModifier.character_position:type_name -> pb.CharacterPosition
+	350,  // 679: pb.ReferenceModifier.length:type_name -> pb.Length
+	326,  // 680: pb.CharacterPosition.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	326,  // 681: pb.Length.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	399,  // 682: pb.Subscript.integer_literal:type_name -> pb.IntegerLiteral
+	353,  // 683: pb.Subscript.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
+	354,  // 684: pb.Subscript.index_name:type_name -> pb.IndexNameIntegerLiteral
+	326,  // 685: pb.Subscript.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	396,  // 686: pb.Argument.literal:type_name -> pb.Literal
+	345,  // 687: pb.Argument.identifier:type_name -> pb.Identifier
+	353,  // 688: pb.Argument.qualified_data_name:type_name -> pb.QualifiedDataNameIntegerLiteral
+	354,  // 689: pb.Argument.index_name:type_name -> pb.IndexNameIntegerLiteral
+	326,  // 690: pb.Argument.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	355,  // 691: pb.QualifiedDataNameIntegerLiteral.qualified_data_name:type_name -> pb.QualifiedDataName
+	399,  // 692: pb.QualifiedDataNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
+	378,  // 693: pb.IndexNameIntegerLiteral.index_name:type_name -> pb.IndexName
+	399,  // 694: pb.IndexNameIntegerLiteral.integer_literal:type_name -> pb.IntegerLiteral
+	356,  // 695: pb.QualifiedDataName.f1:type_name -> pb.QualifiedDataNameFormat1
+	357,  // 696: pb.QualifiedDataName.f2:type_name -> pb.QualifiedDataNameFormat2
+	358,  // 697: pb.QualifiedDataName.f3:type_name -> pb.QualifiedDataNameFormat3
+	359,  // 698: pb.QualifiedDataName.f4:type_name -> pb.QualifiedDataNameFormat4
+	373,  // 699: pb.QualifiedDataNameFormat1.data_name:type_name -> pb.DataName
+	372,  // 700: pb.QualifiedDataNameFormat1.condition_name:type_name -> pb.ConditionName
+	360,  // 701: pb.QualifiedDataNameFormat1.in_datas:type_name -> pb.InData
+	365,  // 702: pb.QualifiedDataNameFormat1.in_tables:type_name -> pb.InTable
+	361,  // 703: pb.QualifiedDataNameFormat1.in_file:type_name -> pb.InFile
+	383,  // 704: pb.QualifiedDataNameFormat2.paragraph_name:type_name -> pb.ParagraphName
+	363,  // 705: pb.QualifiedDataNameFormat2.in_section:type_name -> pb.InSection
+	394,  // 706: pb.QualifiedDataNameFormat3.text_name:type_name -> pb.TextName
+	364,  // 707: pb.QualifiedDataNameFormat3.in_library:type_name -> pb.InLibrary
+	361,  // 708: pb.QualifiedDataNameFormat4.in_file:type_name -> pb.InFile
+	373,  // 709: pb.InData.data_name:type_name -> pb.DataName
+	376,  // 710: pb.InFile.file_name:type_name -> pb.FileName
+	382,  // 711: pb.InMnemonic.mnemonic_name:type_name -> pb.MnemonicName
+	391,  // 712: pb.InSection.section_name:type_name -> pb.SectionName
+	380,  // 713: pb.InLibrary.library_name:type_name -> pb.LibraryName
+	346,  // 714: pb.InTable.table_call:type_name -> pb.TableCall
+	395,  // 715: pb.AlphabetName.cobol_word:type_name -> pb.CobolWord
+	392,  // 716: pb.AssignmentName.system_name:type_name -> pb.SystemName
+	385,  // 717: pb.BasisName.program_name:type_name -> pb.ProgramName
+	395,  // 718: pb.CdName.cobol_word:type_name -> pb.CobolWord
+	395,  // 719: pb.ClassName.cobol_word:type_name -> pb.CobolWord
+	392,  // 720: pb.ComputerName.system_name:type_name -> pb.SystemName
+	395,  // 721: pb.ConditionName.cobol_word:type_name -> pb.CobolWord
+	395,  // 722: pb.DataName.cobol_word:type_name -> pb.CobolWord
+	392,  // 723: pb.EnvironmentName.system_name:type_name -> pb.SystemName
+	395,  // 724: pb.FileName.cobol_word:type_name -> pb.CobolWord
+	395,  // 725: pb.IndexName.cobol_word:type_name -> pb.CobolWord
+	392,  // 726: pb.LanguageName.system_name:type_name -> pb.SystemName
+	395,  // 727: pb.LibraryName.cobol_word:type_name -> pb.CobolWord
+	395,  // 728: pb.LocalName.cobol_word:type_name -> pb.CobolWord
+	395,  // 729: pb.MnemonicName.cobol_word:type_name -> pb.CobolWord
+	395,  // 730: pb.ParagraphName.cobol_word:type_name -> pb.CobolWord
+	399,  // 731: pb.ParagraphName.integer_literal:type_name -> pb.IntegerLiteral
+	383,  // 732: pb.ProcedureName.paragraph_name:type_name -> pb.ParagraphName
+	391,  // 733: pb.ProcedureName.section_name:type_name -> pb.SectionName
+	403,  // 734: pb.ProgramName.non_numeric_literal:type_name -> pb.NonNumericLiteral
+	395,  // 735: pb.ProgramName.cobol_word:type_name -> pb.CobolWord
+	355,  // 736: pb.RecordName.qualified_data_name:type_name -> pb.QualifiedDataName
+	355,  // 737: pb.ReportName.qualified_data_name:type_name -> pb.QualifiedDataName
+	395,  // 738: pb.RoutingName.cobol_word:type_name -> pb.CobolWord
+	395,  // 739: pb.RoutineName.cobol_word:type_name -> pb.CobolWord
+	395,  // 740: pb.ScreenName.cobol_word:type_name -> pb.CobolWord
+	395,  // 741: pb.SectionName.cobol_word:type_name -> pb.CobolWord
+	399,  // 742: pb.SectionName.integer_literal:type_name -> pb.IntegerLiteral
+	395,  // 743: pb.SystemName.cobol_word:type_name -> pb.CobolWord
+	395,  // 744: pb.SymbolicCharacter.cobol_word:type_name -> pb.CobolWord
+	395,  // 745: pb.TextName.cobol_word:type_name -> pb.CobolWord
+	58,   // 746: pb.Literal.type:type_name -> pb.Literal.Type
+	398,  // 747: pb.Literal.numeric_literal:type_name -> pb.NumericLiteral
+	397,  // 748: pb.Literal.boolean_literal:type_name -> pb.BooleanLiteral
+	403,  // 749: pb.Literal.non_numeric_literal:type_name -> pb.NonNumericLiteral
+	400,  // 750: pb.Literal.figurative_constant:type_name -> pb.FigurativeConstant
+	59,   // 751: pb.NumericLiteral.type:type_name -> pb.NumericLiteral.Type
+	60,   // 752: pb.FigurativeConstant.type:type_name -> pb.FigurativeConstant.Type
+	396,  // 753: pb.FigurativeConstant.literal:type_name -> pb.Literal
+	61,   // 754: pb.SpecialRegister.type:type_name -> pb.SpecialRegister.Type
+	345,  // 755: pb.SpecialRegister.identifier:type_name -> pb.Identifier
+	1,    // 756: pb.Call.type:type_name -> pb.CallType
+	373,  // 757: pb.Call.data_name:type_name -> pb.DataName
+	372,  // 758: pb.Call.condition_name:type_name -> pb.ConditionName
+	376,  // 759: pb.Call.file_name:type_name -> pb.FileName
+	384,  // 760: pb.Call.procedure_name:type_name -> pb.ProcedureName
+	391,  // 761: pb.Call.section_name:type_name -> pb.SectionName
+	383,  // 762: pb.Call.paragraph_name:type_name -> pb.ParagraphName
+	385,  // 763: pb.Call.program_name:type_name -> pb.ProgramName
+	378,  // 764: pb.Call.index_name:type_name -> pb.IndexName
+	382,  // 765: pb.Call.mnemonic_name:type_name -> pb.MnemonicName
+	387,  // 766: pb.Call.report_name:type_name -> pb.ReportName
+	369,  // 767: pb.Call.cd_name:type_name -> pb.CdName
+	390,  // 768: pb.Call.screen_name:type_name -> pb.ScreenName
+	401,  // 769: pb.Call.special_register:type_name -> pb.SpecialRegister
+	396,  // 770: pb.AlphabetClause.Also.alsos:type_name -> pb.Literal
+	396,  // 771: pb.AlphabetClause.AlphabetLiteral.literal:type_name -> pb.Literal
+	396,  // 772: pb.AlphabetClause.AlphabetLiteral.through:type_name -> pb.Literal
+	408,  // 773: pb.AlphabetClause.AlphabetLiteral.alsos:type_name -> pb.AlphabetClause.Also
+	409,  // 774: pb.AlphabetClause.AlphabetLiterals.values:type_name -> pb.AlphabetClause.AlphabetLiteral
+	5,    // 775: pb.AlphabetClause.Alphanumeric.type:type_name -> pb.AlphabetClause.Alphanumeric.Type
+	395,  // 776: pb.AlphabetClause.Alphanumeric.cobol_word:type_name -> pb.CobolWord
+	410,  // 777: pb.AlphabetClause.Alphanumeric.values:type_name -> pb.AlphabetClause.AlphabetLiterals
+	6,    // 778: pb.AlphabetClause.National.type:type_name -> pb.AlphabetClause.National.Type
+	396,  // 779: pb.AlphabetClause.National.ccs_version:type_name -> pb.Literal
+	333,  // 780: pb.EnvironmentSwitchNameClause.StatusPhrase.condition:type_name -> pb.Condition
+	333,  // 781: pb.EnvironmentSwitchNameClause.StatusPhrase.off_condition:type_name -> pb.Condition
+	373,  // 782: pb.LabelRecordsClause.DataNames.data_names:type_name -> pb.DataName
+	399,  // 783: pb.DataDescriptionEntry.Format1.level_number:type_name -> pb.IntegerLiteral
+	373,  // 784: pb.DataDescriptionEntry.Format1.data_name:type_name -> pb.DataName
+	139,  // 785: pb.DataDescriptionEntry.Format1.data_redefines_clause:type_name -> pb.DataRedefinesClause
+	140,  // 786: pb.DataDescriptionEntry.Format1.data_integer_string_clause:type_name -> pb.DataIntegerStringClause
+	141,  // 787: pb.DataDescriptionEntry.Format1.data_external_clause:type_name -> pb.DataExternalClause
+	142,  // 788: pb.DataDescriptionEntry.Format1.data_global_clause:type_name -> pb.DataGlobalClause
+	143,  // 789: pb.DataDescriptionEntry.Format1.data_type_def_clause:type_name -> pb.DataTypeDefClause
+	144,  // 790: pb.DataDescriptionEntry.Format1.data_thread_local_clause:type_name -> pb.DataThreadLocalClause
+	145,  // 791: pb.DataDescriptionEntry.Format1.data_picture_clause:type_name -> pb.DataPictureClause
+	149,  // 792: pb.DataDescriptionEntry.Format1.data_common_own_local_clause:type_name -> pb.DataCommonOwnLocalClause
+	150,  // 793: pb.DataDescriptionEntry.Format1.data_type_clause:type_name -> pb.DataTypeClause
+	151,  // 794: pb.DataDescriptionEntry.Format1.data_using_clause:type_name -> pb.DataUsingClause
+	152,  // 795: pb.DataDescriptionEntry.Format1.data_usage_clause:type_name -> pb.DataUsageClause
+	154,  // 796: pb.DataDescriptionEntry.Format1.data_value_clause:type_name -> pb.DataValueClause
+	155,  // 797: pb.DataDescriptionEntry.Format1.data_received_by_clause:type_name -> pb.DataReceivedByClause
+	156,  // 798: pb.DataDescriptionEntry.Format1.data_occurs_clause:type_name -> pb.DataOccursClause
+	157,  // 799: pb.DataDescriptionEntry.Format1.data_sign_clause:type_name -> pb.DataSignClause
+	158,  // 800: pb.DataDescriptionEntry.Format1.data_synchronized_clause:type_name -> pb.DataSynchronizedClause
+	159,  // 801: pb.DataDescriptionEntry.Format1.data_justified_clause:type_name -> pb.DataJustifiedClause
+	160,  // 802: pb.DataDescriptionEntry.Format1.data_blank_when_zero_clause:type_name -> pb.DataBlankWhenZeroClause
+	161,  // 803: pb.DataDescriptionEntry.Format1.data_with_lower_bounds_clause:type_name -> pb.DataWithLowerBoundsClause
+	162,  // 804: pb.DataDescriptionEntry.Format1.data_aligned_clause:type_name -> pb.DataAlignedClause
+	163,  // 805: pb.DataDescriptionEntry.Format1.data_record_area_clause:type_name -> pb.DataRecordAreaClause
+	373,  // 806: pb.DataDescriptionEntry.Format2.data_name:type_name -> pb.DataName
+	138,  // 807: pb.DataDescriptionEntry.Format2.data_renames_clause:type_name -> pb.DataRenamesClause
+	372,  // 808: pb.DataDescriptionEntry.Format3.condition_name:type_name -> pb.ConditionName
+	154,  // 809: pb.DataDescriptionEntry.Format3.data_value_clause:type_name -> pb.DataValueClause
+	24,   // 810: pb.DataTypeClause.Lob.mode:type_name -> pb.DataTypeClause.Mode
+	399,  // 811: pb.DataTypeClause.Lob.integer_literal:type_name -> pb.IntegerLiteral
+	355,  // 812: pb.DataOccursClause.Sort.qualified_data_names:type_name -> pb.QualifiedDataName
+	378,  // 813: pb.DataOccursClause.Indexed.index_names:type_name -> pb.IndexName
+	207,  // 814: pb.ReportGroupDescriptionEntry.Vertical.line_number_clause:type_name -> pb.LineNumberClause
+	208,  // 815: pb.ReportGroupDescriptionEntry.Vertical.next_group_clause:type_name -> pb.NextGroupClause
+	209,  // 816: pb.ReportGroupDescriptionEntry.Vertical.type_clause:type_name -> pb.TypeClause
+	210,  // 817: pb.ReportGroupDescriptionEntry.Vertical.usage_clause:type_name -> pb.UsageClause
+	207,  // 818: pb.ReportGroupDescriptionEntry.Single.line_number_clause:type_name -> pb.LineNumberClause
+	210,  // 819: pb.ReportGroupDescriptionEntry.Single.usage_clause:type_name -> pb.UsageClause
+	206,  // 820: pb.ReportGroupDescriptionEntry.Printable.picture_clause:type_name -> pb.PictureClause
+	210,  // 821: pb.ReportGroupDescriptionEntry.Printable.usage_clause:type_name -> pb.UsageClause
+	205,  // 822: pb.ReportGroupDescriptionEntry.Printable.sign_clause:type_name -> pb.SignClause
+	204,  // 823: pb.ReportGroupDescriptionEntry.Printable.justified_clause:type_name -> pb.JustifiedClause
+	203,  // 824: pb.ReportGroupDescriptionEntry.Printable.blank_when_zero_clause:type_name -> pb.BlankWhenZeroClause
+	207,  // 825: pb.ReportGroupDescriptionEntry.Printable.line_number_clause:type_name -> pb.LineNumberClause
+	202,  // 826: pb.ReportGroupDescriptionEntry.Printable.column_number_clause:type_name -> pb.ColumnNumberClause
+	201,  // 827: pb.ReportGroupDescriptionEntry.Printable.IndicateClause:type_name -> pb.IndicateClause
+	200,  // 828: pb.ReportGroupDescriptionEntry.Printable.source_clause:type_name -> pb.SourceClause
+	199,  // 829: pb.ReportGroupDescriptionEntry.Printable.value_clause:type_name -> pb.ValueClause
+	198,  // 830: pb.ReportGroupDescriptionEntry.Printable.SumClause:type_name -> pb.SumClause
+	197,  // 831: pb.ReportGroupDescriptionEntry.Printable.reset_clause:type_name -> pb.ResetClause
+	373,  // 832: pb.TypeClause.ControlHeading.data_name:type_name -> pb.DataName
+	373,  // 833: pb.TypeClause.ControlFooting.data_name:type_name -> pb.DataName
+	125,  // 834: pb.LibraryDescriptionEntry.Import.global_clause:type_name -> pb.GlobalClause
+	213,  // 835: pb.LibraryDescriptionEntry.Import.is_common_clause:type_name -> pb.IsCommonClause
+	215,  // 836: pb.LibraryDescriptionEntry.Import.attribute_clause:type_name -> pb.AttributeClause2
+	217,  // 837: pb.LibraryDescriptionEntry.Import.procedure_clause:type_name -> pb.ProcedureClause2
+	214,  // 838: pb.LibraryDescriptionEntry.Export.attribute_clause:type_name -> pb.AttributeClause1
+	216,  // 839: pb.LibraryDescriptionEntry.Export.procedure_clause:type_name -> pb.ProcedureClause1
+	381,  // 840: pb.ProcedureClause2.WithName.local_name:type_name -> pb.LocalName
+	376,  // 841: pb.ProcedureClause2.WithName.file_name:type_name -> pb.FileName
+	373,  // 842: pb.ProcedureClause2.UsingName.data_name:type_name -> pb.DataName
+	376,  // 843: pb.ProcedureClause2.UsingName.file_name:type_name -> pb.FileName
+	369,  // 844: pb.CommunicationDescriptionEntry.Input.cd_name:type_name -> pb.CdName
+	227,  // 845: pb.CommunicationDescriptionEntry.Input.symbolic_queue_clause:type_name -> pb.SymbolicQueueClause
+	228,  // 846: pb.CommunicationDescriptionEntry.Input.symbolic_sub_queue_clause:type_name -> pb.SymbolicSubQueueClause
+	229,  // 847: pb.CommunicationDescriptionEntry.Input.message_date_clause:type_name -> pb.MessageDateClause
+	230,  // 848: pb.CommunicationDescriptionEntry.Input.message_time_clause:type_name -> pb.MessageTimeClause
+	231,  // 849: pb.CommunicationDescriptionEntry.Input.symbolic_source_clause:type_name -> pb.SymbolicSourceClause
+	232,  // 850: pb.CommunicationDescriptionEntry.Input.text_length_clause:type_name -> pb.TextLengthClause
+	233,  // 851: pb.CommunicationDescriptionEntry.Input.end_key_clause:type_name -> pb.EndKeyClause
+	234,  // 852: pb.CommunicationDescriptionEntry.Input.status_key_clause:type_name -> pb.StatusKeyClause
+	235,  // 853: pb.CommunicationDescriptionEntry.Input.message_count_clause:type_name -> pb.MessageCountClause
+	374,  // 854: pb.CommunicationDescriptionEntry.Input.data_desc_name:type_name -> pb.DataDescName
+	226,  // 855: pb.CommunicationDescriptionEntry.Output.destination_count_clause:type_name -> pb.DestinationCountClause
+	232,  // 856: pb.CommunicationDescriptionEntry.Output.text_length_clause:type_name -> pb.TextLengthClause
+	234,  // 857: pb.CommunicationDescriptionEntry.Output.status_key_clause:type_name -> pb.StatusKeyClause
+	225,  // 858: pb.CommunicationDescriptionEntry.Output.destination_table_clause:type_name -> pb.DestinationTableClause
+	224,  // 859: pb.CommunicationDescriptionEntry.Output.errorKeyClause:type_name -> pb.ErrorKeyClause
+	223,  // 860: pb.CommunicationDescriptionEntry.Output.symbolic_destination_clause:type_name -> pb.SymbolicDestinationClause
+	369,  // 861: pb.CommunicationDescriptionEntry.Io.cd_name:type_name -> pb.CdName
+	229,  // 862: pb.CommunicationDescriptionEntry.Io.message_date_clause:type_name -> pb.MessageDateClause
+	230,  // 863: pb.CommunicationDescriptionEntry.Io.message_time_clause:type_name -> pb.MessageTimeClause
+	222,  // 864: pb.CommunicationDescriptionEntry.Io.symbolic_terminal_clause:type_name -> pb.SymbolicTerminalClause
+	232,  // 865: pb.CommunicationDescriptionEntry.Io.text_length_clause:type_name -> pb.TextLengthClause
+	233,  // 866: pb.CommunicationDescriptionEntry.Io.end_key_clause:type_name -> pb.EndKeyClause
+	234,  // 867: pb.CommunicationDescriptionEntry.Io.status_key_clause:type_name -> pb.StatusKeyClause
+	345,  // 868: pb.ProcedureDivision.ByReference.identifier:type_name -> pb.Identifier
+	376,  // 869: pb.ProcedureDivision.ByReference.file_name:type_name -> pb.FileName
+	439,  // 870: pb.ProcedureDivision.ByReferencePhrase.references:type_name -> pb.ProcedureDivision.ByReference
+	345,  // 871: pb.ProcedureDivision.ByValue.identifier:type_name -> pb.Identifier
+	396,  // 872: pb.ProcedureDivision.ByValue.literal:type_name -> pb.Literal
+	441,  // 873: pb.ProcedureDivision.ByValuePhrase.values:type_name -> pb.ProcedureDivision.ByValue
+	440,  // 874: pb.ProcedureDivision.UsingParameter.by_reference_phrase:type_name -> pb.ProcedureDivision.ByReferencePhrase
+	442,  // 875: pb.ProcedureDivision.UsingParameter.by_value_phrase:type_name -> pb.ProcedureDivision.ByValuePhrase
+	44,   // 876: pb.ProcedureDivision.GivingClause.type:type_name -> pb.ProcedureDivision.GivingClause.Type
+	373,  // 877: pb.ProcedureDivision.GivingClause.data_name:type_name -> pb.DataName
+	45,   // 878: pb.ProcedureDivision.UsingClause.type:type_name -> pb.ProcedureDivision.UsingClause.Type
+	443,  // 879: pb.ProcedureDivision.UsingClause.using_parameters:type_name -> pb.ProcedureDivision.UsingParameter
+	345,  // 880: pb.WriteStatement.FromPhrase.identifier:type_name -> pb.Identifier
+	396,  // 881: pb.WriteStatement.FromPhrase.literal:type_name -> pb.Literal
+	345,  // 882: pb.WriteStatement.AdvancingLines.identifier:type_name -> pb.Identifier
+	396,  // 883: pb.WriteStatement.AdvancingLines.literal:type_name -> pb.Literal
+	382,  // 884: pb.WriteStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
+	447,  // 885: pb.WriteStatement.AdvancingPhrase.advancing_page:type_name -> pb.WriteStatement.AdvancingPage
+	448,  // 886: pb.WriteStatement.AdvancingPhrase.advancing_lines:type_name -> pb.WriteStatement.AdvancingLines
+	449,  // 887: pb.WriteStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.WriteStatement.AdvancingMnemonic
+	345,  // 888: pb.UnstringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
+	396,  // 889: pb.UnstringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
+	345,  // 890: pb.UnstringStatement.OrAllPhrase.identifier:type_name -> pb.Identifier
+	396,  // 891: pb.UnstringStatement.OrAllPhrase.literal:type_name -> pb.Literal
+	451,  // 892: pb.UnstringStatement.DelimitedOr.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
+	452,  // 893: pb.UnstringStatement.DelimitedOr.or_all_phrases:type_name -> pb.UnstringStatement.OrAllPhrase
+	345,  // 894: pb.UnstringStatement.Into.identifier:type_name -> pb.Identifier
+	455,  // 895: pb.UnstringStatement.Into.delimiter_in:type_name -> pb.UnstringStatement.DelimiterIn
+	456,  // 896: pb.UnstringStatement.Into.count_in:type_name -> pb.UnstringStatement.CountIn
+	345,  // 897: pb.UnstringStatement.DelimiterIn.identifier:type_name -> pb.Identifier
+	345,  // 898: pb.UnstringStatement.CountIn.identifier:type_name -> pb.Identifier
+	345,  // 899: pb.UnstringStatement.SendingPhrase.identifier:type_name -> pb.Identifier
+	451,  // 900: pb.UnstringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.UnstringStatement.DelimitedByPhrase
+	454,  // 901: pb.UnstringStatement.IntoPhrase.into:type_name -> pb.UnstringStatement.Into
+	355,  // 902: pb.UnstringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
+	355,  // 903: pb.UnstringStatement.TallyingPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
+	345,  // 904: pb.SubtractStatement.Subtrahend.identifier:type_name -> pb.Identifier
+	396,  // 905: pb.SubtractStatement.Subtrahend.literal:type_name -> pb.Literal
+	345,  // 906: pb.SubtractStatement.Minuend.identifier:type_name -> pb.Identifier
+	345,  // 907: pb.SubtractStatement.MinuendGiving.identifier:type_name -> pb.Identifier
+	396,  // 908: pb.SubtractStatement.MinuendGiving.literal:type_name -> pb.Literal
+	345,  // 909: pb.SubtractStatement.Giving.identifier:type_name -> pb.Identifier
+	355,  // 910: pb.SubtractStatement.MinuendCorresponding.qualified_data_name:type_name -> pb.QualifiedDataName
+	461,  // 911: pb.SubtractStatement.FromStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
+	462,  // 912: pb.SubtractStatement.FromStatement.minuends:type_name -> pb.SubtractStatement.Minuend
+	461,  // 913: pb.SubtractStatement.FromGivingStatement.subtrahends:type_name -> pb.SubtractStatement.Subtrahend
+	463,  // 914: pb.SubtractStatement.FromGivingStatement.minuend_giving:type_name -> pb.SubtractStatement.MinuendGiving
+	464,  // 915: pb.SubtractStatement.FromGivingStatement.givings:type_name -> pb.SubtractStatement.Giving
+	355,  // 916: pb.SubtractStatement.CorrespondingStatement.qualified_data_name:type_name -> pb.QualifiedDataName
+	465,  // 917: pb.SubtractStatement.CorrespondingStatement.minuend_corresponding:type_name -> pb.SubtractStatement.MinuendCorresponding
+	345,  // 918: pb.StringStatement.Sending.identifier:type_name -> pb.Identifier
+	396,  // 919: pb.StringStatement.Sending.literal:type_name -> pb.Literal
+	345,  // 920: pb.StringStatement.DelimitedByPhrase.identifier:type_name -> pb.Identifier
+	396,  // 921: pb.StringStatement.DelimitedByPhrase.literal:type_name -> pb.Literal
+	345,  // 922: pb.StringStatement.ForPhrase.identifier:type_name -> pb.Identifier
+	396,  // 923: pb.StringStatement.ForPhrase.literal:type_name -> pb.Literal
+	469,  // 924: pb.StringStatement.SendingPhrase.sendings:type_name -> pb.StringStatement.Sending
+	470,  // 925: pb.StringStatement.SendingPhrase.delimited_by_phrase:type_name -> pb.StringStatement.DelimitedByPhrase
+	471,  // 926: pb.StringStatement.SendingPhrase.for_phrase:type_name -> pb.StringStatement.ForPhrase
+	345,  // 927: pb.StringStatement.IntoPhrase.identifier:type_name -> pb.Identifier
+	355,  // 928: pb.StringStatement.WithPointerPhrase.qualified_data_name:type_name -> pb.QualifiedDataName
+	345,  // 929: pb.StopStatement.Giving.identifier:type_name -> pb.Identifier
+	399,  // 930: pb.StopStatement.Giving.integer_literal:type_name -> pb.IntegerLiteral
+	46,   // 931: pb.StartStatement.Key.type:type_name -> pb.StartStatement.Type
+	355,  // 932: pb.StartStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
+	355,  // 933: pb.SortStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
+	366,  // 934: pb.SortStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
+	366,  // 935: pb.SortStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
+	366,  // 936: pb.SortStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
+	479,  // 937: pb.SortStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.SortStatement.CollatingAlphanumeric
+	480,  // 938: pb.SortStatement.CollatingSequencePhrase.collating_national:type_name -> pb.SortStatement.CollatingNational
+	384,  // 939: pb.SortStatement.InputThrough.procedure_name:type_name -> pb.ProcedureName
+	384,  // 940: pb.SortStatement.InputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
+	482,  // 941: pb.SortStatement.InputProcedurePhrase.input_through:type_name -> pb.SortStatement.InputThrough
+	376,  // 942: pb.SortStatement.Using.file_names:type_name -> pb.FileName
+	384,  // 943: pb.SortStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
+	384,  // 944: pb.SortStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
+	485,  // 945: pb.SortStatement.OutputProcedurePhrase.output_through:type_name -> pb.SortStatement.OutputThrough
+	376,  // 946: pb.SortStatement.Giving.file_name:type_name -> pb.FileName
+	47,   // 947: pb.SortStatement.Giving.type:type_name -> pb.SortStatement.Giving.Type
+	487,  // 948: pb.SortStatement.GivingPhrase.givings:type_name -> pb.SortStatement.Giving
+	345,  // 949: pb.SetStatement.To.identifier:type_name -> pb.Identifier
+	345,  // 950: pb.SetStatement.Entry.identifier:type_name -> pb.Identifier
+	396,  // 951: pb.SetStatement.Entry.literal:type_name -> pb.Literal
+	490,  // 952: pb.SetStatement.ToValue.Entry:type_name -> pb.SetStatement.Entry
+	345,  // 953: pb.SetStatement.ToValue.identifier:type_name -> pb.Identifier
+	396,  // 954: pb.SetStatement.ToValue.literal:type_name -> pb.Literal
+	345,  // 955: pb.SetStatement.ByValue.identifier:type_name -> pb.Identifier
+	396,  // 956: pb.SetStatement.ByValue.literal:type_name -> pb.Literal
+	489,  // 957: pb.SetStatement.ToStatement.tos:type_name -> pb.SetStatement.To
+	491,  // 958: pb.SetStatement.ToStatement.to_values:type_name -> pb.SetStatement.ToValue
+	489,  // 959: pb.SetStatement.UpDownByStatement.tos:type_name -> pb.SetStatement.To
+	492,  // 960: pb.SetStatement.UpDownByStatement.by_value:type_name -> pb.SetStatement.ByValue
+	345,  // 961: pb.SendStatement.FromPhrase.identifier:type_name -> pb.Identifier
+	345,  // 962: pb.SendStatement.WithPhrase.identifier:type_name -> pb.Identifier
+	345,  // 963: pb.SendStatement.AdvancingLines.identifier:type_name -> pb.Identifier
+	396,  // 964: pb.SendStatement.AdvancingLines.literal:type_name -> pb.Literal
+	382,  // 965: pb.SendStatement.AdvancingMnemonic.mnemonicName:type_name -> pb.MnemonicName
+	498,  // 966: pb.SendStatement.AdvancingPhrase.advancing_page:type_name -> pb.SendStatement.AdvancingPage
+	499,  // 967: pb.SendStatement.AdvancingPhrase.advancing_lines:type_name -> pb.SendStatement.AdvancingLines
+	500,  // 968: pb.SendStatement.AdvancingPhrase.advancing_mnemonic:type_name -> pb.SendStatement.AdvancingMnemonic
+	345,  // 969: pb.SendStatement.SyncStatement.identifier:type_name -> pb.Identifier
+	396,  // 970: pb.SendStatement.SyncStatement.literal:type_name -> pb.Literal
+	495,  // 971: pb.SendStatement.SyncStatement.from_phrase:type_name -> pb.SendStatement.FromPhrase
+	496,  // 972: pb.SendStatement.SyncStatement.with_phrase:type_name -> pb.SendStatement.WithPhrase
+	497,  // 973: pb.SendStatement.SyncStatement.replacing_phrase:type_name -> pb.SendStatement.ReplacingPhrase
+	501,  // 974: pb.SendStatement.SyncStatement.advancing_phrase:type_name -> pb.SendStatement.AdvancingPhrase
+	345,  // 975: pb.SendStatement.AsyncStatement.identifier:type_name -> pb.Identifier
+	355,  // 976: pb.SearchStatement.Varying.qualified_data_name:type_name -> pb.QualifiedDataName
+	333,  // 977: pb.SearchStatement.When.condition:type_name -> pb.Condition
+	246,  // 978: pb.SearchStatement.When.statements:type_name -> pb.Statement
+	345,  // 979: pb.RewriteStatement.From.identifier:type_name -> pb.Identifier
+	355,  // 980: pb.ReturnStatement.Into.qualified_data_name:type_name -> pb.QualifiedDataName
+	355,  // 981: pb.ReleaseStatement.From.qualified_data_name:type_name -> pb.QualifiedDataName
+	373,  // 982: pb.ReceiveStatement.From.data_name:type_name -> pb.DataName
+	373,  // 983: pb.ReceiveStatement.Thread.data_name:type_name -> pb.DataName
+	398,  // 984: pb.ReceiveStatement.Size.numeric_literal:type_name -> pb.NumericLiteral
+	345,  // 985: pb.ReceiveStatement.Size.identifier:type_name -> pb.Identifier
+	345,  // 986: pb.ReceiveStatement.Status.identifier:type_name -> pb.Identifier
+	398,  // 987: pb.ReceiveStatement.Before.numeric_literal:type_name -> pb.NumericLiteral
+	345,  // 988: pb.ReceiveStatement.Before.identifier:type_name -> pb.Identifier
+	373,  // 989: pb.ReceiveStatement.FromStatement.data_name:type_name -> pb.DataName
+	509,  // 990: pb.ReceiveStatement.FromStatement.from:type_name -> pb.ReceiveStatement.From
+	514,  // 991: pb.ReceiveStatement.FromStatement.before:type_name -> pb.ReceiveStatement.Before
+	510,  // 992: pb.ReceiveStatement.FromStatement.with:type_name -> pb.ReceiveStatement.With
+	511,  // 993: pb.ReceiveStatement.FromStatement.thread:type_name -> pb.ReceiveStatement.Thread
+	512,  // 994: pb.ReceiveStatement.FromStatement.size:type_name -> pb.ReceiveStatement.Size
+	513,  // 995: pb.ReceiveStatement.FromStatement.status:type_name -> pb.ReceiveStatement.Status
+	246,  // 996: pb.ReceiveStatement.NoData.statements:type_name -> pb.Statement
+	246,  // 997: pb.ReceiveStatement.WithData.statements:type_name -> pb.Statement
+	369,  // 998: pb.ReceiveStatement.IntoStatement.cd_name:type_name -> pb.CdName
+	345,  // 999: pb.ReceiveStatement.IntoStatement.identifier:type_name -> pb.Identifier
+	516,  // 1000: pb.ReceiveStatement.IntoStatement.no_data:type_name -> pb.ReceiveStatement.NoData
+	517,  // 1001: pb.ReceiveStatement.IntoStatement.with_data:type_name -> pb.ReceiveStatement.WithData
+	345,  // 1002: pb.ReadStatement.Into.identifier:type_name -> pb.Identifier
+	355,  // 1003: pb.ReadStatement.Key.qualified_data_name:type_name -> pb.QualifiedDataName
+	345,  // 1004: pb.PerformStatement.Times.identifier:type_name -> pb.Identifier
+	399,  // 1005: pb.PerformStatement.Times.integer_literal:type_name -> pb.IntegerLiteral
+	522,  // 1006: pb.PerformStatement.Until.test_clause:type_name -> pb.PerformStatement.TestClause
+	333,  // 1007: pb.PerformStatement.Until.condition:type_name -> pb.Condition
+	345,  // 1008: pb.PerformStatement.From.identifier:type_name -> pb.Identifier
+	396,  // 1009: pb.PerformStatement.From.literal:type_name -> pb.Literal
+	326,  // 1010: pb.PerformStatement.From.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	345,  // 1011: pb.PerformStatement.By.identifier:type_name -> pb.Identifier
+	396,  // 1012: pb.PerformStatement.By.literal:type_name -> pb.Literal
+	326,  // 1013: pb.PerformStatement.By.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	345,  // 1014: pb.PerformStatement.VaryingPhrase.identifier:type_name -> pb.Identifier
+	396,  // 1015: pb.PerformStatement.VaryingPhrase.literal:type_name -> pb.Literal
+	525,  // 1016: pb.PerformStatement.VaryingPhrase.from:type_name -> pb.PerformStatement.From
+	526,  // 1017: pb.PerformStatement.VaryingPhrase.by:type_name -> pb.PerformStatement.By
+	524,  // 1018: pb.PerformStatement.VaryingPhrase.until:type_name -> pb.PerformStatement.Until
+	527,  // 1019: pb.PerformStatement.After.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
+	527,  // 1020: pb.PerformStatement.VaryingClause.varying_phrase:type_name -> pb.PerformStatement.VaryingPhrase
+	528,  // 1021: pb.PerformStatement.VaryingClause.after:type_name -> pb.PerformStatement.After
+	522,  // 1022: pb.PerformStatement.Varying.test_clause:type_name -> pb.PerformStatement.TestClause
+	529,  // 1023: pb.PerformStatement.Varying.varying_clause:type_name -> pb.PerformStatement.VaryingClause
+	523,  // 1024: pb.PerformStatement.Type.times:type_name -> pb.PerformStatement.Times
+	524,  // 1025: pb.PerformStatement.Type.until:type_name -> pb.PerformStatement.Until
+	530,  // 1026: pb.PerformStatement.Type.varying:type_name -> pb.PerformStatement.Varying
+	531,  // 1027: pb.PerformStatement.InlineStatement.type:type_name -> pb.PerformStatement.Type
+	246,  // 1028: pb.PerformStatement.InlineStatement.statements:type_name -> pb.Statement
+	384,  // 1029: pb.PerformStatement.ProcedureStatement.procedure_name:type_name -> pb.ProcedureName
+	384,  // 1030: pb.PerformStatement.ProcedureStatement.through:type_name -> pb.ProcedureName
+	531,  // 1031: pb.PerformStatement.ProcedureStatement.type:type_name -> pb.PerformStatement.Type
+	376,  // 1032: pb.OpenStatement.Input.file_name:type_name -> pb.FileName
+	534,  // 1033: pb.OpenStatement.InputStatement.inputs:type_name -> pb.OpenStatement.Input
+	376,  // 1034: pb.OpenStatement.Output.file_name:type_name -> pb.FileName
+	536,  // 1035: pb.OpenStatement.OutputStatement.outputs:type_name -> pb.OpenStatement.Output
+	376,  // 1036: pb.OpenStatement.IOStatement.file_names:type_name -> pb.FileName
+	376,  // 1037: pb.OpenStatement.ExtendStatement.file_names:type_name -> pb.FileName
+	345,  // 1038: pb.MultiplyStatement.GivingOperand.identifier:type_name -> pb.Identifier
+	396,  // 1039: pb.MultiplyStatement.GivingOperand.literal:type_name -> pb.Literal
+	345,  // 1040: pb.MultiplyStatement.GivingResult.identifier:type_name -> pb.Identifier
+	540,  // 1041: pb.MultiplyStatement.Giving.giving_operand:type_name -> pb.MultiplyStatement.GivingOperand
+	541,  // 1042: pb.MultiplyStatement.Giving.giving_result:type_name -> pb.MultiplyStatement.GivingResult
+	345,  // 1043: pb.MultiplyStatement.Regular.regular_operands:type_name -> pb.Identifier
+	355,  // 1044: pb.MergeStatement.OnKeyClause.keys:type_name -> pb.QualifiedDataName
+	366,  // 1045: pb.MergeStatement.CollatingSequencePhrase.alphabet_names:type_name -> pb.AlphabetName
+	546,  // 1046: pb.MergeStatement.CollatingSequencePhrase.collating_alphanumeric:type_name -> pb.MergeStatement.CollatingAlphanumeric
+	547,  // 1047: pb.MergeStatement.CollatingSequencePhrase.collating_national:type_name -> pb.MergeStatement.CollatingNational
+	366,  // 1048: pb.MergeStatement.CollatingAlphanumeric.alphabet_name:type_name -> pb.AlphabetName
+	366,  // 1049: pb.MergeStatement.CollatingNational.alphabet_name:type_name -> pb.AlphabetName
+	376,  // 1050: pb.MergeStatement.Using.file_names:type_name -> pb.FileName
+	384,  // 1051: pb.MergeStatement.OutputProcedurePhrase.procedure_name:type_name -> pb.ProcedureName
+	550,  // 1052: pb.MergeStatement.OutputProcedurePhrase.output_through:type_name -> pb.MergeStatement.OutputThrough
+	384,  // 1053: pb.MergeStatement.OutputThrough.procedure_name:type_name -> pb.ProcedureName
+	552,  // 1054: pb.MergeStatement.GivingPhrase.givings:type_name -> pb.MergeStatement.Giving
+	376,  // 1055: pb.MergeStatement.Giving.file_name:type_name -> pb.FileName
+	48,   // 1056: pb.MergeStatement.Giving.type:type_name -> pb.MergeStatement.Giving.Type
+	345,  // 1057: pb.InspectStatement.By.identifier:type_name -> pb.Identifier
+	396,  // 1058: pb.InspectStatement.By.literal:type_name -> pb.Literal
+	345,  // 1059: pb.InspectStatement.To.identifier:type_name -> pb.Identifier
+	396,  // 1060: pb.InspectStatement.To.literal:type_name -> pb.Literal
+	345,  // 1061: pb.InspectStatement.BeforeAfter.identifier:type_name -> pb.Identifier
+	396,  // 1062: pb.InspectStatement.BeforeAfter.literal:type_name -> pb.Literal
+	345,  // 1063: pb.InspectStatement.ReplacingAllLeading.identifier:type_name -> pb.Identifier
+	396,  // 1064: pb.InspectStatement.ReplacingAllLeading.literal:type_name -> pb.Literal
+	553,  // 1065: pb.InspectStatement.ReplacingAllLeading.by:type_name -> pb.InspectStatement.By
+	555,  // 1066: pb.InspectStatement.ReplacingAllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	556,  // 1067: pb.InspectStatement.ReplacingAllLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeading
+	345,  // 1068: pb.InspectStatement.AllLeading.identifier:type_name -> pb.Identifier
+	396,  // 1069: pb.InspectStatement.AllLeading.literal:type_name -> pb.Literal
+	555,  // 1070: pb.InspectStatement.AllLeading.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	558,  // 1071: pb.InspectStatement.AllLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeading
+	553,  // 1072: pb.InspectStatement.ReplacingCharacters.by:type_name -> pb.InspectStatement.By
+	555,  // 1073: pb.InspectStatement.ReplacingCharacters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	555,  // 1074: pb.InspectStatement.Characters.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	561,  // 1075: pb.InspectStatement.CharactersLeadings.characters:type_name -> pb.InspectStatement.Characters
+	559,  // 1076: pb.InspectStatement.CharactersLeadings.all_leadings:type_name -> pb.InspectStatement.AllLeadings
+	345,  // 1077: pb.InspectStatement.For.identifier:type_name -> pb.Identifier
+	562,  // 1078: pb.InspectStatement.For.characters_leadings:type_name -> pb.InspectStatement.CharactersLeadings
+	345,  // 1079: pb.InspectStatement.ConvertingPhrase.identifier:type_name -> pb.Identifier
+	396,  // 1080: pb.InspectStatement.ConvertingPhrase.literal:type_name -> pb.Literal
+	554,  // 1081: pb.InspectStatement.ConvertingPhrase.to:type_name -> pb.InspectStatement.To
+	555,  // 1082: pb.InspectStatement.ConvertingPhrase.before_afters:type_name -> pb.InspectStatement.BeforeAfter
+	560,  // 1083: pb.InspectStatement.ReplacingCharactersLeadings.replacing_characters:type_name -> pb.InspectStatement.ReplacingCharacters
+	557,  // 1084: pb.InspectStatement.ReplacingCharactersLeadings.replacing_all_leadings:type_name -> pb.InspectStatement.ReplacingAllLeadings
+	565,  // 1085: pb.InspectStatement.ReplacingPhrase.replacing_characters_leadings:type_name -> pb.InspectStatement.ReplacingCharactersLeadings
+	563,  // 1086: pb.InspectStatement.TallyingReplacingPhrase.fors:type_name -> pb.InspectStatement.For
+	566,  // 1087: pb.InspectStatement.TallyingReplacingPhrase.replacing_phrases:type_name -> pb.InspectStatement.ReplacingPhrase
+	563,  // 1088: pb.InspectStatement.TallyingPhrase.fors:type_name -> pb.InspectStatement.For
+	49,   // 1089: pb.InitializeStatement.ReplacingBy.type:type_name -> pb.InitializeStatement.ReplacingBy.Type
+	345,  // 1090: pb.InitializeStatement.ReplacingBy.identifier:type_name -> pb.Identifier
+	396,  // 1091: pb.InitializeStatement.ReplacingBy.literal:type_name -> pb.Literal
+	569,  // 1092: pb.InitializeStatement.ReplacingPhrase.bys:type_name -> pb.InitializeStatement.ReplacingBy
+	246,  // 1093: pb.IfStatement.Then.statements:type_name -> pb.Statement
+	246,  // 1094: pb.IfStatement.Else.statements:type_name -> pb.Statement
+	384,  // 1095: pb.GoToStatement.SimpleStatement.procedure_name:type_name -> pb.ProcedureName
+	384,  // 1096: pb.GoToStatement.DependingOn.procedure_names:type_name -> pb.ProcedureName
+	345,  // 1097: pb.GoToStatement.DependingOn.depending_on:type_name -> pb.Identifier
+	574,  // 1098: pb.GoToStatement.DependingOnStatement.depending_on:type_name -> pb.GoToStatement.DependingOn
+	345,  // 1099: pb.ExhibitStatement.Operand.identifier:type_name -> pb.Identifier
+	396,  // 1100: pb.ExhibitStatement.Operand.literal:type_name -> pb.Literal
+	345,  // 1101: pb.EvaluateStatement.Select.identifier:type_name -> pb.Identifier
+	396,  // 1102: pb.EvaluateStatement.Select.literal:type_name -> pb.Literal
+	326,  // 1103: pb.EvaluateStatement.Select.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	333,  // 1104: pb.EvaluateStatement.Select.condition:type_name -> pb.Condition
+	577,  // 1105: pb.EvaluateStatement.AlsoSelect.select:type_name -> pb.EvaluateStatement.Select
+	581,  // 1106: pb.EvaluateStatement.ValueThrough.value:type_name -> pb.EvaluateStatement.Value
+	580,  // 1107: pb.EvaluateStatement.ValueThrough.through:type_name -> pb.EvaluateStatement.Through
+	581,  // 1108: pb.EvaluateStatement.Through.value:type_name -> pb.EvaluateStatement.Value
+	345,  // 1109: pb.EvaluateStatement.Value.identifier:type_name -> pb.Identifier
+	396,  // 1110: pb.EvaluateStatement.Value.literal:type_name -> pb.Literal
+	326,  // 1111: pb.EvaluateStatement.Value.arithmetic_expression:type_name -> pb.ArithmeticExpression
+	579,  // 1112: pb.EvaluateStatement.WhenCondition.value_through:type_name -> pb.EvaluateStatement.ValueThrough
+	333,  // 1113: pb.EvaluateStatement.WhenCondition.condition:type_name -> pb.Condition
+	397,  // 1114: pb.EvaluateStatement.WhenCondition.boolean_literal:type_name -> pb.BooleanLiteral
+	582,  // 1115: pb.EvaluateStatement.AlsoCondition.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
+	246,  // 1116: pb.EvaluateStatement.WhenOther.statements:type_name -> pb.Statement
+	582,  // 1117: pb.EvaluateStatement.When.when_condition:type_name -> pb.EvaluateStatement.WhenCondition
+	583,  // 1118: pb.EvaluateStatement.When.alsos:type_name -> pb.EvaluateStatement.AlsoCondition
+	585,  // 1119: pb.EvaluateStatement.WhenPhrase.whens:type_name -> pb.EvaluateStatement.When
+	246,  // 1120: pb.EvaluateStatement.WhenPhrase.statements:type_name -> pb.Statement
+	345,  // 1121: pb.DivideStatement.Giving.identifier:type_name -> pb.Identifier
+	587,  // 1122: pb.DivideStatement.GivingPhrase.givings:type_name -> pb.DivideStatement.Giving
+	345,  // 1123: pb.DivideStatement.Into.identifier:type_name -> pb.Identifier
+	589,  // 1124: pb.DivideStatement.IntoStatement.intos:type_name -> pb.DivideStatement.Into
+	345,  // 1125: pb.DivideStatement.IntoGivingStatement.identifier:type_name -> pb.Identifier
+	396,  // 1126: pb.DivideStatement.IntoGivingStatement.literal:type_name -> pb.Literal
+	588,  // 1127: pb.DivideStatement.IntoGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
+	345,  // 1128: pb.DivideStatement.ByGivingStatement.identifier:type_name -> pb.Identifier
+	396,  // 1129: pb.DivideStatement.ByGivingStatement.literal:type_name -> pb.Literal
+	588,  // 1130: pb.DivideStatement.ByGivingStatement.giving_phrase:type_name -> pb.DivideStatement.GivingPhrase
+	345,  // 1131: pb.DivideStatement.Remainder.identifier:type_name -> pb.Identifier
+	345,  // 1132: pb.ClosePortFileIOUsing.AssociatedData.identifier:type_name -> pb.Identifier
+	399,  // 1133: pb.ClosePortFileIOUsing.AssociatedData.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 1134: pb.ClosePortFileIOUsing.AssociatedDataLength.identifier:type_name -> pb.Identifier
+	399,  // 1135: pb.ClosePortFileIOUsing.AssociatedDataLength.integer_literal:type_name -> pb.IntegerLiteral
+	345,  // 1136: pb.CallStatement.ByContent.identifier:type_name -> pb.Identifier
+	396,  // 1137: pb.CallStatement.ByContent.literal:type_name -> pb.Literal
+	345,  // 1138: pb.CallStatement.ByValue.identifier:type_name -> pb.Identifier
+	396,  // 1139: pb.CallStatement.ByValue.literal:type_name -> pb.Literal
+	345,  // 1140: pb.CallStatement.ByReference.identifier:type_name -> pb.Identifier
+	396,  // 1141: pb.CallStatement.ByReference.literal:type_name -> pb.Literal
+	376,  // 1142: pb.CallStatement.ByReference.file_name:type_name -> pb.FileName
+	599,  // 1143: pb.CallStatement.ByReferencePhrase.refs:type_name -> pb.CallStatement.ByReference
+	598,  // 1144: pb.CallStatement.ByValuePhrase.values:type_name -> pb.CallStatement.ByValue
+	597,  // 1145: pb.CallStatement.ByContentPhrase.contents:type_name -> pb.CallStatement.ByContent
+	600,  // 1146: pb.CallStatement.UsingParameter.by_reference_phrase:type_name -> pb.CallStatement.ByReferencePhrase
+	601,  // 1147: pb.CallStatement.UsingParameter.by_value_phrase:type_name -> pb.CallStatement.ByValuePhrase
+	602,  // 1148: pb.CallStatement.UsingParameter.by_content_phrase:type_name -> pb.CallStatement.ByContentPhrase
+	603,  // 1149: pb.CallStatement.UsingPhrase.parameters:type_name -> pb.CallStatement.UsingParameter
+	345,  // 1150: pb.CallStatement.GivingPhrase.identifier:type_name -> pb.Identifier
+	384,  // 1151: pb.AlterStatement.ProceedTo.from:type_name -> pb.ProcedureName
+	384,  // 1152: pb.AlterStatement.ProceedTo.to:type_name -> pb.ProcedureName
+	345,  // 1153: pb.AddStatement.AddFrom.Identifier:type_name -> pb.Identifier
+	396,  // 1154: pb.AddStatement.AddFrom.literal:type_name -> pb.Literal
+	345,  // 1155: pb.AddStatement.AddToGiving.Identifier:type_name -> pb.Identifier
+	396,  // 1156: pb.AddStatement.AddToGiving.literal:type_name -> pb.Literal
+	607,  // 1157: pb.AddStatement.To.froms:type_name -> pb.AddStatement.AddFrom
+	345,  // 1158: pb.AddStatement.To.tos:type_name -> pb.Identifier
+	607,  // 1159: pb.AddStatement.ToGiving.froms:type_name -> pb.AddStatement.AddFrom
+	608,  // 1160: pb.AddStatement.ToGiving.tos:type_name -> pb.AddStatement.AddToGiving
+	345,  // 1161: pb.AddStatement.ToGiving.givings:type_name -> pb.Identifier
+	345,  // 1162: pb.AddStatement.Corresponding.corresponding:type_name -> pb.Identifier
+	345,  // 1163: pb.AddStatement.Corresponding.to:type_name -> pb.Identifier
+	50,   // 1164: pb.AcceptStatement.FromDate.type:type_name -> pb.AcceptStatement.FromDate.Type
+	382,  // 1165: pb.AcceptStatement.FromMnemonic.mnemonic_name:type_name -> pb.MnemonicName
+	376,  // 1166: pb.UseAfterClause.FileNames.file_names:type_name -> pb.FileName
+	351,  // 1167: pb.ConditionNameReference.SubscriptReference.subscripts:type_name -> pb.Subscript
+	360,  // 1168: pb.ConditionNameReference.InSubscript.in_datas:type_name -> pb.InData
+	361,  // 1169: pb.ConditionNameReference.InSubscript.in_file:type_name -> pb.InFile
+	617,  // 1170: pb.ConditionNameReference.InSubscript.refs:type_name -> pb.ConditionNameReference.SubscriptReference
+	1171, // [1171:1171] is the sub-list for method output_type
+	1171, // [1171:1171] is the sub-list for method input_type
+	1171, // [1171:1171] is the sub-list for extension type_name
+	1171, // [1171:1171] is the sub-list for extension extendee
+	0,    // [0:1171] is the sub-list for field type_name
 }
 
 func init() { file_cobol_proto_init() }
@@ -43361,7 +43490,7 @@ func file_cobol_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_cobol_proto_rawDesc), len(file_cobol_proto_rawDesc)),
-			NumEnums:      60,
+			NumEnums:      62,
 			NumMessages:   557,
 			NumExtensions: 0,
 			NumServices:   0,

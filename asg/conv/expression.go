@@ -20,6 +20,11 @@ func ArithmeticExpression(in cobol85.IArithmeticExpressionContext) (out *pb.Arit
 func PlusMinus(in cobol85.IPlusMinusContext) (out *pb.PlusMinus) {
 	ctx := in.(*cobol85.PlusMinusContext)
 	out = &pb.PlusMinus{}
+	if ctx.MINUSCHAR() != nil {
+		out.Operator = pb.PlusMinus_MINUS
+	} else {
+		out.Operator = pb.PlusMinus_PLUS
+	}
 	if ctx.MultDivs() != nil {
 		out.MultDivs = MultDivs(ctx.MultDivs())
 	}
@@ -46,6 +51,11 @@ func MultDiv(in cobol85.IMultDivContext) (out *pb.MultDiv) {
 	out = &pb.MultDiv{
 		Powers: &pb.Powers{},
 	}
+	if ctx.SLASHCHAR() != nil {
+		out.Operator = pb.MultDiv_DIV
+	} else {
+		out.Operator = pb.MultDiv_MULT
+	}
 	if ictx := ctx.Powers(); ictx != nil {
 		out.Powers = Powers(ictx)
 	}
@@ -67,6 +77,9 @@ func Powers(in cobol85.IPowersContext) (out *pb.Powers) {
 func Power(in cobol85.IPowerContext) (out *pb.Power) {
 	ctx := in.(*cobol85.PowerContext)
 	out = &pb.Power{}
+	if ctx.DOUBLEASTERISKCHAR() != nil {
+		out.HasPowerOperator = true
+	}
 	if ctx.Basis() != nil {
 		out.Basis = Basis(ctx.Basis())
 	}

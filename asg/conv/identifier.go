@@ -68,7 +68,7 @@ func Argument(in cobol85.IArgumentContext) (out *pb.Argument) {
 		}
 	} else if ictx := ctx.ArithmeticExpression(); ictx != nil {
 		out.OneOf = &pb.Argument_ArithmeticExpression{
-			ArithmeticExpression: &pb.ArithmeticExpression{},
+			ArithmeticExpression: ArithmeticExpression(ictx),
 		}
 	}
 	return

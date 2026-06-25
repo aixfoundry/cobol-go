@@ -2861,7 +2861,12 @@ message ArithmeticExpression {
 }
 
 message PlusMinus {
-    MultDivs mult_divs = 1;
+    enum Operator {
+        PLUS = 0;
+        MINUS = 1;
+    }
+    Operator operator = 1;
+    MultDivs mult_divs = 2;
 }
 
 message MultDivs {
@@ -2870,7 +2875,12 @@ message MultDivs {
 }
 
 message MultDiv {
-    Powers powers = 1;
+    enum Operator {
+        MULT = 0;
+        DIV = 1;
+    }
+    Operator operator = 1;
+    Powers powers = 2;
 }
 
 message Powers {
@@ -2880,6 +2890,7 @@ message Powers {
 
 message Power {
     Basis basis = 1;
+    bool has_power_operator = 2;
 }
 
 message Basis {
