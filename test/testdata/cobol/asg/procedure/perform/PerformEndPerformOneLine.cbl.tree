@@ -1,0 +1,133 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n        
+				(programIdParagraph PROGRAM-ID .     
+					(programName 
+						(cobolWord ISSUE09)) .\n       )) 
+			(dataDivision DATA DIVISION .\n        
+				(dataDivisionSection 
+					(workingStorageSection WORKING-STORAGE SECTION .\n        
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord C-ZAEHLER)) 
+								(dataUsageClause PACKED-DECIMAL) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord C-S1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S9) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 09)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(numericLiteral 
+													(integerLiteral +0)))))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-T-MAX)) 
+								(dataPictureClause pic 
+									(pictureString 
+										(pictureChars 
+											(integerLiteral 99)))) 
+								(dataValueClause value 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(numericLiteral 
+													(integerLiteral 15)))))) .\n        )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord X-SUBSKRIPTE)) 
+								(dataUsageClause BINARY) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord X-1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S999))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord X-2)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S999))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord X-3)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S999))) .\n       ))))) 
+			(procedureDivision PROCEDURE DIVISION .\n            
+				(procedureDivisionBody 
+					(paragraphs 
+						(sentence 
+							(statement 
+								(performStatement PERFORM 
+									(performInlineStatement 
+										(performType 
+											(performVarying 
+												(performVaryingClause VARYING 
+													(performVaryingPhrase 
+														(identifier 
+															(qualifiedDataName 
+																(qualifiedDataNameFormat1 
+																	(dataName 
+																		(cobolWord X-3))))) 
+														(performFrom FROM 
+															(literal 
+																(numericLiteral 
+																	(integerLiteral 1)))) 
+														(performBy BY 
+															(literal 
+																(numericLiteral 
+																	(integerLiteral 1)))) 
+														(performUntil UNTIL 
+															(condition 
+																(combinableCondition 
+																	(simpleCondition 
+																		(relationCondition 
+																			(relationArithmeticComparison 
+																				(arithmeticExpression 
+																					(multDivs 
+																						(powers 
+																							(basis 
+																								(identifier 
+																									(qualifiedDataName 
+																										(qualifiedDataNameFormat1 
+																											(dataName 
+																												(cobolWord X-3))))))))) 
+																				(relationalOperator >) 
+																				(arithmeticExpression 
+																					(multDivs 
+																						(powers 
+																							(basis 
+																								(identifier 
+																									(qualifiedDataName 
+																										(qualifiedDataNameFormat1 
+																											(dataName 
+																												(cobolWord Z-T-MAX))))))))))))))))))) END-PERFORM))) 
+							(statement 
+								(displayStatement display 
+									(displayOperand 
+										(literal "X-3 nach Schleife=")) 
+									(displayOperand 
+										(identifier 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord x-3)))))))) 
+							(statement 
+								(exitStatement exit)) .)))))) <EOF>)

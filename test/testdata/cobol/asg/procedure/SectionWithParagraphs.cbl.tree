@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  SCTN .\n        URE DIVISION .\n       \n       \n         STOP RUN .\n         PERFORM INIT .\n       \n         DISPLAY "Hello World" .\n         STOP RUN .)

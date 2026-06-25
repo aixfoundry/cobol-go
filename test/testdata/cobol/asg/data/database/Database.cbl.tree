@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  FILECONTROLREAD .\n        IVISION .\n       \n        'SOMELITERAL' INVOKE 'SOMELITERAL2' 'SOMELITERAL3' INVOKE 'SOMELITERAL4')

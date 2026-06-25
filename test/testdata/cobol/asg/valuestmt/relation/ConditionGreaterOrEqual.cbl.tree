@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  COND .\n        URE DIVISION .\n        1 >= 2 THEN END-IF .)

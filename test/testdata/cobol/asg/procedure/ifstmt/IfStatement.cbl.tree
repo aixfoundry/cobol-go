@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  IFSTMT .\n        URE DIVISION .\n        SOMECOND1 THEN DISPLAY 'thentext' DISPLAY 'elsetext' - IF .)

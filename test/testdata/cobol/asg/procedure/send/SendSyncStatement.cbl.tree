@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  TERMINATESTMT .\n        URE DIVISION .\n       \n        FROM SOMEID1 WITH SOMEID2 REPLACING LINE BEFORE ADVANCING 3 LINES .)

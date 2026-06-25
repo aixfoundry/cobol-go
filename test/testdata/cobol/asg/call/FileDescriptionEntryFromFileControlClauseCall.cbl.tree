@@ -1,0 +1,95 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n        
+				(programIdParagraph PROGRAM-ID .  
+					(programName 
+						(cobolWord SomeVideoProgram)) .\n       )) 
+			(environmentDivision ENVIRONMENT DIVISION .\n        
+				(environmentDivisionBody 
+					(inputOutputSection INPUT-OUTPUT SECTION .\n        
+						(inputOutputSectionParagraph 
+							(fileControlParagraph FILE-CONTROL .\n            
+								(fileControlEntry 
+									(selectClause SELECT OPTIONAL 
+										(fileName 
+											(cobolWord VideoFile))) 
+									(fileControlClause 
+										(assignClause ASSIGN TO 
+											(literal 'IDXVIDEO'))) 
+									(fileControlClause 
+										(organizationClause ORGANIZATION IS INDEXED)) 
+									(fileControlClause 
+										(accessModeClause ACCESS MODE IS DYNAMIC)) 
+									(fileControlClause 
+										(recordKeyClause RECORD KEY IS 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord VideoCode)) 
+													(qualifiedInData 
+														(inData of 
+															(dataName 
+																(cobolWord VideoRecord)))))))) 
+									(fileControlClause 
+										(alternateRecordKeyClause ALTERNATE RECORD KEY IS 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord VideoTitle)) 
+													(qualifiedInData 
+														(inData of 
+															(dataName 
+																(cobolWord VideoRecord)))))) WITH DUPLICATES)) 
+									(fileControlClause 
+										(fileStatusClause FILE STATUS IS 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord VideoFileStatus))))))) .\n       ))))) 
+			(dataDivision DATA DIVISION .\n        
+				(dataDivisionSection 
+					(fileSection FILE SECTION .\n        
+						(fileDescriptionEntry FD 
+							(fileName 
+								(cobolWord VideoFile)) .\n        
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 01 
+									(dataName 
+										(cobolWord VideoRecord)) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 02 
+									(dataName 
+										(cobolWord VideoCode)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 5)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 02 
+									(dataName 
+										(cobolWord VideoTitle)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 40)) 
+											(pictureChars )))) .\n       ))))) 
+				(dataDivisionSection 
+					(workingStorageSection WORKING-STORAGE SECTION .\n        
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord VideoFileStatus)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 2)) 
+										(pictureChars )))) .))))))) <EOF>)

@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  FILECONTROLDISPLAY .\n       \n       \n        file-control .\n           select standard-input assign to keyboard .\n           select standard-output assign to display .)

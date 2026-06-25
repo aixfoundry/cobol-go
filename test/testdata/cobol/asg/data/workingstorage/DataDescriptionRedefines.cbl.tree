@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  DATADESCRREDEFINES .\n        IVISION .\n       \n       \n        BIRTHDATE PIC X ( 8 ) .\n        BIRTHDATE-PARTS REDEFINES BIRTHDATE .\n        07 BIRTH-YEAR PIC 9 ( 4 ) .\n        07 BIRTH-MONTH PIC 9 ( 2 ) .\n        07 BIRTH-DAY PIC 9 ( 2 ) .)

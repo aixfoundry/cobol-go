@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  SOMESCREENAPP .\n        IVISION .\n       \n        SOMESCREEN1 .\n        05 BLANK SCREEN .\n        05 SOMELINE1 LINE 1 COLUMN 16 VALUE "E M P L O Y E E" HIGHLIGHT .\n        05 LINE 2 COLUMN 35 VALUE "A D D R E S S" LOWLIGHT .\n        SOMESCREEN2 .)

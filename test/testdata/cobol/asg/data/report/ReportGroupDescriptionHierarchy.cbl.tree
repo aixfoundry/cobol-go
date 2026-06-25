@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  REPGRPDESCVERT .\n        IVISION .\n       \n        REPORT1 .\n        01 SOMEDATA1 USAGE IS DISPLAY .\n           04 SOMEDATA1 USAGE IS DISPLAY .\n        02 SOMEDATA1 USAGE IS DISPLAY .\n        01 SOMEDATA1 USAGE IS DISPLAY .)

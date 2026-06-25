@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  INSPCTSTMT .\n        URE DIVISION .\n       \n        REPLACING CHARACTERS BY 'C' AFTER INITIAL 'A' FIRST 'B' BY 'C' BEFORE INITIAL 'A' .)

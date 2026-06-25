@@ -1,0 +1,25 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n  
+				(programIdParagraph PROGRAM-ID .  
+					(programName 
+						(cobolWord CONFIGSECTION)) .\n ) 
+				(identificationDivisionBody 
+					(authorParagraph AUTHOR .  
+						(commentEntry *>CE SOMEAUTH.))) 
+				(identificationDivisionBody 
+					(installationParagraph INSTALLATION .  
+						(commentEntry *>CE SOMEINSTALL.))) 
+				(identificationDivisionBody 
+					(dateCompiledParagraph DATE-COMPILED .  
+						(commentEntry *>CE SOMECOMPILED.))) 
+				(identificationDivisionBody 
+					(dateWrittenParagraph DATE-WRITTEN .  
+						(commentEntry *>CE SOMEWRITTEN.))) 
+				(identificationDivisionBody 
+					(securityParagraph SECURITY .  
+						(commentEntry *>CE SOMESEC.))) 
+				(identificationDivisionBody 
+					(remarksParagraph REMARKS .  
+						(commentEntry *>CE SOMEREM.)))))) <EOF>)

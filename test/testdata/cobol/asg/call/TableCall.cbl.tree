@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  TBLCLL .\n        IVISION .\n       \n       \n       \n        10 WS-DELIMITER PIC A ( 2 ) .\n        10 WS-CONTENT OCCURS 2 TIMES INDEXED BY J .\n          20 WS-COLUMN PIC X ( 3 ) .\n       \n        URE DIVISION .\n       \n       \n       \n       \n       \n       \n       \n       )

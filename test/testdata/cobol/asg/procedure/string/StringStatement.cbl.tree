@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  STRNGSTMT .\n        URE DIVISION .\n       \n        SOMEID1 DELIMITED BY '1' SOMEID2 FOR SOMEID3 INTO SOMEID4 WITH POINTER SOMEID5 ON OVERFLOW DISPLAY 'on overflow' NOT ON OVERFLOW DISPLAY 'not on overflow' .)

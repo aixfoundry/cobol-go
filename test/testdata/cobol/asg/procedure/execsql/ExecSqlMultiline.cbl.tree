@@ -1,0 +1,82 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n        
+				(programIdParagraph PROGRAM-ID .  
+					(programName 
+						(cobolWord EXECSQL)) .\n       \n       )) 
+			(dataDivision DATA DIVISION .\n        
+				(dataDivisionSection 
+					(workingStorageSection WORKING-STORAGE SECTION .\n       
+						(dataDescriptionEntry 
+							(dataDescriptionEntryExecSql *>EXECSQL EXEC SQL\n *>EXECSQL INCLUDE SQLSCRIPT\n *>EXECSQL END-EXEC } .\n       \n      )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryExecSql *>EXECSQL EXEC SQL\n *>EXECSQL INCLUDE TEACHER\n *>EXECSQL END-EXEC } .\n       \n      )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryExecSql *>EXECSQL EXEC SQL BEGIN DECLARE SECTION\n *>EXECSQL END-EXEC } .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord WS-TEACHER-REC)) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord WS-TEACHER-ID)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars 
+											(integerLiteral 9)) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 10)) 
+										(pictureChars )))) .\n      )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryExecSql *>EXECSQL EXEC SQL END DECLARE SECTION\n *>EXECSQL END-EXEC } .\n       \n       ))))) 
+			(procedureDivision PROCEDURE DIVISION .\n       
+				(procedureDivisionBody 
+					(paragraphs 
+						(sentence 
+							(statement 
+								(execSqlStatement *>EXECSQL EXEC SQL\n *>EXECSQL SELECT TEACHER-ID\n *>EXECSQL INTO :WS-TEACHER-ID FROM TEACHER\n *>EXECSQL WHERE TEACHER-ID=1\n *>EXECSQL END-EXEC })) .\n       \n         ) 
+						(sentence 
+							(statement 
+								(ifStatement IF 
+									(condition 
+										(combinableCondition 
+											(simpleCondition 
+												(relationCondition 
+													(relationArithmeticComparison 
+														(arithmeticExpression 
+															(multDivs 
+																(powers 
+																	(basis 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord SQLCODE))))))))) 
+														(relationalOperator =) 
+														(arithmeticExpression 
+															(multDivs 
+																(powers 
+																	(basis 
+																		(literal 
+																			(numericLiteral 
+																				(integerLiteral 0)))))))))))) 
+									(ifThen 
+										(statement 
+											(displayStatement DISPLAY 
+												(displayOperand 
+													(identifier 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord WS-TEACHER-RECORD))))))))) 
+									(ifElse ELSE 
+										(statement 
+											(displayStatement DISPLAY 
+												(displayOperand 
+													(literal 'Error'))))) END-IF)) .\n         ) 
+						(sentence 
+							(statement 
+								(stopStatement STOP RUN)) .)))))) <EOF>)

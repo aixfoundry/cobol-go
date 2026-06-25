@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  RETSTMT .\n        URE DIVISION .\n       \n        INTO SOMEDATA1 AT END DISPLAY 'at end' NOT AT END DISPLAY 'not at end' .)

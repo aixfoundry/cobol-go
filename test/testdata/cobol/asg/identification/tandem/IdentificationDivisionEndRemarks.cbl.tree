@@ -1,0 +1,10 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n  
+				(programIdParagraph PROGRAM-ID .  
+					(programName 
+						(cobolWord ENDRMRKS)) .\n ) 
+				(identificationDivisionBody 
+					(remarksParagraph REMARKS .  
+						(commentEntry *>CE SOMEREM.) END-REMARKS .))))) <EOF>)

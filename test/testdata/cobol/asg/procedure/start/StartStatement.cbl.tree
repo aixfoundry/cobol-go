@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  READSTMT .\n        URE DIVISION .\n        RT SOMEFILE1 KEY IS EQUAL TO SOMEDATA1 INVALID KEY DISPLAY 'invalid key' NOT INVALID KEY DISPLAY 'valid key' .)

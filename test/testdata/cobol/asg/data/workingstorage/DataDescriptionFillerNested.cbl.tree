@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  DATADESCRFILLERNESTED .\n        IVISION .\n       \n       \n        FILLER PIC X ( 20 ) VALUE 'SOME-FILLER-VALUE' .\n        SOMEID PIC X ( 20 ) VALUE 'SOME-VALUE' .)

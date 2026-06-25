@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  REWRSTMT .\n        URE DIVISION .\n       \n        FROM SOMEID1 INVALID KEY DISPLAY 'invalid key' NOT INVALID KEY DISPLAY 'not invalid key' .)

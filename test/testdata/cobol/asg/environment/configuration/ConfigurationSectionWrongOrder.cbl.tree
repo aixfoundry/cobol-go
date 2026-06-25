@@ -1,0 +1,31 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n       
+				(programIdParagraph PROGRAM-ID .        
+					(programName 
+						(cobolWord ABC01)) .\n      ) 
+				(identificationDivisionBody 
+					(authorParagraph AUTHOR .  
+						(commentEntry *>CE           Tester.)))) 
+			(environmentDivision ENVIRONMENT DIVISION .\n        
+				(environmentDivisionBody 
+					(configurationSection CONFIGURATION SECTION .\n        
+						(configurationSectionParagraph 
+							(specialNamesParagraph SPECIAL-NAMES .\n            
+								(specialNameClause 
+									(decimalPointClause DECIMAL-POINT IS COMMA)) .\n       )) 
+						(configurationSectionParagraph 
+							(objectComputerParagraph OBJECT-COMPUTER .       
+								(computerName 
+									(systemName 
+										(cobolWord IBM-370))) .\n       )) 
+						(configurationSectionParagraph 
+							(sourceComputerParagraph SOURCE-COMPUTER .       
+								(computerName 
+									(systemName 
+										(cobolWord IBM-370))) .\n       )))) 
+				(environmentDivisionBody 
+					(inputOutputSection INPUT-OUTPUT SECTION .\n        
+						(inputOutputSectionParagraph 
+							(fileControlParagraph FILE-CONTROL .\n       ))))))) <EOF>)

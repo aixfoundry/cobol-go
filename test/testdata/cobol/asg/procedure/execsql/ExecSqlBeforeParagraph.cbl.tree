@@ -1,0 +1,28 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision Identification Division .\n        
+				(programIdParagraph Program-ID .  
+					(programName 
+						(cobolWord ExecSqlBeforeParagraph)) .\n       )) 
+			(procedureDivision Procedure Division .\n            
+				(procedureDivisionBody 
+					(paragraphs 
+						(sentence 
+							(statement 
+								(moveStatement MOVE 
+									(moveToStatement 
+										(moveToSendingArea 
+											(literal 
+												(figurativeConstant SPACE))) TO 
+										(identifier 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord W-A)))))))) .\n       \n      ) 
+						(sentence 
+							(statement 
+								(execSqlStatement *>EXECSQL EXEC SQL\n *>EXECSQL WHENEVER SQLERROR CONTINUE\n *>EXECSQL END-EXEC })) .\n      ) 
+						(paragraph 
+							(paragraphName 
+								(cobolWord END-OF-JOBS)) .)))))) <EOF>)

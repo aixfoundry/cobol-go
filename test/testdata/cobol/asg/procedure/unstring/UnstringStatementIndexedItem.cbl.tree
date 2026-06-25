@@ -1,0 +1,924 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n        
+				(programIdParagraph PROGRAM-ID .      
+					(programName 
+						(cobolWord UnstringSample)) .\n      )) 
+			(environmentDivision ENVIRONMENT DIVISION .\n        
+				(environmentDivisionBody 
+					(configurationSection CONFIGURATION SECTION .\n        
+						(configurationSectionParagraph 
+							(specialNamesParagraph SPECIAL-NAMES .    
+								(specialNameClause 
+									(decimalPointClause DECIMAL-POINT IS COMMA)) .\n       )))) 
+				(environmentDivisionBody 
+					(inputOutputSection INPUT-OUTPUT SECTION .\n      ))) 
+			(dataDivision DATA DIVISION .\n       
+				(dataDivisionSection 
+					(workingStorageSection WORKING-STORAGE SECTION .\n       
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord C-ZAEHLER)) 
+								(dataUsageClause PACKED-DECIMAL) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord C-UEB)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars 
+											(integerLiteral 9)) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 06)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(figurativeConstant ZERO))))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord C-D852A)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S9) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 9)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(numericLiteral 
+													(integerLiteral +0)))))) .\n      )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord T-TABELLEN)) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord T-WERT)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 72)) 
+										(pictureChars )))) 
+								(dataOccursClause OCCURS 
+									(integerLiteral 11)) .\n      )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord X-SUBSKRIPTE)) 
+								(dataUsageClause BINARY) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord X-1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S9) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 4)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord X-2)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S9) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 4)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord X-4)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S9) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 4)) 
+										(pictureChars )))) .\n      )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord Z-ZWISCHENBEREICHE)) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-LAEN)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars S9) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 5)) 
+										(pictureChars )))) 
+								(dataUsageClause COMP-3) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-DATUM)) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-JAHR)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 4)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-MONAT)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 2)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-TAG)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 2)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-ZEIT)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 6)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 FILLER 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 5)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-WERT)) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-WERT1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 72)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-WERT2)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 72)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-WERT3)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 72)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-WERT4)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 72)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-BTRNR-E)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 08)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-BTRNR-A)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 08)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-EMP-1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 35)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-EMP-2)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 35)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-EMP-3)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 35)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-ABS-1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 35)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-ABS-2)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 35)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-ABS-3)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 35)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-BAND)) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-BAND-NR)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars 
+											(integerLiteral 9)) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 05)) 
+										(pictureChars )))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 FILLER 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 15)) 
+										(pictureChars )))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord Z-UEB)) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-UEB-1)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 02)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 'EL')))) .\n               )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 10 
+								(dataName 
+									(cobolWord Z-UEB-2)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars 
+											(integerLiteral 9)) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 02)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(numericLiteral 
+													(integerLiteral 0)))))) .\n      ))))) 
+			(procedureDivision Procedure Division .\n            
+				(procedureDivisionBody 
+					(paragraphs 
+						(sentence 
+							(statement 
+								(performStatement perform 
+									(performProcedureStatement 
+										(procedureName 
+											(paragraphName 
+												(cobolWord B70100)))))) 
+							(statement 
+								(stopStatement stop run)) .\n      ) 
+						(paragraph 
+							(paragraphName 
+								(cobolWord B70100)) .\n            
+							(sentence 
+								(statement 
+									(moveStatement MOVE 
+										(moveToStatement 
+											(moveToSendingArea 
+												(literal 
+													(numericLiteral 
+														(integerLiteral 0)))) TO 
+											(identifier 
+												(qualifiedDataName 
+													(qualifiedDataNameFormat1 
+														(dataName 
+															(cobolWord X-2)))))))) 
+								(statement 
+									(unstringStatement UNSTRING 
+										(unstringSendingPhrase 
+											(identifier 
+												(qualifiedDataName 
+													(qualifiedDataNameFormat1 
+														(dataName 
+															(cobolWord Z-WERT))))) 
+											(unstringDelimitedByPhrase DELIMITED BY ALL 
+												(literal '#'))) 
+										(unstringIntoPhrase INTO 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 1)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 2)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 3)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 4)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 5)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 6)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 7)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 8)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 9)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 10)) )))) 
+											(unstringInto 
+												(identifier 
+													(tableCall 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord T-WERT)))) ( 
+														(subscript 
+															(integerLiteral 11)) ))))) 
+										(unstringTallyingPhrase TALLYING IN 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord X-2))))) END-UNSTRING)) 
+								(statement 
+									(performStatement PERFORM 
+										(performInlineStatement 
+											(performType 
+												(performVarying 
+													(performVaryingClause VARYING 
+														(performVaryingPhrase 
+															(identifier 
+																(qualifiedDataName 
+																	(qualifiedDataNameFormat1 
+																		(dataName 
+																			(cobolWord X-1))))) 
+															(performFrom FROM 
+																(literal 
+																	(numericLiteral 
+																		(integerLiteral 1)))) 
+															(performBy BY 
+																(literal 
+																	(numericLiteral 
+																		(integerLiteral 1)))) 
+															(performUntil UNTIL 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord X-1))))))))) 
+																					(relationalOperator >) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord X-2))))))))))))))))))) 
+											(statement 
+												(moveStatement MOVE 
+													(moveToStatement 
+														(moveToSendingArea 
+															(literal 
+																(figurativeConstant SPACES))) TO 
+														(identifier 
+															(qualifiedDataName 
+																(qualifiedDataNameFormat1 
+																	(dataName 
+																		(cobolWord Z-WERT)))))))) 
+											(statement 
+												(unstringStatement UNSTRING 
+													(unstringSendingPhrase 
+														(identifier 
+															(tableCall 
+																(qualifiedDataName 
+																	(qualifiedDataNameFormat1 
+																		(dataName 
+																			(cobolWord T-WERT)))) ( 
+																(subscript 
+																	(qualifiedDataName 
+																		(qualifiedDataNameFormat1 
+																			(dataName 
+																				(cobolWord X-1))))) ))) 
+														(unstringDelimitedByPhrase DELIMITED BY ALL 
+															(literal '=')) 
+														(unstringOrAllPhrase OR ALL 
+															(literal '  '))) 
+													(unstringIntoPhrase INTO 
+														(unstringInto 
+															(identifier 
+																(qualifiedDataName 
+																	(qualifiedDataNameFormat1 
+																		(dataName 
+																			(cobolWord Z-WERT1)))))) 
+														(unstringInto 
+															(identifier 
+																(qualifiedDataName 
+																	(qualifiedDataNameFormat1 
+																		(dataName 
+																			(cobolWord Z-WERT2))))))) END-UNSTRING)) 
+											(statement 
+												(evaluateStatement EVALUATE 
+													(evaluateSelect 
+														(literal 
+															(booleanLiteral TRUE))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'EMP-1')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-EMP-1))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'EMP-2')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-EMP-2))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'EMP-3')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-EMP-3))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'ABS-1')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-ABS-1))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'ABS-2')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-ABS-2))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'ABS-3')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-ABS-3))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'BTRNR-A')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-BTRNR-A))))))))) 
+													(evaluateWhenPhrase 
+														(evaluateWhen WHEN 
+															(evaluateCondition 
+																(condition 
+																	(combinableCondition 
+																		(simpleCondition 
+																			(relationCondition 
+																				(relationArithmeticComparison 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(identifier 
+																										(qualifiedDataName 
+																											(qualifiedDataNameFormat1 
+																												(dataName 
+																													(cobolWord Z-WERT1))))))))) 
+																					(relationalOperator =) 
+																					(arithmeticExpression 
+																						(multDivs 
+																							(powers 
+																								(basis 
+																									(literal 'BTRNR-E')))))))))))) 
+														(statement 
+															(moveStatement MOVE 
+																(moveToStatement 
+																	(moveToSendingArea 
+																		(identifier 
+																			(qualifiedDataName 
+																				(qualifiedDataNameFormat1 
+																					(dataName 
+																						(cobolWord Z-WERT2)))))) TO 
+																	(identifier 
+																		(qualifiedDataName 
+																			(qualifiedDataNameFormat1 
+																				(dataName 
+																					(cobolWord Z-BTRNR-E))))))))) 
+													(evaluateWhenOther WHEN OTHER 
+														(statement 
+															(continueStatement CONTINUE))) END-EVALUATE)) END-PERFORM))) .\n       )) 
+						(paragraph 
+							(paragraphName 
+								(cobolWord B70100-EX)) .\n            
+							(sentence 
+								(statement 
+									(exitStatement EXIT)) .\n      ))))))) <EOF>)

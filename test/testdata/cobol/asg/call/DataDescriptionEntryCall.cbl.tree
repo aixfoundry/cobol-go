@@ -1,0 +1,25 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n        
+				(programIdParagraph PROGRAM-ID .      
+					(programName 
+						(cobolWord CASE-INSENSITIVE)) .\n       )) 
+			(dataDivision DATA DIVISION .\n        
+				(dataDivisionSection 
+					(workingStorageSection WORKING-STORAGE SECTION .\n        
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord FORT-Struktur)) .\n       ))))) 
+			(procedureDivision PROCEDURE DIVISION .\n        
+				(procedureDivisionBody 
+					(paragraphs 
+						(sentence 
+							(statement 
+								(initializeStatement initialize 
+									(identifier 
+										(qualifiedDataName 
+											(qualifiedDataNameFormat1 
+												(dataName 
+													(cobolWord fort-struktur))))))) .)))))) <EOF>)

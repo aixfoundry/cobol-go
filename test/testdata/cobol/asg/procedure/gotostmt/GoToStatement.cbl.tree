@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  GOTOSTMT .\n        IVISION .\n       \n        SOMEDATA1 PIC 9 .\n        URE DIVISION .\n       \n        TO SOMEPROC2 .\n       \n        TO SOMEPROC3 SOMEPROC4 SOMEPROC5 DEPENDING ON SOMEDATA1 .\n       \n       \n       \n       \n       \n        MORE-LABELS .)

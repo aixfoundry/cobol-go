@@ -1,0 +1,1 @@
+(startRule compilationUnit M-ID .  CALLSTMT .\n        URE DIVISION .\n       \n        USING TEXT-VALUE-2 BY VALUE LENGTH 1 .\n       \n        USING TEXT-VALUE-2 "C" .\n       \n        USING TO-UPPER-CASE BY VALUE LENGTH TO-UPPER-CASE .)

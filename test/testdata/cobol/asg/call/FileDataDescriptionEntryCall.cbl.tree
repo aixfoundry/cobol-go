@@ -1,0 +1,488 @@
+(startRule 
+	(compilationUnit 
+		(programUnit 
+			(identificationDivision IDENTIFICATION DIVISION .\n        
+				(programIdParagraph PROGRAM-ID .  
+					(programName 
+						(cobolWord ISSUE14)) .\n       )) 
+			(environmentDivision ENVIRONMENT DIVISION .\n        
+				(environmentDivisionBody 
+					(inputOutputSection INPUT-OUTPUT SECTION .\n        
+						(inputOutputSectionParagraph 
+							(fileControlParagraph FILE-CONTROL .\n            
+								(fileControlEntry 
+									(selectClause SELECT 
+										(fileName 
+											(cobolWord D111E))) 
+									(fileControlClause 
+										(assignClause ASSIGN TO 
+											(assignmentName 
+												(systemName 
+													(cobolWord UT-S-D111E)))))) .\n       ))))) 
+			(dataDivision DATA DIVISION .\n        
+				(dataDivisionSection 
+					(fileSection FILE SECTION .\n        
+						(fileDescriptionEntry FD 
+							(fileName 
+								(cobolWord D111E)) 
+							(fileDescriptionEntryClause 
+								(labelRecordsClause LABEL RECORDS STANDARD)) 
+							(fileDescriptionEntryClause 
+								(recordingModeClause RECORDING 
+									(modeStatement 
+										(cobolWord F)))) 
+							(fileDescriptionEntryClause 
+								(blockContainsClause BLOCK 
+									(integerLiteral 0) RECORDS)) 
+							(fileDescriptionEntryClause 
+								(dataRecordsClause DATA RECORD 
+									(dataName 
+										(cobolWord D111E-DATEI)))) .\n        
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 01 
+									(dataName 
+										(cobolWord D111E-DATEI)) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-PROJ)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 02)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-DST)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 03)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-BEA)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 03)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-PERSNR)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 09)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-BDST)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 08)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-NAME)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 30)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-VORNAME)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 30)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-TITEL)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 20)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-VORSATZ)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 20)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-ADEL)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 20)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-GESCHLECHT)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 01)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-HAUSNR)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 08)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-KNR)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 02)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-KNAME)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 16)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-DAT-M)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 02)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-DAT-J)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 04)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-GEB-DAT)) .\n              )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 10 
+									(dataName 
+										(cobolWord D111E-GEB-DAT-T)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 02)) 
+											(pictureChars )))) .\n              )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 10 
+									(dataName 
+										(cobolWord D111E-GEB-DAT-M)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 02)) 
+											(pictureChars )))) .\n              )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 10 
+									(dataName 
+										(cobolWord D111E-GEB-DAT-J)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars 
+												(integerLiteral 9)) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 04)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-PLZ)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 10)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-ORT)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 34)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-STRASSE)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 33)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-P7142)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 40)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-LAND)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 30)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-SATZART)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 01)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-ANSCHRIFT)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 01)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-KNACHNAME)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 30)) 
+											(pictureChars )))) .\n           )) 
+							(dataDescriptionEntry 
+								(dataDescriptionEntryFormat1 05 
+									(dataName 
+										(cobolWord D111E-REST)) 
+									(dataPictureClause PIC 
+										(pictureString 
+											(pictureChars X) 
+											(pictureChars () 
+											(pictureChars 
+												(integerLiteral 15)) 
+											(pictureChars )))) .\n       ))))) 
+				(dataDivisionSection 
+					(workingStorageSection WORKING-STORAGE SECTION .\n        
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord WS-A)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 22)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal '**WS-SECTION DY21276**')))) .\n       )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 01 
+								(dataName 
+									(cobolWord AUSGABE)) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord AUS-VOR)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 01)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(figurativeConstant SPACE))))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord AUS-TEXT)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 132)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal 
+												(figurativeConstant SPACE))))) .\n           )) 
+						(dataDescriptionEntry 
+							(dataDescriptionEntryFormat1 05 
+								(dataName 
+									(cobolWord AUS-FONT-INDEX)) 
+								(dataPictureClause PIC 
+									(pictureString 
+										(pictureChars X) 
+										(pictureChars () 
+										(pictureChars 
+											(integerLiteral 01)) 
+										(pictureChars )))) 
+								(dataValueClause VALUE 
+									(dataValueInterval 
+										(dataValueIntervalFrom 
+											(literal '1')))) .\n       ))))) 
+			(procedureDivision PROCEDURE DIVISION .\n            
+				(procedureDivisionBody 
+					(paragraphs 
+						(sentence 
+							(statement 
+								(openStatement OPEN 
+									(openInputStatement INPUT 
+										(openInput 
+											(fileName 
+												(cobolWord D111E)))))) 
+							(statement 
+								(readStatement READ 
+									(fileName 
+										(cobolWord D111E)) 
+									(atEndPhrase AT END 
+										(statement 
+											(moveStatement move 
+												(moveToStatement 
+													(moveToSendingArea 
+														(literal '1')) to 
+													(identifier 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord aus-vor)))))))) 
+										(statement 
+											(moveStatement MOVE 
+												(moveToStatement 
+													(moveToSendingArea 
+														(literal 'Ende')) to 
+													(identifier 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord aus-text))))))))) 
+									(notAtEndPhrase NOT AT END 
+										(statement 
+											(moveStatement Move 
+												(moveToStatement 
+													(moveToSendingArea 
+														(literal "weiter lesen")) to 
+													(identifier 
+														(qualifiedDataName 
+															(qualifiedDataNameFormat1 
+																(dataName 
+																	(cobolWord aus-text))))))))) END-READ)) 
+							(statement 
+								(displayStatement display 
+									(displayOperand 
+										(identifier 
+											(qualifiedDataName 
+												(qualifiedDataNameFormat1 
+													(dataName 
+														(cobolWord ausgabe)))))))) .)))))) <EOF>)
