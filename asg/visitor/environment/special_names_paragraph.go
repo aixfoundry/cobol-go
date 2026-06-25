@@ -112,6 +112,7 @@ func (v *SpecialNamesParagraphVisitor) VisitSpecialNamesParagraph(ctx *cobol85.S
 					},
 				}
 			}
+			v.paragraph.AlphabetClauses = append(v.paragraph.AlphabetClauses, alphabetClause)
 		} else if ictx := vctx.ClassClause(); ictx != nil {
 			cctx := ictx.(*cobol85.ClassClauseContext)
 			var typ pb.ClassClause_Type
@@ -168,6 +169,8 @@ func (v *SpecialNamesParagraphVisitor) VisitSpecialNamesParagraph(ctx *cobol85.S
 				}
 			}
 			v.paragraph.CurrencySignClause = clause
+		} else if ictx := vctx.DecimalPointClause(); ictx != nil {
+			v.paragraph.DecimalPointClause = &pb.DecimalPointClause{}
 		} else if ictx := vctx.SymbolicCharactersClause(); ictx != nil {
 			cctx := ictx.(*cobol85.SymbolicCharactersClauseContext)
 			var typ pb.SymbolicCharactersClause_Type
@@ -181,7 +184,33 @@ func (v *SpecialNamesParagraphVisitor) VisitSpecialNamesParagraph(ctx *cobol85.S
 				Type: typ,
 			}
 		} else if ictx := vctx.EnvironmentSwitchNameClause(); ictx != nil {
-			// TODO: cctx := ictx.(*cobol85.EnvironmentSwitchNameClauseContext)
+			cctx := ictx.(*cobol85.EnvironmentSwitchNameClauseContext)
+			clause := &pb.EnvironmentSwitchNameClause{}
+			if cctx.EnvironmentName() != nil {
+				clause.EnvironmentName = conv.EnvironmentName(cctx.EnvironmentName())
+			}
+			if cctx.MnemonicName() != nil {
+				clause.MnemonicName = conv.MnemonicName(cctx.MnemonicName())
+			}
+			if isp := cctx.EnvironmentSwitchNameSpecialNamesStatusPhrase(); isp != nil {
+				spCtx := isp.(*cobol85.EnvironmentSwitchNameSpecialNamesStatusPhraseContext)
+				sp := &pb.EnvironmentSwitchNameClause_StatusPhrase{}
+				allCond := spCtx.AllCondition()
+				if spCtx.ON() != nil {
+					if len(allCond) > 0 {
+						sp.Condition = conv.Condition(allCond[0])
+					}
+					if spCtx.OFF() != nil && len(allCond) > 1 {
+						sp.OffCondition = conv.Condition(allCond[1])
+					}
+				} else if spCtx.OFF() != nil {
+					if len(allCond) > 0 {
+						sp.Condition = conv.Condition(allCond[0])
+					}
+				}
+				clause.StatusPhrases = append(clause.StatusPhrases, sp)
+			}
+			v.paragraph.EnvironmentSwitchNameClauses = append(v.paragraph.EnvironmentSwitchNameClauses, clause)
 		} else if ictx := vctx.DefaultDisplaySignClause(); ictx != nil {
 			cctx := ictx.(*cobol85.DefaultDisplaySignClauseContext)
 			var typ pb.DefaultDisplaySignClause_Type
@@ -195,9 +224,19 @@ func (v *SpecialNamesParagraphVisitor) VisitSpecialNamesParagraph(ctx *cobol85.S
 				Type: typ,
 			}
 		} else if ictx := vctx.DefaultComputationalSignClause(); ictx != nil {
-			// TODO: cctx := ictx.(*cobol85.DefaultComputationalSignClauseContext)
+			cctx := ictx.(*cobol85.DefaultComputationalSignClauseContext)
+			var typ pb.DefaultComputationalSignClause_Type
+			switch {
+			case cctx.LEADING() != nil:
+				typ = pb.DefaultComputationalSignClause_LEADING
+			case cctx.TRAILING() != nil:
+				typ = pb.DefaultComputationalSignClause_TRAILING
+			}
+			v.paragraph.DefaultComputationalSignClause = &pb.DefaultComputationalSignClause{
+				Type:             typ,
+				SeparateCharacter: cctx.SEPARATE() != nil,
+			}
 		} else if ictx := vctx.ReserveNetworkClause(); ictx != nil {
-			// cctx := ictx.(*cobol85.ReserveNetworkClauseContext)
 			v.paragraph.ReserveNetworkClause = &pb.ReserveNetworkClause{}
 		}
 	}

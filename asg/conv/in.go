@@ -25,3 +25,24 @@ func InFile(in cobol85.IInFileContext) *pb.InFile {
 		FileName: FileName(ctx.FileName()),
 	}
 }
+
+func InData(in cobol85.IInDataContext) *pb.InData {
+	ctx := in.(*cobol85.InDataContext)
+	return &pb.InData{
+		DataName: DataName(ctx.DataName()),
+	}
+}
+
+func InMnemonic(in cobol85.IInMnemonicContext) *pb.InMnemonic {
+	ctx := in.(*cobol85.InMnemonicContext)
+	return &pb.InMnemonic{
+		MnemonicName: MnemonicName(ctx.MnemonicName()),
+	}
+}
+
+func InTable(in cobol85.IInTableContext) *pb.InTable {
+	ctx := in.(*cobol85.InTableContext)
+	return &pb.InTable{
+		TableCall: TableCall(ctx.TableCall()),
+	}
+}
