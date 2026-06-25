@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/kaisawind/cobol-go/document"
-	"github.com/kaisawind/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/document"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
 )
 
 func main() {

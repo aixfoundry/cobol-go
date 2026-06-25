@@ -5,8 +5,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/kaisawind/cobol-go/gen/preprocessor"
-	"github.com/kaisawind/cobol-go/options"
+	"github.com/aixfoundry/cobol-go/gen/preprocessor"
+	"github.com/aixfoundry/cobol-go/options"
 )
 
 type CobolWordFinder struct {

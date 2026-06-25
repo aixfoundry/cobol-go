@@ -1,8 +1,8 @@
 package conv
 
 import (
-	"github.com/kaisawind/cobol-go/gen/cobol85"
-	"github.com/kaisawind/cobol-go/pb"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/pb"
 )
 
 func ArithmeticExpression(in cobol85.IArithmeticExpressionContext) (out *pb.ArithmeticExpression) {

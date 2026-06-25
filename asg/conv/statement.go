@@ -1,8 +1,8 @@
 package conv
 
 import (
-	"github.com/kaisawind/cobol-go/gen/cobol85"
-	"github.com/kaisawind/cobol-go/pb"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/pb"
 )
 
 func Statement(in cobol85.IStatementContext) (out *pb.Statement) {
@@ -2623,7 +2623,7 @@ func UnstringStatement(in cobol85.IUnstringStatementContext) (out *pb.UnstringSt
 					Identifier: Identifier(cvv.Identifier()),
 				}
 			}
-			phrase.DelimitedBy = or
+			phrase.DelimitedByPhrase = or
 		}
 		out.SendingPhrase = phrase
 	}

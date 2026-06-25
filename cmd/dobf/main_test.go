@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/kaisawind/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
 )
 
 func TestDobf(t *testing.T) {

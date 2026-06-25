@@ -4,8 +4,8 @@ import (
 	"regexp"
 
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/kaisawind/cobol-go/gen/preprocessor"
-	"github.com/kaisawind/cobol-go/options"
+	"github.com/aixfoundry/cobol-go/gen/preprocessor"
+	"github.com/aixfoundry/cobol-go/options"
 )
 
 func TrimQuotes(s string) string {

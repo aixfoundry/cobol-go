@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pb;
 
-option go_package = "github.com/kaisawind/cobol-go/pb;pb";
+option go_package = "github.com/aixfoundry/cobol-go/pb;pb";
 
 
 message Program {

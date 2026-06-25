@@ -2,9 +2,9 @@ package visitor
 
 import (
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/kaisawind/cobol-go/asg/visitor/environment"
-	"github.com/kaisawind/cobol-go/gen/cobol85"
-	"github.com/kaisawind/cobol-go/pb"
+	"github.com/aixfoundry/cobol-go/asg/visitor/environment"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/pb"
 )
 
 type EnvironmentDivisionVisitor struct {

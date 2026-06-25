@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kaisawind/cobol-go/document"
-	"github.com/kaisawind/cobol-go/format"
-	"github.com/kaisawind/cobol-go/options"
+	"github.com/aixfoundry/cobol-go/document"
+	"github.com/aixfoundry/cobol-go/format"
+	"github.com/aixfoundry/cobol-go/options"
 )
 
 var (

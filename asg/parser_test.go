@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/kaisawind/cobol-go/format"
-	"github.com/kaisawind/cobol-go/options"
+	"github.com/aixfoundry/cobol-go/format"
+	"github.com/aixfoundry/cobol-go/options"
 	"google.golang.org/protobuf/encoding/protojson"
 )
 

@@ -2,10 +2,10 @@ package visitor
 
 import (
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/kaisawind/cobol-go/asg/conv"
-	"github.com/kaisawind/cobol-go/asg/visitor/procedure"
-	"github.com/kaisawind/cobol-go/gen/cobol85"
-	"github.com/kaisawind/cobol-go/pb"
+	"github.com/aixfoundry/cobol-go/asg/conv"
+	"github.com/aixfoundry/cobol-go/asg/visitor/procedure"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/pb"
 )
 
 type ProcedureDivisionVisitor struct {

@@ -1,8 +1,8 @@
 package conv
 
 import (
-	"github.com/kaisawind/cobol-go/gen/cobol85"
-	"github.com/kaisawind/cobol-go/pb"
+	"github.com/aixfoundry/cobol-go/gen/cobol85"
+	"github.com/aixfoundry/cobol-go/pb"
 )
 
 func DataDescriptionEntry(in cobol85.IDataDescriptionEntryContext) (out *pb.DataDescriptionEntry) {

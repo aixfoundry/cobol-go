@@ -1,7 +1,7 @@
 package options
 
 import (
-	"github.com/kaisawind/cobol-go/format"
+	"github.com/aixfoundry/cobol-go/format"
 )
 
 type Option interface {

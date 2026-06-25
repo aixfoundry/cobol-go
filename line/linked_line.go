@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/kaisawind/cobol-go/constant"
-	"github.com/kaisawind/cobol-go/format"
-	"github.com/kaisawind/cobol-go/options"
+	"github.com/aixfoundry/cobol-go/constant"
+	"github.com/aixfoundry/cobol-go/format"
+	"github.com/aixfoundry/cobol-go/options"
 )
 
 type LinkedLine struct {

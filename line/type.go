@@ -1,6 +1,6 @@
 package line
 
-import "github.com/kaisawind/cobol-go/constant"
+import "github.com/aixfoundry/cobol-go/constant"
 
 type Type int32
 

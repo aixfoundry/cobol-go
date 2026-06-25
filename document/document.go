@@ -7,10 +7,10 @@ import (
 	"strings"
 
 	"github.com/antlr4-go/antlr/v4"
-	"github.com/kaisawind/cobol-go/constant"
-	"github.com/kaisawind/cobol-go/gen/preprocessor"
-	"github.com/kaisawind/cobol-go/line"
-	"github.com/kaisawind/cobol-go/options"
+	"github.com/aixfoundry/cobol-go/constant"
+	"github.com/aixfoundry/cobol-go/gen/preprocessor"
+	"github.com/aixfoundry/cobol-go/line"
+	"github.com/aixfoundry/cobol-go/options"
 )
 
 var (
