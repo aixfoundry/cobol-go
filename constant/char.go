@@ -7,6 +7,7 @@ const (
 	CHAR_SLASH        = "/"
 	CHAR_DOLLAR_SIGN  = "$"
 	CHAR_ASTERISK     = "*"
+	CHAR_AMPERSAND    = "&"
 	CHAR_WHITESPACE   = " "
 	CHAR_COMMA        = ","
 	CHAR_SEMICOLON    = ";"

@@ -31,8 +31,17 @@ const (
 
 	// FREE COBOL 2002/2014 free format.
 	//
-	//  1: indicator field
-	//  2-*: source text (no fixed columns)
+	// Free format has NO indicator column: line type is decided by a prefix
+	// token, not by a single column-1 character. Recognized prefixes are
+	//	*>   comment
+	//	D>>  debug line
+	//	>>   compiler directive (>>SOURCE FORMAT, >>DEFINE, ...)
+	//	$    Micro-Focus style directive (kept for compatibility)
+	//	&    continuation of the previous line (free-format replacement
+	//	     for the fixed-format "-" indicator)
+	// Any other line — including one beginning with A/B/C/D such as DISPLAY or
+	// DATA DIVISION — is ordinary source. There is no sequence area, area A/B,
+	// comment area, or fixed column-1 indicator.
 	FREE
 )
 
@@ -41,7 +50,7 @@ var (
 		FIXED:    `(.{0,6})(?:([ABCdD$\t\-/*# ])(.{0,4})(.{0,61})(.*))?`,
 		TANDEM:   `()(?:([ABCdD$\t\-/*# ])(.{0,4})(.*)())?`,
 		VARIABLE: `(.{0,6})(?:([ABCdD$\t\-/*# ])(.{0,4})(.*)())?`,
-		FREE:     `()(?:([ABCdD$\t\-/*# ]?)()(.*)())`,
+		FREE:     `()((?:\*>|D>>|>>|\$|&)?)()(.*)()`,
 	}
 
 	values = map[Format]string{
