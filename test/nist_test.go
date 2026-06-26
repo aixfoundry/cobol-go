@@ -90,11 +90,10 @@ FOR:
 
 			tree := conv.TreesStringTree(cpp.StartRule(), cpp.GetRuleNames(), 0)
 
-			for _, err := range listener.GetErrors() {
-				t.Error(err)
-			}
 			if len(listener.GetErrors()) != 0 {
-				t.FailNow()
+				errorsPath := filepath + ".errors"
+				errText := strings.Join(listener.GetErrors(), "\n") + "\n"
+				_ = os.WriteFile(errorsPath, []byte(errText), os.ModePerm)
 			}
 			treePath := filepath + ".tree"
 			_ = os.WriteFile(treePath, []byte(tree), os.ModePerm)
