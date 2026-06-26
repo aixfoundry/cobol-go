@@ -4,6 +4,7 @@ import (
 	"io/fs"
 	"path"
 	fp "path/filepath"
+	"sort"
 	"strings"
 
 	"github.com/aixfoundry/cobol-go/gen/preprocessor"
@@ -34,14 +35,22 @@ func (f *FilenameFinder) GetCopyBook(ctx preprocessor.IFilenameContext, opts *op
 }
 
 func (f *FilenameFinder) GetCopyBookFromDirectory(ctx preprocessor.IFilenameContext, dir string, opts *options.Options) (ret string) {
-	infos := map[string]bool{}
-	fp.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
-		if !d.IsDir() {
-			infos[path] = d.IsDir()
+	infos := []string{}
+	err := fp.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
 		}
-		return err
+		if d == nil || d.IsDir() {
+			return nil
+		}
+		infos = append(infos, path)
+		return nil
 	})
-	for filepath := range infos {
+	if err != nil {
+		return
+	}
+	sort.Strings(infos)
+	for _, filepath := range infos {
 		if f.isMatching(ctx, filepath, dir, opts) {
 			return filepath
 		}

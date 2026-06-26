@@ -1,8 +1,32 @@
 package line
 
-import "github.com/aixfoundry/cobol-go/constant"
+import (
+	"fmt"
+
+	"github.com/aixfoundry/cobol-go/constant"
+)
 
 type Type int32
+
+// String returns a human-readable representation of the line type.
+func (t Type) String() string {
+	switch t {
+	case BLANK:
+		return "BLANK"
+	case COMMENT:
+		return "COMMENT"
+	case COMPILER_DIRECTIVE:
+		return "COMPILER_DIRECTIVE"
+	case CONTINUATION:
+		return "CONTINUATION"
+	case DEBUG:
+		return "DEBUG"
+	case NORMAL:
+		return "NORMAL"
+	default:
+		return fmt.Sprintf("Type(%d)", int32(t))
+	}
+}
 
 const (
 	BLANK Type = iota

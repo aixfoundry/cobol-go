@@ -35,13 +35,12 @@ func TestAstHello(t *testing.T) {
 	treePath := filePath + ".tree"
 	treeBuf, err := os.ReadFile(treePath)
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 	opts := options.NewOptions()
-	processed := document.ParseFile(filePath, opts)
-	if processed == "" {
-		t.FailNow()
+	processed, err := document.ParseFile(filePath, opts)
+	if err != nil {
+		t.Fatal(err)
 	}
 
 	is := antlr.NewInputStream(processed)
@@ -64,8 +63,7 @@ func TestAst(tt *testing.T) {
 			parentDir := path.Join(rootdir, dirName)
 			files, err := os.ReadDir(parentDir)
 			if err != nil {
-				t.Error(err)
-				t.FailNow()
+				t.Fatal(err)
 			}
 			for _, file := range files {
 				if file.IsDir() {
@@ -85,7 +83,10 @@ func TestAst(tt *testing.T) {
 				t.Log(file.Name())
 				opts := options.NewOptions().AddCopyBookDirectory(parentDir).SetFormat(dir2format(dirName))
 				filename := path.Join(parentDir, file.Name())
-				processed := document.ParseFile(filename, opts)
+				processed, err := document.ParseFile(filename, opts)
+				if err != nil {
+					t.Fatal(err)
+				}
 				is := antlr.NewInputStream(processed)
 				lexer := cobol85.NewCobol85Lexer(is)
 				cts := antlr.NewCommonTokenStream(lexer, antlr.LexerDefaultTokenChannel)
@@ -95,8 +96,7 @@ func TestAst(tt *testing.T) {
 
 				treeBuf, err := os.ReadFile(filename + ".tree")
 				if err != nil {
-					t.Error(err)
-					t.FailNow()
+					t.Fatal(err)
 				}
 				cleanedTree := cleanTree(tree)
 				cleanedFileTree := cleanTree(string(treeBuf))
@@ -118,7 +118,10 @@ func TestReplaceAmbiguous(t *testing.T) {
 	fileName := "ReplaceAmbiguous.cbl"
 	opts := options.NewOptions().AddCopyBookDirectory(parentDir).SetFormat(dir2format(dirName))
 	filename := path.Join(parentDir, fileName)
-	processed := document.ParseFile(filename, opts)
+	processed, err := document.ParseFile(filename, opts)
+	if err != nil {
+		t.Fatal(err)
+	}
 	is := antlr.NewInputStream(processed)
 	lexer := cobol85.NewCobol85Lexer(is)
 	cts := antlr.NewCommonTokenStream(lexer, antlr.LexerDefaultTokenChannel)
@@ -128,8 +131,7 @@ func TestReplaceAmbiguous(t *testing.T) {
 
 	treeBuf, err := os.ReadFile(filename + ".tree")
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 	cleanedTree := cleanTree(tree)
 	cleanedFileTree := cleanTree(string(treeBuf))

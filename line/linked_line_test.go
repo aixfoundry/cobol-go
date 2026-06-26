@@ -11,8 +11,7 @@ import (
 func TestLinkedLine(t *testing.T) {
 	f, err := os.Open("./testdata/lbli0420.src")
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 	defer f.Close()
 	o := options.NewOptions()
@@ -28,9 +27,8 @@ func TestLinkedLine(t *testing.T) {
 	}
 	source = ll
 	code := Combine(source)
-	err = os.WriteFile("./testdata/lbli0420.after", []byte(code), os.ModePerm)
+	err = os.WriteFile("./testdata/lbli0420.after", []byte(code), 0o644)
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 }

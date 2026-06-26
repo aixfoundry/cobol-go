@@ -32,12 +32,12 @@ var (
 	executionReg = regexp.MustCompile(execution)
 )
 
-func ParseFile(filename string, opts ...options.Option) string {
+func ParseFile(filename string, opts ...options.Option) (string, error) {
 	buf, err := os.ReadFile(filename)
 	if err != nil {
-		return ""
+		return "", fmt.Errorf("read file %s: %w", filename, err)
 	}
-	return Parse(string(buf), opts...)
+	return Parse(string(buf), opts...), nil
 }
 
 func Parse(text string, opts ...options.Option) string {

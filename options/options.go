@@ -22,13 +22,22 @@ func NewOptions() (o *Options) {
 	return &Options{}
 }
 
+// Apply copies all non-zero fields from o into c.
 func (o *Options) Apply(c *Options) {
-	if o != c {
-		(*c).Dialect = o.Dialect
-		(*c).Format = o.Format
-		(*c).CopyBookFiles = o.CopyBookFiles
-		(*c).CopyBookDirectories = o.CopyBookDirectories
-		(*c).CopyBookExtensions = o.CopyBookExtensions
+	if o.Dialect != 0 {
+		c.Dialect = o.Dialect
+	}
+	if o.Format != 0 {
+		c.Format = o.Format
+	}
+	if o.CopyBookFiles != nil {
+		c.CopyBookFiles = o.CopyBookFiles
+	}
+	if o.CopyBookDirectories != nil {
+		c.CopyBookDirectories = o.CopyBookDirectories
+	}
+	if o.CopyBookExtensions != nil {
+		c.CopyBookExtensions = o.CopyBookExtensions
 	}
 }
 

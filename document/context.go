@@ -101,14 +101,13 @@ var cobolWordPattern = regexp.MustCompile(`[A-Z][A-Z0-9-]*[A-Z0-9]|[A-Z]`)
 type Context struct {
 	replaces   ReplaceStores
 	prefixings []string
-	buffer     string
+	buf        strings.Builder
 }
 
 func NewContext() *Context {
 	return &Context{
 		replaces:   ReplaceStores{},
 		prefixings: []string{},
-		buffer:     "",
 	}
 }
 
@@ -126,9 +125,12 @@ func (ctx *Context) Replace(cts *antlr.CommonTokenStream) {
 		return
 	}
 	sort.Sort(ctx.replaces)
+	buf := ctx.buf.String()
 	for _, store := range ctx.replaces {
-		ctx.buffer = store.Replace(ctx.buffer, cts)
+		buf = store.Replace(buf, cts)
 	}
+	ctx.buf.Reset()
+	ctx.buf.WriteString(buf)
 }
 
 func (ctx *Context) StorePrefixing(str string) {
@@ -139,8 +141,9 @@ func (ctx *Context) Prefixing(cts *antlr.CommonTokenStream) {
 	if len(ctx.prefixings) == 0 {
 		return
 	}
+	buf := ctx.buf.String()
 	for _, prefix := range ctx.prefixings {
-		ctx.buffer = cobolWordPattern.ReplaceAllStringFunc(ctx.buffer, func(word string) string {
+		buf = cobolWordPattern.ReplaceAllStringFunc(buf, func(word string) string {
 			upper := strings.ToUpper(word)
 			if cobolKeywords[upper] {
 				return word
@@ -153,12 +156,14 @@ func (ctx *Context) Prefixing(cts *antlr.CommonTokenStream) {
 			return prefix + "-" + word
 		})
 	}
+	ctx.buf.Reset()
+	ctx.buf.WriteString(buf)
 }
 
 func (ctx *Context) Read() string {
-	return ctx.buffer
+	return ctx.buf.String()
 }
 
 func (ctx *Context) Write(s string) {
-	ctx.buffer += s
+	ctx.buf.WriteString(s)
 }

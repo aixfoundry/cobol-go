@@ -55,22 +55,20 @@ type Tok struct {
 }
 
 type Context struct {
-	buffer string
+	buf    strings.Builder
 	tokens []*Tok
 }
 
 func NewContext() *Context {
-	return &Context{
-		buffer: "",
-	}
+	return &Context{}
 }
 
 func (ctx *Context) Read() string {
-	return ctx.buffer
+	return ctx.buf.String()
 }
 
 func (ctx *Context) Write(s string) {
-	ctx.buffer += s
+	ctx.buf.WriteString(s)
 }
 
 func (ctx *Context) GetTokens() []*Tok {

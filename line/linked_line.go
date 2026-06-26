@@ -88,7 +88,7 @@ func normalizesLines(source *LinkedLine) (target *LinkedLine) {
 		}
 		source.processIndicator()
 		source.processInlineComment()
-		source.porcesscommentEntry()
+		source.processCommentEntry()
 		source = source.next
 	}
 	source = target
@@ -125,6 +125,13 @@ var (
 		fmt.Sprintf(`%s\s*\%s`, constant.SECURITY, constant.CHAR_DOT),
 		fmt.Sprintf(`%s\s*\%s`, constant.REMARKS, constant.CHAR_DOT),
 	))
+
+	// Pre-compiled regexes for hot paths
+	reInlineComment     = regexp.MustCompile(`\*>[^ ]`)
+	reDoubleQuote       = regexp.MustCompile(`"([^"]|""|'')*"`)
+	reSingleQuote       = regexp.MustCompile(`'([^']|''|"")*'`)
+	reLeadingSpace      = regexp.MustCompile(`^\s+`)
+	reTrailingSpace     = regexp.MustCompile(`\s+$`)
 )
 
 func isTriggerStart(ctt string) bool {
@@ -147,7 +154,7 @@ func isTriggerEnd(ctt string) bool {
 	return false
 }
 
-func (ll *LinkedLine) porcesscommentEntry() {
+func (ll *LinkedLine) processCommentEntry() {
 	//
 	// If the Compiler directive SOURCEFORMAT is specified as or defaulted to FIXED,
 	// the comment-entry can be contained on one or more lines but is restricted to
@@ -199,10 +206,8 @@ func (ll *LinkedLine) escapeCommentEntry() {
 }
 
 func (ll *LinkedLine) processInlineComment() {
-	// 注释直接跟字符的插入空格
-	re := regexp.MustCompile(`\\*>[^ ]`)
 	content := ll.Content()
-	if re.MatchString(content) {
+	if reInlineComment.MatchString(content) {
 		content = strings.ReplaceAll(content, constant.COMMENT_TAG, constant.COMMENT_TAG+constant.CHAR_WHITESPACE)
 		ll.SetContent(content)
 	}
@@ -307,8 +312,6 @@ func (ll *LinkedLine) IsNextContinuation() bool {
 //		22222222222222222222
 //		33333333333333333333" TO DATA
 func (ll *LinkedLine) IsEndingWithOpenLiteral() bool {
-	reDoubleQuote := regexp.MustCompile("\"([^\"]|\"\"|'')*\"")
-	reSingleQuote := regexp.MustCompile("'([^']|''|\"\")*'")
 	content := reDoubleQuote.ReplaceAllString(ll.origin.Content(), constant.EMPTY_STRING)
 	content = reSingleQuote.ReplaceAllString(content, constant.EMPTY_STRING)
 	return strings.Contains(content, constant.CHAR_DOUBLE_QUOTE) ||
@@ -316,8 +319,7 @@ func (ll *LinkedLine) IsEndingWithOpenLiteral() bool {
 }
 
 func TrimPrefix(ctt string) string {
-	re := regexp.MustCompile(`^\s+`)
-	return re.ReplaceAllString(ctt, constant.EMPTY_STRING)
+	return reLeadingSpace.ReplaceAllString(ctt, constant.EMPTY_STRING)
 }
 
 func (ll *LinkedLine) ContentTrimPrefix() string {
@@ -325,8 +327,7 @@ func (ll *LinkedLine) ContentTrimPrefix() string {
 }
 
 func TrimSuffix(ctt string) string {
-	re := regexp.MustCompile(`\s+$`)
-	return re.ReplaceAllString(ctt, constant.EMPTY_STRING)
+	return reTrailingSpace.ReplaceAllString(ctt, constant.EMPTY_STRING)
 }
 
 func (ll *LinkedLine) ContentTrimSuffix() string {
@@ -342,11 +343,9 @@ func (ll *LinkedLine) ContentTrimSuffix() string {
 		}
 	}
 
-	if !ll.IsNextContinuation() {
-		// return content
-	} else if !ll.IsEndingWithOpenLiteral() {
-		// return content
-	} else {
+	// When this line is continued and ends with an open literal,
+	// use the original untrimmed content to preserve the literal.
+	if ll.IsNextContinuation() && ll.IsEndingWithOpenLiteral() {
 		content = ll.origin.Content()
 	}
 	return content

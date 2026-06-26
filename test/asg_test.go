@@ -46,7 +46,12 @@ func safeAnalyzeFile(t *testing.T, filePath string, opts ...options.Option) (pro
 			ok = false
 		}
 	}()
-	program = asg.AnalyzeFile(filePath, opts...)
+	var err error
+	program, err = asg.AnalyzeFile(filePath, opts...)
+	if err != nil {
+		t.Logf("SKIP: could not parse file: %v", err)
+		return nil, false
+	}
 	if program == nil || len(program.GetCompilationUnits()) == 0 {
 		t.Logf("SKIP: could not parse file (format issue or pre-existing limitation)")
 		return nil, false

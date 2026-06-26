@@ -24,8 +24,7 @@ func TestPreprocessor(tt *testing.T) {
 			parentDir := path.Join(rootdir, dirName)
 			files, err := os.ReadDir(parentDir)
 			if err != nil {
-				t.Error(err)
-				t.FailNow()
+				t.Fatal(err)
 			}
 			for _, file := range files {
 				if file.IsDir() {
@@ -45,11 +44,13 @@ func TestPreprocessor(tt *testing.T) {
 				t.Log(file.Name())
 				opts := options.NewOptions().AddCopyBookDirectory(parentDir).SetFormat(dir2format(dirName))
 				filename := path.Join(parentDir, file.Name())
-				processed := document.ParseFile(filename, opts)
+				processed, err := document.ParseFile(filename, opts)
+				if err != nil {
+					t.Fatal(err)
+				}
 				processedBuf, err := os.ReadFile(filename + ".preprocessed")
 				if err != nil {
-					t.Error(err)
-					t.FailNow()
+					t.Fatal(err)
 				}
 				if processed != string(processedBuf) {
 					fmt.Println(processed)
@@ -81,8 +82,7 @@ func TestCopy(tt *testing.T) {
 	rootdir := "./testdata/cobol/preprocessor/copy"
 	dirs, err := os.ReadDir(rootdir)
 	if err != nil {
-		tt.Error(err)
-		tt.FailNow()
+		tt.Fatal(err)
 	}
 	for _, dir := range dirs {
 		if !dir.IsDir() {
@@ -97,8 +97,7 @@ func TestCopy(tt *testing.T) {
 func testCopy(rootdir string, t *testing.T) (err error) {
 	files, err := os.ReadDir(rootdir)
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 	skips := []string{
 		"testdata/cobol/preprocessor/copy/copyof/CopyOf.cbl",
@@ -125,11 +124,13 @@ FOR:
 		}
 		t.Log(filepath)
 		opts := options.NewOptions().AddCopyBookDirectory(copybooksPath).SetFormat(dir2format(parentName))
-		processed := document.ParseFile(filepath, opts)
+		processed, err := document.ParseFile(filepath, opts)
+		if err != nil {
+			t.Fatal(err)
+		}
 		processedBuf, err := os.ReadFile(filepath + ".preprocessed")
 		if err != nil {
-			t.Error(err)
-			t.FailNow()
+			t.Fatal(err)
 		}
 		if processed != string(processedBuf) {
 			fmt.Println(processed)
@@ -154,11 +155,13 @@ func TestExtension(t *testing.T) {
 		AddCopyBookExtension("someotherextension").
 		AddCopyBookExtension("txt").
 		AddCopyBookExtension("cbl")
-	processed := document.ParseFile(filepath, opts)
+	processed, err := document.ParseFile(filepath, opts)
+	if err != nil {
+		t.Fatal(err)
+	}
 	processedBuf, err := os.ReadFile(filepath + ".preprocessed")
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 	if processed != string(processedBuf) {
 		fmt.Println(processed)
@@ -172,6 +175,9 @@ func TestPrefix(tt *testing.T) {
 	rootdir := "./testdata/cobol/preprocessor/copy/copyprefix"
 	filepath := path.Join(rootdir, "lbea0000.cbl")
 	opts := options.NewOptions().AddCopyBookDirectory(rootdir).SetFormat(dir2format(rootdir))
-	processed := document.ParseFile(filepath, opts)
+	processed, err := document.ParseFile(filepath, opts)
+	if err != nil {
+		tt.Fatal(err)
+	}
 	os.WriteFile(filepath+".preprocessed", []byte(processed), os.ModePerm)
 }

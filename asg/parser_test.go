@@ -11,13 +11,16 @@ import (
 
 func TestAnalyzeFile(t *testing.T) {
 	opts := options.NewOptions().SetFormat(format.FIXED)
-	program := AnalyzeFile("./testdata/HelloWorld.cbl", opts)
-	// t.Log(program)
+	program, err := AnalyzeFile("./testdata/HelloWorld.cbl", opts)
+	if err != nil {
+		t.Fatal(err)
+	}
 	buf, err := protojson.Marshal(program)
 	if err != nil {
-		t.Error(err)
-		t.FailNow()
+		t.Fatal(err)
 	}
 	t.Log(string(buf))
-	os.WriteFile("./testdata/HelloWorld.json", buf, os.ModePerm)
+	if err := os.WriteFile("./testdata/HelloWorld.json", buf, 0o644); err != nil {
+		t.Fatal(err)
+	}
 }

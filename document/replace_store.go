@@ -8,6 +8,11 @@ import (
 	"github.com/aixfoundry/cobol-go/gen/preprocessor"
 )
 
+var (
+	rePseudoTextStart = regexp.MustCompile("^==")
+	rePseudoTextEnd   = regexp.MustCompile("==$")
+)
+
 type ReplaceStore struct {
 	replaceable preprocessor.IReplaceableContext
 	replacement preprocessor.IReplacementContext
@@ -80,8 +85,8 @@ func (s *ReplaceStore) getReplacementText(ictx preprocessor.IReplacementContext,
 func (s *ReplaceStore) extractPseudoText(ctx preprocessor.IPseudoTextContext, cts *antlr.CommonTokenStream) string {
 	pseudoText := GetTextWithHiddenTokens(ctx, cts)
 
-	pseudoText = regexp.MustCompile("^==").ReplaceAllString(pseudoText, "")
-	pseudoText = regexp.MustCompile("==$").ReplaceAllString(pseudoText, "")
+	pseudoText = rePseudoTextStart.ReplaceAllString(pseudoText, "")
+	pseudoText = rePseudoTextEnd.ReplaceAllString(pseudoText, "")
 	pseudoText = strings.TrimSpace(pseudoText)
 	return pseudoText
 }

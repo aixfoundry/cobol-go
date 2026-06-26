@@ -89,7 +89,10 @@ func Process(path string, f format.Format) {
 	opts := options.NewOptions().SetFormat(f).AddCopyBookDirectory(copyPath)
 	processed := document.Parse(string(buff), opts)
 
-	os.WriteFile(path+".preprocessed", []byte(processed), os.ModePerm)
+	if err := os.WriteFile(path+".preprocessed", []byte(processed), 0o644); err != nil {
+		fmt.Fprintf(os.Stderr, "write preprocessed file %s: %s\n", path+".preprocessed", err)
+		return
+	}
 	fmt.Fprintf(os.Stdout, "%s %s\n", path, time.Since(start))
 	count++
 	if count%10 == 0 {

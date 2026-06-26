@@ -107,10 +107,14 @@ func TreesStringTree(path string, f format.Format) {
 	ctx := cpp.StartRule()
 
 	tree := conv.TreesStringTree(ctx, cpp.GetRuleNames(), 0)
-	os.WriteFile(path+".tree", []byte(tree), os.ModePerm)
+	if err := os.WriteFile(path+".tree", []byte(tree), 0o644); err != nil {
+		fmt.Fprintf(os.Stderr, "write tree file %s: %s\n", path+".tree", err)
+	}
 	errs := l.GetErrors()
 	if len(errs) != 0 {
-		os.WriteFile(path+".error", []byte(strings.Join(errs, "\n")), os.ModePerm)
+		if err := os.WriteFile(path+".error", []byte(strings.Join(errs, "\n")), 0o644); err != nil {
+			fmt.Fprintf(os.Stderr, "write error file %s: %s\n", path+".error", err)
+		}
 	}
 	fmt.Fprintf(os.Stdout, "%s %s %d\n", path, time.Since(start), len(errs))
 	count++

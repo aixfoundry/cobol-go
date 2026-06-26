@@ -39,8 +39,7 @@ func TestParse(tt *testing.T) {
 	rootdir := "./testdata/nist"
 	infos, err := os.ReadDir(rootdir)
 	if err != nil {
-		tt.Error(err)
-		tt.FailNow()
+		tt.Fatal(err)
 	}
 	skips := []string{"ALTL1.CPY", "ALTLB.CPY"}
 	opts := options.NewOptions().AddCopyBookDirectory(rootdir).SetFormat(format.FIXED)
@@ -65,13 +64,16 @@ FOR:
 			var processed string
 			_, err := os.Stat(processedPath)
 			if err != nil {
-				processed = document.ParseFile(filepath, opts)
+				var perr error
+				processed, perr = document.ParseFile(filepath, opts)
+				if perr != nil {
+					t.Fatal(perr)
+				}
 				os.WriteFile(processedPath, []byte(processed), os.ModePerm)
 			} else {
 				buf, err := os.ReadFile(processedPath)
 				if err != nil {
-					t.Error(err)
-					t.FailNow()
+					t.Fatal(err)
 				}
 				processed = string(buf)
 			}

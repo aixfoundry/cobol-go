@@ -61,7 +61,11 @@ func (s *PreprocessorListener) GetText() string {
 
 func (s *PreprocessorListener) getCopyBook(ctx preprocessor.ICopySourceContext, opts *options.Options) string {
 	filename := copybook.GetCopyBook(ctx, opts)
-	return ParseFile(filename, opts)
+	content, err := ParseFile(filename, opts)
+	if err != nil {
+		return ""
+	}
+	return content
 }
 
 func (s *PreprocessorListener) buildCommentLines(f format.Format, text string) (ret string) {
