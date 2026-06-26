@@ -45,6 +45,11 @@ func (l *Line) Content() string {
 }
 
 func (l *Line) SetContent(ctt string) {
+	if l.Format == format.FREE {
+		l.ContentA = ""
+		l.ContentB = ctt
+		return
+	}
 	if len(ctt) > 4 {
 		l.ContentA = ctt[:4]
 		l.ContentB = ctt[4:]

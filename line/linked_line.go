@@ -74,7 +74,7 @@ func Combine(ll *LinkedLine) (code string) {
 }
 
 func LinePrefix(f format.Format) (ret string) {
-	if f != format.TANDEM {
+	if f != format.TANDEM && f != format.FREE {
 		ret += strings.Repeat(constant.CHAR_WHITESPACE, 6)
 	}
 	return ret

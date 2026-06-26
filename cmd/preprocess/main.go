@@ -38,6 +38,8 @@ func main() {
 		f = format.TANDEM
 	case "VARIABLE":
 		f = format.VARIABLE
+	case "FREE":
+		f = format.FREE
 	}
 	rootPath := *pathFlag
 	fi, err := os.Stat(rootPath)

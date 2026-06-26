@@ -77,7 +77,7 @@ func (s *PreprocessorListener) buildCommentLines(f format.Format, text string) (
 			ret += constant.CHAR_NEWLINE
 		}
 		line := scan.Text()
-		if f != format.TANDEM && len(line) > 6 {
+		if f != format.TANDEM && f != format.FREE && len(line) > 6 {
 			line = prefix + constant.CHAR_WHITESPACE + line[7:]
 		} else {
 			line = prefix + constant.CHAR_WHITESPACE + line

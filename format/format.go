@@ -28,6 +28,12 @@ const (
 	//  8-12: optional area A
 	//  13-*: optional area B
 	VARIABLE
+
+	// FREE COBOL 2002/2014 free format.
+	//
+	//  1: indicator field
+	//  2-*: source text (no fixed columns)
+	FREE
 )
 
 var (
@@ -35,18 +41,21 @@ var (
 		FIXED:    `(.{0,6})(?:([ABCdD$\t\-/*# ])(.{0,4})(.{0,61})(.*))?`,
 		TANDEM:   `()(?:([ABCdD$\t\-/*# ])(.{0,4})(.*)())?`,
 		VARIABLE: `(.{0,6})(?:([ABCdD$\t\-/*# ])(.{0,4})(.*)())?`,
+		FREE:     `()(?:([ABCdD$\t\-/*# ]?)()(.*)())`,
 	}
 
 	values = map[Format]string{
 		FIXED:    "FIXED",
 		TANDEM:   "TANDEM",
 		VARIABLE: "VARIABLE",
+		FREE:     "FREE",
 	}
 
 	regexps = map[Format]*regexp.Regexp{
 		FIXED:    regexp.MustCompile(FIXED.Format()),
 		TANDEM:   regexp.MustCompile(TANDEM.Format()),
 		VARIABLE: regexp.MustCompile(VARIABLE.Format()),
+		FREE:     regexp.MustCompile(FREE.Format()),
 	}
 
 	// if comment entry is multiline
@@ -54,6 +63,7 @@ var (
 		FIXED:    true,
 		TANDEM:   false,
 		VARIABLE: true,
+		FREE:     false,
 	}
 )
 
